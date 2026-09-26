@@ -1,5 +1,7 @@
 # Stage 1: PDF text extraction
 pymupdf>=1.24
+pytesseract>=0.3.13
+pillow>=10.0
 # Stage 2: schema & validation
 pydantic>=2.7
 pyyaml>=6.0

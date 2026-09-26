@@ -148,6 +148,12 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Split the text into sections using the table of contents (p. 307).
   - Parse the place-name index (p. 283) and the glossary (p. 303) into a seed gazetteer and vocabulary.
 - Done when: `data/raw/sections/*.txt` and `gazetteer_seed.csv` exist, and a spot check of 10 pages looks clean.
+- **Status: done.** Run `make extract` (first run about 10 min of OCR; cached runs take seconds). What we learned about the scan:
+  - Printed page numbers are read from the footers by OCR, then fitted with a Viterbi pass. The fit finds unnumbered inserts at PDF 130–131, 148–149 (plates) and 261–262 (fortifications map); printed = PDF − 1/3/5/7.
+  - The OCR layer's font sizes are unreliable. Endnotes are separated from body text by line pitch, character width and column width instead.
+  - Letter-spaced lines are rebuilt from glyph positions. Blank stretches of a page are OCR'd and kept only when Tesseract's confidence is ≥ 70; this recovers the tables on pp. 22 and 218.
+  - pp. 260–268 (military musters per locality) are sideways tables with no text layer. Their Tesseract output has usable numbers but poor names. **Follow-up:** transcribe them with Claude vision in Stage 3.
+  - Output: `data/raw/pages.jsonl`, `toc.json`, 109 `sections/L*-C*-S*.txt` (with `[p. N]` markers and `[n]` note calls), per-chapter `*-notes.txt`, `gazetteer_seed.csv` (1190 places), `persons_index.csv`, `glossary.csv`.
 
 ### Stage 2: Schema & vocabularies
 - Tasks:

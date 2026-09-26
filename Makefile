@@ -5,13 +5,14 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web extract pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
 	@echo "make install        Install web dependencies (inside the web container)"
 	@echo "make dev            Run the Vite dev server on http://localhost:5173"
 	@echo "make test           Run pytest and vitest in containers"
+	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, sections, index CSVs)"
 	@echo "make pipeline-shell Shell in the pipeline container"
 	@echo "make web-shell      Shell in the web container"
 
@@ -44,3 +45,6 @@ web-shell:
 clean:
 	$(COMPOSE) down --remove-orphans
 	rm -rf web/node_modules web/dist
+
+extract:
+	$(PIPELINE) python -m bailliage extract-text

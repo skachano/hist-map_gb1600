@@ -10,6 +10,7 @@ cp .env.example .env   # add ANTHROPIC_API_KEY (needed from Stage 3)
 make build             # build images
 make dev               # http://localhost:5173
 make test              # pytest + vitest
+make extract           # Stage 1: PDF -> data/raw/ (page text, sections, index CSVs)
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).
