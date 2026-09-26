@@ -1,0 +1,26 @@
+services:
+  pipeline:
+    build:
+      context: .
+      dockerfile: docker/pipeline.Dockerfile
+    image: hist-map-pipeline
+    environment:
+      HOME: /tmp
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    volumes:
+      - .:/work
+    working_dir: /work/pipeline
+
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+    image: hist-map-web
+    environment:
+      HOME: /tmp
+      npm_config_cache: /tmp/.npm
+      npm_config_update_notifier: "false"
+    volumes:
+      - ./web:/work/web
+    ports:
+      - "5173:5173"

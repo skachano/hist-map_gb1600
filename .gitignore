@@ -1,0 +1,23 @@
+# Copyrighted source (licensed copy) and derived full text
+pdf/
+*.pdf
+data/raw/
+
+# LLM output (decision pending, see doc/Plan.md §4)
+data/extracted/*
+!data/extracted/.gitkeep
+
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.cache/
+
+# Node / web
+web/node_modules/
+web/dist/
+web/public/data/
+.npm/
