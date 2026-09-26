@@ -1,0 +1,131 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "year": {
+      "maximum": 1800,
+      "minimum": 1000,
+      "title": "Year",
+      "type": "integer"
+    },
+    "place_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Place Id",
+      "type": "string"
+    },
+    "right_type": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "suzerain",
+            "high_justice",
+            "middle_low_justice",
+            "manorial_lord",
+            "advocate",
+            "spiritual_lord",
+            "tithe",
+            "safeguard",
+            "tax_aide",
+            "military",
+            "tabellionage",
+            "appeal_jurisdiction"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Right Type"
+    },
+    "from_holder": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "From Holder"
+    },
+    "to_holder": {
+      "anyOf": [
+        {
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "To Holder"
+    },
+    "event_type": {
+      "title": "Event Type",
+      "enum": [
+        "purchase",
+        "pledge",
+        "redemption",
+        "inheritance",
+        "enfeoffment",
+        "exchange",
+        "cession",
+        "treaty",
+        "judgment",
+        "occupation",
+        "confiscation",
+        "boundary"
+      ]
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    }
+  },
+  "required": [
+    "year",
+    "place_id",
+    "event_type",
+    "description"
+  ],
+  "title": "events",
+  "type": "object"
+}

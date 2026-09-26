@@ -1,0 +1,14 @@
+id,name_en,name_fr,name_de,entity_type,color,source_page,confidence,notes
+duchy-lorraine,Duchy of Lorraine,Duché de Lorraine,Herzogtum Lothringen,duchy,,,,'S. A.' (Son Altesse) in the book is the duke of Lorraine.
+holy-roman-empire,Holy Roman Empire,Saint Empire romain germanique,Heiliges Römisches Reich,empire,,,,
+electorate-trier,Electorate of Trier,Électorat de Trèves,Kurfürstentum Trier,electorate,,,,
+bishopric-metz,Prince-Bishopric of Metz,Évêché temporel de Metz,Hochstift Metz,temporal_bishopric,,,,
+county-nassau-saarbruecken,County of Nassau-Saarbrücken,Comté de Nassau-Sarrebruck,Grafschaft Nassau-Saarbrücken,county,,,,
+cathedral-chapter-trier,Cathedral chapter of Trier,Chapitre de Trèves,Trierer Domkapitel,chapter,,,,
+charterhouse-rettel,Charterhouse of Rettel,Chartreux de Rettel,Kartause Rettel,abbey,,,,
+abbey-freistroff,Abbey of Freistroff,Abbaye de Freistroff,Abtei Freistroff,abbey,,,,Cistercian abbey (p. 13).
+abbey-bouzonville,Abbey of Bouzonville,Abbaye de Bouzonville,Abtei Busendorf,abbey,,,,
+abbey-villers-bettnach,Abbey of Villers-Bettnach,Abbaye de Villers-Bettnach,Abtei Weiler-Bettnach,abbey,,,,
+lords-monclair,Lords of Montclair,Sires de Monclair,Herren von Montclair,lordship,,,,'le sieur de Monclair' (p. 14); the fief of Monclair was held in common (p. 132).
+henriette-vaudemont,Henriette de Vaudémont,Henriette de Vaudémont,Henriette von Vaudémont,person,,,,"Princess of Phalsbourg, sister of Charles IV; engagiste of Anzeling and Hestroff."
+francois-ii-vaudemont,François II de Vaudémont,François II de Vaudémont,Franz II. von Vaudémont,person,,,,"Count of Vaudémont, duke for a few days in 1625; the Speyer judgment of 1629 awarded Bouquenom and Sarrewerden to him personally (p. 109-110)."

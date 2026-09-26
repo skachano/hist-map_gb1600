@@ -1,0 +1,13 @@
+child_id,parent_id,from_year,to_year,from_precision,to_precision,source_page,confidence,notes
+office-sierck,bailliage-allemagne,,,,,11-12,,
+weiten,office-sierck,,,,,12;49,,
+merschweiller,office-sierck,,,,,12;49,,
+kedange,office-sierck,,,,,13;50,,
+anzeling,office-sierck,,,,,13;50,,
+hestroff,office-sierck,,,,,13;50,,
+chemery,office-sierck,,,,,13;50,,
+saargau,bailliage-allemagne,,,,,13-14,,
+office-merzig,bailliage-allemagne,,,,,14,,
+county-sarrewerden,bailliage-allemagne,1629,,exact,,9;12,,'devenu lorrain seulement en 1629' (p. 9); added to the bailiwick in 1629 (p. 12).
+sarrewerden,county-sarrewerden,,,,,19,,
+bouquenom,county-sarrewerden,,,,,19,,

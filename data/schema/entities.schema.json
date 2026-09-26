@@ -1,0 +1,99 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "name_en": {
+      "title": "Name En",
+      "type": "string"
+    },
+    "name_fr": {
+      "title": "Name Fr",
+      "type": "string"
+    },
+    "name_de": {
+      "title": "Name De",
+      "type": "string"
+    },
+    "entity_type": {
+      "title": "Entity Type",
+      "enum": [
+        "empire",
+        "kingdom",
+        "duchy",
+        "electorate",
+        "temporal_bishopric",
+        "diocese",
+        "county",
+        "principality",
+        "lordship",
+        "abbey",
+        "chapter",
+        "military_order",
+        "noble_house",
+        "person",
+        "community",
+        "city"
+      ]
+    },
+    "color": {
+      "anyOf": [
+        {
+          "pattern": "^#[0-9a-fA-F]{6}$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Color"
+    }
+  },
+  "required": [
+    "id",
+    "name_en",
+    "name_fr",
+    "name_de",
+    "entity_type"
+  ],
+  "title": "entities",
+  "type": "object"
+}

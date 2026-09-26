@@ -1,0 +1,190 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "from_year": {
+      "anyOf": [
+        {
+          "maximum": 1800,
+          "minimum": 1000,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "From Year"
+    },
+    "to_year": {
+      "anyOf": [
+        {
+          "maximum": 1800,
+          "minimum": 1000,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "To Year"
+    },
+    "from_precision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "exact",
+            "circa",
+            "before",
+            "after",
+            "attested"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "From Precision"
+    },
+    "to_precision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "enum": [
+            "exact",
+            "circa",
+            "before",
+            "after",
+            "attested"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "To Precision"
+    },
+    "place_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Place Id",
+      "type": "string"
+    },
+    "right_type": {
+      "title": "Right Type",
+      "enum": [
+        "suzerain",
+        "high_justice",
+        "middle_low_justice",
+        "manorial_lord",
+        "advocate",
+        "spiritual_lord",
+        "tithe",
+        "safeguard",
+        "tax_aide",
+        "military",
+        "tabellionage",
+        "appeal_jurisdiction"
+      ]
+    },
+    "holder_id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Holder Id",
+      "type": "string"
+    },
+    "share": {
+      "anyOf": [
+        {
+          "pattern": "^(?:\\d+/\\d+|joint)$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Share"
+    },
+    "status": {
+      "default": "held",
+      "title": "Status",
+      "enum": [
+        "held",
+        "pledged",
+        "claimed",
+        "contested",
+        "sequestered",
+        "renounced"
+      ]
+    },
+    "is_disputed": {
+      "default": false,
+      "title": "Is Disputed",
+      "type": "boolean"
+    },
+    "disputed_with": {
+      "items": {
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "type": "string"
+      },
+      "title": "Disputed With",
+      "type": "array"
+    },
+    "snippet": {
+      "anyOf": [
+        {
+          "maxLength": 300,
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Snippet"
+    }
+  },
+  "required": [
+    "place_id",
+    "right_type",
+    "holder_id"
+  ],
+  "title": "rights",
+  "type": "object"
+}

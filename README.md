@@ -11,6 +11,8 @@ make build             # build images
 make dev               # http://localhost:5173
 make test              # pytest + vitest
 make extract           # Stage 1: PDF -> data/raw/ (page text, sections, index CSVs)
+make validate          # Stage 2: check data/curated/*.csv against schema and vocab.yaml
+make schema            # Stage 2: export JSON Schemas to data/schema/
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).

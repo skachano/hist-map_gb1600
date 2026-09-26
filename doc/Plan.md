@@ -73,10 +73,11 @@ Examples: Charles III (to 1608), Henri II (1608–1624), François II and Charle
 | field | description |
 |---|---|
 | `place_id`, `holder_id` | FK to `places` and `entities` |
-| `right_type` | `suzerain` (dominium directum), `high_justice` (haute justice), `manorial_lord` (seigneurie foncière), `advocate` (avouerie/Vogtei), `spiritual_lord` (diocesan authority), plus other jurisdictions found in the book: `middle_low_justice`, `tithe`, `engagement` (pledge holder/engagiste), `tax_aide` (aide générale), `military` (monstres/garrison), `tabellionage`, `appeal_jurisdiction` |
-| `share` | e.g. `1/2` for Saargau-Merzig with Trier |
-| `from_year`, `to_year`, `date_precision` | `exact` / `circa` / `before` / `after` |
-| `status` | `held`, `claimed`, `pledged`, `contested`, `sequestered`, `renounced` |
+| `right_type` | `suzerain` (dominium directum), `high_justice` (haute justice), `manorial_lord` (seigneurie foncière), `advocate` (avouerie/Vogtei), `spiritual_lord` (diocesan authority), plus other jurisdictions found in the book: `middle_low_justice`, `tithe`, `safeguard` (sauvegarde), `tax_aide` (aide générale), `military` (monstres/garrison), `tabellionage`, `appeal_jurisdiction` |
+| `share` | a fraction (e.g. `1/2` for Saargau-Merzig with Trier), or `joint` for undivided co-holding with unknown fractions |
+| `from_year`, `to_year` | inclusive; empty = before / after what the source covers |
+| `from_precision`, `to_precision` | `exact` / `circa` / `before` / `after` / `attested` (only known for that year) |
+| `status` | `held`, `pledged` (held by an engagiste; replaces a separate `engagement` right type), `claimed`, `contested`, `sequestered`, `renounced` |
 | `is_disputed` | bool |
 | `disputed_with[]` | entity IDs |
 | `source_page`, `snippet`, `confidence` | provenance |
@@ -161,6 +162,17 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Write `vocab.yaml` with trilingual labels for place types, right types and statuses.
   - Write a validator for FK integrity, year ranges within 1600–1632 (earlier dates are clamped but recorded), and overlapping periods.
 - Done when: the validator runs on hand-written sample rows (e.g. Sierck, Saargau-Merzig, Sarrewerden).
+- **Status: done.** Code is in `pipeline/bailliage/data/` (`models.py`, `store.py`, `validate.py`, `schema.py`). The source of truth is `data/curated/*.csv` plus `vocab.yaml`; `make validate` checks it and `make schema` writes `data/schema/*.schema.json`, which Stage 3 reuses as the structured-output format.
+  - CSV conventions: list cells are `|`-separated, empty cells take the defaults, and `source_page` looks like `49`, `50-52` or `14;131`.
+  - Periods are inclusive. A transfer year appears under both the old and the new holder; the validator treats that as a handover, and the app shows the new holder.
+  - Vocabulary keys are checked by the validator rather than by code, so new types need only a `vocab.yaml` entry.
+  - Validation rules:
+    - **Errors:** foreign keys, vocabulary membership, missing `source_page`, shares above 1, membership cycles.
+    - **Warnings:** unexplained overlaps (no shares, no claim, no dispute flag), inconsistent dispute flags, events not mirrored by rights, periods outside 1600–1632.
+  - Sample data (43 rights, 9 events), validated with 0 errors and 0 warnings:
+    - **Sierck:** justice rights, the 1624 pledges to Henriette de Vaudémont, the Chémery dispute of 1616–1620.
+    - **Saargau-Merzig:** the ½/½ condominium and the 1620 accommodation.
+    - **Sarrewerden:** the Nassau vs Lorraine dispute, the 1629 Speyer judgment and occupation, the 1632 inheritance.
 
 ### Stage 3: LLM-assisted extraction
 - Tasks:
@@ -231,7 +243,7 @@ For each screen, add a colour-blind-safe holder palette, legends and hatching fo
 
 ## 6. Risks & open points
 - **OCR quality:** letter-spacing and hyphenation errors. Stage 1 cleans them up, and uncertain cases get a manual check.
-- **Sparse dates:** the book often gives no precise years. The `date_precision` field records this, and the UI shows uncertain periods as faded or dashed.
+- **Sparse dates:** the book often gives no precise years. The `from_precision`/`to_precision` fields record this, and the UI shows uncertain periods as faded or dashed.
 - **The five right types are not always explicit in the text.** The LLM must mark inferred facts `confidence: low`, and they need review.
 - **Lost and ambiguous villages** (e.g. Bizing appears twice). These are handled in `overrides.yaml` and shown in a "not located" list.
 - **Voronoi areas are approximations.** The UI labels them as approximate.

@@ -1,0 +1,140 @@
+# Controlled vocabularies with English / French / German labels.
+# Keys are what the CSV files store; add new keys here as extraction finds them.
+# `applies_to` (place types) is settlement | territory | any.
+
+place_types:
+  town:          {en: town, fr: ville, de: Stadt, applies_to: settlement}
+  small_town:    {en: small town, fr: bourg, de: Flecken, applies_to: settlement}
+  village:       {en: village, fr: village, de: Dorf, applies_to: settlement}
+  new_village:   {en: new village, fr: nouveau village, de: Neudorf (Neugründung), applies_to: settlement}
+  hamlet:        {en: hamlet, fr: hameau, de: Weiler, applies_to: settlement}
+  farmstead:     {en: farmstead, fr: cense, de: Hofgut, applies_to: settlement}
+  castle:        {en: castle, fr: château, de: Burg, applies_to: settlement}
+  abbey:         {en: abbey, fr: abbaye, de: Abtei, applies_to: settlement}
+  priory:        {en: priory, fr: prieuré, de: Priorat, applies_to: settlement}
+  saltworks:     {en: saltworks, fr: saline, de: Saline, applies_to: settlement}
+  deserted_village: {en: deserted village, fr: village disparu, de: Wüstung, applies_to: settlement}
+  bailiwick:     {en: bailiwick, fr: bailliage, de: Bellistum (Oberamt), applies_to: territory}
+  office:        {en: office, fr: office, de: Amt, applies_to: territory}
+  provostship:   {en: provostship, fr: prévôté, de: Schultheißerei, applies_to: territory}
+  castellany:    {en: castellany, fr: châtellenie, de: Kellerei, applies_to: territory}
+  receivership:  {en: receivership, fr: recette, de: Rezeptur, applies_to: territory}
+  mayoralty:     {en: mayoralty, fr: mairie, de: Meierei, applies_to: territory}
+  court:         {en: court district, fr: cour, de: Hof (Hofgericht), applies_to: territory}
+  lordship:      {en: lordship, fr: seigneurie, de: Herrschaft, applies_to: any}
+  county:        {en: county, fr: comté, de: Grafschaft, applies_to: territory}
+  marquisate:    {en: marquisate, fr: marquisat, de: Markgrafschaft, applies_to: territory}
+  principality:  {en: principality, fr: principauté, de: Fürstentum, applies_to: territory}
+  barony:        {en: barony, fr: baronnie, de: Freiherrschaft, applies_to: territory}
+  fief:          {en: fief, fr: fief, de: Lehen, applies_to: any}
+  condominium:   {en: condominium, fr: condominium, de: Kondominium, applies_to: territory}
+  advocacy:      {en: advocacy, fr: vouerie, de: Vogtei, applies_to: territory}
+  allod:         {en: allod, fr: franc-alleu, de: Allod, applies_to: any}
+  ban:           {en: ban, fr: ban, de: Bann, applies_to: territory}
+
+entity_types:
+  empire:            {en: empire, fr: empire, de: Reich}
+  kingdom:           {en: kingdom, fr: royaume, de: Königreich}
+  duchy:             {en: duchy, fr: duché, de: Herzogtum}
+  electorate:        {en: electorate, fr: électorat, de: Kurfürstentum}
+  temporal_bishopric: {en: prince-bishopric, fr: évêché temporel, de: Hochstift}
+  diocese:           {en: diocese, fr: diocèse, de: Diözese}
+  county:            {en: county, fr: comté, de: Grafschaft}
+  principality:      {en: principality, fr: principauté, de: Fürstentum}
+  lordship:          {en: lordship, fr: seigneurie, de: Herrschaft}
+  abbey:             {en: abbey / convent, fr: abbaye / couvent, de: Abtei / Kloster}
+  chapter:           {en: chapter, fr: chapitre, de: Stift / Kapitel}
+  military_order:    {en: military order, fr: ordre militaire, de: Ritterorden}
+  noble_house:       {en: noble house, fr: maison noble, de: Adelshaus}
+  person:            {en: person, fr: personne, de: Person}
+  community:         {en: community, fr: communauté, de: Gemeinde}
+  city:              {en: city-state, fr: cité, de: Stadtstaat}
+
+right_types:
+  suzerain:
+    en: Suzerainty (dominium directum)
+    fr: Souveraineté (domaine direct)
+    de: Oberherrschaft (dominium directum)
+    core: true
+  high_justice:
+    en: High justice
+    fr: Haute justice
+    de: Hochgerichtsbarkeit
+    core: true
+  middle_low_justice:
+    en: Middle and low justice
+    fr: Moyenne et basse justice
+    de: Nieder- und Mittelgerichtsbarkeit
+  manorial_lord:
+    en: Manorial lordship
+    fr: Seigneurie foncière
+    de: Grundherrschaft
+    core: true
+  advocate:
+    en: Advocacy
+    fr: Avouerie (vouerie)
+    de: Vogtei
+    core: true
+  spiritual_lord:
+    en: Diocesan authority
+    fr: Autorité diocésaine
+    de: Diözesangewalt
+    core: true
+  tithe:
+    en: Tithe
+    fr: Dîme
+    de: Zehnt
+  safeguard:
+    en: Safeguard (protection)
+    fr: Sauvegarde
+    de: Schirmherrschaft
+  tax_aide:
+    en: General aid (tax)
+    fr: Aide générale
+    de: Landsteuer (Beihilfe)
+  military:
+    en: Military levy (musters)
+    fr: Monstres (levée militaire)
+    de: Musterung (Wehrhoheit)
+  tabellionage:
+    en: Notarial office
+    fr: Tabellionage
+    de: Tabellionat (Notariat)
+  appeal_jurisdiction:
+    en: Court of appeal
+    fr: Juridiction d'appel
+    de: Appellationsinstanz
+
+statuses:
+  held:        {en: held, fr: détenu, de: innegehabt}
+  pledged:     {en: held in pledge, fr: engagé, de: verpfändet}
+  claimed:     {en: claimed, fr: revendiqué, de: beansprucht}
+  contested:   {en: contested, fr: contesté, de: umstritten}
+  sequestered: {en: sequestered, fr: séquestré, de: sequestriert}
+  renounced:   {en: renounced, fr: abandonné, de: aufgegeben}
+
+event_types:
+  purchase:     {en: purchase, fr: achat, de: Kauf}
+  pledge:       {en: pledge (engagement), fr: engagement, de: Verpfändung}
+  redemption:   {en: redemption, fr: rachat, de: Pfandeinlösung}
+  inheritance:  {en: inheritance, fr: héritage, de: Erbfall}
+  enfeoffment:  {en: enfeoffment, fr: inféodation, de: Belehnung}
+  exchange:     {en: exchange, fr: échange, de: Tausch}
+  cession:      {en: cession, fr: cession, de: Abtretung}
+  treaty:       {en: treaty / accommodation, fr: traité / accommodement, de: Vertrag / Vergleich}
+  judgment:     {en: court judgment, fr: jugement, de: Urteil}
+  occupation:   {en: military occupation, fr: occupation militaire, de: militärische Besetzung}
+  confiscation: {en: confiscation, fr: confiscation, de: Konfiskation}
+  boundary:     {en: boundary settlement, fr: abornement, de: Grenzregelung}
+
+confidence:
+  high:   {en: high, fr: élevée, de: hoch}
+  medium: {en: medium, fr: moyenne, de: mittel}
+  low:    {en: low, fr: faible, de: niedrig}
+
+date_precisions:
+  exact:    {en: exact, fr: exacte, de: genau}
+  circa:    {en: circa, fr: vers, de: um}
+  before:   {en: before, fr: avant, de: vor}
+  after:    {en: after, fr: après, de: nach}
+  attested: {en: attested in that year, fr: attesté cette année-là, de: in diesem Jahr belegt}

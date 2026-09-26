@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web extract pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web extract validate schema pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -13,6 +13,8 @@ help:
 	@echo "make dev            Run the Vite dev server on http://localhost:5173"
 	@echo "make test           Run pytest and vitest in containers"
 	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, sections, index CSVs)"
+	@echo "make validate       Stage 2: check data/curated/ (FKs, vocab, periods, overlaps)"
+	@echo "make schema         Stage 2: export JSON Schema per table to data/schema/"
 	@echo "make pipeline-shell Shell in the pipeline container"
 	@echo "make web-shell      Shell in the web container"
 
@@ -48,3 +50,9 @@ clean:
 
 extract:
 	$(PIPELINE) python -m bailliage extract-text
+
+validate:
+	$(PIPELINE) python -m bailliage validate
+
+schema:
+	$(PIPELINE) python -m bailliage schema

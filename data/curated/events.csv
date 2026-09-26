@@ -1,0 +1,10 @@
+year,place_id,right_type,from_holder,to_holder,event_type,description,source_page,confidence,notes
+1624,anzeling,high_justice,duchy-lorraine,henriette-vaudemont,pledge,-,51,,
+1624,hestroff,high_justice,duchy-lorraine,henriette-vaudemont,pledge,-,50-51,medium,
+1620,chemery,middle_low_justice,,abbey-freistroff,judgment,-,51,,
+1620,saargau,suzerain,,,treaty,-,131,,
+1620,office-merzig,suzerain,,,treaty,-,131,,
+1629,sarrewerden,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,judgment,-,108,,
+1629,bouquenom,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,judgment,-,108,,
+1629,county-sarrewerden,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,occupation,-,108,,
+1632,county-sarrewerden,high_justice,francois-ii-vaudemont,duchy-lorraine,inheritance,-,110,,

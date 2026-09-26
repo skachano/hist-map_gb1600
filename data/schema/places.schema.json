@@ -1,0 +1,198 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "source_page": {
+      "anyOf": [
+        {
+          "pattern": "^\\d{1,3}(?:-\\d{1,3})?(?:;\\s*\\d{1,3}(?:-\\d{1,3})?)*$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Source Page"
+    },
+    "confidence": {
+      "default": "high",
+      "title": "Confidence",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ]
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Notes"
+    },
+    "id": {
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "title": "Id",
+      "type": "string"
+    },
+    "kind": {
+      "enum": [
+        "settlement",
+        "territory"
+      ],
+      "title": "Kind",
+      "type": "string"
+    },
+    "name_fr": {
+      "title": "Name Fr",
+      "type": "string"
+    },
+    "name_de": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Name De"
+    },
+    "name_en": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Name En"
+    },
+    "variants": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Variants",
+      "type": "array"
+    },
+    "place_type": {
+      "title": "Place Type",
+      "enum": [
+        "town",
+        "small_town",
+        "village",
+        "new_village",
+        "hamlet",
+        "farmstead",
+        "castle",
+        "abbey",
+        "priory",
+        "saltworks",
+        "deserted_village",
+        "bailiwick",
+        "office",
+        "provostship",
+        "castellany",
+        "receivership",
+        "mayoralty",
+        "court",
+        "lordship",
+        "county",
+        "marquisate",
+        "principality",
+        "barony",
+        "fief",
+        "condominium",
+        "advocacy",
+        "allod",
+        "ban"
+      ]
+    },
+    "lat": {
+      "anyOf": [
+        {
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lat"
+    },
+    "lon": {
+      "anyOf": [
+        {
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Lon"
+    },
+    "wikidata_id": {
+      "anyOf": [
+        {
+          "pattern": "^Q\\d+$",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Wikidata Id"
+    },
+    "geonames_id": {
+      "anyOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Geonames Id"
+    },
+    "modern_country": {
+      "anyOf": [
+        {
+          "enum": [
+            "FR",
+            "DE",
+            "LU"
+          ],
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Modern Country"
+    }
+  },
+  "required": [
+    "id",
+    "kind",
+    "name_fr",
+    "place_type"
+  ],
+  "title": "places",
+  "type": "object"
+}
