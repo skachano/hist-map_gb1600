@@ -1,0 +1,10 @@
+year,place_id,right_type,from_holder,to_holder,event_type,description,source_page,confidence,notes
+1624,anzeling,high_justice,duchy-lorraine,henriette-vaudemont,pledge,"Henri II pledges Anzeling (high, middle and low justice) to Henriette de Vaudémont, January 1624.",51,,
+1624,hestroff,high_justice,duchy-lorraine,henriette-vaudemont,pledge,"Hestroff pledged to Henriette de Vaudémont; p. 51 says January 1624, p. 50 January 1625.",50-51,medium,
+1620,chemery,middle_low_justice,,abbey-freistroff,judgment,February 1620: the Conseil d'État maintains the abbot of Freistroff in the middle and low justice against the ducal procurator's claim of 1616.,51,,
+1620,saargau,suzerain,,,treaty,Accommodation of 28-30 July 1620 between Lorraine and Trier confirms undivided joint sovereignty and common justice; approved by Ferdinand II on 4 December 1623.,131,,
+1620,office-merzig,suzerain,,,treaty,Same accommodation of July 1620 for the Merzig part of the condominium.,131,,
+1629,sarrewerden,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,judgment,"Judgment of the Imperial Chamber of Speyer, 7 July 1629: the castle and town of Sarrewerden, as masculine fiefs of Metz, go to François II.",108,,
+1629,bouquenom,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,judgment,Same Speyer judgment of 7 July 1629 for Bouquenom.,108,,
+1629,county-sarrewerden,high_justice,county-nassau-saarbruecken,francois-ii-vaudemont,occupation,"31 July 1629: Lorraine troops take Bouquenom by force and occupy the whole county, beyond what the judgment granted.",108,,
+1632,county-sarrewerden,high_justice,francois-ii-vaudemont,duchy-lorraine,inheritance,François II dies 14 October 1632; Charles IV takes the oath of the county's subjects the next day.,110,,

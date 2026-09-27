@@ -1,0 +1,14 @@
+id,kind,name_fr,name_de,name_en,variants,place_type,lat,lon,wikidata_id,geonames_id,modern_country,source_page,confidence,notes
+bailliage-allemagne,territory,Bailliage d'Allemagne,Deutsches Bellistum,German Bailiwick,,bailiwick,,,,,,9-11,,
+office-sierck,territory,Office de Sierck,Amt Sierck,Office of Sierck,,office,,,,,,12,,
+weiten,settlement,Weiten,Weiten,Weiten,,village,,,,,DE,12;49,,
+merschweiller,settlement,Merschweiller,Merschweiler,Merschweiller,,village,,,,,FR,12;49,,
+kedange,settlement,Kédange,Kedingen,Kédange,Kédange-sur-Canner,village,,,,,FR,13;50,,
+anzeling,settlement,Anzeling,Anzelingen,Anzeling,Anseldingen,village,,,,,FR,13;50-52,,
+hestroff,settlement,Hestroff,Herstroff,Hestroff,Herstroff,village,,,,,FR,13;50-52,,
+chemery,settlement,Chémery,Schemerich,Chémery,Schomberg|Schoenberg|Chémery-la-Vieille|Altschemerich|Chémery-la-Neuve,village,,,,,FR,13;50-51,,Today Chémery-les-Deux; the book distinguishes Chémery-la-Vieille and Chémery-la-Neuve.
+saargau,territory,Saargau,Saargau,Saargau,,condominium,,,,,,14;129-132,,"Office of the Saargau, left bank of the Saar; Lorraine-Trier condominium."
+office-merzig,territory,Office de Merzig,Amt Merzig,Office of Merzig,,condominium,,,,,,14;129-132,,
+county-sarrewerden,territory,Comté de Sarrewerden,Grafschaft Saarwerden,County of Saarwerden,,county,,,,,,19;107-110,,
+sarrewerden,settlement,Sarrewerden,Saarwerden,Sarrewerden,,town,,,,,FR,19;108,,Castle and small town on an island in the Saar.
+bouquenom,settlement,Bouquenom,Bockenheim,Bouquenom,Bockenheim|Bocqnom,town,,,,,FR,19;108,,Today part of Sarre-Union.

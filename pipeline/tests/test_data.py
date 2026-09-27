@@ -127,13 +127,15 @@ def test_events_must_match_rights():
                      event_type="pledge", description="x", source_page="1")
     ok = base(rights=[right(to_year=1624), right(holder_id="b", from_year=1624, status="pledged")], events=[transfer])
     assert messages(ok) == []
-    missing = base(rights=[right()], events=[transfer])
-    assert any("starts around 1624" in m for m in messages(missing, "warning"))
+    contradicted = base(rights=[right()], events=[transfer])  # a's row never ends
+    assert any("ends around 1624" in m for m in messages(contradicted, "warning"))
+    assert any("starts around 1624" in m for m in messages(contradicted, "info"))  # b has no rows at all
 
 
 def test_periods_outside_app_range_warn():
     ds = base(rights=[right(from_year=1500, to_year=1550)])
-    assert any("outside 1600-1632" in m for m in messages(ds, "warning"))
+    assert any("outside 1600-1632" in m for m in messages(ds, "info"))
+    assert messages(ds, "warning") == []
 
 
 # --- the real curated data and the schema export --------------------------------
@@ -151,3 +153,16 @@ def test_schema_export_injects_vocab_enums(tmp_path):
     rights = schema.table_schema(Right, VOCAB)
     assert "suzerain" in rights["properties"]["right_type"]["enum"]
     assert {"type": "null"} in rights["properties"]["from_precision"]["anyOf"]
+
+
+def test_shared_manorial_lordship_is_information_only():
+    ds = base(rights=[right(right_type="manorial_lord"), right(right_type="manorial_lord", holder_id="b")])
+    assert messages(ds, "warning") == []
+    assert any("co-lordship presumed" in m for m in messages(ds, "info"))
+
+
+def test_event_without_any_rights_rows_is_information():
+    transfer = Event(year=1624, place_id="p", right_type="high_justice", from_holder="a", to_holder="b",
+                     event_type="pledge", description="x", source_page="1")
+    ds = base(events=[transfer])
+    assert messages(ds, "warning") == [] and any("no rows for this holder" in m for m in messages(ds, "info"))

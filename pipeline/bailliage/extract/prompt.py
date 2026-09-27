@@ -147,6 +147,11 @@ def known_entities() -> dict[str, str]:
     return entities
 
 
+def index_label(row: dict) -> str:
+    """How a gazetteer row is shown to the model (and echoed back as index_name)."""
+    return row["raw"].split(")")[0] + ")" if "(" in row["raw"] else row["name"]
+
+
 def index_entries_for(first_page: int, last_page: int) -> list[str]:
     """Book-index lines (place index) referencing a page of the section."""
     lines = []
@@ -154,7 +159,7 @@ def index_entries_for(first_page: int, last_page: int) -> list[str]:
         for row in csv.DictReader(f):
             pages = {int(p) for p in row["pages"].split()} if row["pages"] else set()
             if pages & set(range(first_page, last_page + 1)):
-                lines.append(row["raw"].split(")")[0] + ")" if "(" in row["raw"] else row["name"])
+                lines.append(index_label(row))
     return sorted(set(lines))
 
 

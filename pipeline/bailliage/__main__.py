@@ -10,6 +10,7 @@ def main() -> None:
     sub.add_parser("extract-text", help="Stage 1: PDF -> pages, sections, index CSVs in data/raw/")
     sub.add_parser("validate", help="Stage 2: check data/curated/ against schema and vocabularies")
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
+    sub.add_parser("curate", help="Stage 4: build data/curated/*.csv from extracted + manual rows + rules")
     llm = sub.add_parser("extract-llm", help="Stage 3: extract facts per section with the Claude API")
     llm.add_argument("--sections", default="priority",
                      help="'priority' (default), 'all', or comma-separated section ids like L1-C06-S01")
@@ -32,11 +33,13 @@ def main() -> None:
         ds = store.load()
         issues = validate.validate(ds)
         for issue in issues:
-            print(issue)
+            if issue.level != "info":
+                print(issue)
         for line in validate.coverage(ds):
             print(line)
-        errors = sum(i.level == "error" for i in issues)
-        print(f"{errors} error(s), {len(issues) - errors} warning(s)")
+        counts = {lvl: sum(i.level == lvl for i in issues) for lvl in ("error", "warning", "info")}
+        print(f"{counts['error']} error(s), {counts['warning']} warning(s), {counts['info']} info")
+        errors = counts["error"]
         raise SystemExit(1 if errors else 0)
     elif args.cmd == "extract-llm":
         from bailliage.extract import run
@@ -49,6 +52,9 @@ def main() -> None:
             run.collect_batches(jobs, args.effort, args.wait)
         else:
             run.plan(jobs, args.model, args.effort)
+    elif args.cmd == "curate":
+        from bailliage.curate import build
+        raise SystemExit(build.run())
     elif args.cmd == "schema":
         from bailliage.data import schema
         for path in schema.export():

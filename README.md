@@ -16,6 +16,7 @@ make schema            # Stage 2: export JSON Schemas to data/schema/
 make extract-llm-plan SECTIONS=priority     # Stage 3: token count + cost estimate (free)
 make extract-llm-submit SECTIONS=priority   # Stage 3: half-price batch extraction (costs money)
 make extract-llm-collect SECTIONS=priority  # Stage 3: wait for the batch, parse results
+make curate            # Stage 4: rebuild data/curated/*.csv + data/review/report.md
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).

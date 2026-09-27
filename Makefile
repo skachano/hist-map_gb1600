@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web extract validate schema extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web extract validate schema curate extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -15,6 +15,7 @@ help:
 	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, sections, index CSVs)"
 	@echo "make validate       Stage 2: check data/curated/ (FKs, vocab, periods, overlaps)"
 	@echo "make schema         Stage 2: export JSON Schema per table to data/schema/"
+	@echo "make curate         Stage 4: rebuild data/curated/*.csv + data/review/report.md"
 	@echo "make extract-llm-plan SECTIONS=priority   Stage 3: token count + cost estimate (no model calls)"
 	@echo "make extract-llm-submit SECTIONS=priority  Stage 3: submit a half-price batch (costs money)"
 	@echo "make extract-llm-collect SECTIONS=priority Stage 3: wait for batches and parse results"
@@ -74,3 +75,6 @@ extract-llm-collect:
 
 extract-llm-realtime:
 	$(PIPELINE) python -m bailliage extract-llm --realtime --sections $(SECTIONS)
+
+curate:
+	$(PIPELINE) python -m bailliage curate

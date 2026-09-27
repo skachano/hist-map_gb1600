@@ -211,6 +211,27 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Generate a review report (low-confidence items, conflicts, unresolved names, places without rights).
   - Correct the data by hand, iterating until the validator passes.
 - Done when: the validator is green and every row has a `source_page`.
+- **Status: first pass done.** Code is in `pipeline/bailliage/curate/`; `make curate` rebuilds everything. The data now flows like this:
+  - `data/extracted/*.json` (Stage 3), plus hand-entered rows in `data/curated/manual/*.csv`, plus review decisions in `data/curated/rules.yaml`,
+  - produce the generated tables `data/curated/*.csv` and the review queue `data/review/report.md`.
+  - Hand edits go into `manual/` or `rules.yaml`, never into the generated tables, so the build can always be re-run.
+- Resolution:
+  - Settlements go through the book-index entry the model echoed back, then an exact or close name match (OCR slips). Places that share a name get the canton appended (`bizing-sierck`).
+  - Territories are keyed by type plus base name (`L'office de Siersberg` → `office-siersberg`), separately from the town that shares the name. A place's kind follows its place type.
+  - Entity IDs are canonical after `entity_aliases`. The reigning duke maps to `duchy-lorraine`; engagistes and princes holding in their own name stay persons.
+- Merge rules:
+  - Identical rights are merged, pooling their pages.
+  - Transfer events date the open-ended rights of the old and new holder.
+  - Overlapping rows for the same holder merge into the dated row.
+  - Memberships in sovereign states are dropped; that allegiance is already recorded as suzerainty.
+  - Manual rows win for any (place, right) or entity they cover.
+- Validation conventions:
+  - Facts before 1600 are *info*, kept as background.
+  - Overlapping manorial lordship or tithe holders are *info*: co-lordship was the norm.
+  - An event without matching rights rows is *info*; one that contradicts its rights rows is a *warning*.
+- Result (priority chapters): 1,333 places, ~350 entities, 2,480 rights, 424 events, 1,964 memberships. **0 errors**, 137 warnings.
+- Next: work through the 137 warnings in `data/review/report.md` (mostly suzerainty or high justice overlaps that the book describes as disputes). Record decisions in `rules.yaml`.
+
 
 ### Stage 5: Geocoding & names
 - Tasks:

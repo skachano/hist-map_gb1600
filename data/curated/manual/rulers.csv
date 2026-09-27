@@ -1,0 +1,10 @@
+entity_id,person_name,title,from_year,to_year,from_precision,to_precision,source_page,confidence,notes
+duchy-lorraine,Charles III,duke,,1608,,exact,24,,died 14 May 1608
+duchy-lorraine,Henri II,duke,1608,1624,exact,exact,24;109,,died July 1624
+duchy-lorraine,Nicole,duchess,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
+duchy-lorraine,Charles IV,duke,1624,,exact,,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated"
+duchy-lorraine,François II,duke,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
+electorate-trier,Lothaire de Metternich,archbishop-elector,1607,1623,attested,attested,21;130-131,,
+electorate-trier,Philippe-Christophe de Soetern,archbishop-elector,1629,,attested,,109,,
+county-nassau-saarbruecken,Louis,count,1623,1623,attested,attested,21,,
+county-nassau-saarbruecken,Guillaume-Louis,count,1629,,attested,,108,,

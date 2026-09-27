@@ -1,0 +1,68 @@
+# Review decisions applied by `make curate` on top of the extracted facts
+# (data/extracted/) and the hand-entered rows (data/curated/manual/).
+# Edit this file, not the generated data/curated/*.csv tables.
+
+# Entity ids that name the same holder: drop-id: keep-id
+entity_aliases:
+  samson-de-varsberg: house-varsberg        # Samson de Varsberg holds the Varsberg half of Anzeling (p. 52, 81)
+  jean-wolf-schmittberg: house-braun-schmittberg  # Wolf (Braun) de Schmittberg bought half of Otzweiler (p. 79, 81)
+  # The reigning duke acts for the duchy (convention from Stage 2).
+  charles-iv-lorraine: duchy-lorraine
+  charles-iii-lorraine: duchy-lorraine
+  # Same family or house under different prefixes / spellings.
+  house-eberstein: county-eberstein
+  barons-braubach: house-braubach
+  baron-braubach: house-braubach
+  house-chateau-rouge: lords-chateau-rouge
+  lords-felsberg: house-felsberg
+  lords-varsberg: house-varsberg
+  lords-kerpen: house-kerpen
+  house-dalem: lords-dalem
+  lords-hunolstein: house-hunolstein
+  lords-reipoltzkirchen: house-reipoltzkirchen
+  lords-helmstatt: house-helmstatt
+  lords-levenstein: house-levenstein
+  rhingraves: house-rhingraves
+  rhinegraves-kyrbourg: rhingraves-kyrbourg
+  thierry-de-schoenberg: house-schoenberg
+  georges-jean-i-veldenz: georges-jean-veldenz
+  marquise-de-havre: house-havre
+  marquise-du-havre: house-havre
+  house-faust: house-faust-stromberg
+  house-stromberg: house-faust-stromberg
+  house-hepchen: house-hepgen
+  marzolf-de-braubach: martzloff-de-braubach
+  # Religious houses under two names.
+  chapter-saint-pierre-metz: abbey-saint-pierre-metz
+  convent-saint-vincent-metz: abbey-saint-vincent-metz
+  abbey-grauftal: abbey-graufthal
+  commandery-bassel: commandery-saint-jean-de-bassel
+  # Reviewed and kept apart: abbey-/lords-freistroff, chapter-/lords-fenetrange, county-/house-bitche,
+  # house-leiningen-falkenburg/-hartenburg, house-daun/-dern/-hausen, house-morbach/-furbach/-braubach.
+
+# Place names as written in the book -> place id (fixes OCR variants, duplicate territories)
+place_aliases:
+  duché de Lorraine: duchy-lorraine         # a state, not a territory: memberships in it are dropped
+
+# Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
+entities: {}
+
+# Extracted rights to discard; every given field must match (place, right_type, holder, status, ...)
+drop_rights:
+  - {place: arriance, right_type: manorial_lord, holder: house-varsberg,
+     reason: "the Varsberg half was pledged to Godron Duchat (p. 147); the pledge row holds it"}
+
+# Corrections to extracted rights: rows matching every `match` field get the `set` fields.
+right_overrides:
+  - match: {place: berus, right_type: manorial_lord, holder: county-sulz}
+    set: {share: "1/4"}
+    reason: "Sulz and Anholt share one half through their wives, the Metternich the other (p. 80)"
+  - match: {place: berus, right_type: manorial_lord, holder: county-anholt}
+    set: {share: "1/4"}
+    reason: "Sulz and Anholt share one half through their wives, the Metternich the other (p. 80)"
+  - match: {place: ban-otzweiler, right_type: manorial_lord, holder: philippe-de-forbach}
+    set: {to_year: 1613, to_precision: before}
+    reason: "Philippe de Forbach sold his half to Wolf de Schmittberg, who holds it in 1613 (p. 79, 81)"
+  - match: {place: creutzwald, right_type: middle_low_justice}
+    set: {share: joint}
+    reason: "the book gives 1/3, 1/3 and 1/2 (p. 80); shares kept as joint"

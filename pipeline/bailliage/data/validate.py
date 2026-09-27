@@ -9,6 +9,9 @@ from bailliage.data.store import LANGS, Dataset, Issue
 
 # Statuses that make overlapping holders of the same right expected rather than suspicious.
 CONTESTED_STATUSES = {"claimed", "contested"}
+# Rights that were routinely split among several co-holders (co-seigneurs, "comparsonniers")
+# without the source giving fractions; overlaps there are reported as information only.
+COMMONLY_SHARED = {"manorial_lord", "tithe"}
 
 
 def validate(ds: Dataset) -> list[Issue]:
@@ -55,6 +58,7 @@ def validate(ds: Dataset) -> list[Issue]:
         check_fk("memberships", line, "child_id", m.child_id, place_ids, "places")
         check_fk("memberships", line, "parent_id", m.parent_id, place_ids, "places")
         if m.child_id in places and places[m.child_id].kind == "territory" and \
+                places[m.child_id].place_type != "ban" and \
                 m.parent_id in places and places[m.parent_id].kind == "settlement":
             err("memberships", line, "a territory cannot belong to a settlement")
     for line, r in ds.rights:
@@ -74,14 +78,15 @@ def validate(ds: Dataset) -> list[Issue]:
                 err(table, line, "source_page is required for facts")
 
     # --- periods -------------------------------------------------------------
+    # Earlier facts are kept as background (the app does not show them).
     for table in ("rulers", "memberships", "rights"):
         for line, row in getattr(ds, table):
             if not row.touches_app_range():
-                warn(table, line, f"period {row.from_year}-{row.to_year} lies outside 1600-1632")
+                issues.append(Issue("info", table, line, f"period {row.from_year}-{row.to_year} lies outside 1600-1632"))
 
     _check_membership_cycles(ds, err)
-    _check_rights(ds, err, warn)
-    _check_events(ds, warn)
+    _check_rights(ds, err, warn, issues)
+    _check_events(ds, warn, issues)
     return issues
 
 
@@ -115,7 +120,7 @@ def _is_handover(a: Period, b: Period) -> bool:
     return a.overlaps(b) == 1 and (a.to_year == b.from_year or b.to_year == a.from_year)
 
 
-def _check_rights(ds: Dataset, err, warn) -> None:
+def _check_rights(ds: Dataset, err, warn, issues: list[Issue]) -> None:
     by_key: dict[tuple[str, str], list[tuple[int, Right]]] = defaultdict(list)
     for line, r in ds.rights:
         if r.is_disputed and not r.disputed_with:
@@ -137,7 +142,12 @@ def _check_rights(ds: Dataset, err, warn) -> None:
             if a.share and b.share:
                 continue  # co-holding, checked below
             contested = {a.status, b.status} & CONTESTED_STATUSES or a.is_disputed or b.is_disputed
-            if not contested:
+            if contested:
+                continue
+            if right in COMMONLY_SHARED:
+                issues.append(Issue("info", "rights", lb, f"{right} at {place} shared with line {la} "
+                                                          f"({a.holder_id}, {b.holder_id}): co-lordship presumed"))
+            else:
                 warn("rights", lb, f"{right} at {place} overlaps line {la} ({a.holder_id} vs {b.holder_id}) "
                                    "without shares, a claim or a dispute flag")
 
@@ -146,33 +156,43 @@ def _check_rights(ds: Dataset, err, warn) -> None:
         for year in years:
             active = [(l, r) for l, r in rows if r.status in ("held", "pledged") and
                       (r.from_year or 0) <= year <= (r.to_year or 9999)]
+            if any(r.from_year == year for _, r in active):  # a handover year: the outgoing holder is gone
+                active = [(l, r) for l, r in active if r.to_year != year or r.from_year == year]
             total = sum((share_value(r.share) or 0) for _, r in active)
             if total > 1:
                 err("rights", active[-1][0], f"shares of {right} at {place} add up to {total} in {year}")
 
 
-def _check_events(ds: Dataset, warn) -> None:
-    """An ownership change should be mirrored by the rights table."""
+def _check_events(ds: Dataset, warn, issues: list[Issue]) -> None:
+    """An ownership change should be mirrored by the rights table. A contradiction (rows
+    exist, dates do not fit) is a warning; rows that are simply absent are information."""
     rights_by = defaultdict(list)
     for _, r in ds.rights:
-        rights_by[(r.place_id, r.holder_id)].append(r)
+        rights_by[(r.place_id, r.holder_id, r.right_type)].append(r)
+
+    def note(line, level_rows, message):
+        if level_rows:
+            warn("events", line, message)
+        else:
+            issues.append(Issue("info", "events", line, message + " (no rows for this holder)"))
+
     for line, e in ds.events:
-        if e.to_holder and e.right_type and not e.from_holder:
+        if not e.right_type:
+            continue
+        if e.to_holder and not e.from_holder:
             # A confirmation (judgment, treaty) without a transfer: the holder keeps the right.
-            holds = [r for r in rights_by[(e.place_id, e.to_holder)] if r.right_type == e.right_type
-                     and (r.from_year or 0) <= e.year <= (r.to_year or 9999)]
-            if not holds:
-                warn("events", line, f"{e.to_holder} does not hold {e.right_type} at {e.place_id} in {e.year}")
-        elif e.to_holder and e.right_type:
-            starts = [r for r in rights_by[(e.place_id, e.to_holder)]
-                      if r.right_type == e.right_type and r.from_year is not None and abs(r.from_year - e.year) <= 1]
-            if not starts:
-                warn("events", line, f"no {e.right_type} right of {e.to_holder} at {e.place_id} starts around {e.year}")
-        if e.from_holder and e.right_type:
-            ends = [r for r in rights_by[(e.place_id, e.from_holder)]
-                    if r.right_type == e.right_type and r.to_year is not None and abs(r.to_year - e.year) <= 1]
-            if not ends:
-                warn("events", line, f"no {e.right_type} right of {e.from_holder} at {e.place_id} ends around {e.year}")
+            rows = rights_by[(e.place_id, e.to_holder, e.right_type)]
+            if not any((r.from_year or 0) <= e.year <= (r.to_year or 9999) for r in rows):
+                note(line, rows, f"{e.to_holder} does not hold {e.right_type} at {e.place_id} in {e.year}")
+            continue
+        if e.to_holder:
+            rows = rights_by[(e.place_id, e.to_holder, e.right_type)]
+            if not any(r.from_year is not None and abs(r.from_year - e.year) <= 1 for r in rows):
+                note(line, rows, f"no {e.right_type} right of {e.to_holder} at {e.place_id} starts around {e.year}")
+        if e.from_holder:
+            rows = rights_by[(e.place_id, e.from_holder, e.right_type)]
+            if not any(r.to_year is not None and abs(r.to_year - e.year) <= 1 for r in rows):
+                note(line, rows, f"no {e.right_type} right of {e.from_holder} at {e.place_id} ends around {e.year}")
 
 
 def coverage(ds: Dataset) -> list[str]:

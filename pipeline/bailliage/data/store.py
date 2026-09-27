@@ -16,7 +16,7 @@ LANGS = ("en", "fr", "de")
 
 @dataclass
 class Issue:
-    level: str  # "error" | "warning"
+    level: str  # "error" | "warning" | "info"
     table: str
     row: int | None  # CSV line number (header is line 1)
     message: str
