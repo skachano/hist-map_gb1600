@@ -239,6 +239,18 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Use GeoNames as a fallback.
   - Resolve ambiguities and unlocatable places (lost villages, *Wüstungen*) in `overrides.yaml`.
 - Done when: at least 95% of settlements have coordinates, and the rest are flagged and listed in the report.
+- **Status: done.** Code is in `pipeline/bailliage/geo/`. `make geocode` writes `data/curated/geocoding.csv` (takes about 2 minutes; responses and dumps are cached in `data/raw/geo_cache/`). `make curate` then fills in `lat`, `lon`, `wikidata_id`, `geonames_id`, `name_de` and `name_en`; hand-entered values win.
+- Matching order:
+  1. **Wikidata:** exact label or alternative label in fr/de/en/lb inside the region, e.g. Bouquenom → Sarre-Union, Vaudrevange → Wallerfangen. Candidates are scored by class (communes and villages over stations and churches) and country. The canton from the book's index ranks them by distance.
+  2. **GeoNames country dumps:** exact names, or close spellings near the canton (same first letter, ratio ≥ 0.92, e.g. Brouderdorf → Brouderdorff).
+  3. **The index location itself:** a hamlet or lost village is placed at the commune the index names, marked `approximate` / low confidence.
+- Names:
+  - A settlement's French name is the spelling the book uses most (Vaudrevange, not the index variant Valderfangen).
+  - German and English names come from Wikidata.
+  - Territories are named from their type and seat (`Amt Sierck`, `Office of Sierck`). Their label point is the seat, or the centre of their located members.
+- Result: **1,068 / 1,080 settlements located (99%)**: 875 high, 45 medium and 148 low confidence (91 of the low ones approximate). 12 are unlocated. 199 / 253 territories have a label point.
+- Review: the low-confidence and unlocated places are listed in `data/review/report.md` ("Geocoding to check"); corrections go in the `geocode` section of `rules.yaml`.
+
 
 ### Stage 6: Territory geometry
 - Tasks:

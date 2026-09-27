@@ -11,6 +11,7 @@ def main() -> None:
     sub.add_parser("validate", help="Stage 2: check data/curated/ against schema and vocabularies")
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
     sub.add_parser("curate", help="Stage 4: build data/curated/*.csv from extracted + manual rows + rules")
+    sub.add_parser("geocode", help="Stage 5: coordinates and fr/de/en names -> data/curated/geocoding.csv")
     llm = sub.add_parser("extract-llm", help="Stage 3: extract facts per section with the Claude API")
     llm.add_argument("--sections", default="priority",
                      help="'priority' (default), 'all', or comma-separated section ids like L1-C06-S01")
@@ -52,6 +53,9 @@ def main() -> None:
             run.collect_batches(jobs, args.effort, args.wait)
         else:
             run.plan(jobs, args.model, args.effort)
+    elif args.cmd == "geocode":
+        from bailliage.geo import geocode
+        geocode.run()
     elif args.cmd == "curate":
         from bailliage.curate import build
         raise SystemExit(build.run())

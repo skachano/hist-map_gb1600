@@ -27,10 +27,13 @@ from bailliage.data.models import Entity, Event, Membership, Place, Right, Ruler
 
 MANUAL_DIR = config.CURATED_DIR / "manual"
 RULES_FILE = config.CURATED_DIR / "rules.yaml"
+GEOCODING_FILE = config.CURATED_DIR / "geocoding.csv"  # written by `make geocode` (Stage 5)
 REPORT_FILE = config.DATA_DIR / "review" / "report.md"
 CONFIDENCE_RANK = {"low": 0, "medium": 1, "high": 2}
 SNIPPET_MAX = 300
 STATE_TYPES = {"empire", "kingdom", "duchy", "electorate", "temporal_bishopric"}
+_ID_LIKE = re.compile(r"^(?:county|lordship|duchy|office|barony|principality|castellany|bailiwick|provostship|"
+                      r"marquisate|advocacy|condominium|ban|fief|receivership|mayoralty|court)-[a-z0-9-]+$", re.I)
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -350,6 +353,20 @@ class Builder:
         }
 
     def _place_rows(self, used: set[str]) -> list[dict]:
+        rows = self._place_rows_without_geo(used)
+        geo = {g["place_id"]: g for g in _read_csv(GEOCODING_FILE)}
+        for row in rows:  # fill only what is empty: hand-entered values win
+            g = geo.get(row["id"])
+            if not g:
+                continue
+            for field, value in (("lat", g["lat"]), ("lon", g["lon"]), ("wikidata_id", g["wikidata_id"]),
+                                 ("geonames_id", g["geonames_id"]), ("name_de", g["name_de"]),
+                                 ("name_en", g["name_en"])):
+                if value and not row.get(field):
+                    row[field] = value
+        return rows
+
+    def _place_rows_without_geo(self, used: set[str]) -> list[dict]:
         rows = [dict(m) for m in self.manual["places"]]
         for pid in sorted(used - {m["id"] for m in rows}):
             p = self.places.places.get(pid)
@@ -357,9 +374,10 @@ class Builder:
                 continue
             variants = [v for v in p.variants if v and len(v) <= 60 and v.lower() != pid]
             kind = "territory" if p.place_type in self.places.territory_types else p.kind
-            name = p.name_fr
-            if name.lower() == pid:  # named by an id ("county-la-petite-pierre"): use a real name
-                name = next((v for v in sorted(p.variants) if v.lower() != pid), name)
+            name = p.usual_name if kind == "settlement" else p.name_fr
+            variants = [v for v in {*variants, p.name_fr} if v != name]
+            if _ID_LIKE.match(name):  # named by an id ("county-la-petite-pierre"): use a real name
+                name = next((v for v in sorted(p.variants) if not _ID_LIKE.match(v)), name)
             variants = sorted(v for v in variants if v != name)[:8]
             rows.append({"id": pid, "kind": kind, "name_fr": name, "variants": variants,
                          "place_type": p.place_type, "modern_country": p.modern_country,
@@ -439,6 +457,16 @@ def write_report(b: Builder, ds: store.Dataset, issues: list) -> None:
     unindexed = sorted(p.id for _, p in ds.places if p.kind == "settlement" and p.confidence != "high")
     lines += ["", f"## Settlements not found in the book's index ({len(unindexed)})", "",
               "Often OCR variants of an indexed name; fix with `place_aliases`.", "", ", ".join(unindexed)]
+
+    geo = [g for g in _read_csv(GEOCODING_FILE) if g["method"] != "territory" and g["confidence"] != "high"]
+    order = {"unlocated": 0, "approximate": 1}
+    geo.sort(key=lambda g: (order.get(g["method"], 2), g["confidence"] != "low", g["place_id"]))
+    lines += ["", f"## Geocoding to check ({len(geo)})", "",
+              "Fix with the `geocode` section of `data/curated/rules.yaml` "
+              "(place-id: {wikidata: Q…} or {lat: …, lon: …, note: …}), then `make geocode curate`.", "",
+              "| place | method | confidence | lat, lon | wikidata / geonames | note |", "|---|---|---|---|---|---|"]
+    lines += [f"| {g['place_id']} | {g['method']} | {g['confidence']} | {g['lat']}, {g['lon']} | "
+              f"{g['wikidata_id'] or g['geonames_id']} | {g['note']} |" for g in geo]
 
     low = [(line, r) for line, r in ds.rights if r.confidence == "low"]
     lines += ["", f"## Low-confidence rights ({len(low)})", "", "| line | place | right | holder | pages | note |",

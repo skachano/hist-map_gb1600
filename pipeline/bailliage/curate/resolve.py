@@ -100,6 +100,14 @@ class ResolvedPlace:
     gazetteer: dict | None = None
     mentions: int = 0
     manual: bool = False
+    spellings: Counter = field(default_factory=Counter)  # how the book writes it, per mention
+
+    @property
+    def usual_name(self) -> str:
+        """The spelling the book uses most ('Vaudrevange', not the index variant 'Valderfangen'),
+        ignoring descriptive mentions such as 'bourg de Siersberg'."""
+        plain = Counter({n: c for n, c in self.spellings.items() if n[:1].isupper() and " de " not in n})
+        return plain.most_common(1)[0][0] if plain else self.name_fr
 
     @property
     def place_type(self) -> str:
@@ -153,6 +161,7 @@ class PlaceResolver:
             display = row["name"] if row else re.sub(r"^(?:[Ll][ea]s? |L')", "", name).strip()
             p = self.places[pid] = ResolvedPlace(pid, kind, display[:1].upper() + display[1:], gazetteer=row)
         if not p.manual:
+            p.spellings[name] += 1
             p.place_types[place["place_type"]] += 1
             p.variants.update(n for n in [name, *place.get("other_names", [])] if fold(n) != fold(p.name_fr))
         p.mentions += 1
