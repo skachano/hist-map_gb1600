@@ -182,6 +182,27 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Cache responses by section hash so re-runs cost nothing.
   - Run the priority sections (Livre I ch. I, VI, VIII, IX) first and the rest after.
 - Done when: `data/extracted/*.jsonl` covers the priority chapters, and a sample of about 30 facts is checked against the book.
+- **Status: priority chapters submitted.** Code is in `pipeline/bailliage/extract/`. Commands:
+  - `make extract-llm-plan` counts tokens (free).
+  - `make extract-llm-submit` sends a half-price batch.
+  - `make extract-llm-collect` waits for batches and parses the results.
+  - `make extract-llm-realtime` is for small reruns.
+  - Use `SECTIONS=priority|all|<ids>` to choose sections.
+- Settings: `claude-opus-5`, adaptive thinking at **medium** effort, Batches API (half price), structured output.
+  - Sections over 5k characters are split into chunks, each starting with its `[p. N]` marker.
+  - Each request carries the book-index entries for its pages, so place names come back canonical.
+  - The system prompt (instructions, vocabularies, known entity ids) is cached.
+- Robustness:
+  - Every paid response is saved raw before it's parsed, and a request hash skips unchanged chunks.
+  - The output schema uses `""`/`0` as "unknown" (nullable fields made the compiled grammar too large for the API) and has its `$ref`s inlined.
+  - Missing fields are filled leniently and listed in `filled_fields`.
+- Pilot lessons:
+  - High effort and one request per section cost ~$0.05–0.30 per 1k characters, and the dense Sierck village list overran the 64k output cap.
+  - With chunking, medium effort and batches, the cost is **~$0.045 per 1k characters**.
+- Quality check against the Stage 2 hand-curated rows: 30 of 43 matched exactly. Most of the rest are modelling choices, such as the pre-1629 Sarrewerden dispute recorded as rival suzerainty rather than high justice, or `charles-iv-lorraine` used instead of `duchy-lorraine`. Stage 4 settles these conventions.
+- Still to do:
+  - the other 69 sections (~$32 for the whole book), if wanted after Stage 4 review
+  - the sideways muster tables (pp. 260–268) via Claude vision
 
 ### Stage 4: Review & curation
 - Tasks:

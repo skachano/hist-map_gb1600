@@ -13,6 +13,9 @@ make test              # pytest + vitest
 make extract           # Stage 1: PDF -> data/raw/ (page text, sections, index CSVs)
 make validate          # Stage 2: check data/curated/*.csv against schema and vocab.yaml
 make schema            # Stage 2: export JSON Schemas to data/schema/
+make extract-llm-plan SECTIONS=priority     # Stage 3: token count + cost estimate (free)
+make extract-llm-submit SECTIONS=priority   # Stage 3: half-price batch extraction (costs money)
+make extract-llm-collect SECTIONS=priority  # Stage 3: wait for the batch, parse results
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).

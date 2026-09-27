@@ -10,6 +10,18 @@ def main() -> None:
     sub.add_parser("extract-text", help="Stage 1: PDF -> pages, sections, index CSVs in data/raw/")
     sub.add_parser("validate", help="Stage 2: check data/curated/ against schema and vocabularies")
     sub.add_parser("schema", help="Stage 2: export JSON Schema per table to data/schema/")
+    llm = sub.add_parser("extract-llm", help="Stage 3: extract facts per section with the Claude API")
+    llm.add_argument("--sections", default="priority",
+                     help="'priority' (default), 'all', or comma-separated section ids like L1-C06-S01")
+    mode = llm.add_mutually_exclusive_group()
+    mode.add_argument("--plan", action="store_true", help="count tokens and estimate cost; make no model calls")
+    mode.add_argument("--realtime", action="store_true", help="call the API directly (full price)")
+    mode.add_argument("--submit", action="store_true", help="submit pending chunks as a batch (half price)")
+    mode.add_argument("--collect", action="store_true", help="fetch finished batches and parse their results")
+    llm.add_argument("--wait", action="store_true", help="with --collect: poll until the batches end")
+    llm.add_argument("--model", default="claude-opus-5")
+    llm.add_argument("--effort", default="medium", choices=["low", "medium", "high", "xhigh", "max"])
+    llm.add_argument("--workers", type=int, default=4)
     args = parser.parse_args()
 
     if args.cmd == "extract-text":
@@ -26,6 +38,17 @@ def main() -> None:
         errors = sum(i.level == "error" for i in issues)
         print(f"{errors} error(s), {len(issues) - errors} warning(s)")
         raise SystemExit(1 if errors else 0)
+    elif args.cmd == "extract-llm":
+        from bailliage.extract import run
+        jobs = run.build_jobs(run.select_sections(args.sections), args.model, args.effort)
+        if args.realtime:
+            run.run_realtime(jobs, args.model, args.effort, args.workers)
+        elif args.submit:
+            run.submit_batch(jobs, args.model, args.effort)
+        elif args.collect:
+            run.collect_batches(jobs, args.effort, args.wait)
+        else:
+            run.plan(jobs, args.model, args.effort)
     elif args.cmd == "schema":
         from bailliage.data import schema
         for path in schema.export():
