@@ -258,7 +258,8 @@ def collect_batches(jobs: list[Job], effort: str, wait: bool) -> None:
         while True:
             batch = client.messages.batches.retrieve(batch_id)
             c = batch.request_counts
-            print(f"batch {batch_id}: {batch.processing_status} — processing {c.processing}, succeeded "
+            print(f"{time.strftime('%Y-%m-%d %H:%M')} batch {batch_id}: {batch.processing_status} — "
+                  f"processing {c.processing}, succeeded "
                   f"{c.succeeded}, errored {c.errored}, expired {c.expired}", flush=True)
             if batch.processing_status == "ended" or not wait:
                 break
