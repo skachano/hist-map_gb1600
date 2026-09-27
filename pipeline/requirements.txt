@@ -13,5 +13,6 @@ requests>=2.32
 SPARQLWrapper>=2.0
 shapely>=2.0
 geopandas>=1.0
+matplotlib>=3.8  # preview images of derived geometry
 # Tests
 pytest>=8.0

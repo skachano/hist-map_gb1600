@@ -258,6 +258,21 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Dissolve the cells by territory membership per year; there is one version per change year, not per year.
   - Optionally, georeference the p. 310 map with GDAL and serve it as a raster overlay.
 - Done when: the territory GeoJSON renders without gaps, and territory changes (1623 Lixheim, 1629 Sarrewerden) are visible.
+- **Status: done (without the optional map overlay).** Code is in `pipeline/bailliage/geo/territories.py`. `make geometry` writes `data/geometry/cells.geojson` (958 settlement cells) and `data/geometry/territories.geojson` (135 versions of 127 territories, 0.2 MB). `data/review/*.png` has previews.
+- How areas are built:
+  - Voronoi cells in EPSG:3035, clipped to 6 km around the settlements. Hamlets placed at their commune share its cell.
+  - A territory's area in a year is the union of its member settlements' cells, following memberships down through sub-territories.
+  - A new version exists only where membership changes. The bailiwick has 1600–1622 (707 settlements), 1623 (+17 Lixheim) and 1629 (+39 Sarrewerden).
+- Fixes this stage needed:
+  - **Membership years are attestations** ("in 1606 the mairie comprised…"). They're kept only when a sovereignty or high-justice transfer *of the member itself* backs them. Explicit changes go in `manual/memberships.csv` (Sarrewerden 1629, Lixheim 1623).
+  - **Equivalent territory types are one territory:** office, lordship, county, principality, castellany and similar ("terre/office/seigneurie de X").
+  - **Section-scoped aliases** separate homonyms, e.g. Hombourg-Haut/Saint-Avold vs Hombourg-sur-Canner.
+  - **Geocoding second pass:** a place matched without a canton, or far from its territory's other members, is re-matched near the territory's centre (Sarralbe had matched Aube). Places that stay far away are flagged low confidence and don't stretch territory areas.
+- Known gaps:
+  - 76 territories have no located members; they're mostly neighbouring lands mentioned without their villages.
+  - The 1606 Lemberg cession from the county of Bitche is not dated. That needs a manual row.
+  - The optional georeferenced overlay of the 1630 map (p. 310) is not done.
+
 
 ### Stage 7: Data build
 - Tasks:

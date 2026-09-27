@@ -64,3 +64,38 @@ def test_geonames_fuzzy_rules():
     assert g.match({"Ackerbach"}, "FR", (49.17, 6.96))[0] is None  # different first letter
     assert g.match({"Blieschweyen"}, "FR", (49.14, 7.13))[0]["geonameid"] == 3  # spaces ignored
     assert g.match({"Brouderdorf"}, "FR", None)[0] is None  # no fuzzy search without an anchor
+
+
+def test_members_by_year_follow_chains_and_dates():
+    from types import SimpleNamespace as NS
+    from bailliage.geo.territories import members_by_year
+    ms = [NS(child_id="v1", parent_id="prevote", from_year=None, to_year=None),
+          NS(child_id="prevote", parent_id="office", from_year=None, to_year=None),
+          NS(child_id="v2", parent_id="office", from_year=1623, to_year=None),
+          NS(child_id="office", parent_id="prevote", from_year=None, to_year=None)]  # a cycle must not hang
+    by = members_by_year(ms, {"v1", "v2"})
+    assert by[1622]["office"] == {"v1"} and by[1623]["office"] == {"v1", "v2"}
+
+
+def test_colocated_places_share_one_cell():
+    from types import SimpleNamespace as NS
+    from bailliage.geo.territories import settlement_cells
+    places = [NS(id="commune", lat=49.0, lon=6.5, confidence="high"),
+              NS(id="hamlet", lat=49.0, lon=6.5, confidence="low"),
+              NS(id="other", lat=49.1, lon=6.6, confidence="high")]
+    cells, shared = settlement_cells(places)
+    assert set(cells) == {"commune", "other"} and shared["commune"] == ["hamlet"]
+    assert all(c.area > 0 for c in cells.values())
+
+
+def test_territory_context_rematches_a_distant_namesake():
+    near = item("Q9", 49.36, 6.40, {"Q484170"}, matched={"Courcelles"})
+    far = item("Q1", 48.37, 6.04, {"Q484170"}, matched={"Courcelles"})
+    results = {m: geocode.Result(m, lat=49.35 + i / 100, lon=6.35, confidence="high") for i, m in enumerate("abc")}
+    results["courcelles"] = geocode.Result("courcelles", lat=48.37, lon=6.04, wikidata_id="Q1", confidence="high",
+                                           note="no canton anchor")
+    info = {"courcelles": {"names": {"Courcelles"}, "row": None,
+                           "place": {"place_type": "village", "modern_country": "FR"}}}
+    memberships = [{"child_id": c, "parent_id": "office"} for c in ("a", "b", "c", "courcelles")]
+    geocode.refine_with_territories(results, info, memberships, {"Q1": far, "Q9": near}, fake_geonames())
+    assert results["courcelles"].wikidata_id == "Q9" and results["courcelles"].confidence == "medium"

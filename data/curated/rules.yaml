@@ -43,6 +43,23 @@ entity_aliases:
 # Place names as written in the book -> place id (fixes OCR variants, duplicate territories)
 place_aliases:
   duché de Lorraine: duchy-lorraine         # a state, not a territory: memberships in it are dropped
+  bailliage: bailliage-allemagne            # "le bailliage" in the book is always the bailliage d'Allemagne
+  bailliage d'Allemagne: bailliage-allemagne
+  # Hombourg-Haut / Saint-Avold: one office (episcopal castellany until 1581) under many names.
+  Hombourg: office-hombourg-haut
+  Hombourg-Haut: office-hombourg-haut
+  Hombourg et Saint-Avold: office-hombourg-haut
+  office de Hombourg: office-hombourg-haut
+  office de Hombourg-Haut: office-hombourg-haut
+  office de Hombourg et Saint-Avold: office-hombourg-haut
+  office de Hombourg-Saint-Avold: office-hombourg-haut
+  la châtellenie de Hombourg-Haut: office-hombourg-haut
+  châtellenie épiscopale de Hombourg-Haut: office-hombourg-haut
+  seigneurie de Hombourg: office-hombourg-haut
+  # Hombourg-sur-Canner (Hombourg-Budange), a fief of the Créhange in the office of Sierck (p. 50, 81).
+  la terre de Hombourg: lordship-hombourg-sur-canner
+  seigneurie de Hombourg-sur-Canner: lordship-hombourg-sur-canner
+  "L1-C06-S09: Hombourg": lordship-hombourg-sur-canner
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
 entities: {}

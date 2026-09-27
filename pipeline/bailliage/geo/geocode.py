@@ -164,6 +164,63 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
     return fr, de, en
 
 
+CONTEXT_KM = 35  # a member this far from its territory's other members is suspect
+
+
+def refine_with_territories(results: dict, info: dict, memberships: list[dict], items: dict, geonames) -> None:
+    """Second pass: the other members of a place's territory give the context the book's
+    index sometimes lacks. A place matched without a canton, flagged ambiguous, or lying
+    far from its territory is matched again near the territory's centre."""
+    reliable = {pid: r for pid, r in results.items() if r.lat is not None and r.confidence != "low"}
+    members: dict[str, list[str]] = {}
+    parents: dict[str, set[str]] = {}
+    for m in memberships:
+        members.setdefault(m["parent_id"], []).append(m["child_id"])
+        parents.setdefault(m["child_id"], set()).add(m["parent_id"])
+
+    def centre(tid: str, exclude: str):
+        pts = [(reliable[c].lat, reliable[c].lon) for c in members.get(tid, []) if c in reliable and c != exclude]
+        if len(pts) < 3:
+            return None
+        lats, lons = sorted(a for a, _ in pts), sorted(b for _, b in pts)
+        return lats[len(lats) // 2], lons[len(lons) // 2]  # median: robust to other misplaced members
+
+    changed = flagged = 0
+    for pid, res in results.items():
+        centres = [c for t in parents.get(pid, ()) if (c := centre(t, pid))]
+        if not centres:  # members of small fiefs: use the territories those fiefs belong to
+            centres = [c for t in parents.get(pid, ()) for g in parents.get(t, ()) if (c := centre(g, pid))]
+        if not centres:
+            continue
+        context = (sum(a for a, _ in centres) / len(centres), sum(b for _, b in centres) / len(centres))
+        far = res.lat is None or km(context, (res.lat, res.lon)) > CONTEXT_KM
+        weak = res.confidence == "low" or "no canton" in res.note or "ambiguous" in res.note
+        if not (far or weak):
+            continue
+        d = info[pid]
+        p, row = d["place"], d["row"]
+        country = (row or {}).get("country") or p.get("modern_country") or None
+        it, conf, note = best_candidate(d["names"], items, country, p["place_type"], context)
+        if it and km(context, (it["lat"], it["lon"])) <= CONTEXT_KM and it["qid"] != res.wikidata_id:
+            res.lat, res.lon, res.wikidata_id, res.geonames_id = round(it["lat"], 5), round(it["lon"], 5), it["qid"], None
+            res.name_de, res.name_en = it["de"], it["en"]
+            res.method, res.confidence, res.note = "wikidata", "medium", "chosen near its territory's other members"
+            changed += 1
+            continue
+        e, conf, note = geonames.match(d["names"], country, context)
+        if e and (far or res.lat is None):
+            res.lat, res.lon, res.geonames_id, res.wikidata_id = round(e["lat"], 5), round(e["lon"], 5), e["geonameid"], None
+            res.method, res.confidence = "geonames", "medium" if "exact" in note else "low"
+            res.note = f"{note}; chosen near its territory's other members"
+            changed += 1
+        elif far and res.lat is not None:
+            res.confidence = "low"
+            res.note = (res.note + "; " if res.note else "") + \
+                f"{km(context, (res.lat, res.lon)):.0f} km from its territory's other members"
+            flagged += 1
+    print(f"territory context: {changed} place(s) re-matched, {flagged} flagged as far from their territory")
+
+
 def run() -> None:
     vocab = load_vocab(config.CURATED_DIR / "vocab.yaml")
     rules = (yaml.safe_load((config.CURATED_DIR / "rules.yaml").read_text()) or {}).get("geocode") or {}
@@ -263,6 +320,8 @@ def run() -> None:
             else:
                 res.note = note
         results[pid] = res
+
+    refine_with_territories(results, info, tables["memberships"], items, geonames)
 
     # Territories: names from type + seat; a point at the seat settlement, else at the centre of
     # the located settlements the memberships put inside it (only used to place labels).

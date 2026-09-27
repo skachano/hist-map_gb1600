@@ -31,6 +31,22 @@ _TYPE_RE = re.compile(r"^(?:(?:la|le|les|l)\s+)?(?:" + "|".join(re.escape(w) for
                       + r")\s+(?:(?:de|du|des|d)\s+)?(?:(?:la|le|les|l)\s+)?")
 
 
+# One territory is called "office", "seigneurie", "terre", "comté" or "principauté" of X
+# depending on context; these types name the same domain. Nested units (prévôté,
+# mairie, cour, ban) stay distinct.
+DOMAIN_TYPES = {"office", "lordship", "county", "principality", "castellany", "marquisate", "barony",
+                "receivership"}
+
+
+def preferred_domain_types(place_mentions) -> dict[str, str]:
+    """For each territory base name, the domain type most mentions use ('county' for Bitche)."""
+    counts: dict[str, Counter] = defaultdict(Counter)
+    for p in place_mentions:
+        if p["kind"] == "territory" and p["place_type"] in DOMAIN_TYPES:
+            counts[base_name(p["name_in_text"])][p["place_type"]] += 1
+    return {base: c.most_common(1)[0][0] for base, c in counts.items()}
+
+
 def fold(text: str) -> str:
     """Lowercase ASCII with single spaces: 'L'office de Sierck' -> 'l office de sierck'."""
     text = unicodedata.normalize("NFKD", text or "")
@@ -120,10 +136,13 @@ class ResolvedPlace:
 
 class PlaceResolver:
     def __init__(self, gazetteer: Gazetteer, manual_places: list[dict], aliases: dict[str, str],
-                 territory_types: set[str] = frozenset()):
+                 territory_types: set[str] = frozenset(), preferred_types: dict[str, str] | None = None):
         self.gaz = gazetteer
         self.territory_types = territory_types  # place types that are always territories
-        self.aliases = {fold(k): v for k, v in aliases.items()}
+        # base name -> the type most mentions give a "domain" territory (see DOMAIN_TYPES)
+        self.preferred_types = preferred_types or {}
+        # keys: 'name' or 'SECTION: name' (both folded)
+        self.aliases = {": ".join(fold(part) for part in k.split(": ", 1)): v for k, v in aliases.items()}
         self.places: dict[str, ResolvedPlace] = {}
         self._by_key: dict[tuple, str] = {}
         self._manual_names: dict[tuple[str, str], str] = {}
@@ -139,18 +158,26 @@ class PlaceResolver:
             pid = f"{pid}-{slug(row['canton'] or row['dept_code'] or 'x')}"
         return pid
 
-    def resolve(self, place: dict) -> str:
-        """Place id for one extracted place mention (dict with name_in_text, index_name, kind, place_type)."""
+    def resolve(self, place: dict, section: str | None = None) -> str:
+        """Place id for one extracted place mention (dict with name_in_text, index_name, kind, place_type).
+        Aliases may be scoped to a book section ('L1-C06-S09: Hombourg') for names that mean
+        different places in different parts of the book."""
         name, kind = place["name_in_text"], place["kind"]
         if place["place_type"] in self.territory_types:
             kind = "territory"  # "comté de La Petite-Pierre" tagged as a settlement
-        if (alias := self.aliases.get(fold(name))) is not None:
+        alias = self.aliases.get(f"{fold(section)}: {fold(name)}") if section else None
+        if alias is None:
+            alias = self.aliases.get(fold(name))
+        if alias is not None:
             pid, row = alias, None
         elif kind == "territory":
-            key = ("territory", base_name(name))
-            pid = self._manual_names.get(key) or self._by_key.get((place["place_type"], key[1])) \
-                or f"{slug(place['place_type'])}-{slug(key[1])}"
-            self._by_key[(place["place_type"], key[1])] = pid
+            base = base_name(name)
+            ptype = place["place_type"]
+            group = "domain" if ptype in DOMAIN_TYPES else ptype
+            id_type = self.preferred_types.get(base, ptype) if group == "domain" else ptype
+            pid = self._manual_names.get(("territory", base)) or self._by_key.get((group, base)) \
+                or f"{slug(id_type)}-{slug(base)}"
+            self._by_key[(group, base)] = pid
             row = None
         else:
             row = self.gaz.by_label.get(place.get("index_name") or "") or self.gaz.match(name)

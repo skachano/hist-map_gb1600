@@ -79,3 +79,30 @@ def test_same_holder_overlaps_merge_into_the_dated_row():
     assert (row["from_year"], row["to_year"], row["pages"]) == (1616, 1620, {49, 51})
     disjoint = _builder_with([_right("a", 1600, 1605), _right("a", 1620, 1625)])
     assert disjoint.merge_same_holder() == 0 and len(disjoint.rights) == 2
+
+
+def test_section_scoped_alias_and_domain_merge():
+    from bailliage.curate.resolve import preferred_domain_types
+    mentions = [{"name_in_text": "Lixheim", "kind": "territory", "place_type": t, "other_names": [], "index_name": ""}
+                for t in ("principality", "principality", "office", "lordship")]
+    r = PlaceResolver(gazetteer(), [], {"Hombourg": "office-hombourg-haut",
+                                        "L1-C06-S09: Hombourg": "lordship-hombourg-sur-canner"},
+                      territory_types={"office", "principality", "lordship"},
+                      preferred_types=preferred_domain_types(mentions))
+    assert {r.resolve(m) for m in mentions} == {"principality-lixheim"}  # office/lordship/principality merged
+    hombourg = {"name_in_text": "Hombourg", "kind": "territory", "place_type": "lordship", "other_names": [],
+                "index_name": ""}
+    assert r.resolve(hombourg, "L1-C06-S05") == "office-hombourg-haut"
+    assert r.resolve(hombourg, "L1-C06-S09") == "lordship-hombourg-sur-canner"
+
+
+def test_membership_years_need_a_transfer_of_the_member():
+    b = _builder_with([])
+    m = lambda child, frm, to: {"child_id": child, "parent_id": "office", "from_year": frm, "to_year": to,  # noqa: E731
+                                "pages": {1}, "confidence": "high"}
+    b.memberships = {0: m("sold", 1621, None), 1: m("listed", None, 1606), 2: m("listed", None, None)}
+    b.events = {0: {"year": 1621, "place_id": "sold", "event_type": "exchange", "right_type": "suzerain"},
+                1: {"year": 1606, "place_id": "office", "event_type": "purchase", "right_type": "suzerain"}}
+    b.normalize_memberships()
+    rows = {(r["child_id"], r["from_year"], r["to_year"]) for r in b.memberships.values()}
+    assert rows == {("sold", 1621, None), ("listed", None, None)}  # the parent's event does not date 'listed'

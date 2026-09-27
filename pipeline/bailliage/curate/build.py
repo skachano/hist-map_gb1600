@@ -21,7 +21,8 @@ from pathlib import Path
 import yaml
 
 from bailliage import config
-from bailliage.curate.resolve import EntityResolver, Gazetteer, PlaceResolver, base_name, fold, slug
+from bailliage.curate.resolve import (EntityResolver, Gazetteer, PlaceResolver, base_name, fold,
+                                      preferred_domain_types, slug)
 from bailliage.data import store, validate
 from bailliage.data.models import Entity, Event, Membership, Place, Right, Ruler
 
@@ -32,6 +33,8 @@ REPORT_FILE = config.DATA_DIR / "review" / "report.md"
 CONFIDENCE_RANK = {"low": 0, "medium": 1, "high": 2}
 SNIPPET_MAX = 300
 STATE_TYPES = {"empire", "kingdom", "duchy", "electorate", "temporal_bishopric"}
+TRANSFER_EVENTS = {"purchase", "pledge", "redemption", "inheritance", "enfeoffment", "exchange", "cession",
+                   "occupation"}
 _ID_LIKE = re.compile(r"^(?:county|lordship|duchy|office|barony|principality|castellany|bailiwick|provostship|"
                       r"marquisate|advocacy|condominium|ban|fief|receivership|mayoralty|court)-[a-z0-9-]+$", re.I)
 
@@ -110,8 +113,11 @@ class Builder:
                        for m in (Place, Entity, Ruler, Membership, Right, Event)}
         vocab = store.load_vocab(config.CURATED_DIR / "vocab.yaml")
         territory_types = {k for k, v in vocab["place_types"].items() if v.get("applies_to") == "territory"}
+        self.chunks = [json.loads(Path(p).read_text())
+                       for p in sorted(glob.glob(str(config.EXTRACTED_DIR / "L*_*.json")))]
+        mentions = [p for c in self.chunks for p in c["extraction"]["places"]]
         self.places = PlaceResolver(Gazetteer.load(), self.manual["places"], self.rules.get("place_aliases", {}),
-                                    territory_types)
+                                    territory_types, preferred_domain_types(mentions))
         self.entities = EntityResolver(self.manual["entities"], self.rules.get("entity_aliases", {}))
         self.rights: dict[tuple, dict] = {}
         self.events: dict[tuple, dict] = {}
@@ -124,14 +130,15 @@ class Builder:
     # --- merging extracted chunks ----------------------------------------------
     def add_chunk(self, record: dict) -> None:
         x = record["extraction"]
-        pid = {p["name_in_text"]: self.places.resolve(p) for p in x["places"]}
+        section = record["section_id"]
+        pid = {p["name_in_text"]: self.places.resolve(p, section) for p in x["places"]}
         for e in x["entities"]:
             self.entities.add(e)
 
         def place(name):
             if name not in pid:  # not declared in the chunk: resolve by name alone
                 pid[name] = self.places.resolve({"name_in_text": name, "index_name": "", "kind": "settlement",
-                                                 "place_type": "village", "other_names": []})
+                                                 "place_type": "village", "other_names": []}, section)
             return pid[name]
 
         ent = self.entities.canonical
@@ -301,6 +308,44 @@ class Builder:
             self._merge(rekeyed, key, r)
         self.rights = rekeyed
 
+    def normalize_memberships(self) -> int:
+        """Membership years in the extraction are almost always attestations: 'in 1606 the
+        haute-mairie comprised ...' comes back as 'member until 1606'. A year is kept only
+        when a sovereignty or high-justice transfer of the member itself backs it (within a
+        year); otherwise the membership describes the standing composition. Explicit changes
+        belong in manual/memberships.csv. Overlapping rows for the same pair are then merged."""
+        event_years = defaultdict(set)
+        for e in self.events.values():
+            # Only transfers of sovereignty or high justice move a place between territories.
+            if e["event_type"] in TRANSFER_EVENTS and e["right_type"] in (None, "suzerain", "high_justice"):
+                event_years[e["place_id"]].add(e["year"])
+
+        def backed(year, m):  # an event about the member itself; one about the parent does not move villages
+            return year is not None and any(abs(year - y) <= 1 for y in event_years.get(m["child_id"], ()))
+        for m in self.memberships.values():
+            if not backed(m["from_year"], m):
+                m["from_year"] = None
+            if not backed(m["to_year"], m):
+                m["to_year"] = None
+        groups = defaultdict(list)
+        for m in self.memberships.values():
+            groups[(m["child_id"], m["parent_id"])].append(m)
+        kept_rows, merged = {}, 0
+        for key, rows in groups.items():
+            rows.sort(key=lambda r: -sum(y is not None for y in (r["from_year"], r["to_year"])))
+            kept: list[dict] = []
+            for r in rows:
+                target = next((k for k in kept if _overlap(k, r)), None)
+                if target is None:
+                    kept.append(r)
+                else:
+                    target["pages"] |= r["pages"]
+                    merged += 1
+            for r in kept:
+                kept_rows[(*key, r["from_year"], r["to_year"])] = r
+        self.memberships = kept_rows
+        return merged
+
     # --- output ----------------------------------------------------------------
     def _finish(self, rows: list[dict]) -> list[dict]:
         for r in rows:
@@ -315,10 +360,11 @@ class Builder:
         return rows
 
     def build(self) -> dict[str, list[dict]]:
-        for path in sorted(glob.glob(str(config.EXTRACTED_DIR / "L*_*.json"))):
-            self.add_chunk(json.loads(Path(path).read_text()))
+        for chunk in self.chunks:
+            self.add_chunk(chunk)
         self.stats["rights dated from events"] = self.date_rights_from_events()
         self.stats["rights merged (same holder, overlapping)"] = self.merge_same_holder()
+        self.stats["memberships merged (attestation years, duplicates)"] = self.normalize_memberships()
 
         # Hand-curated rows win: extracted rows for a covered (place, right) or entity are dropped.
         manual_right_keys = {(r["place_id"], r["right_type"]) for r in self.manual["rights"]}

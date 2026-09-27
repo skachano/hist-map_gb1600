@@ -18,6 +18,7 @@ make extract-llm-submit SECTIONS=priority   # Stage 3: half-price batch extracti
 make extract-llm-collect SECTIONS=priority  # Stage 3: wait for the batch, parse results
 make curate            # Stage 4: rebuild data/curated/*.csv + data/review/report.md
 make geocode curate    # Stage 5: coordinates + fr/de/en names (Wikidata, GeoNames), then rebuild
+make geometry          # Stage 6: settlement cells + territory areas -> data/geometry/*.geojson
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).
