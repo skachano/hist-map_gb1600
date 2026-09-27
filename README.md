@@ -19,6 +19,7 @@ make extract-llm-collect SECTIONS=priority  # Stage 3: wait for the batch, parse
 make curate            # Stage 4: rebuild data/curated/*.csv + data/review/report.md
 make geocode curate    # Stage 5: coordinates + fr/de/en names (Wikidata, GeoNames), then rebuild
 make geometry          # Stage 6: settlement cells + territory areas -> data/geometry/*.geojson
+make build-data        # Stage 7: compile everything into web/public/data/ for the app
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).

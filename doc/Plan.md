@@ -279,6 +279,16 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - Compile the curated data into compact `web/public/data/*.json` plus GeoJSON: places, entities, rulers, rights as intervals, events and territory versions.
   - Snapshots are computed on the client.
 - Done when: the build is deterministic and the data size stays under about 2 MB.
+- **Status: done.** Code is in `pipeline/bailliage/web_data.py`. `make build-data` writes `web/public/data/` (git-ignored; `make dev` builds it when missing). It refuses to run while the curated data has validation errors.
+- Output is deterministic (a rebuild is byte-identical) at **1.47 MB** in total; `rights.json` is 517 kB, 84 kB gzipped. Empty fields are omitted, and quotes are capped at 200 characters.
+- File formats (keys as the app sees them):
+  - `meta.json`: `yearMin`, `yearMax`, `source`, `version` (hash of the data files), `counts`, and `vocab.{place_types,entity_types,right_types,statuses,event_types,confidence,date_precisions}.<key> = {en, fr, de[, core]}`.
+  - `places.json`: `{id, kind, type, name:{fr,de,en}, variants[], lat, lon, geo (high/medium/low), approx, wd, country, parents:[{id, from, to}], pages}`.
+  - `entities.json`: `{id, type, name:{en,fr,de}, rank (1 = most rights), rights, rulers:[{name, title, from, to, fp, tp, pages}]}`.
+  - `rights.json`: `{place, right, holder, share, status (absent = held), disputed, against[], from, to, fp, tp, conf (absent = high), pages, quote, note}`. Years are inclusive, and an absent `from`/`to` means open.
+  - `events.json`: `{year, place, right, from, to, type, text, conf, pages}`.
+  - `territories.geojson` has features `{id, from_year, to_year, settlements, place_type}`. `cells.geojson` has `{id, also[]}`, where `also` lists places placed at the same point.
+
 
 ### Stage 8: Frontend core
 - Tasks:
