@@ -43,16 +43,17 @@ def _round(geom):
     return shapely.set_precision(geom, 10 ** -PRECISION)
 
 
-def settlement_cells(places: list) -> tuple[dict[str, object], dict[str, list[str]]]:
+def settlement_cells(places: list, placed_elsewhere: set[str] = frozenset()) -> tuple[dict[str, object], dict[str, list[str]]]:
     """Voronoi cells in metres, keyed by the place that owns the point; places placed
-    at the same point (hamlets placed at their commune) share their commune's cell."""
+    at the same point (hamlets placed at their commune) share their commune's cell, and
+    the commune owns it: `placed_elsewhere` (approximate places) never own a shared cell."""
     by_point: dict[tuple[float, float], list] = defaultdict(list)
     for p in places:
         by_point[(round(p.lon, 5), round(p.lat, 5))].append(p)
     owners, points = [], []
     shared: dict[str, list[str]] = {}
     for (lon, lat), group in by_point.items():
-        group.sort(key=lambda p: (CONFIDENCE_RANK.get(p.confidence or "high", 0), p.id))
+        group.sort(key=lambda p: (p.id in placed_elsewhere, CONFIDENCE_RANK.get(p.confidence or "high", 0), p.id))
         owner = group[0]
         owners.append(owner.id)
         shared[owner.id] = [p.id for p in group[1:]]
@@ -61,6 +62,19 @@ def settlement_cells(places: list) -> tuple[dict[str, object], dict[str, list[st
     region = unary_union([pt.buffer(CLIP_KM * 1000, 24) for pt in points])
     cells = shapely.voronoi_polygons(multipoint, extend_to=region.envelope, ordered=True)
     return ({pid: cell.intersection(region) for pid, cell in zip(owners, cells.geoms)}, shared)
+
+
+def excluded_from_areas(geocoding_rows) -> set[str]:
+    """Places whose point must not add land to territory areas:
+    - placed approximately at their commune (a lost village such as Dittlingen, placed at
+      Bousbach, would otherwise pull the whole commune of Bousbach into the lordship of Forbach);
+    - flagged far from their territory's other members (probably mislocated);
+    - matched only by a doubtful spelling (the lost Ruchling was matched to Rouhling).
+    They remain members (lists, panels) and keep their point on the map."""
+    return {g["place_id"] for g in geocoding_rows
+            if g["method"] == "approximate"
+            or (g["confidence"] == "low" and "from its territory" in g["note"])
+            or (g["confidence"] == "low" and "spelling match" in g["note"])}
 
 
 def members_by_year(memberships: list, settlements: set[str]) -> dict[int, dict[str, frozenset[str]]]:
@@ -98,18 +112,17 @@ def run() -> None:
     ds = store.load()
     places = {p.id: p for _, p in ds.places}
     located = [p for p in places.values() if p.kind == "settlement" and p.lat is not None]
-    cells, shared = settlement_cells(located)
+    with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
+        approximate = {g["place_id"] for g in csv.DictReader(f) if g["method"] == "approximate"}
+    cells, shared = settlement_cells(located, approximate)
     cell_of = {pid: pid for pid in cells}
     for owner, others in shared.items():
         for o in others:
             cell_of[o] = owner
 
-    # Places flagged far from their territory's other members (probably mislocated) keep their
-    # cell but do not stretch territory areas.
     with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
-        suspect = {g["place_id"] for g in csv.DictReader(f)
-                   if g["confidence"] == "low" and "from its territory" in g["note"]}
-    by_year = members_by_year([m for _, m in ds.memberships], {p.id for p in located} - suspect)
+        no_land = excluded_from_areas(csv.DictReader(f))
+    by_year = members_by_year([m for _, m in ds.memberships], {p.id for p in located} - no_land)
     territories = [p for p in places.values() if p.kind == "territory"]
     features, empty = [], []
     for t in sorted(territories, key=lambda t: t.id):

@@ -93,4 +93,8 @@ right_overrides:
 # Geocoding decisions (Stage 5), applied by `make geocode`:
 #   place-id: {wikidata: Q…}                 use this Wikidata item
 #   place-id: {lat: …, lon: …, note: "…"}    fixed point (e.g. a lost village located from a map)
-geocode: {}
+geocode:
+  # Lost villages ("village disparu") the databases matched to other, existing places.
+  ruchling: {approximate: spicheren, note: "Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling"}
+  nideck: {approximate: sarralbe, note: "Nideck (Neudeck), lost village of the office of Sarralbe (p. 18); was matched to Burg Nideck in Alsace"}
+  bletting: {unlocated: true, note: "lost village of the office of Boulay (p. 62), site unknown; was matched to Betting"}

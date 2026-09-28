@@ -173,6 +173,23 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
 CONTEXT_KM = 35  # a member this far from its territory's other members is suspect
 
 
+def apply_placement_rules(results: dict, rules: dict[str, dict]) -> None:
+    """Rules for places the databases cannot locate (lost villages):
+         place-id: {approximate: other-place-id, note: ...}   placed at that place, like a hamlet at its commune
+         place-id: {unlocated: true, note: ...}               no point at all (site unknown)"""
+    for pid, rule in rules.items():
+        res = results[pid]
+        res.lat = res.lon = res.wikidata_id = res.geonames_id = None
+        res.confidence = "low"
+        target = results.get(rule.get("approximate", ""))
+        if target is not None and target.lat is not None:
+            res.lat, res.lon, res.method = target.lat, target.lon, "approximate"
+            res.note = rule.get("note") or f"placed at {target.place_id} (rules.yaml)"
+        else:
+            res.method = "unlocated"
+            res.note = rule.get("note") or "site unknown (rules.yaml)"
+
+
 def refine_with_territories(results: dict, info: dict, memberships: list[dict], items: dict, geonames) -> None:
     """Second pass: the other members of a place's territory give the context the book's
     index sometimes lacks. A place matched without a canton, flagged ambiguous, or lying
@@ -206,6 +223,15 @@ def refine_with_territories(results: dict, info: dict, memberships: list[dict], 
         d = info[pid]
         p, row = d["place"], d["row"]
         country = (row or {}).get("country") or p.get("modern_country") or None
+        if res.method == "approximate" and far and row and row["canton"]:
+            # Placed at the index's commune, but the wrong namesake (Puttelange-lès-Thionville for
+            # Puttelange-aux-Lacs): resolve the commune's name near the territory instead.
+            it, _, _ = best_candidate({row["canton"]}, items, country, "village", context)
+            if it and km(context, (it["lat"], it["lon"])) <= CONTEXT_KM:
+                res.lat, res.lon = round(it["lat"], 5), round(it["lon"], 5)
+                res.note = f"not in Wikidata/GeoNames; placed at {row['canton']} (index location, resolved near its territory)"
+                changed += 1
+            continue
         it, conf, note = best_candidate(d["names"], items, country, p["place_type"], context)
         if it and km(context, (it["lat"], it["lon"])) <= CONTEXT_KM and it["qid"] != res.wikidata_id:
             res.lat, res.lon, res.wikidata_id, res.geonames_id = round(it["lat"], 5), round(it["lon"], 5), it["qid"], None
@@ -274,12 +300,17 @@ def run() -> None:
         return anchors[key]
 
     results: dict[str, Result] = {}
+    deferred: dict[str, dict] = {}
     for pid, d in info.items():
         p, row = d["place"], d["row"]
         if p["kind"] != "settlement":
             continue
         res = Result(pid, name_fr=p["name_fr"])
         override = rules.get(pid)
+        if override and ("approximate" in override or override.get("unlocated")):
+            deferred[pid] = override  # needs the other places' results first
+            results[pid] = res
+            continue
         if override:
             res.lat, res.lon = override.get("lat"), override.get("lon")
             res.wikidata_id = override.get("wikidata")
@@ -328,6 +359,7 @@ def run() -> None:
         results[pid] = res
 
     refine_with_territories(results, info, tables["memberships"], items, geonames)
+    apply_placement_rules(results, deferred)
 
     # Territories: names from type + seat; a point at the seat settlement, else at the centre of
     # the located settlements the memberships put inside it (only used to place labels).
@@ -340,7 +372,10 @@ def run() -> None:
         if p["kind"] != "territory":
             continue
         seat = by_base.get(base_name(p["name_fr"]))
-        fr, de, en = territory_names(p, vocab, seat)
+        # Name from the book, as resolved in Stage 4: the curated row may already carry the
+        # names of an earlier geocoding run ('Seigneurie de Forbach'), which must not feed back.
+        rp = resolved.get(pid)
+        fr, de, en = territory_names({**p, "name_fr": rp.name_fr if rp and not rp.manual else p["name_fr"]}, vocab, seat)
         res = Result(pid, name_fr=fr, name_de=de, name_en=en, method="territory", confidence="medium")
         if seat:
             res.lat, res.lon, res.note = seat.lat, seat.lon, f"seat: {seat.place_id}"

@@ -363,6 +363,20 @@ For each screen, add a colour-blind-safe holder palette, legends and hatching fo
   - aliases can be scoped by kind (`"territory: Marimont-lès-Albestroff"` leaves the village alone)
   - territory names without a type word get one in all three languages ("Seigneurie de Forbach" / "Herrschaft Forbach" / "Lordship of Forbach")
 - Tests: `model/territories.test.ts` (levels, members, kinds); e2e walk down and up the hierarchy, levels and neighbours; the view is included in the layout and a11y suites. Totals: 22 vitest, 64 pytest, 37 e2e.
+- **Lost villages audit** (after Bousbach appeared inside the Lordship of Forbach):
+  - The cause: a lost village without coordinates (Dittlingen) was placed at its commune (Bousbach) and pulled that commune's whole cell into its realm.
+  - Now **these places add no land to territory areas**:
+    - places placed approximately at their commune
+    - places flagged far from their territory
+    - doubtful spelling-only matches (the lost Ruchling had been matched to Rouhling)
+
+    They stay members and keep their points.
+  - A real place always owns a shared cell (Teterchen, not the ruined Penning).
+  - A commune name the index gives is re-resolved near the territory when the first match is far away (Puttelange-aux-Lacs, not Puttelange-lès-Thionville).
+  - New `geocode` rules place lost villages: `approximate: <place>` or `unlocated: true` (Ruchling near Spicheren, Nideck near Sarralbe, Bletting unlocated).
+  - Terlange and Rode-lès-Saint-Louis (Livre III, not yet extracted), Grieslingen and Heyerstein are not in the dataset.
+  - Fixed a feedback loop: the naming step now starts from the book's resolved name, not from the curated row, which already carried the previous run's names. `make geocode curate` reached a fixed point (a second run gives identical files).
+  - Review item: ten doubtful spelling matches now add no land. Some are probably right (Evendorf → Evendorff, Kirberg → Kirrberg, Veschheim → Vescheim) and can be confirmed with a `geocode` rule.
 
 ### Stage 10: QA & polish
 - Tasks:

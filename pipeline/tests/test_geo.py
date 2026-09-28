@@ -104,3 +104,37 @@ def test_territory_context_rematches_a_distant_namesake():
     memberships = [{"child_id": c, "parent_id": "office"} for c in ("a", "b", "c", "courcelles")]
     geocode.refine_with_territories(results, info, memberships, {"Q1": far, "Q9": near}, fake_geonames())
     assert results["courcelles"].wikidata_id == "Q9" and results["courcelles"].confidence == "medium"
+
+
+def test_approximate_and_mislocated_places_add_no_land():
+    from bailliage.geo.territories import excluded_from_areas
+    rows = [
+        {"place_id": "bousbach", "method": "wikidata", "confidence": "high", "note": ""},
+        {"place_id": "dittelingen", "method": "approximate", "confidence": "low", "note": "placed at Bousbach"},
+        {"place_id": "courcelles", "method": "wikidata", "confidence": "low",
+         "note": "116 km from its territory's other members"},
+        {"place_id": "brouderdorf", "method": "geonames", "confidence": "medium",
+         "note": "geonames spelling match Brouderdorff (0.96)"},  # a sure spelling match keeps its land
+    ]
+    rows.append({"place_id": "ruchling", "method": "geonames", "confidence": "low",
+                 "note": "geonames spelling match Rouhling (0.93)"})
+    assert excluded_from_areas(rows) == {"dittelingen", "courcelles", "ruchling"}
+
+
+def test_placement_rules_for_lost_villages():
+    results = {"spicheren": geocode.Result("spicheren", lat=49.19, lon=6.97, confidence="high"),
+               "ruchling": geocode.Result("ruchling", lat=49.14, lon=7.0, geonames_id=2982564, method="geonames"),
+               "bletting": geocode.Result("bletting", lat=49.13, lon=6.82, method="geonames")}
+    geocode.apply_placement_rules(results, {"ruchling": {"approximate": "spicheren"}, "bletting": {"unlocated": True}})
+    assert (results["ruchling"].lat, results["ruchling"].method, results["ruchling"].geonames_id) == (49.19, "approximate", None)
+    assert results["bletting"].lat is None and results["bletting"].method == "unlocated"
+
+
+def test_real_place_owns_a_shared_cell():
+    from types import SimpleNamespace as NS
+    from bailliage.geo.territories import settlement_cells
+    places = [NS(id="penning", lat=49.2, lon=6.5, confidence="high"),
+              NS(id="teterchen", lat=49.2, lon=6.5, confidence="high"),
+              NS(id="other", lat=49.3, lon=6.6, confidence="high")]
+    cells, shared = settlement_cells(places, placed_elsewhere={"penning"})
+    assert "teterchen" in cells and shared["teterchen"] == ["penning"]
