@@ -715,6 +715,7 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | ranschborn | approximate | low | 49.11611, 7.56222 |  | not in Wikidata/GeoNames; placed at Eppenbrunn (index location) |
 | remsing | approximate | low | 49.14722, 6.89444 |  | not in Wikidata/GeoNames; placed at Folkling (index location) |
 | rohr | approximate | low | 49.05167, 7.42528 |  | Rohr alias Roseau with the Faubourg of Bitche (p. 17); was matched to Rohr in Bas-Rhin |
+| rohrbach-la-petite | approximate | low | 48.96472, 6.86694 |  | Helt-Rohrbach = Rohrbach-la-Petite (index), now part of Nelling, lordship of Marimont (p. 20); was matched to Rohrbach-lès-Bitche |
 | ruchling | approximate | low | 49.19167, 6.96833 |  | Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling |
 | salival | approximate | low | 48.77722, 6.56222 |  | abbey of Salival in the castellany of Vic (p. 78), now part of Moyenvic; the index's Morville was matched to a namesake |
 | sarreck | approximate | low | 48.79417, 7.03417 |  | not in Wikidata/GeoNames; placed at Oberstinzel (index location) |
@@ -810,7 +811,6 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | rech | geonames | medium | 49.45311, 6.603 | 2849755 | geonames exact; chosen near its territory's other members |
 | rech-ballem | geonames | medium | 49.45311, 6.603 | 2849755 | geonames exact |
 | renting | wikidata | medium | 48.72249, 6.99617 | Q107300771 | no canton anchor |
-| rohrbach-la-petite | wikidata | medium | 49.04528, 7.265 | Q22028 | chosen near its territory's other members |
 | rohrhach | geonames | medium | 48.83094, 6.84071 | 2982831 | geonames spelling match Rorbach-lès-Dieuze (0.97) |
 | saint-avold | wikidata | medium | 49.10417, 6.70806 | Q22485 | chosen near its territory's other members |
 | saint-jean-de-bassel | geonames | medium | 48.80488, 6.99091 | 2979351 | geonames spelling match Saint-Jean-de-Bassel (1.00) |

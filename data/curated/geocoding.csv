@@ -724,7 +724,7 @@ lordship-lixing,49.15361,6.99444,,,Seigneurie de Lixing,Herrschaft Lixing-lès-R
 lordship-lixing-rouhling,,,,,Seigneurie de Lixing-Rouhling,Herrschaft Lixing-Rouhling,Lordship of Lixing-Rouhling,territory,medium,no seat or located members
 lordship-luttange,49.27,6.31111,,,Seigneurie de Luttange,Herrschaft Luttange,Lordship of Luttange,territory,medium,seat: luttange
 lordship-lutzelbourg,48.73444,7.25139,,,Seigneurie de Lutzelbourg,Herrschaft Lutzelbourg,Lordship of Lutzelbourg,territory,medium,seat: lutzelbourg
-lordship-marimont,48.92434,6.81965,,,Office de Marimont-lès-Albestroff,Amt Marimont-lès-Albestroff,Office of Marimont-lès-Albestroff,territory,medium,centre of 31 member settlement(s)
+lordship-marimont,48.92174,6.8068,,,Office de Marimont-lès-Albestroff,Amt Marimont-lès-Albestroff,Office of Marimont-lès-Albestroff,territory,medium,centre of 31 member settlement(s)
 lordship-meilberg,49.33732,6.21139,,,Seigneurie de Meilberg,Herrschaft Meilberg,Lordship of Meilberg,territory,medium,centre of 6 member settlement(s)
 lordship-metz,49.11972,6.17694,,,Évêché temporel de Metz,Évêché temporel de Metz,Évêché temporel de Metz,territory,medium,seat: metz
 lordship-monclair,49.4956,6.55778,,,Seigneurie de Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,territory,medium,seat: monclair
@@ -1038,7 +1038,7 @@ roden,49.3167,6.75,Q2160979,,Roden,Roden,Roden,wikidata,high,
 rodlach,49.34103,6.46707,Q3438201,,Rodlach,Rodlac,Rodlach,wikidata,high,
 rohr,49.05167,7.42528,,,Rohr,,,approximate,low,Rohr alias Roseau with the Faubourg of Bitche (p. 17); was matched to Rohr in Bas-Rhin
 rohrbach,49.04528,7.265,Q22028,,Rohrbach,Rohrbach-lès-Bitche,Rohrbach-lès-Bitche,wikidata,high,
-rohrbach-la-petite,49.04528,7.265,Q22028,,Helt-Rohrbach,Rohrbach-lès-Bitche,Rohrbach-lès-Bitche,wikidata,medium,chosen near its territory's other members
+rohrbach-la-petite,48.96472,6.86694,,,Helt-Rohrbach,Rohrbach-la-Petite,Rohrbach-la-Petite,approximate,low,"Helt-Rohrbach = Rohrbach-la-Petite (index), now part of Nelling, lordship of Marimont (p. 20); was matched to Rohrbach-lès-Bitche"
 rohrhach,48.83094,6.84071,,2982831,Rohrbach-lès-Dieuze,,,geonames,medium,geonames spelling match Rorbach-lès-Dieuze (0.97)
 rolbing,49.17167,7.43972,Q21944,,Rolbing,Rolbing,Rolbing,wikidata,high,
 romelfing,48.83028,7.025,Q22023,,Romelfing,Romelfing,Romelfing,wikidata,high,

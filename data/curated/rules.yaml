@@ -145,3 +145,5 @@ geocode:
   werdenstein: {approximate: hoppstetten, note: "the castle of Werdenstein with Hoppstetten, office of Schaumberg (p. 79)"}
   zell: {approximate: petit-tenquin, name_de: Zellen, name_en: Zellen,
          note: "Zell, now Zellen, part of Petit-Tenquin (index), mairie of Hilsprich (pp. 18, 69); was matched to a Zell in Alsace"}
+  rohrbach-la-petite: {approximate: nelling, name_de: Rohrbach-la-Petite, name_en: Rohrbach-la-Petite,
+                       note: "Helt-Rohrbach = Rohrbach-la-Petite (index), now part of Nelling, lordship of Marimont (p. 20); was matched to Rohrbach-lès-Bitche"}
