@@ -138,3 +138,15 @@ def test_real_place_owns_a_shared_cell():
               NS(id="other", lat=49.3, lon=6.6, confidence="high")]
     cells, shared = settlement_cells(places, placed_elsewhere={"penning"})
     assert "teterchen" in cells and shared["teterchen"] == ["penning"]
+
+
+def test_the_bailiwick_gives_no_territory_context():
+    towns = {m: geocode.Result(m, lat=48.70 + i / 100, lon=7.05, confidence="high") for i, m in enumerate("abc")}
+    far = {m: geocode.Result(m, lat=49.40 + i / 100, lon=6.60, confidence="high") for i, m in enumerate("xyz")}
+    results = {**towns, **far, "sarrebourg": geocode.Result("sarrebourg", lat=48.73, lon=7.05, confidence="high")}
+    info = {pid: {"names": {pid}, "row": None, "place": {"place_type": "village"}} for pid in results}
+    info["bailliage"] = {"names": set(), "row": None, "place": {"place_type": "bailiwick"}}
+    memberships = [{"child_id": c, "parent_id": "bailliage"} for c in [*far, "sarrebourg"]]
+    memberships += [{"child_id": c, "parent_id": "provostship"} for c in [*towns, "sarrebourg"]]
+    geocode.refine_with_territories(results, info, memberships, {}, fake_geonames())
+    assert results["sarrebourg"].confidence == "high" and "km from" not in results["sarrebourg"].note

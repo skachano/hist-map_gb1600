@@ -204,7 +204,9 @@ def refine_with_territories(results: dict, info: dict, memberships: list[dict], 
         parents.setdefault(m["child_id"], set()).add(m["parent_id"])
 
     def centre(tid: str, exclude: str):
-        pts = [(reliable[c].lat, reliable[c].lon) for c in members.get(tid, []) if c in reliable and c != exclude]
+        if (info.get(tid) or {}).get("place", {}).get("place_type") == "bailiwick":
+            return None  # its direct members span the whole region: no useful centre
+        pts =[(reliable[c].lat, reliable[c].lon) for c in members.get(tid, []) if c in reliable and c != exclude]
         if len(pts) < 3:
             return None
         lats, lons = sorted(a for a, _ in pts), sorted(b for _, b in pts)

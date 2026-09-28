@@ -771,7 +771,7 @@ marmoutier,48.69,7.38111,Q22523,,Marmoutier,Marmoutier,Marmoutier,wikidata,high,
 marpingen,49.45,7.05,Q630853,,Marpingen,Marpingen,Marpingen,wikidata,high,
 marquisate-nomeny,48.88039,6.35196,,,Marquisat de Nomeny,Markgrafschaft Nomeny,Marquisate of Nomeny,territory,medium,centre of 10 member settlement(s)
 marquisate-pont-a-mousson,48.90444,6.05417,,,Marquisat de Pont-à-Mousson,Marquisat de Pont-à-Mousson,Marquisat de Pont-à-Mousson,territory,medium,seat: pont-a-mousson
-marsal,48.78917,6.60917,Q21973,,Marsal,Marsal,Marsal,wikidata,low,no canton anchor; 88 km from its territory's other members
+marsal,48.78917,6.60917,Q21973,,Marsal,Marsal,Marsal,wikidata,high,no canton anchor
 marthille,48.92444,6.56,Q21951,,Marthille,Marthille,Marthille,wikidata,high,
 maxstadt,49.04444,6.79361,Q21921,,Maxstadt,Maxstadt,Maxstadt,wikidata,high,
 mayoralty-altheim,49.1723,7.31217,,,Mairie d'Altheim,Mairie d'Altheim,Mairie d'Altheim,territory,medium,seat: altheim
@@ -910,7 +910,6 @@ office-hombourg-haut,49.09155,6.7314,,,Office de Hombourg-Haut,Amt Hombourg-Haut
 office-merzig,49.44222,6.6375,,,Office de Merzig,Office de Merzig,Office de Merzig,territory,medium,seat: merzig
 office-phalsbourg,48.76778,7.25833,,,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
 office-sarralbe,48.99611,7.02778,,,Office de Sarralbe,Amt Sarralbe,Office of Sarralbe,territory,medium,seat: sarralbe
-office-sarrebourg,48.73472,7.05389,,,Office de Sarrebourg,Amt Sarrebourg,Office of Sarrebourg,territory,medium,seat: sarrebourg
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
 office-sarrewerden-et-herbitzheim,,,,,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,territory,medium,no seat or located members
 office-schaumberg,49.4833,7.03333,,,Office de Schaumberg,Amt Schaumberg,Office of Schaumberg,territory,medium,seat: schaumberg
@@ -974,7 +973,7 @@ provostship-marsal,48.78917,6.60917,,,Prévôté de Marsal,Schultheißerei Marsa
 provostship-oberkirchen,49.5253,7.26222,,,Prévôté d'Oberkirchen,Prévôté d'Oberkirchen,Prévôté d'Oberkirchen,territory,medium,seat: ketternostern
 provostship-remich,49.45611,6.42736,,,Prévôté de Remich,Prévôté de Remich,Prévôté de Remich,territory,medium,centre of 2 member settlement(s)
 provostship-rurale-de-sierck,49.30939,6.42952,,,Prévôté rurale de Sierck,Prévôté rurale de Sierck,Prévôté rurale de Sierck,territory,medium,centre of 22 member settlement(s)
-provostship-sarrebourg,48.73472,7.05389,,,Prévôté de Sarrebourg,Prévôté de Sarrebourg,Prévôté de Sarrebourg,territory,medium,seat: sarrebourg
+provostship-sarrebourg,48.73472,7.05389,,,Office de Sarrebourg,Amt Sarrebourg,Office of Sarrebourg,territory,medium,seat: sarrebourg
 provostship-thionville,49.35806,6.16833,,,Prévôté de Thionville,Prévôté de Thionville,Prévôté de Thionville,territory,medium,seat: thionville
 provostship-winterbach,49.4753,7.10258,,,Prévôté de Winterbach,Prévôté de Winterbach,Prévôté de Winterbach,territory,medium,seat: winterbach
 puberg,48.91167,7.31528,Q21470,,Puberg,Puberg,Puberg,wikidata,high,
@@ -999,7 +998,7 @@ redlach,,,,,Redlach,,,unlocated,low,no candidate (and no canton for a fuzzy sear
 rehlingen-sur-moselle,49.62321,6.4301,Q106619185,,Rehlingen,Rehlingen (Nittel),Rehlingen (Nittel),override,high,Rehlingen by Nittel on the Moselle (p. 13; index: canton of Saarburg); was matched to Rehlingen-Siersburg on the Saar
 rehlingen-sur-sarre,49.36861,6.67861,Q552797,,Rehlingen,Rehlingen-Siersburg,Rehlingen-Siersburg,wikidata,high,no canton anchor
 reimsbach,49.45066,6.76651,Q2140235,,Reimsbach,Reimsbach,Reimsbach,wikidata,high,
-reinange,49.30732,6.23742,Q3423832,,Rénange,Reinange,Reinange,wikidata,low,37 km from its territory's other members
+reinange,49.30732,6.23742,Q3423832,,Rénange,Reinange,Reinange,wikidata,high,
 reinheim,49.1381,7.17972,Q878335,,Reinheim,Reinheim,Reinheim,wikidata,high,
 reipertswiller,48.93194,7.46472,Q21382,,Reipertswiller,Reipertswiller,Reipertswiller,wikidata,high,no canton anchor
 reisweiler,49.3614,6.87972,Q896242,,Reisweiler,Reisbach,Reisbach,wikidata,high,no canton anchor
@@ -1019,7 +1018,7 @@ renting,48.72249,6.99617,Q107300771,,Renting,,,wikidata,medium,no canton anchor
 rettel,49.44306,6.32778,Q22245,,Rettel,Rettel,Rettel,wikidata,high,
 rexingen,48.90222,7.18139,Q21364,,Rexingen,Rexingen,Rexingen,wikidata,high,
 reyersviller,49.04139,7.395,Q22918,,Reyersviller,Reyersviller,Reyersviller,wikidata,high,
-rhodes,48.75889,6.89722,Q22254,,Rhodes,Rhodes,Rhodes,wikidata,low,37 km from its territory's other members
+rhodes,48.75889,6.89722,Q22254,,Rhodes,Rhodes,Rhodes,wikidata,high,
 riche,48.89083,6.62778,Q22372,,Riche,Riche,Riche,wikidata,high,
 richeling,49.02944,6.96056,Q22252,,Richeling,Richeling,Richeling,wikidata,high,
 richeval,48.63583,6.91083,Q22288,,Richeval,Richeval,Richeval,wikidata,low,117 km from the index's canton
@@ -1063,13 +1062,13 @@ saint-avold,49.10417,6.70806,Q22485,,Saint-Avold,Saint-Avold,Saint-Avold,wikidat
 saint-bernard,49.2486,6.38275,Q17347207,,Saint-Bernard,Saint-Bernard,Saint-Bernard,wikidata,high,
 saint-francois,49.35306,6.46111,Q22355,,Saint-François,Saint-François-Lacroix,Saint-François-Lacroix,wikidata,high,
 saint-gangolf,49.24097,6.77884,Q17353575,,Sankt Gangolf,St. Gangolf,St. Gangolf,wikidata,low,29 km from the index's canton
-saint-georges,48.65778,6.92889,Q22329,,Saint-Georges,Saint-Georges,Saint-Georges,wikidata,low,117 km from the index's canton; 48 km from its territory's other members
+saint-georges,48.65778,6.92889,Q22329,,Saint-Georges,Saint-Georges,Saint-Georges,wikidata,low,117 km from the index's canton
 saint-hippolyte-haut-rhin,48.23194,7.37167,Q126283,,Saint-Hippolyte,Saint-Hippolyte,Saint-Hippolyte,wikidata,high,no canton anchor
 saint-hubert,49.22389,6.33306,Q22930,,Saint-Hubert,Saint-Hubert,Saint-Hubert,wikidata,high,
-saint-jean-de-bassel,48.80488,6.99091,,2979351,Saint-Jean de Bassel,,,geonames,low,geonames spelling match Saint-Jean-de-Bassel (1.00); 36 km from its territory's other members
+saint-jean-de-bassel,48.80488,6.99091,,2979351,Saint-Jean de Bassel,,,geonames,medium,geonames spelling match Saint-Jean-de-Bassel (1.00)
 saint-jean-rohrbach,49.025,6.88278,Q22410,,Saint-Jean-Rohrbach,Saint-Jean-Rohrbach,Saint-Jean-Rohrbach,wikidata,high,
 saint-louis,48.71611,7.18806,Q21943,,Saint-Louis,Saint-Louis,Saint-Louis,wikidata,high,
-saint-medard,48.81111,6.63472,Q21731,,Saint-Médard,Saint-Médard,Saint-Médard,wikidata,low,85 km from its territory's other members
+saint-medard,48.81111,6.63472,Q21731,,Saint-Médard,Saint-Médard,Saint-Médard,wikidata,high,
 saint-michel,49.01955,7.07669,,12305990,Saint-Michel,,,geonames,high,geonames exact
 saint-nabor,48.44528,7.42361,Q21389,,Saint-Nabor,Saint-Nabor,Saint-Nabor,wikidata,high,no canton anchor
 saint-quirin,48.61028,7.06472,Q21977,,Saint-Quirin,Saint-Quirin,Saint-Quirin,wikidata,high,
@@ -1081,7 +1080,7 @@ salonnes,48.79111,6.49611,Q21994,,Salonnes,Salonnes,Salonnes,wikidata,high,
 saltzbronn,49.00136,7.04146,,11897453,Saltzbronn,,,geonames,high,geonames exact
 sarralbe,48.99611,7.02778,Q21979,,Sarralbe,Sarralbe,Sarralbe,wikidata,medium,chosen near its territory's other members
 sarraltroff,48.77389,7.06278,Q22042,,Sarraltroff,Sarraltroff,Sarraltroff,wikidata,high,
-sarrebourg,48.73472,7.05389,Q22544,,Sarrebourg,Sarrebourg,Sarrebourg,wikidata,low,no canton anchor; 44 km from its territory's other members
+sarrebourg,48.73472,7.05389,Q22544,,Sarrebourg,Sarrebourg,Sarrebourg,wikidata,high,no canton anchor
 sarreck,48.79417,7.03417,,,Sarreck,,,approximate,low,not in Wikidata/GeoNames; placed at Oberstinzel (index location)
 sarreguemines-m,49.11056,7.06722,Q22642,,Sarreguemines,Saargemünd,Sarreguemines,wikidata,high,no canton anchor
 sarrehruck,49.23333,7.0,Q1724,,Sarrebruck,Saarbrücken,Saarbrücken,wikidata,high,no canton anchor
