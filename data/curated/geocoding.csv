@@ -6,10 +6,10 @@ achen,49.04333,7.18278,Q22094,,Achen,Achen,Achen,wikidata,high,
 ackerbach,48.9975,6.83,,,Ackerbach,,,approximate,low,not in Wikidata/GeoNames; placed at Hellimer (index location)
 adamsviller,48.90472,7.20391,,3038668,Adamsviller,,,geonames,high,geonames exact
 adelange,49.00528,6.61194,Q21644,,Adelange,Adelange,Adelange,wikidata,high,
-advocacy-herbitzheim,49.01472,7.08417,,,Herbitzheim,Vogtei Herbitzheim,Advocacy of Herbitzheim,territory,medium,seat: herbitzheim
+advocacy-herbitzheim,49.01472,7.08417,,,Vouerie de Herbitzheim,Vogtei Herbitzheim,Advocacy of Herbitzheim,territory,medium,seat: herbitzheim
 advocacy-hombourg-saint-avold,,,,,Vouerie de Hombourg-Saint-Avold,Vouerie de Hombourg-Saint-Avold,Vouerie de Hombourg-Saint-Avold,territory,medium,no seat or located members
-advocacy-saint-avold,49.10417,6.70806,,,Vouerie de Saint-Avold,Vogtei Saint-Avold,Advocacy of Saint-Avold,territory,medium,seat: saint-avold
-advocacy-saint-nabor,48.44528,7.42361,,,Vouerie de Saint-Nabor,Vogtei Saint-Nabor,Advocacy of Saint-Nabor,territory,medium,seat: saint-nabor
+advocacy-saint-avold,49.10417,6.70806,,,Vouerie de Saint-Avold,Vouerie de Saint-Avold,Vouerie de Saint-Avold,territory,medium,seat: saint-avold
+advocacy-saint-nabor,48.44528,7.42361,,,Vouerie de Saint-Nabor,Vouerie de Saint-Nabor,Vouerie de Saint-Nabor,territory,medium,seat: saint-nabor
 aidling,49.30075,6.5583,Q2827829,,Aidling,Aidling,Aidling,wikidata,high,
 alaincourt,48.89833,6.34139,Q21643,,Alaincourt,Alaincourt-la-Côte,Alaincourt-la-Côte,wikidata,high,
 alberting,49.01361,7.33861,,,Alberting-lès-Enchenberg,,,approximate,low,not in Wikidata/GeoNames; placed at Enchenberg (index location)
@@ -51,46 +51,45 @@ bacourt,48.92694,6.40667,Q21634,,Bacourt,Bacourt,Bacourt,wikidata,high,
 badonviller,48.5,6.89306,Q501953,,Badonviller,Badonviller,Badonviller,wikidata,high,no canton anchor
 baerendorf,48.83833,7.085,Q22792,,Baerendorf,Baerendorf,Baerendorf,wikidata,high,
 baerenthal,48.975,7.5175,Q284762,,Baerenthal,Baerenthal,Baerenthal,wikidata,high,
-bailiwick-cercle-du-rhin-superieur,,,,,Cercle du Rhin supérieur,Cercle du Rhin supérieur,Cercle du Rhin supérieur,territory,medium,no seat or located members
+bailiwick-cercle-du-rhin-superieur,,,,,Bailliage de Cercle du Rhin supérieur,Bellistum Cercle du Rhin supérieur,Bailiwick of Cercle du Rhin supérieur,territory,medium,no seat or located members
 bailiwick-episcopal-de-vic,49.05819,6.65111,,,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,territory,medium,centre of 27 member settlement(s)
 bailiwick-nancy,,,,,Bailliage de Nancy,Bailliage de Nancy,Bailliage de Nancy,territory,medium,no seat or located members
-bailiwick-phalsbourg,48.76778,7.25833,,,Bailliage de Phalsbourg,Bellistum Phalsbourg,Bailiwick of Phalsbourg,territory,medium,seat: phalsbourg
-bailiwick-vie,48.78222,6.53139,,,Bailliage de Vie,Bellistum Vic-sur-Seille,Bailiwick of Vic-sur-Seille,territory,medium,seat: vic-sur-seille
+bailiwick-phalsbourg,48.76778,7.25833,,,Bailliage de Phalsbourg,Bailliage de Phalsbourg,Bailliage de Phalsbourg,territory,medium,seat: phalsbourg
+bailiwick-vie,48.78222,6.53139,,,Bailliage de Vie,Bailliage de Vie,Bailliage de Vie,territory,medium,seat: vic-sur-seille
 bailliage-allemagne,49.39852,6.7972,,,Bailliage d'Allemagne,Bailliage d'Allemagne,Bailliage d'Allemagne,territory,medium,centre of 12 member settlement(s)
 ballering,49.02257,6.97119,,12317687,Ballering,,,geonames,high,geonames exact
 ballern,49.4486,6.61,Q805211,,Ballern,Ballern,Ballern,wikidata,high,
 bambiderstroff,49.10278,6.59333,Q21642,,Bambiderstroff,Bambiderstroff,Bambiderstroff,wikidata,high,
-ban-albeschau,48.7987,6.94824,,,Albeschau,Albeschau,Albeschau,territory,medium,centre of 2 member settlement(s)
+ban-albeschau,48.7987,6.94824,,,Ban d'Albeschau,Bann Albeschau,Ban of Albeschau,territory,medium,centre of 2 member settlement(s)
 ban-andernheim,,,,,Ban d'Andernheim,Ban d'Andernheim,Ban d'Andernheim,territory,medium,no seat or located members
-ban-bois-du-warndt,,,,,Bois du Warndt,Bois du Warndt,Bois du Warndt,territory,medium,no seat or located members
-ban-bride-les-wuisse,,,,,Bride-lès-Wuisse,Bride-lès-Wuisse,Bride-lès-Wuisse,territory,medium,no seat or located members
+ban-bois-du-warndt,,,,,Ban de Bois du Warndt,Bann Bois du Warndt,Ban of Bois du Warndt,territory,medium,no seat or located members
+ban-bride-les-wuisse,,,,,Ban de Bride-lès-Wuisse,Bann Bride-lès-Wuisse,Ban of Bride-lès-Wuisse,territory,medium,no seat or located members
 ban-chaussy,,,,,Ban de Chaussy,Ban de Chaussy,Ban de Chaussy,territory,medium,no seat or located members
-ban-delme,48.88722,6.39222,,,Delme,Bann Delme,Ban of Delme,territory,medium,seat: delme
-ban-foret-de-rexing,,,,,Forêt de Rexing,Forêt de Rexing,Forêt de Rexing,territory,medium,no seat or located members
-ban-franchise-de-k-nigsmacker,,,,,Franchise de Kœnigsmacker,Franchise de Kœnigsmacker,Franchise de Kœnigsmacker,territory,medium,no seat or located members
-ban-goerling,,,,,Goerling,Goerling,Goerling,territory,medium,no seat or located members
-ban-grossrosseln,,,,,Grossrosseln,Grossrosseln,Grossrosseln,territory,medium,no seat or located members
-ban-hersing,,,,,Hersing,Hersing,Hersing,territory,medium,no seat or located members
-ban-himmelding,,,,,Himmelding,Himmelding,Himmelding,territory,medium,no seat or located members
+ban-delme,48.88722,6.39222,,,Ban de Delme,Bann Delme,Ban of Delme,territory,medium,seat: delme
+ban-foret-de-rexing,,,,,Ban de Forêt de Rexing,Bann Forêt de Rexing,Ban of Forêt de Rexing,territory,medium,no seat or located members
+ban-franchise-de-k-nigsmacker,,,,,Ban de Franchise de Kœnigsmacker,Bann Franchise de Kœnigsmacker,Ban of Franchise de Kœnigsmacker,territory,medium,no seat or located members
+ban-goerling,,,,,Ban de Goerling,Bann Goerling,Ban of Goerling,territory,medium,no seat or located members
+ban-grossrosseln,,,,,Ban de Grossrosseln,Bann Grossrosseln,Ban of Grossrosseln,territory,medium,no seat or located members
+ban-hersing,,,,,Ban de Hersing,Bann Hersing,Ban of Hersing,territory,medium,no seat or located members
+ban-himmelding,,,,,Ban de Himmelding,Bann Himmelding,Ban of Himmelding,territory,medium,no seat or located members
 ban-himmeldingen,,,,,Ban de Himmeldingen,Ban de Himmeldingen,Ban de Himmeldingen,territory,medium,no seat or located members
 ban-otzweiler,,,,,Ban d'Otzweiler,Ban d'Otzweiler,Ban d'Otzweiler,territory,medium,no seat or located members
-ban-petite-rosselle,49.21167,6.8575,,,Petite-Rosselle,Bann Petite-Rosselle,Ban of Petite-Rosselle,territory,medium,seat: petite-rosselle
+ban-petite-rosselle,49.21167,6.8575,,,Ban de Petite-Rosselle,Bann Petite-Rosselle,Ban of Petite-Rosselle,territory,medium,seat: petite-rosselle
 ban-rotte,48.97315,6.56315,,,Ban de la Rotte,Ban de la Rotte,Ban de la Rotte,territory,medium,centre of 3 member settlement(s)
 ban-saint-pierre,48.93505,6.52308,,,Ban de Saint-Pierre,Ban de Saint-Pierre,Ban de Saint-Pierre,territory,medium,centre of 4 member settlement(s)
-ban-val-de-gueblange,48.97875,6.94994,,,Val de Guéblange,Val de Guéblange,Val de Guéblange,territory,medium,centre of 4 member settlement(s)
-ban-val-de-liepvre,,,,,Val de Lièpvre,Val de Lièpvre,Val de Lièpvre,territory,medium,no seat or located members
-ban-val-de-steinbach,,,,,Val de Steinbach,Val de Steinbach,Val de Steinbach,territory,medium,no seat or located members
-ban-warndt,,,,,Warndt,Warndt,Warndt,territory,medium,no seat or located members
-ban-weidesheim,49.0388,7.132,,,Ban de Weidesheim,Bann Weidesheim,Ban of Weidesheim,territory,medium,seat: weidesheim
-ban-westrich,49.00743,6.96464,,,Westrich,Westrich,Westrich,territory,medium,centre of 23 member settlement(s)
-ban-weyer-les-rahling,,,,,Weyer-lès-Rahling,Weyer-lès-Rahling,Weyer-lès-Rahling,territory,medium,no seat or located members
-ban-winterhauch,,,,,Winterhauch,Winterhauch,Winterhauch,territory,medium,no seat or located members
+ban-val-de-gueblange,48.97875,6.94994,,,Ban de Val de Guéblange,Bann Val de Guéblange,Ban of Val de Guéblange,territory,medium,centre of 4 member settlement(s)
+ban-val-de-liepvre,,,,,Ban de Val de Lièpvre,Bann Val de Lièpvre,Ban of Val de Lièpvre,territory,medium,no seat or located members
+ban-val-de-steinbach,,,,,Ban de Val de Steinbach,Bann Val de Steinbach,Ban of Val de Steinbach,territory,medium,no seat or located members
+ban-warndt,,,,,Ban de Warndt,Bann Warndt,Ban of Warndt,territory,medium,no seat or located members
+ban-weidesheim,49.0388,7.132,,,Ban de Weidesheim,Ban de Weidesheim,Ban de Weidesheim,territory,medium,seat: weidesheim
+ban-westrich,49.00743,6.96464,,,Ban de Westrich,Bann Westrich,Ban of Westrich,territory,medium,centre of 23 member settlement(s)
+ban-weyer-les-rahling,,,,,Ban de Weyer-lès-Rahling,Bann Weyer-lès-Rahling,Ban of Weyer-lès-Rahling,territory,medium,no seat or located members
+ban-winterhauch,,,,,Ban de Winterhauch,Bann Winterhauch,Ban of Winterhauch,territory,medium,no seat or located members
 bannay,49.12722,6.46778,Q21841,,Bannay,Bannay,Bannay,wikidata,high,
 barchain,48.70722,6.96222,Q21915,,Barching,Barchain,Barchain,wikidata,high,
 baronville,48.93389,6.60861,Q21690,,Baronville,Baronville,Baronville,wikidata,high,
-barony-hellimer,48.9975,6.83,,,Hellimer,Freiherrschaft Hellimer,Barony of Hellimer,territory,medium,seat: hellimer
-barony-raville,49.09306,6.48556,,,Raville,Freiherrschaft Raville,Barony of Raville,territory,medium,seat: raville
-barony-saint-georges,48.65778,6.92889,,,Baronnie de Saint-Georges,Freiherrschaft Saint-Georges,Barony of Saint-Georges,territory,medium,seat: saint-georges
+barony-raville,49.09306,6.48556,,,Baronnie de Raville,Freiherrschaft Raville,Barony of Raville,territory,medium,seat: raville
+barony-saint-georges,48.65778,6.92889,,,Baronnie de Saint-Georges,Baronnie de Saint-Georges,Baronnie de Saint-Georges,territory,medium,seat: saint-georges
 barony-viviers,,,,,Baronnie de Viviers,Baronnie de Viviers,Baronnie de Viviers,territory,medium,no seat or located members
 barst,49.0675,6.83306,Q22442,,Barst,Barst,Barst,wikidata,high,
 basse-contz,49.4425,6.36028,,,Basse-Contz,,,approximate,low,not in Wikidata/GeoNames; placed at Sierck (index location)
@@ -229,13 +228,13 @@ cadenbronn,49.12949,6.96496,Q2932650,,Cadenbronn,Cadenbronn,Cadenbronn,wikidata,
 calembourg,49.36876,6.42702,Q3192150,,Calembourg alias Neulaumesfeld ou Borg,Kalembourg,Kalembourg,wikidata,high,
 calmesweiler,49.4022,6.9706,Q570286,,Calmesweiler,Eppelborn,Eppelborn,wikidata,high,
 cappel,49.07222,6.85,Q22124,,Cappel,Cappel,Cappel,wikidata,high,
-castellany-albestroff,48.9325,6.85639,,,Albestroff,Kellerei Albestroff,Castellany of Albestroff,territory,medium,seat: albestroff
+castellany-albestroff,48.9325,6.85639,,,Châtellenie d'Albestroff,Kellerei Albestroff,Castellany of Albestroff,territory,medium,seat: albestroff
 castellany-amance,48.82167,6.50833,,,Châtellenie d'Amance,Châtellenie d'Amance,Châtellenie d'Amance,territory,medium,centre of 1 member settlement(s)
-castellany-fribourg,48.76694,6.85639,,,Châtellenie de Fribourg,Kellerei Fribourg,Castellany of Fribourg,territory,medium,seat: fribourg
-castellany-haboudange,48.89056,6.61194,,,Haboudange,Kellerei Haboudange,Castellany of Haboudange,territory,medium,seat: haboudange
-castellany-lagarde,48.69139,6.705,,,Châtellenie de Lagarde,Kellerei Lagarde,Castellany of Lagarde,territory,medium,seat: lagarde
-castellany-marsal,48.78917,6.60917,,,Marsal,Kellerei Marsal,Castellany of Marsal,territory,medium,seat: marsal
-castellany-remilly,49.01361,6.39333,,,Châtellenie de Remilly,Kellerei Rémilly,Castellany of Rémilly,territory,medium,seat: remilly
+castellany-fribourg,48.76694,6.85639,,,Châtellenie de Fribourg,Châtellenie de Fribourg,Châtellenie de Fribourg,territory,medium,seat: fribourg
+castellany-haboudange,48.89056,6.61194,,,Châtellenie de Haboudange,Kellerei Haboudange,Castellany of Haboudange,territory,medium,seat: haboudange
+castellany-lagarde,48.69139,6.705,,,Châtellenie de Lagarde,Châtellenie de Lagarde,Châtellenie de Lagarde,territory,medium,seat: lagarde
+castellany-marsal,48.78917,6.60917,,,Châtellenie de Marsal,Kellerei Marsal,Castellany of Marsal,territory,medium,seat: marsal
+castellany-remilly,49.01361,6.39333,,,Châtellenie de Remilly,Châtellenie de Remilly,Châtellenie de Remilly,territory,medium,seat: remilly
 castellany-vic,48.73195,6.44912,,,Châtellenie de Vic,Châtellenie de Vic,Châtellenie de Vic,territory,medium,centre of 14 member settlement(s)
 castviller,49.01474,6.93179,Q55596049,,Castviller,,Castviller,wikidata,high,
 chambrey,48.78694,6.45944,Q21714,,Chambrey,Chambrey,Chambrey,wikidata,high,
@@ -255,29 +254,28 @@ cocheren,49.14333,6.85639,Q22427,,Cocheren,Cocheren,Cocheren,wikidata,high,
 colmen,49.35556,6.54194,Q21762,,Colmen,Colmen,Colmen,wikidata,high,
 conde-northen,49.16252,6.42935,Q21634399,,Condé alias Conchen,,Northen,wikidata,high,
 condominium-merzig-saargau,,,,,Condominium du Merzig-Saargau,Condominium du Merzig-Saargau,Condominium du Merzig-Saargau,territory,medium,no seat or located members
-condominium-saargau-merzig,,,,,Saargau-Merzig,Saargau-Merzig,Saargau-Merzig,territory,medium,no seat or located members
 conthil,48.8925,6.66222,Q21727,,Conthil,Conthil,Conthil,wikidata,high,
 coume,49.19833,6.57222,Q23001,,Coume,Coume,Coume,wikidata,high,
-county-bitche,49.05167,7.42528,,,Bitche,Grafschaft Bitsch,County of Bitche,territory,medium,seat: bitche
-county-blamont,48.58972,6.84222,,,Comté de Blâmont,Grafschaft Blâmont,County of Blâmont,territory,medium,seat: blamont
-county-bliescastel,49.23727,7.25292,,,Bliescastel,Grafschaft Blieskastel,County of Blieskastel,territory,medium,seat: bliescastel
-county-crehange,49.06306,6.58194,,,Créhange,Grafschaft Créhange,County of Créhange,territory,medium,seat: crehange
-county-dabo,48.65389,7.23694,,,Comté de Dabo,Grafschaft Dabo,County of Dabo,territory,medium,seat: dabo
+county-bitche,49.05167,7.42528,,,Comté de Bitche,Grafschaft Bitsch,County of Bitche,territory,medium,seat: bitche
+county-blamont,48.58972,6.84222,,,Comté de Blâmont,Comté de Blâmont,Comté de Blâmont,territory,medium,seat: blamont
+county-bliescastel,49.23727,7.25292,,,Comté de Bliescastel,Grafschaft Blieskastel,County of Blieskastel,territory,medium,seat: bliescastel
+county-crehange,49.06306,6.58194,,,Comté de Créhange,Grafschaft Créhange,County of Créhange,territory,medium,seat: crehange
+county-dabo,48.65389,7.23694,,,Comté de Dabo,Comté de Dabo,Comté de Dabo,territory,medium,seat: dabo
 county-deux-ponts,49.18806,7.36917,,,Duché de Deux-Ponts,Duché de Deux-Ponts,Duché de Deux-Ponts,territory,medium,centre of 1 member settlement(s)
 county-falkenstein,,,,,Comté de Falkenstein,Comté de Falkenstein,Comté de Falkenstein,territory,medium,no seat or located members
 county-hanau-lichtenberg,48.90957,7.54011,,,Comté de Hanau-Lichtenberg,Comté de Hanau-Lichtenberg,Comté de Hanau-Lichtenberg,territory,medium,centre of 9 member settlement(s)
-county-la-petite-pierre,48.92603,7.35991,,,La Petite-Pierre,La Petite-Pierre,La Petite-Pierre,territory,medium,centre of 2 member settlement(s)
+county-la-petite-pierre,48.92603,7.35991,,,Comté de La Petite-Pierre,Grafschaft La Petite-Pierre,County of La Petite-Pierre,territory,medium,centre of 2 member settlement(s)
 county-lichtenberg,48.93241,7.66732,,,Comté de Lichtenberg,Comté de Lichtenberg,Comté de Lichtenberg,territory,medium,centre of 3 member settlement(s)
 county-nassau-sarrebruck,,,,,Comté de Nassau-Sarrebruck,Comté de Nassau-Sarrebruck,Comté de Nassau-Sarrebruck,territory,medium,no seat or located members
 county-petite-pierre,48.87653,7.26113,,,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,territory,medium,centre of 27 member settlement(s)
 county-rechicourt-le-chateau,48.70189,6.86679,,,Comté de Réchicourt-le-Château,Comté de Réchicourt-le-Château,Comté de Réchicourt-le-Château,territory,medium,centre of 11 member settlement(s)
 county-salm,,,,,Comté de Salm,Comté de Salm,Comté de Salm,territory,medium,no seat or located members
-county-sarrebruck,49.23333,7.0,,,Comté de Sarrebruck,Grafschaft Saarbrücken,County of Saarbrücken,territory,medium,seat: sarrehruck
-county-sarrewerden,48.92278,7.08361,,,Comté de Sarrewerden,Grafschaft Sarrewerden,County of Sarrewerden,territory,medium,seat: sarrewerden
+county-sarrebruck,49.23333,7.0,,,Comté de Sarrebruck,Comté de Sarrebruck,Comté de Sarrebruck,territory,medium,seat: sarrehruck
+county-sarrewerden,48.92278,7.08361,,,Comté de Sarrewerden,Comté de Sarrewerden,Comté de Sarrewerden,territory,medium,seat: sarrewerden
 courcelles,48.37333,6.03778,Q182825,,Courcelles,Courcelles,Courcelles,wikidata,low,no canton anchor; 116 km from its territory's other members
 court-conde,49.22097,6.43445,,,Cour de Condé,Cour de Condé,Cour de Condé,territory,medium,centre of 7 member settlement(s)
 court-perl,49.4771,6.39167,,,Cour de Perl,Cour de Perl,Cour de Perl,territory,medium,centre of 2 member settlement(s)
-court-vibersviller,48.91444,6.94444,,,Vibersviller,Hof Vibersviller,Court district of Vibersviller,territory,medium,seat: vibersviller
+court-vibersviller,48.91444,6.94444,,,Cour de Vibersviller,Hof Vibersviller,Court district of Vibersviller,territory,medium,seat: vibersviller
 craincourt,48.87667,6.32167,Q21758,,Craincourt,Craincourt,Craincourt,wikidata,high,
 crehange,49.06306,6.58194,Q22380,,Créhange,Créhange,Créhange,wikidata,high,
 creutzwald,49.2,6.68333,Q34797557,,Creutzwald,Kreuzwald,Creutzwald,wikidata,high,
@@ -291,7 +289,7 @@ dedeling,48.8551,6.62011,Q16507651,,Dédeling,Dédeling,Dédeling,wikidata,high,
 dehlingen,49.3761,6.68014,Q16672486,,Dehlingen,Relling,Rehlingen,wikidata,medium,chosen near its territory's other members
 delme,48.88722,6.39222,Q21581,,Delme,Delme,Delme,wikidata,high,no canton anchor
 denting,49.19417,6.53417,Q21948,,Denting,Denting,Denting,wikidata,high,
-deserted-village-roderbann,,,,,Roderbann,Roderbann,Roderbann,territory,medium,no seat or located members
+deserted-village-roderbann,,,,,Village disparu de Roderbann,Wüstung Roderbann,Deserted village of Roderbann,territory,medium,no seat or located members
 desseling,48.78472,6.84417,Q22117,,Desseling,Desseling,Desseling,wikidata,low,103 km from the index's canton
 destry,48.94389,6.585,Q21877,,Destry,Destry,Destry,wikidata,high,
 diane-cappel,49.07222,6.85,Q22124,,Diane-Cappel,Cappel,Cappel,wikidata,low,40 km from the index's canton
@@ -381,21 +379,16 @@ fenetrange,48.84556,7.01972,Q22330,,Fénétrange,Fénétrange,Fénétrange,wikid
 ferange,49.29164,6.40398,,11915602,Férange,,,geonames,high,geonames exact
 fi-eisheim,48.78861,7.16222,Q22289,,Fleisheim,Fleisheim,Fleisheim,wikidata,high,
 fickingen,49.3939,6.67361,Q2090955,,Saarfels,Saarfels,Saarfels,wikidata,high,
-fief-altviller,48.93028,6.98028,,,Altviller,Lehen Altwiller,Fief of Altwiller,territory,medium,seat: altwiller
-fief-barst,49.0675,6.83306,,,Barst,Lehen Barst,Fief of Barst,territory,medium,seat: barst
-fief-benestroff,48.90444,6.75944,,,Bénestroff,Lehen Bénestroff,Fief of Bénestroff,territory,medium,seat: benestroff
-fief-betting,49.41626,6.50713,,,Betting,Lehen Betting,Fief of Betting,territory,medium,seat: betting-waldwisse
+fief-altviller,48.93028,6.98028,,,Fief d'Altviller,Lehen Altwiller,Fief of Altwiller,territory,medium,seat: altwiller
+fief-barst,49.0675,6.83306,,,Fief de Barst,Lehen Barst,Fief of Barst,territory,medium,seat: barst
+fief-benestroff,48.90444,6.75944,,,Fief de Bénestroff,Lehen Bénestroff,Fief of Bénestroff,territory,medium,seat: benestroff
+fief-betting,49.41626,6.50713,,,Fief de Betting,Lehen Betting,Fief of Betting,territory,medium,seat: betting-waldwisse
 fief-blettange-bousse,,,,,Fief de Blettange-Bousse,Fief de Blettange-Bousse,Fief de Blettange-Bousse,territory,medium,no seat or located members
-fief-erstroff,48.97972,6.77583,,,Erstroff,Lehen Erstroff,Fief of Erstroff,territory,medium,seat: erstroff
-fief-fenetrange,48.84556,7.01972,,,Fénétrange,Lehen Fénétrange,Fief of Fénétrange,territory,medium,seat: fenetrange
-fief-forbach,49.18806,6.9,,,Forbach,Lehen Forbach,Fief of Forbach,territory,medium,seat: forbach
-fief-helfedange,49.07333,6.52611,,,Helfedange,Lehen Helfedange,Fief of Helfedange,territory,medium,seat: helfedange
-fief-hellimer,48.9975,6.83,,,Hellimer,Lehen Hellimer,Fief of Hellimer,territory,medium,seat: hellimer
-fief-hingsange,,,,,Hingsange,Hingsange,Hingsange,territory,medium,no seat or located members
-fief-laning,49.03111,6.76361,,,Laning,Lehen Laning,Fief of Laning,territory,medium,seat: laning
-fief-morhange,48.92361,6.63583,,,Morhange,Lehen Morhange,Fief of Morhange,territory,medium,seat: morhange
-fief-puttelange,49.0525,6.93083,,,Puttelange,Lehen Puttelange-aux-Lacs,Fief of Puttelange-aux-Lacs,territory,medium,seat: puttelange
-fief-sarreck,48.79417,7.03417,,,Sarreck,Lehen Sarreck,Fief of Sarreck,territory,medium,seat: sarreck
+fief-erstroff,48.97972,6.77583,,,Fief d'Erstroff,Lehen Erstroff,Fief of Erstroff,territory,medium,seat: erstroff
+fief-helfedange,49.07333,6.52611,,,Fief de Helfedange,Lehen Helfedange,Fief of Helfedange,territory,medium,seat: helfedange
+fief-hellimer,48.9975,6.83,,,Fief de Hellimer,Lehen Hellimer,Fief of Hellimer,territory,medium,seat: hellimer
+fief-hingsange,48.97843,6.73519,,,Fief de Hingsange,Lehen Hingsange,Fief of Hingsange,territory,medium,centre of 10 member settlement(s)
+fief-laning,49.03111,6.76361,,,Fief de Laning,Lehen Laning,Fief of Laning,territory,medium,seat: laning
 fiirst,49.06944,6.685,,,Fiirst,,,approximate,low,not in Wikidata/GeoNames; placed at Folschviller (index location)
 filstroff,49.32278,6.54056,Q22366,,Filstroff,Filstroff,Filstroff,wikidata,high,
 fischbach,49.08771,7.7116,,2926638,Fischbach,,,geonames,high,geonames exact
@@ -701,57 +694,55 @@ lixing-saint-avold,49.03694,6.7525,Q22270,,Lixing-lès-Saint-Avold,Lixing-lès-S
 lohr-la-petite-pierre,48.8575,7.24361,Q21463,,Lohr-lès-La Petite-Pierre,Lohr,Lohr,wikidata,high,
 lohr-munster,48.8575,7.24361,Q21463,,Lohr,Lohr,Lohr,wikidata,low,25 km from the index's canton
 longeville,,,,,Longeville,,,unlocated,low,no candidate (and no canton for a fuzzy search)
-lordship-asswiller,,,,,Asswiller,Asswiller,Asswiller,territory,medium,no seat or located members
-lordship-berg,49.53593,6.38636,,,Seigneurie de Berg,Herrschaft Schloss Berg (Saarland),Lordship of Schloss Berg,territory,medium,seat: berg-nennig
+lordship-asswiller,,,,,Seigneurie d'Asswiller,Herrschaft Asswiller,Lordship of Asswiller,territory,medium,no seat or located members
+lordship-berg,49.53593,6.38636,,,Seigneurie de Berg,Seigneurie de Berg,Seigneurie de Berg,territory,medium,seat: berg-nennig
 lordship-bertrange,49.30105,6.24775,,,Seigneurie de Bertrange,Seigneurie de Bertrange,Seigneurie de Bertrange,territory,medium,centre of 3 member settlement(s)
-lordship-bionville,49.10501,6.47932,,,Bionville,Herrschaft Bionville,Lordship of Bionville,territory,medium,seat: bionville
-lordship-bourgaltroff,48.86861,6.75889,,,Bourgaltroff,Herrschaft Bourgaltroff,Lordship of Bourgaltroff,territory,medium,seat: bourgaltroff
+lordship-bionville,49.10501,6.47932,,,Seigneurie de Bionville,Herrschaft Bionville,Lordship of Bionville,territory,medium,seat: bionville
+lordship-bourgaltroff,48.86861,6.75889,,,Seigneurie de Bourgaltroff,Herrschaft Bourgaltroff,Lordship of Bourgaltroff,territory,medium,seat: bourgaltroff
 lordship-bracs,48.85522,7.01133,,,Seigneurie des Bracs,Seigneurie des Bracs,Seigneurie des Bracs,territory,medium,centre of 5 member settlement(s)
 lordship-busbach,49.27454,6.60292,,,Seigneurie de Busbach,Seigneurie de Busbach,Seigneurie de Busbach,territory,medium,centre of 4 member settlement(s)
-lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,,,,,Château et seigneurie de Lemberg-lès-Pirmasens,Château et seigneurie de Lemberg-lès-Pirmasens,Château et seigneurie de Lemberg-lès-Pirmasens,territory,medium,no seat or located members
-lordship-chatillon,49.6253,5.7006,,,Châtillon,Herrschaft Châtillon,Lordship of Châtillon,territory,medium,seat: chatillon
-lordship-chevalin,49.09333,6.50472,,,Chevalin,Herrschaft Chevalin,Lordship of Chevalin,territory,medium,seat: chevalin
+lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,,,,,Seigneurie de Château et seigneurie de Lemberg-lès-Pirmasens,Herrschaft Château et seigneurie de Lemberg-lès-Pirmasens,Lordship of Château et seigneurie de Lemberg-lès-Pirmasens,territory,medium,no seat or located members
+lordship-chatillon,49.6253,5.7006,,,Seigneurie de Châtillon,Herrschaft Châtillon,Lordship of Châtillon,territory,medium,seat: chatillon
+lordship-chevalin,49.09333,6.50472,,,Seigneurie de Chevalin,Herrschaft Chevalin,Lordship of Chevalin,territory,medium,seat: chevalin
 lordship-col-de-cygne,48.84004,6.97829,,,Seigneurie du col de Cygne,Seigneurie du col de Cygne,Seigneurie du col de Cygne,territory,medium,centre of 7 member settlement(s)
-lordship-dagstuhl,49.60646,6.96935,,,Dagstuhl,Dagstuhl,Dagstuhl,territory,medium,centre of 1 member settlement(s)
-lordship-danne-et-quatre-vents,,,,,Danne et Quatre-Vents,Danne et Quatre-Vents,Danne et Quatre-Vents,territory,medium,no seat or located members
-lordship-diemeringen,48.94167,7.18667,,,Seigneurie de Diemeringen,Herrschaft Diemeringen,Lordship of Diemeringen,territory,medium,seat: diemeringen
-lordship-distroff,49.33194,6.26667,,,Seigneurie de Distroff,Herrschaft Distroff,Lordship of Distroff,territory,medium,seat: distroff
-lordship-faulquemont,49.04111,6.59917,,,Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,territory,medium,seat: faulquemont
-lordship-fenetrange,48.84556,7.01972,,,Fénétrange,Herrschaft Fénétrange,Lordship of Fénétrange,territory,medium,seat: fenetrange
-lordship-forbach,49.18806,6.9,,,Forbach,Herrschaft Forbach,Lordship of Forbach,territory,medium,seat: forbach
-lordship-frauenberg,49.13667,7.12722,,,Frauenberg,Herrschaft Frauenberg,Lordship of Frauenberg,territory,medium,seat: frauenberg
-lordship-fremersdorf,49.4058,6.64778,,,Fremersdorf,Herrschaft Fremersdorf,Lordship of Fremersdorf,territory,medium,seat: fremersdorf
-lordship-gueroldseck,48.8625,7.03139,,,Guéroldseck,Herrschaft Guéroldseck,Lordship of Guéroldseck,territory,medium,seat: gueroldseck
+lordship-dagstuhl,49.60646,6.96935,,,Seigneurie de Dagstuhl,Herrschaft Dagstuhl,Lordship of Dagstuhl,territory,medium,centre of 1 member settlement(s)
+lordship-danne-et-quatre-vents,,,,,Seigneurie de Danne et Quatre-Vents,Herrschaft Danne et Quatre-Vents,Lordship of Danne et Quatre-Vents,territory,medium,no seat or located members
+lordship-diemeringen,48.94167,7.18667,,,Seigneurie de Diemeringen,Seigneurie de Diemeringen,Seigneurie de Diemeringen,territory,medium,seat: diemeringen
+lordship-distroff,49.33194,6.26667,,,Seigneurie de Distroff,Seigneurie de Distroff,Seigneurie de Distroff,territory,medium,seat: distroff
+lordship-faulquemont,49.04111,6.59917,,,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,territory,medium,seat: faulquemont
+lordship-fenetrange,48.84556,7.01972,,,Seigneurie de Fénétrange,Herrschaft Fénétrange,Lordship of Fénétrange,territory,medium,seat: fenetrange
+lordship-forbach,49.18806,6.9,,,Seigneurie de Forbach,Herrschaft Forbach,Lordship of Forbach,territory,medium,seat: forbach
+lordship-frauenberg,49.13667,7.12722,,,Seigneurie de Frauenberg,Herrschaft Frauenberg,Lordship of Frauenberg,territory,medium,seat: frauenberg
+lordship-fremersdorf,49.4058,6.64778,,,Seigneurie de Fremersdorf,Herrschaft Fremersdorf,Lordship of Fremersdorf,territory,medium,seat: fremersdorf
+lordship-gueroldseck,48.8625,7.03139,,,Seigneurie de Guéroldseck,Herrschaft Guéroldseck,Lordship of Guéroldseck,territory,medium,seat: gueroldseck
 lordship-gueroldseck-les-niederstinzel,48.84213,7.10759,,,Seigneurie de Guéroldseck-lès-Niederstinzel,Seigneurie de Guéroldseck-lès-Niederstinzel,Seigneurie de Guéroldseck-lès-Niederstinzel,territory,medium,centre of 3 member settlement(s)
-lordship-helfedange,49.07333,6.52611,,,Helfedange,Herrschaft Helfedange,Lordship of Helfedange,territory,medium,seat: helfedange
-lordship-hingsange,48.97843,6.73519,,,Seigneurie de Hingsange,Seigneurie de Hingsange,Seigneurie de Hingsange,territory,medium,centre of 10 member settlement(s)
 lordship-hombourg-sur-canner,48.99846,6.35116,,,Terre de Hombourg,Terre de Hombourg,Terre de Hombourg,territory,medium,centre of 4 member settlement(s)
 lordship-imperiale-de-crehange,49.08266,6.668,,,Seigneurie impériale de Créhange,Seigneurie impériale de Créhange,Seigneurie impériale de Créhange,territory,medium,centre of 14 member settlement(s)
 lordship-inglange,49.4106,6.30486,,,Seigneurie d'Inglange,Seigneurie d'Inglange,Seigneurie d'Inglange,territory,medium,centre of 1 member settlement(s)
-lordship-kingertal,49.00137,7.0274,,,Kingertal,Kingertal,Kingertal,territory,medium,centre of 6 member settlement(s)
-lordship-lebach,49.41,6.91,,,Lebach,Herrschaft Lebach,Lordship of Lebach,territory,medium,seat: lebach
-lordship-lemberg,49.17028,7.65083,,,Lemberg,Herrschaft Lemberg (Pfalz),Lordship of Lemberg,territory,medium,seat: lemberg-pirmasens
+lordship-kingertal,49.00137,7.0274,,,Seigneurie de Kingertal,Herrschaft Kingertal,Lordship of Kingertal,territory,medium,centre of 6 member settlement(s)
+lordship-lebach,49.41,6.91,,,Seigneurie de Lebach,Herrschaft Lebach,Lordship of Lebach,territory,medium,seat: lebach
+lordship-lemberg,49.17028,7.65083,,,Seigneurie de Lemberg,Herrschaft Lemberg (Pfalz),Lordship of Lemberg,territory,medium,seat: lemberg-pirmasens
 lordship-lemberg-les-pirmasens,49.21055,7.62595,,,Seigneurie de Lemberg-lès-Pirmasens,Seigneurie de Lemberg-lès-Pirmasens,Seigneurie de Lemberg-lès-Pirmasens,territory,medium,centre of 22 member settlement(s)
-lordship-lixing,49.15361,6.99444,,,Seigneurie de Lixing,Herrschaft Lixing-lès-Rouhling,Lordship of Lixing-lès-Rouhling,territory,medium,seat: lixing-rouhling
-lordship-lixing-rouhling,,,,,Lixing-Rouhling,Lixing-Rouhling,Lixing-Rouhling,territory,medium,no seat or located members
-lordship-luttange,49.27,6.31111,,,Seigneurie de Luttange,Herrschaft Luttange,Lordship of Luttange,territory,medium,seat: luttange
-lordship-lutzelbourg,48.73444,7.25139,,,Seigneurie de Lutzelbourg,Herrschaft Lutzelbourg,Lordship of Lutzelbourg,territory,medium,seat: lutzelbourg
-lordship-marimont,48.88917,6.78333,,,Marimont,Herrschaft Marimont-lès-Bénestroff,Lordship of Marimont-lès-Bénestroff,territory,medium,seat: marimont
+lordship-lixing,49.15361,6.99444,,,Seigneurie de Lixing,Seigneurie de Lixing,Seigneurie de Lixing,territory,medium,seat: lixing-rouhling
+lordship-lixing-rouhling,,,,,Seigneurie de Lixing-Rouhling,Herrschaft Lixing-Rouhling,Lordship of Lixing-Rouhling,territory,medium,no seat or located members
+lordship-luttange,49.27,6.31111,,,Seigneurie de Luttange,Seigneurie de Luttange,Seigneurie de Luttange,territory,medium,seat: luttange
+lordship-lutzelbourg,48.73444,7.25139,,,Seigneurie de Lutzelbourg,Seigneurie de Lutzelbourg,Seigneurie de Lutzelbourg,territory,medium,seat: lutzelbourg
+lordship-marimont,48.88917,6.78333,,,Office de Marimont,Amt Marimont-lès-Bénestroff,Office of Marimont-lès-Bénestroff,territory,medium,seat: marimont
 lordship-meilberg,49.33732,6.21139,,,Seigneurie de Meilberg,Seigneurie de Meilberg,Seigneurie de Meilberg,territory,medium,centre of 6 member settlement(s)
-lordship-metz,49.11972,6.17694,,,Évêché temporel de Metz,Herrschaft Metz,Lordship of Metz,territory,medium,seat: metz
-lordship-monclair,49.4956,6.55778,,,Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,territory,medium,seat: monclair
-lordship-morhange,48.92361,6.63583,,,Morhange,Herrschaft Morhange,Lordship of Morhange,territory,medium,seat: morhange
-lordship-nalbach,49.3833,6.78333,,,Seigneurie de Nalbach,Herrschaft Nalbach,Lordship of Nalbach,territory,medium,seat: nalbach
-lordship-puttelange,49.0525,6.93083,,,Puttelange,Herrschaft Puttelange-aux-Lacs,Lordship of Puttelange-aux-Lacs,territory,medium,seat: puttelange
-lordship-puttlingen-saar,,,,,Püttlingen-Saar,Püttlingen-Saar,Püttlingen-Saar,territory,medium,no seat or located members
+lordship-metz,49.11972,6.17694,,,Évêché temporel de Metz,Évêché temporel de Metz,Évêché temporel de Metz,territory,medium,seat: metz
+lordship-monclair,49.4956,6.55778,,,Seigneurie de Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,territory,medium,seat: monclair
+lordship-morhange,48.92361,6.63583,,,Seigneurie de Morhange,Herrschaft Morhange,Lordship of Morhange,territory,medium,seat: morhange
+lordship-nalbach,49.3833,6.78333,,,Seigneurie de Nalbach,Seigneurie de Nalbach,Seigneurie de Nalbach,territory,medium,seat: nalbach
+lordship-puttelange,49.0525,6.93083,,,Seigneurie de Puttelange,Herrschaft Puttelange-aux-Lacs,Lordship of Puttelange-aux-Lacs,territory,medium,seat: puttelange
+lordship-puttlingen-saar,,,,,Seigneurie de Püttlingen-Saar,Herrschaft Püttlingen-Saar,Lordship of Püttlingen-Saar,territory,medium,no seat or located members
 lordship-rechicourt,,,,,Comté de Réchicourt,Comté de Réchicourt,Comté de Réchicourt,territory,medium,no seat or located members
-lordship-saint-avold,49.10417,6.70806,,,Saint-Avold,Herrschaft Saint-Avold,Lordship of Saint-Avold,territory,medium,seat: saint-avold
-lordship-sarreck,48.79417,7.03417,,,Sarreck,Herrschaft Sarreck,Lordship of Sarreck,territory,medium,seat: sarreck
+lordship-saint-avold,49.10417,6.70806,,,Seigneurie de Saint-Avold,Herrschaft Saint-Avold,Lordship of Saint-Avold,territory,medium,seat: saint-avold
+lordship-sarreck,48.79417,7.03417,,,Seigneurie de Sarreck,Herrschaft Sarreck,Lordship of Sarreck,territory,medium,seat: sarreck
 lordship-talange,49.25538,6.23594,,,Seigneurie de Talange,Seigneurie de Talange,Seigneurie de Talange,territory,medium,centre of 1 member settlement(s)
-lordship-thicourt,48.98889,6.55611,,,Seigneurie de Thicourt,Herrschaft Thicourt,Lordship of Thicourt,territory,medium,seat: thicourt
-lordship-turquestein,48.58808,7.03931,,,Turquestein,Herrschaft Burg Turquestein,Lordship of Château de Turquestein,territory,medium,seat: turquestein
-lordship-val-de-nalbach,49.37962,6.80111,,,Val de Nalbach,Val de Nalbach,Val de Nalbach,territory,medium,centre of 5 member settlement(s)
-lordship-varize,49.13472,6.45806,,,Terre de Varize,Herrschaft Varize-Vaudoncourt,Lordship of Varize-Vaudoncourt,territory,medium,seat: varize
+lordship-thicourt,48.98889,6.55611,,,Seigneurie de Thicourt,Seigneurie de Thicourt,Seigneurie de Thicourt,territory,medium,seat: thicourt
+lordship-turquestein,48.58808,7.03931,,,Seigneurie de Turquestein,Herrschaft Burg Turquestein,Lordship of Château de Turquestein,territory,medium,seat: turquestein
+lordship-val-de-nalbach,49.37962,6.80111,,,Seigneurie de Val de Nalbach,Herrschaft Val de Nalbach,Lordship of Val de Nalbach,territory,medium,centre of 5 member settlement(s)
+lordship-varize,49.13472,6.45806,,,Terre de Varize,Terre de Varize,Terre de Varize,territory,medium,seat: varize
 lordship-vry-devant-metz,49.22823,6.43382,,,Seigneurie de Vry-devant-Metz,Seigneurie de Vry-devant-Metz,Seigneurie de Vry-devant-Metz,territory,medium,centre of 1 member settlement(s)
 lordship-weinsberg,,,,,Seigneurie de Weinsberg,Seigneurie de Weinsberg,Seigneurie de Weinsberg,territory,medium,no seat or located members
 lorquin,48.66917,6.99667,Q22298,,Lorquin,Lorquin,Lorquin,wikidata,high,no canton anchor
@@ -781,36 +772,36 @@ marienthal,49.08805,6.81656,Q55598545,,Marienthal,,Mariendhal,wikidata,high,
 marimont,48.88917,6.78333,Q21947,,Marimont,Marimont-lès-Bénestroff,Marimont-lès-Bénestroff,wikidata,high,
 marmoutier,48.69,7.38111,Q22523,,Marmoutier,Marmoutier,Marmoutier,wikidata,high,
 marpingen,49.45,7.05,Q630853,,Marpingen,Marpingen,Marpingen,wikidata,high,
-marquisate-nomeny,48.88039,6.35196,,,Nomeny,Nomeny,Nomeny,territory,medium,centre of 10 member settlement(s)
-marquisate-pont-a-mousson,48.90444,6.05417,,,Marquisat de Pont-à-Mousson,Markgrafschaft Pont-à-Mousson,Marquisate of Pont-à-Mousson,territory,medium,seat: pont-a-mousson
+marquisate-nomeny,48.88039,6.35196,,,Marquisat de Nomeny,Markgrafschaft Nomeny,Marquisate of Nomeny,territory,medium,centre of 10 member settlement(s)
+marquisate-pont-a-mousson,48.90444,6.05417,,,Marquisat de Pont-à-Mousson,Marquisat de Pont-à-Mousson,Marquisat de Pont-à-Mousson,territory,medium,seat: pont-a-mousson
 marsal,48.78917,6.60917,Q21973,,Marsal,Marsal,Marsal,wikidata,low,no canton anchor; 88 km from its territory's other members
 marthille,48.92444,6.56,Q21951,,Marthille,Marthille,Marthille,wikidata,high,
 maxstadt,49.04444,6.79361,Q21921,,Maxstadt,Maxstadt,Maxstadt,wikidata,high,
-mayoralty-altheim,49.1723,7.31217,,,Mairie d'Altheim,Meierei Altheim,Mayoralty of Altheim,territory,medium,seat: altheim
+mayoralty-altheim,49.1723,7.31217,,,Mairie d'Altheim,Mairie d'Altheim,Mairie d'Altheim,territory,medium,seat: altheim
 mayoralty-basse-ham,49.37456,6.29629,,,Mairie de Basse-Ham,Mairie de Basse-Ham,Mairie de Basse-Ham,territory,medium,centre of 3 member settlement(s)
-mayoralty-boucheporn,49.14083,6.60889,,,Mairie de Boucheporn,Meierei Boucheporn,Mayoralty of Boucheporn,territory,medium,seat: boucheporn
-mayoralty-boustroff,49.00028,6.62167,,,Mairie de Boustroff,Meierei Boustroff,Mayoralty of Boustroff,territory,medium,seat: boustroff
-mayoralty-cutting,48.84889,6.83444,,,Mairie de Cutting,Meierei Cutting,Mayoralty of Cutting,territory,medium,seat: cutting
-mayoralty-dieuze,48.81222,6.71972,,,Mairie de Dieuze,Meierei Dieuze,Mayoralty of Dieuze,territory,medium,seat: dieuze
-mayoralty-farschviller,49.09333,6.89417,,,Mairie de Farschviller,Meierei Farschviller,Mayoralty of Farschviller,territory,medium,seat: farschviller
-mayoralty-hellimer,48.9975,6.83,,,Mairie de Hellimer,Meierei Hellimer,Mayoralty of Hellimer,territory,medium,seat: hellimer
-mayoralty-hilsprich,49.01306,6.91278,,,Mairie de Hilsprich,Meierei Hilsprich,Mayoralty of Hilsprich,territory,medium,seat: hilsprich
-mayoralty-holving,49.01083,6.965,,,Mairie de Holving,Meierei Holving,Mayoralty of Holving,territory,medium,seat: holving
+mayoralty-boucheporn,49.14083,6.60889,,,Mairie de Boucheporn,Mairie de Boucheporn,Mairie de Boucheporn,territory,medium,seat: boucheporn
+mayoralty-boustroff,49.00028,6.62167,,,Mairie de Boustroff,Mairie de Boustroff,Mairie de Boustroff,territory,medium,seat: boustroff
+mayoralty-cutting,48.84889,6.83444,,,Mairie de Cutting,Mairie de Cutting,Mairie de Cutting,territory,medium,seat: cutting
+mayoralty-dieuze,48.81222,6.71972,,,Mairie de Dieuze,Mairie de Dieuze,Mairie de Dieuze,territory,medium,seat: dieuze
+mayoralty-farschviller,49.09333,6.89417,,,Mairie de Farschviller,Mairie de Farschviller,Mairie de Farschviller,territory,medium,seat: farschviller
+mayoralty-hellimer,48.9975,6.83,,,Mairie de Hellimer,Mairie de Hellimer,Mairie de Hellimer,territory,medium,seat: hellimer
+mayoralty-hilsprich,49.01306,6.91278,,,Mairie de Hilsprich,Mairie de Hilsprich,Mairie de Hilsprich,territory,medium,seat: hilsprich
+mayoralty-holving,49.01083,6.965,,,Mairie de Holving,Mairie de Holving,Mairie de Holving,territory,medium,seat: holving
 mayoralty-inferieure-du-saargau-a-schwemlingen,49.46146,6.53665,,,Mairie inférieure du Saargau à Schwemlingen,Mairie inférieure du Saargau à Schwemlingen,Mairie inférieure du Saargau à Schwemlingen,territory,medium,centre of 6 member settlement(s)
-mayoralty-insming,48.95611,6.87417,,,Mairie d'Insming,Meierei Insming,Mayoralty of Insming,territory,medium,seat: insming
+mayoralty-insming,48.95611,6.87417,,,Mairie d'Insming,Mairie d'Insming,Mairie d'Insming,territory,medium,seat: insming
 mayoralty-lindre,48.80992,6.79837,,,Mairie de Lindre,Mairie de Lindre,Mairie de Lindre,territory,medium,centre of 4 member settlement(s)
-mayoralty-metzing,49.10694,6.95917,,,Mairie de Metzing,Meierei Metzing,Mayoralty of Metzing,territory,medium,seat: metzing-forbach
-mayoralty-montenach,49.41944,6.38056,,,Mairie de Montenach,Meierei Montenach,Mayoralty of Montenach,territory,medium,seat: montenach
-mayoralty-puttelange,49.0525,6.93083,,,Mairie de Puttelange,Meierei Puttelange-aux-Lacs,Mayoralty of Puttelange-aux-Lacs,territory,medium,seat: puttelange
-mayoralty-rahling,48.99194,7.21472,,,Mairie de Rahling,Meierei Rahling,Mayoralty of Rahling,territory,medium,seat: rahling
+mayoralty-metzing,49.10694,6.95917,,,Mairie de Metzing,Mairie de Metzing,Mairie de Metzing,territory,medium,seat: metzing-forbach
+mayoralty-montenach,49.41944,6.38056,,,Mairie de Montenach,Mairie de Montenach,Mairie de Montenach,territory,medium,seat: montenach
+mayoralty-puttelange,49.0525,6.93083,,,Mairie de Puttelange,Mairie de Puttelange,Mairie de Puttelange,territory,medium,seat: puttelange
+mayoralty-rahling,48.99194,7.21472,,,Mairie de Rahling,Mairie de Rahling,Mairie de Rahling,territory,medium,seat: rahling
 mayoralty-remering,49.0625,6.94222,,,Mairie de Rémering,Mairie de Rémering,Mairie de Rémering,territory,medium,centre of 2 member settlement(s)
-mayoralty-riche,48.89083,6.62778,,,Mairie de Riche,Meierei Riche,Mayoralty of Riche,territory,medium,seat: riche
-mayoralty-rurange,49.22823,6.43382,,,Mairie de Rurange,Meierei Rurange,Mayoralty of Rurange,territory,medium,seat: rurange-metzervisse
-mayoralty-schorbach,49.07917,7.40583,,,Mairie de Schorbach,Meierei Schorbach,Mayoralty of Schorbach,territory,medium,seat: schorbach
-mayoralty-siersberg,49.3686,6.67861,,,Haute-mairie de Siersberg,Meierei Siersburg,Mayoralty of Siersburg,territory,medium,seat: siersberg
+mayoralty-riche,48.89083,6.62778,,,Mairie de Riche,Mairie de Riche,Mairie de Riche,territory,medium,seat: riche
+mayoralty-rurange,49.22823,6.43382,,,Mairie de Rurange,Mairie de Rurange,Mairie de Rurange,territory,medium,seat: rurange-metzervisse
+mayoralty-schorbach,49.07917,7.40583,,,Mairie de Schorbach,Mairie de Schorbach,Mairie de Schorbach,territory,medium,seat: schorbach
+mayoralty-siersberg,49.3686,6.67861,,,Haute-mairie de Siersberg,Haute-mairie de Siersberg,Haute-mairie de Siersberg,territory,medium,seat: siersberg
 mayoralty-superieure-du-saargau-a-hilbringen,49.44081,6.59895,,,Mairie supérieure du Saargau à Hilbringen,Mairie supérieure du Saargau à Hilbringen,Mairie supérieure du Saargau à Hilbringen,territory,medium,centre of 7 member settlement(s)
-mayoralty-teting,49.05722,6.66361,,,Mairie de Téting,Meierei Teting-sur-Nied,Mayoralty of Teting-sur-Nied,territory,medium,seat: teting
-mayoralty-walschbronn,49.14861,7.48111,,,Mairie de Walschbronn,Meierei Walschbronn,Mayoralty of Walschbronn,territory,medium,seat: walschbronn
+mayoralty-teting,49.05722,6.66361,,,Mairie de Téting,Mairie de Téting,Mairie de Téting,territory,medium,seat: teting
+mayoralty-walschbronn,49.14861,7.48111,,,Mairie de Walschbronn,Mairie de Walschbronn,Mairie de Walschbronn,territory,medium,seat: walschbronn
 mechern,49.4206,6.62991,Q1915574,,Mechern,Mechern,Mechern,wikidata,high,
 megange,49.21806,6.43556,Q21967,,Mégange,Mégange,Mégange,wikidata,high,
 meilherg,49.32833,6.17917,,,Meilherg,,,approximate,low,not in Wikidata/GeoNames; placed at Illange (index location)
@@ -914,29 +905,24 @@ obrick,48.9515,6.7594,Q22079403,,Obrick-lès-Virming,,Obrick,wikidata,high,
 odenhofen,48.92472,7.7575,,,Odenhofen,,,approximate,low,not in Wikidata/GeoNames; placed at Oberdorf (index location); 93 km from its territory's other members
 oermingen,48.99917,7.12861,Q21365,,Oermingen,Oermingen,Oermingen,wikidata,high,
 oeting,49.17361,6.91472,Q21657,,Oeting,Œting,Œting,wikidata,high,
-office-berus,49.2639,6.69417,,,Berus,Amt Berus,Office of Berus,territory,medium,seat: berus
-office-boulay,49.18333,6.49361,,,Boulay,Amt Boulay-Moselle,Office of Boulay-Moselle,territory,medium,seat: boulay
-office-dieuze,48.81222,6.71972,,,Dieuze,Amt Dieuze,Office of Dieuze,territory,medium,seat: dieuze
-office-herange,48.775,7.16972,,,Office de Hérange,Amt Hérange,Office of Hérange,territory,medium,seat: herange
-office-hombourg-haut,49.09155,6.7314,,,Hombourg-Haut,Hombourg-Haut,Hombourg-Haut,territory,medium,centre of 48 member settlement(s)
-office-marimont-les-albestroff,,,,,Marimont-lès-Albestroff,Marimont-lès-Albestroff,Marimont-lès-Albestroff,territory,medium,no seat or located members
-office-merzig,49.44222,6.6375,,,Office de Merzig,Kondominium Merzig,Condominium of Merzig,territory,medium,seat: merzig
-office-merzig-saargau,,,,,Merzig-Saargau,Merzig-Saargau,Merzig-Saargau,territory,medium,no seat or located members
-office-phalsbourg,48.76778,7.25833,,,Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
-office-pitche,,,,,Pitche,Pitche,Pitche,territory,medium,no seat or located members
-office-saargau-et-merzig,,,,,Saargau et Merzig,Saargau et Merzig,Saargau et Merzig,territory,medium,no seat or located members
-office-saargau-merzig,,,,,Saargau-Merzig,Saargau-Merzig,Saargau-Merzig,territory,medium,no seat or located members
-office-sarralbe,48.99611,7.02778,,,Sarralbe,Amt Sarralbe,Office of Sarralbe,territory,medium,seat: sarralbe
-office-sarrebourg,48.73472,7.05389,,,Sarrebourg,Amt Sarrebourg,Office of Sarrebourg,territory,medium,seat: sarrebourg
-office-sarreguemines,49.11056,7.06722,,,Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
-office-sarrewerden-et-herbitzheim,,,,,Sarrewerden et Herbitzheim,Sarrewerden et Herbitzheim,Sarrewerden et Herbitzheim,territory,medium,no seat or located members
-office-schaumberg,49.4833,7.03333,,,Schaumberg,Amt Schaumberg,Office of Schaumberg,territory,medium,seat: schaumberg
-office-sergenterie-de-bining,49.03815,7.28132,,,Sergenterie de Bining,Sergenterie de Bining,Sergenterie de Bining,territory,medium,centre of 11 member settlement(s)
-office-sergenterie-ou-buttelei-de-rimling,49.09639,7.3142,,,Sergenterie ou Büttelei de Rimling,Sergenterie ou Büttelei de Rimling,Sergenterie ou Büttelei de Rimling,territory,medium,centre of 15 member settlement(s)
-office-sierck,49.4425,6.36028,,,Office de Sierck,Amt Sierck-les-Bains,Office of Sierck-les-Bains,territory,medium,seat: sierck
-office-siersberg,49.3686,6.67861,,,Siersberg,Amt Siersburg,Office of Siersburg,territory,medium,seat: siersberg
-office-varsberg,49.1725,6.62861,,,Office de Varsberg,Amt Varsberg,Office of Varsberg,territory,medium,seat: varsberg
-office-vaudrevange,49.32781,6.72081,,,Vaudrevange,Amt Wallerfangen,Office of Wallerfangen,territory,medium,seat: vaudrevange
+office-berus,49.2639,6.69417,,,Office de Berus,Amt Berus,Office of Berus,territory,medium,seat: berus
+office-boulay,49.18333,6.49361,,,Office de Boulay,Amt Boulay-Moselle,Office of Boulay-Moselle,territory,medium,seat: boulay
+office-dieuze,48.81222,6.71972,,,Office de Dieuze,Amt Dieuze,Office of Dieuze,territory,medium,seat: dieuze
+office-herange,48.775,7.16972,,,Office de Hérange,Office de Hérange,Office de Hérange,territory,medium,seat: herange
+office-hombourg-haut,49.09155,6.7314,,,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,territory,medium,centre of 48 member settlement(s)
+office-merzig,49.44222,6.6375,,,Office de Merzig,Office de Merzig,Office de Merzig,territory,medium,seat: merzig
+office-phalsbourg,48.76778,7.25833,,,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
+office-sarralbe,48.99611,7.02778,,,Office de Sarralbe,Amt Sarralbe,Office of Sarralbe,territory,medium,seat: sarralbe
+office-sarrebourg,48.73472,7.05389,,,Office de Sarrebourg,Amt Sarrebourg,Office of Sarrebourg,territory,medium,seat: sarrebourg
+office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
+office-sarrewerden-et-herbitzheim,,,,,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,territory,medium,no seat or located members
+office-schaumberg,49.4833,7.03333,,,Office de Schaumberg,Amt Schaumberg,Office of Schaumberg,territory,medium,seat: schaumberg
+office-sergenterie-de-bining,49.03815,7.28132,,,Office de Sergenterie de Bining,Amt Sergenterie de Bining,Office of Sergenterie de Bining,territory,medium,centre of 11 member settlement(s)
+office-sergenterie-ou-buttelei-de-rimling,49.09639,7.3142,,,Office de Sergenterie ou Büttelei de Rimling,Amt Sergenterie ou Büttelei de Rimling,Office of Sergenterie ou Büttelei de Rimling,territory,medium,centre of 15 member settlement(s)
+office-sierck,49.4425,6.36028,,,Office de Sierck,Office de Sierck,Office de Sierck,territory,medium,seat: sierck
+office-siersberg,49.3686,6.67861,,,Office de Siersberg,Amt Siersburg,Office of Siersburg,territory,medium,seat: siersberg
+office-varsberg,49.1725,6.62861,,,Office de Varsberg,Office de Varsberg,Office de Varsberg,territory,medium,seat: varsberg
+office-vaudrevange,49.32781,6.72081,,,Office de Vaudrevange,Amt Wallerfangen,Office of Wallerfangen,territory,medium,seat: vaudrevange
 offviller,48.95,7.64389,,,Offviller,,,approximate,low,not in Wikidata/GeoNames; placed at Niederbronn (index location)
 ohersteinbach,49.03611,7.6875,Q21486,,Obersteinbach,Obersteinbach,Obersteinbach,wikidata,high,
 olferding,49.07,7.2414,Q3350395,,Olferding,,,wikidata,high,no canton anchor
@@ -979,21 +965,21 @@ porcelette,49.15639,6.65556,Q22296,,Porcelette,Porcelette,Porcelette,wikidata,hi
 postroff,48.85111,7.07944,Q22306,,Postroff,Postroff,Postroff,wikidata,high,
 prieure-de-hesse,48.6956,7.0478,Q14637686,,Prieuré de Hesse,,Abbaye de Hesse,wikidata,high,no canton anchor
 primsweiler,49.41013,6.85553,,2852035,Primsweiler,,,geonames,high,geonames exact
-principality-lixheim,48.77528,7.14194,,,Lixheim,Fürstentum Lixheim,Principality of Lixheim,territory,medium,seat: lixheim
+principality-lixheim,48.77528,7.14194,,,Principauté de Lixheim,Fürstentum Lixheim,Principality of Lixheim,territory,medium,seat: lixheim
 provostship-amance,48.87017,6.52389,,,Prévôté d'Amance,Prévôté d'Amance,Prévôté d'Amance,territory,medium,centre of 7 member settlement(s)
 provostship-conde,,,,,Prévôté de Condé,Prévôté de Condé,Prévôté de Condé,territory,medium,no seat or located members
-provostship-eblange,49.22333,6.48194,,,Prévôté d'Éblange,Schultheißerei Éblange,Provostship of Éblange,territory,medium,seat: eblange
-provostship-grande-prevote,,,,,Grande prévôté,Grande prévôté,Grande prévôté,territory,medium,no seat or located members
-provostship-insming,48.95611,6.87417,,,Insming,Schultheißerei Insming,Provostship of Insming,territory,medium,seat: insming
-provostship-ketternostern,49.55788,7.2452,,,Ketternostern,Ketternostern,Ketternostern,territory,medium,centre of 11 member settlement(s)
-provostship-marche-de-chateau-salins,,,,,Marche de Château-Salins,Marche de Château-Salins,Marche de Château-Salins,territory,medium,no seat or located members
-provostship-marsal,48.78917,6.60917,,,Marsal,Schultheißerei Marsal,Provostship of Marsal,territory,medium,seat: marsal
-provostship-oberkirchen,49.5253,7.26222,,,Prévôté d'Oberkirchen,Schultheißerei Oberkirchen,Provostship of Oberkirchen,territory,medium,seat: ketternostern
+provostship-eblange,49.22333,6.48194,,,Prévôté d'Éblange,Prévôté d'Éblange,Prévôté d'Éblange,territory,medium,seat: eblange
+provostship-grande-prevote,,,,,Prévôté de Grande prévôté,Schultheißerei Grande prévôté,Provostship of Grande prévôté,territory,medium,no seat or located members
+provostship-insming,48.95611,6.87417,,,Prévôté d'Insming,Schultheißerei Insming,Provostship of Insming,territory,medium,seat: insming
+provostship-ketternostern,49.55788,7.2452,,,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,territory,medium,centre of 11 member settlement(s)
+provostship-marche-de-chateau-salins,,,,,Prévôté de Marche de Château-Salins,Schultheißerei Marche de Château-Salins,Provostship of Marche de Château-Salins,territory,medium,no seat or located members
+provostship-marsal,48.78917,6.60917,,,Prévôté de Marsal,Schultheißerei Marsal,Provostship of Marsal,territory,medium,seat: marsal
+provostship-oberkirchen,49.5253,7.26222,,,Prévôté d'Oberkirchen,Prévôté d'Oberkirchen,Prévôté d'Oberkirchen,territory,medium,seat: ketternostern
 provostship-remich,49.45611,6.42736,,,Prévôté de Remich,Prévôté de Remich,Prévôté de Remich,territory,medium,centre of 2 member settlement(s)
 provostship-rurale-de-sierck,49.30939,6.42952,,,Prévôté rurale de Sierck,Prévôté rurale de Sierck,Prévôté rurale de Sierck,territory,medium,centre of 22 member settlement(s)
-provostship-sarrebourg,48.73472,7.05389,,,Prévôté de Sarrebourg,Schultheißerei Sarrebourg,Provostship of Sarrebourg,territory,medium,seat: sarrebourg
-provostship-thionville,49.35806,6.16833,,,Prévôté de Thionville,Schultheißerei Thionville,Provostship of Thionville,territory,medium,seat: thionville
-provostship-winterbach,49.4753,7.10258,,,Prévôté de Winterbach,Schultheißerei Winterbach,Provostship of Winterbach,territory,medium,seat: winterbach
+provostship-sarrebourg,48.73472,7.05389,,,Prévôté de Sarrebourg,Prévôté de Sarrebourg,Prévôté de Sarrebourg,territory,medium,seat: sarrebourg
+provostship-thionville,49.35806,6.16833,,,Prévôté de Thionville,Prévôté de Thionville,Prévôté de Thionville,territory,medium,seat: thionville
+provostship-winterbach,49.4753,7.10258,,,Prévôté de Winterbach,Prévôté de Winterbach,Prévôté de Winterbach,territory,medium,seat: winterbach
 puberg,48.91167,7.31528,Q21470,,Puberg,Puberg,Puberg,wikidata,high,
 puttelange,49.0525,6.93083,Q21933,,Puttelange,Puttelange-aux-Lacs,Puttelange-aux-Lacs,wikidata,high,
 puttigny,48.8525,6.55139,Q21717,,Puttigny,Puttigny,Puttigny,wikidata,high,
@@ -1073,7 +1059,7 @@ rudling,49.45243,6.36914,,2982263,Rudling,,,geonames,high,geonames exact
 rurange-megange,49.22823,6.43382,Q15077704,,Rurange,Rurange,Rurange,wikidata,high,
 rurange-metzervisse,49.22823,6.43382,Q15077704,,Rurange,Rurange,Rurange,wikidata,high,
 rustroff,49.44333,6.37222,Q22164,,Rustroff,Rustroff,Rustroff,wikidata,high,
-saargau,49.45211,6.57566,,,Saargau,Saargau,Saargau,territory,medium,centre of 17 member settlement(s)
+saargau,49.45211,6.57566,,,Condominium de Saargau,Kondominium Saargau,Condominium of Saargau,territory,medium,centre of 17 member settlement(s)
 saarwellingen-14,49.35417,6.805,Q555648,,Saarwellingen,Saarwellingen,Saarwellingen,wikidata,high,
 saint-arnual,49.2169,7.01694,Q2222151,,Saint-Arnual,Sankt Arnual,Sankt Arnual,wikidata,high,
 saint-avold,49.10417,6.70806,Q22485,,Saint-Avold,Saint-Avold,Saint-Avold,wikidata,medium,chosen near its territory's other members

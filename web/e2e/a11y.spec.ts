@@ -6,6 +6,7 @@ import { open } from "./helpers";
 const VIEWS = [
   "#/map?year=1624&right=high_justice&lang=en",
   "#/map?year=1624&right=high_justice&lang=fr&place=anzeling",
+  "#/territories?year=1629&right=suzerain&lang=en&place=office-sarreguemines",
   "#/disputes?year=1616&right=suzerain&lang=de",
   "#/entity?year=1624&right=high_justice&lang=en&entity=duchy-lorraine",
   "#/matrix?year=1629&right=suzerain&lang=en",

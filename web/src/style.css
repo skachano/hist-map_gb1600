@@ -90,6 +90,18 @@ button.link[aria-pressed="true"] { background: none; color: var(--ink); font-wei
 #side .disputes > li { margin-bottom: 8px; }
 #side .key { font-size: 12px; color: var(--ink-2); }
 .events li { margin-bottom: 6px; }
+.crumbs button:not(:last-child)::after { content: " ›"; color: var(--ink-2); }
+.crumbs button { margin-right: 4px; }
+ul.members { padding-left: 18px; }
+ul.members.cols { columns: 2; column-gap: 16px; }
+.levels { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
+label.check { display: block; margin: 6px 0; font-size: 13px; }
+#side ul.groups { list-style: none; padding: 0; font-size: 13px; }
+#side ul.groups .swatch { display: inline-block; vertical-align: -1px; }
+#side ul.realms { padding-left: 18px; }
+#side ul.realms button[aria-pressed="true"] { font-weight: 700; color: var(--ink); }
+.terr-label { font: 600 11px/1.1 system-ui, sans-serif; color: var(--ink); text-align: center; max-width: 120px;
+  pointer-events: none; text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff; }
 .year { font-variant-numeric: tabular-nums; font-weight: 600; }
 
 /* Gantt charts */

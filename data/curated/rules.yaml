@@ -60,6 +60,12 @@ place_aliases:
   la terre de Hombourg: lordship-hombourg-sur-canner
   seigneurie de Hombourg-sur-Canner: lordship-hombourg-sur-canner
   "L1-C06-S09: Hombourg": lordship-hombourg-sur-canner
+  # The Merzig-Saargau condominium under its spellings (its halves stay: saargau, office-merzig).
+  Merzig-Saargau: condominium-merzig-saargau
+  Saargau-Merzig: condominium-merzig-saargau
+  Saargau et Merzig: condominium-merzig-saargau
+  Pitche: county-bitche                      # OCR slip for Bitche
+  "territory: Marimont-lès-Albestroff": lordship-marimont   # the village of that name stays a village
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
 entities: {}

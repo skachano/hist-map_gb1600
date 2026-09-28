@@ -1,8 +1,10 @@
 // Side panels shown next to the map: the holder (entity) view and the disputes view.
 import type { Dataset, Right } from "../data/types";
-import { label, name, t } from "../i18n";
+import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
+import { OTHER } from "../model/colors";
 import { directHoldings, type Dispute } from "../model/snapshot";
+import { type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
 import { ganttChart } from "./timeline";
@@ -104,4 +106,40 @@ function sortByName(rows: Right[], placeName: (id: string) => string): Right[] {
 
 function clamp(year: number, [lo, hi]: [number, number]): number {
   return Math.min(Math.max(year, lo), hi);
+}
+
+const GROUP_COLOUR: Record<RealmGroup, string> = { office: SERIES[0], lordship: SERIES[1], county: SERIES[2], other: OTHER };
+const GROUP_LABEL: Record<RealmGroup, StringKey> = {
+  office: "groupOffice", lordship: "groupLordship", county: "groupCounty", other: "groupOther" };
+
+/** Territories view: level and neighbour switches, the kinds of realm, and every realm shown. */
+export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: State, store: Store,
+  shown: string[], settlementsIn: Map<string, number>): void {
+  const { lang, year } = state;
+  const level = state.level ?? 1;
+  const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
+  const groups = new Map<RealmGroup, number>();
+  for (const id of shown) {
+    const g = realmGroup(data.places.get(id)?.type ?? "");
+    groups.set(g, (groups.get(g) ?? 0) + 1);
+  }
+  const levelButton = (value: number, key: StringKey) => h("button", { "aria-pressed": String(level === value),
+    onclick: () => store.set({ level: value }) }, t(key, lang));
+  fill(root,
+    h("h2", {}, `${t("realmsIn", lang)} ${year} (${shown.length})`),
+    h("div", { class: "levels", role: "group", "aria-label": t("level", lang) },
+      levelButton(1, "level1"), levelButton(2, "level2"), levelButton(0, "level0")),
+    h("label", { class: "check" }, h("input", { type: "checkbox", checked: !!state.neighbours,
+      onchange: (e: Event) => store.set({ neighbours: (e.target as HTMLInputElement).checked || undefined }) }),
+    ` ${t("neighbours", lang)}`),
+    h("ul", { class: "groups" }, ...(["office", "lordship", "county", "other"] as RealmGroup[]).map((g) => h("li", {},
+      h("span", { class: "swatch", style: `--c:${GROUP_COLOUR[g]}` }), ` ${t(GROUP_LABEL[g], lang)}`,
+      h("span", { class: "count" }, ` ${groups.get(g) ?? 0}`)))),
+    h("ul", { class: "realms" }, ...[...shown].sort((a, b) => placeName(a).localeCompare(placeName(b), lang)).map((id) =>
+      h("li", {},
+        h("button", { class: "link", "data-place": id, "aria-pressed": String(id === state.place),
+          onclick: () => store.set({ place: id }) }, placeName(id)),
+        h("span", { class: "muted" }, settlementsIn.get(id)
+          ? ` · ${settlementsIn.get(id)} ${t("places", lang)}` : ` · ${t("noArea", lang)}`)))),
+  );
 }

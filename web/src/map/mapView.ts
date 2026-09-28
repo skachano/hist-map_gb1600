@@ -1,7 +1,8 @@
 // The map: settlement cells and points styled per place by the active view, overlays
 // for shared (hatched) and pledged (dashed) rights, and the bailiwick outline for the year.
 import {
-  type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, setWorkerUrl,
+  type FilterSpecification, type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, Marker,
+  setWorkerUrl,
 } from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 // MapLibre looks for its worker next to its own module, which bundling moves; hand it
@@ -9,7 +10,8 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { MAP_CENTER, MAP_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { CONTESTED } from "../model/colors";
+import { CONTESTED, OTHER, SERIES } from "../model/colors";
+import { typesIn } from "../model/territories";
 
 setWorkerUrl(workerUrl);
 
@@ -64,6 +66,8 @@ export class MapView {
   private styled = new Set<string>();
   private lastSelected?: string;
   private cellsById = new Map<string, GeoJSON.Feature>();
+  private labels: Marker[] = [];
+  private territoriesShown = false;
 
   constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
     for (const f of data.cells.features) this.cellsById.set(String(f.properties?.id), f);
@@ -101,7 +105,17 @@ export class MapView {
     this.map.on("mousemove", "cells-fill", hover);
     this.map.on("mousemove", "places-circle", hover);
     this.map.on("mouseleave", "cells-fill", (e) => callbacks.onHover(undefined, e.point));
+    this.map.on("mousemove", "terr-fill", (e) => {
+      const id = this.smallestTerritory(e.features ?? []);
+      this.map.getCanvas().style.cursor = id ? "pointer" : "";
+      callbacks.onHover(id, e.point);
+    });
+    this.map.on("mouseleave", "terr-fill", (e) => callbacks.onHover(undefined, e.point));
     this.map.on("click", (e) => {
+      if (this.territoriesShown) {
+        callbacks.onSelect(this.smallestTerritory(this.map.queryRenderedFeatures(e.point, { layers: ["terr-fill"] })));
+        return;
+      }
       const hit = this.map.queryRenderedFeatures(e.point, { layers: ["places-circle", "cells-fill"] })[0];
       callbacks.onSelect(hit?.properties?.id as string | undefined);
     });
@@ -134,6 +148,18 @@ export class MapView {
       paint: { "line-color": CONTESTED, "line-width": 1.6,
         "line-opacity": ["case", ["boolean", state("contested"), false], 1, 0] },
     });
+    // Territories view: realms coloured by kind, white borders between neighbours.
+    const hidden: FilterSpecification = ["==", ["get", "id"], ""];
+    m.addLayer({ id: "terr-fill", type: "fill", source: "territories", filter: hidden,
+      paint: {
+        "fill-color": ["match", ["get", "place_type"], typesIn("office"), SERIES[0], typesIn("lordship"), SERIES[1],
+          typesIn("county"), SERIES[2], OTHER],
+        "fill-opacity": 0.45,
+      } });
+    m.addLayer({ id: "terr-line", type: "line", source: "territories", filter: hidden,
+      paint: { "line-color": "#fcfcfb", "line-width": 2 } });
+    m.addLayer({ id: "terr-selected", type: "line", source: "territories", filter: hidden,
+      paint: { "line-color": "#0b0b0b", "line-width": 3 } });
     m.addLayer({ id: "bailiwick", type: "line", source: "territories",
       filter: ["==", ["get", "id"], BAILIWICK],
       paint: { "line-color": "#0b0b0b", "line-width": 1.8 } });
@@ -152,6 +178,35 @@ export class MapView {
     m.addLayer({ id: "selected", type: "circle", source: "places", filter: ["==", ["get", "id"], ""],
       paint: { "circle-radius": 10, "circle-color": "rgba(0,0,0,0)", "circle-stroke-color": "#0b0b0b",
         "circle-stroke-width": 2 } });
+  }
+
+  /** Among overlapping realms under the cursor, the smallest (the most specific). */
+  private smallestTerritory(features: MapGeoJSONFeature[]): string | undefined {
+    return [...features].sort((a, b) => (a.properties?.settlements ?? 0) - (b.properties?.settlements ?? 0))[0]
+      ?.properties?.id as string | undefined;
+  }
+
+  /** Show the given realms for `year` (null hides the territories layers), labelled on the map. */
+  async showTerritories(year: number, ids: string[] | null, names: Map<string, string>, selected?: string): Promise<void> {
+    await this.ready;
+    const m = this.map;
+    this.territoriesShown = ids !== null;
+    const inYear: FilterSpecification = ["all", ["<=", ["get", "from_year"], year], [">=", ["get", "to_year"], year]];
+    const shown: FilterSpecification = ids
+      ? ["all", inYear, ["in", ["get", "id"], ["literal", ids]]] : ["==", ["get", "id"], ""];
+    m.setFilter("terr-fill", shown);
+    m.setFilter("terr-line", shown);
+    m.setFilter("terr-selected", ["all", inYear, ["==", ["get", "id"], ids && selected ? selected : ""]]);
+    for (const label of this.labels) label.remove();
+    this.labels = [];
+    for (const id of ids ?? []) {
+      const p = this.data.places.get(id);
+      if (p?.lat === undefined || p.lon === undefined) continue;
+      const el = document.createElement("div");
+      el.className = "terr-label";
+      el.textContent = names.get(id) ?? id;
+      this.labels.push(new Marker({ element: el }).setLngLat([p.lon, p.lat]).addTo(m));
+    }
   }
 
   /** Pan to a newly selected place when it is outside the view. */

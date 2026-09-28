@@ -346,6 +346,24 @@ For each screen, add a colour-blind-safe holder palette, legends and hatching fo
   - change descriptions come from the extraction in French, whatever the interface language
 
 
+### Stage 9b: Territories view (added on request)
+- A map of the realms in the "Belongs to" chains: offices, lordships, counties and their subdivisions, for the selected year (`#/territories?lvl=1|2|0&nb=1`).
+  - Levels:
+    - 1: realms directly under the bailiwick (28 in 1620, 30 in 1629 with Saarwerden and Lixheim)
+    - 2: their subdivisions (prévôtés, mairies, courts, fiefs)
+    - 0: all levels
+  - The neighbours option adds realms outside the bailiwick.
+  - Areas come from the Stage 6 geometry, coloured by kind of realm (office/castellany/prévôté, lordship/fief, county/principality, other) with the three validated colours plus grey. White borders and HTML name labels on the map keep neighbours apart.
+  - Hover shows the kind, the number of places and the parent. Clicking selects the most specific realm under the cursor.
+  - In the panel, a territory lists its members that year (sub-territories and places, clickable), and "Belongs to" is now a clickable chain in every view.
+- Data fixes the view needed:
+  - "fief" counts as an equivalent type (fief/seigneurie de Forbach, Morhange, Puttelange, Sarreck, Fénétrange are one realm)
+  - the Merzig-Saargau spellings merge into one condominium
+  - "Pitche" → Bitche
+  - aliases can be scoped by kind (`"territory: Marimont-lès-Albestroff"` leaves the village alone)
+  - territory names without a type word get one in all three languages ("Seigneurie de Forbach" / "Herrschaft Forbach" / "Lordship of Forbach")
+- Tests: `model/territories.test.ts` (levels, members, kinds); e2e walk down and up the hierarchy, levels and neighbours; the view is included in the layout and a11y suites. Totals: 22 vitest, 64 pytest, 37 e2e.
+
 ### Stage 10: QA & polish
 - Tasks:
   - Playwright e2e tests in a container: slider, language switch, place panel, disputed place.

@@ -401,10 +401,13 @@ class Builder:
     def _place_rows(self, used: set[str]) -> list[dict]:
         rows = self._place_rows_without_geo(used)
         geo = {g["place_id"]: g for g in _read_csv(GEOCODING_FILE)}
+        manual = {m["id"] for m in self.manual["places"]}
         for row in rows:  # fill only what is empty: hand-entered values win
             g = geo.get(row["id"])
             if not g:
                 continue
+            if g["method"] == "territory" and g["name_fr"] and row["id"] not in manual:
+                row["name_fr"] = g["name_fr"]  # 'Forbach' -> 'Seigneurie de Forbach' (see geocode.territory_names)
             for field, value in (("lat", g["lat"]), ("lon", g["lon"]), ("wikidata_id", g["wikidata_id"]),
                                  ("geonames_id", g["geonames_id"]), ("name_de", g["name_de"]),
                                  ("name_en", g["name_en"])):

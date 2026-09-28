@@ -153,16 +153,21 @@ def best_candidate(names: set[str], items: dict, country: str | None, place_type
 
 
 def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, str]:
-    """'office' + seat -> ('Office de Sierck', 'Amt Sierck', 'Office of Sierck'). Without a
-    located seat the French name is kept in every language: translating only the type word
-    of a name like 'Prévôté rurale de Sierck' gives nonsense."""
+    """Names in French, German and English. A name without a type word ('Forbach') gets the
+    type in every language: ('Seigneurie de Forbach', 'Herrschaft Forbach', 'Lordship of
+    Forbach'), using the seat's German and English names when it is located. A name that
+    already says what it is ('Prévôté rurale de Sierck') is kept as it is in every language:
+    translating only its type word gives nonsense."""
     fr = place["name_fr"]
     labels = vocab["place_types"].get(place["place_type"], {})
-    if seat is None or not labels:
+    if not labels or base_name(fr) != fold(fr):  # no vocabulary, or the name already has a type word
         return fr, fr, fr
-    seat_de = seat.name_de or seat.name_fr or fr
-    seat_en = seat.name_en or seat.name_fr or fr
-    return fr, f"{labels['de'].split(' (')[0]} {seat_de}", f"{labels['en'].capitalize()} of {seat_en}"
+    fr_type = labels["fr"][:1].upper() + labels["fr"][1:]
+    de_type = labels["de"].split(" (")[0].split(" / ")[0]
+    link = "d'" if fold(fr)[:1] in "aeiouy" else "de "
+    seat_de = (seat.name_de if seat else None) or fr
+    seat_en = (seat.name_en if seat else None) or fr
+    return f"{fr_type} {link}{fr}", f"{de_type} {seat_de}", f"{labels['en'].capitalize()} of {seat_en}"
 
 
 CONTEXT_KM = 35  # a member this far from its territory's other members is suspect

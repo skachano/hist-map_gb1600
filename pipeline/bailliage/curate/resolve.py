@@ -31,11 +31,11 @@ _TYPE_RE = re.compile(r"^(?:(?:la|le|les|l)\s+)?(?:" + "|".join(re.escape(w) for
                       + r")\s+(?:(?:de|du|des|d)\s+)?(?:(?:la|le|les|l)\s+)?")
 
 
-# One territory is called "office", "seigneurie", "terre", "comté" or "principauté" of X
+# One territory is called "office", "seigneurie", "terre", "fief", "comté" or "principauté" of X
 # depending on context; these types name the same domain. Nested units (prévôté,
 # mairie, cour, ban) stay distinct.
 DOMAIN_TYPES = {"office", "lordship", "county", "principality", "castellany", "marquisate", "barony",
-                "receivership"}
+                "receivership", "fief"}
 
 
 def preferred_domain_types(place_mentions) -> dict[str, str]:
@@ -161,11 +161,13 @@ class PlaceResolver:
     def resolve(self, place: dict, section: str | None = None) -> str:
         """Place id for one extracted place mention (dict with name_in_text, index_name, kind, place_type).
         Aliases may be scoped to a book section ('L1-C06-S09: Hombourg') for names that mean
-        different places in different parts of the book."""
+        different places in different parts of the book, or to a kind ('territory: X')."""
         name, kind = place["name_in_text"], place["kind"]
         if place["place_type"] in self.territory_types:
             kind = "territory"  # "comté de La Petite-Pierre" tagged as a settlement
         alias = self.aliases.get(f"{fold(section)}: {fold(name)}") if section else None
+        if alias is None:  # 'territory: Marimont-lès-Albestroff' leaves the village of that name alone
+            alias = self.aliases.get(f"{kind}: {fold(name)}")
         if alias is None:
             alias = self.aliases.get(fold(name))
         if alias is not None:

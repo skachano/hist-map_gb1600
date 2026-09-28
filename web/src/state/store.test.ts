@@ -7,8 +7,10 @@ const rights = new Set(["suzerain", "high_justice"]);
 describe("URL state", () => {
   it("round-trips through the hash", () => {
     const state = { view: "map" as const, year: 1624, right: "high_justice", lang: "fr" as const, place: "anzeling" };
-    expect(parseHash(toHash(state), years, rights)).toEqual({ ...state, entity: undefined, colours: undefined });
-    const entityView = { ...state, view: "entity" as const, entity: "duchy-lorraine", colours: ["a", "b"] };
+    expect(parseHash(toHash(state), years, rights)).toEqual({ ...state, entity: undefined, colours: undefined,
+      level: undefined, neighbours: undefined });
+    const entityView = { ...state, view: "entity" as const, entity: "duchy-lorraine", colours: ["a", "b"],
+      level: undefined, neighbours: undefined };
     expect(parseHash(toHash(entityView), years, rights)).toEqual(entityView);
   });
 
@@ -28,5 +30,12 @@ describe("Store", () => {
     store.set({ year: 1600 });
     store.set({ year: 1601 });
     expect(seen).toEqual([1601]);
+  });
+});
+
+describe("territories view state", () => {
+  it("keeps level and neighbours in the URL", () => {
+    const s = { view: "territories" as const, year: 1629, right: "suzerain", lang: "en" as const, level: 2, neighbours: true };
+    expect(parseHash(toHash(s), years, rights)).toMatchObject({ view: "territories", level: 2, neighbours: true });
   });
 });

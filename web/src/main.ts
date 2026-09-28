@@ -12,7 +12,8 @@ import { renderLegend } from "./ui/legend";
 import { renderAbout } from "./ui/about";
 import { renderChanges, renderMatrix } from "./ui/pages";
 import { renderPanel } from "./ui/panel";
-import { renderDisputesView, renderEntityView } from "./ui/sideViews";
+import { renderDisputesView, renderEntityView, renderTerritoriesView } from "./ui/sideViews";
+import { BAILIWICK, childrenIn, territoryLevels } from "./model/territories";
 
 const $ = (id: string) => document.getElementById(id)!;
 
@@ -28,6 +29,7 @@ function computeView(data: Dataset, index: RightIndex, state: State, coloured: s
   const styles = new Map<string, PlaceStyle>();
   const disputes = state.view === "disputes" ? disputesIn(state.year, index) : [];
   const located = [...data.places.values()].filter((p) => p.kind === "settlement" && p.lat !== undefined);
+  if (state.view === "territories") return { byPlace, disputes, styles }; // realms, not holders
   if (state.view === "disputes") {
     const disputed = new Set(disputes.map((d) => d.place));
     for (const p of located) if (disputed.has(p.id)) styles.set(p.id, { fill: CONTESTED, inherited: true, contested: true });
@@ -70,6 +72,23 @@ async function start(): Promise<void> {
   const colours = (state: State) => colouredHolders(data.entities,
     state.colours?.filter((id) => data.entities.has(id)));
   const tooltip = $("tooltip");
+
+  // Territories view: which realms are shown in a year, and how many located places each holds.
+  const territoryFeatures = data.territories.features.map((f) => f.properties as
+    { id: string; from_year: number; to_year: number; settlements: number });
+  const realms = (state: State) => {
+    const levels = territoryLevels(state.year, data.places, childrenIn(state.year, data.places));
+    const level = state.level ?? 1;
+    const settlementsIn = new Map<string, number>();
+    for (const f of territoryFeatures) {
+      if (f.from_year <= state.year && state.year <= f.to_year) settlementsIn.set(f.id, f.settlements);
+    }
+    const shown = [...levels].filter(([, l]) => level === 0 || l === level).map(([id]) => id);
+    if (state.neighbours) {
+      shown.push(...[...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK));
+    }
+    return { shown, settlementsIn };
+  };
   let current = computeView(data, index, store.state, colours(store.state));
 
   const map = new MapView($("map"), data, {
@@ -79,7 +98,16 @@ async function start(): Promise<void> {
       const { lang } = store.state;
       const entityName = (id: string) => name(data.entities.get(id)?.name, lang, id);
       const lines: (HTMLElement | null)[] = [];
-      if (store.state.view === "disputes") {
+      if (store.state.view === "territories") {
+        const p = data.places.get(placeId);
+        const members = territoryFeatures.find((f) => f.id === placeId && f.from_year <= store.state.year
+          && store.state.year <= f.to_year)?.settlements;
+        lines.push(h("div", {}, label(data.meta.vocab.place_types[p?.type ?? ""], lang, p?.type ?? "")
+          + (members ? ` · ${members} ${t("places", lang)}` : "")));
+        const parents = (p?.parents ?? []).filter((x) => (x.from ?? 0) <= store.state.year
+          && store.state.year <= (x.to ?? 9999)).map((x) => name(data.places.get(x.id)?.name, lang, x.id));
+        if (parents.length) lines.push(h("div", { class: "muted" }, `${t("belongsTo", lang)} ${parents.join(", ")}`));
+      } else if (store.state.view === "disputes") {
         for (const d of current.disputes.filter((x) => x.place === placeId)) {
           lines.push(h("div", { class: "warn" }, `⚠ ${label(data.meta.vocab.right_types[d.right], lang, d.right)}: `
             + d.parties.map((p) => entityName(p.holder)).join(" / ")));
@@ -115,7 +143,8 @@ async function start(): Promise<void> {
     const focusedBefore = document.activeElement as HTMLElement | null; // views re-render below
     const coloured = colours(state);
     if (!previous || previous.year !== state.year || previous.right !== state.right || previous.view !== state.view
-      || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()) {
+      || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()
+      || previous.level !== state.level || previous.neighbours !== state.neighbours) {
       current = computeView(data, index, state, coloured);
     }
     document.documentElement.lang = state.lang;
@@ -129,7 +158,7 @@ async function start(): Promise<void> {
     const side = $("side");
     const page = $("page");
     legend.hidden = state.view !== "map";
-    side.hidden = state.view !== "entity" && state.view !== "disputes";
+    side.hidden = state.view !== "entity" && state.view !== "disputes" && state.view !== "territories";
     page.hidden = state.view !== "matrix" && state.view !== "changes" && state.view !== "about";
     // A scrolling page must be reachable by keyboard even when it holds no controls (About).
     page.tabIndex = 0;
@@ -138,6 +167,8 @@ async function start(): Promise<void> {
     if (state.view === "map") renderLegend(legend, data, state, store, current.byPlace, coloured);
     if (state.view === "entity") renderEntityView(side, data, state, store);
     if (state.view === "disputes") renderDisputesView(side, data, state, store, current.disputes);
+    const realmData = state.view === "territories" ? realms(state) : undefined;
+    if (realmData) renderTerritoriesView(side, data, state, store, realmData.shown, realmData.settlementsIn);
     if (state.view === "matrix") renderMatrix(page, data, index, state, store, coloured);
     if (state.view === "changes") renderChanges(page, data, state, store);
     if (state.view === "about") renderAbout(page, data, state.lang);
@@ -155,7 +186,11 @@ async function start(): Promise<void> {
         returnFocus = null;
       }
     }
-    if (page.hidden) void map.render(state.year, current.styles, state.place);
+    if (page.hidden) {
+      void map.render(state.year, current.styles, state.place);
+      const names = new Map((realmData?.shown ?? []).map((id) => [id, name(data.places.get(id)?.name, state.lang, id)]));
+      void map.showTerritories(state.year, realmData ? realmData.shown : null, names, state.place);
+    }
     history.replaceState(null, "", toHash(state)); // replace: playing through years must not flood history
     performance.measure(`render:${state.view}`, { start: started }); // read by e2e/perf.spec.ts
   };

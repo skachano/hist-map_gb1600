@@ -5,6 +5,7 @@ import type { Dataset, Right } from "../data/types";
 import { label, name, t } from "../i18n";
 import { holderColour } from "../model/colors";
 import { ancestors, type RightIndex, rightsAtPlace, timeline } from "../model/snapshot";
+import { membersOf } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
 import { type Bar, ganttChart } from "./timeline";
@@ -63,6 +64,21 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     return [h("h4", {}, title), ganttChart(rows, span, year, `${title}, ${span[0]}–${span[1]}`)];
   });
 
+  function members(id: string) {
+    const { territories, settlements } = membersOf(id, year, data.places);
+    if (!territories.length && !settlements.length) return [];
+    const link = (m: string) => h("li", {}, h("button", { class: "link", "data-place": m,
+      onclick: () => store.set({ place: m }) }, placeName(m)));
+    const byName = (a: string, b: string) => placeName(a).localeCompare(placeName(b), lang);
+    return [
+      h("h3", {}, `${t("membersIn", lang)} ${year}`),
+      territories.length ? h("h4", {}, `${t("subTerritories", lang)} (${territories.length})`) : null,
+      territories.length ? h("ul", { class: "members" }, ...territories.sort(byName).map(link)) : null,
+      settlements.length ? h("h4", {}, `${t("settlements", lang)} (${settlements.length})`) : null,
+      settlements.length ? h("ul", { class: "members cols" }, ...settlements.sort(byName).map(link)) : null,
+    ];
+  }
+
   const events = data.events.filter((e) => e.place === place.id).sort((a, b) => a.year - b.year);
   const rights = rightsAtPlace(place.id, year, index);
   const parents = ancestors(place.id, year, data.places);
@@ -76,9 +92,11 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
       h("dt", {}, t("type", lang)),
       h("dd", {}, (["en", "fr", "de"] as const).map((l) => label(vocab.place_types[place.type], l, place.type)).join(" · ")),
       parents.length ? h("dt", {}, t("belongsTo", lang)) : null,
-      parents.length ? h("dd", {}, parents.map(placeName).join(" › ")) : null,
+      parents.length ? h("dd", { class: "crumbs" }, ...parents.map((id) => h("button", { class: "link", "data-place": id,
+        onclick: () => store.set({ place: id }) }, placeName(id)))) : null,
     ),
     place.approx ? h("p", { class: "muted" }, t("approximate", lang)) : null,
+    ...(place.kind === "territory" ? members(place.id) : []),
     h("h3", {}, `${t("rightsIn", lang)} ${year}`),
     rights.size
       ? h("dl", { class: "rights" }, ...[...rights].flatMap(([type, rows]) => [

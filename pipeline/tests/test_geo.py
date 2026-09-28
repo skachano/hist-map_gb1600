@@ -39,12 +39,15 @@ def test_anchor_ranks_and_flags_distant_matches():
 
 
 def test_territory_names_from_type_and_seat():
-    vocab = {"place_types": {"office": {"en": "office", "fr": "office", "de": "Amt"}}}
-    seat = geocode.Result("sierck", name_fr="Sierck", name_de="Sierck", name_en="Sierck")
-    fr, de, en = geocode.territory_names({"place_type": "office", "name_fr": "Office de Sierck"}, vocab, seat)
-    assert (fr, de, en) == ("Office de Sierck", "Amt Sierck", "Office of Sierck")
-    unseated = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}
-    assert geocode.territory_names(unseated, vocab, None) == ("Prévôté rurale de Sierck",) * 3
+    vocab = {"place_types": {"office": {"en": "office", "fr": "office", "de": "Amt"},
+                             "lordship": {"en": "lordship", "fr": "seigneurie", "de": "Herrschaft"}}}
+    seat = geocode.Result("sarreguemines", name_fr="Sarreguemines", name_de="Saargemünd", name_en="Sarreguemines")
+    names = geocode.territory_names({"place_type": "office", "name_fr": "Sarreguemines"}, vocab, seat)
+    assert names == ("Office de Sarreguemines", "Amt Saargemünd", "Office of Sarreguemines")
+    unseated = geocode.territory_names({"place_type": "office", "name_fr": "Insming"}, vocab, None)
+    assert unseated == ("Office d'Insming", "Amt Insming", "Office of Insming")
+    typed = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}
+    assert geocode.territory_names(typed, vocab, None) == ("Prévôté rurale de Sierck",) * 3
 
 
 def fake_geonames(*entries):

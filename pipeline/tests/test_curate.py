@@ -106,3 +106,13 @@ def test_membership_years_need_a_transfer_of_the_member():
     b.normalize_memberships()
     rows = {(r["child_id"], r["from_year"], r["to_year"]) for r in b.memberships.values()}
     assert rows == {("sold", 1621, None), ("listed", None, None)}  # the parent's event does not date 'listed'
+
+
+def test_kind_scoped_alias_leaves_the_village_alone():
+    r = PlaceResolver(gazetteer(("Marimont-lès-Albestroff", "Albestroff")), [],
+                      {"territory: Marimont-lès-Albestroff": "lordship-marimont"}, territory_types={"office"})
+    as_territory = {"name_in_text": "Marimont-lès-Albestroff", "kind": "territory", "place_type": "office",
+                    "other_names": [], "index_name": ""}
+    as_village = {**as_territory, "kind": "settlement", "place_type": "village"}
+    assert r.resolve(as_territory) == "lordship-marimont"
+    assert r.resolve(as_village) == "marimont-les-albestroff"

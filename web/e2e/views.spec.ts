@@ -65,3 +65,30 @@ test("about page cites the book and the data sources in every language", async (
   await page.getByRole("button", { name: "Deutsch" }).click();
   await expect(about).toContainText("Grundkarte © OpenStreetMap-Mitwirkende");
 });
+
+test("territories: realms of a year, walk down and up the hierarchy, levels and neighbours", async ({ page }) => {
+  const errors = await open(page, "#/territories?year=1620&right=suzerain&lang=en");
+  const side = page.locator("#side");
+  await expect(side.locator("h2")).toHaveText(/^Realms in 1620 \(\d+\)$/);
+  await expect(side.getByRole("button", { name: "Lordship of Forbach" })).toBeVisible();
+  await expect(page.locator(".terr-label").filter({ hasText: "Office of Sarreguemines" })).toHaveCount(1);
+
+  await side.getByRole("button", { name: "Office of Sarreguemines" }).click();
+  const panel = page.locator("#panel");
+  await expect(panel.locator("h2")).toHaveText("Office of Sarreguemines");
+  await expect(panel).toContainText("Members in 1620");
+  await panel.locator("ul.members").getByRole("button", { name: "Sarreguemines", exact: true }).click();
+  await expect(panel.locator("h2")).toHaveText("Sarreguemines");
+  await panel.locator(".crumbs").getByRole("button", { name: "Office of Sarreguemines" }).click();
+  await expect(panel.locator("h2")).toHaveText("Office of Sarreguemines");
+
+  const count = async () => Number((await side.locator("h2").innerText()).match(/\((\d+)\)/)![1]);
+  const level1 = await count();
+  await side.getByRole("button", { name: "Their subdivisions" }).click();
+  await expect(page).toHaveURL(/lvl=2/);
+  await side.getByRole("checkbox", { name: "Also realms outside the bailiwick" }).check();
+  await expect(page).toHaveURL(/nb=1/);
+  await side.getByRole("button", { name: "Offices, lordships, counties" }).click();
+  await expect.poll(count).toBeGreaterThan(level1);
+  expect(errors).toEqual([]);
+});
