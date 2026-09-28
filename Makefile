@@ -5,7 +5,7 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web extract validate schema curate geocode geometry build-data e2e extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web extract validate schema curate geocode geometry build-data data e2e extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
@@ -20,6 +20,7 @@ help:
 	@echo "make geocode        Stage 5: coordinates + fr/de/en names (Wikidata), then run make curate"
 	@echo "make geometry       Stage 6: settlement cells + territory areas -> data/geometry/"
 	@echo "make build-data     Stage 7: compile the dataset into web/public/data/ (run before make dev)"
+	@echo "make data           curate, geocode, curate, geometry, build-data: after editing data/curated/"
 	@echo "make extract-llm-plan SECTIONS=priority   Stage 3: token count + cost estimate (no model calls)"
 	@echo "make extract-llm-submit SECTIONS=priority  Stage 3: submit a half-price batch (costs money)"
 	@echo "make extract-llm-collect SECTIONS=priority Stage 3: wait for batches and parse results"
@@ -94,6 +95,12 @@ geometry:
 
 build-data:
 	$(PIPELINE) python -m bailliage build-data
+
+# The whole chain after a change to data/curated/ (rules.yaml, manual/): geocoding reads the
+# curated memberships, and curate copies the coordinates back into places.csv.
+data:
+	$(PIPELINE) sh -c "python -m bailliage curate && python -m bailliage geocode && python -m bailliage curate \
+	  && python -m bailliage geometry && python -m bailliage build-data"
 
 e2e: web/node_modules web/public/data/meta.json
 	$(COMPOSE) up -d web

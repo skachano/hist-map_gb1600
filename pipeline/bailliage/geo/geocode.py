@@ -176,6 +176,7 @@ CONTEXT_KM = 35  # a member this far from its territory's other members is suspe
 def apply_placement_rules(results: dict, rules: dict[str, dict]) -> None:
     """Rules for places the databases cannot locate (lost villages):
          place-id: {approximate: other-place-id, note: ...}   placed at that place, like a hamlet at its commune
+                                                              (optional name_de, name_en)
          place-id: {unlocated: true, note: ...}               no point at all (site unknown)"""
     for pid, rule in rules.items():
         res = results[pid]
@@ -184,6 +185,7 @@ def apply_placement_rules(results: dict, rules: dict[str, dict]) -> None:
         target = results.get(rule.get("approximate", ""))
         if target is not None and target.lat is not None:
             res.lat, res.lon, res.method = target.lat, target.lon, "approximate"
+            res.name_de, res.name_en = rule.get("name_de"), rule.get("name_en")
             res.note = rule.get("note") or f"placed at {target.place_id} (rules.yaml)"
         else:
             res.method = "unlocated"
@@ -210,6 +212,8 @@ def refine_with_territories(results: dict, info: dict, memberships: list[dict], 
 
     changed = flagged = 0
     for pid, res in results.items():
+        if res.method == "override":  # placed by hand in rules.yaml
+            continue
         centres = [c for t in parents.get(pid, ()) if (c := centre(t, pid))]
         if not centres:  # members of small fiefs: use the territories those fiefs belong to
             centres = [c for t in parents.get(pid, ()) for g in parents.get(t, ()) if (c := centre(g, pid))]
@@ -315,10 +319,11 @@ def run() -> None:
             res.lat, res.lon = override.get("lat"), override.get("lon")
             res.wikidata_id = override.get("wikidata")
             res.method, res.confidence, res.note = "override", "high", override.get("note", "")
+            res.name_de, res.name_en = override.get("name_de"), override.get("name_en")
             if res.wikidata_id and res.wikidata_id in items:
                 it = items[res.wikidata_id]
                 res.lat, res.lon = res.lat or it["lat"], res.lon or it["lon"]
-                res.name_de, res.name_en = it["de"], it["en"]
+                res.name_de, res.name_en = res.name_de or it["de"], res.name_en or it["en"]
             results[pid] = res
             continue
         country = (row or {}).get("country") or p.get("modern_country") or None

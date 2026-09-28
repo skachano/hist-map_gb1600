@@ -66,6 +66,7 @@ place_aliases:
   Saargau et Merzig: condominium-merzig-saargau
   Pitche: county-bitche                      # OCR slip for Bitche
   "territory: Marimont-lès-Albestroff": lordship-marimont   # the village of that name stays a village
+  "L1-C06-S09: Rehlingen": rehlingen-sur-sarre   # a Siersberg fief (p. 82), not Dehlingen in Alsace
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
 entities: {}
@@ -82,6 +83,12 @@ drop_memberships:
   - {child: emmersweiler, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67)"}
   - {child: guerting, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
   - {child: remsing, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: sarreinsming, parent: lordship-forbach,
+     reason: "only its castle is a rear-fief held of Forbach (p. 82); the village is a fief of the Sarreguemines castellany (p. 17)"}
+  - {parent: ban-westrich,
+     reason: "the Westrich of Münster's 1552 Cosmographia (p. 10) is a loose region, not a realm"}
+  - {child: dordhal, parent: lordship-bourgaltroff,
+     reason: "only formerly part of Bourgaltroff; a fief contested between Lorraine and the bishopric from 1577 (p. 146)"}
 
 # Corrections to extracted rights: rows matching every `match` field get the `set` fields.
 right_overrides:
@@ -105,4 +112,33 @@ geocode:
   # Lost villages ("village disparu") the databases matched to other, existing places.
   ruchling: {approximate: spicheren, note: "Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling"}
   nideck: {approximate: sarralbe, note: "Nideck (Neudeck), lost village of the office of Sarralbe (p. 18); was matched to Burg Nideck in Alsace"}
+  salival: {approximate: moyenvic, note: "abbey of Salival in the castellany of Vic (p. 78), now part of Moyenvic; the index's Morville was matched to a namesake"}
   bletting: {unlocated: true, note: "lost village of the office of Boulay (p. 62), site unknown; was matched to Betting"}
+  # Namesakes the databases matched to the wrong place.
+  chatillon: {wikidata: Q633203, lat: 48.55861, lon: 6.96611, name_de: Val-et-Châtillon, name_en: Val-et-Châtillon,
+              note: "Val-et-Châtillon, seat of the lordship with Cirey, Foulcrey, Hattigny and Ibigny (pp. 78, 116); was matched to Châtillon in Belgium"}
+  domnon: {wikidata: Q21647, lat: 48.86056, lon: 6.8225, name_de: Domnom-lès-Dieuze, name_en: Domnom-lès-Dieuze,
+           note: "Domnon-lès-Dieuze, office of Dieuze (pp. 20, 74-75, 83); was matched to Donnenheim in Alsace"}
+  courcelles: {wikidata: Q21703, lat: 49.10917, lon: 6.405, name_de: Courcelles-Chaussy, name_en: Courcelles-Chaussy,
+               note: "Courcelles-Chaussy, with Chaussy and Frécourt dependent on the castle of Hombourg (p. 82); was matched to Courcelles in the Vosges"}
+  woelfling-bouzonville: {wikidata: Q21991, lat: 49.29222, lon: 6.60722, name_de: Vœlfling-lès-Bouzonville, name_en: Vœlfling-lès-Bouzonville,
+                          note: "Woelfling of the abbot of Bouzonville, office of Berus (p. 59); was matched to Wœlfling-lès-Sarreguemines"}
+  eich-pirmasens: {lat: 49.2633, lon: 7.58306, name_de: Thaleischweiler, name_en: Thaleischweiler,
+                   note: "Eich = Thaleischweiler and Höheischweiler (index), lordship of Lemberg (p. 18); placed at Thaleischweiler; was matched to Eich in Rhenish Hesse"}
+  # Parts of Bitche the databases matched to Alsatian namesakes.
+  kaltenhausen: {approximate: bitche, note: "Kaltenhausen, the lower town at the foot of Bitche castle (p. 17); was matched to Kaltenhouse near Haguenau"}
+  rohr: {approximate: bitche, note: "Rohr alias Roseau with the Faubourg of Bitche (p. 17); was matched to Rohr in Bas-Rhin"}
+  dehlingen: {wikidata: Q21230, lat: 48.98111, lon: 7.19167, name_de: Dehlingen, name_en: Dehlingen,
+              note: "Dehlingen in the lordship of Diemeringen (p. 106); the Siersberg fief Rehlingen (p. 82) had been merged into it"}
+  rehlingen-sur-moselle: {wikidata: Q106619185, lat: 49.62321, lon: 6.4301, name_de: Rehlingen (Nittel), name_en: Rehlingen (Nittel),
+                          note: "Rehlingen by Nittel on the Moselle (p. 13; index: canton of Saarburg); was matched to Rehlingen-Siersburg on the Saar"}
+  remering-puttelange: {wikidata: Q22334, lat: 49.03556, lon: 6.93944, name_de: Rémering-lès-Puttelange, name_en: Rémering-lès-Puttelange,
+                        note: "Rémering of the lordship of Puttelange (p. 17); the index's department was misread, so it went unplaced"}
+  ratzviller: {wikidata: Q21534, lat: 48.95556, lon: 7.23972, name_de: Ratzwiller, name_en: Ratzwiller,
+               note: "Ratzwiller in the lordship of Diemeringen (p. 106)"}
+  # Hamlets placed at their commune, whose name the databases matched to a namesake.
+  obersheim: {approximate: remering-puttelange, note: "Obersheim, with Rémering in the lordship of Puttelange (p. 17)"}
+  odenhofen: {approximate: oberdorf, note: "Odenhofen, a hamlet of Oberdorf near Bouzonville (index); was placed at Oberdorf in Alsace"}
+  werdenstein: {approximate: hoppstetten, note: "the castle of Werdenstein with Hoppstetten, office of Schaumberg (p. 79)"}
+  zell: {approximate: petit-tenquin, name_de: Zellen, name_en: Zellen,
+         note: "Zell, now Zellen, part of Petit-Tenquin (index), mairie of Hilsprich (pp. 18, 69); was matched to a Zell in Alsace"}
