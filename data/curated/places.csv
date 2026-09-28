@@ -16,6 +16,7 @@ salival,settlement,Salival,Salival,Salival,Salivai,abbey,48.77722,6.56222,,,FR,7
 voelklingen,settlement,Vœlklingen,Völklingen,Völklingen,Vcelklingen|Voelklingen,village,49.25162,6.85873,,2816630,DE,100;102,high,the OCR reads Vcelklingen
 hoelling,settlement,Hœlling,Hoelling,Hoelling,Hcelling|Hoelling,village,49.0734,7.2972,Q3139045,,FR,144,high,hamlet of Bettviller; the OCR reads Hcelling
 provostship-sarrebourg,territory,Prévôté de Sarrebourg,Schultheißerei Sarrebourg,Provostship of Sarrebourg,office de Sarrebourg,provostship,48.73472,7.05389,,,FR,19;22,high,"a prévôté in ch. I (p. 19), one of the bailiwick's offices and lordships in the table of p. 22"
+provostship-marche-de-chateau-salins,territory,Marche d'Empire de Château-Salins,Reichsmark Château-Salins,Imperial March of Château-Salins,Marche de Château-Salins|marche de Château-Salins|marche d'Empire de Château-Salins,march,,,,,FR,119-120,high,formed by the dukes in the 15th century as marquis of the Empire; its prévôt received burghers between the Meuse and the Rhine (pp. 119-120)
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -971,14 +972,12 @@ principality-lixheim,territory,Principauté de Lixheim,Fürstentum Lixheim,Princ
 provostship-amance,territory,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,,provostship,48.87017,6.52389,,,,,medium,
 provostship-conde,territory,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,Condé|Condé-Northen,provostship,,,,,,50,medium,
 provostship-eblange,territory,Prévôté d'Éblange,Schultheißerei Éblange,Provostship of Éblange,Éblange,provostship,49.22333,6.48194,,,,63,medium,
-provostship-grande-prevote,territory,Prévôté de Grande prévôté,Schultheißerei Grande prévôté,Provostship of Grande prévôté,prévôté rurale,provostship,,,,,,,medium,
 provostship-insming,territory,Prévôté d'Insming,Schultheißerei Insming,Provostship of Insming,Amange|prévôté d'Insming,provostship,48.95611,6.87417,,,,,medium,
 provostship-ketternostern,territory,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,Oberkirch|Oberkirchen,provostship,49.55788,7.2452,,,,57,medium,
-provostship-marche-de-chateau-salins,territory,Prévôté de Marche de Château-Salins,Schultheißerei Marche de Château-Salins,Provostship of Marche de Château-Salins,marche d'Empire de Château-Salins,provostship,,,,,,119-120,medium,
 provostship-marsal,territory,Prévôté de Marsal,Schultheißerei Marsal,Provostship of Marsal,,provostship,48.78917,6.60917,,,,76-77,medium,
 provostship-oberkirchen,territory,Prévôté d'Oberkirchen,Schultheißerei Oberkirchen,Provostship of Oberkirchen,,provostship,49.5253,7.26222,,,,,medium,
 provostship-remich,territory,Prévôté de Remich,Schultheißerei Remich,Provostship of Remich,,provostship,49.45611,6.42736,,,,,medium,
-provostship-rurale-de-sierck,territory,Prévôté rurale de Sierck,Landschultheißerei Sierck,Rural provostship of Sierck,Landscholtesserie|grande prévôté,provostship,49.30939,6.42952,,,,,medium,
+provostship-rurale-de-sierck,territory,Prévôté rurale de Sierck,Landschultheißerei Sierck,Rural provostship of Sierck,Landscholtesserie|grande prévôté|prévôté rurale,provostship,49.30939,6.42952,,,,,medium,
 provostship-thionville,territory,Prévôté de Thionville,Schultheißerei Thionville,Provostship of Thionville,,provostship,49.35806,6.16833,,,,98,medium,
 provostship-winterbach,territory,Prévôté de Winterbach,Schultheißerei Winterbach,Provostship of Winterbach,la prévôté de Winterbach,provostship,49.4753,7.10258,,,,,medium,
 puberg,settlement,Puberg,Puberg,Puberg,,village,48.91167,7.31528,Q21470,,FR,,high,

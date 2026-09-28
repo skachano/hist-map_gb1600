@@ -68,6 +68,7 @@ place_aliases:
   "territory: Marimont-lès-Albestroff": lordship-marimont   # the village of that name stays a village
   "L1-C06-S09: Rehlingen": rehlingen-sur-sarre   # a Siersberg fief (p. 82), not Dehlingen in Alsace
   office de Sarrebourg: provostship-sarrebourg
+  grande prévôté: provostship-rurale-de-sierck   # "grande prévôté ou prévôté rurale" of the office of Sierck (p. 49)
   "territory: Sarrebourg": provostship-sarrebourg   # the "Sarrebourg" of the bailiwick's units (pp. 9, 22) is the prévôté of p. 19
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}

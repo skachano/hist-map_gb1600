@@ -24,6 +24,7 @@ place_types:
   lordship:      {en: lordship, fr: seigneurie, de: Herrschaft, applies_to: any}
   county:        {en: county, fr: comté, de: Grafschaft, applies_to: territory}
   marquisate:    {en: marquisate, fr: marquisat, de: Markgrafschaft, applies_to: territory}
+  march:         {en: imperial march, fr: marche d'Empire, de: Reichsmark, applies_to: territory}
   principality:  {en: principality, fr: principauté, de: Fürstentum, applies_to: territory}
   barony:        {en: barony, fr: baronnie, de: Freiherrschaft, applies_to: territory}
   fief:          {en: fief, fr: fief, de: Lehen, applies_to: any}
