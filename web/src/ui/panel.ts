@@ -100,7 +100,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     h("h3", {}, `${t("rightsIn", lang)} ${year}`),
     rights.size
       ? h("dl", { class: "rights" }, ...[...rights].flatMap(([type, rows]) => [
-        h("dt", {}, label(vocab.right_types[type], lang, type)),
+        h("dt", { title: vocab.right_types[type]?.desc?.[lang] }, label(vocab.right_types[type], lang, type)),
         h("dd", {}, h("ul", {}, ...rows.map(holding))),
       ]))
       : h("p", { class: "muted" }, t("noRights", lang)),

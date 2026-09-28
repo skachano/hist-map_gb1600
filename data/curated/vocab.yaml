@@ -58,55 +58,103 @@ right_types:
     en: Suzerainty (dominium directum)
     fr: Souveraineté (domaine direct)
     de: Oberherrschaft (dominium directum)
+    desc:
+      en: "The superior lordship (dominium directum): the prince of whom a land is held and whose sovereignty it is under. Its holder receives homage and fealty, and settles who may levy taxes and troops there."
+      fr: "La seigneurie supérieure (domaine direct) : le prince dont une terre relève et sous la souveraineté duquel elle se trouve. Il reçoit foi et hommage et décide qui peut y lever impôts et troupes."
+      de: "Die Oberherrschaft (dominium directum): der Fürst, von dem ein Land lehnsrührig ist und unter dessen Landeshoheit es steht. Er empfängt Huldigung und Lehnseid und bestimmt, wer dort Steuern und Truppen erheben darf."
     core: true
   high_justice:
     en: High justice
     fr: Haute justice
     de: Hochgerichtsbarkeit
+    desc:
+      en: "The right to judge crimes punishable by death or mutilation (blood justice). It is marked by the gallows (signe patibulaire) and usually goes with sovereignty."
+      fr: "Le droit de juger les crimes passibles de mort ou de mutilation (justice de sang). Il se signale par le gibet (signe patibulaire) et accompagne en général la souveraineté."
+      de: "Das Recht, Verbrechen zu richten, auf die Tod oder Verstümmelung stehen (Blutgericht). Sichtbares Zeichen ist der Galgen; es geht meist mit der Landeshoheit einher."
     core: true
   middle_low_justice:
     en: Middle and low justice
     fr: Moyenne et basse justice
     de: Nieder- und Mittelgerichtsbarkeit
+    desc:
+      en: "Jurisdiction over lesser offences punished by fines, and over civil matters such as debts, boundaries and property transfers. It was usually exercised by the village mayor and aldermen (maire and échevins) for the lord."
+      fr: "La juridiction sur les délits punis d'amendes et sur les affaires civiles : dettes, bornages, mutations de biens. Elle était exercée en général par le maire et les échevins du village au nom du seigneur."
+      de: "Die Gerichtsbarkeit über geringere, mit Geldbußen bestrafte Vergehen und über Zivilsachen wie Schulden, Grenzen und Besitzwechsel. Sie wurde meist von Meier und Schöffen des Dorfes im Namen des Herrn ausgeübt."
   manorial_lord:
     en: Manorial lordship
     fr: Seigneurie foncière
     de: Grundherrschaft
+    desc:
+      en: "The seigneurie foncière: lordship over the land itself. It brings the rents, dues in kind, labour services (corvées) and banal rights (mill, oven, wine press) owed by the tenants."
+      fr: "La seigneurie foncière : la seigneurie sur la terre elle-même. Elle donne droit aux cens, rentes en nature, corvées et banalités (moulin, four, pressoir) dus par les tenanciers."
+      de: "Die Grundherrschaft: die Herrschaft über den Boden selbst. Zu ihr gehören Zinsen, Naturalabgaben, Frondienste und Bannrechte (Mühle, Backofen, Kelter) der Hintersassen."
     core: true
   advocate:
     en: Advocacy
     fr: Avouerie (vouerie)
     de: Vogtei
+    desc:
+      en: "The advocate (voué, Vogt) protected the lands of a church or abbey and exercised their temporal justice, in return for dues. An example is the counts of Nassau as advocates of the abbey of Saint-Nabor at Saint-Avold."
+      fr: "Le voué (Vogt) protégeait les terres d'une église ou d'une abbaye et y exerçait la justice temporelle, contre redevances. Par exemple, les comtes de Nassau étaient voués de l'abbaye de Saint-Nabor à Saint-Avold."
+      de: "Der Vogt schützte die Güter einer Kirche oder Abtei und übte dort die weltliche Gerichtsbarkeit aus, gegen Abgaben. So waren die Grafen von Nassau Vögte der Abtei St. Nabor in St. Avold."
     core: true
   spiritual_lord:
     en: Diocesan authority
     fr: Autorité diocésaine
     de: Diözesangewalt
+    desc:
+      en: "The bishop in whose diocese a place lay (Metz, Trier or Strasbourg). This is church jurisdiction over clergy, parishes and matters such as marriage, not temporal lordship."
+      fr: "L'évêque dans le diocèse duquel se trouvait un lieu (Metz, Trèves ou Strasbourg). Il s'agit de la juridiction ecclésiastique sur le clergé, les paroisses et des matières comme le mariage, non d'une seigneurie temporelle."
+      de: "Der Bischof, in dessen Diözese ein Ort lag (Metz, Trier oder Straßburg). Gemeint ist die kirchliche Gerichtsbarkeit über Geistliche, Pfarreien und Fragen wie die Ehe, nicht eine weltliche Herrschaft."
     core: true
   tithe:
     en: Tithe
     fr: Dîme
     de: Zehnt
+    desc:
+      en: "The tenth of the harvest owed to the church. It was often held by abbeys, chapters or lay lords rather than by the parish priest."
+      fr: "Le dixième de la récolte dû à l'Église. Il était souvent détenu par des abbayes, des chapitres ou des seigneurs laïcs plutôt que par le curé."
+      de: "Der zehnte Teil der Ernte, der der Kirche zustand. Er lag oft bei Abteien, Stiften oder weltlichen Herren statt beim Pfarrer."
   safeguard:
     en: Safeguard (protection)
     fr: Sauvegarde
     de: Schirmherrschaft
+    desc:
+      en: "Protection (sauvegarde, Schirm) granted by a prince over a place or an institution, usually for a yearly due. It could become a foothold for later claims to sovereignty."
+      fr: "La protection accordée par un prince à un lieu ou à une institution, en général contre une redevance annuelle. Elle pouvait servir d'appui à des prétentions ultérieures à la souveraineté."
+      de: "Der Schutz (Schirm), den ein Fürst einem Ort oder einer Einrichtung gewährte, meist gegen eine jährliche Abgabe. Er konnte zum Ansatzpunkt späterer Ansprüche auf die Landeshoheit werden."
   tax_aide:
     en: General aid (tax)
     fr: Aide générale
     de: Landsteuer (Beihilfe)
+    desc:
+      en: "Taxes levied on the inhabitants: the general aid (aide générale) voted by the Estates of Lorraine, and imperial taxes such as the Landfried or the Turkish aid. Who levied them shows whose subjects the inhabitants were counted as."
+      fr: "Les impôts levés sur les habitants : l'aide générale votée par les États de Lorraine, et les impôts d'Empire comme le Landfried ou l'aide contre les Turcs. Qui les levait montre de qui les habitants étaient comptés sujets."
+      de: "Die von den Einwohnern erhobenen Steuern: die von den lothringischen Ständen bewilligte allgemeine Beihilfe und Reichssteuern wie Landfriedensgeld oder Türkenhilfe. Wer sie erhob, zeigt, wessen Untertanen die Einwohner galten."
   military:
     en: Military levy (musters)
     fr: Monstres (levée militaire)
     de: Musterung (Wehrhoheit)
+    desc:
+      en: "The right to muster the inhabitants for military service (monstres), to raise troops there and to garrison or arm the place."
+      fr: "Le droit de passer en revue les habitants pour le service militaire (monstres), d'y lever des troupes et de mettre le lieu en défense ou d'y tenir garnison."
+      de: "Das Recht, die Einwohner zum Kriegsdienst zu mustern, dort Truppen auszuheben und den Ort zu befestigen oder zu besetzen."
   tabellionage:
     en: Notarial office
     fr: Tabellionage
     de: Tabellionat (Notariat)
+    desc:
+      en: "The right to appoint the tabellions, the public notaries who drew up and registered contracts, sales and other deeds."
+      fr: "Le droit de nommer les tabellions, notaires publics qui rédigeaient et enregistraient contrats, ventes et autres actes."
+      de: "Das Recht, die Tabellionen zu ernennen, die öffentlichen Notare, die Verträge, Verkäufe und andere Urkunden aufsetzten und verzeichneten."
   appeal_jurisdiction:
     en: Court of appeal
     fr: Juridiction d'appel
     de: Appellationsinstanz
+    desc:
+      en: "The court to which judgments could be appealed. Examples are the Change of Nancy, the bailiwick's Assises and, for imperial lands, the Imperial Chamber Court."
+      fr: "La cour à laquelle on pouvait appeler des jugements, par exemple le Change de Nancy, les Assises du bailliage ou, pour les terres d'Empire, la Chambre impériale."
+      de: "Das Gericht, an das man gegen Urteile appellieren konnte, etwa der Change in Nancy, die Assisen des Bellistums oder für Reichsgebiete das Reichskammergericht."
 
 statuses:
   held:        {en: held, fr: détenu, de: innegehabt}

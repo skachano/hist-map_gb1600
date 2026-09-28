@@ -126,6 +126,7 @@ def build() -> dict[str, int]:
         "counts": {"places": len(places), "entities": len(entities), "rights": len(rights), "events": len(events),
                    "territoryVersions": _count_features(OUT_DIR / "territories.geojson")},
         "vocab": {name: {k: {lang: v[lang] for lang in ("en", "fr", "de")} | ({"core": True} if v.get("core") else {})
+                         | ({"desc": {lang: v["desc"][lang] for lang in ("en", "fr", "de")}} if v.get("desc") else {})
                          for k, v in terms.items()}
                   for name, terms in ds.vocab.items()},
     }

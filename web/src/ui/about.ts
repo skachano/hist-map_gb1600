@@ -73,10 +73,13 @@ export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang): void 
     h("article", { class: "about" },
       h("h2", {}, t("view_about", lang)),
       ...TEXT[lang].flatMap((s) => [h("h3", {}, s.title), ...s.paragraphs.map((p) => h("p", {}, p))]),
-      h("h3", {}, t("allRights", lang)),
-      h("ul", {}, ...Object.keys(rights).map((k) => h("li", {},
-        `${label(rights[k], lang, k)} — ${(["en", "fr", "de"] as const).filter((l) => l !== lang)
-          .map((l) => label(rights[k], l, k)).join(" · ")}`))),
+      h("h3", { id: "rights-explained" }, t("rightsExplained", lang)),
+      h("dl", { class: "rights-explained" }, ...Object.keys(rights).flatMap((k) => [
+        h("dt", { id: `right-${k}` }, label(rights[k], lang, k),
+          h("span", { class: "muted" }, ` · ${(["en", "fr", "de"] as const).filter((l) => l !== lang)
+            .map((l) => label(rights[k], l, k)).join(" · ")}`)),
+        h("dd", {}, rights[k].desc?.[lang] ?? ""),
+      ])),
       h("p", { class: "muted" },
         `${c.places} ${t("places", lang)} · ${c.entities} ${t("view_entity", lang).toLowerCase()} · ${c.rights} `
         + `${t("allRights", lang).toLowerCase()} · ${c.events} ${t("view_changes", lang).toLowerCase()} · `

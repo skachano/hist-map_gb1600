@@ -52,6 +52,19 @@ header h1 { font-size: 16px; margin: 0; flex: 1 1 auto; }
 .tabs { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
 .tabs select { border: 1px solid var(--border); border-radius: 6px; background: var(--surface); padding: 4px 6px; }
 .langs { display: flex; gap: 2px; }
+.rightbar { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.right-info summary {
+  list-style: none; cursor: pointer; width: 26px; height: 26px; display: grid; place-items: center;
+  border: 1px solid var(--border); border-radius: 50%; color: var(--link); font-size: 15px;
+}
+.right-info summary::-webkit-details-marker { display: none; }
+.right-info[open] summary { background: var(--link); color: var(--surface); border-color: var(--link); }
+.right-info .popover {
+  position: absolute; z-index: 6; top: 100%; left: 16px; right: 16px; max-width: 520px; margin-top: 4px;
+  padding: 10px 12px; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); line-height: 1.45;
+}
+.right-info .popover p { margin: 4px 0 8px; }
 
 /* map stage */
 #stage { position: relative; min-height: 0; }
@@ -139,6 +152,9 @@ ol.changes { list-style: none; padding: 0; margin: 0; }
 .about { max-width: 720px; line-height: 1.55; }
 .about h2 { font-size: 20px; }
 .about h3 { font-size: 15px; margin: 18px 0 4px; }
+.rights-explained dt { font-weight: 600; margin-top: 10px; scroll-margin-top: 8px; }
+.rights-explained dt .muted { font-weight: 400; }
+.rights-explained dd { margin: 2px 0 0; }
 ol.changes h3 { font-size: 15px; margin: 14px 0 4px; scroll-margin-top: 8px; }
 ol.changes ul { margin: 0; padding-left: 18px; }
 ol.changes li li { margin-bottom: 6px; }

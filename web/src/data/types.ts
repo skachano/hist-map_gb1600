@@ -3,7 +3,7 @@
 
 export type Lang = "en" | "fr" | "de";
 export type Names = Partial<Record<Lang, string>>;
-export type Labels = Record<Lang, string> & { core?: boolean };
+export type Labels = Record<Lang, string> & { core?: boolean; desc?: Record<Lang, string> };
 export type Vocab = Record<string, Labels>;
 
 export interface Meta {

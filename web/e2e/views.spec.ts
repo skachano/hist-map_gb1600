@@ -92,3 +92,16 @@ test("territories: realms of a year, walk down and up the hierarchy, levels and 
   await expect.poll(count).toBeGreaterThan(level1);
   expect(errors).toEqual([]);
 });
+
+test("ⓘ explains the selected right and links to About & sources", async ({ page }) => {
+  await open(page, "#/map?year=1620&right=high_justice&lang=en");
+  const info = page.locator(".right-info");
+  await info.getByLabel("What this right means").click();
+  await expect(info.locator(".popover")).toContainText("gallows");
+  await page.getByRole("button", { name: "Manorial lordship" }).click(); // stays open, follows the right
+  await expect(info.locator(".popover")).toContainText("corvées");
+  await info.getByRole("button", { name: /All rights explained/ }).click();
+  await expect(page).toHaveURL(/#\/about/);
+  await expect(page.locator("#right-manorial_lord")).toBeInViewport();
+  await expect(page.locator(".rights-explained dt")).toHaveCount(12);
+});

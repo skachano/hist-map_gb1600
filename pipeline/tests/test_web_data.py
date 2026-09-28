@@ -55,7 +55,10 @@ def test_known_facts_survive(built):
     saargau = {(r["holder"], r.get("share")) for r in rights if r["place"] == "saargau" and r["right"] == "suzerain"}
     assert saargau == {("duchy-lorraine", "1/2"), ("electorate-trier", "1/2")}
     meta = built["load"]("meta.json")
-    assert meta["vocab"]["right_types"]["high_justice"] == {
-        "en": "High justice", "fr": "Haute justice", "de": "Hochgerichtsbarkeit", "core": True}
+    high = dict(meta["vocab"]["right_types"]["high_justice"])
+    desc = high.pop("desc")
+    assert high == {"en": "High justice", "fr": "Haute justice", "de": "Hochgerichtsbarkeit", "core": True}
+    assert set(desc) == {"en", "fr", "de"} and "gallows" in desc["en"]
+    assert all(set(v.get("desc", {})) == {"en", "fr", "de"} for v in meta["vocab"]["right_types"].values())
     lorraine = next(e for e in built["load"]("entities.json") if e["id"] == "duchy-lorraine")
     assert lorraine["rank"] == 1 and any(r["name"] == "Henri II" for r in lorraine["rulers"])

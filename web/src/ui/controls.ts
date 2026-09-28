@@ -9,6 +9,8 @@ const PLAY_MS = 900;
 const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "Deutsch" };
 /** Views that show one right type at a time. */
 const RIGHT_VIEWS = new Set<State["view"]>(["map", "entity"]);
+/** The ⓘ pop-up stays open across re-renders (changing the right or the year). */
+let infoOpen = false;
 
 export function renderHeader(root: HTMLElement, data: Dataset, store: Store): void {
   const { lang, right, view } = store.state;
@@ -16,12 +18,22 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
   const core = Object.keys(rights).filter((k) => rights[k].core);
   const other = Object.keys(rights).filter((k) => !rights[k].core);
   const tab = (key: string) =>
-    h("button", { class: "tab", "aria-pressed": String(key === right), onclick: () => store.set({ right: key }) },
-      label(rights[key], lang, key));
+    h("button", { class: "tab", "aria-pressed": String(key === right), title: rights[key].desc?.[lang],
+      onclick: () => store.set({ right: key }) }, label(rights[key], lang, key));
   const select = h("select", { "aria-label": t("otherRights", lang),
     onchange: (e: Event) => store.set({ right: (e.target as HTMLSelectElement).value }) },
     h("option", { value: "", disabled: true, selected: !other.includes(right) }, t("otherRights", lang)),
-    ...other.map((k) => h("option", { value: k, selected: k === right }, label(rights[k], lang, k))));
+    ...other.map((k) => h("option", { value: k, selected: k === right, title: rights[k].desc?.[lang] },
+      label(rights[k], lang, k))));
+  const desc = rights[right]?.desc?.[lang];
+  const info = desc ? h("details", { class: "right-info", open: infoOpen,
+    ontoggle: (e: Event) => { infoOpen = (e.target as HTMLDetailsElement).open; } },
+    h("summary", { "aria-label": t("aboutRight", lang), title: t("aboutRight", lang) }, "ⓘ"),
+    h("div", { class: "popover" },
+      h("strong", {}, label(rights[right], lang, right)),
+      h("p", {}, desc),
+      h("button", { class: "link", onclick: () => { infoOpen = false; showRightExplained(store, right); } },
+        `${t("allRightsExplained", lang)} →`))) : null;
   fill(root,
     // The map is a canvas: keyboard and screen-reader users get the same facts as a table.
     view !== "matrix" ? h("button", { class: "skip", onclick: () => store.set({ view: "matrix" }) },
@@ -35,8 +47,15 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
         ...LANGS.map((l: Lang) => h("button", { "aria-pressed": String(l === lang), lang: l,
           "aria-label": LANG_NAMES[l], title: LANG_NAMES[l], onclick: () => store.set({ lang: l }) },
         l.toUpperCase())))),
-    RIGHT_VIEWS.has(view) ? h("nav", { class: "tabs", "aria-label": t("right", lang) }, ...core.map(tab), select) : null,
+    RIGHT_VIEWS.has(view) ? h("div", { class: "rightbar" },
+      h("nav", { class: "tabs", "aria-label": t("right", lang) }, ...core.map(tab), select), info) : null,
   );
+}
+
+/** Open About & sources at the explanation of one right. */
+export function showRightExplained(store: Store, key: string): void {
+  store.set({ view: "about" });
+  requestAnimationFrame(() => document.getElementById(`right-${key}`)?.scrollIntoView({ block: "start" }));
 }
 
 export class YearBar {
