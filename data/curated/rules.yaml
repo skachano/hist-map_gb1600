@@ -18,6 +18,8 @@ entity_aliases:
   lords-varsberg: house-varsberg
   lords-kerpen: house-kerpen
   house-dalem: lords-dalem
+  counts-hohensaxen: house-hohensaxen    # "le comte" (p. 15) and "le baron" (pp. 79-80) de Hohensaxen, holders of Berus
+  house-hattstein: gutta-de-hattstein    # "la dame de Hattstein" (p. 15) is the widow Gutta de Hattstein (p. 79)
   lords-hunolstein: house-hunolstein
   lords-reipoltzkirchen: house-reipoltzkirchen
   lords-helmstatt: house-helmstatt
@@ -68,11 +70,17 @@ place_aliases:
   "territory: Marimont-lès-Albestroff": lordship-marimont   # the village of that name stays a village
   "L1-C06-S09: Rehlingen": rehlingen-sur-sarre   # a Siersberg fief (p. 82), not Dehlingen in Alsace
   office de Sarrebourg: provostship-sarrebourg
+  "L1-C06-S06: Helling": hoelling   # the Helling of the sergenterie de Rimling (pp. 69-70) is Hœlling near Bettviller
+  "L1-C08-S07: Steinbach": steinbach-audviller   # Kingertal's Steinbach (p. 116) is the val de Guéblange's (p. 78)
+  "L1-C06-S08: Rode": rode-morhange              # "Rode" of the old castellany of Marimont (p. 74) = Rode-lès-Morhange (p. 20)
   grande prévôté: provostship-rurale-de-sierck   # "grande prévôté ou prévôté rurale" of the office of Sierck (p. 49)
   "territory: Sarrebourg": provostship-sarrebourg   # the "Sarrebourg" of the bailiwick's units (pp. 9, 22) is the prévôté of p. 19
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
-entities: {}
+entities:
+  house-hohensaxen: {name_en: House of Hohensax, name_fr: Maison de Hohensaxen, name_de: Haus Hohensax}
+  gutta-de-hattstein: {name_en: "Gutta of Hattstein, widow", name_fr: "Gutta de Hattstein, veuve",
+                       name_de: "Gutta von Hattstein, Witwe", entity_type: person}
 
 # Extracted rights to discard; every given field must match (place, right_type, holder, status, ...)
 drop_rights:
@@ -120,6 +128,8 @@ geocode:
   # Namesakes the databases matched to the wrong place.
   chatillon: {wikidata: Q633203, lat: 48.55861, lon: 6.96611, name_de: Val-et-Châtillon, name_en: Val-et-Châtillon,
               note: "Val-et-Châtillon, seat of the lordship with Cirey, Foulcrey, Hattigny and Ibigny (pp. 78, 116); was matched to Châtillon in Belgium"}
+  oberdorf: {wikidata: Q22417, lat: 49.27417, lon: 6.59472, name_de: Oberdorff, name_en: Oberdorff,
+             note: "Oberdorff near Tromborn, office of Berus (p. 15); only a doubtful spelling match, so it added no land"}
   domnon: {wikidata: Q21647, lat: 48.86056, lon: 6.8225, name_de: Domnom-lès-Dieuze, name_en: Domnom-lès-Dieuze,
            note: "Domnon-lès-Dieuze, office of Dieuze (pp. 20, 74-75, 83); was matched to Donnenheim in Alsace"}
   courcelles: {wikidata: Q21703, lat: 49.10917, lon: 6.405, name_de: Courcelles-Chaussy, name_en: Courcelles-Chaussy,
@@ -147,3 +157,34 @@ geocode:
          note: "Zell, now Zellen, part of Petit-Tenquin (index), mairie of Hilsprich (pp. 18, 69); was matched to a Zell in Alsace"}
   rohrbach-la-petite: {approximate: nelling, name_de: Rohrbach-la-Petite, name_en: Rohrbach-la-Petite,
                        note: "Helt-Rohrbach = Rohrbach-la-Petite (index), now part of Nelling, lordship of Marimont (p. 20); was matched to Rohrbach-lès-Bitche"}
+  # Doubtful spelling matches checked against the index and the realm: right place, so they add land.
+  evendorf: {lat: 49.41381, lon: 6.41851, name_de: Evendorff, name_en: Evendorff, note: "Evendorff (index: canton of Sierck); confirmed spelling match"}
+  kirberg: {lat: 48.82258, lon: 7.06541, name_de: Kirrberg, name_en: Kirrberg, note: "Kirrberg (index: canton of Drulingen), county of Sarrewerden; confirmed spelling match"}
+  kleind-hal: {lat: 49.1253, lon: 6.63029, name_de: Kleindal, name_en: Kleindal, note: "Kleindal, office of Boulay; confirmed spelling match"}
+  l-renzen: {lat: 48.95258, lon: 7.17469, name_de: Lorentzen, name_en: Lorentzen, note: "Lorentzen, county of Sarrewerden; confirmed spelling match"}
+  veschheim: {lat: 48.79599, lon: 7.22617, name_de: Vescheim, name_en: Vescheim, note: "Vescheim (index: canton of La Petite-Pierre); confirmed spelling match"}
+  hunweiler: {approximate: gronig, note: "Hunweiler-lès-Gronig (index: Gronig), office of Schaumberg; was matched to Hußweiler"}
+  dordhal: {approximate: lidrezing, note: "Dordal-lès-Lidrezing (p. 146); was matched to Dourd'hal near Saint-Avold"}
+  benting: {approximate: bouzonville, name_de: Benting, name_en: Benting,
+            note: "Benting-lès-Bouzonville (index: canton of Bouzonville), claimed as a franc-alleu by the Kerpen (p. 146); was matched to Bouzonville itself"}
+  # Namesakes that had taken the other one's place (two places, one Wikidata item).
+  rurange-metzervisse: {wikidata: Q22204, lat: 49.2772, lon: 6.2331, name_de: Rurange-lès-Thionville, name_en: Rurange-lès-Thionville,
+                        note: "Rurange (index: canton of Metzervisse, p. 51); was matched to Rurange near Mégange"}
+  bistroff-drulingen: {wikidata: Q2904617, lat: 48.9053, lon: 7.0661, name_de: Bischtroff-sur-Sarre, name_en: Bischtroff-sur-Sarre,
+                       note: "Bistroff (Pistroff) of the county of Sarrewerden (p. 19; index: canton of Drulingen); was matched to Bistroff near Grostenquin"}
+  bettviller-drulingen: {wikidata: Q21245, lat: 48.8864, lon: 7.1792, name_de: Bettwiller, name_en: Bettwiller,
+                         note: "Bettviller-lès-Drulingen, counties of Sarrewerden and La Petite-Pierre (pp. 97, 106); was matched to Bettviller near Rohrbach"}
+  diane-cappel: {wikidata: Q22921, lat: 48.7289, lon: 6.9339, name_de: Diane-Capelle, name_en: Diane-Capelle,
+                 note: "Diane-Capelle, lordship of Fénétrange (p. 19; index: canton of Sarrebourg); was matched to Cappel"}
+  lohr-munster: {wikidata: Q21961, lat: 48.8892, lon: 6.8694, name_de: Lhor, name_en: Lhor,
+                 note: "Lohr, lordship of Fénétrange (pp. 19, 110; index: canton of Munster), today Lhor; was matched to Lohr in Alsace"}
+  budange: {wikidata: Q22152, lat: 49.2961, lon: 6.3456, name_de: Budange (Hombourg-Budange), name_en: Budange (Hombourg-Budange),
+            note: "Budange, office of Sierck (p. 13; index: Hombourg-sur-Canner), today part of Hombourg-Budange; was matched to Buding"}
+  betting-zimming: {approximate: zimming, name_de: Betting, name_en: Betting,
+                    note: "Betting-lès-Zimming, office of Boulay (p. 16; index: Zimming); was matched to Betting near Saint-Avold"}
+  bening-harprich: {approximate: harprich, name_de: Béning, name_en: Béning,
+                    note: "Béning near Harprich (p. 145; index: Harprich); was matched to Béning-lès-Saint-Avold"}
+  steinbach-vergaville: {approximate: vergaville, name_de: Steinbach, name_en: Steinbach,
+                         note: "Steinbach, the tile works near Vergaville (p. 74; index: Vergaville); was matched to Steinbach in the val de Guéblange"}
+  rode-insviller: {approximate: insviller, name_de: Rode, name_en: Rode,
+                   note: "Rode-lès-Insviller, county of Sarrewerden (p. 19; index: Insviller); was matched to Rode near Morhange"}

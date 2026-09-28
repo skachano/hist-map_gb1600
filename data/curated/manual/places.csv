@@ -14,6 +14,8 @@ sarrewerden,settlement,Sarrewerden,Saarwerden,Sarrewerden,,town,,,,,FR,19;108,,C
 bouquenom,settlement,Bouquenom,Bockenheim,Bouquenom,Bockenheim|Bocqnom,town,,,,,FR,19;108,,Today part of Sarre-Union.
 salival,settlement,Salival,Salival,Salival,Salivai,abbey,,,,,FR,78-79,high,"Premonstratensian abbey in the castellany of Vic, since absorbed into Moyenvic; the OCR reads Salivai"
 voelklingen,settlement,Vœlklingen,Völklingen,Völklingen,Vcelklingen|Voelklingen,village,,,,,DE,100;102,high,the OCR reads Vcelklingen
-hoelling,settlement,Hœlling,Hoelling,Hoelling,Hcelling|Hoelling,village,,,,,FR,144,high,hamlet of Bettviller; the OCR reads Hcelling
+hoelling,settlement,Hœlling,Hoelling,Hoelling,Hcelling|Hoelling,village,,,,,FR,18;69-70;144,high,"hamlet of Bettviller, the Helling of the sergenterie de Rimling (pp. 69-70); the OCR reads Hcelling"
 provostship-sarrebourg,territory,Prévôté de Sarrebourg,,,office de Sarrebourg,provostship,,,,,FR,19;22,high,"a prévôté in ch. I (p. 19), one of the bailiwick's offices and lordships in the table of p. 22"
 provostship-marche-de-chateau-salins,territory,Marche d'Empire de Château-Salins,Reichsmark Château-Salins,Imperial March of Château-Salins,Marche de Château-Salins|marche de Château-Salins|marche d'Empire de Château-Salins,march,,,,,FR,119-120,high,"formed by the dukes in the 15th century as marquis of the Empire; its prévôt received burghers between the Meuse and the Rhine (pp. 119-120)"
+office-sergenterie-de-bining,territory,Sergenterie de Bining,Büttelei Bining,Sergeantry of Bining,sergenterie de Bining,sergeantry,,,,,FR,69,high,"a sergeant's district of the county of Bitche, like its mairies (p. 69)"
+office-sergenterie-ou-buttelei-de-rimling,territory,Sergenterie de Rimling,Büttelei Rimling,Sergeantry of Rimling,sergenterie ou Büttelei de Rimling|Rimling,sergeantry,,,,,FR,69,high,"the sergenterie ou Büttelei of the county of Bitche (p. 69)"

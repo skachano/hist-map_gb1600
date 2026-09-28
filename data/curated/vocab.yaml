@@ -20,6 +20,7 @@ place_types:
   castellany:    {en: castellany, fr: châtellenie, de: Kellerei, applies_to: territory}
   receivership:  {en: receivership, fr: recette, de: Rezeptur, applies_to: territory}
   mayoralty:     {en: mayoralty, fr: mairie, de: Meierei, applies_to: territory}
+  sergeantry:    {en: sergeantry, fr: sergenterie, de: Büttelei, applies_to: territory}
   court:         {en: court district, fr: cour, de: Hof (Hofgericht), applies_to: territory}
   lordship:      {en: lordship, fr: seigneurie, de: Herrschaft, applies_to: any}
   county:        {en: county, fr: comté, de: Grafschaft, applies_to: territory}

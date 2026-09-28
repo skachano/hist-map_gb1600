@@ -107,9 +107,9 @@ bellange,48.90167,6.5775,Q21574,,Bellange,Bellange,Bellange,wikidata,high,
 belle-fontaine,49.20389,6.2975,,,Belle-Fontaine-lès-Vigy,,,approximate,low,not in Wikidata/GeoNames; placed at Vigy (index location)
 bellmacher,49.45889,6.37472,,,Bellmacher,,,approximate,low,not in Wikidata/GeoNames; placed at Apach (index location)
 benestroff,48.90444,6.75944,Q21631,,Bénestroff,Bénestroff,Bénestroff,wikidata,high,
-bening-harprich,49.13194,6.83917,Q22150,,Béning,Béning-lès-Saint-Avold,Béning-lès-Saint-Avold,wikidata,high,
+bening-harprich,48.96167,6.65556,,,Béning,Béning,Béning,approximate,low,Béning near Harprich (p. 145; index: Harprich); was matched to Béning-lès-Saint-Avold
 bening-saint-avold,49.13194,6.83917,Q22150,,Béning,Béning-lès-Saint-Avold,Béning-lès-Saint-Avold,wikidata,high,
-benting,49.29194,6.53444,Q22933,,Benting-lès-Bouzonville,Bouzonville,Bouzonville,wikidata,high,
+benting,49.29194,6.53444,,,Benting-lès-Bouzonville,Benting,Benting,approximate,low,"Benting-lès-Bouzonville (index: canton of Bouzonville), claimed as a franc-alleu by the Kerpen (p. 146); was matched to Bouzonville itself"
 berange,49.19833,6.57222,,,Bérange,,,approximate,low,not in Wikidata/GeoNames; placed at Coume (index location)
 berfang,,,,,Berfang,,,unlocated,low,no candidate (and no canton for a fuzzy search)
 berg-drulingen,48.89722,7.15611,Q216117,,Berg,Berg,Berg,wikidata,high,
@@ -130,12 +130,12 @@ bettelainville,49.23722,6.30056,Q22447,,Bettelainville,Bettelainville,Bettelainv
 betthorn,48.80083,7.02139,Q832293,,Bettborn,Bettborn,Bettborn,wikidata,high,
 betting-saint-avold,49.12778,6.81694,Q22457,,Betting-lès-Saint-Avold,Betting,Betting,wikidata,high,
 betting-waldwisse,49.41626,6.50713,,11915582,Betting,,,geonames,high,geonames exact
-betting-zimming,49.12778,6.81694,Q22457,,Betting-lès-Zimming,Betting,Betting,wikidata,high,
+betting-zimming,49.12528,6.58778,,,Betting-lès-Zimming,Betting,Betting,approximate,low,"Betting-lès-Zimming, office of Boulay (p. 16; index: Zimming); was matched to Betting near Saint-Avold"
 bettingen,49.44097,6.85759,,2949699,Bettingen,,,geonames,high,geonames exact
 bettling,,,,,Bettling-lès-Biihl,,,unlocated,low,no candidate (and no canton for a fuzzy search)
 bettring,49.01766,6.97138,,11897388,Bettring,,,geonames,high,geonames exact
 bettstadt,49.39117,6.8157,,2949672,Bettstadt,,,geonames,medium,geonames exact
-bettviller-drulingen,49.07944,7.28528,Q21910,,Bettviller-lès-Drulingen,Bettviller,Bettviller,wikidata,high,
+bettviller-drulingen,48.8864,7.1792,Q21245,,Bettviller-lès-Drulingen,Bettwiller,Bettwiller,override,high,"Bettviller-lès-Drulingen, counties of Sarrewerden and La Petite-Pierre (pp. 97, 106); was matched to Bettviller near Rohrbach"
 bettviller-rohrbach,49.07944,7.28528,Q21910,,Bettviller,Bettviller,Bettviller,wikidata,high,
 beuren,49.55687,6.44743,,2949565,Beuren,,,geonames,high,geonames exact
 beyren,49.44167,6.28528,Q17621989,,Beyren,Beyren,Beyren,wikidata,medium,
@@ -161,7 +161,7 @@ bisping,48.80546,6.89369,Q2398007,,Bisping,Bisping,Bisping,wikidata,high,
 bissert,48.94194,7.02361,Q21215,,Bissert,Bissert,Bissert,wikidata,high,
 bisten-en-lorraine,49.16194,6.59806,Q21752,,Bisten-en-Lorraine,Bisten-en-Lorraine,Bisten-en-Lorraine,wikidata,high,
 bisten-saar,49.2539,6.70583,Q866710,,Bisten-Saar,Bisten,Bisten,wikidata,high,
-bistroff-drulingen,48.99194,6.71417,Q21706,,Bistroff,Bistroff,Bistroff,wikidata,low,37 km from the index's canton
+bistroff-drulingen,48.9053,7.0661,Q2904617,,Bistroff,Bischtroff-sur-Sarre,Bischtroff-sur-Sarre,override,high,Bistroff (Pistroff) of the county of Sarrewerden (p. 19; index: canton of Drulingen); was matched to Bistroff near Grostenquin
 bistroff-grotesquin,48.99194,6.71417,Q21706,,Bistroff,Bistroff,Bistroff,wikidata,high,no canton anchor
 bitche,49.05167,7.42528,Q22754,,Bitche,Bitsch,Bitche,wikidata,low,27 km from the index's canton
 bizing,49.37833,6.50686,,13442761,Bizing,,,geonames,high,geonames exact
@@ -205,7 +205,7 @@ bru,48.75222,6.68111,,,Bru-lès-Donnelay,,,approximate,low,not in Wikidata/GeoNa
 brulange,48.97028,6.54972,Q22445,,Brulange,Brulange,Brulange,wikidata,high,
 bubach-calmesweiler,49.41,6.94222,Q93361258,,Bubach,Bubach-Calmesweiler,Bubach-Calmesweiler,wikidata,high,
 buchingen,49.2422,6.42139,Q16304464,,Buchingen,Bockange,Bockange,wikidata,high,
-budange,49.33333,6.32111,Q21750,,Budange,Büdingen,Buding,wikidata,low,ambiguous without canton; also Q2927500
+budange,49.2961,6.3456,Q22152,,Budange,Budange (Hombourg-Budange),Budange (Hombourg-Budange),override,high,"Budange, office of Sierck (p. 13; index: Hombourg-sur-Canner), today part of Hombourg-Budange; was matched to Buding"
 buding,49.33333,6.32111,Q21750,,Buding,Büdingen,Buding,wikidata,high,
 budingen,49.45,6.55,Q16534724,,Biidingen,Büdingen,Büdingen,wikidata,high,
 budling,49.34667,6.35583,Q21738,,Budling,Bidlingen,Budling,wikidata,high,
@@ -265,7 +265,7 @@ county-hanau-lichtenberg,48.90957,7.54011,,,Comté de Hanau-Lichtenberg,Grafscha
 county-la-petite-pierre,48.92603,7.35991,,,Comté de County-la-petite-pierre,Grafschaft County-la-petite-pierre,County of County-la-petite-pierre,territory,medium,centre of 2 member settlement(s)
 county-lichtenberg,48.93241,7.66732,,,Comté de Lichtenberg,Grafschaft Lichtenberg,County of Lichtenberg,territory,medium,centre of 3 member settlement(s)
 county-nassau-sarrebruck,,,,,Comté de Nassau-Sarrebruck,Grafschaft Nassau-Sarrebruck,County of Nassau-Sarrebruck,territory,medium,no seat or located members
-county-petite-pierre,48.87653,7.26113,,,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,territory,medium,centre of 27 member settlement(s)
+county-petite-pierre,48.86938,7.2572,,,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,territory,medium,centre of 27 member settlement(s)
 county-rechicourt-le-chateau,48.70189,6.86679,,,Comté de Réchicourt-le-Château,Grafschaft Réchicourt-le-Château,County of Réchicourt-le-Château,territory,medium,centre of 11 member settlement(s)
 county-salm,,,,,Comté de Salm,Grafschaft Salm,County of Salm,territory,medium,no seat or located members
 county-sarrebruck,49.23333,7.0,,,Comté de Sarrebruck,Grafschaft Saarbrücken,County of Saarbrücken,territory,medium,seat: sarrehruck
@@ -290,7 +290,7 @@ denting,49.19417,6.53417,Q21948,,Denting,Denting,Denting,wikidata,high,
 deserted-village-roderbann,,,,,Village disparu de Roderbann,Wüstung Roderbann,Deserted village of Roderbann,territory,medium,no seat or located members
 desseling,48.78472,6.84417,Q22117,,Desseling,Desseling,Desseling,wikidata,low,103 km from the index's canton
 destry,48.94389,6.585,Q21877,,Destry,Destry,Destry,wikidata,high,
-diane-cappel,49.07222,6.85,Q22124,,Diane-Cappel,Cappel,Cappel,wikidata,low,40 km from the index's canton
+diane-cappel,48.7289,6.9339,Q22921,,Diane-Cappel,Diane-Capelle,Diane-Capelle,override,high,"Diane-Capelle, lordship of Fénétrange (p. 19; index: canton of Sarrebourg); was matched to Cappel"
 diding,49.28167,6.49111,,,Diding-lès-Freistroff,,,approximate,low,not in Wikidata/GeoNames; placed at Freistroff (index location)
 diebling,49.10861,6.94028,Q21649,,Diebling,Diebling,Diebling,wikidata,high,
 diedendorf,48.87944,7.045,Q21239,,Diedendorf,Diedendorf,Diedendorf,wikidata,high,
@@ -315,7 +315,7 @@ domfessel,48.95111,7.15361,Q21235,,Domfessel,Domfessel,Domfessel,wikidata,high,
 domnon,48.86056,6.8225,Q21647,,Domnon,Domnom-lès-Dieuze,Domnom-lès-Dieuze,override,high,"Domnon-lès-Dieuze, office of Dieuze (pp. 20, 74-75, 83); was matched to Donnenheim in Alsace"
 donnelay,48.75222,6.68111,Q21572,,Donnelay,Donnelay,Donnelay,wikidata,high,no canton anchor
 donsitters,49.2,7.6,,,Donsitters,,,approximate,low,not in Wikidata/GeoNames; placed at Pirmasens (index location)
-dordhal,49.09845,6.66419,,3020922,Dordal-lès-Lidrezing,,,geonames,low,geonames spelling match Dourd'hal (0.93)
+dordhal,48.88361,6.69778,,,Dordal-lès-Lidrezing,,,approximate,low,Dordal-lès-Lidrezing (p. 146); was matched to Dourd'hal near Saint-Avold
 dorst,49.156,7.4517,Q3037260,,Dorst,,,wikidata,high,
 dorvillers,49.07572,6.56147,,3021011,Dorsviller-lès-Flétrange,,,geonames,medium,geonames spelling match Dorviller (0.95)
 dourd-hal,49.1,6.66667,Q3038147,,Dourd'hal,Dourd’hal,Dourd'hal,wikidata,high,
@@ -364,7 +364,7 @@ eschviller,49.1328,7.3815,Q3057900,,Eschviller,Eschviller,Eschviller,wikidata,hi
 eschwiller,48.85944,7.115,Q21518,,Eschviller,Eschwiller,Eschwiller,wikidata,high,
 etting,49.03056,7.17917,Q22343,,Etting,Etting,Etting,wikidata,high,
 etzling,49.17833,6.96222,Q22097,,Etzling,Etzlingen,Etzling,wikidata,high,
-evendorf,49.41381,6.41851,,3019294,Evendorf,,,geonames,low,geonames spelling match Evendorff (0.94)
+evendorf,49.41381,6.41851,,,Evendorf,Evendorff,Evendorff,override,high,Evendorff (index: canton of Sierck); confirmed spelling match
 eyviller,48.86778,7.19111,,,Eyviller,,,approximate,low,not in Wikidata/GeoNames; placed at Drulingen (index location)
 falck,49.22417,6.63778,Q22346,,Falck,Falck,Falck,wikidata,high,
 falkenstein-baerenthal,49.00486,7.56542,Q671459,,Falkenstein-lès-Baerenthal,Burg Falkenstein,Château du Falkenstein,wikidata,high,
@@ -525,7 +525,7 @@ hellendorf,49.4824,6.45756,,2906855,Hellendorf,,,geonames,high,geonames exact
 hellering-fenetrange,48.81014,7.06318,,3013560,Hellering,,,geonames,high,geonames exact
 hellering-hombourg-haut,49.12215,6.78031,Q3129860,,Hellering,Hellering,Hellering,wikidata,high,
 hellimer,48.9975,6.83,Q22456,,Hellimer,Hellimer,Hellimer,wikidata,high,
-helling,49.07313,7.29752,,11897391,Helling,Hellingen,Helling,geonames,low,geonames spelling match Hoelling (0.93); chosen near its territory's other members
+helling,49.33472,6.35142,Q15073118,,Helling,Hellingen,Helling,wikidata,high,
 helstroff,49.15278,6.47472,Q21636,,Helstroff,Helstroff,Helstroff,wikidata,high,
 hemering,49.02528,6.65889,Q22398,,Hémering,Guessling-Hémering,Guessling-Hémering,wikidata,high,
 hemilly,49.06182,6.50176,,3013542,Hemilly,,,geonames,high,geonames exact
@@ -578,7 +578,7 @@ hottviller,49.07778,7.36333,Q22911,,Hottviller,Hottviller,Hottviller,wikidata,hi
 hultehouse,48.71944,7.26083,Q22080,,Hultehouse,Hultehouse,Hultehouse,wikidata,high,
 hundling,49.10694,6.98139,Q22199,,Hundling,Hundling,Hundling,wikidata,high,
 hunting,49.41444,6.32694,Q22183,,Hunting,Hunting,Hunting,wikidata,high,
-hunweiler,49.7,7.23333,,2897157,Hunweiler-lès-Gronig,,,geonames,low,geonames spelling match Hußweiler (0.94)
+hunweiler,49.5167,7.08333,,,Hunweiler-lès-Gronig,,,approximate,low,"Hunweiler-lès-Gronig (index: Gronig), office of Schaumberg; was matched to Hußweiler"
 huttersdorf,49.41887,6.84333,Q15115432,,Hiittersdorf,Hüttersdorf,Hüttersdorf,wikidata,high,
 hutting,49.0239,7.1269,Q3143526,,Hutting,,,wikidata,high,no canton anchor
 ibigny,48.64333,6.9,Q22076,,Ibigny,Ibigny,Ibigny,wikidata,low,116 km from the index's canton
@@ -619,7 +619,7 @@ kerprich-hemmersdorf,49.355,6.605,Q1604852,,Kerprich-Hemmersdorf,Hemmersdorf,Hem
 keskastel,48.97139,7.04389,Q21285,,Keskastel,Keskastel,Keskastel,wikidata,high,
 ketternostern,49.5253,7.26222,Q1437410,,Oberkirchen,Oberkirchen,Oberkirchen,wikidata,high,
 keuchingen,49.4974,6.5823,Q16648275,,Keuchingen,Keuchingen,Keuchingen,wikidata,medium,
-kirberg,48.82258,7.06541,,3011452,Kirberg,,,geonames,low,geonames spelling match Kirrberg (0.93)
+kirberg,48.82258,7.06541,,,Kirberg,Kirrberg,Kirrberg,override,high,"Kirrberg (index: canton of Drulingen), county of Sarrewerden; confirmed spelling match"
 kirf,49.55111,6.47917,Q569621,,Kirf,Kirf,Kirf,wikidata,high,
 kirsch-luttange,49.44349,6.40014,,3011450,Kirsch,,,geonames,high,geonames exact
 kirsch-sierck,49.44306,6.4,Q21669,,Kirsch-lès-Sierck,Kirsch-lès-Sierck,Kirsch-lès-Sierck,wikidata,high,
@@ -628,7 +628,7 @@ kirviller,48.95278,6.98361,Q22184,,Kirviller,Kirweiler,Kirviller,wikidata,high,
 kitzing,49.45114,6.4104,,3011447,Kitzing,,,geonames,high,geonames exact
 klang,49.31861,6.37083,Q22106,,Klang,Klang,Klang,wikidata,high,
 kleinblittersdorf,49.15833,7.03806,Q39781,,Kleinblittersdorf,Kleinblittersdorf,Kleinblittersdorf,wikidata,high,
-kleind-hal,49.1253,6.63029,,11959098,Kleintal,,,geonames,low,geonames spelling match Kleindal (0.94)
+kleind-hal,49.1253,6.63029,,,Kleintal,Kleindal,Kleindal,override,high,"Kleindal, office of Boulay; confirmed spelling match"
 knorscheid,49.399,6.86843,Q1647784,,Knorscheid,Knorscheid,Knorscheid,wikidata,high,
 koenigsberg,49.4425,6.36028,,,Kœnigsberg,,,approximate,low,not in Wikidata/GeoNames; placed at Sierck (index location)
 koenigsmacker,49.39333,6.27694,Q22147,,Kœnigsmacker,Kœnigsmacker,Kœnigsmacker,wikidata,high,
@@ -642,7 +642,7 @@ kriigelborn,49.5253,7.26222,,,Krugelborn,,,approximate,low,not in Wikidata/GeoNa
 kuntzig,49.34639,6.24056,Q21869,,Kuntzig,Kuntzig,Kuntzig,wikidata,high,
 kutzhof,49.347,6.9841,Q104227344,,Kutzhof-lès-Wiesbach,Kutzhof,Kutzhof,wikidata,high,
 l-hopital,49.15806,6.73222,Q22945,,L'Hôpital,L’Hôpital,L'Hôpital,wikidata,high,
-l-renzen,48.95258,7.17469,,2997595,Lorenzen,,,geonames,low,geonames spelling match Lorentzen (0.94)
+l-renzen,48.95258,7.17469,,,Lorenzen,Lorentzen,Lorentzen,override,high,"Lorentzen, county of Sarrewerden; confirmed spelling match"
 la-fresne,,,,,La Fresne,,,unlocated,low,no candidate (and no canton for a fuzzy search)
 labach,49.65147,6.95608,Q134470625,,Labach,Labach,,wikidata,medium,no canton anchor
 labruck,49.27513,6.401,,,Labruck,,,approximate,low,not in Wikidata/GeoNames; placed at Ebersviller (index location)
@@ -690,14 +690,14 @@ lixheim,48.77528,7.14194,Q22282,,Lixheim,Lixheim,Lixheim,wikidata,high,
 lixing-rouhling,49.15361,6.99444,Q22277,,Lixing,Lixing-lès-Rouhling,Lixing-lès-Rouhling,wikidata,high,
 lixing-saint-avold,49.03694,6.7525,Q22270,,Lixing-lès-Saint-Avold,Lixing-lès-Saint-Avold,Lixing-lès-Saint-Avold,wikidata,high,
 lohr-la-petite-pierre,48.8575,7.24361,Q21463,,Lohr-lès-La Petite-Pierre,Lohr,Lohr,wikidata,high,
-lohr-munster,48.8575,7.24361,Q21463,,Lohr,Lohr,Lohr,wikidata,low,25 km from the index's canton
+lohr-munster,48.8892,6.8694,Q21961,,Lohr,Lhor,Lhor,override,high,"Lohr, lordship of Fénétrange (pp. 19, 110; index: canton of Munster), today Lhor; was matched to Lohr in Alsace"
 longeville,,,,,Longeville,,,unlocated,low,no candidate (and no canton for a fuzzy search)
 lordship-asswiller,,,,,Seigneurie d'Asswiller,Herrschaft Asswiller,Lordship of Asswiller,territory,medium,no seat or located members
 lordship-berg,49.53593,6.38636,,,Seigneurie de Berg,Herrschaft Schloss Berg (Saarland),Lordship of Schloss Berg,territory,medium,seat: berg-nennig
 lordship-bertrange,49.30105,6.24775,,,Seigneurie de Bertrange,Herrschaft Bertrange,Lordship of Bertrange,territory,medium,centre of 3 member settlement(s)
 lordship-bionville,49.10501,6.47932,,,Seigneurie de Bionville,Herrschaft Bionville,Lordship of Bionville,territory,medium,seat: bionville
-lordship-bracs,48.85522,7.01133,,,Seigneurie des Bracs,Herrschaft Bracs,Lordship of Bracs,territory,medium,centre of 5 member settlement(s)
-lordship-busbach,49.27454,6.60292,,,Seigneurie de Busbach,Herrschaft Busbach,Lordship of Busbach,territory,medium,centre of 4 member settlement(s)
+lordship-bracs,48.78656,7.02811,,,Seigneurie des Bracs,Herrschaft Bracs,Lordship of Bracs,territory,medium,centre of 5 member settlement(s)
+lordship-busbach,49.33993,6.3664,,,Seigneurie de Busbach,Herrschaft Busbach,Lordship of Busbach,territory,medium,centre of 4 member settlement(s)
 lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,,,,,Seigneurie de Château et seigneurie de Lemberg-lès-Pirmasens,Herrschaft Château et seigneurie de Lemberg-lès-Pirmasens,Lordship of Château et seigneurie de Lemberg-lès-Pirmasens,territory,medium,no seat or located members
 lordship-chatillon,48.55861,6.96611,,,Seigneurie de Châtillon,Herrschaft Val-et-Châtillon,Lordship of Val-et-Châtillon,territory,medium,seat: chatillon
 lordship-chevalin,49.09333,6.50472,,,Seigneurie de Chevalin,Herrschaft Chevalin,Lordship of Chevalin,territory,medium,seat: chevalin
@@ -793,7 +793,7 @@ mayoralty-puttelange,49.0525,6.93083,,,Mairie de Puttelange,Meierei Puttelange-a
 mayoralty-rahling,48.99194,7.21472,,,Mairie de Rahling,Meierei Rahling,Mayoralty of Rahling,territory,medium,seat: rahling
 mayoralty-remering,49.03556,6.93944,,,Mairie de Rémering,Meierei Rémering-lès-Puttelange,Mayoralty of Rémering-lès-Puttelange,territory,medium,seat: remering-puttelange
 mayoralty-riche,48.89083,6.62778,,,Mairie de Riche,Meierei Riche,Mayoralty of Riche,territory,medium,seat: riche
-mayoralty-rurange,49.22823,6.43382,,,Mairie de Rurange,Meierei Rurange,Mayoralty of Rurange,territory,medium,seat: rurange-metzervisse
+mayoralty-rurange,49.2772,6.2331,,,Mairie de Rurange,Meierei Rurange-lès-Thionville,Mayoralty of Rurange-lès-Thionville,territory,medium,seat: rurange-metzervisse
 mayoralty-schorbach,49.07917,7.40583,,,Mairie de Schorbach,Meierei Schorbach,Mayoralty of Schorbach,territory,medium,seat: schorbach
 mayoralty-siersberg,49.3686,6.67861,,,Haute-mairie de Siersberg,Haute-mairie de Siersberg,Haute-mairie de Siersberg,territory,medium,seat: siersberg
 mayoralty-superieure-du-saargau-a-hilbringen,49.44081,6.59895,,,Mairie supérieure du Saargau à Hilbringen,Mairie supérieure du Saargau à Hilbringen,Mairie supérieure du Saargau à Hilbringen,territory,medium,centre of 7 member settlement(s)
@@ -888,7 +888,7 @@ nonnweiler,49.60646,6.96935,Q550261,,Nonnweiler,Nonnweiler,Nonnweiler,wikidata,h
 nousseviller-les-bitche,49.10306,7.37417,Q22317,,Nousseviller-lès-Bitche,Nussweiler,Nousseviller-lès-Bitche,wikidata,high,no canton anchor
 nousseviller-saint-nabor,49.11917,6.97056,Q22361,,Nousseviller,Nousseviller-Saint-Nabor,Nousseviller-Saint-Nabor,wikidata,high,
 nunkirchen,49.48583,6.83972,Q338776,,Nunkirchen,Nunkirchen,Nunkirchen,wikidata,high,
-oberdorf,49.27379,6.59254,,2989810,Oberdorf,,,geonames,low,geonames spelling match Oberdorff (0.94)
+oberdorf,49.27417,6.59472,Q22417,,Oberdorf,Oberdorff,Oberdorff,override,high,"Oberdorff near Tromborn, office of Berus (p. 15); only a doubtful spelling match, so it added no land"
 oberesch,49.3997,6.56667,Q1713213,,Oberesch,Oberesch,Oberesch,wikidata,high,
 obergailbach,49.11806,7.21778,Q22304,,Obergailbach,Obergailbach,Obergailbach,wikidata,high,
 oberleuken,49.5061,6.46917,Q2010243,,Oberleuken,Oberleuken,Oberleuken,wikidata,high,
@@ -899,7 +899,7 @@ oberstinzel,48.79417,7.03417,Q22305,,Oberstinzel,Oberstinzel,Oberstinzel,wikidat
 obervisse,49.15167,6.58528,Q21958,,Obervisse,Obervisse,Obervisse,wikidata,high,
 obreck,48.84611,6.59167,Q21711,,Obreck,Obreck,Obreck,wikidata,high,
 obrick,48.9515,6.7594,Q22079403,,Obrick-lès-Virming,,Obrick,wikidata,high,
-odenhofen,49.27379,6.59254,,,Odenhofen,,,approximate,low,"Odenhofen, a hamlet of Oberdorf near Bouzonville (index); was placed at Oberdorf in Alsace"
+odenhofen,49.27417,6.59472,,,Odenhofen,,,approximate,low,"Odenhofen, a hamlet of Oberdorf near Bouzonville (index); was placed at Oberdorf in Alsace"
 oermingen,48.99917,7.12861,Q21365,,Oermingen,Oermingen,Oermingen,wikidata,high,
 oeting,49.17361,6.91472,Q21657,,Oeting,Œting,Œting,wikidata,high,
 office-berus,49.2639,6.69417,,,Office de Berus,Amt Berus,Office of Berus,territory,medium,seat: berus
@@ -913,8 +913,8 @@ office-sarralbe,48.99611,7.02778,,,Office de Sarralbe,Amt Sarralbe,Office of Sar
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
 office-sarrewerden-et-herbitzheim,,,,,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,territory,medium,no seat or located members
 office-schaumberg,49.4833,7.03333,,,Office de Schaumberg,Amt Schaumberg,Office of Schaumberg,territory,medium,seat: schaumberg
-office-sergenterie-de-bining,49.03815,7.28132,,,Office de Sergenterie de Bining,Amt Sergenterie de Bining,Office of Sergenterie de Bining,territory,medium,centre of 11 member settlement(s)
-office-sergenterie-ou-buttelei-de-rimling,49.09639,7.3142,,,Office de Sergenterie ou Büttelei de Rimling,Amt Sergenterie ou Büttelei de Rimling,Office of Sergenterie ou Büttelei de Rimling,territory,medium,centre of 15 member settlement(s)
+office-sergenterie-de-bining,49.03815,7.28132,,,Sergenterie de Sergenterie de Bining,Büttelei Sergenterie de Bining,Sergeantry of Sergenterie de Bining,territory,medium,centre of 11 member settlement(s)
+office-sergenterie-ou-buttelei-de-rimling,49.09641,7.31418,,,Sergenterie de Sergenterie de Rimling,Büttelei Sergenterie de Rimling,Sergeantry of Sergenterie de Rimling,territory,medium,centre of 15 member settlement(s)
 office-sierck,49.4425,6.36028,,,Office de Sierck,Amt Sierck-les-Bains,Office of Sierck-les-Bains,territory,medium,seat: sierck
 office-siersberg,49.3686,6.67861,,,Office de Siersberg,Amt Siersburg,Office of Siersburg,territory,medium,seat: siersberg
 office-varsberg,49.1725,6.62861,,,Office de Varsberg,Amt Varsberg,Office of Varsberg,territory,medium,seat: varsberg
@@ -933,7 +933,7 @@ ottweiler-neumunster,49.40258,7.16916,,2864476,Neumunster,,,geonames,medium,geon
 oudrenne,49.38028,6.3275,Q22033,,Oudrenne,Oudrenne,Oudrenne,wikidata,high,
 pachten,49.356,6.71134,Q2045422,,Pachten,Pachten,Pachten,wikidata,high,
 penning,49.23194,6.56056,,,Penning,,,approximate,low,not in Wikidata/GeoNames; placed at Teterchen (index location)
-perl,49.4736,6.39417,Q1773403,,Oberperl,Oberperl,Oberperl,wikidata,high,no canton anchor
+perl,49.4736,6.39417,Q1773403,,Oberperl,Oberperl,Oberperl,wikidata,medium,chosen near its territory's other members
 petershach,48.87083,7.2675,Q21383,,Petersbach,Petersbach,Petersbach,wikidata,high,
 petit-arnsberg,49.03873,7.6905,,11878080,Petit-Arnsberg,,,geonames,medium,geonames spelling match Château du Petit Arnsberg (0.95)
 petit-breistroff,49.38028,6.3275,,,Petit-Breistroff,,,approximate,low,not in Wikidata/GeoNames; placed at Oudrenne (index location)
@@ -1031,8 +1031,7 @@ ripplingen,49.45851,6.59743,,2846492,Ripplingen,,,geonames,high,geonames exact
 rissenthal,49.4667,6.75444,Q2154832,,Rissenthal,Rissenthal,Rissenthal,wikidata,high,
 ritzing,49.43611,6.46111,Q22408,,Ritzing,Ritzing,Ritzing,wikidata,high,
 rodalbe,48.90833,6.70278,Q21771,,Rodalbe,Rodalbe,Rodalbe,wikidata,high,no canton anchor
-rode,48.91743,6.61465,Q22079408,,Rode,,Rode,wikidata,high,no canton anchor
-rode-insviller,48.91743,6.61465,Q22079408,,Rode-lès-Insviller,,Rode,wikidata,low,36 km from its territory's other members
+rode-insviller,48.88806,6.89639,,,Rode-lès-Insviller,Rode,Rode,approximate,low,"Rode-lès-Insviller, county of Sarrewerden (p. 19; index: Insviller); was matched to Rode near Morhange"
 rode-morhange,48.91743,6.61465,Q22079408,,Rode-lès-Morhange,,Rode,wikidata,high,
 roden,49.3167,6.75,Q2160979,,Roden,Roden,Roden,wikidata,high,
 rodlach,49.34103,6.46707,Q3438201,,Rodlach,Rodlac,Rodlach,wikidata,high,
@@ -1052,7 +1051,7 @@ rouviller,48.81139,7.10778,Q21499,,Rouviller,Rauwiller,Rauwiller,wikidata,high,n
 ruchling,49.19167,6.96833,,,Ruchling-lès-Spicheren,,,approximate,low,"Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling"
 rudling,49.45243,6.36914,,2982263,Rudling,,,geonames,high,geonames exact
 rurange-megange,49.22823,6.43382,Q15077704,,Rurange,Rurange,Rurange,wikidata,high,
-rurange-metzervisse,49.22823,6.43382,Q15077704,,Rurange,Rurange,Rurange,wikidata,high,
+rurange-metzervisse,49.2772,6.2331,Q22204,,Rurange,Rurange-lès-Thionville,Rurange-lès-Thionville,override,high,"Rurange (index: canton of Metzervisse, p. 51); was matched to Rurange near Mégange"
 rustroff,49.44333,6.37222,Q22164,,Rustroff,Rustroff,Rustroff,wikidata,high,
 saargau,49.45211,6.57566,,,Condominium de Saargau,Kondominium Saargau,Condominium of Saargau,territory,medium,centre of 17 member settlement(s)
 saarwellingen-14,49.35417,6.805,Q555648,,Saarwellingen,Saarwellingen,Saarwellingen,wikidata,high,
@@ -1123,10 +1122,9 @@ sotzweiler,49.4645,7.00061,Q1289410,,Sotzweiler,Sotzweiler,Sotzweiler,wikidata,h
 spicheren,49.19167,6.96833,Q22756,,Spicheren,Spicheren,Spicheren,wikidata,high,
 stanwenstein,49.15611,7.55139,,,Staustein,,,approximate,low,not in Wikidata/GeoNames; placed at Vinningen (index location)
 stat,49.4733,6.60861,,,Stat-lès-Besseringen,,,approximate,low,not in Wikidata/GeoNames; placed at Besseringen (index location)
-steinbach,48.9832,6.94521,Q16511449,,Steinbach,,Steinbach,wikidata,medium,chosen near its territory's other members
 steinbach-audviller,48.9832,6.94521,Q16511449,,Steinbach,,Steinbach,wikidata,high,
 steinbach-eppelborn,49.46099,6.9586,Q16294817,,Steinbach,Steinbach,Steinbach,wikidata,high,
-steinbach-vergaville,48.9832,6.94521,Q16511449,,Steinbach,,Steinbach,wikidata,high,
+steinbach-vergaville,48.83722,6.74389,,,Steinbach,Steinbach,Steinbach,approximate,low,"Steinbach, the tile works near Vergaville (p. 74; index: Vergaville); was matched to Steinbach in the val de Guéblange"
 steinhausen,49.18333,7.45,,2915004,Steinhausen,,,geonames,medium,geonames spelling match Großsteinhausen (0.97)
 stoncourt-les-villers,49.05631,6.41595,Q136533000,,Stoncourt,,,wikidata,high,
 struth,48.89389,7.25583,Q21485,,Struth,Struth,Struth,wikidata,high,
@@ -1182,7 +1180,7 @@ veckring,49.33917,6.37917,Q22071,,Véckring,Veckring,Veckring,wikidata,high,
 velling,49.19417,6.53417,,,Velling,,,approximate,low,not in Wikidata/GeoNames; placed at Denting (index location)
 velving,49.24056,6.53361,Q22363,,Velving,Velving,Velving,wikidata,high,
 vergaville,48.83722,6.74389,Q21968,,Vergaville,Vergaville,Vergaville,wikidata,high,
-veschheim,48.79599,7.22617,,2969581,Veschheim,,,geonames,low,geonames spelling match Vescheim (0.94)
+veschheim,48.79599,7.22617,,,Veschheim,Vescheim,Vescheim,override,high,Vescheim (index: canton of La Petite-Pierre); confirmed spelling match
 vibersviller,48.91444,6.94444,Q21821,,Vibersviller,Vibersviller,Vibersviller,wikidata,high,
 vic-sur-seille,48.78222,6.53139,Q22351,,Vie,Vic-sur-Seille,Vic-sur-Seille,wikidata,high,no canton anchor
 vieux-lixheim,48.77778,7.1325,Q22227,,Vieux-Lixheim,Vieux-Lixheim,Vieux-Lixheim,wikidata,high,
