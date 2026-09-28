@@ -7,7 +7,9 @@ const rights = new Set(["suzerain", "high_justice"]);
 describe("URL state", () => {
   it("round-trips through the hash", () => {
     const state = { view: "map" as const, year: 1624, right: "high_justice", lang: "fr" as const, place: "anzeling" };
-    expect(parseHash(toHash(state), years, rights)).toEqual({ ...state, entity: undefined });
+    expect(parseHash(toHash(state), years, rights)).toEqual({ ...state, entity: undefined, colours: undefined });
+    const entityView = { ...state, view: "entity" as const, entity: "duchy-lorraine", colours: ["a", "b"] };
+    expect(parseHash(toHash(entityView), years, rights)).toEqual(entityView);
   });
 
   it("falls back to safe defaults for bad input", () => {

@@ -135,3 +135,98 @@ export function rightsAtPlace(placeId: string, year: number, index: RightIndex):
   }
   return out;
 }
+
+// --- Stage 9: timelines, disputes and entity holdings -------------------------------
+
+export interface Segment {
+  holder: string;
+  from: number;
+  to: number;
+  status: Holding["status"];
+  share?: string;
+  inheritedFrom?: string;
+  disputed: boolean;
+}
+
+/** Year-by-year holders of one right at one place, merged into runs of identical years. */
+export function timeline(
+  placeId: string,
+  rightType: string,
+  years: [number, number],
+  index: RightIndex,
+  places: Map<string, Place>,
+  entities: Map<string, Entity>,
+): Segment[] {
+  const open = new Map<string, Segment>();
+  const done: Segment[] = [];
+  for (let year = years[0]; year <= years[1]; year++) {
+    const pr = placeRight(placeId, rightType, year, index, places, entities);
+    const seen = new Set<string>();
+    for (const h of pr.holdings) {
+      const key = [h.holder, h.status, h.share ?? "", pr.inheritedFrom ?? "", h.disputed].join("|");
+      seen.add(key);
+      const seg = open.get(key);
+      if (seg && seg.to === year - 1) seg.to = year;
+      else {
+        if (seg) done.push(seg);
+        open.set(key, { holder: h.holder, from: year, to: year, status: h.status, share: h.share,
+          inheritedFrom: pr.inheritedFrom, disputed: h.disputed });
+      }
+    }
+    for (const [key, seg] of open) {
+      if (!seen.has(key)) {
+        done.push(seg);
+        open.delete(key);
+      }
+    }
+  }
+  done.push(...open.values());
+  return done.sort((a, b) => a.from - b.from || a.holder.localeCompare(b.holder));
+}
+
+export interface Dispute {
+  place: string;
+  right: string;
+  /** everyone with a row: holders and claimants */
+  parties: { holder: string; status: Holding["status"]; row: Right }[];
+  /** entities named as opponents */
+  against: string[];
+}
+
+/** Places and rights with a claim, contest or dispute flag in `year` (own rows only). */
+export function disputesIn(year: number, index: RightIndex): Dispute[] {
+  const out: Dispute[] = [];
+  for (const [place, byType] of index) {
+    for (const [right, rows] of byType) {
+      const active = activeRows(rows, year);
+      if (!active.some((r) => r.disputed || r.status === "claimed" || r.status === "contested")) continue;
+      out.push({
+        place, right,
+        parties: active.map((row) => ({ holder: row.holder, status: row.status ?? "held", row })),
+        against: [...new Set(active.flatMap((r) => r.against ?? []))],
+      });
+    }
+  }
+  return out;
+}
+
+/** Rights an entity holds directly (own rows, any status) in `year`, by right type. */
+export function directHoldings(entityId: string, year: number, rights: Right[]): Map<string, Right[]> {
+  const byPlaceRight = new Map<string, Right[]>();
+  for (const r of rights) {
+    const key = `${r.place}\u0000${r.right}`;
+    const list = byPlaceRight.get(key);
+    if (list) list.push(r);
+    else byPlaceRight.set(key, [r]);
+  }
+  const out = new Map<string, Right[]>();
+  for (const rows of byPlaceRight.values()) {
+    for (const r of activeRows(rows, year)) {
+      if (r.holder !== entityId) continue;
+      const list = out.get(r.right);
+      if (list) list.push(r);
+      else out.set(r.right, [r]);
+    }
+  }
+  return out;
+}

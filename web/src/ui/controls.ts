@@ -1,13 +1,15 @@
-// Header (title, right-type tabs, language) and the year bar (step, play, slider).
+// Header (title, views, right-type tabs, language) and the year bar (step, play, slider).
 import type { Dataset, Lang } from "../data/types";
-import { label, LANGS, t } from "../i18n";
-import type { Store } from "../state/store";
+import { label, LANGS, type StringKey, t } from "../i18n";
+import { type State, type Store, VIEWS } from "../state/store";
 import { fill, h } from "./dom";
 
 const PLAY_MS = 900;
+/** Views that show one right type at a time. */
+const RIGHT_VIEWS = new Set<State["view"]>(["map", "entity"]);
 
 export function renderHeader(root: HTMLElement, data: Dataset, store: Store): void {
-  const { lang, right } = store.state;
+  const { lang, right, view } = store.state;
   const rights = data.meta.vocab.right_types;
   const core = Object.keys(rights).filter((k) => rights[k].core);
   const other = Object.keys(rights).filter((k) => !rights[k].core);
@@ -19,11 +21,15 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
     h("option", { value: "", disabled: true, selected: !other.includes(right) }, t("otherRights", lang)),
     ...other.map((k) => h("option", { value: k, selected: k === right }, label(rights[k], lang, k))));
   fill(root,
-    h("h1", {}, t("title", lang)),
-    h("nav", { class: "tabs", "aria-label": t("right", lang) }, ...core.map(tab), select),
-    h("div", { class: "langs", role: "group", "aria-label": t("language", lang) },
-      ...LANGS.map((l: Lang) => h("button", { "aria-pressed": String(l === lang), lang: l,
-        onclick: () => store.set({ lang: l }) }, l.toUpperCase()))),
+    h("div", { class: "topline" },
+      h("h1", {}, t("title", lang)),
+      h("nav", { class: "views", "aria-label": t("views", lang) },
+        ...VIEWS.map((v) => h("button", { "aria-pressed": String(v === view), onclick: () => store.set({ view: v }) },
+          t(`view_${v}` as StringKey, lang)))),
+      h("div", { class: "langs", role: "group", "aria-label": t("language", lang) },
+        ...LANGS.map((l: Lang) => h("button", { "aria-pressed": String(l === lang), lang: l,
+          onclick: () => store.set({ lang: l }) }, l.toUpperCase())))),
+    RIGHT_VIEWS.has(view) ? h("nav", { class: "tabs", "aria-label": t("right", lang) }, ...core.map(tab), select) : null,
   );
 }
 

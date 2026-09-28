@@ -1,19 +1,28 @@
-// The map: settlement cells and points coloured by who held the selected right in the
-// selected year, plus the bailiwick's outline for that year.
-import { Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, setWorkerUrl } from "maplibre-gl";
+// The map: settlement cells and points styled per place by the active view, overlays
+// for shared (hatched) and pledged (dashed) rights, and the bailiwick outline for the year.
+import {
+  type GeoJSONSource, Map as MapLibre, type MapGeoJSONFeature, type MapMouseEvent, setWorkerUrl,
+} from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 // MapLibre looks for its worker next to its own module, which bundling moves; hand it
 // Vite's bundled copy instead (same in dev and in the production build).
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-
-setWorkerUrl(workerUrl);
 import { MAP_CENTER, MAP_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { CONTESTED, holderColour, OTHER } from "../model/colors";
-import type { PlaceRight } from "../model/snapshot";
+import { CONTESTED } from "../model/colors";
 
-export interface Snapshot {
-  byPlace: Map<string, PlaceRight>;
+setWorkerUrl(workerUrl);
+
+/** How one place is drawn in the current view. */
+export interface PlaceStyle {
+  fill?: string;
+  /** the right comes from a territory the place belonged to: drawn lighter */
+  inherited?: boolean;
+  contested?: boolean;
+  /** several holders at once: hatched cell */
+  shared?: boolean;
+  /** held in pledge (engagement): dashed outline */
+  pledged?: boolean;
 }
 
 export interface MapCallbacks {
@@ -22,6 +31,7 @@ export interface MapCallbacks {
 }
 
 const BAILIWICK = "bailliage-allemagne";
+const EMPTY: GeoJSON.FeatureCollection = { type: "FeatureCollection", features: [] };
 
 function placePoints(data: Dataset): GeoJSON.FeatureCollection {
   const features: GeoJSON.Feature[] = [];
@@ -37,13 +47,26 @@ function placePoints(data: Dataset): GeoJSON.FeatureCollection {
   return { type: "FeatureCollection", features };
 }
 
+/** 45 degree hairline hatch, ink on transparent (the texture channel for shared rights). */
+function hatch(size = 8): { width: number; height: number; data: Uint8Array } {
+  const data = new Uint8Array(size * size * 4);
+  for (let y = 0; y < size; y++) {
+    for (let x = 0; x < size; x++) {
+      if ((x + y) % size === 0) data.set([11, 11, 11, 170], (y * size + x) * 4);
+    }
+  }
+  return { width: size, height: size, data };
+}
+
 export class MapView {
   readonly map: MapLibre;
   private ready: Promise<void>;
   private styled = new Set<string>();
   private lastSelected?: string;
+  private cellsById = new Map<string, GeoJSON.Feature>();
 
   constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
+    for (const f of data.cells.features) this.cellsById.set(String(f.properties?.id), f);
     this.map = new MapLibre({
       container,
       center: MAP_CENTER,
@@ -86,7 +109,10 @@ export class MapView {
 
   private addLayers(): void {
     const m = this.map;
+    m.addImage("hatch", hatch());
     m.addSource("cells", { type: "geojson", data: this.data.cells, promoteId: "id" });
+    m.addSource("shared-cells", { type: "geojson", data: EMPTY });
+    m.addSource("pledged-cells", { type: "geojson", data: EMPTY });
     m.addSource("territories", { type: "geojson", data: this.data.territories });
     m.addSource("places", { type: "geojson", data: placePoints(this.data), promoteId: "id" });
 
@@ -95,12 +121,14 @@ export class MapView {
       id: "cells-fill", type: "fill", source: "cells",
       paint: {
         "fill-color": ["coalesce", state("fill"), "rgba(0,0,0,0)"],
-        // inherited from a territory: lighter, the place has no rows of its own
         "fill-opacity": ["case", ["boolean", state("inherited"), false], 0.4, 0.75],
       },
     });
+    m.addLayer({ id: "cells-shared", type: "fill", source: "shared-cells", paint: { "fill-pattern": "hatch" } });
     m.addLayer({ id: "cells-line", type: "line", source: "cells",
       paint: { "line-color": "#fcfcfb", "line-width": 0.6 } });
+    m.addLayer({ id: "cells-pledged", type: "line", source: "pledged-cells",
+      paint: { "line-color": "#0b0b0b", "line-width": 1.2, "line-dasharray": [2, 2] } });
     m.addLayer({
       id: "cells-contested", type: "line", source: "cells",
       paint: { "line-color": CONTESTED, "line-width": 1.6,
@@ -133,7 +161,7 @@ export class MapView {
     if (!this.map.getBounds().contains([p.lon, p.lat])) this.map.easeTo({ center: [p.lon, p.lat], duration: 600 });
   }
 
-  async render(year: number, snapshot: Snapshot, coloured: string[], selected?: string): Promise<void> {
+  async render(year: number, styles: Map<string, PlaceStyle>, selected?: string): Promise<void> {
     await this.ready;
     const m = this.map;
     m.setFilter("bailiwick", ["all", ["==", ["get", "id"], BAILIWICK],
@@ -141,20 +169,26 @@ export class MapView {
     m.setFilter("selected", ["==", ["get", "id"], selected ?? ""]);
     if (selected && selected !== this.lastSelected) this.reveal(selected);
     this.lastSelected = selected;
-    const seen = new Set<string>();
-    for (const [id, pr] of snapshot.byPlace) {
-      const fill = holderColour(pr.primary, coloured) ?? (pr.contested ? OTHER : undefined);
-      const s = { fill: fill ?? null, inherited: !!pr.inheritedFrom, contested: pr.contested };
-      m.setFeatureState({ source: "cells", id }, s);
-      m.setFeatureState({ source: "places", id }, s);
-      seen.add(id);
+
+    const blank = { fill: null, inherited: false, contested: false };
+    const shared: GeoJSON.Feature[] = [];
+    const pledged: GeoJSON.Feature[] = [];
+    for (const [id, s] of styles) {
+      const st = { fill: s.fill ?? null, inherited: !!s.inherited, contested: !!s.contested };
+      m.setFeatureState({ source: "cells", id }, st);
+      m.setFeatureState({ source: "places", id }, st);
+      const cell = this.cellsById.get(id);
+      if (cell && s.shared) shared.push(cell);
+      if (cell && s.pledged) pledged.push(cell);
     }
-    for (const id of this.styled) {  // clear places that dropped out of the snapshot
-      if (!seen.has(id)) {
-        m.setFeatureState({ source: "cells", id }, { fill: null, inherited: false, contested: false });
-        m.setFeatureState({ source: "places", id }, { fill: null, inherited: false, contested: false });
+    for (const id of this.styled) {
+      if (!styles.has(id)) {
+        m.setFeatureState({ source: "cells", id }, blank);
+        m.setFeatureState({ source: "places", id }, blank);
       }
     }
-    this.styled = seen;
+    this.styled = new Set(styles.keys());
+    (m.getSource("shared-cells") as GeoJSONSource).setData({ type: "FeatureCollection", features: shared });
+    (m.getSource("pledged-cells") as GeoJSONSource).setData({ type: "FeatureCollection", features: pledged });
   }
 }

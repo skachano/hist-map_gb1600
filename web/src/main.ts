@@ -1,27 +1,58 @@
 import { loadDataset } from "./data/load";
 import type { Dataset } from "./data/types";
-import { name, t } from "./i18n";
-import { MapView, type Snapshot } from "./map/mapView";
-import { colouredHolders } from "./model/colors";
-import { indexRights, placeRight, type RightIndex } from "./model/snapshot";
+import { label, name, t } from "./i18n";
+import { MapView, type PlaceStyle } from "./map/mapView";
+import { colouredHolders, CONTESTED, holderColour, OTHER, SERIES } from "./model/colors";
+import { type Dispute, disputesIn, indexRights, placeRight, type PlaceRight, type RightIndex } from "./model/snapshot";
 import { parseHash, type State, Store, toHash } from "./state/store";
 import "./style.css";
 import { renderHeader, YearBar } from "./ui/controls";
 import { fill, h } from "./ui/dom";
 import { renderLegend } from "./ui/legend";
+import { renderChanges, renderMatrix } from "./ui/pages";
 import { renderPanel } from "./ui/panel";
+import { renderDisputesView, renderEntityView } from "./ui/sideViews";
 
 const $ = (id: string) => document.getElementById(id)!;
 
-/** Who holds the selected right at every settlement drawn on the map. */
-function snapshot(data: Dataset, index: RightIndex, state: State): Snapshot {
-  const byPlace = new Map();
-  for (const p of data.places.values()) {
-    if (p.kind === "settlement" && p.lat !== undefined) {
-      byPlace.set(p.id, placeRight(p.id, state.right, state.year, index, data.places, data.entities));
+interface ViewData {
+  byPlace: Map<string, PlaceRight>;
+  disputes: Dispute[];
+  styles: Map<string, PlaceStyle>;
+}
+
+/** Who holds the selected right at every settlement drawn on the map, and how to draw it. */
+function computeView(data: Dataset, index: RightIndex, state: State, coloured: string[]): ViewData {
+  const byPlace = new Map<string, PlaceRight>();
+  const styles = new Map<string, PlaceStyle>();
+  const disputes = state.view === "disputes" ? disputesIn(state.year, index) : [];
+  const located = [...data.places.values()].filter((p) => p.kind === "settlement" && p.lat !== undefined);
+  if (state.view === "disputes") {
+    const disputed = new Set(disputes.map((d) => d.place));
+    for (const p of located) if (disputed.has(p.id)) styles.set(p.id, { fill: CONTESTED, inherited: true, contested: true });
+    return { byPlace, disputes, styles };
+  }
+  for (const p of located) {
+    const pr = placeRight(p.id, state.right, state.year, index, data.places, data.entities);
+    byPlace.set(p.id, pr);
+    const pledged = pr.holdings.some((x) => x.status === "pledged" && x.holder === pr.primary);
+    if (state.view === "entity") {
+      const mine = pr.holdings.filter((x) => x.holder === state.entity);
+      if (mine.some((x) => x.status === "held" || x.status === "pledged")) {
+        styles.set(p.id, { fill: SERIES[0], inherited: !!pr.inheritedFrom, shared: pr.shared,
+          pledged: mine.some((x) => x.status === "pledged") });
+      } else if (mine.length) {
+        styles.set(p.id, { contested: true });
+      }
+    } else {
+      const fillColour = holderColour(pr.primary, coloured) ?? (pr.contested ? OTHER : undefined);
+      if (fillColour || pr.contested) {
+        styles.set(p.id, { fill: fillColour, inherited: !!pr.inheritedFrom, contested: pr.contested,
+          shared: pr.shared, pledged });
+      }
     }
   }
-  return { byPlace };
+  return { byPlace, disputes, styles };
 }
 
 async function start(): Promise<void> {
@@ -31,26 +62,38 @@ async function start(): Promise<void> {
   const years: [number, number] = [data.meta.yearMin, data.meta.yearMax];
   const rights = new Set(Object.keys(data.meta.vocab.right_types));
   const store = new Store(parseHash(location.hash, years, rights));
-  const coloured = colouredHolders(data.entities);
   $("status").remove();
 
+  const colours = (state: State) => colouredHolders(data.entities,
+    state.colours?.filter((id) => data.entities.has(id)));
   const tooltip = $("tooltip");
-  let current = snapshot(data, index, store.state);
+  let current = computeView(data, index, store.state, colours(store.state));
+
   const map = new MapView($("map"), data, {
     onHover(placeId, point) {
-      const pr = placeId ? current.byPlace.get(placeId) : undefined;
       tooltip.hidden = !placeId;
       if (!placeId) return;
       const { lang } = store.state;
-      const holders = pr?.holdings.map((x) => name(data.entities.get(x.holder)?.name, lang, x.holder)
-        + (x.share ? ` (${x.share === "joint" ? "∥" : x.share})` : "") + (x.status !== "held" ? ` · ${x.status}` : ""));
-      fill(tooltip,
-        h("strong", {}, name(data.places.get(placeId)?.name, lang, placeId)),
-        h("div", {}, holders?.length ? holders.join(" / ") : t("noData", lang)),
-        pr?.inheritedFrom ? h("div", { class: "muted" },
-          `${t("inherited", lang)} ${name(data.places.get(pr.inheritedFrom)?.name, lang, pr.inheritedFrom)}`) : null,
-        pr?.contested ? h("div", { class: "warn" }, `⚠ ${t("contested", lang)}`) : null,
-      );
+      const entityName = (id: string) => name(data.entities.get(id)?.name, lang, id);
+      const lines: (HTMLElement | null)[] = [];
+      if (store.state.view === "disputes") {
+        for (const d of current.disputes.filter((x) => x.place === placeId)) {
+          lines.push(h("div", { class: "warn" }, `⚠ ${label(data.meta.vocab.right_types[d.right], lang, d.right)}: `
+            + d.parties.map((p) => entityName(p.holder)).join(" / ")));
+        }
+      } else {
+        const pr = current.byPlace.get(placeId);
+        const holders = pr?.holdings.map((x) => entityName(x.holder)
+          + (x.share ? ` (${x.share === "joint" ? "∥" : x.share})` : "")
+          + (x.status !== "held" ? ` · ${label(data.meta.vocab.statuses[x.status], lang, x.status)}` : ""));
+        lines.push(h("div", {}, holders?.length ? holders.join(" / ") : t("noData", lang)));
+        if (pr?.inheritedFrom) {
+          lines.push(h("div", { class: "muted" },
+            `${t("inherited", lang)} ${name(data.places.get(pr.inheritedFrom)?.name, lang, pr.inheritedFrom)}`));
+        }
+        if (pr?.contested) lines.push(h("div", { class: "warn" }, `⚠ ${t("contested", lang)}`));
+      }
+      fill(tooltip, h("strong", {}, name(data.places.get(placeId)?.name, lang, placeId)), ...lines);
       tooltip.style.transform = `translate(${point.x + 14}px, ${point.y + 14}px)`;
     },
     onSelect(placeId) {
@@ -60,17 +103,31 @@ async function start(): Promise<void> {
   const yearBar = new YearBar($("yearbar"), data, store);
 
   const render = (state: State, previous?: State) => {
-    if (!previous || previous.year !== state.year || previous.right !== state.right) {
-      current = snapshot(data, index, state);
+    const coloured = colours(state);
+    if (!previous || previous.year !== state.year || previous.right !== state.right || previous.view !== state.view
+      || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()) {
+      current = computeView(data, index, state, coloured);
     }
     document.documentElement.lang = state.lang;
-    document.body.classList.toggle("panel-open", !!state.place);
     document.title = t("title", state.lang);
+    document.body.dataset.view = state.view;
+    document.body.classList.toggle("panel-open", !!state.place);
     renderHeader($("header"), data, store);
     yearBar.update();
-    renderLegend($("legend"), data, state, current, coloured);
-    renderPanel($("panel"), data, index, state, store);
-    void map.render(state.year, current, coloured, state.place);
+
+    const legend = $("legend");
+    const side = $("side");
+    const page = $("page");
+    legend.hidden = state.view !== "map";
+    side.hidden = state.view !== "entity" && state.view !== "disputes";
+    page.hidden = state.view !== "matrix" && state.view !== "changes";
+    if (state.view === "map") renderLegend(legend, data, state, store, current.byPlace, coloured);
+    if (state.view === "entity") renderEntityView(side, data, state, store);
+    if (state.view === "disputes") renderDisputesView(side, data, state, store, current.disputes);
+    if (state.view === "matrix") renderMatrix(page, data, index, state, store, coloured);
+    if (state.view === "changes") renderChanges(page, data, state, store);
+    renderPanel($("panel"), data, index, state, store, coloured);
+    if (page.hidden) void map.render(state.year, current.styles, state.place);
     history.replaceState(null, "", toHash(state)); // replace: playing through years must not flood history
   };
   store.subscribe(render);

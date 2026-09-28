@@ -11,7 +11,7 @@ page.on("pageerror", (e) => errors.push(e.message));
 page.on("console", (m) => m.type() === "error" && errors.push(m.text()));
 await page.goto(`${process.env.APP_URL ?? "http://localhost:5173"}/${hash}`);
 try {
-  await page.waitForSelector("#legend h2", { state: "attached", timeout: 30000 });
+  await page.waitForSelector("#header h1", { state: "attached", timeout: 30000 });
 } catch (e) {
   await page.screenshot({ path: out });
   console.log(JSON.stringify({ failed: String(e).split("\n")[0], body: (await page.textContent("body"))?.slice(0, 300), errors }));
@@ -23,5 +23,5 @@ for (const key of keys) {
   await page.waitForTimeout(400);
 }
 await page.screenshot({ path: out });
-console.log(JSON.stringify({ url: page.url(), legend: await page.textContent("#legend h2"), errors }));
+console.log(JSON.stringify({ url: page.url(), view: await page.evaluate(() => document.body.dataset.view), errors }));
 await browser.close();

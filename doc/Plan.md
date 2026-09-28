@@ -324,6 +324,27 @@ Implement the six screens from §3 in order:
 
 For each screen, add a colour-blind-safe holder palette, legends and hatching for disputes.
 - Done when: every screen works for all years and all three languages.
+- **Status: done.** Five views share the header (view tabs, language), the year bar and the place panel. The view is part of the URL (`#/map`, `#/disputes`, `#/entity?entity=…`, `#/matrix`, `#/changes`).
+  1. **Rights map:**
+     - Hatching marks shared rights; a dashed outline marks rights held in pledge; lighter means inherited from the territory; red outline plus ⚠ means contested.
+     - The legend is also the holder picker: ● gives an "other" holder the third colour, and the choice is in the URL (`c=`). Holder names open the holder view.
+  2. **Place panel:**
+     - A 1600–1632 timeline (small Gantt chart) per right held there, including main rights inherited from territories, with a cursor at the current year.
+     - The recorded changes of holder; clicking a year jumps there.
+  3. **Holders (entity) view:**
+     - The map highlights where the entity holds the selected right, with a red outline where it only claims it.
+     - The side list shows direct holdings per right type, the places held, a rulers timeline, and the gained/lost changes with pages.
+  4. **Disputes:** the map shows only contested places. The list gives each place and right with the parties, their status and opponents.
+  5. **Table:** places × main rights (or all rights) for the year, filterable by territory (members through sub-territories) and holder. Inherited cells are in italics. Exports CSV.
+  6. **Changes:** a bar chart of changes per year (click to scroll) and the chronological list. It filters by right and can include pre-1600 changes. Each change jumps to its year and place on the map.
+- **Phone layout:** nothing scrolls over the map. Any overlaying scroller left the WebGL map unpainted in headless Chromium, so the screen splits: map above, legend/list/panel below.
+- Tests: 18 vitest (timelines, disputes and holdings added) and 63 pytest pass; the build is clean. Every view checked by screenshot at 1280 px and 390 px, in EN/FR/DE, with no console errors.
+- Data issues these views surfaced (for review in `rules.yaml` / `manual/`):
+  - pledged rows without a start year (Henriette's half of Anzeling runs from 1600)
+  - Nassau's high justice in Sarrewerden villages continuing after 1629
+  - memberships in regions that aren't jurisdictions (Westrich, Upper Rhine Circle)
+  - change descriptions come from the extraction in French, whatever the interface language
+
 
 ### Stage 10: QA & polish
 - Tasks:

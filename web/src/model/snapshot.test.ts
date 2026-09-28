@@ -98,3 +98,37 @@ describe("ancestors", () => {
     expect(ancestors("village", 1630, places)).toEqual(["prevote", "late-office", "office"]);
   });
 });
+
+import { directHoldings, disputesIn, timeline } from "./snapshot";
+
+describe("timeline", () => {
+  it("merges years into runs and records the handover", () => {
+    const index = indexRights([r({ to: 1624 }), r({ holder: "henriette", status: "pledged", from: 1624 })]);
+    const segs = timeline("village", "high_justice", [1600, 1632], index, places, entities);
+    expect(segs.map((s) => [s.holder, s.from, s.to, s.status])).toEqual([
+      ["duchy-lorraine", 1600, 1623, "held"], ["henriette", 1624, 1632, "pledged"]]);
+  });
+
+  it("marks inherited runs", () => {
+    const index = indexRights([{ place: "late-office", right: "suzerain", holder: "abbey" }]);
+    const segs = timeline("village", "suzerain", [1627, 1632], index, places, entities);
+    expect(segs).toEqual([expect.objectContaining({ holder: "abbey", from: 1629, to: 1632, inheritedFrom: "late-office" })]);
+  });
+});
+
+describe("disputesIn / directHoldings", () => {
+  const rows = [
+    r({ right: "middle_low_justice", holder: "abbey" }),
+    r({ right: "middle_low_justice", status: "claimed", disputed: true, against: ["abbey"], from: 1616, to: 1620 }),
+  ];
+  it("lists disputes only in their years", () => {
+    const index = indexRights(rows);
+    expect(disputesIn(1618, index)).toEqual([expect.objectContaining({ place: "village", right: "middle_low_justice",
+      against: ["abbey"] })]);
+    expect(disputesIn(1625, index)).toEqual([]);
+  });
+  it("collects an entity's own rows by right type", () => {
+    expect([...directHoldings("duchy-lorraine", 1618, rows).keys()]).toEqual(["middle_low_justice"]);
+    expect(directHoldings("duchy-lorraine", 1625, rows).size).toBe(0);
+  });
+});
