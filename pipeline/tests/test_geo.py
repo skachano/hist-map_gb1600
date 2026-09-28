@@ -46,8 +46,15 @@ def test_territory_names_from_type_and_seat():
     assert names == ("Office de Sarreguemines", "Amt Saargemünd", "Office of Sarreguemines")
     unseated = geocode.territory_names({"place_type": "office", "name_fr": "Insming"}, vocab, None)
     assert unseated == ("Office d'Insming", "Amt Insming", "Office of Insming")
-    typed = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}
-    assert geocode.territory_names(typed, vocab, None) == ("Prévôté rurale de Sierck",) * 3
+    vocab["place_types"]["provostship"] = {"en": "provostship", "fr": "prévôté", "de": "Schultheißerei"}
+    typed = {"place_type": "provostship", "name_fr": "Prévôté d'Amance"}
+    assert geocode.territory_names(typed, vocab, None) == ("Prévôté d'Amance", "Schultheißerei Amance",
+                                                            "Provostship of Amance")
+    rural = {"place_type": "provostship", "name_fr": "Prévôté rurale de Sierck"}
+    assert geocode.territory_names(rural, vocab, None) == ("Prévôté rurale de Sierck", "Landschultheißerei Sierck",
+                                                           "Rural provostship of Sierck")
+    other = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}  # its own type word is not 'office'
+    assert geocode.territory_names(other, vocab, None) == ("Prévôté rurale de Sierck",) * 3
 
 
 def fake_geonames(*entries):

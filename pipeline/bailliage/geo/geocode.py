@@ -156,18 +156,30 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
     """Names in French, German and English. A name without a type word ('Forbach') gets the
     type in every language: ('Seigneurie de Forbach', 'Herrschaft Forbach', 'Lordship of
     Forbach'), using the seat's German and English names when it is located. A name that
-    already says what it is ('Prévôté rurale de Sierck') is kept as it is in every language:
-    translating only its type word gives nonsense."""
+    starts with its own type word ('Prévôté d'Amance', 'Prévôté rurale de Sierck') keeps its
+    French and is translated the same way. Any other name that already says what it is is
+    kept as it is in every language: translating only its type word gives nonsense."""
     fr = place["name_fr"]
     labels = vocab["place_types"].get(place["place_type"], {})
-    if not labels or base_name(fr) != fold(fr):  # no vocabulary, or the name already has a type word
+    if not labels:
         return fr, fr, fr
-    fr_type = labels["fr"][:1].upper() + labels["fr"][1:]
     de_type = labels["de"].split(" (")[0].split(" / ")[0]
+    en_type = labels["en"]
+    rest = fr
+    if base_name(fr) != fold(fr):  # the name has a type word
+        typed = re.match(rf"{re.escape(labels['fr'])}( rurale)? (?:de la |de |d'|du |des )(.+)$", fr, re.I)
+        if not typed:
+            return fr, fr, fr
+        if typed.group(1):
+            de_type, en_type = "Land" + de_type.lower(), "rural " + en_type
+        rest = typed.group(2)
+    seat_de = (seat.name_de if seat else None) or rest
+    seat_en = (seat.name_en if seat else None) or rest
+    if rest is not fr:
+        return fr, f"{de_type} {seat_de}", f"{en_type.capitalize()} of {seat_en}"
+    fr_type = labels["fr"][:1].upper() + labels["fr"][1:]
     link = "d'" if fold(fr)[:1] in "aeiouy" else "de "
-    seat_de = (seat.name_de if seat else None) or fr
-    seat_en = (seat.name_en if seat else None) or fr
-    return f"{fr_type} {link}{fr}", f"{de_type} {seat_de}", f"{labels['en'].capitalize()} of {seat_en}"
+    return f"{fr_type} {link}{fr}", f"{de_type} {seat_de}", f"{en_type.capitalize()} of {seat_en}"
 
 
 CONTEXT_KM = 35  # a member this far from its territory's other members is suspect
