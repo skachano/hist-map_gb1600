@@ -5,13 +5,14 @@ COMPOSE  := docker compose
 PIPELINE := $(COMPOSE) run --rm pipeline
 WEB      := $(COMPOSE) run --rm web
 
-.PHONY: help build install dev test test-py test-web extract validate schema curate geocode geometry build-data extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
+.PHONY: help build install dev test test-py test-web extract validate schema curate geocode geometry build-data e2e extract-llm-plan extract-llm-submit extract-llm-collect extract-llm-realtime pipeline-shell web-shell clean
 
 help:
 	@echo "make build          Build the Docker images"
 	@echo "make install        Install web dependencies (inside the web container)"
 	@echo "make dev            Run the Vite dev server on http://localhost:5173"
 	@echo "make test           Run pytest and vitest in containers"
+	@echo "make e2e            End-to-end + accessibility tests (Playwright) against the dev server"
 	@echo "make extract        Stage 1: PDF -> data/raw/ (pages, sections, index CSVs)"
 	@echo "make validate       Stage 2: check data/curated/ (FKs, vocab, periods, overlaps)"
 	@echo "make schema         Stage 2: export JSON Schema per table to data/schema/"
@@ -93,3 +94,7 @@ geometry:
 
 build-data:
 	$(PIPELINE) python -m bailliage build-data
+
+e2e: web/node_modules web/public/data/meta.json
+	$(COMPOSE) up -d web
+	$(COMPOSE) run --rm e2e npx playwright test

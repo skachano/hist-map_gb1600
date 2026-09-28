@@ -5,6 +5,8 @@ import { type State, type Store, VIEWS } from "../state/store";
 import { fill, h } from "./dom";
 
 const PLAY_MS = 900;
+/** Each language's name in itself, for the switch's accessible labels. */
+const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "Deutsch" };
 /** Views that show one right type at a time. */
 const RIGHT_VIEWS = new Set<State["view"]>(["map", "entity"]);
 
@@ -21,6 +23,9 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
     h("option", { value: "", disabled: true, selected: !other.includes(right) }, t("otherRights", lang)),
     ...other.map((k) => h("option", { value: k, selected: k === right }, label(rights[k], lang, k))));
   fill(root,
+    // The map is a canvas: keyboard and screen-reader users get the same facts as a table.
+    view !== "matrix" ? h("button", { class: "skip", onclick: () => store.set({ view: "matrix" }) },
+      t("skipToTable", lang)) : null,
     h("div", { class: "topline" },
       h("h1", {}, t("title", lang)),
       h("nav", { class: "views", "aria-label": t("views", lang) },
@@ -28,7 +33,8 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
           t(`view_${v}` as StringKey, lang)))),
       h("div", { class: "langs", role: "group", "aria-label": t("language", lang) },
         ...LANGS.map((l: Lang) => h("button", { "aria-pressed": String(l === lang), lang: l,
-          onclick: () => store.set({ lang: l }) }, l.toUpperCase())))),
+          "aria-label": LANG_NAMES[l], title: LANG_NAMES[l], onclick: () => store.set({ lang: l }) },
+        l.toUpperCase())))),
     RIGHT_VIEWS.has(view) ? h("nav", { class: "tabs", "aria-label": t("right", lang) }, ...core.map(tab), select) : null,
   );
 }

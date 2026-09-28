@@ -350,6 +350,33 @@ For each screen, add a colour-blind-safe holder palette, legends and hatching fo
 - Tasks:
   - Playwright e2e tests in a container: slider, language switch, place panel, disputed place.
   - Accessibility pass, performance check, and an "About & sources" page with citation and copyright notes.
+- **Status: done.** `make e2e` starts the dev server and runs the Playwright suite (`web/e2e/`) in the `e2e` container: **33 tests pass**.
+  - `core`:
+    - the year slider, ←/→ keys, and play/pause
+    - the right-type tabs
+    - the language switch, including names (Vaudrevange ↔ Wallerfangen)
+    - the place panel (names, pages, timeline, changes, close)
+    - a disputed place (Bambiderstroff 1616)
+    - keyboard flow: the panel takes focus, Escape closes it and focus returns, skip link to the table
+  - `views`:
+    - the holders view
+    - the legend picker and entity links
+    - table filters and CSV export
+    - a change jumping to the map
+    - the About page in several languages
+  - `layout`: seven views at 1280 px and on a Pixel 7. None is wider than the screen, and there are no console errors.
+  - `a11y`: axe-core (WCAG 2.1 A/AA) on seven views, with no serious or critical violations. The fixes it needed:
+    - link and muted text colours darkened to ≥ 4.5:1 (a `--link` token from the blue ramp)
+    - the scrolling page made a focusable, labelled region
+  - `perf`: budgets on `performance.measure` marks. Measured: data load ~190 ms, first render ~4 ms, year step ~3–4 ms (map repaint is asynchronous), table ~40 ms.
+- Accessibility by hand:
+  - language buttons labelled by their language's own name (English/Français/Deutsch)
+  - panel focus management and Escape
+  - a skip link to the table (the map canvas isn't keyboard-navigable; the table holds the same facts)
+  - `prefers-reduced-motion` respected when panning
+- Production bundle: ~440 kB gzipped (app 283 kB, mostly MapLibre; worker 144 kB; CSS 13 kB), plus 1.47 MB of data (~0.3 MB gzipped).
+- **About & sources** view in EN/FR/DE. It gives the book and edition, the copyright note on short quotes, what the map shows and its conventions, how the data was made (OCR, Claude extraction of Book I ch. I, VI, VIII, IX, review, geocoding), attributions (OSM ODbL, Wikidata CC0, GeoNames CC BY 4.0), the right types in three languages, and the data version.
+
 
 ### Stage 11: Deployment
 - Tasks:

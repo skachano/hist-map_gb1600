@@ -3,7 +3,7 @@
 import type { Lang } from "../data/types";
 import { LANGS } from "../i18n";
 
-export const VIEWS = ["map", "disputes", "entity", "matrix", "changes"] as const;
+export const VIEWS = ["map", "disputes", "entity", "matrix", "changes", "about"] as const;
 export type View = (typeof VIEWS)[number];
 
 export interface State {

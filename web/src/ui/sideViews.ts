@@ -26,7 +26,8 @@ export function renderEntityView(root: HTMLElement, data: Dataset, state: State,
   const selected = held.get(state.right) ?? [];
   const rulers = (entity.rulers ?? []).filter((r) => (r.to ?? span[1]) >= span[0] && (r.from ?? span[0]) <= span[1]);
   const events = data.events.filter((e) => e.from === entity.id || e.to === entity.id).sort((a, b) => a.year - b.year);
-  const placeLink = (id: string) => h("button", { class: "link", onclick: () => store.set({ place: id }) }, placeName(id));
+  const placeLink = (id: string) => h("button", { class: "link", "data-place": id, onclick: () => store.set({ place: id }) },
+    placeName(id));
 
   fill(root,
     picker,
@@ -81,7 +82,8 @@ export function renderDisputesView(root: HTMLElement, data: Dataset, state: Stat
     h("p", { class: "key" }, h("span", { class: "swatch ring", style: `--c:${CONTESTED}` }), ` ⚠ ${t("contested", lang)}`),
     sorted.length
       ? h("ul", { class: "disputes" }, ...sorted.map((d) => h("li", {},
-        h("button", { class: "link strong", onclick: () => store.set({ place: d.place }) }, placeName(d.place)),
+        h("button", { class: "link strong", "data-place": d.place, onclick: () => store.set({ place: d.place }) },
+          placeName(d.place)),
         ` · ${label(vocab.right_types[d.right], lang, d.right)}`,
         h("ul", {}, ...d.parties.map((p) => h("li", {},
           entityName(p.holder), ` · ${label(vocab.statuses[p.status], lang, p.status)}`,

@@ -158,7 +158,9 @@ export class MapView {
   private reveal(placeId: string): void {
     const p = this.data.places.get(placeId);
     if (p?.lat === undefined || p.lon === undefined) return;
-    if (!this.map.getBounds().contains([p.lon, p.lat])) this.map.easeTo({ center: [p.lon, p.lat], duration: 600 });
+    if (this.map.getBounds().contains([p.lon, p.lat])) return;
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.map.easeTo({ center: [p.lon, p.lat], duration: still ? 0 : 600 });
   }
 
   async render(year: number, styles: Map<string, PlaceStyle>, selected?: string): Promise<void> {

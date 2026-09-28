@@ -1,6 +1,6 @@
 import { loadDataset } from "./data/load";
 import type { Dataset } from "./data/types";
-import { label, name, t } from "./i18n";
+import { label, name, type StringKey, t } from "./i18n";
 import { MapView, type PlaceStyle } from "./map/mapView";
 import { colouredHolders, CONTESTED, holderColour, OTHER, SERIES } from "./model/colors";
 import { type Dispute, disputesIn, indexRights, placeRight, type PlaceRight, type RightIndex } from "./model/snapshot";
@@ -9,6 +9,7 @@ import "./style.css";
 import { renderHeader, YearBar } from "./ui/controls";
 import { fill, h } from "./ui/dom";
 import { renderLegend } from "./ui/legend";
+import { renderAbout } from "./ui/about";
 import { renderChanges, renderMatrix } from "./ui/pages";
 import { renderPanel } from "./ui/panel";
 import { renderDisputesView, renderEntityView } from "./ui/sideViews";
@@ -57,7 +58,9 @@ function computeView(data: Dataset, index: RightIndex, state: State, coloured: s
 
 async function start(): Promise<void> {
   $("status").textContent = t("loading", "en");
+  performance.mark("load-start");
   const data = await loadDataset();
+  performance.measure("load-data", "load-start");
   const index = indexRights(data.rights);
   const years: [number, number] = [data.meta.yearMin, data.meta.yearMax];
   const rights = new Set(Object.keys(data.meta.vocab.right_types));
@@ -102,7 +105,14 @@ async function start(): Promise<void> {
   });
   const yearBar = new YearBar($("yearbar"), data, store);
 
+  let returnFocus: HTMLElement | null = null;
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && store.state.place) store.set({ place: undefined });
+  });
+
   const render = (state: State, previous?: State) => {
+    const started = performance.now();
+    const focusedBefore = document.activeElement as HTMLElement | null; // views re-render below
     const coloured = colours(state);
     if (!previous || previous.year !== state.year || previous.right !== state.right || previous.view !== state.view
       || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()) {
@@ -120,15 +130,34 @@ async function start(): Promise<void> {
     const page = $("page");
     legend.hidden = state.view !== "map";
     side.hidden = state.view !== "entity" && state.view !== "disputes";
-    page.hidden = state.view !== "matrix" && state.view !== "changes";
+    page.hidden = state.view !== "matrix" && state.view !== "changes" && state.view !== "about";
+    // A scrolling page must be reachable by keyboard even when it holds no controls (About).
+    page.tabIndex = 0;
+    page.setAttribute("role", "region");
+    page.setAttribute("aria-label", t(`view_${state.view}` as StringKey, state.lang));
     if (state.view === "map") renderLegend(legend, data, state, store, current.byPlace, coloured);
     if (state.view === "entity") renderEntityView(side, data, state, store);
     if (state.view === "disputes") renderDisputesView(side, data, state, store, current.disputes);
     if (state.view === "matrix") renderMatrix(page, data, index, state, store, coloured);
     if (state.view === "changes") renderChanges(page, data, state, store);
+    if (state.view === "about") renderAbout(page, data, state.lang);
     renderPanel($("panel"), data, index, state, store, coloured);
+    // Keyboard and screen-reader users land in the panel when it opens and return when it closes.
+    if (previous && state.place !== previous.place) {
+      if (state.place) {
+        if (!previous.place) returnFocus = focusedBefore;
+        ($("panel").querySelector("h2") as HTMLElement | null)?.focus({ preventScroll: true });
+      } else {
+        // Views re-render, so the opener may have been replaced: fall back to its twin for the same place.
+        const target = returnFocus?.isConnected && returnFocus !== document.body ? returnFocus
+          : document.querySelector<HTMLElement>(`[data-place="${CSS.escape(previous.place ?? "")}"]`);
+        target?.focus({ preventScroll: true });
+        returnFocus = null;
+      }
+    }
     if (page.hidden) void map.render(state.year, current.styles, state.place);
     history.replaceState(null, "", toHash(state)); // replace: playing through years must not flood history
+    performance.measure(`render:${state.view}`, { start: started }); // read by e2e/perf.spec.ts
   };
   store.subscribe(render);
   window.addEventListener("hashchange", () => store.set(parseHash(location.hash, years, rights)));

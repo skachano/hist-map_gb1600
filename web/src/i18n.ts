@@ -45,6 +45,7 @@ const STRINGS = {
   view_entity: { en: "Holders", fr: "Détenteurs", de: "Inhaber" },
   view_matrix: { en: "Table", fr: "Tableau", de: "Tabelle" },
   view_changes: { en: "Changes", fr: "Changements", de: "Veränderungen" },
+  view_about: { en: "About & sources", fr: "À propos et sources", de: "Über & Quellen" },
   pledged: { en: "Held in pledge (dashed)", fr: "Engagé (tirets)", de: "Verpfändet (gestrichelt)" },
   inheritedLegend: { en: "Lighter: via its territory", fr: "Plus clair : via son territoire",
     de: "Heller: über sein Territorium" },
@@ -80,6 +81,8 @@ const STRINGS = {
     de: "Frühere Veränderungen einbeziehen" },
   showOnMap: { en: "Show on the map", fr: "Voir sur la carte", de: "Auf der Karte zeigen" },
   anyRight: { en: "Any right", fr: "Tout droit", de: "Jedes Recht" },
+  skipToTable: { en: "Skip the map: show the same data as a table", fr: "Passer la carte : voir les mêmes données en tableau",
+    de: "Karte überspringen: dieselben Daten als Tabelle" },
 } satisfies Record<string, Record<Lang, string>>;
 
 export type StringKey = keyof typeof STRINGS;

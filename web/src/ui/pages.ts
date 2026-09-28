@@ -76,7 +76,8 @@ export function renderMatrix(root: HTMLElement, data: Dataset, index: RightIndex
       h("thead", {}, h("tr", {}, h("th", { scope: "col" }, t("place", lang)),
         ...types.map((k) => h("th", { scope: "col" }, label(vocab.right_types[k], lang, k))))),
       h("tbody", {}, ...rows.map((p) => h("tr", {},
-        h("th", { scope: "row" }, h("button", { class: "link", onclick: () => store.set({ place: p.id }) }, placeName(p.id))),
+        h("th", { scope: "row" }, h("button", { class: "link", "data-place": p.id, onclick: () => store.set({ place: p.id }) },
+          placeName(p.id))),
         ...types.map((k) => {
           const pr = cells.get(p.id)!.get(k)!;
           if (!pr.holdings.length) return h("td", { class: "empty" }, "—");

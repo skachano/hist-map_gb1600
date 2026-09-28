@@ -10,6 +10,7 @@ cp .env.example .env   # add ANTHROPIC_API_KEY (needed from Stage 3)
 make build             # build images
 make dev               # http://localhost:5173 (builds web data first if missing)
 make test              # pytest + vitest
+make e2e               # Playwright end-to-end, accessibility and performance tests (starts the dev server)
 make extract           # Stage 1: PDF -> data/raw/ (page text, sections, index CSVs)
 make validate          # Stage 2: check data/curated/*.csv against schema and vocab.yaml
 make schema            # Stage 2: export JSON Schemas to data/schema/

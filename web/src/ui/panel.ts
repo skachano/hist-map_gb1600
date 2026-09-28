@@ -68,7 +68,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
   const parents = ancestors(place.id, year, data.places);
   fill(root,
     h("button", { class: "close", "aria-label": t("close", lang), onclick: () => store.set({ place: undefined }) }, "×"),
-    h("h2", {}, placeName(place.id)),
+    h("h2", { tabindex: "-1" }, placeName(place.id)),
     h("dl", {},
       h("dt", {}, t("names", lang)),
       h("dd", {}, `FR ${place.name.fr ?? "—"} · DE ${place.name.de ?? "—"} · EN ${place.name.en ?? "—"}`),
