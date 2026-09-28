@@ -6,7 +6,15 @@
     <title>Bailliage d'Allemagne 1600–1632</title>
   </head>
   <body>
-    <div id="map"></div>
+    <header id="header"></header>
+    <main id="stage">
+      <div id="map" role="application" aria-label="Map"></div>
+      <aside id="legend" aria-live="polite"></aside>
+      <aside id="panel" hidden></aside>
+      <div id="tooltip" role="tooltip" hidden></div>
+      <p id="status" role="status"></p>
+    </main>
+    <footer id="yearbar"></footer>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

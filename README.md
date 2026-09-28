@@ -8,7 +8,7 @@ Everything runs in Docker (rootless Docker works without extra config).
 ```sh
 cp .env.example .env   # add ANTHROPIC_API_KEY (needed from Stage 3)
 make build             # build images
-make dev               # http://localhost:5173
+make dev               # http://localhost:5173 (builds web data first if missing)
 make test              # pytest + vitest
 make extract           # Stage 1: PDF -> data/raw/ (page text, sections, index CSVs)
 make validate          # Stage 2: check data/curated/*.csv against schema and vocab.yaml
@@ -23,3 +23,9 @@ make build-data        # Stage 7: compile everything into web/public/data/ for t
 ```
 
 The source PDF goes in `pdf/` (git-ignored; licensed copy, not redistributable).
+
+Screenshots of the running app (headless Chromium in Docker, dev server must be up):
+
+```sh
+docker compose run --rm e2e node scripts/screenshot.mjs "#/map?year=1624&right=high_justice&lang=fr" shots/a.png
+```

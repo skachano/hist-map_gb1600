@@ -297,6 +297,21 @@ The Claude API key is passed as `ANTHROPIC_API_KEY` through an `.env` file (git-
   - `snapshot(year)` logic with vitest tests.
   - i18n for UI strings and names.
 - Done when: moving the slider recolours the map for one right type.
+- **Status: done.** Vanilla TypeScript with MapLibre in `web/src/`, no UI framework:
+  - `data/`: types for the Stage 7 files, and a loader that cache-busts by data version
+  - `model/snapshot.ts`: rights in force in a year. In a transfer year the incoming holder wins. A place without its own rows inherits from the nearest territory it belonged to that year (shown lighter). Also primary holder, shared and contested.
+  - `model/colors.ts`: holder colours
+  - `state/store.ts`: state mirrored in the URL, e.g. `#/map?year=1624&right=high_justice&lang=fr&place=anzeling`
+  - `i18n.ts`: interface strings in EN/FR/DE, and names that fall back through French
+  - `map/mapView.ts`: settlement cells and points coloured through feature state, the bailiwick outline for the year, a hover tooltip, and click to select
+  - `ui/`: right-type tabs, language switch, year bar (step, play, ←/→ keys), legend with counts, place panel (names and type in three languages, parent territories, rights in the year with pages and quotes)
+- Colour follows the dataviz method. A choropleth only has three categorical colours that stay CVD-safe across all pairs (validated). The three most prominent holders get them; every other holder is neutral grey. Tooltip, legend and panel always name the holder. "Contested" uses the reserved status colour plus ⚠ and a label.
+- Phone layout: the right-type tabs scroll in one row, and an open place splits the screen (map above, panel below). An overlaying scroll panel left the WebGL map unpainted above it in headless Chromium.
+- MapLibre 6 needs its worker bundled explicitly (`maplibre-gl-worker.mjs?worker&url` + `setWorkerUrl`, `worker.format: "es"`).
+- Checking by eye: the Compose service `e2e` (Playwright 1.63 image) plus `web/scripts/screenshot.mjs` take screenshots of the dev server: `docker compose run --rm e2e node scripts/screenshot.mjs "#/map?year=1628&right=high_justice" shots/x.png ArrowRight` (output in `web/shots/`, git-ignored).
+- Tests: 14 vitest tests (snapshot, URL state, i18n) and 63 pytest tests pass. Verified by screenshot: pressing → from 1628 to 1629 recolours Sarrewerden and extends the bailiwick outline.
+- Carried to Stage 9: split/pie symbols for shared rights, choosing which holders get the three colours, map labels, timelines in the panel. Memberships in regions that aren't jurisdictions (Westrich, Upper Rhine Circle) need review in `rules.yaml`.
+
 
 ### Stage 9: Screens
 Implement the six screens from §3 in order:

@@ -21,3 +21,6 @@ web/node_modules/
 web/dist/
 web/public/data/
 .npm/
+
+# screenshots from web/scripts/screenshot.mjs
+web/shots/

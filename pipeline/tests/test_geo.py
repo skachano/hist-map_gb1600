@@ -43,6 +43,8 @@ def test_territory_names_from_type_and_seat():
     seat = geocode.Result("sierck", name_fr="Sierck", name_de="Sierck", name_en="Sierck")
     fr, de, en = geocode.territory_names({"place_type": "office", "name_fr": "Office de Sierck"}, vocab, seat)
     assert (fr, de, en) == ("Office de Sierck", "Amt Sierck", "Office of Sierck")
+    unseated = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}
+    assert geocode.territory_names(unseated, vocab, None) == ("Prévôté rurale de Sierck",) * 3
 
 
 def fake_geonames(*entries):

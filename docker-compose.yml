@@ -24,3 +24,16 @@ services:
       - ./web:/work/web
     ports:
       - "5173:5173"
+
+  # Headless Chromium for screenshots and end-to-end tests (Stage 8/10). The image
+  # version must match the playwright package in web/package.json.
+  e2e:
+    image: mcr.microsoft.com/playwright:v1.63.0-noble
+    environment:
+      HOME: /tmp
+      APP_URL: http://web:5173
+    volumes:
+      - ./web:/work/web
+    working_dir: /work/web
+    depends_on:
+      - web
