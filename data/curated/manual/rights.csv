@@ -42,3 +42,11 @@ bouquenom,suzerain,bishopric-metz,,,,,,,,,,108,,
 bouquenom,high_justice,county-nassau-saarbruecken,,,true,duchy-lorraine,,1629,,exact,,107-108,medium,
 bouquenom,high_justice,francois-ii-vaudemont,,,,,1629,1632,exact,exact,,108;110,medium,
 bouquenom,high_justice,duchy-lorraine,,,,,1632,,exact,,,110,medium,
+honzrath,suzerain,holy-roman-empire,,held,true,duchy-lorraine,,,,,,10,medium,"free village among the imperial enclaves (implied, p. 10); Lorraine counted it in the bailiwick in 1610 (p. 133)"
+haustadt,suzerain,holy-roman-empire,,held,true,duchy-lorraine,,,,,,10,medium,"free village among the imperial enclaves (implied, p. 10)"
+haustadt,manorial_lord,house-braubach,joint,held,,,1612,1612,attested,attested,,133,high,
+haustadt,manorial_lord,jean-de-zandt,joint,held,,,1612,1612,attested,attested,,133,high,
+haustadt,manorial_lord,commandery-beckingen,joint,held,,,1612,1612,attested,attested,,133,high,
+haustadt,suzerain,county-nassau-saarbruecken,,held,true,duchy-lorraine,1617,1617,attested,attested,,133,high,"over Jean de Zandt's part, held in fief of Nassau; Lorraine wanted to draw it in"
+honzrath,suzerain,county-nassau-saarbruecken,,held,true,duchy-lorraine,1610,1610,attested,attested,,133,medium,over the Braubach half of the village
+honzrath,suzerain,duchy-lorraine,,claimed,true,county-nassau-saarbruecken|jean-de-zandt,1610,1610,exact,exact,,133,high,

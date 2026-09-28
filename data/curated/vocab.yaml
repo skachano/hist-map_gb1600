@@ -14,6 +14,7 @@ place_types:
   priory:        {en: priory, fr: prieuré, de: Priorat, applies_to: settlement}
   saltworks:     {en: saltworks, fr: saline, de: Saline, applies_to: settlement}
   deserted_village: {en: deserted village, fr: village disparu, de: Wüstung, applies_to: settlement}
+  free_village:  {en: free village, fr: village libre, de: Freidorf, applies_to: settlement}
   bailiwick:     {en: bailiwick, fr: bailliage, de: Bellistum (Oberamt), applies_to: territory}
   office:        {en: office, fr: office, de: Amt, applies_to: territory}
   provostship:   {en: provostship, fr: prévôté, de: Schultheißerei, applies_to: territory}

@@ -75,6 +75,14 @@ place_aliases:
   "L1-C06-S08: Rode": rode-morhange              # "Rode" of the old castellany of Marimont (p. 74) = Rode-lès-Morhange (p. 20)
   grande prévôté: provostship-rurale-de-sierck   # "grande prévôté ou prévôté rurale" of the office of Sierck (p. 49)
   "territory: Sarrebourg": provostship-sarrebourg   # the "Sarrebourg" of the bailiwick's units (pp. 9, 22) is the prévôté of p. 19
+  # One place recorded twice under two names.
+  Prieuré de Hesse: hesse                         # the Haute-Seille priory at Hesse (pp. 19, 76)
+  Moyenvic ou Petit-Vic: moyenvic
+  Lascemborn: lafrimbolle                         # index: Lascemhorn = Lafrimbolle
+  Rémeling: remelfing-sierck                      # index: Remelfing (Sierck), pp. 12, 49-50, 80-81
+  "L1-C06-S06: Schweix": schweix-pirmasens        # Schweix of the mairie of Walschbronn (p. 69), near Pirmasens
+  "L1-C08-S07: Schweix": schweix-gueblange-les-sarralbe   # Kingertal's Schweix (p. 116) is the val de Guéblange's (p. 78)
+  Hombourg-village: hombourg-haut-et-bas          # the village of Hombourg (p. 16) is Hombourg-Bas (p. 64)
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
 entities:
@@ -103,6 +111,9 @@ drop_memberships:
 
 # Corrections to extracted rights: rows matching every `match` field get the `set` fields.
 right_overrides:
+  - match: {place: honzrath, holder: teutonic-order}
+    set: {holder_id: commandery-beckingen}
+    reason: "the half of Honzrath went to the commander of Beckingen (p. 133)"
   - match: {place: berus, right_type: manorial_lord, holder: county-sulz}
     set: {share: "1/4"}
     reason: "Sulz and Anholt share one half through their wives, the Metternich the other (p. 80)"
@@ -188,3 +199,35 @@ geocode:
                          note: "Steinbach, the tile works near Vergaville (p. 74; index: Vergaville); was matched to Steinbach in the val de Guéblange"}
   rode-insviller: {approximate: insviller, name_de: Rode, name_en: Rode,
                    note: "Rode-lès-Insviller, county of Sarrewerden (p. 19; index: Insviller); was matched to Rode near Morhange"}
+  buchingen: {approximate: eblange, name_de: Buchingen, name_en: Buchingen,
+              note: "Buchingen-lès-Éblange, office of Boulay (pp. 16, 63; index: Éblange); was matched to Bockange"}
+  imsbach: {approximate: trulben, name_de: Imsbach, name_en: Imsbach,
+            note: "the Imsbach farm near Trulben, lordship of Lemberg (pp. 18, 104; index: Trulben); was matched to Imsbach in the Palatinate"}
+  imshach: {approximate: tholey, name_de: Imsbach, name_en: Imsbach,
+            note: "the cense d'Imsbach of the office of Schaumberg (pp. 15, 58), today part of Tholey; was matched to Imsbach in the Palatinate"}
+  # Villages now merged into one commune, which had been given the commune's point: their own point (GeoNames).
+  calmesweiler: {lat: 49.41085, lon: 6.95617, name_de: Calmesweiler, name_en: Calmesweiler,
+                 note: "Calmesweiler, office of Schaumberg (p. 80), today part of Eppelborn (GeoNames 2940392); had Eppelborn's point"}
+  niedwellingen: {lat: 49.32983, lon: 6.57661, name_de: Niedwelling, name_en: Niedwelling,
+                  note: "Niedwelling, office of Berus (pp. 15, 58) (GeoNames 12317640); had Guerstling's point"}
+  hemering: {lat: 49.026, lon: 6.67434, name_de: Hémering, name_en: Hémering,
+             note: "Hémering, office of Hombourg-Haut (p. 17), today part of Guessling-Hémering (GeoNames 3013546)"}
+  plappecourt: {lat: 49.10116, lon: 6.43901, name_de: Plappecourt, name_en: Plappecourt,
+                note: "the métairie of Plepcourt (Plappecourt), dependent on the castle of Hombourg-sur-Canner (p. 82) (GeoNames 11959092); had Varize's point and took its land from the office of Boulay"}
+  maquenom: {wikidata: Q15075849, lat: 49.3623, lon: 6.1912, name_de: Macquenom, name_en: Macquenom,
+             note: "Maquenom (index: Basse-Yutz), provostship of Thionville (p. 98), today part of Yutz"}
+  goderscheuren: {approximate: villers-bettnach, name_de: Goderscheuren, name_en: Godehure,
+                  note: "Goderscheuren, today the farm of Godehure, office of Sierck (p. 13; index: Villers-Bettnach); no point of its own"}
+  kirsch-luttange: {approximate: luttange, name_de: Kirsch, name_en: Kirsch,
+                    note: "Kirsch of the lordship of Luttange, with Mancy and Luttange (p. 98; index: Luttange); was matched to Kirsch-lès-Sierck"}
+  tiitting: {approximate: holling, name_de: Tüttingen, name_en: Tütting,
+             note: "Tütting near Holling (p. 81; index: Holling); was matched to Tenting-Mensberg (Tünting) near Manderen"}
+  zondrange: {approximate: marange, name_de: Zondrange, name_en: Zondrange,
+              note: "Zondrange, office of Boulay (p. 16), today part of Marange-Zondrange; no point of its own"}
+  hombourg-haut-et-bas: {wikidata: Q21634406, lat: 49.12931, lon: 6.78814, name_de: Hombourg-Bas, name_en: Hombourg-Bas,
+                         note: "Hombourg-Bas, the lower village of Hombourg-Haut (index: Hombourg-Haut et -Bas)"}
+
+  # The three free villages (p. 10): manual rows, so no index canton to anchor them.
+  honzrath: {wikidata: Q1627335, lat: 49.4272, lon: 6.7306, name_de: Honzrath, name_en: Honzrath, note: "free village near Beckingen (p. 10)"}
+  haustadt: {wikidata: Q1591317, lat: 49.4133, lon: 6.7242, name_de: Haustadt, name_en: Haustadt, note: "free village near Beckingen (p. 10)"}
+  michelbach: {wikidata: Q6836676, lat: 49.467, lon: 6.833, name_de: Michelbach, name_en: Michelbach, note: "free village (p. 10); index: canton of Weiskirchen"}

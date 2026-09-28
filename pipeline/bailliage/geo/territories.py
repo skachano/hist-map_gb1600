@@ -64,6 +64,20 @@ def settlement_cells(places: list, placed_elsewhere: set[str] = frozenset()) -> 
     return ({pid: cell.intersection(region) for pid, cell in zip(owners, cells.geoms)}, shared)
 
 
+def attach_to_cells(cells: dict[str, object], shared: dict[str, list[str]], places: list) -> dict[str, str]:
+    """Places that add no land get no cell of their own (it would be a hole in the territory
+    around them): each joins the cell its point falls in, like a hamlet placed at its commune.
+    Returns {place id: owner of its cell}."""
+    cell_of = {}
+    for p in places:
+        pt = Point(_to_metric(p.lon, p.lat))
+        owner = next((pid for pid, cell in cells.items() if cell.contains(pt)), None)
+        if owner is not None:
+            cell_of[p.id] = owner
+            shared.setdefault(owner, []).append(p.id)
+    return cell_of
+
+
 def excluded_from_areas(geocoding_rows) -> set[str]:
     """Places whose point must not add land to territory areas:
     - placed approximately at their commune (a lost village such as Dittlingen, placed at
@@ -113,15 +127,16 @@ def run() -> None:
     places = {p.id: p for _, p in ds.places}
     located = [p for p in places.values() if p.kind == "settlement" and p.lat is not None]
     with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
-        approximate = {g["place_id"] for g in csv.DictReader(f) if g["method"] == "approximate"}
-    cells, shared = settlement_cells(located, approximate)
+        rows = list(csv.DictReader(f))
+    approximate = {g["place_id"] for g in rows if g["method"] == "approximate"}
+    no_land = excluded_from_areas(rows)
+    cells, shared = settlement_cells([p for p in located if p.id not in no_land], approximate)
     cell_of = {pid: pid for pid in cells}
     for owner, others in shared.items():
         for o in others:
             cell_of[o] = owner
+    cell_of |= attach_to_cells(cells, shared, [p for p in located if p.id in no_land])
 
-    with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
-        no_land = excluded_from_areas(csv.DictReader(f))
     by_year = members_by_year([m for _, m in ds.memberships], {p.id for p in located} - no_land)
     territories = [p for p in places.values() if p.kind == "territory"]
     features, empty = [], []

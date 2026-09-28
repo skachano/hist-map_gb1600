@@ -157,3 +157,16 @@ def test_the_bailiwick_gives_no_territory_context():
     memberships += [{"child_id": c, "parent_id": "provostship"} for c in [*towns, "sarrebourg"]]
     geocode.refine_with_territories(results, info, memberships, {}, fake_geonames())
     assert results["sarrebourg"].confidence == "high" and "km from" not in results["sarrebourg"].note
+
+
+def test_places_without_land_join_the_cell_they_fall_in():
+    from types import SimpleNamespace as NS
+    from bailliage.geo.territories import attach_to_cells, settlement_cells
+    abbey = NS(id="villers-bettnach", lat=49.2337, lon=6.3614, confidence="high")
+    other = NS(id="saint-hubert", lat=49.2239, lon=6.3331, confidence="high")
+    far = NS(id="kedange", lat=49.31, lon=6.34, confidence="high")
+    grange = NS(id="goderscheuren", lat=49.2338, lon=6.3627, confidence="low")  # placed approximately
+    cells, shared = settlement_cells([abbey, other, far])
+    assert "goderscheuren" not in cells
+    assert attach_to_cells(cells, shared, [grange]) == {"goderscheuren": "villers-bettnach"}
+    assert shared["villers-bettnach"] == ["goderscheuren"]
