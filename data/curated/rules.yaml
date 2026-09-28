@@ -75,6 +75,14 @@ drop_rights:
   - {place: arriance, right_type: manorial_lord, holder: house-varsberg,
      reason: "the Varsberg half was pledged to Godron Duchat (p. 147); the pledge row holds it"}
 
+# Extracted memberships to discard; every given field must match (child, parent)
+drop_memberships:
+  - {child: gauhiving, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67); a Landmairie of Forbach in 1623"}
+  - {child: ditschviller, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: emmersweiler, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67)"}
+  - {child: guerting, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: remsing, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
+
 # Corrections to extracted rights: rows matching every `match` field get the `set` fields.
 right_overrides:
   - match: {place: berus, right_type: manorial_lord, holder: county-sulz}

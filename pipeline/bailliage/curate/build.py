@@ -194,6 +194,8 @@ class Builder:
                 # "the county of Bitche belongs to Lorraine": allegiance, recorded as suzerainty rows
                 self.dropped["membership in a political entity (not a territory)"] += 1
                 continue
+            if self._dropped(row, "drop_memberships", {"child": "child_id", "parent": "parent_id"}):
+                continue
             self._merge(self.memberships, (row["child_id"], row["parent_id"], row["from_year"], row["to_year"]), row)
         for r in x["rulers"]:
             if not r["entity_id"] or not r["person_name"]:
@@ -207,9 +209,11 @@ class Builder:
             key = (row["entity_id"], fold(row["person_name"]), row["from_year"], row["to_year"])
             self._merge(self.rulers, key, row)
 
-    def _dropped(self, row: dict) -> bool:
-        for rule in self.rules.get("drop_rights", []) or []:
-            if all(str(row.get({"place": "place_id", "holder": "holder_id"}.get(k, k))) == str(v)
+    def _dropped(self, row: dict, rules: str = "drop_rights",
+                 fields: dict | None = None) -> bool:
+        fields = fields or {"place": "place_id", "holder": "holder_id"}
+        for rule in self.rules.get(rules, []) or []:
+            if all(str(row.get(fields.get(k, k))) == str(v)
                    for k, v in rule.items() if k != "reason"):
                 self.dropped[rule.get("reason", "drop rule")] += 1
                 return True

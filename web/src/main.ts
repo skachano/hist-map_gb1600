@@ -132,6 +132,8 @@ async function start(): Promise<void> {
     },
   });
   const yearBar = new YearBar($("yearbar"), data, store);
+  // Development only: lets end-to-end tests point at a place on the map.
+  if (import.meta.env.DEV) (window as unknown as { __map: unknown }).__map = map.map;
 
   let returnFocus: HTMLElement | null = null;
   document.addEventListener("keydown", (e) => {
