@@ -231,3 +231,5 @@ geocode:
   honzrath: {wikidata: Q1627335, lat: 49.4272, lon: 6.7306, name_de: Honzrath, name_en: Honzrath, note: "free village near Beckingen (p. 10)"}
   haustadt: {wikidata: Q1591317, lat: 49.4133, lon: 6.7242, name_de: Haustadt, name_en: Haustadt, note: "free village near Beckingen (p. 10)"}
   michelbach: {wikidata: Q6836676, lat: 49.467, lon: 6.833, name_de: Michelbach, name_en: Michelbach, note: "free village (p. 10); index: canton of Weiskirchen"}
+  remilly: {wikidata: Q22912, lat: 49.01361, lon: 6.39333, name_de: Remilly, name_en: Rémilly,
+            note: "Rémilly (index: canton of Pange); manual row, so no index canton"}

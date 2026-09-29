@@ -27,6 +27,8 @@ biibingen,settlement,Büdingen,Büdingen,Büdingen,Biidingen|Biibingen|Budingen,
 honzrath,settlement,Honzrath,Honzrath,Honzrath,Hontzgerode,free_village,49.4272,6.7306,Q1627335,,DE,10;133;137;146;195-197;220,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Haustadt and Michelbach (p. 10)"
 haustadt,settlement,Haustadt,Haustadt,Haustadt,,free_village,49.4133,6.7242,Q1591317,,DE,10;133;195-197,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Michelbach (p. 10)"
 michelbach,settlement,Michelbach,Michelbach,Michelbach,,free_village,49.467,6.833,Q6836676,,DE,10;15;84;137,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Haustadt (p. 10)"
+remilly,settlement,Rémilly,Remilly,Rémilly,Remilly,village,49.01361,6.39333,Q22912,,FR,10;78;82;132,high,German name Remilly (1871-1918); the book writes Remilly
+lordship-faulquemont,territory,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont|marquisat de Faulquemont,lordship,49.04111,6.59917,,,,9-10;16;27;63;82,high,"a marquisate from December 1629 (p. 27), so called in the overview of pp. 9-10"
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -255,7 +257,7 @@ castellany-fribourg,territory,Châtellenie de Fribourg,Kellerei Fribourg,Castell
 castellany-haboudange,territory,Châtellenie de Haboudange,Kellerei Haboudange,Castellany of Haboudange,châtellenie de Haboudange,castellany,48.89056,6.61194,,,,10,medium,
 castellany-lagarde,territory,Châtellenie de Lagarde,Kellerei Lagarde,Castellany of Lagarde,la châtellenie de Lagarde,castellany,48.69139,6.705,,,,76-77,medium,
 castellany-marsal,territory,Châtellenie de Marsal,Kellerei Marsal,Castellany of Marsal,châtellenie de Marsal,castellany,48.78917,6.60917,,,,20;85;87;99,medium,
-castellany-remilly,territory,Châtellenie de Remilly,Kellerei Rémilly,Castellany of Rémilly,,castellany,49.01361,6.39333,,,,,medium,
+castellany-remilly,territory,Châtellenie de Rémilly,Kellerei Remilly,Castellany of Rémilly,,castellany,49.01361,6.39333,,,,,medium,
 castellany-vic,territory,Châtellenie de Vic,Kellerei Vic,Castellany of Vic,,castellany,48.7706,6.50357,,,,,medium,
 castviller,settlement,Castviller,,Castviller,,village,49.01474,6.93179,Q55596049,,FR,,high,
 chambrey,settlement,Chambrey,Chambrey,Chambrey,,village,48.78694,6.45944,Q21714,,FR,,high,
@@ -719,7 +721,6 @@ lordship-dagstuhl,territory,Seigneurie de Dagstuhl,Herrschaft Dagstuhl,Lordship 
 lordship-danne-et-quatre-vents,territory,Seigneurie de Danne et Quatre-Vents,Herrschaft Danne et Quatre-Vents,Lordship of Danne et Quatre-Vents,,lordship,,,,,,114,medium,
 lordship-diemeringen,territory,Seigneurie de Diemeringen,Herrschaft Diemeringen,Lordship of Diemeringen,Diemeringen|principauté de Diemeringen,lordship,48.94167,7.18667,,,,106-107;124,medium,
 lordship-distroff,territory,Seigneurie de Distroff,Herrschaft Distroff,Lordship of Distroff,,lordship,49.33194,6.26667,,,,,medium,
-lordship-faulquemont,territory,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont,lordship,49.04111,6.59917,,,,63;82,medium,
 lordship-fenetrange,territory,Seigneurie de Fénétrange,Herrschaft Fénétrange,Lordship of Fénétrange,la terre de Fénétrange|seigneurie commune de Fénétrange|seigneurie de Fénétrange,lordship,48.84556,7.01972,,,,11;19;72-73;86;98;110-111;124,medium,
 lordship-forbach,territory,Seigneurie de Forbach,Herrschaft Forbach,Lordship of Forbach,comté de Forbach|office de Forbach|seigneurie de Forbach,lordship,49.18806,6.9,,,,67-68;82;99;123;146,medium,
 lordship-frauenberg,territory,Seigneurie de Frauenberg,Herrschaft Frauenberg,Lordship of Frauenberg,seigneurie de Frauenberg,lordship,49.13667,7.12722,,,,10,medium,
@@ -1012,7 +1013,6 @@ remelfing-sarreguemines,settlement,Rémelfing,Rémelfing,Rémelfing,Remelfing|Ru
 remelfing-sierck,settlement,Rémeling,Rémeling,Rémeling,Rumelingen,village,49.40722,6.4875,Q22168,,,50;80-81,medium,
 remering-bouzonville,settlement,Rémering-lès-Bouzonville,Rémering,Rémering,Rémering|auf dem Gau,village,49.26472,6.62861,Q22375,,FR,59,high,
 remering-puttelange,settlement,Rémering,Rémering-lès-Puttelange,Rémering-lès-Puttelange,,village,49.03556,6.93944,Q22334,,DE,21;101;107;142-143,high,
-remilly,settlement,Remilly,Rémilly,Rémilly,Rémilly,village,49.01361,6.39333,Q22912,,FR,82,high,
 remsing,settlement,Remsing,,,cense de Remsing,village,49.14722,6.89444,,,FR,64;67;97,high,
 rening,settlement,Réning,Réning,Réning,Rénange,village,48.955,6.8525,Q22370,,FR,74,high,
 renting,settlement,Renting,,,Rinting,village,48.72249,6.99617,Q107300771,,FR,,high,

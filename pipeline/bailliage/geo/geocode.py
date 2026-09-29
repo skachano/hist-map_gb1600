@@ -166,7 +166,8 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
     de_type = labels["de"].split(" (")[0].split(" / ")[0]
     en_type = labels["en"]
     rest = fr
-    if base_name(fr) != fold(fr):  # the name has a type word
+    has_type = base_name(fr) != fold(fr)
+    if has_type:
         typed = re.match(rf"{re.escape(labels['fr'])}( rurale)? (?:de la |de |d'|du |des )(.+)$", fr, re.I)
         if not typed:
             return fr, fr, fr
@@ -175,7 +176,10 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
         rest = typed.group(2)
     seat_de = (seat.name_de if seat else None) or rest
     seat_en = (seat.name_en if seat else None) or rest
-    if rest is not fr:
+    if seat and seat.name_fr and rest.isascii() and not seat.name_fr.isascii() and fold(seat.name_fr) == fold(rest):
+        # the seat's spelling, with its accents ('Remilly' in the book, the village 'Rémilly')
+        fr, rest = fr[:len(fr) - len(rest)] + seat.name_fr, seat.name_fr
+    if has_type:
         return fr, f"{de_type} {seat_de}", f"{en_type.capitalize()} of {seat_en}"
     fr_type = labels["fr"][:1].upper() + labels["fr"][1:]
     link = "d'" if fold(fr)[:1] in "aeiouy" else "de "

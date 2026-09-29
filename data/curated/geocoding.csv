@@ -231,7 +231,7 @@ castellany-fribourg,48.76694,6.85639,,,Châtellenie de Fribourg,Kellerei Fribour
 castellany-haboudange,48.89056,6.61194,,,Châtellenie de Haboudange,Kellerei Haboudange,Castellany of Haboudange,territory,medium,seat: haboudange
 castellany-lagarde,48.69139,6.705,,,Châtellenie de Lagarde,Kellerei Lagarde,Castellany of Lagarde,territory,medium,seat: lagarde
 castellany-marsal,48.78917,6.60917,,,Châtellenie de Marsal,Kellerei Marsal,Castellany of Marsal,territory,medium,seat: marsal
-castellany-remilly,49.01361,6.39333,,,Châtellenie de Remilly,Kellerei Rémilly,Castellany of Rémilly,territory,medium,seat: remilly
+castellany-remilly,49.01361,6.39333,,,Châtellenie de Rémilly,Kellerei Remilly,Castellany of Rémilly,territory,medium,seat: remilly
 castellany-vic,48.7706,6.50357,,,Châtellenie de Vic,Kellerei Vic,Castellany of Vic,territory,medium,centre of 14 member settlement(s)
 castviller,49.01474,6.93179,Q55596049,,Castviller,,Castviller,wikidata,high,
 chambrey,48.78694,6.45944,Q21714,,Chambrey,Chambrey,Chambrey,wikidata,high,
@@ -1005,7 +1005,7 @@ remelfing-sarreguemines,49.09167,7.09222,Q22190,,Rémelfing,Rémelfing,Rémelfin
 remelfing-sierck,49.40722,6.4875,Q22168,,Rémeling,Rémeling,Rémeling,wikidata,high,no canton anchor
 remering-bouzonville,49.26472,6.62861,Q22375,,Rémering-lès-Bouzonville,Rémering,Rémering,wikidata,high,
 remering-puttelange,49.03556,6.93944,Q22334,,Rémering,Rémering-lès-Puttelange,Rémering-lès-Puttelange,override,high,"Rémering of the lordship of Puttelange (p. 17); the index's department was misread, so it went unplaced"
-remilly,49.01361,6.39333,Q22912,,Remilly,Rémilly,Rémilly,wikidata,high,
+remilly,49.01361,6.39333,Q22912,,Rémilly,Remilly,Rémilly,override,high,"Rémilly (index: canton of Pange); manual row, so no index canton"
 remsing,49.14722,6.89444,,,Remsing,,,approximate,low,not in Wikidata/GeoNames; placed at Folkling (index location)
 rening,48.955,6.8525,Q22370,,Réning,Réning,Réning,wikidata,high,no canton anchor
 renting,48.72249,6.99617,Q107300771,,Renting,,,wikidata,medium,no canton anchor

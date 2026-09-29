@@ -27,3 +27,5 @@ biibingen,settlement,Büdingen,Büdingen,Büdingen,Biidingen|Biibingen|Budingen,
 honzrath,settlement,Honzrath,Honzrath,Honzrath,Hontzgerode,free_village,,,,,DE,10;133;137;146;195-197;220,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Haustadt and Michelbach (p. 10)"
 haustadt,settlement,Haustadt,Haustadt,Haustadt,,free_village,,,,,DE,10;133;195-197,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Michelbach (p. 10)"
 michelbach,settlement,Michelbach,Michelbach,Michelbach,,free_village,,,,,DE,10;15;84;137,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Haustadt (p. 10)"
+remilly,settlement,Rémilly,Remilly,Rémilly,Remilly,village,,,,,FR,10;78;82;132,high,"German name Remilly (1871-1918); the book writes Remilly"
+lordship-faulquemont,territory,Seigneurie de Faulquemont,,,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont|marquisat de Faulquemont,lordship,,,,,,9-10;16;27;63;82,high,"a marquisate from December 1629 (p. 27), so called in the overview of pp. 9-10"

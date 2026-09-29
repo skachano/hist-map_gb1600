@@ -170,6 +170,7 @@ event_types:
   redemption:   {en: redemption, fr: rachat, de: Pfandeinlösung}
   inheritance:  {en: inheritance, fr: héritage, de: Erbfall}
   enfeoffment:  {en: enfeoffment, fr: inféodation, de: Belehnung}
+  elevation:    {en: raised to a higher title, fr: érection, de: Standeserhöhung}
   exchange:     {en: exchange, fr: échange, de: Tausch}
   cession:      {en: cession, fr: cession, de: Abtretung}
   treaty:       {en: treaty / accommodation, fr: traité / accommodement, de: Vertrag / Vergleich}

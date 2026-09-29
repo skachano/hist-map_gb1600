@@ -54,6 +54,13 @@ def test_territory_names_from_type_and_seat():
     assert geocode.territory_names(rural, vocab, None) == ("Prévôté rurale de Sierck", "Landschultheißerei Sierck",
                                                            "Rural provostship of Sierck")
     other = {"place_type": "office", "name_fr": "Prévôté rurale de Sierck"}  # its own type word is not 'office'
+    vocab["place_types"]["castellany"] = {"en": "castellany", "fr": "châtellenie", "de": "Kellerei"}
+    remilly = geocode.Result("remilly", name_fr="Rémilly", name_de="Remilly", name_en="Rémilly")
+    castellany = {"place_type": "castellany", "name_fr": "Châtellenie de Remilly"}  # the book drops the accent
+    assert geocode.territory_names(castellany, vocab, remilly) == ("Châtellenie de Rémilly", "Kellerei Remilly",
+                                                                   "Castellany of Rémilly")
+    bare = {"place_type": "castellany", "name_fr": "Remilly"}
+    assert geocode.territory_names(bare, vocab, remilly)[0] == "Châtellenie de Rémilly"
     assert geocode.territory_names(other, vocab, None) == ("Prévôté rurale de Sierck",) * 3
 
 
