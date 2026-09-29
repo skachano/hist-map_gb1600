@@ -325,7 +325,7 @@ duppenweiler,49.41361,6.76667,Q455897,,Diippenweiler,Düppenweiler,Düppenweiler
 duren,49.3036,6.66222,Q1271996,,Diiren,Düren,Düren,wikidata,high,
 durstel,48.89167,7.19722,Q22782,,Durstel,Durstel,Durstel,wikidata,high,
 ebersviller,49.27513,6.401,,3020574,Ebersviller,,,geonames,high,geonames exact
-eblange,49.22333,6.48194,Q21674,,Eblange,Éblange,Éblange,wikidata,high,
+eblange,49.22333,6.48194,Q21674,,Éblange,Éblange,Éblange,override,high,"manual row (French name with its accent), so no index canton"
 ebring,49.12301,6.91401,Q12948703,,Ebring,Ebering,Ebering,wikidata,high,
 edersviller,49.0525,6.93083,,,Edersweiler,,,approximate,low,"not in Wikidata/GeoNames; placed at Puttelange (index location, resolved near its territory)"
 edling,49.2717,6.45198,Q3047673,,Edling,Edling,Edling,wikidata,high,
@@ -726,7 +726,7 @@ lordship-marimont,48.92174,6.8068,,,Office de Marimont-lès-Albestroff,Amt Marim
 lordship-meilberg,49.33732,6.21139,,,Seigneurie de Meilberg,Herrschaft Meilberg,Lordship of Meilberg,territory,medium,centre of 6 member settlement(s)
 lordship-metz,49.11972,6.17694,,,Évêché temporel de Metz,Évêché temporel de Metz,Évêché temporel de Metz,territory,medium,seat: metz
 lordship-monclair,49.4956,6.55778,,,Seigneurie de Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,territory,medium,seat: monclair
-lordship-morhange,48.92361,6.63583,,,Seigneurie de Morhange,Herrschaft Morhange,Lordship of Morhange,territory,medium,seat: morhange
+lordship-morhange,48.92361,6.63583,,,Seigneurie de Morhange,Herrschaft Mörchingen,Lordship of Morhange,territory,medium,seat: morhange
 lordship-nalbach,49.3833,6.78333,,,Seigneurie de Nalbach,Herrschaft Nalbach,Lordship of Nalbach,territory,medium,seat: nalbach
 lordship-puttelange,49.0525,6.93083,,,Seigneurie de Puttelange,Herrschaft Puttelange-aux-Lacs,Lordship of Puttelange-aux-Lacs,territory,medium,seat: puttelange
 lordship-puttlingen-saar,,,,,Seigneurie de Püttlingen-Saar,Herrschaft Püttlingen-Saar,Lordship of Püttlingen-Saar,territory,medium,no seat or located members
@@ -834,7 +834,7 @@ montbronn,48.99417,7.31,Q22232,,Montbronn,Montbronn,Montbronn,wikidata,high,no c
 montdidier,48.92944,6.81722,Q21970,,Montdidier,Montdidier,Montdidier,wikidata,high,
 montenach,49.41944,6.38056,Q22246,,Montenach,Montenach,Montenach,wikidata,high,
 montrequienne,49.25538,6.23594,Q3322935,,Montrequienne,Montrequienne,Montrequienne,wikidata,high,
-morhange,48.92361,6.63583,Q22353,,Morhange,Morhange,Morhange,wikidata,high,
+morhange,48.92361,6.63583,Q22353,,Morhange,Mörchingen,Morhange,override,high,German name Mörchingen (the book: Morchingen)
 morlange,49.11937,6.47392,Q3324149,,Morlange,Morlange,Morlange,wikidata,low,81 km from the index's canton
 morsbach,49.16694,6.87083,Q22385,,Morsbach,Morsbach,Morsbach,wikidata,high,
 morsbronn,49.00505,6.92708,,11959248,Morsbronn,,,geonames,high,geonames exact

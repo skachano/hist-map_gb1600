@@ -233,3 +233,7 @@ geocode:
   michelbach: {wikidata: Q6836676, lat: 49.467, lon: 6.833, name_de: Michelbach, name_en: Michelbach, note: "free village (p. 10); index: canton of Weiskirchen"}
   remilly: {wikidata: Q22912, lat: 49.01361, lon: 6.39333, name_de: Remilly, name_en: Rémilly,
             note: "Rémilly (index: canton of Pange); manual row, so no index canton"}
+  morhange: {wikidata: Q22353, lat: 48.92361, lon: 6.63583, name_de: Mörchingen, name_en: Morhange,
+             note: "German name Mörchingen (the book: Morchingen)"}
+  eblange: {wikidata: Q21674, lat: 49.22333, lon: 6.48194, name_de: Éblange, name_en: Éblange,
+            note: "manual row (French name with its accent), so no index canton"}

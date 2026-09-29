@@ -29,6 +29,7 @@ haustadt,settlement,Haustadt,Haustadt,Haustadt,,free_village,49.4133,6.7242,Q159
 michelbach,settlement,Michelbach,Michelbach,Michelbach,,free_village,49.467,6.833,Q6836676,,DE,10;15;84;137,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Haustadt (p. 10)"
 remilly,settlement,Rémilly,Remilly,Rémilly,Remilly,village,49.01361,6.39333,Q22912,,FR,10;78;82;132,high,German name Remilly (1871-1918); the book writes Remilly
 lordship-faulquemont,territory,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont|marquisat de Faulquemont,lordship,49.04111,6.59917,,,,9-10;16;27;63;82,high,"a marquisate from December 1629 (p. 27), so called in the overview of pp. 9-10"
+eblange,settlement,Éblange,Éblange,Éblange,Eblange|Ebling|Ebling (Éblange)|Oblingen,village,49.22333,6.48194,Q21674,,FR,16;81,high,
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -349,7 +350,6 @@ duppenweiler,settlement,Diippenweiler,Düppenweiler,Düppenweiler,Duppenweiler,v
 duren,settlement,Diiren,Düren,Düren,Düren|Düren-lès-Ittersdorf,village,49.3036,6.66222,Q1271996,,DE,16;56;59;80,high,
 durstel,settlement,Durstel,Durstel,Durstel,,village,48.89167,7.19722,Q22782,,FR,,high,
 ebersviller,settlement,Ebersviller,,,Petit-Ebersviller,village,49.27513,6.401,,3020574,FR,80-81;147,high,
-eblange,settlement,Eblange,Éblange,Éblange,Ebling|Ebling (Éblange)|Oblingen,village,49.22333,6.48194,Q21674,,FR,16;81,high,
 ebring,settlement,Ebring,Ebering,Ebering,,village,49.12301,6.91401,Q12948703,,FR,102,high,
 edersviller,settlement,Edersweiler,,,Edersviller,farmstead,49.0525,6.93083,,,FR,,high,
 edling,settlement,Edling,Edling,Edling,Edelnigen,village,49.2717,6.45198,Q3047673,,FR,50;59,high,
@@ -742,7 +742,7 @@ lordship-marimont,territory,Office de Marimont-lès-Albestroff,Amt Marimont-lès
 lordship-meilberg,territory,Seigneurie de Meilberg,Herrschaft Meilberg,Lordship of Meilberg,,lordship,49.33732,6.21139,,,,,medium,
 lordship-metz,territory,Évêché temporel de Metz,Évêché temporel de Metz,Évêché temporel de Metz,l'évêché temporel de Metz,lordship,49.11972,6.17694,,,,118-119,medium,
 lordship-monclair,territory,Seigneurie de Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,seigneurie de Monclair,lordship,49.4956,6.55778,,,,53;130,medium,
-lordship-morhange,territory,Seigneurie de Morhange,Herrschaft Morhange,Lordship of Morhange,comté de Morhange|office de Morhange|seigneurie de Morhange,lordship,48.92361,6.63583,,,,20;72-73;83;98-99;107;124,medium,
+lordship-morhange,territory,Seigneurie de Morhange,Herrschaft Mörchingen,Lordship of Morhange,comté de Morhange|office de Morhange|seigneurie de Morhange,lordship,48.92361,6.63583,,,,20;72-73;83;98-99;107;124,medium,
 lordship-nalbach,territory,Seigneurie de Nalbach,Herrschaft Nalbach,Lordship of Nalbach,,lordship,49.3833,6.78333,,,,122,medium,
 lordship-puttelange,territory,Seigneurie de Puttelange,Herrschaft Puttelange-aux-Lacs,Lordship of Puttelange-aux-Lacs,Hessen-Püttlingen|Hessenpüttlingen|comté de Puttelange|fief de Puttelange|la seigneurie de Puttelange|office de Puttelange|seigneurie de Puttelange,lordship,49.0525,6.93083,,,,17;68;83;99;124,medium,
 lordship-puttlingen-saar,territory,Seigneurie de Püttlingen-Saar,Herrschaft Püttlingen-Saar,Lordship of Püttlingen-Saar,Crichingen-Püttlingen|Criechingen-Püttlingen,lordship,,,,,,17,medium,
@@ -848,7 +848,7 @@ montbronn,settlement,Montbronn,Montbronn,Montbronn,Mummer,village,48.99417,7.31,
 montdidier,settlement,Montdidier,Montdidier,Montdidier,,village,48.92944,6.81722,Q21970,,FR,115,high,
 montenach,settlement,Montenach,Montenach,Montenach,,village,49.41944,6.38056,Q22246,,FR,,high,
 montrequienne,settlement,Montrequienne,Montrequienne,Montrequienne,,village,49.25538,6.23594,Q3322935,,FR,,high,
-morhange,settlement,Morhange,Morhange,Morhange,Morchingen,small_town,48.92361,6.63583,Q22353,,FR,79;99,high,
+morhange,settlement,Morhange,Mörchingen,Morhange,Morchingen,small_town,48.92361,6.63583,Q22353,,FR,79;99,high,
 morlange,settlement,Morlange,Morlange,Morlange,,village,49.11937,6.47392,Q3324149,,FR,,high,
 morsbach,settlement,Morsbach,Morsbach,Morsbach,,village,49.16694,6.87083,Q22385,,FR,,high,
 morsbronn,settlement,Morsbronn,,,,village,49.00505,6.92708,,11959248,FR,,high,
