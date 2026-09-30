@@ -522,6 +522,11 @@ class Builder:
                          "place_type": p.place_type, "modern_country": p.modern_country,
                          "source_page": page_ref(self.place_pages.get(pid, set())) or None,
                          "confidence": "high" if p.gazetteer else "medium"})
+        # rules.yaml place_types: id -> type, where the book says what a place is ("nouveau village de X")
+        for row in rows:
+            if (ptype := (self.rules.get("place_types") or {}).get(row["id"])):
+                row["place_type"] = ptype
+                self.stats["place types set by rules"] += 1
         return rows
 
     def _entity_rows(self, used: set[str]) -> list[dict]:

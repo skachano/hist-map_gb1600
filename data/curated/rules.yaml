@@ -59,6 +59,38 @@ split_realms:
   Sarralbe:    {admin: office-sarralbe, admin_type: office, feudal: lordship-sarralbe, feudal_type: lordship}
   Phalsbourg:  {admin: office-phalsbourg, admin_type: office, feudal: principality-phalsbourg, feudal_type: principality}
 
+# What a place is, where the book says so (place id -> place type)
+place_types:
+  # "avec la saline" (p. 18), the saline of Salzbronn (p. 141); "Silzheim (Sulzen, saline)" (p. 19)
+  saltzbronn: saltworks
+  silzheim: saltworks
+  # new villages: "nouveau village" (pp. 17, 19, 27, 50-51, 64), "futur village" of the 1585 lists
+  # (pp. 64, 114), founded by Louis de Guise in 1628-29 (p. 29)
+  redlach: new_village
+  montdidier: new_village
+  bickenholz: new_village
+  calembourg: new_village
+  hanfgarten: new_village
+  neudorf: new_village
+  remelfing-sierck: new_village
+  lacroix: new_village
+  rodlach: new_village
+  sainte-marguerite: new_village
+  merlebach: new_village
+  henriville: new_village
+  lachambre: new_village
+  porcelette: new_village
+  henridorf: new_village
+  # "le ban du village disparu de Bletting" (p. 62)
+  bletting: deserted_village
+  # fiefs in the book, but as places a castle ("le château de Busbach", p. 98) and villages
+  busbach: castle
+  assviller: village
+  ayol: village
+  diedendorf: village
+  pommern: village
+  struth: village
+
 # Place names as written in the book -> place id (fixes OCR variants, duplicate territories)
 place_aliases:
   office de Phalsbourg-Danne: office-phalsbourg
@@ -296,3 +328,5 @@ geocode:
             note: "manual row (French name with its accent), so no index canton"}
   volmerange: {wikidata: Q22359, lat: 49.16833, lon: 6.44778, name_de: Volmerange-lès-Boulay, name_en: Volmerange-lès-Boulay,
                note: "manual row (the OCR split the name), so no index canton"}
+  deserted-village-roderbann: {approximate: saint-louis, name_de: Roderbann, name_en: Roderbann,
+                               note: "the lost village of the Roderbann, where Saint-Louis was founded in 1628-29 (p. 115)"}
