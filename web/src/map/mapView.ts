@@ -10,7 +10,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 import { MAP_CENTER, MAP_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
-import { CONTESTED, MARQUISATE, OTHER, PRINCIPALITY, SERIES } from "../model/colors";
+import { CONTESTED, MARQUISATE, PRINCIPALITY, REALM_OTHER, SERIES } from "../model/colors";
 import { typesIn } from "../model/territories";
 
 setWorkerUrl(workerUrl);
@@ -154,8 +154,10 @@ export class MapView {
       paint: {
         "fill-color": ["match", ["get", "place_type"], typesIn("office"), SERIES[0], typesIn("lordship"), SERIES[1],
           typesIn("county"), SERIES[2], typesIn("marquisate"), MARQUISATE, typesIn("principality"), PRINCIPALITY,
-          OTHER],
-        "fill-opacity": 0.45,
+          REALM_OTHER],
+        // The neutral grey has no hue to stand out on the grey basemap: only darkness can.
+        "fill-opacity": ["match", ["get", "place_type"], [...typesIn("office"), ...typesIn("lordship"), ...typesIn("county"),
+          ...typesIn("marquisate"), ...typesIn("principality")], 0.45, 0.75],
       } });
     m.addLayer({ id: "terr-line", type: "line", source: "territories", filter: hidden,
       paint: { "line-color": "#fcfcfb", "line-width": 2 } });

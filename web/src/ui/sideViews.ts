@@ -2,7 +2,7 @@
 import type { Dataset, Right } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
-import { MARQUISATE, OTHER, PRINCIPALITY } from "../model/colors";
+import { MARQUISATE, PRINCIPALITY, REALM_OTHER } from "../model/colors";
 import { directHoldings, type Dispute } from "../model/snapshot";
 import { KINDS, type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
@@ -111,7 +111,7 @@ function clamp(year: number, [lo, hi]: [number, number]): number {
 
 const GROUP_COLOUR: Record<RealmGroup, string> = {
   office: SERIES[0], lordship: SERIES[1], county: SERIES[2], marquisate: MARQUISATE, principality: PRINCIPALITY,
-  other: OTHER };
+  other: REALM_OTHER };
 const GROUP_LABEL: Record<RealmGroup, StringKey> = {
   office: "groupOffice", lordship: "groupLordship", county: "groupCounty", marquisate: "groupMarquisate",
   principality: "groupPrincipality", other: "groupOther" };

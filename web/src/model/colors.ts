@@ -17,6 +17,10 @@ export const MARQUISATE = "#4a3aa7";
  *  CVD check (ΔE 9.1) but not the normal-vision floor next to the orange lordships (13.7 < 15), accepted
  *  by choice. The realm names on the map and in the list carry the distinction. */
 export const PRINCIPALITY = "#eda100";
+/** Territories view only: the other realms (condominiums, bans, mairies, courts...). The holders' neutral
+ *  grey (OTHER) vanishes on the grey basemap at the areas' opacity; this is the palette's darker muted
+ *  neutral, so the areas read without taking a hue. */
+export const REALM_OTHER = "#898781";
 export const CONTESTED = "#d03b3b"; // status "critical": always paired with a mark and a label
 
 export function colouredHolders(entities: Map<string, Entity>, pinned?: string[]): string[] {
