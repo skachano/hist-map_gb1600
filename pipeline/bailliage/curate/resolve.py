@@ -145,13 +145,20 @@ class PlaceResolver:
         self.aliases = {": ".join(fold(part) for part in k.split(": ", 1)): v for k, v in aliases.items()}
         self.places: dict[str, ResolvedPlace] = {}
         self._by_key: dict[tuple, str] = {}
+        # Hand-curated places claim their names: the full name exactly, the name without its type
+        # word only when no other manual place of that kind shares it ('Marquisat de Faulquemont'
+        # and 'Seigneurie de Faulquemont' both reduce to 'faulquemont').
+        self._manual_full: dict[tuple[str, str], str] = {}
         self._manual_names: dict[tuple[str, str], str] = {}
+        claims: dict[tuple[str, str], set[str]] = defaultdict(set)
         for m in manual_places:
             p = ResolvedPlace(m["id"], m["kind"], m["name_fr"], manual=True)
             self.places[p.id] = p
             for n in [m["name_fr"], m.get("name_de"), m.get("name_en"), *(m.get("variants") or "").split("|")]:
                 if n:
-                    self._manual_names[(m["kind"], base_name(n))] = m["id"]
+                    self._manual_full[(m["kind"], fold(n))] = m["id"]
+                    claims[(m["kind"], base_name(n))].add(m["id"])
+        self._manual_names = {key: next(iter(ids)) for key, ids in claims.items() if len(ids) == 1}
     def _gazetteer_id(self, row: dict) -> str:
         pid = slug(row["name"])
         if self.gaz.is_shared_name(row["name"]):  # several places share the name: add the canton
@@ -177,13 +184,13 @@ class PlaceResolver:
             ptype = place["place_type"]
             group = "domain" if ptype in DOMAIN_TYPES else ptype
             id_type = self.preferred_types.get(base, ptype) if group == "domain" else ptype
-            pid = self._manual_names.get(("territory", base)) or self._by_key.get((group, base)) \
-                or f"{slug(id_type)}-{slug(base)}"
+            pid = self._manual_full.get(("territory", fold(name))) or self._manual_names.get(("territory", base)) \
+                or self._by_key.get((group, base)) or f"{slug(id_type)}-{slug(base)}"
             self._by_key[(group, base)] = pid
             row = None
         else:
             row = self.gaz.by_label.get(place.get("index_name") or "") or self.gaz.match(name)
-            manual = self._manual_names.get(("settlement", base_name(name)))
+            manual = self._manual_full.get(("settlement", fold(name))) or self._manual_names.get(("settlement", base_name(name)))
             pid = manual or (self._gazetteer_id(row) if row else slug(name))
         p = self.places.get(pid)
         if p is None:

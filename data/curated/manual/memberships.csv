@@ -23,5 +23,11 @@ guerstling,county-dalem,,,,,27,high,
 labruck,county-dalem,,,,,27,high,
 holling,county-dalem,,,,,27,high,
 county-dalem,office-boulay,,,,,27;82,high,"Dalem, au sire de Haraucourt, in the office of Boulay (p. 82)"
-county-dalem,lordship-faulquemont,1629,,exact,,27,high,part of the marquisate of Faulquemont from December 1629
+county-dalem,marquisate-faulquemont,1629,,exact,,27,high,part of the marquisate of Faulquemont from December 1629
 marienthal,lordship-faulquemont,,,,,27,high,one of the places of the lordship (p. 27)
+marquisate-faulquemont,bailliage-allemagne,1629,,exact,,9-10;27,high,
+lordship-faulquemont,marquisate-faulquemont,1629,,exact,,27,high,
+lordship-faulquemont,bailliage-allemagne,,1628,,exact,9;11;22,high,directly in the bailiwick until it became part of the marquisate
+lordship-volmerange,marquisate-faulquemont,1629,,exact,,27,high,
+lordship-volmerange,office-boulay,,1628,,exact,16;62,high,
+volmerange,lordship-volmerange,,,,,27;62,high,

@@ -54,7 +54,6 @@ baerenthal,48.975,7.5175,Q284762,,Baerenthal,Baerenthal,Baerenthal,wikidata,high
 bailiwick-cercle-du-rhin-superieur,,,,,Bailliage de Cercle du Rhin supérieur,Bellistum Cercle du Rhin supérieur,Bailiwick of Cercle du Rhin supérieur,territory,medium,no seat or located members
 bailiwick-episcopal-de-vic,49.01869,6.69798,,,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,territory,medium,centre of 27 member settlement(s)
 bailiwick-nancy,,,,,Bailliage de Nancy,Bellistum Nancy,Bailiwick of Nancy,territory,medium,no seat or located members
-bailiwick-phalsbourg,48.76778,7.25833,,,Bailliage de Phalsbourg,Bellistum Phalsbourg,Bailiwick of Phalsbourg,territory,medium,seat: phalsbourg
 bailiwick-vie,48.78222,6.53139,,,Bailliage de Vie,Bellistum Vic-sur-Seille,Bailiwick of Vic-sur-Seille,territory,medium,seat: vic-sur-seille
 bailliage-allemagne,49.39852,6.7972,,,Bailliage d'Allemagne,Bellistum Allemagne,Bailiwick of Allemagne,territory,medium,centre of 12 member settlement(s)
 ballering,49.02257,6.97119,,12317687,Ballering,,,geonames,high,geonames exact
@@ -703,7 +702,7 @@ lordship-chevalin,49.09333,6.50472,,,Seigneurie de Chevalin,Herrschaft Chevalin,
 lordship-col-de-cygne,48.84004,6.97829,,,Seigneurie du col de Cygne,Herrschaft col de Cygne,Lordship of col de Cygne,territory,medium,centre of 7 member settlement(s)
 lordship-dagstuhl,49.60646,6.96935,,,Seigneurie de Dagstuhl,Herrschaft Dagstuhl,Lordship of Dagstuhl,territory,medium,centre of 1 member settlement(s)
 lordship-danne-et-quatre-vents,,,,,Seigneurie de Danne et Quatre-Vents,Herrschaft Danne et Quatre-Vents,Lordship of Danne et Quatre-Vents,territory,medium,no seat or located members
-lordship-diemeringen,48.94167,7.18667,,,Seigneurie de Diemeringen,Herrschaft Diemeringen,Lordship of Diemeringen,territory,medium,seat: diemeringen
+lordship-diemeringen,48.94167,7.18667,,,Principauté de Diemeringen,Fürstentum Diemeringen,Principality of Diemeringen,territory,medium,seat: diemeringen
 lordship-distroff,49.33194,6.26667,,,Seigneurie de Distroff,Herrschaft Distroff,Lordship of Distroff,territory,medium,seat: distroff
 lordship-faulquemont,49.04111,6.59917,,,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,territory,medium,seat: faulquemont
 lordship-fenetrange,48.84556,7.01972,,,Seigneurie de Fénétrange,Herrschaft Fénétrange,Lordship of Fénétrange,territory,medium,seat: fenetrange
@@ -739,6 +738,7 @@ lordship-thicourt,48.98889,6.55611,,,Seigneurie de Thicourt,Herrschaft Thicourt,
 lordship-turquestein,48.58808,7.03931,,,Seigneurie de Turquestein,Herrschaft Burg Turquestein,Lordship of Château de Turquestein,territory,medium,seat: turquestein
 lordship-val-de-nalbach,49.37962,6.80111,,,Seigneurie de Val de Nalbach,Herrschaft Val de Nalbach,Lordship of Val de Nalbach,territory,medium,centre of 5 member settlement(s)
 lordship-varize,49.13472,6.45806,,,Terre de Varize,Terre de Varize,Terre de Varize,territory,medium,seat: varize
+lordship-volmerange,49.16833,6.44778,,,Seigneurie de Volmerange,Herrschaft Volmerange-lès-Boulay,Lordship of Volmerange-lès-Boulay,territory,medium,seat: volmerange
 lordship-vry-devant-metz,49.22823,6.43382,,,Seigneurie de Vry-devant-Metz,Herrschaft Vry-devant-Metz,Lordship of Vry-devant-Metz,territory,medium,centre of 1 member settlement(s)
 lordship-weinsberg,,,,,Seigneurie de Weinsberg,Herrschaft Weinsberg,Lordship of Weinsberg,territory,medium,no seat or located members
 lorquin,48.66917,6.99667,Q22298,,Lorquin,Lorquin,Lorquin,wikidata,high,no canton anchor
@@ -768,8 +768,9 @@ marienthal,49.08805,6.81656,Q55598545,,Marienthal,,Mariendhal,wikidata,high,
 marimont,48.88917,6.78333,Q21947,,Marimont,Marimont-lès-Bénestroff,Marimont-lès-Bénestroff,wikidata,high,
 marmoutier,48.69,7.38111,Q22523,,Marmoutier,Marmoutier,Marmoutier,wikidata,high,
 marpingen,49.45,7.05,Q630853,,Marpingen,Marpingen,Marpingen,wikidata,high,
-marquisate-nomeny,48.88039,6.35196,,,Marquisat de Nomeny,Markgrafschaft Nomeny,Marquisate of Nomeny,territory,medium,centre of 10 member settlement(s)
-marquisate-pont-a-mousson,48.90444,6.05417,,,Marquisat de Pont-à-Mousson,Markgrafschaft Pont-à-Mousson,Marquisate of Pont-à-Mousson,territory,medium,seat: pont-a-mousson
+marquisate-faulquemont,49.04111,6.59917,,,Marquisat de Faulquemont,Marquisat Faulquemont,Marquisate of Faulquemont,territory,medium,seat: faulquemont
+marquisate-nomeny,48.88039,6.35196,,,Marquisat de Nomeny,Marquisat Nomeny,Marquisate of Nomeny,territory,medium,centre of 10 member settlement(s)
+marquisate-pont-a-mousson,48.90444,6.05417,,,Marquisat de Pont-à-Mousson,Marquisat Pont-à-Mousson,Marquisate of Pont-à-Mousson,territory,medium,seat: pont-a-mousson
 marsal,48.78917,6.60917,Q21973,,Marsal,Marsal,Marsal,wikidata,high,no canton anchor
 marthille,48.92444,6.56,Q21951,,Marthille,Marthille,Marthille,wikidata,high,
 maxstadt,49.04444,6.79361,Q21921,,Maxstadt,Maxstadt,Maxstadt,wikidata,high,
@@ -906,7 +907,7 @@ office-dieuze,48.81222,6.71972,,,Office de Dieuze,Amt Dieuze,Office of Dieuze,te
 office-herange,48.775,7.16972,,,Office de Hérange,Amt Hérange,Office of Hérange,territory,medium,seat: herange
 office-hombourg-haut,49.09076,6.73052,,,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,territory,medium,centre of 47 member settlement(s)
 office-merzig,49.44222,6.6375,,,Office de Merzig,Office de Merzig,Office de Merzig,territory,medium,seat: merzig
-office-phalsbourg,48.76778,7.25833,,,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
+office-phalsbourg,48.76778,7.25833,,,Principauté de Phalsbourg,Fürstentum Phalsbourg,Principality of Phalsbourg,territory,medium,seat: phalsbourg
 office-sarralbe,48.99611,7.02778,,,Office de Sarralbe,Amt Sarralbe,Office of Sarralbe,territory,medium,seat: sarralbe
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
 office-sarrewerden-et-herbitzheim,,,,,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,territory,medium,no seat or located members
@@ -1155,7 +1156,6 @@ uhrviller,48.95,7.64389,,,Urviller,,,approximate,low,not in Wikidata/GeoNames; p
 urbach,49.0993,7.3272,Q3552141,,Urbach,Urbach,Urbach,wikidata,high,
 utweiler,49.1259,7.30005,Q2503664,,Utweiler,Utweiler,Utweiler,wikidata,high,
 v-olksherg,48.94694,7.29861,Q21596,,Volksberg,Volksberg,Volksberg,wikidata,high,
-v-olmerange,49.16833,6.44778,Q22359,,Volmerange,Volmerange-lès-Boulay,Volmerange-lès-Boulay,wikidata,high,
 vahl-dieuze,48.91306,6.78611,Q21726,,Vahl,Vahl-lès-Bénestroff,Vahl-lès-Bénestroff,wikidata,high,
 vahl-ebersing,49.04972,6.75333,Q22326,,Vahl-Ebersing,Vahl-Ebersing,Vahl-Ebersing,wikidata,high,
 vahl-faulquemont,49.02639,6.625,Q21990,,Vahl-lès-Faulquemont,Vahl-lès-Faulquemont,Vahl-lès-Faulquemont,wikidata,high,
@@ -1191,6 +1191,7 @@ vittoncourt,49.02056,6.42972,Q21658,,Vittoncourt,Vittoncourt,Vittoncourt,wikidat
 voelklingen,49.25162,6.85873,,2816630,Vœlklingen,,,geonames,medium,geonames exact
 voellerdingen,48.96167,7.14083,Q21567,,Voellerdingen,Vœllerdingen,Vœllerdingen,wikidata,high,
 volkrange,49.35722,6.09,Q3562799,,Volkrange,Volkrange,Volkrange,wikidata,high,
+volmerange,49.16833,6.44778,Q22359,,Volmerange,Volmerange-lès-Boulay,Volmerange-lès-Boulay,override,high,"manual row (the OCR split the name), so no index canton"
 volmunster,49.12167,7.35611,Q22035,,Volmunster,Volmunster,Volmunster,wikidata,high,
 volstroff,49.31139,6.25917,Q22325,,Volstroff,Volstroff,Volstroff,wikidata,high,
 voyer,48.6525,7.07972,Q22174,,Voyer,Voyer,Voyer,wikidata,high,

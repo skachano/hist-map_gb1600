@@ -2,7 +2,7 @@
 import type { Dataset, Right } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
-import { OTHER } from "../model/colors";
+import { MARQUISATE, OTHER, PRINCIPALITY } from "../model/colors";
 import { directHoldings, type Dispute } from "../model/snapshot";
 import { type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
@@ -109,9 +109,14 @@ function clamp(year: number, [lo, hi]: [number, number]): number {
   return Math.min(Math.max(year, lo), hi);
 }
 
-const GROUP_COLOUR: Record<RealmGroup, string> = { office: SERIES[0], lordship: SERIES[1], county: SERIES[2], other: OTHER };
+const GROUP_COLOUR: Record<RealmGroup, string> = {
+  office: SERIES[0], lordship: SERIES[1], county: SERIES[2], marquisate: MARQUISATE, principality: PRINCIPALITY,
+  other: OTHER };
 const GROUP_LABEL: Record<RealmGroup, StringKey> = {
-  office: "groupOffice", lordship: "groupLordship", county: "groupCounty", other: "groupOther" };
+  office: "groupOffice", lordship: "groupLordship", county: "groupCounty", marquisate: "groupMarquisate",
+  principality: "groupPrincipality", other: "groupOther" };
+/** Legend order: the administrative districts, then the feudal titles by rank, then the rest. */
+const GROUP_ORDER: RealmGroup[] = ["office", "principality", "marquisate", "county", "lordship", "other"];
 
 /** Territories view: level and neighbour switches, the kinds of realm, and every realm shown. */
 export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: State, store: Store,
@@ -133,7 +138,7 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
     h("label", { class: "check" }, h("input", { type: "checkbox", checked: !!state.neighbours,
       onchange: (e: Event) => store.set({ neighbours: (e.target as HTMLInputElement).checked || undefined }) }),
     ` ${t("neighbours", lang)}`),
-    h("ul", { class: "groups" }, ...(["office", "lordship", "county", "other"] as RealmGroup[]).map((g) => h("li", {},
+    h("ul", { class: "groups" }, ...GROUP_ORDER.map((g) => h("li", {},
       h("span", { class: "swatch", style: `--c:${GROUP_COLOUR[g]}` }), ` ${t(GROUP_LABEL[g], lang)}`,
       h("span", { class: "count" }, ` ${groups.get(g) ?? 0}`)))),
     h("ul", { class: "realms" }, ...[...shown].sort((a, b) => placeName(a).localeCompare(placeName(b), lang)).map((id) =>

@@ -25,8 +25,9 @@ describe("territory hierarchy", () => {
     expect(membersOf("county-sarrewerden", 1620, places).settlements).toEqual(["bouquenom"]);
   });
 
-  it("groups realm types into three coloured kinds and the rest", () => {
-    expect([realmGroup("castellany"), realmGroup("fief"), realmGroup("principality"), realmGroup("condominium")])
-      .toEqual(["office", "lordship", "county", "other"]);
+  it("groups realm types into five coloured kinds and the rest", () => {
+    expect([realmGroup("castellany"), realmGroup("fief"), realmGroup("county"), realmGroup("marquisate"),
+      realmGroup("principality"), realmGroup("condominium")])
+      .toEqual(["office", "lordship", "county", "marquisate", "principality", "other"]);
   });
 });

@@ -238,3 +238,5 @@ geocode:
              note: "German name Mörchingen (the book: Morchingen)"}
   eblange: {wikidata: Q21674, lat: 49.22333, lon: 6.48194, name_de: Éblange, name_en: Éblange,
             note: "manual row (French name with its accent), so no index canton"}
+  volmerange: {wikidata: Q22359, lat: 49.16833, lon: 6.44778, name_de: Volmerange-lès-Boulay, name_en: Volmerange-lès-Boulay,
+               note: "manual row (the OCR split the name), so no index canton"}

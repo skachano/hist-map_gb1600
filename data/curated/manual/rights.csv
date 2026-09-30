@@ -70,3 +70,8 @@ nebing,manorial_lord,nicolas-de-pullenoy,,held,,,1625,,attested,,,27,high,
 anzeling,high_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II; the guard of Sierck castle and the general aid were excepted. He fell in January 1625
 anzeling,middle_low_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II
 hestroff,high_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II; the guard of Sierck castle and the general aid were excepted. He fell in January 1625
+marquisate-faulquemont,suzerain,duchy-lorraine,,held,,,1629,,exact,,,27,high,
+marquisate-faulquemont,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,high,
+lordship-volmerange,suzerain,duchy-lorraine,,held,,,,,,,,62,high,
+lordship-volmerange,manorial_lord,elisee-d-haraucourt,1/2,pledged,,,1589,1628,exact,,,62;233,high,"the duke's half, pledged for 6,000 francs (p. 252: since 1592)"
+lordship-volmerange,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,high,part of the marquisate

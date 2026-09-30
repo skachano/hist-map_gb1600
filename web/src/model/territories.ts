@@ -5,13 +5,14 @@ import { isActive } from "./snapshot";
 
 export const BAILIWICK = "bailliage-allemagne";
 
-/** Kinds of realm, three coloured groups plus the rest (see model/colors.ts). */
-const GROUPS: Record<string, "office" | "lordship" | "county"> = {
+/** Kinds of realm, five coloured groups plus the rest (see model/colors.ts). The feudal titles have a
+ *  group each, by rank below the duchy: principality, marquisate, county, lordship. */
+const GROUPS: Record<string, Exclude<RealmGroup, "other">> = {
   office: "office", castellany: "office", provostship: "office", receivership: "office", bailiwick: "office",
   lordship: "lordship", fief: "lordship", barony: "lordship", advocacy: "lordship", allod: "lordship",
-  county: "county", principality: "county", marquisate: "county",
+  county: "county", marquisate: "marquisate", principality: "principality",
 };
-export type RealmGroup = "office" | "lordship" | "county" | "other";
+export type RealmGroup = "office" | "principality" | "marquisate" | "county" | "lordship" | "other";
 
 export function realmGroup(placeType: string): RealmGroup {
   return GROUPS[placeType] ?? "other";

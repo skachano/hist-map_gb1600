@@ -28,9 +28,14 @@ honzrath,settlement,Honzrath,Honzrath,Honzrath,Hontzgerode,free_village,49.4272,
 haustadt,settlement,Haustadt,Haustadt,Haustadt,,free_village,49.4133,6.7242,Q1591317,,DE,10;133;195-197,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Michelbach (p. 10)"
 michelbach,settlement,Michelbach,Michelbach,Michelbach,,free_village,49.467,6.833,Q6836676,,DE,10;15;84;137,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Haustadt (p. 10)"
 remilly,settlement,Rémilly,Remilly,Rémilly,Remilly,village,49.01361,6.39333,Q22912,,FR,10;78;82;132,high,German name Remilly (1871-1918); the book writes Remilly
-lordship-faulquemont,territory,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont|marquisat de Faulquemont,lordship,49.04111,6.59917,,,,9-10;16;27;63;82,high,"a marquisate from December 1629 (p. 27), so called in the overview of pp. 9-10"
+lordship-faulquemont,territory,Seigneurie de Faulquemont,Herrschaft Faulquemont,Lordship of Faulquemont,la terre de Faulquemont|office de Faulquemont|seigneurie de Faulquemont,lordship,49.04111,6.59917,,,,11;16;27;63;82,high,part of the marquisate of Faulquemont from December 1629 (p. 27)
 eblange,settlement,Éblange,Éblange,Éblange,Eblange|Ebling|Ebling (Éblange)|Oblingen,village,49.22333,6.48194,Q21674,,FR,16;81,high,
 county-dalem,territory,Comté de Dalem,Grafschaft Dalem,County of Dalem,baronnie de Dalem|comté de Dalem,county,49.24056,6.61056,,,,27,high,"a barony held in fief of Lorraine, made a county in 1620 and joined to the marquisate of Faulquemont in 1629 (p. 27)"
+marquisate-faulquemont,territory,Marquisat de Faulquemont,Marquisat Faulquemont,Marquisate of Faulquemont,marquisat de Faulquemont,marquisate,49.04111,6.59917,,,,9-10;25;27,high,"created by Charles IV in December 1629 for the Haraucourt: the lordship of Faulquemont, the county of Dalem and the lordship of Volmerange (p. 27)"
+lordship-volmerange,territory,Seigneurie de Volmerange,Herrschaft Volmerange,Lordship of Volmerange,seigneurie de Volmerange,lordship,49.16833,6.44778,,,,27;62,high,"Haraucourt's lordship at Volmerange-lès-Boulay, part of the marquisate of Faulquemont from 1629 (p. 27)"
+volmerange,settlement,Volmerange,Volmerange-lès-Boulay,Volmerange-lès-Boulay,V olmerange|Wolmeringen,village,49.16833,6.44778,Q22359,,FR,16;62;146;233;252,high,Volmerange-lès-Boulay; the OCR splits the name (V olmerange)
+lordship-diemeringen,territory,Principauté de Diemeringen,Fürstentum Diemeringen,Principality of Diemeringen,Diemeringen|principauté de Diemeringen|seigneurie de Diemeringen,principality,48.94167,7.18667,,,,106-107;124,high,"la principauté impériale de Diemeringen, reichsunmittelbar, with Dehlingen, Diemeringen, Ratzviller and the old ban of Weyer (p. 106)"
+office-phalsbourg,territory,Principauté de Phalsbourg,Fürstentum Pfalzburg,Principality of Phalsbourg,office de Phalsbourg|office de Phalsbourg-Danne|principauté de Phalsbourg|seigneurie de Phalsbourg,principality,48.76778,7.25833,,,,19;21-22;29;73;86;98-99;114;123-124,high,an office of Lorraine; Louis de Guise took the title prince of Phalsbourg in 1624 and was made an immediate prince of the Empire for it in 1629 (p. 29)
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -85,7 +90,6 @@ baerenthal,settlement,Baerenthal,Baerenthal,Baerenthal,,village,48.975,7.5175,Q2
 bailiwick-cercle-du-rhin-superieur,territory,Bailliage de Cercle du Rhin supérieur,Bellistum Cercle du Rhin supérieur,Bailiwick of Cercle du Rhin supérieur,oberrheinischer Kreis,bailiwick,,,,,,,medium,
 bailiwick-episcopal-de-vic,territory,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,,bailiwick,49.01869,6.69798,,,,78,medium,
 bailiwick-nancy,territory,Bailliage de Nancy,Bellistum Nancy,Bailiwick of Nancy,,bailiwick,,,,,,,medium,
-bailiwick-phalsbourg,territory,Bailliage de Phalsbourg,Bellistum Phalsbourg,Bailiwick of Phalsbourg,,bailiwick,48.76778,7.25833,,,,113-114,medium,
 bailiwick-vie,territory,Bailliage de Vie,Bellistum Vic-sur-Seille,Bailiwick of Vic-sur-Seille,bailliage de Vic,bailiwick,48.78222,6.53139,,,,,medium,
 ballering,settlement,Ballering,,,,village,49.02257,6.97119,,12317687,FR,,high,
 ballern,settlement,Ballern,Ballern,Ballern,Baldringen,village,49.4486,6.61,Q805211,,DE,54-55,high,
@@ -720,7 +724,6 @@ lordship-chevalin,territory,Seigneurie de Chevalin,Herrschaft Chevalin,Lordship 
 lordship-col-de-cygne,territory,Seigneurie du col de Cygne,Herrschaft col de Cygne,Lordship of col de Cygne,La seigneurie du col de Cygne|Schwanenhals,lordship,48.84004,6.97829,,,,111,medium,
 lordship-dagstuhl,territory,Seigneurie de Dagstuhl,Herrschaft Dagstuhl,Lordship of Dagstuhl,,lordship,49.60646,6.96935,,,,,medium,
 lordship-danne-et-quatre-vents,territory,Seigneurie de Danne et Quatre-Vents,Herrschaft Danne et Quatre-Vents,Lordship of Danne et Quatre-Vents,,lordship,,,,,,114,medium,
-lordship-diemeringen,territory,Seigneurie de Diemeringen,Herrschaft Diemeringen,Lordship of Diemeringen,Diemeringen|principauté de Diemeringen,lordship,48.94167,7.18667,,,,106-107;124,medium,
 lordship-distroff,territory,Seigneurie de Distroff,Herrschaft Distroff,Lordship of Distroff,,lordship,49.33194,6.26667,,,,,medium,
 lordship-fenetrange,territory,Seigneurie de Fénétrange,Herrschaft Fénétrange,Lordship of Fénétrange,la terre de Fénétrange|seigneurie commune de Fénétrange|seigneurie de Fénétrange,lordship,48.84556,7.01972,,,,11;19;72-73;86;98;110-111;124,medium,
 lordship-forbach,territory,Seigneurie de Forbach,Herrschaft Forbach,Lordship of Forbach,comté de Forbach|office de Forbach|seigneurie de Forbach,lordship,49.18806,6.9,,,,67-68;82;99;123;146,medium,
@@ -784,8 +787,8 @@ marienthal,settlement,Marienthal,,Mariendhal,,village,49.08805,6.81656,Q55598545
 marimont,settlement,Marimont,Marimont-lès-Bénestroff,Marimont-lès-Bénestroff,Marimont-le-Château|Marimont-lès-Albestroff|Moersberg|Morsberg|Morsberg ou Marimont|Morsperg,castle,48.88917,6.78333,Q21947,,FR,74;80;83;105,high,
 marmoutier,settlement,Marmoutier,Marmoutier,Marmoutier,,small_town,48.69,7.38111,Q22523,,FR,120,high,
 marpingen,settlement,Marpingen,Marpingen,Marpingen,,village,49.45,7.05,Q630853,,DE,57-58;132,high,
-marquisate-nomeny,territory,Marquisat de Nomeny,Markgrafschaft Nomeny,Marquisate of Nomeny,,marquisate,48.88039,6.35196,,,,21;98;116;119,medium,
-marquisate-pont-a-mousson,territory,Marquisat de Pont-à-Mousson,Markgrafschaft Pont-à-Mousson,Marquisate of Pont-à-Mousson,,marquisate,48.90444,6.05417,,,,117,medium,
+marquisate-nomeny,territory,Marquisat de Nomeny,Marquisat Nomeny,Marquisate of Nomeny,,marquisate,48.88039,6.35196,,,,21;98;116;119,medium,
+marquisate-pont-a-mousson,territory,Marquisat de Pont-à-Mousson,Marquisat Pont-à-Mousson,Marquisate of Pont-à-Mousson,,marquisate,48.90444,6.05417,,,,117,medium,
 marsal,settlement,Marsal,Marsal,Marsal,,town,48.78917,6.60917,Q21973,,FR,21,high,
 marthille,settlement,Marthille,Marthille,Marthille,,village,48.92444,6.56,Q21951,,FR,,high,
 maxstadt,settlement,Maxstadt,Maxstadt,Maxstadt,,village,49.04444,6.79361,Q21921,,FR,64;67,high,
@@ -919,7 +922,6 @@ office-boulay,territory,Office de Boulay,Amt Boulay-Moselle,Office of Boulay-Mos
 office-dieuze,territory,Office de Dieuze,Amt Dieuze,Office of Dieuze,châtellenie de Dieuze|office de Dieuze,office,48.81222,6.71972,,,,20;75;77;99,medium,
 office-herange,territory,Office de Hérange,Amt Hérange,Office of Hérange,Hérange,office,48.775,7.16972,,,,115,medium,
 office-hombourg-haut,territory,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,Hombourg|Hombourg et Saint-Avold|Hombourg-l'Évêque|Saint-Étienne de Hombourg|châtellenie épiscopale de Hombourg|châtellenie épiscopale de Hombourg-Haut|la châtellenie de Hombourg-Haut|office de Hombourg,office,49.09076,6.73052,,,,21;63-66;87;96;100-101;123,medium,
-office-phalsbourg,territory,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,office de Phalsbourg-Danne|principauté de Phalsbourg|seigneurie de Phalsbourg,office,48.76778,7.25833,,,,21-22;73;86;98-99;114;123-124,medium,
 office-sarralbe,territory,Office de Sarralbe,Amt Sarralbe,Office of Sarralbe,châtellenie de Sarralbe|office de Sarralbe|terre de Sarralbe,office,48.99611,7.02778,,,,21;71-72;77;97-99,medium,
 office-sarreguemines,territory,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,châtellenie de Sarreguemines|office de Sarreguemines,office,49.11056,7.06722,,,,68-69;87;99;106,medium,
 office-sarrewerden-et-herbitzheim,territory,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,Herbitzheim,office,,,,,,,medium,
@@ -1157,7 +1159,6 @@ uhrviller,settlement,Urviller,,,Uhrviller,village,48.95,7.64389,,,FR,105,high,
 urbach,settlement,Urbach,Urbach,Urbach,,village,49.0993,7.3272,Q3552141,,FR,69;83;144-145,high,
 utweiler,settlement,Utweiler,Utweiler,Utweiler,,village,49.1259,7.30005,Q2503664,,DE,,high,
 v-olksherg,settlement,Volksberg,Volksberg,Volksberg,V olksherg,village,48.94694,7.29861,Q21596,,FR,,high,
-v-olmerange,settlement,Volmerange,Volmerange-lès-Boulay,Volmerange-lès-Boulay,V olmerange|Wolmeringen,village,49.16833,6.44778,Q22359,,FR,16;62;146,high,
 vahl-dieuze,settlement,Vahl,Vahl-lès-Bénestroff,Vahl-lès-Bénestroff,Vahl-lès-Dieuze|Walen,village,48.91306,6.78611,Q21726,,FR,74;83,high,
 vahl-ebersing,settlement,Vahl-Ebersing,Vahl-Ebersing,Vahl-Ebersing,,village,49.04972,6.75333,Q22326,,FR,,high,
 vahl-faulquemont,settlement,Vahl-lès-Faulquemont,Vahl-lès-Faulquemont,Vahl-lès-Faulquemont,Vahl|Wahlen,village,49.02639,6.625,Q21990,,FR,,high,

@@ -19,7 +19,6 @@ badonviller,バドンヴィレ,wikidata
 bailiwick-cercle-du-rhin-superieur,Cercle du Rhin supérieur バイイ管区,french + type
 bailiwick-episcopal-de-vic,Bailliage épiscopal de Vic バイイ管区,french + type
 bailiwick-nancy,Nancy バイイ管区,french + type
-bailiwick-phalsbourg,ファルスブールバイイ管区,seat + type
 bailiwick-vie,ヴィック＝シュル＝セーユバイイ管区,seat + type
 bailliage-allemagne,ドイツ・バイイ管区,manual
 ban-albeschau,Albeschau バン,french + type
@@ -177,7 +176,7 @@ lordship-chevalin,Chevalin 領,french + type
 lordship-col-de-cygne,col de Cygne 領,french + type
 lordship-dagstuhl,Dagstuhl 領,french + type
 lordship-danne-et-quatre-vents,Danne et Quatre-Vents 領,french + type
-lordship-diemeringen,Diemeringen 領,french + type
+lordship-diemeringen,ディーメリンゲン侯国,manual
 lordship-distroff,Distroff 領,french + type
 lordship-faulquemont,フォルクモン領,seat + type
 lordship-fenetrange,フェネトランジュ領,seat + type
@@ -213,6 +212,7 @@ lordship-thicourt,Thicourt 領,french + type
 lordship-turquestein,Turquestein 領,french + type
 lordship-val-de-nalbach,Val de Nalbach 領,french + type
 lordship-varize,Varize 領,french + type
+lordship-volmerange,ヴォルムランジュ領,manual
 lordship-vry-devant-metz,Vry-devant-Metz 領,french + type
 lordship-weinsberg,Weinsberg 領,french + type
 louis-de-guise,ルイ・ド・ギーズ（ファルスブール公）,manual
@@ -220,6 +220,7 @@ luttange,ルターニュ,wikidata
 macheren,マシュラン,wikidata
 marmoutier,マルムーティエ,wikidata
 marpingen,マルピンゲン,wikidata
+marquisate-faulquemont,フォルクモン侯爵領,manual
 marquisate-nomeny,Nomeny 侯爵領,french + type
 marquisate-pont-a-mousson,ポンタ＝ムッソン侯爵領,seat + type
 marsal,マルサル,wikidata
@@ -269,7 +270,7 @@ office-dieuze,ディウーズ管区,seat + type
 office-herange,Hérange 管区,french + type
 office-hombourg-haut,オンブール＝オー管区,manual
 office-merzig,メルツィヒ共同統治地,seat + type
-office-phalsbourg,ファルスブール管区,seat + type
+office-phalsbourg,ファルスブール侯国,manual
 office-sarralbe,サラルブ管区,seat + type
 office-sarreguemines,サルグミーヌ管区,seat + type
 office-sarrewerden-et-herbitzheim,サールヴェルデン・ヘルビッツハイム管区,manual
@@ -331,6 +332,7 @@ trulben,トルルベン,wikidata
 vaudrevange,ヴァラーファンゲン,wikidata
 vic-sur-seille,ヴィック＝シュル＝セーユ,wikidata
 vinningen,ヴィニンゲン,wikidata
+volmerange,ヴォルムランジュ,manual
 w-rth,ヴルト,wikidata
 wadern,ヴァーダーン,wikidata
 wadrill,ヴァドリル (ヴァーダーン),wikidata

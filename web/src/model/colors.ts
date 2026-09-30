@@ -9,6 +9,14 @@ import type { Entity } from "../data/types";
 
 export const SERIES = ["#2a78d6", "#eb6834", "#1baf7a"];
 export const OTHER = "#c3c2b7";
+/** Territories view only: marquisates, a fourth kind of realm. Violet (categorical slot 7) is the one
+ *  fourth hue that validates all-pairs against SERIES and OTHER on a map (dataviz checker: worst CVD
+ *  ΔE 9.2, normal-vision 16.3); realm names are always labelled on the map and listed beside it. */
+export const MARQUISATE = "#4a3aa7";
+/** Territories view only: principalities. No fifth hue validates on a map; yellow (slot 4) passes the
+ *  CVD check (ΔE 9.1) but not the normal-vision floor next to the orange lordships (13.7 < 15), accepted
+ *  by choice. The realm names on the map and in the list carry the distinction. */
+export const PRINCIPALITY = "#eda100";
 export const CONTESTED = "#d03b3b"; // status "critical": always paired with a mark and a label
 
 export function colouredHolders(entities: Map<string, Entity>, pinned?: string[]): string[] {
