@@ -134,6 +134,9 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
   const levelButton = (value: number, key: StringKey) => h("button",
     { "aria-pressed": String(!state.kind && level === value), onclick: () => store.set({ level: value, kind: undefined }) },
     t(key, lang));
+  const hierarchyButton = (feudal: boolean, key: StringKey) => h("button",
+    { "aria-pressed": String(!state.kind && !!state.feudal === feudal),
+      onclick: () => store.set({ feudal: feudal || undefined, kind: undefined }) }, t(key, lang));
   const vocab = data.meta.vocab.place_types;
   const kindLabel = (type: string) => {
     const l = label(vocab[type], lang, type);
@@ -152,8 +155,11 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
     }));
   fill(root,
     h("h2", {}, `${t("realmsIn", lang)} ${year} (${shown.length})`),
+    h("div", { class: "levels hierarchy", role: "group", "aria-label": t("hierarchy", lang) },
+      hierarchyButton(false, "hierarchyAdmin"), hierarchyButton(true, "hierarchyFeudal")),
     h("div", { class: "levels", role: "group", "aria-label": t("level", lang) },
-      levelButton(1, "level1"), levelButton(2, "level2"), levelButton(0, "level0")),
+      levelButton(1, state.feudal ? "level1Feudal" : "level1"), levelButton(2, state.feudal ? "level2Feudal" : "level2"),
+      levelButton(0, "level0")),
     h("label", { class: "kind" }, `${t("kindOfRealm", lang)} `, kindMenu),
     h("label", { class: "check" }, h("input", { type: "checkbox", checked: !!state.neighbours,
       onchange: (e: Event) => store.set({ neighbours: (e.target as HTMLInputElement).checked || undefined }) }),

@@ -104,12 +104,7 @@ eppelborn,bailliage-allemagne,1608,,,,96,high,
 hoppstetten,bailliage-allemagne,,,,,10,high,
 kostenbach,bailliage-allemagne,,,,,10,high,
 longeville,bailliage-allemagne,,,,,11,high,
-lordship-faulquemont,bailliage-allemagne,,1628,,exact,9;11;22,high,directly in the bailiwick until it became part of the marquisate
 lordship-fenetrange,bailliage-allemagne,,,,,9;22,high,
-lordship-forbach,bailliage-allemagne,,,,,9;11;22,high,
-lordship-marimont,bailliage-allemagne,,,,,10-11;22;83,high,
-lordship-morhange,bailliage-allemagne,1585,,,,10-11;20;22,high,
-lordship-puttelange,bailliage-allemagne,,,,,9;11;22,high,
 lordship-saint-avold,bailliage-allemagne,,,,,11,high,
 lordship-sarreck,bailliage-allemagne,,,,,9;11;22,high,
 marquisate-faulquemont,bailliage-allemagne,1629,,exact,,9-10;27,high,
@@ -117,13 +112,17 @@ marsal,bailliage-allemagne,,,,,11,high,
 mittelbollenbach,bailliage-allemagne,,,,,10,high,
 nennig,bailliage-allemagne,,,,,10,high,
 nittel-sur-moselle,bailliage-allemagne,,,,,10,high,
-office-berus,bailliage-allemagne,,,,,9;11;22,high,
-office-boulay,bailliage-allemagne,,,,,9;11;22,high,
+office-berus,bailliage-allemagne,,,,,11;22,high,
+office-boulay,bailliage-allemagne,,,,,22,high,
 office-dieuze,bailliage-allemagne,,,,,10-11;22;83,high,
+office-faulquemont,bailliage-allemagne,,,,,9;11;22;63,high,the office of Faulquemont (p. 63) among the units of the bailiwick
+office-forbach,bailliage-allemagne,,,,,9;11;22,high,shared lands of an office and its fief (rules.yaml split_realms)
 office-hombourg-haut,bailliage-allemagne,1600,,,,9;11;22,high,
 office-merzig,bailliage-allemagne,,,,,14,,
+office-morhange,bailliage-allemagne,,,,,10,high,
 office-phalsbourg,bailliage-allemagne,,,,,9;11;22,high,
-office-sarralbe,bailliage-allemagne,,,,,9;11;22,high,
+office-puttelange,bailliage-allemagne,,,,,9,high,
+office-sarralbe,bailliage-allemagne,,,,,9;22,high,
 office-sarreguemines,bailliage-allemagne,,,,,9;11;22,high,
 office-sarrewerden-et-herbitzheim,bailliage-allemagne,,,,,22,high,
 office-schaumberg,bailliage-allemagne,,,,,9;11;22,high,
@@ -131,8 +130,6 @@ office-sierck,bailliage-allemagne,,,,,11-12,,
 office-siersberg,bailliage-allemagne,,,,,9;11;22,high,
 office-vaudrevange,bailliage-allemagne,,,,,9;11;22,high,
 principality-lixheim,bailliage-allemagne,1623,,exact,,12;21,high,'Le bailliage s'agrandit en 1623 de l'office de Lixheim' (p. 12); bought from the Elector Palatine in 1623 (p. 21).
-provostship-insming,bailliage-allemagne,,,,,11,high,
-provostship-ketternostern,bailliage-allemagne,,,,,10,high,
 provostship-sarrebourg,bailliage-allemagne,,,,,9;22,high,
 rathen,bailliage-allemagne,,,,,10,high,
 reinange,bailliage-allemagne,,,,,10,high,
@@ -168,6 +165,7 @@ launstroff,berg-nennig,,,,,81,high,
 aussen,bettingen,,,,,57,high,
 goldhach,bettingen,,,,,57,high,
 gresaubach,bettingen,,,,,57,high,
+albestroff,castellany-albestroff,,,,,78,high,the unit's own seat: 'Châtellenie d'Albestroff' (seat village)
 ban-val-de-gueblange,castellany-albestroff,,,,,78,high,
 givricourt,castellany-albestroff,,,,,78,high,
 hazembourg,castellany-albestroff,,,,,78,high,
@@ -200,17 +198,39 @@ ley,castellany-lagarde,,,,,78,high,
 maizieres,castellany-lagarde,,,,,78,high,
 moussey,castellany-lagarde,,,,,78,high,
 ommeray,castellany-lagarde,,,,,78,high,
+bezange-la-petite,castellany-marsal,,,,,76,high,
 bru,castellany-marsal,,,,,20,high,
-donnelay,castellany-marsal,,,,,20,high,
-haraucourt-sur-seille,castellany-marsal,,,,,20,high,
-juvelize,castellany-marsal,,,,,20,high,
+donnelay,castellany-marsal,,,,,20;76,high,
+haraucourt-sur-seille,castellany-marsal,,,,,20;76,high,
+juvelize,castellany-marsal,,,,,20;76,high,
 marsal,castellany-marsal,,,,,20,high,
-saint-medard,castellany-marsal,,,,,20,high,
+saint-medard,castellany-marsal,,,,,20;76,high,
 aube,castellany-remilly,,,,,78,high,
 bechy,castellany-remilly,,,,,78,high,
 hemilly,castellany-remilly,,,,,78,high,
 remilly,castellany-remilly,,,,,78,high,
 vittoncourt,castellany-remilly,,,,,78,high,
+auersmacher,castellany-sarreguemines,,,,,17,high,
+bliesebersing,castellany-sarreguemines,,,,,17,high,
+bliesguersviller,castellany-sarreguemines,,,,,17,high,
+bliesransbach,castellany-sarreguemines,,,,,17,high,
+bousbach,castellany-sarreguemines,,,,,17,high,
+cappel,castellany-sarreguemines,,,,,17,high,
+diebling,castellany-sarreguemines,,,,,17,high,
+elviller,castellany-sarreguemines,,,,,17,high,
+farschviller,castellany-sarreguemines,,,,,17,high,
+fechingen,castellany-sarreguemines,,,,,17,high,
+folpersviller,castellany-sarreguemines,,,,,17,high,
+graefinthal,castellany-sarreguemines,,,,,17,high,
+grosbliederstroff,castellany-sarreguemines,,,,,17,high,
+kleinblittersdorf,castellany-sarreguemines,,,,,17,high,
+neufgrange,castellany-sarreguemines,,,,,17,high,
+neunkirch,castellany-sarreguemines,,,,,17,high,
+remelfing-sarreguemines,castellany-sarreguemines,,,,,17,high,
+rouhling,castellany-sarreguemines,,,,,17,high,
+sarreguemines-m,castellany-sarreguemines,,,,,17,high,
+sarreinsming,castellany-sarreguemines,,,,,17,high,
+wittring,castellany-sarreguemines,,,,,17,high,
 attiloncourt,castellany-vic,,,,,78,high,
 bezange-la-grande,castellany-vic,,,,,78,high,
 bezange-la-petite,castellany-vic,,,,,78,high,
@@ -308,6 +328,60 @@ ditschviller,county-bliescastel,,,,,102,high,
 heckenransbach,county-bliescastel,,,,,102,high,
 w-oustviller,county-bliescastel,,,,,102,high,
 welferding,county-bliescastel,,,,,102,high,
+beckerholz,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+berange,county-boulay,,,,,59,high,shared lands of an office and its fief (rules.yaml split_realms)
+betting-zimming,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+bletting,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+boulay,county-boulay,,,,,16;59,high,shared lands of an office and its fief (rules.yaml split_realms)
+brecklange,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
+buchingen,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+dalem,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
+diefferten,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+duren,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+eblange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+elvange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+falck,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+ferange,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
+filstroff,county-boulay,,,,,84,high,
+flasgarten,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+fouligny,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+grosshemmersdorf,county-boulay,,,,,16;60,high,shared lands of an office and its fief (rules.yaml split_realms)
+guerting,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+guinkirchen,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
+guirlange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+halling,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
+ham,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+hargarten-aux-mines,county-boulay,,,,,16;60;146,high,shared lands of an office and its fief (rules.yaml split_realms)
+helstroff,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
+ising,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
+kleind-hal,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+laudrefang,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+les-etangs,county-boulay,,,,,16;82;119,high,shared lands of an office and its fief (rules.yaml split_realms)
+longeville,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+loutremange,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
+macker,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+mainvillers,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+many,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+marange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+megange,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
+metzing-elvange,county-boulay,,,,,82,high,shared lands of an office and its fief (rules.yaml split_realms)
+narbefontaine,county-boulay,,,,,140,high,shared lands of an office and its fief (rules.yaml split_realms)
+neunkirchen-bouzonville,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+ottonville,county-boulay,,,,,16;59,high,shared lands of an office and its fief (rules.yaml split_realms)
+penning,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+pontigny,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
+rehlingen-sur-sarre,county-boulay,,,,,60,high,shared lands of an office and its fief (rules.yaml split_realms)
+remelfang,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+ricrange,county-boulay,,,,,16;59,high,shared lands of an office and its fief (rules.yaml split_realms)
+seigneurie-d-elvange,county-boulay,,,,,82,high,shared lands of an office and its fief (rules.yaml split_realms)
+valmunster,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
+varize,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+varsberg,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+velling,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+velving,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
+volmerange,county-boulay,,,,,16;146,high,shared lands of an office and its fief (rules.yaml split_realms)
+zimming,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+zondrange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 abreschviller,county-dabo,,,,,116,high,
 dabo,county-dabo,,,,,116,high,
 engenthal,county-dabo,,,,,116,high,
@@ -433,6 +507,7 @@ megange,court-conde,,,,,13,high,
 piblange,court-conde,,,,,13,high,
 perl,court-perl,,,,,13;128,high,
 sehndorf,court-perl,,,,,13;128,high,
+vibersviller,court-vibersviller,,,,,108,high,the unit's own seat: 'Cour de Vibersviller' (seat village)
 calmesweiler,eppelborn,,,,,137,high,
 melkerhof,fenetrange,,,,,112,high,
 ackerbach,fief-hellimer,,,,,140,high,
@@ -469,6 +544,40 @@ launstroff,lordship-berg,,,,,50,high,
 guenange,lordship-bertrange,,,,,98,high,
 metzeresche,lordship-bertrange,,,,,98,high,
 reinange,lordship-bertrange,,,,,98,high,
+aidling,lordship-berus,,,,,15,high,
+alzing,lordship-berus,,,,,15,high,
+bedersdorf,lordship-berus,,,,,15,high,
+berus,lordship-berus,,,,,15,high,
+berviller,lordship-berus,,,,,15,high,
+bettange,lordship-berus,,,,,15,high,
+bibling,lordship-berus,,,,,15,high,
+bisten-saar,lordship-berus,,,,,15,high,
+bouzonville,lordship-berus,,,,,15,high,
+brettnach,lordship-berus,,,,,15,high,
+chateau-rouge,lordship-berus,,,,,15,high,
+creutzwald,lordship-berus,,,,,16,high,
+edling,lordship-berus,,,,,15,high,
+felsberg,lordship-berus,,,,,16,high,
+forweiler,lordship-berus,,,,,15,high,
+gaweistroff,lordship-berus,,,,,15,high,
+guerstling,lordship-berus,,,,,15,high,
+heining,lordship-berus,,,,,15,high,
+holling,lordship-berus,,,,,15,high,
+ihn,lordship-berus,,,,,15,high,
+ittersdorf,lordship-berus,,,,,15,high,
+kerlingen,lordship-berus,,,,,15,high,
+leidingen,lordship-berus,,,,,15,high,
+merten,lordship-berus,,,,,15,high,
+niedwellingen,lordship-berus,,,,,15,high,
+oberdorf,lordship-berus,,,,,15,high,
+odenhofen,lordship-berus,,,,,15,high,
+remering-bouzonville,lordship-berus,,,,,15,high,
+schreckling,lordship-berus,,,,,15,high,
+teterchen,lordship-berus,,,,,15,high,
+tromborn,lordship-berus,,,,,15,high,
+vaudreching,lordship-berus,,,,,15,high,
+villing,lordship-berus,,,,,15,high,
+woelfling-bouzonville,lordship-berus,,,,,15,high,
 baerendorf,lordship-bracs,,,,,110,high,
 diane-cappel,lordship-bracs,,,,,110,high,
 haut-clocher,lordship-bracs,,,,,110,high,
@@ -705,6 +814,11 @@ honnert,lordship-puttelange,,,,,17,high,
 hundling,lordship-puttelange,,,,,17,high,
 johannesviller,lordship-puttelange,,,,,17,high,
 loupershouse,lordship-puttelange,,,,,17,high,
+mayoralty-farschviller,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-holving,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-metzing,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-puttelange,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-remering,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
 metzing-forbach,lordship-puttelange,,,,,17,high,
 morsbronn,lordship-puttelange,,,,,17,high,
 nousseviller-saint-nabor,lordship-puttelange,,,,,17,high,
@@ -712,6 +826,12 @@ obersheim,lordship-puttelange,,,,,17;146,high,
 puttelange,lordship-puttelange,,,,,17,high,
 remering-puttelange,lordship-puttelange,,,,,17,high,
 richeling,lordship-puttelange,,,,,17,high,
+eich-sarralbe,lordship-sarralbe,,,,,18,high,shared lands of an office and its fief (rules.yaml split_realms)
+nideck,lordship-sarralbe,,,,,18,high,shared lands of an office and its fief (rules.yaml split_realms)
+rech-sarralbe,lordship-sarralbe,,,,,18,high,shared lands of an office and its fief (rules.yaml split_realms)
+saltzbronn,lordship-sarralbe,,,,,18,high,shared lands of an office and its fief (rules.yaml split_realms)
+sarralbe,lordship-sarralbe,,,,,18,high,shared lands of an office and its fief (rules.yaml split_realms)
+willerwald,lordship-sarralbe,,,,,19,high,shared lands of an office and its fief (rules.yaml split_realms)
 buhl-lorraine,lordship-sarreck,,,,,19,high,
 dolving,lordship-sarreck,,,,,19,high,
 eich-reding,lordship-sarreck,,,,,19,high,
@@ -753,16 +873,20 @@ xocourt,marquisate-nomeny,,,,,119,high,
 bacourt,marquisate-pont-a-mousson,,,,,117,high,
 brehain,marquisate-pont-a-mousson,,,,,117,high,
 chateau-brehain,marquisate-pont-a-mousson,,,,,117,high,
+altheim,mayoralty-altheim,,,,,69,high,the unit's own seat: 'Mairie d'Altheim' (seat village)
 niedergailbach,mayoralty-altheim,,,,,69,high,
 obergailbach,mayoralty-altheim,,,,,69,high,
 elzange,mayoralty-basse-ham,,,,,98,high,
 hastroff,mayoralty-basse-ham,,,,,98,high,
 petit-hettange,mayoralty-basse-ham,,,,,98,high,
 bisten-en-lorraine,mayoralty-boucheporn,,,,,79,high,
+boucheporn,mayoralty-boucheporn,,,,,79,high,the unit's own seat: 'Mairie de Boucheporn' (seat village)
 niedervisse,mayoralty-boucheporn,,,,,79,high,
 obervisse,mayoralty-boucheporn,,,,,79,high,
 porcelette,mayoralty-boucheporn,,,,,79,high,
+boustroff,mayoralty-boustroff,,,,,79,high,the unit's own seat: 'Mairie de Boustroff' (seat village)
 bassing,mayoralty-cutting,,,,,74,high,
+cutting,mayoralty-cutting,,,,,74,high,the unit's own seat: 'Mairie de Cutting' (seat village)
 domnon,mayoralty-cutting,,,,,74,high,
 guinzeling,mayoralty-cutting,,,,,74,high,
 loudrefing,mayoralty-cutting,,,,,74,high,
@@ -774,9 +898,11 @@ kerprich,mayoralty-dieuze,,,,,73-74,high,
 mulcey,mayoralty-dieuze,,,,,73-74,high,
 cappel,mayoralty-farschviller,,,,,68,high,
 diebling,mayoralty-farschviller,,,,,68,high,
+farschviller,mayoralty-farschviller,,,,,68,high,the unit's own seat: 'Mairie de Farschviller' (seat village)
 hellimer,mayoralty-hellimer,,,,,75,high,
 lening,mayoralty-hellimer,,,,,75,high,
 conthil,mayoralty-hilsprich,,,,,18;69,high,
+hilsprich,mayoralty-hilsprich,,,,,18;69,high,the unit's own seat: 'Mairie de Hilsprich' (seat village)
 petit-tenquin,mayoralty-hilsprich,,,,,18;69,high,
 zell,mayoralty-hilsprich,,,,,18;69,high,
 ballering,mayoralty-holving,,,,,68,high,
@@ -806,34 +932,43 @@ lindre-haute-et-basse,mayoralty-lindre,,,,,74-75,high,
 tarquimpol,mayoralty-lindre,,,,,74-75,high,
 zommange,mayoralty-lindre,,,,,74-75,high,
 guebenhouse,mayoralty-metzing,,,,,68,high,
+metzing-forbach,mayoralty-metzing,,,,,68,high,the unit's own seat: 'Mairie de Metzing' (seat village)
 nousseviller-saint-nabor,mayoralty-metzing,,,,,68,high,
 evendorf,mayoralty-montenach,,,,,49,high,
 flatten,mayoralty-montenach,,,,,49,high,
 haute-sierck,mayoralty-montenach,,,,,49,high,
 kaltweiler,mayoralty-montenach,,,,,49,high,
 kirschnaumen,mayoralty-montenach,,,,,49,high,
+montenach,mayoralty-montenach,,,,,49,high,the unit's own seat: 'Mairie de Montenach' (seat village)
 obernaumen,mayoralty-montenach,,,,,49,high,
 remelfing-sierck,mayoralty-montenach,,,,,49,high,
 schirmeter,mayoralty-montenach,,,,,49,high,
 dieffenbach,mayoralty-puttelange,,,,,68,high,
 honnert,mayoralty-puttelange,,,,,68,high,
+puttelange,mayoralty-puttelange,,,,,68,high,the unit's own seat: 'Mairie de Puttelange' (seat village)
 hochweyersberg,mayoralty-rahling,,,,,69,high,
 mouterhouse,mayoralty-rahling,,,,,69,high,
+rahling,mayoralty-rahling,,,,,69,high,the unit's own seat: 'Mairie de Rahling' (seat village)
 schmalenthal,mayoralty-rahling,,,,,69,high,
 grundviller,mayoralty-remering,,,,,68,high,
 loupershouse,mayoralty-remering,,,,,68,high,
+remering-puttelange,mayoralty-remering,,,,,68,high,the unit's own seat: 'Mairie de Rémering' (seat village)
+riche,mayoralty-riche,,,,,74,high,the unit's own seat: 'Mairie de Riche' (seat village)
 bousse,mayoralty-rurange,,,,,98,high,
+rurange-metzervisse,mayoralty-rurange,,,,,98,high,the unit's own seat: 'Mairie de Rurange' (seat village)
 volstroff,mayoralty-rurange,,,,,98,high,
 hanviller,mayoralty-schorbach,,,,,69,high,
 kaltenhausen,mayoralty-schorbach,,,,,69,high,
 lengelsheim,mayoralty-schorbach,,,,,69,high,
 reyersviller,mayoralty-schorbach,,,,,69,high,
+schorbach,mayoralty-schorbach,,,,,69,high,the unit's own seat: 'Mairie de Schorbach' (seat village)
 buren,mayoralty-siersberg,,,,,52,high,
 gisingen,mayoralty-siersberg,,,,,52,high,
 itzbach,mayoralty-siersberg,,,,,52,high,
 kerprich-hemmersdorf,mayoralty-siersberg,,,,,52,high,
 rammelfangen,mayoralty-siersberg,,,,,52,high,
 rehlingen-sur-sarre,mayoralty-siersberg,,,,,52,high,
+siersberg,mayoralty-siersberg,,,,,52,high,the unit's own seat: 'Haute-mairie de Siersberg' (seat village)
 siersdorf,mayoralty-siersberg,,,,,52,high,
 ballern,mayoralty-superieure-du-saargau-a-hilbringen,,,,,55,high,
 fitten,mayoralty-superieure-du-saargau-a-hilbringen,,,,,55,high,
@@ -864,43 +999,45 @@ schweyen,mayoralty-walschbronn,,,,,69,high,
 steinhausen,mayoralty-walschbronn,,,,,69,high,
 trulben,mayoralty-walschbronn,,,,,69,high,
 waldhouse,mayoralty-walschbronn,,,,,69,high,
+walschbronn,mayoralty-walschbronn,,,,,69,high,the unit's own seat: 'Mairie de Walschbronn' (seat village)
 bietzen,merzig,,,,,129,high,
 menningen,merzig,,,,,129,high,
 ban-otzweiler,neunkirchen-bouzonville,,,,,62,high,
-aidling,office-berus,,,,,15,high,
-alzing,office-berus,,,,,15;59,high,
-bedersdorf,office-berus,,,,,15;58,high,
-berus,office-berus,,,,,15;58;80,high,
-berviller,office-berus,,,,,15;59,high,
-bettange,office-berus,,,,,15;59,high,
-bibling,office-berus,,,,,15;58,high,
-bisten-saar,office-berus,,,,,15;58,high,
-bouzonville,office-berus,,,,,15;58-59,high,
-brettnach,office-berus,,,,,15;59,high,
-chateau-rouge,office-berus,,,,,15;58;80,high,
-creutzwald,office-berus,,,,,16,high,
-edling,office-berus,,,,,15;59,high,
-felsberg,office-berus,,,,,16;80,high,
-forweiler,office-berus,,,,,15;58,high,
-gaweistroff,office-berus,,,,,15;58,high,
-guerstling,office-berus,,,,,15;58,high,
-heining,office-berus,,,,,15;58,high,
-holling,office-berus,,,,,15;59,high,
-ihn,office-berus,,,,,15;58,high,
-ittersdorf,office-berus,,,,,15;58,high,
-kerlingen,office-berus,,,,,15;58,high,
-leidingen,office-berus,,,,,15;58,high,
-merten,office-berus,,,,,15,high,
-niedwellingen,office-berus,,,,,15;58,high,
-oberdorf,office-berus,,,,,15,high,
-odenhofen,office-berus,,,,,15;58,high,
-remering-bouzonville,office-berus,,,,,15;59,high,
-schreckling,office-berus,,,,,15;58,high,
-teterchen,office-berus,,,,,15,high,
-tromborn,office-berus,,,,,15;59,high,
-vaudreching,office-berus,,,,,15;59,high,
-villing,office-berus,,,,,15;58,high,
-woelfling-bouzonville,office-berus,,,,,15;58,high,
+aidling,office-berus,,,,,15,high,shared lands of an office and its fief (rules.yaml split_realms)
+alzing,office-berus,,,,,59,high,
+bedersdorf,office-berus,,,,,58,high,
+berus,office-berus,,,,,58;80,high,
+berviller,office-berus,,,,,59,high,
+bettange,office-berus,,,,,59,high,
+bibling,office-berus,,,,,58,high,
+bisten-saar,office-berus,,,,,58,high,
+bouzonville,office-berus,,,,,58-59,high,
+brettnach,office-berus,,,,,59,high,
+chateau-rouge,office-berus,,,,,58;80,high,
+creutzwald,office-berus,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+edling,office-berus,,,,,59,high,
+felsberg,office-berus,,,,,80,high,
+forweiler,office-berus,,,,,58,high,
+gaweistroff,office-berus,,,,,58,high,
+guerstling,office-berus,,,,,58,high,
+heining,office-berus,,,,,58,high,
+holling,office-berus,,,,,59,high,
+ihn,office-berus,,,,,58,high,
+ittersdorf,office-berus,,,,,58,high,
+kerlingen,office-berus,,,,,58,high,
+leidingen,office-berus,,,,,58,high,
+lordship-berus,office-berus,,,,,9;15-16,high,shared lands of an office and its fief (rules.yaml split_realms)
+merten,office-berus,,,,,15,high,shared lands of an office and its fief (rules.yaml split_realms)
+niedwellingen,office-berus,,,,,58,high,
+oberdorf,office-berus,,,,,15,high,shared lands of an office and its fief (rules.yaml split_realms)
+odenhofen,office-berus,,,,,58,high,
+remering-bouzonville,office-berus,,,,,59,high,
+schreckling,office-berus,,,,,58,high,
+teterchen,office-berus,,,,,15,high,shared lands of an office and its fief (rules.yaml split_realms)
+tromborn,office-berus,,,,,59,high,
+vaudreching,office-berus,,,,,59,high,
+villing,office-berus,,,,,58,high,
+woelfling-bouzonville,office-berus,,,,,58,high,
 bambiderstroff,office-boulay,,,,,16;146,high,
 ban-otzweiler,office-boulay,,,,,16,high,
 beckerholz,office-boulay,,,,,16,high,
@@ -912,6 +1049,7 @@ brecklange,office-boulay,,,,,16;61,high,
 brouck,office-boulay,,,,,16;63,high,
 buchingen,office-boulay,,,,,16,high,
 coume,office-boulay,,,,,16;59;82,high,
+county-boulay,office-boulay,,,,,82,high,
 county-dalem,office-boulay,,,,,27;82,high,"Dalem, au sire de Haraucourt, in the office of Boulay (p. 82)"
 dalem,office-boulay,,,,,16;82,high,
 diefferten,office-boulay,,,,,16,high,
@@ -921,7 +1059,7 @@ eblange,office-boulay,,,,,16,high,
 elvange,office-boulay,,,,,16,high,
 falck,office-boulay,,,,,16,high,
 ferange,office-boulay,,,,,16;63,high,
-filstroff,office-boulay,,,,,16;60;84,high,
+filstroff,office-boulay,,,,,16;60,high,
 flasgarten,office-boulay,,,,,16,high,
 fouligny,office-boulay,,,,,16,high,
 grosshemmersdorf,office-boulay,,,,,16;60,high,
@@ -938,8 +1076,9 @@ kleind-hal,office-boulay,,,,,16,high,
 laudrefang,office-boulay,,,,,16,high,
 les-etangs,office-boulay,,,,,16;82;119,high,
 longeville,office-boulay,,,,,16,high,
-lordship-faulquemont,office-boulay,,,,,82,high,
+lordship-faulquemont,office-boulay,1629,,exact,,82,high,counted among the fiefs of the office of Boulay in the 1630 table of fiefs (p. 82)
 lordship-varize,office-boulay,,,,,63;82,high,
+lordship-varsberg,office-boulay,,,,,82,high,
 lordship-volmerange,office-boulay,,,,,16;62,high,"like Faulquemont and Dalem, still in the office of Boulay after 1629 (p. 82)"
 loutremange,office-boulay,,,,,16;63,high,
 macker,office-boulay,,,,,16,high,
@@ -950,7 +1089,6 @@ megange,office-boulay,,,,,16;61,high,
 metzing-elvange,office-boulay,,,,,82,high,
 narbefontaine,office-boulay,,,,,140,high,
 neunkirchen-bouzonville,office-boulay,,,,,16,high,
-office-varsberg,office-boulay,,,,,82,high,
 ottonville,office-boulay,,,,,16;59,high,
 penning,office-boulay,,,,,16,high,
 pontigny,office-boulay,,,,,16;82,high,
@@ -1015,7 +1153,7 @@ ley,office-dieuze,,,,,74,high,
 lezey,office-dieuze,,,,,74,high,
 lindre-haute-et-basse,office-dieuze,,,,,20,high,
 lordship-marimont,office-dieuze,,,,,20;74,high,
-lordship-morhange,office-dieuze,,,,,83,high,
+lordship-morhange,office-dieuze,1629,,exact,,83,high,counted among the fiefs of the office of Dieuze in the 1630 table of fiefs (p. 83)
 lostroff,office-dieuze,,,,,83,high,
 loudrefing,office-dieuze,,,,,20;75;83,high,
 marimont,office-dieuze,,,,,83,high,
@@ -1044,6 +1182,34 @@ virming,office-dieuze,,,,,75,high,
 wintrange,office-dieuze,,,,,20,high,
 wuisse,office-dieuze,,,,,20,high,
 zommange,office-dieuze,,,,,20,high,
+adelange,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+chemery,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+eincheville,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+faulquemont,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+guenviller,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+lordship-faulquemont,office-faulquemont,,,,,16;63,high,
+merlebach,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+morlange,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+redlach,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+tritteling,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+vahl-faulquemont,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+alsting,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+behren,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+cadenbronn,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+dittelingen,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+etzling,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+forbach,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+freyming,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+gauhiving,office-forbach,,,,,17;67,high,shared lands of an office and its fief (rules.yaml split_realms)
+hessling,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+kerbach,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+lordship-forbach,office-forbach,,,,,82,high,
+oeting,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+petite-rosselle,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+ruchling,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+spicheren,office-forbach,,,,,17;67,high,shared lands of an office and its fief (rules.yaml split_realms)
+tenteling,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+zinzing,office-forbach,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
 arzviller,office-herange,,,,,115,high,
 brouviller,office-herange,,,,,115,high,
 dannelbourg,office-herange,,,,,115,high,
@@ -1085,6 +1251,7 @@ lelling,office-hombourg-haut,,,,,17,high,
 lixing-saint-avold,office-hombourg-haut,,,,,16,high,
 macheren,office-hombourg-haut,,,,,16;64,high,
 maxstadt,office-hombourg-haut,,,,,16;64;66;101,high,
+mayoralty-teting,office-hombourg-haut,,,,,64,high,"l'organisation de la mairie de Téting, in the office of Hombourg (p. 64)"
 metring,office-hombourg-haut,,,,,16,high,
 morsbach,office-hombourg-haut,,,,,16,high,
 niedervisse,office-hombourg-haut,,,,,17,high,
@@ -1107,23 +1274,75 @@ menningen,office-merzig,,,,,14;53,high,
 merchingen,office-merzig,,,,,14;53,high,
 merzig,office-merzig,,,,,14;53,high,
 mettlach,office-merzig,,,,,13;54,high,
-bichelherg,office-phalsbourg,,,,,19,high,
-bourscheid,office-phalsbourg,,,,,19;114,high,
-brouviller,office-phalsbourg,,,,,19;114,high,
-dannelbourg,office-phalsbourg,,,,,114,high,
-einartshausen,office-phalsbourg,,,,,19;114,high,
-guntzviller,office-phalsbourg,,,,,19;114,high,
-hazelbourg,office-phalsbourg,,,,,19;114,high,
-henridorf,office-phalsbourg,,,,,19;114,high,
-hultehouse,office-phalsbourg,,,,,19;114,high,
-lordship-danne-et-quatre-vents,office-phalsbourg,,,,,114,high,
-lutzelbourg,office-phalsbourg,,,,,19;114,high,
-mittelbronn,office-phalsbourg,,,,,19;114,high,
-phalsbourg,office-phalsbourg,,,,,19,high,
-vilsberg,office-phalsbourg,,,,,19;114,high,
+achain,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+baronville,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+bermering,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+dalhain,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+destry,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+eincheville,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+harprich,office-morhange,,,,,20;145,high,shared lands of an office and its fief (rules.yaml split_realms)
+landroff,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+lidrequin,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+lidrezing,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+lordship-morhange,office-morhange,,,,,11;20;22;83;145,high,shared lands of an office and its fief (rules.yaml split_realms)
+marthille,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+morhange,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+pevange,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+racrange,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+riche,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+rodalbe,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+sotzeling,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+suisse,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+viller,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+zarbeling,office-morhange,,,,,20,high,shared lands of an office and its fief (rules.yaml split_realms)
+bichelherg,office-phalsbourg,,,,,19,high,shared lands of an office and its fief (rules.yaml split_realms)
+bourscheid,office-phalsbourg,,,,,19;114,high,shared lands of an office and its fief (rules.yaml split_realms)
+brouviller,office-phalsbourg,,,,,19;114,high,shared lands of an office and its fief (rules.yaml split_realms)
+dannelbourg,office-phalsbourg,,,,,114,high,shared lands of an office and its fief (rules.yaml split_realms)
+einartshausen,office-phalsbourg,,,,,114,high,
+guntzviller,office-phalsbourg,,,,,19;114,high,shared lands of an office and its fief (rules.yaml split_realms)
+hazelbourg,office-phalsbourg,,,,,114,high,
+henridorf,office-phalsbourg,,,,,19;114,high,shared lands of an office and its fief (rules.yaml split_realms)
+hultehouse,office-phalsbourg,,,,,114,high,
+lutzelbourg,office-phalsbourg,,,,,114,high,
+mittelbronn,office-phalsbourg,,,,,114,high,
+phalsbourg,office-phalsbourg,,,,,19,high,shared lands of an office and its fief (rules.yaml split_realms)
+principality-phalsbourg,office-phalsbourg,,,,,19;114,high,shared lands of an office and its fief (rules.yaml split_realms)
+vilsberg,office-phalsbourg,,,,,114,high,
+ballering,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+bettring,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+cappel,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+castviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+diebling,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+diederfing,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+dieffenbach,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+edersviller,office-puttelange,,,,,146,high,shared lands of an office and its fief (rules.yaml split_realms)
+elviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+ernestviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+farschviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+grundviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+guebenhouse,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+heckenransbach,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+himmrod,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+hinsing,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+hirbach,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+holving,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+honnert,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+hundling,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+johannesviller,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+lordship-puttelange,office-puttelange,,,,,83,high,
+loupershouse,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+metzing-forbach,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+morsbronn,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+nousseviller-saint-nabor,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+obersheim,office-puttelange,,,,,17;146,high,shared lands of an office and its fief (rules.yaml split_realms)
+puttelange,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+remering-puttelange,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
+richeling,office-puttelange,,,,,17,high,shared lands of an office and its fief (rules.yaml split_realms)
 eich-sarralbe,office-sarralbe,,,,,18,high,
 grundviller,office-sarralbe,1621,,,,18-19,high,
 hambach,office-sarralbe,,,,,19,high,
+lordship-sarralbe,office-sarralbe,,,,,11,high,shared lands of an office and its fief (rules.yaml split_realms)
 nideck,office-sarralbe,,,,,18,high,
 rech-sarralbe,office-sarralbe,,,,,18,high,
 remering-puttelange,office-sarralbe,1621,,,,19,high,
@@ -1131,31 +1350,23 @@ roth,office-sarralbe,,,,,19,high,
 saltzbronn,office-sarralbe,,,,,18,high,
 sarralbe,office-sarralbe,,,,,18,high,
 willerwald,office-sarralbe,,,,,19,high,
-auersmacher,office-sarreguemines,,,,,17;99,high,
+auersmacher,office-sarreguemines,,,,,99,high,
 bliesbruck,office-sarreguemines,,,,,82,high,
-bliesebersing,office-sarreguemines,,,,,17;99,high,
-bliesguersviller,office-sarreguemines,,,,,17,high,
+bliesebersing,office-sarreguemines,,,,,99,high,
 bliesmengen,office-sarreguemines,,,,,82,high,
-bliesransbach,office-sarreguemines,,,,,17,high,
-bousbach,office-sarreguemines,,,,,17,high,
-cappel,office-sarreguemines,,,,,17,high,
-diebling,office-sarreguemines,,,,,17,high,
-elviller,office-sarreguemines,,,,,17;83,high,
-farschviller,office-sarreguemines,,,,,17,high,
-fechingen,office-sarreguemines,,,,,17,high,
-folpersviller,office-sarreguemines,,,,,17,high,
-graefinthal,office-sarreguemines,,,,,17;99,high,
-grosbliederstroff,office-sarreguemines,,,,,17;99;146,high,
-kleinblittersdorf,office-sarreguemines,,,,,17;99,high,
-neufgrange,office-sarreguemines,,,,,17;82;146,high,
-neunkirch,office-sarreguemines,,,,,17;99,high,
-remelfing-sarreguemines,office-sarreguemines,,,,,17;99,high,
-rouhling,office-sarreguemines,,,,,17,high,
-sarreguemines-m,office-sarreguemines,,,,,17;99,high,
-sarreinsming,office-sarreguemines,,,,,17;99,high,
+castellany-sarreguemines,office-sarreguemines,,,,,17;68,high,the castellany is the ducal core of the office of Sarreguemines
+elviller,office-sarreguemines,,,,,83,high,
+graefinthal,office-sarreguemines,,,,,99,high,
+grosbliederstroff,office-sarreguemines,,,,,99;146,high,
+kleinblittersdorf,office-sarreguemines,,,,,99,high,
+neufgrange,office-sarreguemines,,,,,82;146,high,
+neunkirch,office-sarreguemines,,,,,99,high,
+remelfing-sarreguemines,office-sarreguemines,,,,,99,high,
+sarreguemines-m,office-sarreguemines,,,,,99,high,
+sarreinsming,office-sarreguemines,,,,,99,high,
 wiesing,office-sarreguemines,,,,,82,high,
 wintringen,office-sarreguemines,,,,,146,high,
-wittring,office-sarreguemines,,,,,17;82;99,high,
+wittring,office-sarreguemines,,,,,82;99,high,
 alsweiler,office-schaumberg,,,,,14,high,
 aschbach,office-schaumberg,,,,,14,high,
 aussen,office-schaumberg,,,,,14;80,high,
@@ -1277,12 +1488,9 @@ weiskirch,office-sergenterie-ou-buttelei-de-rimling,,,,,69,high,
 aboncourt,office-sierck,,,,,13,high,
 altroff,office-sierck,,,,,13,high,
 anzeling,office-sierck,,,,,13;50,,
-apach,office-sierck,,,,,12,high,
-basse-contz,office-sierck,,,,,12,high,
 belle-fontaine,office-sierck,,,,,13,high,
-bellmacher,office-sierck,,,,,12;81,high,
+bellmacher,office-sierck,,,,,81,high,
 berg-nennig,office-sierck,,,,,13,high,
-bestroff,office-sierck,,,,,12,high,
 bethingen,office-sierck,,,,,13,high,
 bettelainville,office-sierck,,,,,13,high,
 betting-waldwisse,office-sierck,,,,,81,high,
@@ -1290,123 +1498,85 @@ beuren,office-sierck,,,,,13,high,
 bibiche,office-sierck,,,,,51,high,
 biischdorf,office-sierck,,,,,81,high,
 bingen,office-sierck,,,,,13,high,
-biringen,office-sierck,,,,,12;80,high,
-bizing,office-sierck,,,,,12,high,
-breistroff-petite,office-sierck,,,,,12,high,
+biringen,office-sierck,,,,,80,high,
 budange,office-sierck,,,,,13,high,
 burgesch,office-sierck,,,,,13,high,
-busenacker,office-sierck,,,,,12,high,
 calembourg,office-sierck,,,,,50,high,
 charleville,office-sierck,,,,,13,high,
 chemery,office-sierck,,,,,13;50,,
-colmen,office-sierck,,,,,12,high,
-court-conde,office-sierck,,,,,13,high,
+court-conde,office-sierck,,,,,13;49;51,high,
 court-perl,office-sierck,,,,,13;49;129,high,
 dalstein,office-sierck,,,,,51,high,
-diding,office-sierck,,,,,13;50,high,
-diersdorf,office-sierck,,,,,12,high,
+diding,office-sierck,,,,,13,high,
 ebersviller,office-sierck,,,,,13,high,
 edling,office-sierck,,,,,13;50,high,
-eft,office-sierck,,,,,12,high,
-eimersdorf,office-sierck,,,,,12,high,
 epange,office-sierck,,,,,13,high,
-evendorf,office-sierck,,,,,12,high,
 filstroff,office-sierck,,,,,13;60,high,
-flastroff,office-sierck,,,,,12,high,
-flatten,office-sierck,,,,,12;80-81,high,
+flatten,office-sierck,,,,,80-81,high,
 fliessborn,office-sierck,,,,,13,high,
-freching,office-sierck,,,,,12,high,
-freistroff,office-sierck,,,,,13;50,high,
-fremersdorf,office-sierck,,,,,12,high,
-furweiler,office-sierck,,,,,12,high,
+freistroff,office-sierck,,,,,13,high,
 gerlfangen,office-sierck,,,,,13,high,
 goderscheuren,office-sierck,,,,,13,high,
 gomelange,office-sierck,,,,,50;119,high,
 gongelfang,office-sierck,,,,,81,high,
-grindorf,office-sierck,,,,,12,high,
-grosshemmersdorf,office-sierck,,,,,12,high,
-guiching,office-sierck,,,,,13;50,high,
-halstroff,office-sierck,,,,,12,high,
-hanfgarten,office-sierck,,,,,12;50,high,
-hargarten-laumesfeld,office-sierck,,,,,12,high,
+guiching,office-sierck,,,,,13,high,
+hanfgarten,office-sierck,,,,,50,high,
 hasenholtz,office-sierck,,,,,13,high,
 haute-contz,office-sierck,,,,,13,high,
-haute-sierck,office-sierck,,,,,12;80,high,
+haute-sierck,office-sierck,,,,,80,high,
 heckling,office-sierck,,,,,13,high,
-hellendorf,office-sierck,,,,,12,high,
 hestroff,office-sierck,,,,,13;50,,
 hobling,office-sierck,,,,,50,high,
 hombourg-sur-canner,office-sierck,,,,,13,high,
 ising,office-sierck,,,,,13,high,
-kaltweiler,office-sierck,,,,,12,high,
 kedange,office-sierck,,,,,13;50,,
 kemplich,office-sierck,,,,,80,high,
-kerling,office-sierck,,,,,12,high,
-kerlingen,office-sierck,,,,,12,high,
 kirf,office-sierck,,,,,13,high,
-kirsch-sierck,office-sierck,,,,,12;80,high,
-kirschnaumen,office-sierck,,,,,12;80,high,
+kirsch-sierck,office-sierck,,,,,80,high,
+kirschnaumen,office-sierck,,,,,80,high,
 kitzing,office-sierck,,,,,13;81,high,
 klang,office-sierck,,,,,50,high,
-koenigsberg,office-sierck,,,,,12,high,
 kottendorf,office-sierck,,,,,81,high,
 labruck,office-sierck,,,,,13,high,
 lacroix,office-sierck,,,,,50,high,
-laumesfeld,office-sierck,,,,,12;51,high,
-launstroff,office-sierck,,,,,12,high,
-lemestroff,office-sierck,,,,,12,high,
+laumesfeld,office-sierck,,,,,51,high,
 lordship-hombourg-sur-canner,office-sierck,,,,,81,high,
-mailing,office-sierck,,,,,12;80,high,
-marienfloss,office-sierck,,,,,12,high,
-mechern,office-sierck,,,,,12,high,
+mailing,office-sierck,,,,,80,high,
 megange,office-sierck,,,,,61,high,
 meinsberg,office-sierck,,,,,13;81,high,
 menskirch,office-sierck,,,,,13,high,
 merschweiller,office-sierck,,,,,12;49,,
-metrich,office-sierck,,,,,12,high,
 metzeresche,office-sierck,,,,,13,high,
 monclair,office-sierck,,,,,13,high,
-monneren,office-sierck,,,,,12;84,high,
-montenach,office-sierck,,,,,12,high,
+monneren,office-sierck,,,,,84,high,
 nennig,office-sierck,,,,,13,high,
 neudlange,office-sierck,,,,,13,high,
 neudorf,office-sierck,,,,,50,high,
 nidange,office-sierck,,,,,13,high,
-niedaltdorf,office-sierck,,,,,12,high,
-oberesch,office-sierck,,,,,12;132,high,
-oberleuken,office-sierck,,,,,12;81,high,
-obernaumen,office-sierck,,,,,12,high,
-orscholz,office-sierck,,,,,12;81,high,
-oudrenne,office-sierck,,,,,12,high,
-provostship-conde,office-sierck,,,,,49;51,high,
+oberesch,office-sierck,,,,,132,high,
+oberleuken,office-sierck,,,,,81,high,
+orscholz,office-sierck,,,,,81,high,
 provostship-rurale-de-sierck,office-sierck,,,,,12-13;49,high,
+provostship-sierck,office-sierck,,,,,12;49,high,
+provostship-sous-sierck,office-sierck,,,,,12;49,high,
 reinange,office-sierck,,,,,50,high,
-remeldorf,office-sierck,,,,,12,high,
-remelfing-sierck,office-sierck,,,,,12;50;80,high,
-rettel,office-sierck,,,,,12,high,
+remelfing-sierck,office-sierck,,,,,50;80,high,
 ritzing,office-sierck,,,,,13;81,high,
 rodlach,office-sierck,,,,,50,high,
-rudling,office-sierck,,,,,12;81,high,
-rustroff,office-sierck,,,,,12,high,
+rudling,office-sierck,,,,,81,high,
 saint-bernard,office-sierck,,,,,13,high,
 saint-francois,office-sierck,,,,,13,high,
 saint-hubert,office-sierck,,,,,13,high,
 sainte-marguerite,office-sierck,,,,,13;51;80,high,
 scheuern-charleville,office-sierck,,,,,13,high,
-scheuerwald,office-sierck,,,,,12,high,
 schwarzmerter,office-sierck,,,,,13,high,
 schwerdorf,office-sierck,,,,,13,high,
-sierck,office-sierck,,,,,12,high,
 tunsdorf,office-sierck,,,,,13;80-81,high,
-tunting,office-sierck,,,,,12,high,
-veckring,office-sierck,,,,,12,high,
 villers-bettnach,office-sierck,,,,,13,high,
 waldvisse,office-sierck,,,,,13;80-81,high,
-waldweistroff,office-sierck,,,,,12,high,
 weiten,office-sierck,,,,,12;49,,
 wies,office-sierck,,,,,13,high,
-wochern,office-sierck,,,,,12,high,
-zeurange,office-sierck,,,,,12;80-81,high,
+zeurange,office-sierck,,,,,80-81,high,
 beckingen,office-siersberg,,,,,13;52,high,
 besseringen,office-siersberg,,,,,13;54;83,high,
 bietzen,office-siersberg,,,,,14,high,
@@ -1478,6 +1648,20 @@ saint-louis,principality-lixheim,,,,,19;115,high,
 schalbach,principality-lixheim,,,,,19,high,
 veckersviller,principality-lixheim,,,,,19,high,
 vieux-lixheim,principality-lixheim,,,,,19;114,high,
+bichelherg,principality-phalsbourg,,,,,19,high,
+bourscheid,principality-phalsbourg,,,,,19;114,high,
+brouviller,principality-phalsbourg,,,,,19;114,high,
+dannelbourg,principality-phalsbourg,,,,,114,high,
+einartshausen,principality-phalsbourg,,,,,19;114,high,
+guntzviller,principality-phalsbourg,,,,,19;114,high,
+hazelbourg,principality-phalsbourg,,,,,19;114,high,
+henridorf,principality-phalsbourg,,,,,19;114,high,
+hultehouse,principality-phalsbourg,,,,,19;114,high,
+lordship-danne-et-quatre-vents,principality-phalsbourg,,,,,114,high,
+lutzelbourg,principality-phalsbourg,,,,,19;114,high,
+mittelbronn,principality-phalsbourg,,,,,19;114,high,
+phalsbourg,principality-phalsbourg,,,,,19,high,
+vilsberg,principality-phalsbourg,,,,,19;114,high,
 amelecourt,provostship-amance,,,,,20,high,
 ban-saint-pierre,provostship-amance,,,,,20,high,
 chateau-salins,provostship-amance,,,,,20,high,
@@ -1487,6 +1671,7 @@ salonnes,provostship-amance,,,,,20,high,
 thicourt,provostship-amance,,,,,20,high,
 vanne-court,provostship-amance,,,,,20,high,
 buchingen,provostship-eblange,,,,,63,high,
+eblange,provostship-eblange,,,,,63,high,the unit's own seat: 'Prévôté d'Éblange' (seat village)
 holling,provostship-eblange,,,,,63,high,
 penning,provostship-eblange,,,,,63,high,
 remelfang,provostship-eblange,,,,,63,high,
@@ -1494,6 +1679,7 @@ grening,provostship-insming,,,,,74,high,
 hellimer,provostship-insming,,,,,74,high,
 hilsprich,provostship-insming,,,,,74,high,
 honskirch,provostship-insming,,,,,74,high,
+insming,provostship-insming,,,,,74,high,the unit's own seat: 'Prévôté d'Insming' (seat village)
 nelling,provostship-insming,,,,,74,high,
 petit-tenquin,provostship-insming,,,,,74,high,
 rening,provostship-insming,,,,,74,high,
@@ -1506,16 +1692,11 @@ hahnweiler,provostship-ketternostern,,,,,57,high,
 haupersweiler,provostship-ketternostern,,,,,57,high,
 heimbach-nahe,provostship-ketternostern,,,,,57,high,
 herichsweiler,provostship-ketternostern,,,,,57,high,
+ketternostern,provostship-ketternostern,,,,,15,high,
 kriigelborn,provostship-ketternostern,,,,,57,high,
 leitzweiler,provostship-ketternostern,,,,,57,high,
 seitzweiler,provostship-ketternostern,,,,,57,high,
 weiersbach-bleiderdingen,provostship-ketternostern,,,,,57,high,
-bezange-la-petite,provostship-marsal,,,,,76,high,
-donnelay,provostship-marsal,,,,,76,high,
-haraucourt-sur-seille,provostship-marsal,,,,,76,high,
-juvelize,provostship-marsal,,,,,76,high,
-saint-medard,provostship-marsal,,,,,76,high,
-ketternostern,provostship-oberkirchen,,,,,15,high,
 manderen,provostship-remich,,,,,98,high,
 merschweiller,provostship-remich,,,,,98,high,
 anzeling,provostship-rurale-de-sierck,,,,,13,high,
@@ -1552,6 +1733,70 @@ niderviller,provostship-sarrebourg,,,,,19,high,
 nitting,provostship-sarrebourg,,,,,19,high,
 renting,provostship-sarrebourg,,,,,19,high,
 sarrebourg,provostship-sarrebourg,,,,,19,high,
+biringen,provostship-sierck,,,,,12,high,
+bizing,provostship-sierck,,,,,12,high,
+colmen,provostship-sierck,,,,,12,high,
+diding,provostship-sierck,,,,,50,high,
+evendorf,provostship-sierck,,,,,12,high,
+flatten,provostship-sierck,,,,,12,high,
+freching,provostship-sierck,,,,,12,high,
+freistroff,provostship-sierck,,,,,50,high,
+grindorf,provostship-sierck,,,,,12,high,
+guiching,provostship-sierck,,,,,50,high,
+halstroff,provostship-sierck,,,,,12,high,
+haute-sierck,provostship-sierck,,,,,12,high,
+kaltweiler,provostship-sierck,,,,,12,high,
+kerling,provostship-sierck,,,,,12,high,
+kirsch-sierck,provostship-sierck,,,,,12,high,
+kirschnaumen,provostship-sierck,,,,,12,high,
+lemestroff,provostship-sierck,,,,,12,high,
+mayoralty-montenach,provostship-sierck,,,,,12;49,high,Montenach is one of the villages of the provostship (p. 12)
+monneren,provostship-sierck,,,,,12,high,
+montenach,provostship-sierck,,,,,12,high,
+niedaltdorf,provostship-sierck,,,,,12,high,
+oberesch,provostship-sierck,,,,,12,high,
+obernaumen,provostship-sierck,,,,,12,high,
+remeldorf,provostship-sierck,,,,,12,high,
+remelfing-sierck,provostship-sierck,,,,,12,high,
+rettel,provostship-sierck,,,,,12,high,
+sierck,provostship-sierck,,,,,12,high,
+veckring,provostship-sierck,,,,,12,high,
+waldweistroff,provostship-sierck,,,,,12,high,
+apach,provostship-sous-sierck,,,,,12,high,
+basse-contz,provostship-sous-sierck,,,,,12,high,
+bellmacher,provostship-sous-sierck,,,,,12,high,
+bestroff,provostship-sous-sierck,,,,,12,high,
+breistroff-petite,provostship-sous-sierck,,,,,12,high,
+busenacker,provostship-sous-sierck,,,,,12,high,
+diersdorf,provostship-sous-sierck,,,,,12,high,
+eft,provostship-sous-sierck,,,,,12,high,
+eimersdorf,provostship-sous-sierck,,,,,12,high,
+flastroff,provostship-sous-sierck,,,,,12,high,
+fremersdorf,provostship-sous-sierck,,,,,12,high,
+furweiler,provostship-sous-sierck,,,,,12,high,
+grosshemmersdorf,provostship-sous-sierck,,,,,12,high,
+hanfgarten,provostship-sous-sierck,,,,,12,high,
+hargarten-laumesfeld,provostship-sous-sierck,,,,,12,high,
+hellendorf,provostship-sous-sierck,,,,,12,high,
+kerlingen,provostship-sous-sierck,,,,,12,high,
+koenigsberg,provostship-sous-sierck,,,,,12,high,
+laumesfeld,provostship-sous-sierck,,,,,12,high,
+launstroff,provostship-sous-sierck,,,,,12,high,
+mailing,provostship-sous-sierck,,,,,12,high,
+marienfloss,provostship-sous-sierck,,,,,12,high,
+mechern,provostship-sous-sierck,,,,,12,high,
+merschweiller,provostship-sous-sierck,,,,,12,high,
+metrich,provostship-sous-sierck,,,,,12,high,
+oberleuken,provostship-sous-sierck,,,,,12,high,
+orscholz,provostship-sous-sierck,,,,,12,high,
+oudrenne,provostship-sous-sierck,,,,,12,high,
+rudling,provostship-sous-sierck,,,,,12,high,
+rustroff,provostship-sous-sierck,,,,,12,high,
+scheuerwald,provostship-sous-sierck,,,,,12,high,
+tunting,provostship-sous-sierck,,,,,12,high,
+weiten,provostship-sous-sierck,,,,,12,high,
+wochern,provostship-sous-sierck,,,,,12,high,
+zeurange,provostship-sous-sierck,,,,,12,high,
 ban-franchise-de-k-nigsmacker,provostship-thionville,,,,,98,high,
 barony-raville,provostship-thionville,,,,,98,high,
 basse-yutz,provostship-thionville,,,,,98,high,
@@ -1576,6 +1821,7 @@ petit-breistroff,provostship-thionville,,,,,98,high,
 provostship-remich,provostship-thionville,,,,,98,high,
 stuckange,provostship-thionville,,,,,98,high,
 thionville,provostship-thionville,,,,,98,high,
+winterbach,provostship-winterbach,,,,,15,high,the unit's own seat: 'Prévôté de Winterbach' (seat village)
 ballern,saargau,,,,,14;53,high,
 besseringen,saargau,,,,,130,high,
 bethingen,saargau,,,,,14;53,high,

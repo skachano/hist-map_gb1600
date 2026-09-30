@@ -53,10 +53,10 @@ honzrath,suzerain,duchy-lorraine,,claimed,true,county-nassau-saarbruecken|jean-d
 county-dalem,suzerain,duchy-lorraine,,held,,,,,,,,27,high,
 county-dalem,manorial_lord,elisee-d-haraucourt,,held,,,,1628,,,,27,high,died in 1629
 county-dalem,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,high,
-office-boulay,manorial_lord,heirs-houst,,held,,,,,,,,82,,
-office-boulay,manorial_lord,duchy-lorraine,,held,,,,1613,,exact,,28,medium,ducal domain until the grant of 1614 (implied)
-office-boulay,manorial_lord,louis-de-guise,,held,,,1614,1631,exact,exact,,28;82,high,for life; he styled himself count of Boulay
-office-boulay,manorial_lord,henriette-vaudemont,,pledged,,,1632,,exact,,,30;86,high,"dower after her husband's death (December 1631), for a loan of 300,000 francs"
+county-boulay,manorial_lord,heirs-houst,,held,,,,,,,,82,,
+county-boulay,manorial_lord,duchy-lorraine,,held,,,,1613,,exact,,28,medium,ducal domain until the grant of 1614 (implied)
+county-boulay,manorial_lord,louis-de-guise,,held,,,1614,1631,exact,exact,,28;82,high,for life; he styled himself count of Boulay
+county-boulay,manorial_lord,henriette-vaudemont,,pledged,,,1632,,exact,,,30;86,high,"dower after her husband's death (December 1631), for a loan of 300,000 francs"
 teterchen,manorial_lord,duchy-lorraine,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,county-nassau-saarbruecken,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,house-schwarzenberg,joint,held,,,1585,1585,attested,attested,,59,,

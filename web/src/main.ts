@@ -13,7 +13,7 @@ import { renderAbout } from "./ui/about";
 import { renderChanges, renderMatrix } from "./ui/pages";
 import { renderPanel } from "./ui/panel";
 import { renderDisputesView, renderEntityView, renderTerritoriesView } from "./ui/sideViews";
-import { BAILIWICK, childrenIn, territoryLevels } from "./model/territories";
+import { BAILIWICK, childrenIn, hierarchyOf, territoryLevels } from "./model/territories";
 
 const $ = (id: string) => document.getElementById(id)!;
 
@@ -77,23 +77,26 @@ async function start(): Promise<void> {
   const territoryFeatures = data.territories.features.map((f) => f.properties as
     { id: string; from_year: number; to_year: number; settlements: number });
   const realms = (state: State) => {
-    const levels = territoryLevels(state.year, data.places, childrenIn(state.year, data.places));
+    const children = childrenIn(state.year, data.places);
+    const inside = territoryLevels(state.year, data.places, children); // either hierarchy
+    const levels = territoryLevels(state.year, data.places, children, state.feudal ? "feudal" : "admin");
     const level = state.level ?? 1;
     const settlementsIn = new Map<string, number>();
     for (const f of territoryFeatures) {
       if (f.from_year <= state.year && state.year <= f.to_year) settlementsIn.set(f.id, f.settlements);
     }
-    const ofKind = (id: string) => !state.kind || data.places.get(id)?.type === state.kind;
-    // A kind of realm shows every realm of that kind, whatever its level; otherwise one level.
-    const shown = [...levels].filter(([id, l]) => (state.kind ? ofKind(id) : level === 0 || l === level))
-      .map(([id]) => id);
-    if (state.neighbours) {
-      shown.push(...[...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK && ofKind(id)));
-    }
+    const type = (id: string) => data.places.get(id)?.type ?? "";
+    const inHierarchy = (id: string) => hierarchyOf(type(id)) === (state.feudal ? "feudal" : "admin");
+    // A kind of realm shows every realm of that kind, whatever its level or hierarchy; otherwise one level
+    // of the chosen hierarchy.
+    const outside = state.neighbours ? [...settlementsIn.keys()].filter((id) => !inside.has(id) && id !== BAILIWICK) : [];
+    const shown = state.kind
+      ? [...inside.keys(), ...outside].filter((id) => type(id) === state.kind)
+      : [...[...levels].filter(([, l]) => level === 0 || l === level).map(([id]) => id),
+        ...outside.filter(inHierarchy)];
     // How many realms of each kind there are this year (for the menu), within the chosen scope.
     const kinds = new Map<string, number>();
-    const inScope = [...levels.keys(), ...(state.neighbours
-      ? [...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK) : [])];
+    const inScope = [...inside.keys(), ...outside];
     for (const id of inScope) {
       const type = data.places.get(id)?.type ?? "";
       kinds.set(type, (kinds.get(type) ?? 0) + 1);
@@ -157,7 +160,8 @@ async function start(): Promise<void> {
     const coloured = colours(state);
     if (!previous || previous.year !== state.year || previous.right !== state.right || previous.view !== state.view
       || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()
-      || previous.level !== state.level || previous.neighbours !== state.neighbours || previous.kind !== state.kind) {
+      || previous.level !== state.level || previous.neighbours !== state.neighbours || previous.kind !== state.kind
+      || previous.feudal !== state.feudal) {
       current = computeView(data, index, state, coloured);
     }
     document.documentElement.lang = state.lang;

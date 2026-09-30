@@ -38,6 +38,31 @@ DOMAIN_TYPES = {"office", "lordship", "county", "principality", "castellany", "m
                 "receivership", "fief"}
 
 
+# Realms the book names both as a district of the bailiwick ('l'office de Forbach') and as a fief
+# ('la seigneurie de Forbach') are split in two when rules.yaml lists them (split_realms): a
+# mention goes to one side by its own wording, else by its extracted type.
+_ADMIN_WORD = re.compile(r"\b(office|bailliage|chatellenie|recette|receveur|officier)\b")
+_FEUDAL_WORD = re.compile(r"\b(seigneurie|seigneur|comte|terre|fief|principaute|prince|marquisat|baronnie)\b")
+# Units nested in a split realm keep their own entries ('la mairie de Puttelange').
+_NESTED_WORD = re.compile(r"\b(mairie|prevote|cour|ban|sergenterie|vouerie|haute mairie)\b")
+ADMIN_DOMAIN_TYPES = {"office", "castellany", "receivership"}
+
+
+def splits_realm(name: str, place_type: str) -> bool:
+    """Whether a mention names a split realm itself, not a unit nested in it."""
+    return place_type in DOMAIN_TYPES and not _NESTED_WORD.search(fold(name))
+
+
+def split_side(name: str, place_type: str) -> str:
+    """'admin' or 'feudal': which half of a split realm a mention names."""
+    folded = fold(name)
+    if _ADMIN_WORD.search(folded):
+        return "admin"
+    if _FEUDAL_WORD.search(folded):
+        return "feudal"
+    return "admin" if place_type in ADMIN_DOMAIN_TYPES else "feudal"
+
+
 def preferred_domain_types(place_mentions) -> dict[str, str]:
     """For each territory base name, the domain type most mentions use ('county' for Bitche)."""
     counts: dict[str, Counter] = defaultdict(Counter)
@@ -136,8 +161,11 @@ class ResolvedPlace:
 
 class PlaceResolver:
     def __init__(self, gazetteer: Gazetteer, manual_places: list[dict], aliases: dict[str, str],
-                 territory_types: set[str] = frozenset(), preferred_types: dict[str, str] | None = None):
+                 territory_types: set[str] = frozenset(), preferred_types: dict[str, str] | None = None,
+                 splits: dict[str, dict] | None = None):
         self.gaz = gazetteer
+        # base name -> {admin: id, feudal: id, admin_type, feudal_type} (rules.yaml split_realms)
+        self.splits = {base_name(k): v for k, v in (splits or {}).items()}
         self.territory_types = territory_types  # place types that are always territories
         # base name -> the type most mentions give a "domain" territory (see DOMAIN_TYPES)
         self.preferred_types = preferred_types or {}
@@ -177,8 +205,13 @@ class PlaceResolver:
             alias = self.aliases.get(f"{kind}: {fold(name)}")
         if alias is None:
             alias = self.aliases.get(fold(name))
+        forced_type = None
         if alias is not None:
             pid, row = alias, None
+        elif kind == "territory" and base_name(name) in self.splits and splits_realm(name, place["place_type"]):
+            split = self.splits[base_name(name)]
+            side = split_side(name, place["place_type"])
+            pid, forced_type, row = split[side], split[f"{side}_type"], None
         elif kind == "territory":
             base = base_name(name)
             ptype = place["place_type"]
@@ -198,7 +231,7 @@ class PlaceResolver:
             p = self.places[pid] = ResolvedPlace(pid, kind, display[:1].upper() + display[1:], gazetteer=row)
         if not p.manual:
             p.spellings[name] += 1
-            p.place_types[place["place_type"]] += 1
+            p.place_types[forced_type or place["place_type"]] += 1
             p.variants.update(n for n in [name, *place.get("other_names", [])] if fold(n) != fold(p.name_fr))
         p.mentions += 1
         return pid

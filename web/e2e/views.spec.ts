@@ -70,7 +70,15 @@ test("territories: realms of a year, walk down and up the hierarchy, levels and 
   const errors = await open(page, "#/territories?year=1620&right=suzerain&lang=en");
   const side = page.locator("#side");
   await expect(side.locator("h2")).toHaveText(/^Realms in 1620 \(\d+\)$/);
+  // the office of Forbach is a district of the bailiwick; the lordship of Forbach, the fief, lies in it
+  await expect(side.getByRole("button", { name: "Office of Forbach" })).toBeVisible();
+  await expect(side.getByRole("button", { name: "Lordship of Forbach" })).toHaveCount(0);
+  await side.getByRole("button", { name: "Feudal realms" }).click();
+  await expect(page).toHaveURL(/h=feudal/);
   await expect(side.getByRole("button", { name: "Lordship of Forbach" })).toBeVisible();
+  await expect(side.getByRole("button", { name: "Office of Forbach" })).toHaveCount(0);
+  await side.getByRole("button", { name: "Administrative divisions" }).click();
+  await expect(page).not.toHaveURL(/h=feudal/);
   await expect(page.locator(".terr-label").filter({ hasText: "Office of Sarreguemines" })).toHaveCount(1);
 
   await side.getByRole("button", { name: "Office of Sarreguemines" }).click();
@@ -88,7 +96,7 @@ test("territories: realms of a year, walk down and up the hierarchy, levels and 
   await expect(page).toHaveURL(/lvl=2/);
   await side.getByRole("checkbox", { name: "Also realms outside the bailiwick" }).check();
   await expect(page).toHaveURL(/nb=1/);
-  await side.getByRole("button", { name: "Offices, lordships, counties" }).click();
+  await side.getByRole("button", { name: "Offices", exact: true }).click();
   await expect.poll(count).toBeGreaterThan(level1);
   expect(errors).toEqual([]);
 });
@@ -129,9 +137,9 @@ test("territories: one kind of realm at every level", async ({ page }) => {
   await expect(realms.first()).toContainText("Provostship");
   for (const text of await realms.allInnerTexts()) expect(text).toMatch(/provostship/i);
   await expect(side.getByRole("button", { name: "Rural provostship of Sierck" })).toBeVisible(); // a level-2 realm
-  await expect(side.getByRole("button", { name: "Offices, lordships, counties" })).toHaveAttribute("aria-pressed", "false");
+  await expect(side.getByRole("button", { name: "Offices", exact: true })).toHaveAttribute("aria-pressed", "false");
   await menu.selectOption("county");
   await expect(side.getByRole("button", { name: "County of Bitche" })).toBeVisible();
-  await side.getByRole("button", { name: "Offices, lordships, counties" }).click(); // back to levels
+  await side.getByRole("button", { name: "Offices", exact: true }).click(); // back to levels
   await expect(page).not.toHaveURL(/kind=/);
 });

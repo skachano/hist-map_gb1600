@@ -43,8 +43,47 @@ entity_aliases:
   # Reviewed and kept apart: abbey-/lords-freistroff, chapter-/lords-fenetrange, county-/house-bitche,
   # house-leiningen-falkenburg/-hartenburg, house-daun/-dern/-hausen, house-morbach/-furbach/-braubach.
 
+# Realms the book names both as a district of the bailiwick ("l'office de Forbach") and as a fief
+# ("la seigneurie de Forbach"): two entries sharing their lands. A mention goes to one half by its
+# wording (office, châtellenie / seigneurie, comté, terre, principauté), else by its extracted type.
+# The fief holds the lord's rights and lies in its office; the office holds the bailiwick's rights
+# (aids, musters, notaries, appeals) and sits in the bailiwick (curate/build.py split_*).
+split_realms:
+  Forbach:     {admin: office-forbach, admin_type: office, feudal: lordship-forbach, feudal_type: lordship}
+  Puttelange:  {admin: office-puttelange, admin_type: office, feudal: lordship-puttelange, feudal_type: lordship}
+  Morhange:    {admin: office-morhange, admin_type: office, feudal: lordship-morhange, feudal_type: lordship}
+  Faulquemont: {admin: office-faulquemont, admin_type: office, feudal: lordship-faulquemont, feudal_type: lordship}
+  Boulay:      {admin: office-boulay, admin_type: office, feudal: county-boulay, feudal_type: county}
+  Berus:       {admin: office-berus, admin_type: office, feudal: lordship-berus, feudal_type: lordship}
+  Sarralbe:    {admin: office-sarralbe, admin_type: office, feudal: lordship-sarralbe, feudal_type: lordship}
+  Phalsbourg:  {admin: office-phalsbourg, admin_type: office, feudal: principality-phalsbourg, feudal_type: principality}
+
 # Place names as written in the book -> place id (fixes OCR variants, duplicate territories)
 place_aliases:
+  office de Phalsbourg-Danne: office-phalsbourg
+  bailliage de Phalsbourg: office-phalsbourg
+  châtellenie de Sarreguemines: castellany-sarreguemines   # the 21 places of p. 17, within the office
+  office de Sarreguemines: office-sarreguemines
+  "territory: Sarreguemines": office-sarreguemines
+  # The office of Sierck: "prévôté et sous-prévôté de Sierck, grande prévôté ou prévôté rurale, prévôté de
+  # Condé et cour de Perl" (p. 49; lists p. 12-13).
+  prévôté de Sierck: provostship-sierck
+  sous-prévôté de Sierck: provostship-sous-sierck
+  "territory: Sierck": office-sierck
+  office de Sierck: office-sierck
+  prévôté de Condé: court-conde                     # the cour de Condé of p. 13
+  "territory: Condé": court-conde
+  "territory: Marsal": castellany-marsal
+  prévôté de Marsal: castellany-marsal              # same places as the castellany (p. 20, 76)
+  prévôté d'Oberkirchen: provostship-ketternostern  # Oberkirchen = Catherinenostern / Ketternostern (p. 15)      # the Veldenz bailliage, sold to Lorraine in 1583 (p. 113-114)
+  # Varsberg and Lemberg are lordships only: "l'office de Varsberg" is the lordship within the office of
+  # Boulay (pp. 16, 82); "l'office de Lemberg" was an office of the county of Bitche, ceded in 1606 (p. 105).
+  office de Varsberg: lordship-varsberg
+  seigneurie de Varsberg: lordship-varsberg
+  la terre de Varsberg: lordship-varsberg
+  "territory: Varsberg": lordship-varsberg
+  office de Lemberg-lès-Pirmasens: lordship-lemberg-les-pirmasens
+  "territory: Lemberg-lès-Pirmasens": lordship-lemberg-les-pirmasens
   duché de Lorraine: duchy-lorraine         # a state, not a territory: memberships in it are dropped
   bailliage: bailliage-allemagne            # "le bailliage" in the book is always the bailliage d'Allemagne
   bailliage d'Allemagne: bailliage-allemagne
@@ -98,6 +137,12 @@ drop_rights:
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
+  - {child: provostship-insming, parent: bailliage-allemagne,
+     reason: "a provostship of the office of Dieuze (p. 74); p. 11 only names Insming among places"}
+  - {child: provostship-ketternostern, parent: bailliage-allemagne,
+     reason: "a provostship of the office of Schaumberg (p. 57); p. 10 only names it among places"}
+  - {child: lordship-marimont, parent: bailliage-allemagne,
+     reason: "l'ancienne châtellenie de Marimont, rattachée à celle de Dieuze (p. 74)"}
   - {child: gauhiving, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67); a Landmairie of Forbach in 1623"}
   - {child: ditschviller, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
   - {child: emmersweiler, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67)"}

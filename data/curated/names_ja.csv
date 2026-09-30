@@ -63,6 +63,7 @@ castellany-haboudange,Haboudange 城代管区,french + type
 castellany-lagarde,Lagarde 城代管区,french + type
 castellany-marsal,マルサル城代管区,seat + type
 castellany-remilly,Rémilly 城代管区,french + type
+castellany-sarreguemines,サルグミーヌ城代管区,seat + type
 castellany-vic,Vic 城代管区,french + type
 cathedral-chapter-trier,トリーア大聖堂参事会,manual
 chapter-metz,メス大聖堂参事会,manual
@@ -72,6 +73,7 @@ condominium-merzig-saargau,ザールガウ＝メルツィヒ共同統治地,manu
 county-bitche,ビッシュ伯領,seat + type
 county-blamont,Blâmont 伯領,french + type
 county-bliescastel,ブリースカステル伯領,manual
+county-boulay,ブレ伯領,seat + type
 county-crehange,クレアンジュ伯領,manual
 county-dabo,ダボ伯領,seat + type
 county-dalem,ダレム伯領,manual
@@ -90,7 +92,7 @@ county-salm,ザルム伯領,manual
 county-sarrebruck,ザールブリュッケン伯領,seat + type
 county-sarrewerden,サールヴェルデン伯領,seat + type
 county-sayn,ザイン伯領,manual
-court-conde,Condé 裁判区,french + type
+court-conde,コンデ代官区,manual
 court-perl,Perl 裁判区,french + type
 court-vibersviller,Vibersviller 裁判区,french + type
 dabo,ダボ,wikidata
@@ -167,6 +169,7 @@ lords-freistroff,フレストロフ領主家,manual
 lordship-asswiller,Asswiller 領,french + type
 lordship-berg,Berg 領,french + type
 lordship-bertrange,Bertrange 領,french + type
+lordship-berus,ベールス領,seat + type
 lordship-bionville,Bionville 領,french + type
 lordship-bracs,Bracs 領,french + type
 lordship-busbach,Busbach 領,french + type
@@ -196,7 +199,7 @@ lordship-lixing,Lixing 領,french + type
 lordship-lixing-rouhling,Lixing-Rouhling 領,french + type
 lordship-luttange,ルターニュ領,seat + type
 lordship-lutzelbourg,Lutzelbourg 領,french + type
-lordship-marimont,マリモン領,manual
+lordship-marimont,マリモン城代管区,manual
 lordship-meilberg,Meilberg 領,french + type
 lordship-metz,メス領,seat + type
 lordship-monclair,Monclair 領,french + type
@@ -206,12 +209,14 @@ lordship-puttelange,ピュトランジュ領,seat + type
 lordship-puttlingen-saar,Püttlingen-Saar 領,french + type
 lordship-rechicourt,Réchicourt 領,french + type
 lordship-saint-avold,サンタヴォル領,seat + type
+lordship-sarralbe,サラルブ領,seat + type
 lordship-sarreck,サレック領,seat + type
 lordship-talange,Talange 領,french + type
 lordship-thicourt,Thicourt 領,french + type
 lordship-turquestein,Turquestein 領,french + type
 lordship-val-de-nalbach,Val de Nalbach 領,french + type
 lordship-varize,Varize 領,french + type
+lordship-varsberg,Varsberg 領,french + type
 lordship-volmerange,ヴォルムランジュ領,manual
 lordship-vry-devant-metz,Vry-devant-Metz 領,french + type
 lordship-weinsberg,Weinsberg 領,french + type
@@ -267,10 +272,14 @@ oeting,オエティン,wikidata
 office-berus,ベールス管区,seat + type
 office-boulay,ブレ管区,seat + type
 office-dieuze,ディウーズ管区,seat + type
+office-faulquemont,フォルクモン管区,seat + type
+office-forbach,フォルバック管区,seat + type
 office-herange,Hérange 管区,french + type
 office-hombourg-haut,オンブール＝オー管区,manual
 office-merzig,メルツィヒ共同統治地,seat + type
-office-phalsbourg,ファルスブール侯国,manual
+office-morhange,モランジュ管区,seat + type
+office-phalsbourg,ファルスブール管区,seat + type
+office-puttelange,ピュトランジュ管区,seat + type
 office-sarralbe,サラルブ管区,seat + type
 office-sarreguemines,サルグミーヌ管区,seat + type
 office-sarrewerden-et-herbitzheim,サールヴェルデン・ヘルビッツハイム管区,manual
@@ -279,7 +288,6 @@ office-sergenterie-de-bining,Bining 廷吏区,french + type
 office-sergenterie-ou-buttelei-de-rimling,Rimling 廷吏区,french + type
 office-sierck,シエルク管区,seat + type
 office-siersberg,ジールスベルク管区,seat + type
-office-varsberg,Varsberg 管区,french + type
 office-vaudrevange,ヴァラーファンゲン管区,seat + type
 oppen,オッペン,wikidata
 pays-messin,メス都市領（ペイ・メッサン）,manual
@@ -288,17 +296,17 @@ pirmasens,ピルマゼンス,wikidata
 pommern,ポンメルン (モーゼル),wikidata
 pont-a-mousson,ポンタ＝ムッソン,wikidata
 principality-lixheim,リクサイム侯国,seat + type
+principality-phalsbourg,ファルスブール侯国,manual
 provostship-amance,Amance 代官区,french + type
-provostship-conde,Condé 代官区,french + type
 provostship-eblange,エブリンゲン代官区,seat + type
 provostship-insming,アンスマン代官区,seat + type
 provostship-ketternostern,Ketternostern 代官区,french + type
 provostship-marche-de-chateau-salins,シャトー＝サラン帝国辺境区,manual
-provostship-marsal,マルサル代官区,seat + type
-provostship-oberkirchen,Oberkirchen 代官区,french + type
 provostship-remich,Remich 代官区,french + type
 provostship-rurale-de-sierck,シエルク農村代官区,seat + type
 provostship-sarrebourg,サールブール代官区,seat + type
+provostship-sierck,シエルク代官区,manual
+provostship-sous-sierck,シエルク副代官区,manual
 provostship-thionville,ティオンヴィル代官区,seat + type
 provostship-winterbach,Winterbach 代官区,french + type
 puttelange,ピュトランジュ,manual

@@ -35,6 +35,11 @@ SNIPPET_MAX = 300
 STATE_TYPES = {"empire", "kingdom", "duchy", "electorate", "temporal_bishopric"}
 TRANSFER_EVENTS = {"purchase", "pledge", "redemption", "inheritance", "enfeoffment", "exchange", "cession",
                    "occupation"}
+# Feudal realms (titles held of a lord) as against the bailiwick's districts (offices, provostships...).
+FEUDAL_TYPES = {"principality", "marquisate", "county", "barony", "lordship", "fief", "advocacy", "allod"}
+# Where a right sits when a realm is split into an office and a fief.
+FIEF_RIGHTS = {"manorial_lord", "high_justice", "middle_low_justice", "advocate"}
+OFFICE_RIGHTS = {"tax_aide", "military", "appeal_jurisdiction", "tabellionage"}
 _ID_LIKE = re.compile(r"^(?:county|lordship|duchy|office|barony|principality|castellany|bailiwick|provostship|"
                       r"marquisate|advocacy|condominium|ban|fief|receivership|mayoralty|court)-[a-z0-9-]+$", re.I)
 
@@ -117,7 +122,8 @@ class Builder:
                        for p in sorted(glob.glob(str(config.EXTRACTED_DIR / "L*_*.json")))]
         mentions = [p for c in self.chunks for p in c["extraction"]["places"]]
         self.places = PlaceResolver(Gazetteer.load(), self.manual["places"], self.rules.get("place_aliases", {}),
-                                    territory_types, preferred_domain_types(mentions))
+                                    territory_types, preferred_domain_types(mentions),
+                                    self.rules.get("split_realms", {}))
         self.entities = EntityResolver(self.manual["entities"], self.rules.get("entity_aliases", {}))
         self.rights: dict[tuple, dict] = {}
         self.events: dict[tuple, dict] = {}
@@ -253,6 +259,84 @@ class Builder:
             if f in row and not old.get(f) and row.get(f):
                 old[f] = row[f]
 
+    # --- realms split into an office and a fief (rules.yaml split_realms) ----------------
+    def _split_pairs(self) -> list[tuple[str, str]]:
+        return [(v["admin"], v["feudal"]) for v in (self.rules.get("split_realms") or {}).values()]
+
+    def _type_of(self, pid: str) -> str:
+        manual = next((m for m in self.manual["places"] if m["id"] == pid), None)
+        if manual:
+            return manual["place_type"]
+        p = self.places.places.get(pid)
+        return p.place_type if p else ""
+
+    def split_rights(self) -> int:
+        """The lord's rights (manorial lordship, justice, advocacy) belong to the fief; the
+        bailiwick's (aids and taxes, musters, notaries, appeals) to the office. Rows and events
+        the extraction put on the other half move over."""
+        moves = {}
+        for office, fief in self._split_pairs():
+            moves |= {(office, t): fief for t in FIEF_RIGHTS} | {(fief, t): office for t in OFFICE_RIGHTS}
+        moved = 0
+        rights: dict[tuple, dict] = {}
+        for r in self.rights.values():
+            if (target := moves.get((r["place_id"], r["right_type"]))):
+                r["place_id"], moved = target, moved + 1
+            self._merge(rights, (r["place_id"], r["right_type"], r["holder_id"], r["share"], r["status"],
+                                 r["from_year"], r["to_year"]), r)
+        events: dict[tuple, dict] = {}
+        for e in self.events.values():
+            if (target := moves.get((e["place_id"], e["right_type"]))):
+                e["place_id"], moved = target, moved + 1
+            self._merge(events, (e["year"], e["place_id"], e["right_type"], e["from_holder"], e["to_holder"],
+                                 e["event_type"]), e)
+        self.rights, self.events = rights, events
+        return moved
+
+    def split_memberships(self) -> int:
+        """An office and its fief share their lands: the fief's places are in the office, and
+        the office's own places (not in another fief) are the fief's. The fief lies in its office,
+        which takes the fief's place in the administrative hierarchy (the bailiwick)."""
+        changed = 0
+
+        def add(child, parent, like):
+            nonlocal changed
+            if any(m["child_id"] == child and m["parent_id"] == parent for m in self.memberships.values()):
+                return
+            row = {"child_id": child, "parent_id": parent, "from_year": like.get("from_year"),
+                   "to_year": like.get("to_year"), "pages": set(like.get("pages") or ()), "confidence": "high",
+                   "notes": "shared lands of an office and its fief (rules.yaml split_realms)"}
+            self.memberships[(child, parent, row["from_year"], row["to_year"])] = row
+            changed += 1
+
+        def is_settlement(pid: str) -> bool:
+            manual = next((m for m in self.manual["places"] if m["id"] == pid), None)
+            if manual:
+                return manual["kind"] == "settlement"
+            p = self.places.places.get(pid)
+            return bool(p) and p.kind == "settlement" and p.place_type not in self.places.territory_types
+
+        for office, fief in self._split_pairs():
+            ms = list(self.memberships.values())
+            # the fief lies in its office: cite the pages that give the fief's lands
+            fief_pages = set().union(*(m["pages"] for m in ms if fief in (m["child_id"], m["parent_id"])))
+            in_other_fief = {m["child_id"] for m in ms if m["parent_id"] != fief
+                             and self._type_of(m["parent_id"]) in FEUDAL_TYPES}
+            for m in ms:
+                if m["parent_id"] == fief and is_settlement(m["child_id"]):
+                    add(m["child_id"], office, m)
+                elif m["parent_id"] == office and is_settlement(m["child_id"]) and m["child_id"] not in in_other_fief:
+                    add(m["child_id"], fief, m)
+            for key, m in list(self.memberships.items()):
+                # 'la seigneurie de Forbach' among the units of the bailiwick: the office is. (A fief
+                # listed in another office, like Faulquemont in Boulay's in 1630, stays where it is.)
+                if m["child_id"] == fief and self._type_of(m["parent_id"]) == "bailiwick":
+                    del self.memberships[key]
+                    add(office, m["parent_id"], m)
+                    changed += 1
+            add(fief, office, {"pages": fief_pages})
+        return changed
+
     # --- refinement ----------------------------------------------------------------
     def date_rights_from_events(self) -> int:
         """Use each transfer event (A -> B in year Y) to close A's open-ended row and open
@@ -366,9 +450,11 @@ class Builder:
     def build(self) -> dict[str, list[dict]]:
         for chunk in self.chunks:
             self.add_chunk(chunk)
+        self.stats["rights and events moved between an office and its fief"] = self.split_rights()
         self.stats["rights dated from events"] = self.date_rights_from_events()
         self.stats["rights merged (same holder, overlapping)"] = self.merge_same_holder()
         self.stats["memberships merged (attestation years, duplicates)"] = self.normalize_memberships()
+        self.stats["memberships added or moved for split realms"] = self.split_memberships()
 
         # Hand-curated rows win: extracted rows for a covered (place, right) or entity are dropped.
         manual_right_keys = {(r["place_id"], r["right_type"]) for r in self.manual["rights"]}

@@ -27,7 +27,41 @@ county-dalem,marquisate-faulquemont,1629,,exact,,27,high,part of the marquisate 
 marienthal,lordship-faulquemont,,,,,27,high,one of the places of the lordship (p. 27)
 marquisate-faulquemont,bailliage-allemagne,1629,,exact,,9-10;27,high,
 lordship-faulquemont,marquisate-faulquemont,1629,,exact,,27,high,
-lordship-faulquemont,bailliage-allemagne,,1628,,exact,9;11;22,high,directly in the bailiwick until it became part of the marquisate
+office-faulquemont,bailliage-allemagne,,,,,9;11;22;63,high,the office of Faulquemont (p. 63) among the units of the bailiwick
+lordship-faulquemont,office-faulquemont,,,,,16;63,high,
+lordship-faulquemont,office-boulay,1629,,exact,,82,high,counted among the fiefs of the office of Boulay in the 1630 table of fiefs (p. 82)
+lordship-morhange,office-dieuze,1629,,exact,,83,high,counted among the fiefs of the office of Dieuze in the 1630 table of fiefs (p. 83)
 lordship-volmerange,marquisate-faulquemont,1629,,exact,,27,high,
 lordship-volmerange,office-boulay,,,,,16;62,high,"like Faulquemont and Dalem, still in the office of Boulay after 1629 (p. 82)"
 volmerange,lordship-volmerange,,,,,27;62,high,
+castellany-sarreguemines,office-sarreguemines,,,,,17;68,high,the castellany is the ducal core of the office of Sarreguemines
+provostship-sierck,office-sierck,,,,,12;49,high,
+provostship-sous-sierck,office-sierck,,,,,12;49,high,
+mayoralty-montenach,provostship-sierck,,,,,12;49,high,Montenach is one of the villages of the provostship (p. 12)
+mayoralty-puttelange,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-holving,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-metzing,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-remering,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-farschviller,lordship-puttelange,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
+mayoralty-teting,office-hombourg-haut,,,,,64,high,"l'organisation de la mairie de Téting, in the office of Hombourg (p. 64)"
+albestroff,castellany-albestroff,,,,,78,high,the unit's own seat: 'Châtellenie d'Albestroff' (seat village)
+vibersviller,court-vibersviller,,,,,108,high,the unit's own seat: 'Cour de Vibersviller' (seat village)
+altheim,mayoralty-altheim,,,,,69,high,the unit's own seat: 'Mairie d'Altheim' (seat village)
+boucheporn,mayoralty-boucheporn,,,,,79,high,the unit's own seat: 'Mairie de Boucheporn' (seat village)
+boustroff,mayoralty-boustroff,,,,,79,high,the unit's own seat: 'Mairie de Boustroff' (seat village)
+cutting,mayoralty-cutting,,,,,74,high,the unit's own seat: 'Mairie de Cutting' (seat village)
+farschviller,mayoralty-farschviller,,,,,68,high,the unit's own seat: 'Mairie de Farschviller' (seat village)
+hilsprich,mayoralty-hilsprich,,,,,18;69,high,the unit's own seat: 'Mairie de Hilsprich' (seat village)
+metzing-forbach,mayoralty-metzing,,,,,68,high,the unit's own seat: 'Mairie de Metzing' (seat village)
+montenach,mayoralty-montenach,,,,,49,high,the unit's own seat: 'Mairie de Montenach' (seat village)
+puttelange,mayoralty-puttelange,,,,,68,high,the unit's own seat: 'Mairie de Puttelange' (seat village)
+rahling,mayoralty-rahling,,,,,69,high,the unit's own seat: 'Mairie de Rahling' (seat village)
+remering-puttelange,mayoralty-remering,,,,,68,high,the unit's own seat: 'Mairie de Rémering' (seat village)
+riche,mayoralty-riche,,,,,74,high,the unit's own seat: 'Mairie de Riche' (seat village)
+rurange-metzervisse,mayoralty-rurange,,,,,98,high,the unit's own seat: 'Mairie de Rurange' (seat village)
+schorbach,mayoralty-schorbach,,,,,69,high,the unit's own seat: 'Mairie de Schorbach' (seat village)
+siersberg,mayoralty-siersberg,,,,,52,high,the unit's own seat: 'Haute-mairie de Siersberg' (seat village)
+walschbronn,mayoralty-walschbronn,,,,,69,high,the unit's own seat: 'Mairie de Walschbronn' (seat village)
+eblange,provostship-eblange,,,,,63,high,the unit's own seat: 'Prévôté d'Éblange' (seat village)
+insming,provostship-insming,,,,,74,high,the unit's own seat: 'Prévôté d'Insming' (seat village)
+winterbach,provostship-winterbach,,,,,15,high,the unit's own seat: 'Prévôté de Winterbach' (seat village)

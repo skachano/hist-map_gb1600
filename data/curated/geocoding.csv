@@ -231,6 +231,7 @@ castellany-haboudange,48.89056,6.61194,,,Châtellenie de Haboudange,Kellerei Hab
 castellany-lagarde,48.69139,6.705,,,Châtellenie de Lagarde,Kellerei Lagarde,Castellany of Lagarde,territory,medium,seat: lagarde
 castellany-marsal,48.78917,6.60917,,,Châtellenie de Marsal,Kellerei Marsal,Castellany of Marsal,territory,medium,seat: marsal
 castellany-remilly,49.01361,6.39333,,,Châtellenie de Rémilly,Kellerei Remilly,Castellany of Rémilly,territory,medium,seat: remilly
+castellany-sarreguemines,49.11056,7.06722,,,Châtellenie de Sarreguemines,Kellerei Saargemünd,Castellany of Sarreguemines,territory,medium,seat: sarreguemines-m
 castellany-vic,48.7706,6.50357,,,Châtellenie de Vic,Kellerei Vic,Castellany of Vic,territory,medium,centre of 14 member settlement(s)
 castviller,49.01474,6.93179,Q55596049,,Castviller,,Castviller,wikidata,high,
 chambrey,48.78694,6.45944,Q21714,,Chambrey,Chambrey,Chambrey,wikidata,high,
@@ -255,6 +256,7 @@ coume,49.19833,6.57222,Q23001,,Coume,Coume,Coume,wikidata,high,
 county-bitche,49.05167,7.42528,,,Comté de Bitche,Grafschaft Bitsch,County of Bitche,territory,medium,seat: bitche
 county-blamont,,,,,Comté de Blâmont,Grafschaft Blâmont,County of Blâmont,territory,medium,no seat or located members
 county-bliescastel,49.11571,7.01188,,,Comté de Bliescastel,Grafschaft Bliescastel,County of Bliescastel,territory,medium,centre of 6 member settlement(s)
+county-boulay,49.18333,6.49361,,,Comté de Boulay,Grafschaft Boulay-Moselle,County of Boulay-Moselle,territory,medium,seat: boulay
 county-crehange,49.06306,6.58194,,,Comté de Créhange,Grafschaft Créhange,County of Créhange,territory,medium,seat: crehange
 county-dabo,48.65389,7.23694,,,Comté de Dabo,Grafschaft Dabo,County of Dabo,territory,medium,seat: dabo
 county-dalem,49.24056,6.61056,,,Comté de Dalem,Grafschaft Dalem,County of Dalem,territory,medium,seat: dalem
@@ -270,7 +272,7 @@ county-salm,,,,,Comté de Salm,Grafschaft Salm,County of Salm,territory,medium,n
 county-sarrebruck,49.23333,7.0,,,Comté de Sarrebruck,Grafschaft Saarbrücken,County of Saarbrücken,territory,medium,seat: sarrehruck
 county-sarrewerden,48.92278,7.08361,,,Comté de Sarrewerden,Grafschaft Sarrewerden,County of Sarrewerden,territory,medium,seat: sarrewerden
 courcelles,49.10917,6.405,Q21703,,Courcelles,Courcelles-Chaussy,Courcelles-Chaussy,override,high,"Courcelles-Chaussy, with Chaussy and Frécourt dependent on the castle of Hombourg (p. 82); was matched to Courcelles in the Vosges"
-court-conde,49.22097,6.43445,,,Cour de Condé,Hof Condé,Court district of Condé,territory,medium,centre of 7 member settlement(s)
+court-conde,49.22097,6.43445,,,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,territory,medium,centre of 7 member settlement(s)
 court-perl,49.4771,6.39167,,,Cour de Perl,Hof Perl,Court district of Perl,territory,medium,centre of 2 member settlement(s)
 court-vibersviller,48.91444,6.94444,,,Cour de Vibersviller,Hof Vibersviller,Court district of Vibersviller,territory,medium,seat: vibersviller
 craincourt,48.87667,6.32167,Q21758,,Craincourt,Craincourt,Craincourt,wikidata,high,
@@ -560,7 +562,7 @@ hochweyersberg,48.975,7.5175,,,Hochweyersberg-lès-Baerenthal,,,approximate,low,
 hoelling,49.0734,7.2972,Q3139045,,Hœlling,Hoelling,Hoelling,wikidata,high,no canton anchor
 hoff,48.7462,7.05443,Q3139053,,Hoff (Hove),Hoff,Hoff,wikidata,high,
 holbach-lachambre,49.07283,6.75503,Q55597231,,Holbach,Holbach,Holbach,wikidata,high,
-holbach-siersthal,49.0578,7.3439,Q3139259,,Holbach,,Holbach,wikidata,high,
+holbach-siersthal,49.0578,7.3439,Q115869856,,Holbach,,Holbach,wikidata,high,
 holling,49.26167,6.49667,Q22349,,Holling,Holling,Holling,wikidata,high,
 holving,49.01083,6.965,Q22999,,Holving,Holving,Holving,wikidata,high,
 hombourg-haut-et-bas,49.12931,6.78814,Q21634406,,Hombourg-Bas,Hombourg-Bas,Hombourg-Bas,override,high,"Hombourg-Bas, the lower village of Hombourg-Haut (index: Hombourg-Haut et -Bas)"
@@ -693,6 +695,7 @@ longeville,,,,,Longeville,,,unlocated,low,no candidate (and no canton for a fuzz
 lordship-asswiller,,,,,Seigneurie d'Asswiller,Herrschaft Asswiller,Lordship of Asswiller,territory,medium,no seat or located members
 lordship-berg,49.53593,6.38636,,,Seigneurie de Berg,Herrschaft Schloss Berg (Saarland),Lordship of Schloss Berg,territory,medium,seat: berg-nennig
 lordship-bertrange,49.30105,6.24775,,,Seigneurie de Bertrange,Herrschaft Bertrange,Lordship of Bertrange,territory,medium,centre of 3 member settlement(s)
+lordship-berus,49.2639,6.69417,,,Seigneurie de Berus,Herrschaft Berus,Lordship of Berus,territory,medium,seat: berus
 lordship-bionville,49.10501,6.47932,,,Seigneurie de Bionville,Herrschaft Bionville,Lordship of Bionville,territory,medium,seat: bionville
 lordship-bracs,48.78656,7.02811,,,Seigneurie des Bracs,Herrschaft Bracs,Lordship of Bracs,territory,medium,centre of 5 member settlement(s)
 lordship-busbach,49.33993,6.3664,,,Seigneurie de Busbach,Herrschaft Busbach,Lordship of Busbach,territory,medium,centre of 4 member settlement(s)
@@ -722,7 +725,7 @@ lordship-lixing,49.15361,6.99444,,,Seigneurie de Lixing,Herrschaft Lixing-lès-R
 lordship-lixing-rouhling,,,,,Seigneurie de Lixing-Rouhling,Herrschaft Lixing-Rouhling,Lordship of Lixing-Rouhling,territory,medium,no seat or located members
 lordship-luttange,49.27,6.31111,,,Seigneurie de Luttange,Herrschaft Luttange,Lordship of Luttange,territory,medium,seat: luttange
 lordship-lutzelbourg,48.73444,7.25139,,,Seigneurie de Lutzelbourg,Herrschaft Lutzelbourg,Lordship of Lutzelbourg,territory,medium,seat: lutzelbourg
-lordship-marimont,48.92174,6.8068,,,Office de Marimont-lès-Albestroff,Amt Marimont-lès-Albestroff,Office of Marimont-lès-Albestroff,territory,medium,centre of 31 member settlement(s)
+lordship-marimont,48.88917,6.78333,,,Châtellenie de Marimont,Kellerei Marimont-lès-Bénestroff,Castellany of Marimont-lès-Bénestroff,territory,medium,seat: marimont
 lordship-meilberg,49.33732,6.21139,,,Seigneurie de Meilberg,Herrschaft Meilberg,Lordship of Meilberg,territory,medium,centre of 6 member settlement(s)
 lordship-metz,49.11972,6.17694,,,Évêché temporel de Metz,Évêché temporel de Metz,Évêché temporel de Metz,territory,medium,seat: metz
 lordship-monclair,49.4956,6.55778,,,Seigneurie de Monclair,Herrschaft Burg Montclair,Lordship of Burg Montclair,territory,medium,seat: monclair
@@ -732,12 +735,14 @@ lordship-puttelange,49.0525,6.93083,,,Seigneurie de Puttelange,Herrschaft Puttel
 lordship-puttlingen-saar,,,,,Seigneurie de Püttlingen-Saar,Herrschaft Püttlingen-Saar,Lordship of Püttlingen-Saar,territory,medium,no seat or located members
 lordship-rechicourt,,,,,Comté de Réchicourt,Comté de Réchicourt,Comté de Réchicourt,territory,medium,no seat or located members
 lordship-saint-avold,49.10417,6.70806,,,Seigneurie de Saint-Avold,Herrschaft Saint-Avold,Lordship of Saint-Avold,territory,medium,seat: saint-avold
+lordship-sarralbe,48.99611,7.02778,,,Seigneurie de Sarralbe,Herrschaft Sarralbe,Lordship of Sarralbe,territory,medium,seat: sarralbe
 lordship-sarreck,48.79417,7.03417,,,Seigneurie de Sarreck,Herrschaft Sarreck,Lordship of Sarreck,territory,medium,seat: sarreck
 lordship-talange,49.25538,6.23594,,,Seigneurie de Talange,Herrschaft Talange,Lordship of Talange,territory,medium,centre of 1 member settlement(s)
 lordship-thicourt,48.98889,6.55611,,,Seigneurie de Thicourt,Herrschaft Thicourt,Lordship of Thicourt,territory,medium,seat: thicourt
 lordship-turquestein,48.58808,7.03931,,,Seigneurie de Turquestein,Herrschaft Burg Turquestein,Lordship of Château de Turquestein,territory,medium,seat: turquestein
 lordship-val-de-nalbach,49.37962,6.80111,,,Seigneurie de Val de Nalbach,Herrschaft Val de Nalbach,Lordship of Val de Nalbach,territory,medium,centre of 5 member settlement(s)
 lordship-varize,49.13472,6.45806,,,Terre de Varize,Terre de Varize,Terre de Varize,territory,medium,seat: varize
+lordship-varsberg,49.1725,6.62861,,,Seigneurie de Varsberg,Herrschaft Varsberg,Lordship of Varsberg,territory,medium,seat: varsberg
 lordship-volmerange,49.16833,6.44778,,,Seigneurie de Volmerange,Herrschaft Volmerange-lès-Boulay,Lordship of Volmerange-lès-Boulay,territory,medium,seat: volmerange
 lordship-vry-devant-metz,49.22823,6.43382,,,Seigneurie de Vry-devant-Metz,Herrschaft Vry-devant-Metz,Lordship of Vry-devant-Metz,territory,medium,centre of 1 member settlement(s)
 lordship-weinsberg,,,,,Seigneurie de Weinsberg,Herrschaft Weinsberg,Lordship of Weinsberg,territory,medium,no seat or located members
@@ -904,10 +909,14 @@ oeting,49.17361,6.91472,Q21657,,Oeting,Œting,Œting,wikidata,high,
 office-berus,49.2639,6.69417,,,Office de Berus,Amt Berus,Office of Berus,territory,medium,seat: berus
 office-boulay,49.18333,6.49361,,,Office de Boulay,Amt Boulay-Moselle,Office of Boulay-Moselle,territory,medium,seat: boulay
 office-dieuze,48.81222,6.71972,,,Office de Dieuze,Amt Dieuze,Office of Dieuze,territory,medium,seat: dieuze
+office-faulquemont,49.04111,6.59917,,,Office de Faulquemont,Amt Faulquemont,Office of Faulquemont,territory,medium,seat: faulquemont
+office-forbach,49.18806,6.9,,,Office de Forbach,Amt Forbach,Office of Forbach,territory,medium,seat: forbach
 office-herange,48.775,7.16972,,,Office de Hérange,Amt Hérange,Office of Hérange,territory,medium,seat: herange
 office-hombourg-haut,49.09076,6.73052,,,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,territory,medium,centre of 47 member settlement(s)
 office-merzig,49.44222,6.6375,,,Office de Merzig,Office de Merzig,Office de Merzig,territory,medium,seat: merzig
-office-phalsbourg,48.76778,7.25833,,,Principauté de Phalsbourg,Fürstentum Phalsbourg,Principality of Phalsbourg,territory,medium,seat: phalsbourg
+office-morhange,48.92361,6.63583,,,Office de Morhange,Amt Mörchingen,Office of Morhange,territory,medium,seat: morhange
+office-phalsbourg,48.76778,7.25833,,,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
+office-puttelange,49.0525,6.93083,,,Office de Puttelange,Amt Puttelange-aux-Lacs,Office of Puttelange-aux-Lacs,territory,medium,seat: puttelange
 office-sarralbe,48.99611,7.02778,,,Office de Sarralbe,Amt Sarralbe,Office of Sarralbe,territory,medium,seat: sarralbe
 office-sarreguemines,49.11056,7.06722,,,Office de Sarreguemines,Amt Saargemünd,Office of Sarreguemines,territory,medium,seat: sarreguemines-m
 office-sarrewerden-et-herbitzheim,,,,,Office de Sarrewerden et Herbitzheim,Amt Sarrewerden et Herbitzheim,Office of Sarrewerden et Herbitzheim,territory,medium,no seat or located members
@@ -916,7 +925,6 @@ office-sergenterie-de-bining,49.03815,7.28132,,,Sergenterie de Sergenterie de Bi
 office-sergenterie-ou-buttelei-de-rimling,49.09641,7.31418,,,Sergenterie de Sergenterie de Rimling,Büttelei Sergenterie de Rimling,Sergeantry of Sergenterie de Rimling,territory,medium,centre of 15 member settlement(s)
 office-sierck,49.4425,6.36028,,,Office de Sierck,Amt Sierck-les-Bains,Office of Sierck-les-Bains,territory,medium,seat: sierck
 office-siersberg,49.3686,6.67861,,,Office de Siersberg,Amt Siersburg,Office of Siersburg,territory,medium,seat: siersberg
-office-varsberg,49.1725,6.62861,,,Office de Varsberg,Amt Varsberg,Office of Varsberg,territory,medium,seat: varsberg
 office-vaudrevange,49.32781,6.72081,,,Office de Vaudrevange,Amt Wallerfangen,Office of Wallerfangen,territory,medium,seat: vaudrevange
 offviller,48.95,7.64389,,,Offviller,,,approximate,low,not in Wikidata/GeoNames; placed at Niederbronn (index location)
 ohersteinbach,49.03611,7.6875,Q21486,,Obersteinbach,Obersteinbach,Obersteinbach,wikidata,high,
@@ -960,17 +968,17 @@ porcelette,49.15639,6.65556,Q22296,,Porcelette,Porcelette,Porcelette,wikidata,hi
 postroff,48.85111,7.07944,Q22306,,Postroff,Postroff,Postroff,wikidata,high,
 primsweiler,49.41013,6.85553,,2852035,Primsweiler,,,geonames,high,geonames exact
 principality-lixheim,48.77528,7.14194,,,Principauté de Lixheim,Fürstentum Lixheim,Principality of Lixheim,territory,medium,seat: lixheim
+principality-phalsbourg,48.76778,7.25833,,,Principauté de Phalsbourg,Fürstentum Phalsbourg,Principality of Phalsbourg,territory,medium,seat: phalsbourg
 provostship-amance,48.87017,6.52389,,,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,territory,medium,centre of 7 member settlement(s)
-provostship-conde,,,,,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,territory,medium,no seat or located members
 provostship-eblange,49.22333,6.48194,,,Prévôté d'Éblange,Schultheißerei Éblange,Provostship of Éblange,territory,medium,seat: eblange
 provostship-insming,48.95611,6.87417,,,Prévôté d'Insming,Schultheißerei Insming,Provostship of Insming,territory,medium,seat: insming
-provostship-ketternostern,49.55788,7.2452,,,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,territory,medium,centre of 11 member settlement(s)
+provostship-ketternostern,49.55516,7.24661,,,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,territory,medium,centre of 12 member settlement(s)
 provostship-marche-de-chateau-salins,,,,,Marche d'Empire de Marche d'Empire de Château-Salins,Reichsmark Marche d'Empire de Château-Salins,Imperial march of Marche d'Empire de Château-Salins,territory,medium,no seat or located members
-provostship-marsal,48.78917,6.60917,,,Prévôté de Marsal,Schultheißerei Marsal,Provostship of Marsal,territory,medium,seat: marsal
-provostship-oberkirchen,49.5253,7.26222,,,Prévôté d'Oberkirchen,Schultheißerei Oberkirchen,Provostship of Oberkirchen,territory,medium,seat: ketternostern
 provostship-remich,49.45611,6.42736,,,Prévôté de Remich,Schultheißerei Remich,Provostship of Remich,territory,medium,centre of 2 member settlement(s)
 provostship-rurale-de-sierck,49.30939,6.42952,,,Prévôté rurale de Sierck,Landschultheißerei Sierck,Rural provostship of Sierck,territory,medium,centre of 22 member settlement(s)
 provostship-sarrebourg,48.73472,7.05389,,,Prévôté de Sarrebourg,Schultheißerei Sarrebourg,Provostship of Sarrebourg,territory,medium,seat: sarrebourg
+provostship-sierck,49.4425,6.36028,,,Prévôté de Sierck,Schultheißerei Sierck-les-Bains,Provostship of Sierck-les-Bains,territory,medium,seat: sierck
+provostship-sous-sierck,49.4425,6.36028,,,Sous-prévôté de Sierck,Sous-prévôté de Sierck,Sous-prévôté de Sierck,territory,medium,seat: sierck
 provostship-thionville,49.35806,6.16833,,,Prévôté de Thionville,Schultheißerei Thionville,Provostship of Thionville,territory,medium,seat: thionville
 provostship-winterbach,49.4753,7.10258,,,Prévôté de Winterbach,Schultheißerei Winterbach,Provostship of Winterbach,territory,medium,seat: winterbach
 puberg,48.91167,7.31528,Q21470,,Puberg,Puberg,Puberg,wikidata,high,
