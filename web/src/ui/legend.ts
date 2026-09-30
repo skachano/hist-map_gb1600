@@ -1,7 +1,8 @@
 // Rights-map legend: holders of the selected right in the selected year with place counts,
 // the holder picker (which three holders get a colour), and the pattern keys.
 import type { Dataset } from "../data/types";
-import { name, t } from "../i18n";
+import { label, name, t } from "../i18n";
+import { SHAPE_ORDER, shapeSvg } from "../map/icons";
 import { CONTESTED, OTHER, SERIES } from "../model/colors";
 import type { PlaceRight } from "../model/snapshot";
 import type { State, Store } from "../state/store";
@@ -12,6 +13,7 @@ const OTHERS_LISTED = 8;
 export function renderLegend(root: HTMLElement, data: Dataset, state: State, store: Store,
   byPlace: Map<string, PlaceRight>, coloured: string[]): void {
   const { lang } = state;
+  const settlementTypes = typesOf(data);
   const counts = new Map<string, number>();
   let contested = 0;
   let shared = 0;
@@ -55,6 +57,21 @@ export function renderLegend(root: HTMLElement, data: Dataset, state: State, sto
       row(swatch(SERIES[0], "faded"), t("inheritedLegend", lang)),
       row(swatch("transparent", "empty"), t("noData", lang)),
     ),
+    h("h3", {}, t("settlementTypes", lang)),
+    h("ul", { class: "shapes" }, ...SHAPE_ORDER.filter((type) => settlementTypes.has(type)).map((type) =>
+      h("li", {}, shapeSvg(type), h("span", { class: "label" }, label(data.meta.vocab.place_types[type], lang, type))))),
     h("p", { class: "note" }, t("approxAreas", lang)),
   );
+}
+
+/** The settlement types present in the data (for the shapes key). */
+const typesCache = new WeakMap<Dataset, Set<string>>();
+function typesOf(data: Dataset): Set<string> {
+  let types = typesCache.get(data);
+  if (!types) {
+    types = new Set([...data.places.values()].filter((p) => p.kind === "settlement" && p.lat !== undefined)
+      .map((p) => p.type));
+    typesCache.set(data, types);
+  }
+  return types;
 }

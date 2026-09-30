@@ -14,6 +14,7 @@ const STRINGS = {
   right: { en: "Right", fr: "Droit", de: "Recht", ja: "権利" },
   otherRights: { en: "Other rights", fr: "Autres droits", de: "Weitere Rechte", ja: "その他の権利" },
   language: { en: "Language", fr: "Langue", de: "Sprache", ja: "言語" },
+  settlementTypes: { en: "Kinds of place", fr: "Types de lieux", de: "Arten von Orten", ja: "地点の種別" },
   legend: { en: "Holders", fr: "Détenteurs", de: "Inhaber", ja: "保有者" },
   otherHolders: { en: "Other holders", fr: "Autres détenteurs", de: "Andere Inhaber", ja: "その他の保有者" },
   contested: { en: "Contested or disputed", fr: "Contesté ou litigieux", de: "Umstritten", ja: "係争・異議あり" },

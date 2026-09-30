@@ -12,6 +12,7 @@ import { MAP_CENTER, MAP_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
 import { CONTESTED, MARQUISATE, PRINCIPALITY, REALM_OTHER, SERIES } from "../model/colors";
 import { typesIn } from "../model/territories";
+import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
 
 setWorkerUrl(workerUrl);
 
@@ -42,7 +43,7 @@ function placePoints(data: Dataset): GeoJSON.FeatureCollection {
     features.push({
       type: "Feature",
       id: p.id,
-      properties: { id: p.id, town: p.type === "town" || p.type === "small_town", approx: !!p.approx },
+      properties: { id: p.id, icon: iconName(p.type), approx: !!p.approx },
       geometry: { type: "Point", coordinates: [p.lon, p.lat] },
     });
   }
@@ -124,6 +125,9 @@ export class MapView {
   private addLayers(): void {
     const m = this.map;
     m.addImage("hatch", hatch());
+    for (const type of Object.keys(SHAPES)) {
+      m.addImage(iconName(type), shapeImage(type), { sdf: true, pixelRatio: ICON_PIXEL_RATIO });
+    }
     m.addSource("cells", { type: "geojson", data: this.data.cells, promoteId: "id" });
     m.addSource("shared-cells", { type: "geojson", data: EMPTY });
     m.addSource("pledged-cells", { type: "geojson", data: EMPTY });
@@ -166,16 +170,20 @@ export class MapView {
     m.addLayer({ id: "bailiwick", type: "line", source: "territories",
       filter: ["==", ["get", "id"], BAILIWICK],
       paint: { "line-color": "#0b0b0b", "line-width": 1.8 } });
+    // Settlements: the shape says what kind of place (map/icons.ts), the fill who holds the right.
     m.addLayer({
-      id: "places-circle", type: "circle", source: "places",
+      id: "places-circle", type: "symbol", source: "places",
+      layout: {
+        "icon-image": ["get", "icon"],
+        "icon-size": ["interpolate", ["linear"], ["zoom"], 7, 0.35, 11, 0.8, 13, 1],
+        "icon-allow-overlap": true,
+        "icon-ignore-placement": true,
+      },
       paint: {
-        "circle-radius": ["interpolate", ["linear"], ["zoom"], 7, ["case", ["get", "town"], 4, 2], 11,
-          ["case", ["get", "town"], 8, 5]],
-        "circle-color": ["coalesce", state("fill"), "#ffffff"],
-        // placed at their commune: hollow, so the approximation stays visible
-        "circle-opacity": ["case", ["get", "approx"], 0, 1],
-        "circle-stroke-color": ["case", ["boolean", state("contested"), false], CONTESTED, "#52514e"],
-        "circle-stroke-width": ["case", ["boolean", state("contested"), false], 1.6, 0.8],
+        // placed at their commune: hollow (outline only), so the approximation stays visible
+        "icon-color": ["case", ["get", "approx"], "rgba(255,255,255,0)", ["coalesce", state("fill"), "#ffffff"]],
+        "icon-halo-color": ["case", ["boolean", state("contested"), false], CONTESTED, "#52514e"],
+        "icon-halo-width": ["case", ["boolean", state("contested"), false], 1.6, 0.9],
       },
     });
     m.addLayer({ id: "selected", type: "circle", source: "places", filter: ["==", ["get", "id"], ""],

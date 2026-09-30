@@ -143,3 +143,19 @@ test("territories: one kind of realm at every level", async ({ page }) => {
   await side.getByRole("button", { name: "Offices", exact: true }).click(); // back to levels
   await expect(page).not.toHaveURL(/kind=/);
 });
+
+test("settlements are drawn with one shape per kind of place, keyed in the legend", async ({ page }) => {
+  await open(page, "#/map?year=1620&right=suzerain&lang=en");
+  const key = page.locator("#legend ul.shapes");
+  await expect(page.locator("#legend h3")).toHaveText("Kinds of place");
+  for (const kind of ["town", "village", "castle", "abbey", "deserted village", "saltworks"]) {
+    await expect(key.getByText(kind, { exact: true })).toBeVisible();
+  }
+  await expect(key.locator("svg")).toHaveCount(await key.locator("li").count());
+  await page.waitForFunction(() => (window as unknown as { __map?: { loaded(): boolean } }).__map?.loaded());
+  const images = await page.evaluate(() => {
+    const map = (window as unknown as { __map: { hasImage(id: string): boolean } }).__map;
+    return ["place-village", "place-castle", "place-deserted_village"].map((id) => map.hasImage(id));
+  });
+  expect(images).toEqual([true, true, true]);
+});
