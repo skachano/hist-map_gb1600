@@ -24,7 +24,7 @@ export const KINDS: { group: "administrative" | "feudal" | "other"; types: strin
   { group: "administrative", types: ["office", "provostship", "castellany", "receivership", "mayoralty", "sergeantry",
     "court", "ban"] },
   { group: "feudal", types: ["principality", "marquisate", "county", "barony", "lordship", "fief", "advocacy", "allod"] },
-  { group: "other", types: ["bailiwick", "condominium", "march"] },
+  { group: "other", types: ["bailiwick", "imperial_circle", "condominium", "march"] },
 ];
 
 /** The place types in one coloured group. */

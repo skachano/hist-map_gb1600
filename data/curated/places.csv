@@ -42,6 +42,8 @@ provostship-sierck,territory,Prévôté de Sierck,Schultheißerei Sierck,Provost
 provostship-sous-sierck,territory,Sous-prévôté de Sierck,Unterschultheißerei Sierck,Sub-provostship of Sierck,sous-prévôté de Sierck,provostship,49.4425,6.36028,,,,12;49,high,35 villages of the office of Sierck (p. 12)
 lordship-marimont,territory,Châtellenie de Marimont,Kellerei Mörsberg,Castellany of Marimont,Marimont|Morsberg|châtellenie de Marimont|office de Marimont-lès-Albestroff,castellany,48.88917,6.78333,,,,10-11;20;22;74;83,high,"l'ancienne châtellenie de Marimont, rattachée à celle de Dieuze (p. 74); 29 places (p. 20)"
 court-conde,territory,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,cour de Condé|Condé-Northen|prévôté de Condé,provostship,49.22097,6.43445,,,,13;49-51,high,"'la prévôté de Condé' of the office of Sierck (p. 49), also 'la cour de Condé' with Condé, Northen, Mégange, Guinkirchen... (p. 13)"
+lordship-col-de-cygne,territory,Seigneurie du Col de Cygne,Herrschaft Schwanenhals,Lordship of the Col de Cygne,La seigneurie du col de Cygne|Schwanenhals|col de Cygne,lordship,48.84004,6.97829,,,,111,high,'la seigneurie du col de Cygne ou Schwanenhals' (p. 111)
+bailiwick-cercle-du-rhin-superieur,territory,Cercle du Rhin supérieur,Oberrheinischer Reichskreis,Upper Rhenish Circle,oberrheinischer Kreis|cercle du Rhin supérieur,imperial_circle,,,,,,98,high,"the imperial circle of the Upper Rhine, with the neighbouring counties and lordships of the Empire (p. 98)"
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -93,7 +95,6 @@ bacourt,settlement,Bacourt,Bacourt,Bacourt,,village,48.92694,6.40667,Q21634,,FR,
 badonviller,settlement,Badonviller,Badonviller,Badonviller,,small_town,48.5,6.89306,Q501953,,,116,medium,
 baerendorf,settlement,Baerendorf,Baerendorf,Baerendorf,,village,48.83833,7.085,Q22792,,FR,,high,
 baerenthal,settlement,Baerenthal,Baerenthal,Baerenthal,,village,48.975,7.5175,Q284762,,FR,,high,
-bailiwick-cercle-du-rhin-superieur,territory,Bailliage de Cercle du Rhin supérieur,Bellistum Cercle du Rhin supérieur,Bailiwick of Cercle du Rhin supérieur,oberrheinischer Kreis,bailiwick,,,,,,,medium,
 bailiwick-episcopal-de-vic,territory,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,Bailliage épiscopal de Vic,,bailiwick,49.01869,6.69798,,,,78,medium,
 bailiwick-nancy,territory,Bailliage de Nancy,Bellistum Nancy,Bailiwick of Nancy,,bailiwick,,,,,,,medium,
 bailiwick-vie,territory,Bailliage de Vie,Bellistum Vic-sur-Seille,Bailiwick of Vic-sur-Seille,bailliage de Vic,bailiwick,48.78222,6.53139,,,,,medium,
@@ -728,7 +729,6 @@ lordship-busbach,territory,Seigneurie de Busbach,Herrschaft Busbach,Lordship of 
 lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,territory,Seigneurie de Château et seigneurie de Lemberg-lès-Pirmasens,Herrschaft Château et seigneurie de Lemberg-lès-Pirmasens,Lordship of Château et seigneurie de Lemberg-lès-Pirmasens,,lordship,,,,,,69,medium,
 lordship-chatillon,territory,Seigneurie de Châtillon,Herrschaft Val-et-Châtillon,Lordship of Val-et-Châtillon,,lordship,48.55861,6.96611,,,,116,medium,
 lordship-chevalin,territory,Seigneurie de Chevalin,Herrschaft Chevalin,Lordship of Chevalin,,lordship,49.09333,6.50472,,,,146,medium,
-lordship-col-de-cygne,territory,Seigneurie du col de Cygne,Herrschaft col de Cygne,Lordship of col de Cygne,La seigneurie du col de Cygne|Schwanenhals,lordship,48.84004,6.97829,,,,111,medium,
 lordship-dagstuhl,territory,Seigneurie de Dagstuhl,Herrschaft Dagstuhl,Lordship of Dagstuhl,,lordship,49.60646,6.96935,,,,,medium,
 lordship-danne-et-quatre-vents,territory,Seigneurie de Danne et Quatre-Vents,Herrschaft Danne et Quatre-Vents,Lordship of Danne et Quatre-Vents,,lordship,,,,,,114,medium,
 lordship-distroff,territory,Seigneurie de Distroff,Herrschaft Distroff,Lordship of Distroff,,lordship,49.33194,6.26667,,,,,medium,

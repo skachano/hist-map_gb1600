@@ -16,6 +16,7 @@ place_types:
   deserted_village: {en: deserted village, fr: village disparu, de: Wüstung, ja: 廃村, applies_to: settlement}
   free_village:  {en: free village, fr: village libre, de: Freidorf, ja: 自由村, applies_to: settlement}
   bailiwick:     {en: bailiwick, fr: bailliage, de: Bellistum (Oberamt), ja: バイイ管区, applies_to: territory}
+  imperial_circle: {en: imperial circle, fr: cercle impérial, de: Reichskreis, ja: 帝国クライス, applies_to: territory}
   office:        {en: office, fr: office, de: Amt, ja: 管区（アムト）, applies_to: territory}
   provostship:   {en: provostship, fr: prévôté, de: Schultheißerei, ja: 代官区, applies_to: territory}
   castellany:    {en: castellany, fr: châtellenie, de: Kellerei, ja: 城代管区, applies_to: territory}

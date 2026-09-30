@@ -75,3 +75,8 @@ marquisate-faulquemont,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,h
 lordship-volmerange,suzerain,duchy-lorraine,,held,,,,,,,,62,high,
 lordship-volmerange,manorial_lord,elisee-d-haraucourt,1/2,pledged,,,1589,1628,exact,,,62;233,high,"the duke's half, pledged for 6,000 francs (p. 252: since 1592)"
 lordship-volmerange,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,high,part of the marquisate
+lordship-morhange,manorial_lord,rhingraves-kyrbourg,,held,,,,1627,,exact,,20;73;106,high,"the Kyrburg line: Otto (d. 1607), Jean IX de Morhange (1607-1623), then Otto-Louis and his brothers"
+lordship-morhange,manorial_lord,duchy-lorraine,,held,true,rhingraves-kyrbourg,1628,,exact,,,107,high,confiscated while Otto-Louis and his brothers served in the Protestant armies
+lordship-morhange,manorial_lord,rhingraves-kyrbourg,,claimed,true,duchy-lorraine,1628,,exact,,,83;99,high,still listed as the holders in the 1630 table of fiefs (p. 83) and in 1632 (p. 99)
+lordship-morhange,manorial_lord,rhingrave-otto,,contested,true,duchy-lorraine,1561,1561,attested,attested,,98,high,
+office-morhange,tabellionage,rhingraves-kyrbourg,,held,,,,,,,,73;93,high,the rhingrave Otto of Morhange created a tabellionage in May 1598 (p. 93)
