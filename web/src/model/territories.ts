@@ -18,6 +18,15 @@ export function realmGroup(placeType: string): RealmGroup {
   return GROUPS[placeType] ?? "other";
 }
 
+/** Realm types for the Territories view's "kind of realm" menu: administrative districts, feudal
+ *  titles by rank (below the duchy), and the rest. */
+export const KINDS: { group: "administrative" | "feudal" | "other"; types: string[] }[] = [
+  { group: "administrative", types: ["office", "provostship", "castellany", "receivership", "mayoralty", "sergeantry",
+    "court", "ban"] },
+  { group: "feudal", types: ["principality", "marquisate", "county", "barony", "lordship", "fief", "advocacy", "allod"] },
+  { group: "other", types: ["bailiwick", "condominium", "march"] },
+];
+
 /** The place types in one coloured group. */
 export function typesIn(group: Exclude<RealmGroup, "other">): string[] {
   return Object.keys(GROUPS).filter((t) => GROUPS[t] === group);

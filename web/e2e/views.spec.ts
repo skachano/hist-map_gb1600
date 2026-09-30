@@ -118,3 +118,20 @@ test("Japanese: interface, right names and realm names; untranslated places keep
   await expect(panel).toContainText("JA シエルク管区");
   await expect(panel.getByRole("button", { name: "Kédange" })).toBeVisible(); // no Japanese label: French
 });
+
+test("territories: one kind of realm at every level", async ({ page }) => {
+  await open(page, "#/territories?year=1620&right=suzerain&lang=en");
+  const side = page.locator("#side");
+  const menu = side.getByRole("combobox", { name: "Kind of realm" });
+  await menu.selectOption("provostship");
+  await expect(page).toHaveURL(/kind=provostship/);
+  const realms = side.locator("ul.realms li");
+  await expect(realms.first()).toContainText("Provostship");
+  for (const text of await realms.allInnerTexts()) expect(text).toMatch(/provostship/i);
+  await expect(side.getByRole("button", { name: "Rural provostship of Sierck" })).toBeVisible(); // a level-2 realm
+  await expect(side.getByRole("button", { name: "Offices, lordships, counties" })).toHaveAttribute("aria-pressed", "false");
+  await menu.selectOption("county");
+  await expect(side.getByRole("button", { name: "County of Bitche" })).toBeVisible();
+  await side.getByRole("button", { name: "Offices, lordships, counties" }).click(); // back to levels
+  await expect(page).not.toHaveURL(/kind=/);
+});

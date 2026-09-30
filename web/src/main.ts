@@ -83,11 +83,22 @@ async function start(): Promise<void> {
     for (const f of territoryFeatures) {
       if (f.from_year <= state.year && state.year <= f.to_year) settlementsIn.set(f.id, f.settlements);
     }
-    const shown = [...levels].filter(([, l]) => level === 0 || l === level).map(([id]) => id);
+    const ofKind = (id: string) => !state.kind || data.places.get(id)?.type === state.kind;
+    // A kind of realm shows every realm of that kind, whatever its level; otherwise one level.
+    const shown = [...levels].filter(([id, l]) => (state.kind ? ofKind(id) : level === 0 || l === level))
+      .map(([id]) => id);
     if (state.neighbours) {
-      shown.push(...[...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK));
+      shown.push(...[...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK && ofKind(id)));
     }
-    return { shown, settlementsIn };
+    // How many realms of each kind there are this year (for the menu), within the chosen scope.
+    const kinds = new Map<string, number>();
+    const inScope = [...levels.keys(), ...(state.neighbours
+      ? [...settlementsIn.keys()].filter((id) => !levels.has(id) && id !== BAILIWICK) : [])];
+    for (const id of inScope) {
+      const type = data.places.get(id)?.type ?? "";
+      kinds.set(type, (kinds.get(type) ?? 0) + 1);
+    }
+    return { shown, settlementsIn, kinds };
   };
   let current = computeView(data, index, store.state, colours(store.state));
 
@@ -146,7 +157,7 @@ async function start(): Promise<void> {
     const coloured = colours(state);
     if (!previous || previous.year !== state.year || previous.right !== state.right || previous.view !== state.view
       || previous.entity !== state.entity || previous.colours?.join() !== state.colours?.join()
-      || previous.level !== state.level || previous.neighbours !== state.neighbours) {
+      || previous.level !== state.level || previous.neighbours !== state.neighbours || previous.kind !== state.kind) {
       current = computeView(data, index, state, coloured);
     }
     document.documentElement.lang = state.lang;
@@ -170,7 +181,8 @@ async function start(): Promise<void> {
     if (state.view === "entity") renderEntityView(side, data, state, store);
     if (state.view === "disputes") renderDisputesView(side, data, state, store, current.disputes);
     const realmData = state.view === "territories" ? realms(state) : undefined;
-    if (realmData) renderTerritoriesView(side, data, state, store, realmData.shown, realmData.settlementsIn);
+    if (realmData) renderTerritoriesView(side, data, state, store, realmData.shown, realmData.settlementsIn,
+      realmData.kinds);
     if (state.view === "matrix") renderMatrix(page, data, index, state, store, coloured);
     if (state.view === "changes") renderChanges(page, data, state, store);
     if (state.view === "about") renderAbout(page, data, state.lang);

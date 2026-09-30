@@ -4,7 +4,7 @@ import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
 import { MARQUISATE, OTHER, PRINCIPALITY } from "../model/colors";
 import { directHoldings, type Dispute } from "../model/snapshot";
-import { type RealmGroup, realmGroup } from "../model/territories";
+import { KINDS, type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
 import { ganttChart } from "./timeline";
@@ -115,12 +115,14 @@ const GROUP_COLOUR: Record<RealmGroup, string> = {
 const GROUP_LABEL: Record<RealmGroup, StringKey> = {
   office: "groupOffice", lordship: "groupLordship", county: "groupCounty", marquisate: "groupMarquisate",
   principality: "groupPrincipality", other: "groupOther" };
+const KIND_GROUP_LABEL: Record<(typeof KINDS)[number]["group"], StringKey> = {
+  administrative: "kindsAdministrative", feudal: "kindsFeudal", other: "kindsOther" };
 /** Legend order: the administrative districts, then the feudal titles by rank, then the rest. */
 const GROUP_ORDER: RealmGroup[] = ["office", "principality", "marquisate", "county", "lordship", "other"];
 
 /** Territories view: level and neighbour switches, the kinds of realm, and every realm shown. */
 export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: State, store: Store,
-  shown: string[], settlementsIn: Map<string, number>): void {
+  shown: string[], settlementsIn: Map<string, number>, kinds: Map<string, number>): void {
   const { lang, year } = state;
   const level = state.level ?? 1;
   const placeName = (id: string) => name(data.places.get(id)?.name, lang, id);
@@ -129,12 +131,30 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
     const g = realmGroup(data.places.get(id)?.type ?? "");
     groups.set(g, (groups.get(g) ?? 0) + 1);
   }
-  const levelButton = (value: number, key: StringKey) => h("button", { "aria-pressed": String(level === value),
-    onclick: () => store.set({ level: value }) }, t(key, lang));
+  const levelButton = (value: number, key: StringKey) => h("button",
+    { "aria-pressed": String(!state.kind && level === value), onclick: () => store.set({ level: value, kind: undefined }) },
+    t(key, lang));
+  const vocab = data.meta.vocab.place_types;
+  const kindLabel = (type: string) => {
+    const l = label(vocab[type], lang, type);
+    return l.charAt(0).toUpperCase() + l.slice(1);
+  };
+  // A chosen kind stays listed even in a year without such realms, so the menu shows it.
+  const count = (type: string) => kinds.get(type) ?? 0;
+  const kindMenu = h("select", { "aria-label": t("kindOfRealm", lang),
+    onchange: (e: Event) => store.set({ kind: (e.target as HTMLSelectElement).value || undefined }) },
+    h("option", { value: "", selected: !state.kind }, t("allKinds", lang)),
+    ...KINDS.map(({ group, types }) => {
+      const present = types.filter((type) => count(type) > 0 || type === state.kind);
+      return present.length ? h("optgroup", { label: t(KIND_GROUP_LABEL[group], lang) },
+        ...present.map((type) => h("option", { value: type, selected: type === state.kind },
+          `${kindLabel(type)} (${count(type)})`))) : null;
+    }));
   fill(root,
     h("h2", {}, `${t("realmsIn", lang)} ${year} (${shown.length})`),
     h("div", { class: "levels", role: "group", "aria-label": t("level", lang) },
       levelButton(1, "level1"), levelButton(2, "level2"), levelButton(0, "level0")),
+    h("label", { class: "kind" }, `${t("kindOfRealm", lang)} `, kindMenu),
     h("label", { class: "check" }, h("input", { type: "checkbox", checked: !!state.neighbours,
       onchange: (e: Event) => store.set({ neighbours: (e.target as HTMLInputElement).checked || undefined }) }),
     ` ${t("neighbours", lang)}`),

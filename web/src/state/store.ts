@@ -19,6 +19,8 @@ export interface State {
   level?: number;
   /** territories view: also show realms outside the bailiwick */
   neighbours?: boolean;
+  /** territories view: only realms of this place type (any level); unset = by level */
+  kind?: string;
 }
 
 export const DEFAULT_STATE: State = { view: "map", year: 1600, right: "suzerain", lang: "en" };
@@ -39,6 +41,7 @@ export function parseHash(hash: string, years: [number, number], rights: Set<str
     colours: q.get("c")?.split(",").filter(Boolean).slice(0, 3) || undefined,
     level: ["0", "1", "2"].includes(q.get("lvl") ?? "") ? Number(q.get("lvl")) : undefined,
     neighbours: q.get("nb") === "1" || undefined,
+    kind: q.get("kind") || undefined,
   };
 }
 
@@ -49,6 +52,7 @@ export function toHash(s: State): string {
   if (s.colours?.length) q.set("c", s.colours.join(","));
   if (s.level !== undefined) q.set("lvl", String(s.level));
   if (s.neighbours) q.set("nb", "1");
+  if (s.kind) q.set("kind", s.kind);
   return `#/${s.view}?${q}`;
 }
 

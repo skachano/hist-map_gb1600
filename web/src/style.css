@@ -109,6 +109,9 @@ ul.members { padding-left: 18px; }
 ul.members.cols { columns: 2; column-gap: 16px; }
 .levels { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
 label.check { display: block; margin: 6px 0; font-size: 13px; }
+label.kind { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-size: 13px; }
+label.kind select { min-width: 0; flex: 1; border: 1px solid var(--border); border-radius: 6px; background: var(--surface);
+  padding: 4px 6px; }
 #side ul.groups { list-style: none; padding: 0; font-size: 13px; }
 #side ul.groups .swatch { display: inline-block; vertical-align: -1px; }
 #side ul.realms { padding-left: 18px; }

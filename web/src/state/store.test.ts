@@ -8,9 +8,9 @@ describe("URL state", () => {
   it("round-trips through the hash", () => {
     const state = { view: "map" as const, year: 1624, right: "high_justice", lang: "fr" as const, place: "anzeling" };
     expect(parseHash(toHash(state), years, rights)).toEqual({ ...state, entity: undefined, colours: undefined,
-      level: undefined, neighbours: undefined });
+      level: undefined, neighbours: undefined, kind: undefined });
     const entityView = { ...state, view: "entity" as const, entity: "duchy-lorraine", colours: ["a", "b"],
-      level: undefined, neighbours: undefined };
+      level: undefined, neighbours: undefined, kind: undefined };
     expect(parseHash(toHash(entityView), years, rights)).toEqual(entityView);
   });
 
@@ -37,5 +37,11 @@ describe("territories view state", () => {
   it("keeps level and neighbours in the URL", () => {
     const s = { view: "territories" as const, year: 1629, right: "suzerain", lang: "en" as const, level: 2, neighbours: true };
     expect(parseHash(toHash(s), years, rights)).toMatchObject({ view: "territories", level: 2, neighbours: true });
+  });
+
+  it("keeps the kind of realm in the URL", () => {
+    const s = { view: "territories" as const, year: 1629, right: "suzerain", lang: "en" as const, kind: "provostship" };
+    expect(toHash(s)).toContain("kind=provostship");
+    expect(parseHash(toHash(s), years, rights).kind).toBe("provostship");
   });
 });
