@@ -44,6 +44,7 @@ lordship-marimont,territory,Châtellenie de Marimont,Kellerei Mörsberg,Castella
 court-conde,territory,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,cour de Condé|Condé-Northen|prévôté de Condé,provostship,49.22097,6.43445,,,,13;49-51,high,"'la prévôté de Condé' of the office of Sierck (p. 49), also 'la cour de Condé' with Condé, Northen, Mégange, Guinkirchen... (p. 13)"
 lordship-col-de-cygne,territory,Seigneurie du Col de Cygne,Herrschaft Schwanenhals,Lordship of the Col de Cygne,La seigneurie du col de Cygne|Schwanenhals|col de Cygne,lordship,48.84004,6.97829,,,,111,high,'la seigneurie du col de Cygne ou Schwanenhals' (p. 111)
 bailiwick-cercle-du-rhin-superieur,territory,Cercle du Rhin supérieur,Oberrheinischer Reichskreis,Upper Rhenish Circle,oberrheinischer Kreis|cercle du Rhin supérieur,imperial_circle,,,,,,98,high,"the imperial circle of the Upper Rhine, with the neighbouring counties and lordships of the Empire (p. 98)"
+castellany-dieuze,territory,Châtellenie de Dieuze,Kellerei Duß,Castellany of Dieuze,châtellenie de Dieuze,castellany,48.81222,6.71972,,,,20;75,high,"20 domain villages, 2 church lands and 15 fiefs, 31 places in all (p. 20); with the castellany of Marimont it makes the office of Dieuze"
 aboncourt,settlement,Aboncourt,Aboncourt,Aboncourt,,village,49.26056,6.34694,Q21781,,FR,,high,
 abreschviller,settlement,Abreschviller,Abreschviller,Abreschviller,,village,48.63694,7.09667,Q21918,,FR,,high,
 achain,settlement,Achain,Achain,Achain,Eschen,village,48.91361,6.59222,Q21626,,FR,,high,
@@ -592,7 +593,7 @@ hobling,settlement,Hobling,Hobling,Hobling,,village,49.29164,6.43552,Q15073192,,
 hochweyersberg,settlement,Hochweyersberg-lès-Baerenthal,,,Hochweyersberg,hamlet,48.975,7.5175,,,FR,,high,
 hoff,settlement,Hoff (Hove),Hoff,Hoff,Hoff|Hove,village,48.7462,7.05443,Q3139053,,FR,21;79,high,
 holbach-lachambre,settlement,Holbach,Holbach,Holbach,,village,49.07283,6.75503,Q55597231,,FR,64,high,
-holbach-siersthal,settlement,Holbach,,Holbach,,village,49.0578,7.3439,Q115869856,,FR,,high,
+holbach-siersthal,settlement,Holbach,,Holbach,,village,49.0578,7.3439,Q3139259,,FR,,high,
 holling,settlement,Holling,Holling,Holling,,village,49.26167,6.49667,Q22349,,FR,16;59-60;81,high,
 holving,settlement,Holving,Holving,Holving,Holbringen,village,49.01083,6.965,Q22999,,FR,,high,
 hombourg-sur-canner,settlement,Hombourg-sur-Canner,,,Hombourg auf der Kandel|seigneurie de Hombourg,village,49.297,6.34268,,3013197,FR,79,high,
@@ -804,7 +805,6 @@ mayoralty-basse-ham,territory,Mairie de Basse-Ham,Meierei Basse-Ham,Mayoralty of
 mayoralty-boucheporn,territory,Mairie de Boucheporn,Meierei Boucheporn,Mayoralty of Boucheporn,,mayoralty,49.14083,6.60889,,,,79,medium,
 mayoralty-boustroff,territory,Mairie de Boustroff,Meierei Boustroff,Mayoralty of Boustroff,,mayoralty,49.00028,6.62167,,,,79,medium,
 mayoralty-cutting,territory,Mairie de Cutting,Meierei Cutting,Mayoralty of Cutting,,mayoralty,48.84889,6.83444,,,,,medium,
-mayoralty-dieuze,territory,Mairie de Dieuze,Meierei Dieuze,Mayoralty of Dieuze,,mayoralty,48.81222,6.71972,,,,,medium,
 mayoralty-farschviller,territory,Mairie de Farschviller,Meierei Farschviller,Mayoralty of Farschviller,,mayoralty,49.09333,6.89417,,,,,medium,
 mayoralty-hellimer,territory,Mairie de Hellimer,Meierei Hellimer,Mayoralty of Hellimer,,mayoralty,48.9975,6.83,,,,,medium,
 mayoralty-hilsprich,territory,Mairie de Hilsprich,Meierei Hilsprich,Mayoralty of Hilsprich,Hilsberg,mayoralty,49.01306,6.91278,,,,,medium,
@@ -926,7 +926,7 @@ oermingen,settlement,Oermingen,Oermingen,Oermingen,,village,48.99917,7.12861,Q21
 oeting,settlement,Oeting,Œting,Œting,,village,49.17361,6.91472,Q21657,,FR,,high,
 office-berus,territory,Office de Berus,Amt Berus,Office of Berus,Beaurain|Belrain|La châtellenie de Berus|office de Berus,office,49.2639,6.69417,,,,80;99,medium,
 office-boulay,territory,Office de Boulay,Amt Boulay-Moselle,Office of Boulay-Moselle,Boulay|châtellenie de Boulay,office,49.18333,6.49361,,,,16;82,medium,
-office-dieuze,territory,Office de Dieuze,Amt Dieuze,Office of Dieuze,châtellenie de Dieuze|office de Dieuze,office,48.81222,6.71972,,,,20;75;77;99,medium,
+office-dieuze,territory,Office de Dieuze,Amt Dieuze,Office of Dieuze,office de Dieuze,office,48.81222,6.71972,,,,75;77;99,medium,
 office-faulquemont,territory,Office de Faulquemont,Amt Faulquemont,Office of Faulquemont,office de Faulquemont,office,49.04111,6.59917,,,,63,medium,
 office-forbach,territory,Office de Forbach,Amt Forbach,Office of Forbach,Forbach,office,49.18806,6.9,,,,99,medium,
 office-herange,territory,Office de Hérange,Amt Hérange,Office of Hérange,Hérange,office,48.775,7.16972,,,,115,medium,

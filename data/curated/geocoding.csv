@@ -226,6 +226,7 @@ calmesweiler,49.41085,6.95617,,,Calmesweiler,Calmesweiler,Calmesweiler,override,
 cappel,49.07222,6.85,Q22124,,Cappel,Cappel,Cappel,wikidata,high,
 castellany-albestroff,48.9325,6.85639,,,Châtellenie d'Albestroff,Kellerei Albestroff,Castellany of Albestroff,territory,medium,seat: albestroff
 castellany-amance,48.82167,6.50833,,,Châtellenie d'Amance,Kellerei Amance,Castellany of Amance,territory,medium,centre of 1 member settlement(s)
+castellany-dieuze,48.81222,6.71972,,,Châtellenie de Dieuze,Kellerei Dieuze,Castellany of Dieuze,territory,medium,seat: dieuze
 castellany-fribourg,48.76694,6.85639,,,Châtellenie de Fribourg,Kellerei Fribourg,Castellany of Fribourg,territory,medium,seat: fribourg
 castellany-haboudange,48.89056,6.61194,,,Châtellenie de Haboudange,Kellerei Haboudange,Castellany of Haboudange,territory,medium,seat: haboudange
 castellany-lagarde,48.69139,6.705,,,Châtellenie de Lagarde,Kellerei Lagarde,Castellany of Lagarde,territory,medium,seat: lagarde
@@ -562,7 +563,7 @@ hochweyersberg,48.975,7.5175,,,Hochweyersberg-lès-Baerenthal,,,approximate,low,
 hoelling,49.0734,7.2972,Q3139045,,Hœlling,Hoelling,Hoelling,wikidata,high,no canton anchor
 hoff,48.7462,7.05443,Q3139053,,Hoff (Hove),Hoff,Hoff,wikidata,high,
 holbach-lachambre,49.07283,6.75503,Q55597231,,Holbach,Holbach,Holbach,wikidata,high,
-holbach-siersthal,49.0578,7.3439,Q115869856,,Holbach,,Holbach,wikidata,high,
+holbach-siersthal,49.0578,7.3439,Q3139259,,Holbach,,Holbach,wikidata,high,
 holling,49.26167,6.49667,Q22349,,Holling,Holling,Holling,wikidata,high,
 holving,49.01083,6.965,Q22999,,Holving,Holving,Holving,wikidata,high,
 hombourg-haut-et-bas,49.12931,6.78814,Q21634406,,Hombourg-Bas,Hombourg-Bas,Hombourg-Bas,override,high,"Hombourg-Bas, the lower village of Hombourg-Haut (index: Hombourg-Haut et -Bas)"
@@ -784,7 +785,6 @@ mayoralty-basse-ham,49.37456,6.29629,,,Mairie de Basse-Ham,Meierei Basse-Ham,May
 mayoralty-boucheporn,49.14083,6.60889,,,Mairie de Boucheporn,Meierei Boucheporn,Mayoralty of Boucheporn,territory,medium,seat: boucheporn
 mayoralty-boustroff,49.00028,6.62167,,,Mairie de Boustroff,Meierei Boustroff,Mayoralty of Boustroff,territory,medium,seat: boustroff
 mayoralty-cutting,48.84889,6.83444,,,Mairie de Cutting,Meierei Cutting,Mayoralty of Cutting,territory,medium,seat: cutting
-mayoralty-dieuze,48.81222,6.71972,,,Mairie de Dieuze,Meierei Dieuze,Mayoralty of Dieuze,territory,medium,seat: dieuze
 mayoralty-farschviller,49.09333,6.89417,,,Mairie de Farschviller,Meierei Farschviller,Mayoralty of Farschviller,territory,medium,seat: farschviller
 mayoralty-hellimer,48.9975,6.83,,,Mairie de Hellimer,Meierei Hellimer,Mayoralty of Hellimer,territory,medium,seat: hellimer
 mayoralty-hilsprich,49.01306,6.91278,,,Mairie de Hilsprich,Meierei Hilsprich,Mayoralty of Hilsprich,territory,medium,seat: hilsprich
