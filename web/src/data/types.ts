@@ -1,9 +1,10 @@
 // Shapes of the files in public/data/, written by `make build-data` (pipeline/bailliage/web_data.py).
 // Empty fields are omitted in the JSON, hence the optional properties.
 
-export type Lang = "en" | "fr" | "de";
+export type Lang = "en" | "fr" | "de" | "ja";
 export type Names = Partial<Record<Lang, string>>;
-export type Labels = Record<Lang, string> & { core?: boolean; desc?: Record<Lang, string> };
+/** Vocabulary labels: English, French and German always, Japanese when translated. */
+export type Labels = Record<Exclude<Lang, "ja">, string> & { ja?: string; core?: boolean; desc?: Partial<Record<Lang, string>> };
 export type Vocab = Record<string, Labels>;
 
 export interface Meta {

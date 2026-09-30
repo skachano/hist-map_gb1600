@@ -18,7 +18,7 @@ describe("URL state", () => {
     const s = parseHash("#/map?year=1700&right=nonsense&lang=xx", years, rights);
     expect(s.year).toBe(1600);
     expect(s.right).toBe("suzerain");
-    expect(["en", "fr", "de"]).toContain(s.lang);
+    expect(["en", "fr", "de", "ja"]).toContain(s.lang);
   });
 });
 

@@ -6,7 +6,7 @@ import { fill, h } from "./dom";
 
 const PLAY_MS = 900;
 /** Each language's name in itself, for the switch's accessible labels. */
-const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "Deutsch" };
+const LANG_NAMES: Record<Lang, string> = { en: "English", fr: "Français", de: "Deutsch", ja: "日本語" };
 /** Views that show one right type at a time. */
 const RIGHT_VIEWS = new Set<State["view"]>(["map", "entity"]);
 /** The ⓘ pop-up stays open across re-renders (changing the right or the year). */
@@ -18,14 +18,14 @@ export function renderHeader(root: HTMLElement, data: Dataset, store: Store): vo
   const core = Object.keys(rights).filter((k) => rights[k].core);
   const other = Object.keys(rights).filter((k) => !rights[k].core);
   const tab = (key: string) =>
-    h("button", { class: "tab", "aria-pressed": String(key === right), title: rights[key].desc?.[lang],
+    h("button", { class: "tab", "aria-pressed": String(key === right), title: (rights[key].desc?.[lang] ?? rights[key].desc?.en),
       onclick: () => store.set({ right: key }) }, label(rights[key], lang, key));
   const select = h("select", { "aria-label": t("otherRights", lang),
     onchange: (e: Event) => store.set({ right: (e.target as HTMLSelectElement).value }) },
     h("option", { value: "", disabled: true, selected: !other.includes(right) }, t("otherRights", lang)),
-    ...other.map((k) => h("option", { value: k, selected: k === right, title: rights[k].desc?.[lang] },
+    ...other.map((k) => h("option", { value: k, selected: k === right, title: (rights[k].desc?.[lang] ?? rights[k].desc?.en) },
       label(rights[k], lang, k))));
-  const desc = rights[right]?.desc?.[lang];
+  const desc = rights[right]?.desc?.[lang] ?? rights[right]?.desc?.en;
   const info = desc ? h("details", { class: "right-info", open: infoOpen,
     ontoggle: (e: Event) => { infoOpen = (e.target as HTMLDetailsElement).open; } },
     h("summary", { "aria-label": t("aboutRight", lang), title: t("aboutRight", lang) }, "ⓘ"),

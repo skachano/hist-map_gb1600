@@ -1,7 +1,7 @@
 // "About & sources": the book, the conventions behind the map, how the data was made,
 // attributions and the copyright note, in three languages.
 import type { Dataset, Lang } from "../data/types";
-import { label, t } from "../i18n";
+import { label, LANGS, t } from "../i18n";
 import { fill, h } from "./dom";
 
 interface Section {
@@ -64,6 +64,25 @@ const TEXT: Record<Lang, Section[]> = {
       "Grundkarte © OpenStreetMap-Mitwirkende (ODbL). Ortsdaten aus Wikidata (CC0) und GeoNames (CC BY 4.0).",
     ] },
   ],
+  ja: [
+    { title: "出典", paragraphs: [
+      "Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632. L'administration, la justice, les finances et l'organisation militaire. Sarreguemines: Éditions Marcel Pierron, 1961.（アンリ・イジェル『ドイツ・バイイ管区 1600–1632年 ― 行政・司法・財政・軍事組織』）フランス国立図書館所蔵本を FeniXX が許諾のもとで電子復刻した版に拠る。",
+      "すべての権利・変更・所属には、典拠となる本書の印刷ページ（「p. 51」）を付した。引用は短く（200字以内）、該当箇所を示すためだけのもので、本書に代わるものではない。",
+    ] },
+    { title: "地図が示すもの", paragraphs: [
+      "1600年から1632年までの各年と各種の権利について、各集落でその権利を誰が保有していたかを示す：宗主権（上級所有権）、上級裁判権、中級・下級裁判権、土地領主権、教会守護権、司教区の管轄、十分の一税、その他の権限。",
+      "年は両端を含む。権利が移った年には新しい保有者を表示する。ある権利について固有の記録がない地点は、その年に属していた領域について記録された保有者を薄い色で表示する。同時に複数の保有者がいる場合（共同統治・共同領主）は斜線、担保に入った権利（アンガージュマン）は破線の枠、主張や係争は赤い枠と ⚠ で示す。",
+      "範囲は概略である。本書はどの地点がまとまっていたかを記すが、境界の位置は記していないため、各集落には他のどの集落よりも近い土地を割り当てた。白抜きの点は、所属する自治体の位置に置いた小村である。",
+      "日本語の地名は Wikidata の日本語ラベルによる。ラベルのない小さな地点はフランス語の名称のまま表示し、領域名は「所在地名＋種別」（例：シエルク管区）で示した。",
+    ] },
+    { title: "データの作成方法", paragraphs: [
+      "スキャンされた本書は OCR テキスト層（テキスト層のないページは Tesseract）で読み取った。第1部の第1・6・8・9章の各節を Claude（Anthropic）でページ付きの構造化された事実に変換し、統合したうえで規則による検査と一部の手作業による確認を行った。したがって一部の事実は抽出結果のままであり、信頼度の表示と確認リストがそれを示している。",
+      "地点の位置は Wikidata と GeoNames で特定し、英語・フランス語・ドイツ語の現代名は Wikidata による。",
+    ] },
+    { title: "クレジット", paragraphs: [
+      "背景地図 © OpenStreetMap contributors (ODbL)。地点データ：Wikidata (CC0)、GeoNames (CC BY 4.0)。",
+    ] },
+  ],
 };
 
 export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang): void {
@@ -76,9 +95,9 @@ export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang): void 
       h("h3", { id: "rights-explained" }, t("rightsExplained", lang)),
       h("dl", { class: "rights-explained" }, ...Object.keys(rights).flatMap((k) => [
         h("dt", { id: `right-${k}` }, label(rights[k], lang, k),
-          h("span", { class: "muted" }, ` · ${(["en", "fr", "de"] as const).filter((l) => l !== lang)
+          h("span", { class: "muted" }, ` · ${LANGS.filter((l) => l !== lang && rights[k][l])
             .map((l) => label(rights[k], l, k)).join(" · ")}`)),
-        h("dd", {}, rights[k].desc?.[lang] ?? ""),
+        h("dd", {}, rights[k].desc?.[lang] ?? rights[k].desc?.en ?? ""),
       ])),
       h("p", { class: "muted" },
         `${c.places} ${t("places", lang)} · ${c.entities} ${t("view_entity", lang).toLowerCase()} · ${c.rights} `

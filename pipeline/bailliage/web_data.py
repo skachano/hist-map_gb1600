@@ -52,6 +52,12 @@ def build() -> dict[str, int]:
 
     with (config.CURATED_DIR / "geocoding.csv").open(newline="") as f:
         geo = {g["place_id"]: g for g in csv.DictReader(f)}
+    # Japanese names (optional fourth language), from `make ja-names`.
+    ja_file = config.CURATED_DIR / "names_ja.csv"
+    ja = {}
+    if ja_file.exists():
+        with ja_file.open(newline="") as f:
+            ja = {r["id"]: r["name_ja"] for r in csv.DictReader(f)}
 
     rights_by_holder = Counter(r.holder_id for _, r in ds.rights)
     parents = defaultdict(list)
@@ -63,7 +69,7 @@ def build() -> dict[str, int]:
         g = geo.get(p.id, {})
         places.append(_compact({
             "id": p.id, "kind": p.kind, "type": p.place_type,
-            "name": _compact({"fr": p.name_fr, "de": p.name_de, "en": p.name_en}),
+            "name": _compact({"fr": p.name_fr, "de": p.name_de, "en": p.name_en, "ja": ja.get(p.id)}),
             "variants": sorted(p.variants),
             "lat": p.lat, "lon": p.lon,
             # how sure the point is: high / medium / low; "approximate" = placed at its commune
@@ -83,7 +89,7 @@ def build() -> dict[str, int]:
     ranked = sorted((e for _, e in ds.entities), key=lambda e: (-rights_by_holder[e.id], e.id))
     entities = [_compact({
         "id": e.id, "type": e.entity_type,
-        "name": _compact({"en": e.name_en, "fr": e.name_fr, "de": e.name_de}),
+        "name": _compact({"en": e.name_en, "fr": e.name_fr, "de": e.name_de, "ja": ja.get(e.id)}),
         "rank": rank, "rights": rights_by_holder[e.id], "rulers": rulers.get(e.id, []),
     }) for rank, e in enumerate(ranked, start=1)]
     entities.sort(key=lambda e: e["id"])
@@ -125,8 +131,10 @@ def build() -> dict[str, int]:
         "version": digest.hexdigest()[:12],  # changes whenever any data file changes
         "counts": {"places": len(places), "entities": len(entities), "rights": len(rights), "events": len(events),
                    "territoryVersions": _count_features(OUT_DIR / "territories.geojson")},
-        "vocab": {name: {k: {lang: v[lang] for lang in ("en", "fr", "de")} | ({"core": True} if v.get("core") else {})
-                         | ({"desc": {lang: v["desc"][lang] for lang in ("en", "fr", "de")}} if v.get("desc") else {})
+        "vocab": {name: {k: {lang: v[lang] for lang in ("en", "fr", "de", "ja") if v.get(lang)}
+                         | ({"core": True} if v.get("core") else {})
+                         | ({"desc": {lang: v["desc"][lang] for lang in ("en", "fr", "de", "ja") if v["desc"].get(lang)}}
+                            if v.get("desc") else {})
                          for k, v in terms.items()}
                   for name, terms in ds.vocab.items()},
     }

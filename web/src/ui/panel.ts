@@ -2,7 +2,7 @@
 // there in the selected year (with pages and quotes), a 1600-1632 timeline per right,
 // and the recorded changes of holder. Holder names open the holder view.
 import type { Dataset, Right } from "../data/types";
-import { label, name, t } from "../i18n";
+import { label, LANGS, name, t } from "../i18n";
 import { holderColour } from "../model/colors";
 import { ancestors, type RightIndex, rightsAtPlace, timeline } from "../model/snapshot";
 import { membersOf } from "../model/territories";
@@ -87,10 +87,11 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     h("h2", { tabindex: "-1" }, placeName(place.id)),
     h("dl", {},
       h("dt", {}, t("names", lang)),
-      h("dd", {}, `FR ${place.name.fr ?? "—"} · DE ${place.name.de ?? "—"} · EN ${place.name.en ?? "—"}`),
+      h("dd", {}, `FR ${place.name.fr ?? "—"} · DE ${place.name.de ?? "—"} · EN ${place.name.en ?? "—"}`
+        + (place.name.ja ? ` · JA ${place.name.ja}` : "")),
       place.variants?.length ? h("dd", { class: "muted" }, place.variants.join(", ")) : null,
       h("dt", {}, t("type", lang)),
-      h("dd", {}, (["en", "fr", "de"] as const).map((l) => label(vocab.place_types[place.type], l, place.type)).join(" · ")),
+      h("dd", {}, LANGS.filter((l) => vocab.place_types[place.type]?.[l]).map((l) => label(vocab.place_types[place.type], l, place.type)).join(" · ")),
       parents.length ? h("dt", {}, t("belongsTo", lang)) : null,
       parents.length ? h("dd", { class: "crumbs" }, ...parents.map((id) => h("button", { class: "link", "data-place": id,
         onclick: () => store.set({ place: id }) }, placeName(id)))) : null,
@@ -100,7 +101,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     h("h3", {}, `${t("rightsIn", lang)} ${year}`),
     rights.size
       ? h("dl", { class: "rights" }, ...[...rights].flatMap(([type, rows]) => [
-        h("dt", { title: vocab.right_types[type]?.desc?.[lang] }, label(vocab.right_types[type], lang, type)),
+        h("dt", { title: vocab.right_types[type]?.desc?.[lang] ?? vocab.right_types[type]?.desc?.en }, label(vocab.right_types[type], lang, type)),
         h("dd", {}, h("ul", {}, ...rows.map(holding))),
       ]))
       : h("p", { class: "muted" }, t("noRights", lang)),

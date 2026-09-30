@@ -51,14 +51,16 @@ def test_known_facts_survive(built):
     rights = built["load"]("rights.json")
     anzeling = [r for r in rights if r["place"] == "anzeling" and r["right"] == "high_justice"]
     assert {(r["holder"], r.get("status"), r.get("from"), r.get("to")) for r in anzeling} == {
-        ("duchy-lorraine", None, None, 1624), ("henriette-vaudemont", "pledged", 1624, None)}
+        ("duchy-lorraine", None, None, 1615), ("andre-des-bordes", None, 1616, 1623),  # sold in 1616 (p. 25)
+        ("henriette-vaudemont", "pledged", 1624, None)}
     saargau = {(r["holder"], r.get("share")) for r in rights if r["place"] == "saargau" and r["right"] == "suzerain"}
     assert saargau == {("duchy-lorraine", "1/2"), ("electorate-trier", "1/2")}
     meta = built["load"]("meta.json")
     high = dict(meta["vocab"]["right_types"]["high_justice"])
     desc = high.pop("desc")
-    assert high == {"en": "High justice", "fr": "Haute justice", "de": "Hochgerichtsbarkeit", "core": True}
-    assert set(desc) == {"en", "fr", "de"} and "gallows" in desc["en"]
-    assert all(set(v.get("desc", {})) == {"en", "fr", "de"} for v in meta["vocab"]["right_types"].values())
+    assert high == {"en": "High justice", "fr": "Haute justice", "de": "Hochgerichtsbarkeit", "ja": "上級裁判権",
+                    "core": True}
+    assert set(desc) == {"en", "fr", "de", "ja"} and "gallows" in desc["en"]
+    assert all(set(v.get("desc", {})) == {"en", "fr", "de", "ja"} for v in meta["vocab"]["right_types"].values())
     lorraine = next(e for e in built["load"]("entities.json") if e["id"] == "duchy-lorraine")
     assert lorraine["rank"] == 1 and any(r["name"] == "Henri II" for r in lorraine["rulers"])

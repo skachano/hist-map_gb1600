@@ -19,6 +19,7 @@ entity_aliases:
   lords-kerpen: house-kerpen
   house-dalem: lords-dalem
   counts-hohensaxen: house-hohensaxen    # "le comte" (p. 15) and "le baron" (pp. 79-80) de Hohensaxen, holders of Berus
+  elisee-haraucourt: elisee-d-haraucourt    # Élisée d'Haraucourt (d'Acraignes), marquis of Faulquemont
   house-hattstein: gutta-de-hattstein    # "la dame de Hattstein" (p. 15) is the widow Gutta de Hattstein (p. 79)
   lords-hunolstein: house-hunolstein
   lords-reipoltzkirchen: house-reipoltzkirchen

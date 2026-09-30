@@ -52,7 +52,7 @@ test("changes: a change jumps to its year and place on the map", async ({ page }
   await page.getByRole("combobox", { name: "Right" }).selectOption("high_justice");
   const item = page.locator("ol.changes li li").filter({ hasText: "Anzeling" }).first();
   await item.getByRole("button", { name: "Anzeling" }).click();
-  await expect(page).toHaveURL(/#\/map\?year=1624&right=high_justice.*place=anzeling/);
+  await expect(page).toHaveURL(/#\/map\?year=1616&right=high_justice.*place=anzeling/); // the sale to André des Bordes
   await expect(page.locator("#panel h2")).toHaveText("Anzeling");
 });
 
@@ -104,4 +104,17 @@ test("ⓘ explains the selected right and links to About & sources", async ({ pa
   await expect(page).toHaveURL(/#\/about/);
   await expect(page.locator("#right-manorial_lord")).toBeInViewport();
   await expect(page.locator(".rights-explained dt")).toHaveCount(12);
+});
+
+test("Japanese: interface, right names and realm names; untranslated places keep their French name", async ({ page }) => {
+  await open(page, "#/map?year=1620&right=high_justice&lang=en&place=office-sierck");
+  await page.getByRole("button", { name: "日本語" }).click();
+  await expect(page).toHaveURL(/lang=ja/);
+  await expect(page.locator("html")).toHaveAttribute("lang", "ja");
+  await expect(page.locator("#header h1")).toContainText("ドイツ・バイイ管区");
+  await expect(page.getByRole("button", { name: "上級裁判権" })).toHaveAttribute("aria-pressed", "true");
+  const panel = page.locator("#panel");
+  await expect(panel.locator("h2")).toHaveText("シエルク管区");
+  await expect(panel).toContainText("JA シエルク管区");
+  await expect(panel.getByRole("button", { name: "Kédange" })).toBeVisible(); // no Japanese label: French
 });

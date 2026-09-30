@@ -1,0 +1,337 @@
+id,name_ja,source
+abbey-bouzonville,ブーゾンヴィル修道院,manual
+abbey-fraulautern,フラウラウテルン修道院,manual
+abbey-longeville,ロンジュヴィル修道院,manual
+abbey-mettlach,メトラッハ修道院,manual
+abbey-saint-avold,サン＝タヴォル修道院,manual
+abbey-saint-pierre-metz,メス・サン＝ピエール修道院,manual
+abbey-tholey,トーライ修道院,manual
+abbey-villers-bettnach,ヴィレール＝ベトナッハ修道院,manual
+abbey-wadgassen,ヴァドガッセン修道院,manual
+advocacy-herbitzheim,Herbitzheim 教会守護領,french + type
+advocacy-hombourg-saint-avold,Hombourg-Saint-Avold 教会守護領,french + type
+advocacy-saint-avold,サンタヴォル教会守護領,seat + type
+advocacy-saint-nabor,サン＝ナボール教会守護領,seat + type
+aspach,アスパッハ,wikidata
+assviller,アススヴィラー,wikidata
+avricourt,アヴリクール,wikidata
+badonviller,バドンヴィレ,wikidata
+bailiwick-cercle-du-rhin-superieur,Cercle du Rhin supérieur バイイ管区,french + type
+bailiwick-episcopal-de-vic,Bailliage épiscopal de Vic バイイ管区,french + type
+bailiwick-nancy,Nancy バイイ管区,french + type
+bailiwick-phalsbourg,ファルスブールバイイ管区,seat + type
+bailiwick-vie,ヴィック＝シュル＝セーユバイイ管区,seat + type
+bailliage-allemagne,ドイツ・バイイ管区,manual
+ban-albeschau,Albeschau バン,french + type
+ban-andernheim,Andernheim バン,french + type
+ban-bois-du-warndt,Bois du Warndt バン,french + type
+ban-bride-les-wuisse,Bride-lès-Wuisse バン,french + type
+ban-chaussy,Chaussy バン,french + type
+ban-delme,Delme バン,french + type
+ban-foret-de-rexing,Forêt de Rexing バン,french + type
+ban-franchise-de-k-nigsmacker,Franchise de Kœnigsmacker バン,french + type
+ban-goerling,Goerling バン,french + type
+ban-grossrosseln,Grossrosseln バン,french + type
+ban-hersing,Hersing バン,french + type
+ban-himmelding,Himmelding バン,french + type
+ban-himmeldingen,Himmeldingen バン,french + type
+ban-otzweiler,Otzweiler バン,french + type
+ban-petite-rosselle,Petite-Rosselle バン,french + type
+ban-rotte,Rotte バン,french + type
+ban-saint-pierre,Saint-Pierre バン,french + type
+ban-val-de-gueblange,Val de Guéblange バン,french + type
+ban-val-de-liepvre,Val de Lièpvre バン,french + type
+ban-val-de-steinbach,Val de Steinbach バン,french + type
+ban-warndt,Warndt バン,french + type
+ban-weidesheim,Weidesheim バン,french + type
+ban-westrich,Westrich バン,french + type
+ban-weyer-les-rahling,Weyer-lès-Rahling バン,french + type
+ban-winterhauch,Winterhauch バン,french + type
+barony-raville,Raville 男爵領,french + type
+barony-saint-georges,サン＝ジョルジュ男爵領,seat + type
+barony-viviers,Viviers 男爵領,french + type
+beckingen,ベッキンゲン,wikidata
+berus,ベールス,manual
+bishopric-metz,メス司教領,manual
+bitche,ビッシュ,wikidata
+bottenhach,ボッテンバッハ,wikidata
+boulay,ブレ,manual
+bouxwiller,ブクスヴィレール,wikidata
+castellany-albestroff,Albestroff 城代管区,french + type
+castellany-amance,Amance 城代管区,french + type
+castellany-fribourg,Fribourg 城代管区,french + type
+castellany-haboudange,Haboudange 城代管区,french + type
+castellany-lagarde,Lagarde 城代管区,french + type
+castellany-marsal,マルサル城代管区,seat + type
+castellany-remilly,Rémilly 城代管区,french + type
+castellany-vic,Vic 城代管区,french + type
+cathedral-chapter-trier,トリーア大聖堂参事会,manual
+chapter-metz,メス大聖堂参事会,manual
+chateau-salins,シャトー＝サラン,wikidata
+commandery-beckingen,ベッキンゲン騎士団管区,manual
+condominium-merzig-saargau,ザールガウ＝メルツィヒ共同統治地,manual
+county-bitche,ビッシュ伯領,seat + type
+county-blamont,Blâmont 伯領,french + type
+county-bliescastel,ブリースカステル伯領,manual
+county-crehange,クレアンジュ伯領,manual
+county-dabo,ダボ伯領,seat + type
+county-dalem,ダレム伯領,manual
+county-deux-ponts,Deux-Ponts 伯領,french + type
+county-eberstein,エーバーシュタイン伯家,manual
+county-falkenstein,Falkenstein 伯領,french + type
+county-hanau-lichtenberg,ハーナウ＝リヒテンベルク伯領,manual
+county-la-petite-pierre,County-la-petite-pierre 伯領,french + type
+county-lichtenberg,Lichtenberg 伯領,french + type
+county-nassau-saarbruecken,ナッサウ＝ザールブリュッケン伯領,manual
+county-nassau-sarrebruck,Nassau-Sarrebruck 伯領,french + type
+county-oberstein,オーバーシュタイン伯領,manual
+county-petite-pierre,La Petite-Pierre 伯領,french + type
+county-rechicourt-le-chateau,Réchicourt-le-Château 伯領,french + type
+county-salm,ザルム伯領,manual
+county-sarrebruck,ザールブリュッケン伯領,seat + type
+county-sarrewerden,サールヴェルデン伯領,seat + type
+county-sayn,ザイン伯領,manual
+court-conde,Condé 裁判区,french + type
+court-perl,Perl 裁判区,french + type
+court-vibersviller,Vibersviller 裁判区,french + type
+dabo,ダボ,wikidata
+dehlingen,ドゥランジャン,wikidata
+deserted-village-roderbann,Village disparu de Roderbann 廃村,french + type
+diedendorf,ディーデンドルフ,wikidata
+dieuze,ディウーズ,wikidata
+dillingen,ディリンゲン/ザール,wikidata
+domfessel,ドンフェセル,wikidata
+duchy-lorraine,ロレーヌ公国,manual
+duchy-luxembourg,ルクセンブルク公国,manual
+duchy-zweibruecken,ツヴァイブリュッケン公国,manual
+eblange,エブリンゲン,wikidata
+eincheville,アインシュヴィル,wikidata
+electorate-palatinate,プファルツ選帝侯領,manual
+electorate-trier,トリーア選帝侯領,manual
+elisee-d-haraucourt,エリゼ・ダロクール,manual
+ensdorf,エンスドルフ (ザールラント),wikidata
+eppelborn,エッペルボルン,wikidata
+eppenbrunn,エッペンブルン,wikidata
+faulquemont,フォルクモン,manual
+fenetrange,フェネトランジュ,wikidata
+fief-altviller,Altviller 封土,french + type
+fief-barst,Barst 封土,french + type
+fief-benestroff,Bénestroff 封土,french + type
+fief-betting,Betting 封土,french + type
+fief-blettange-bousse,Blettange-Bousse 封土,french + type
+fief-erstroff,Erstroff 封土,french + type
+fief-helfedange,Helfedange 封土,french + type
+fief-hellimer,Hellimer 封土,french + type
+fief-hingsange,Hingsange 封土,french + type
+fief-laning,Laning 封土,french + type
+forbach,フォルバック,wikidata
+forstheim,フォルストハイム,wikidata
+francois-ii-vaudemont,フランソワ2世・ド・ヴォーデモン,manual
+freyming,フレマン＝メルルバック,wikidata
+gersheim,ゲルスハイム,wikidata
+gremecey,グレメシー,wikidata
+greppen,クレッペン,wikidata
+griesborn,シュヴァルバッハ (ザール),wikidata
+griinstadt,グリューンシュタット,wikidata
+guenange,ゲナンジュ,wikidata
+gutta-de-hattstein,グッタ・フォン・ハットシュタイン（寡婦）,manual
+hahnweiler,ハーンヴァイラー,wikidata
+hampont,アムポン,wikidata
+heimbach-nahe,ハイムバッハ (ナーエ),wikidata
+henriette-vaudemont,アンリエット・ド・ヴォーデモン,manual
+herichsweiler,ヘルヒヴァイラー,wikidata
+hilst,ヒルスト,wikidata
+holy-roman-empire,神聖ローマ帝国,manual
+hornbach,ホルンバッハ,wikidata
+house-braubach,ブラウバッハ家,manual
+house-faust-stromberg,ファウスト・フォン・シュトロームベルク家,manual
+house-haraucourt,アロクール家,manual
+house-helmstatt,ヘルムシュタット家,manual
+house-hohensaxen,ホーエンザックス家,manual
+house-hunolstein,フノルシュタイン家,manual
+house-kerpen,ケルペン家,manual
+house-levenstein,レーヴェンシュタイン家,manual
+house-metternich,メッテルニヒ家,manual
+house-pallant,パラント家,manual
+house-schwarzenberg,シュヴァルツェンベルク家,manual
+house-varsberg,ヴァルスベルク家,manual
+illingen,イリンゲン (ザールラント),wikidata
+insming,アンスマン,manual
+jean-de-zandt,ヨハン・ツァント・フォン・メルル,manual
+kirf,キルフ,wikidata
+kleinblittersdorf,クラインブリッタースドルフ,wikidata
+lebach,レーバッハ,wikidata
+leitzweiler,ライツヴァイラー,wikidata
+lemberg-pirmasens,レムベルク (ドイツ),wikidata
+lixheim,リクサイム,wikidata
+lords-freistroff,フレストロフ領主家,manual
+lordship-asswiller,Asswiller 領,french + type
+lordship-berg,Berg 領,french + type
+lordship-bertrange,Bertrange 領,french + type
+lordship-bionville,Bionville 領,french + type
+lordship-bracs,Bracs 領,french + type
+lordship-busbach,Busbach 領,french + type
+lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,Château et seigneurie de Lemberg-lès-Pirmasens 領,french + type
+lordship-chatillon,Châtillon 領,french + type
+lordship-chevalin,Chevalin 領,french + type
+lordship-col-de-cygne,col de Cygne 領,french + type
+lordship-dagstuhl,Dagstuhl 領,french + type
+lordship-danne-et-quatre-vents,Danne et Quatre-Vents 領,french + type
+lordship-diemeringen,Diemeringen 領,french + type
+lordship-distroff,Distroff 領,french + type
+lordship-faulquemont,フォルクモン領,seat + type
+lordship-fenetrange,フェネトランジュ領,seat + type
+lordship-forbach,フォルバック領,seat + type
+lordship-frauenberg,Frauenberg 領,french + type
+lordship-fremersdorf,Fremersdorf 領,french + type
+lordship-gueroldseck,Guéroldseck 領,french + type
+lordship-gueroldseck-les-niederstinzel,Guéroldseck-lès-Niederstinzel 領,french + type
+lordship-hombourg-sur-canner,Hombourg 領,french + type
+lordship-imperiale-de-crehange,Seigneurie impériale de Créhange 領,french + type
+lordship-inglange,Inglange 領,french + type
+lordship-kingertal,Kingertal 領,french + type
+lordship-lebach,レーバッハ領,seat + type
+lordship-lemberg,レムベルク (ドイツ)領,french + type
+lordship-lemberg-les-pirmasens,Lemberg-lès-Pirmasens 領,french + type
+lordship-lixing,Lixing 領,french + type
+lordship-lixing-rouhling,Lixing-Rouhling 領,french + type
+lordship-luttange,ルターニュ領,seat + type
+lordship-lutzelbourg,Lutzelbourg 領,french + type
+lordship-marimont,マリモン領,manual
+lordship-meilberg,Meilberg 領,french + type
+lordship-metz,メス領,seat + type
+lordship-monclair,Monclair 領,french + type
+lordship-morhange,モランジュ領,seat + type
+lordship-nalbach,ナルバッハ領,seat + type
+lordship-puttelange,ピュトランジュ領,seat + type
+lordship-puttlingen-saar,Püttlingen-Saar 領,french + type
+lordship-rechicourt,Réchicourt 領,french + type
+lordship-saint-avold,サンタヴォル領,seat + type
+lordship-sarreck,サレック領,seat + type
+lordship-talange,Talange 領,french + type
+lordship-thicourt,Thicourt 領,french + type
+lordship-turquestein,Turquestein 領,french + type
+lordship-val-de-nalbach,Val de Nalbach 領,french + type
+lordship-varize,Varize 領,french + type
+lordship-vry-devant-metz,Vry-devant-Metz 領,french + type
+lordship-weinsberg,Weinsberg 領,french + type
+louis-de-guise,ルイ・ド・ギーズ（ファルスブール公）,manual
+luttange,ルターニュ,wikidata
+macheren,マシュラン,wikidata
+marmoutier,マルムーティエ,wikidata
+marpingen,マルピンゲン,wikidata
+marquisate-nomeny,Nomeny 侯爵領,french + type
+marquisate-pont-a-mousson,ポンタ＝ムッソン侯爵領,seat + type
+marsal,マルサル,wikidata
+mayoralty-altheim,Altheim 村長区,french + type
+mayoralty-basse-ham,Basse-Ham 村長区,french + type
+mayoralty-boucheporn,Boucheporn 村長区,french + type
+mayoralty-boustroff,Boustroff 村長区,french + type
+mayoralty-cutting,Cutting 村長区,french + type
+mayoralty-dieuze,ディウーズ村長区,seat + type
+mayoralty-farschviller,Farschviller 村長区,french + type
+mayoralty-hellimer,Hellimer 村長区,french + type
+mayoralty-hilsprich,Hilsprich 村長区,french + type
+mayoralty-holving,Holving 村長区,french + type
+mayoralty-inferieure-du-saargau-a-schwemlingen,Mairie inférieure du Saargau à Schwemlingen 村長区,french + type
+mayoralty-insming,アンスマン村長区,seat + type
+mayoralty-lindre,Lindre 村長区,french + type
+mayoralty-metzing,Metzing 村長区,french + type
+mayoralty-montenach,Montenach 村長区,french + type
+mayoralty-puttelange,ピュトランジュ村長区,seat + type
+mayoralty-rahling,Rahling 村長区,french + type
+mayoralty-remering,Rémering 村長区,french + type
+mayoralty-riche,Riche 村長区,french + type
+mayoralty-rurange,Rurange 村長区,french + type
+mayoralty-schorbach,Schorbach 村長区,french + type
+mayoralty-siersberg,ジールスベルク村長区,seat + type
+mayoralty-superieure-du-saargau-a-hilbringen,Mairie supérieure du Saargau à Hilbringen 村長区,french + type
+mayoralty-teting,Téting 村長区,french + type
+mayoralty-walschbronn,Walschbronn 村長区,french + type
+meisenthal,マイゼンタール,wikidata
+merzig,メルツィヒ,wikidata
+mettlach,メトラッハ,wikidata
+metz,メス,wikidata
+momberg,シュタインベルク (ヴァーダーン),wikidata
+morhange,モランジュ,manual
+munster,ミュンスター,wikidata
+nalbach,ナルバッハ,wikidata
+niderviller,ニーデルヴィレー,wikidata
+niederbronn,ニーデルブロン＝レ＝バン,wikidata
+nittel-sur-moselle,ニッテル,wikidata
+nohfelden,ノーフェルデン,wikidata
+nonnweiler,ノンヴァイラー,wikidata
+nunkirchen,ヌンキルヒェン,wikidata
+oeting,オエティン,wikidata
+office-berus,ベールス管区,seat + type
+office-boulay,ブレ管区,seat + type
+office-dieuze,ディウーズ管区,seat + type
+office-herange,Hérange 管区,french + type
+office-hombourg-haut,オンブール＝オー管区,manual
+office-merzig,メルツィヒ共同統治地,seat + type
+office-phalsbourg,ファルスブール管区,seat + type
+office-sarralbe,サラルブ管区,seat + type
+office-sarreguemines,サルグミーヌ管区,seat + type
+office-sarrewerden-et-herbitzheim,サールヴェルデン・ヘルビッツハイム管区,manual
+office-schaumberg,シャウムベルク管区,seat + type
+office-sergenterie-de-bining,Bining 廷吏区,french + type
+office-sergenterie-ou-buttelei-de-rimling,Rimling 廷吏区,french + type
+office-sierck,シエルク管区,seat + type
+office-siersberg,ジールスベルク管区,seat + type
+office-varsberg,Varsberg 管区,french + type
+office-vaudrevange,ヴァラーファンゲン管区,seat + type
+oppen,オッペン,wikidata
+pays-messin,メス都市領（ペイ・メッサン）,manual
+phalsbourg,ファルスブール,wikidata
+pirmasens,ピルマゼンス,wikidata
+pommern,ポンメルン (モーゼル),wikidata
+pont-a-mousson,ポンタ＝ムッソン,wikidata
+principality-lixheim,リクサイム侯国,seat + type
+provostship-amance,Amance 代官区,french + type
+provostship-conde,Condé 代官区,french + type
+provostship-eblange,エブリンゲン代官区,seat + type
+provostship-insming,アンスマン代官区,seat + type
+provostship-ketternostern,Ketternostern 代官区,french + type
+provostship-marche-de-chateau-salins,シャトー＝サラン帝国辺境区,manual
+provostship-marsal,マルサル代官区,seat + type
+provostship-oberkirchen,Oberkirchen 代官区,french + type
+provostship-remich,Remich 代官区,french + type
+provostship-rurale-de-sierck,シエルク農村代官区,seat + type
+provostship-sarrebourg,サールブール代官区,seat + type
+provostship-thionville,ティオンヴィル代官区,seat + type
+provostship-winterbach,Winterbach 代官区,french + type
+puttelange,ピュトランジュ,manual
+quierschied,クヴィーアシート,wikidata
+rehlingen-sur-sarre,レーリンゲン＝ジールスブルク,wikidata
+rhingraves-daun,ダウン系ライン伯家,manual
+riedelberg,リーデルベルク,wikidata
+saargau,ザールガウ共同統治地,manual
+saarwellingen-14,ザールヴェリンゲン,wikidata
+saint-avold,サンタヴォル,wikidata
+saint-georges,サン＝ジョルジュ,wikidata
+saint-nabor,サン＝ナボール,wikidata
+saint-quirin,サン＝キラン,wikidata
+sarralbe,サラルブ,manual
+sarrebourg,サールブール,wikidata
+sarreck,サレック,manual
+sarreguemines-m,サルグミーヌ,wikidata
+sarrehruck,ザールブリュッケン,wikidata
+sarrewerden,サールヴェルデン,manual
+schaumberg,シャウムベルク,manual
+schweix-pirmasens,シュヴァイクス,wikidata
+sierck,シエルク,manual
+siersberg,ジールスベルク,manual
+spicheren,スピシャラン,wikidata
+teutonic-order,ドイツ騎士団,manual
+theding,テダン,wikidata
+thionville,ティオンヴィル,wikidata
+tholey,トーライ,wikidata
+thonville,トンヴィル,wikidata
+trulben,トルルベン,wikidata
+vaudrevange,ヴァラーファンゲン,wikidata
+vic-sur-seille,ヴィック＝シュル＝セーユ,wikidata
+vinningen,ヴィニンゲン,wikidata
+w-rth,ヴルト,wikidata
+wadern,ヴァーダーン,wikidata
+wadrill,ヴァドリル (ヴァーダーン),wikidata
+weiler-im-loch,ベルクヴァイラー (ベルンカステル＝ヴィットリヒ),wikidata

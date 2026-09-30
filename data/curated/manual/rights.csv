@@ -7,12 +7,12 @@ merschweiller,manorial_lord,cathedral-chapter-trier,,,,,,,,,,49,,
 kedange,high_justice,duchy-lorraine,,,,,,,,,,50,,
 kedange,middle_low_justice,duchy-lorraine,,,,,,,,,,50,,
 kedange,manorial_lord,charterhouse-rettel,,,,,,,,,,50,,
-anzeling,high_justice,duchy-lorraine,,,,,,1624,,exact,,50-51,,
+anzeling,high_justice,duchy-lorraine,,,,,,1615,,exact,,50-51,,
 anzeling,high_justice,henriette-vaudemont,,pledged,,,1624,,exact,,,51-52,,
-anzeling,middle_low_justice,duchy-lorraine,,,,,,1624,,exact,,50-51,,
+anzeling,middle_low_justice,duchy-lorraine,,,,,,1615,,exact,,50-51,,
 anzeling,middle_low_justice,henriette-vaudemont,,pledged,,,1624,,exact,,,52,,
 anzeling,tithe,abbey-bouzonville,,,,,,,,,,50;52,,
-hestroff,high_justice,duchy-lorraine,,,,,,1624,,exact,,50,medium,
+hestroff,high_justice,duchy-lorraine,,,,,,1615,,exact,,50,medium,
 hestroff,high_justice,henriette-vaudemont,,pledged,,,1624,,exact,,,50-52,medium,"p. 51 dates the pledge to January 1624, p. 50 to January 1625."
 hestroff,manorial_lord,abbey-villers-bettnach,,,,,,,,,,50,,
 chemery,high_justice,duchy-lorraine,,,,,,,,,,50-51,,
@@ -50,3 +50,23 @@ haustadt,manorial_lord,commandery-beckingen,joint,held,,,1612,1612,attested,atte
 haustadt,suzerain,county-nassau-saarbruecken,,held,true,duchy-lorraine,1617,1617,attested,attested,,133,high,"over Jean de Zandt's part, held in fief of Nassau; Lorraine wanted to draw it in"
 honzrath,suzerain,county-nassau-saarbruecken,,held,true,duchy-lorraine,1610,1610,attested,attested,,133,medium,over the Braubach half of the village
 honzrath,suzerain,duchy-lorraine,,claimed,true,county-nassau-saarbruecken|jean-de-zandt,1610,1610,exact,exact,,133,high,
+county-dalem,suzerain,duchy-lorraine,,held,,,,,,,,27,high,
+county-dalem,manorial_lord,elisee-d-haraucourt,,held,,,,1628,,,,27,high,died in 1629
+county-dalem,manorial_lord,house-haraucourt,,held,,,1629,,exact,,,27,high,
+office-boulay,manorial_lord,heirs-houst,,held,,,,,,,,82,,
+office-boulay,manorial_lord,duchy-lorraine,,held,,,,1613,,exact,,28,medium,ducal domain until the grant of 1614 (implied)
+office-boulay,manorial_lord,louis-de-guise,,held,,,1614,1631,exact,exact,,28;82,high,for life; he styled himself count of Boulay
+office-boulay,manorial_lord,henriette-vaudemont,,pledged,,,1632,,exact,,,30;86,high,"dower after her husband's death (December 1631), for a loan of 300,000 francs"
+teterchen,manorial_lord,duchy-lorraine,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,county-nassau-saarbruecken,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,house-schwarzenberg,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,house-varsberg,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,jacques-de-bassy,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,house-faust-stromberg,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,house-haraucourt,,held,,,1613,1613,attested,attested,,79,,
+teterchen,manorial_lord,louis-de-guise,,pledged,,,1625,,circa,,,29,medium,"the duke's part, for a loan of 100,000 francs; dated by the surrounding text (1625)"
+nebing,manorial_lord,house-braubach,joint,held,,,1585,1585,attested,attested,,74,,
+nebing,manorial_lord,nicolas-de-pullenoy,,held,,,1625,,attested,,,27,high,
+anzeling,high_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II; the guard of Sierck castle and the general aid were excepted. He fell in January 1625
+anzeling,middle_low_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II
+hestroff,high_justice,andre-des-bordes,,held,,,1616,1623,exact,,,25,medium,bought from Henri II; the guard of Sierck castle and the general aid were excepted. He fell in January 1625
