@@ -33,7 +33,7 @@ teutonic-order,ドイツ騎士団,
 county-salm,ザルム伯領,
 electorate-palatinate,プファルツ選帝侯領,
 house-hunolstein,フノルシュタイン家,
-abbey-saint-avold,サン＝タヴォル修道院,
+abbey-saint-avold,サンタヴォル修道院,
 abbey-saint-pierre-metz,メス・サン＝ピエール修道院,
 house-helmstatt,ヘルムシュタット家,
 house-levenstein,レーヴェンシュタイン家,
@@ -65,13 +65,13 @@ office-hombourg-haut,オンブール＝オー管区,no seat of its own
 lordship-marimont,マリモン領,no seat of its own
 condominium-merzig-saargau,ザールガウ＝メルツィヒ共同統治地,
 saargau,ザールガウ共同統治地,
-office-sarrewerden-et-herbitzheim,サールヴェルデン・ヘルビッツハイム管区,
+office-sarrewerden-et-herbitzheim,サールヴェルデン・エルビッツェム管区,
 county-dalem,ダレム伯領,
 boulay,ブレ,"seat of the office (Wikidata has the modern Boulay-Moselle, ブレ＝モゼル)"
 volmerange,ヴォルムランジュ,
 lordship-volmerange,ヴォルムランジュ領,
 marquisate-faulquemont,フォルクモン侯爵領,
-lordship-diemeringen,ディーメリンゲン侯国,
+lordship-diemeringen,ディーメランジャン侯国,
 principality-phalsbourg,ファルスブール侯国,
 provostship-sierck,シエルク代官区,
 provostship-sous-sierck,シエルク副代官区,
@@ -80,3 +80,1336 @@ court-conde,コンデ代官区,
 lordship-col-de-cygne,コル・ド・シーニュ領（シュヴァーネンハルス）,
 bailiwick-cercle-du-rhin-superieur,上ライン帝国クライス,
 castellany-dieuze,デューズ城代管区,
+weiten,ヴァイテン,"katakana: French reading in France, German in Germany"
+merschweiller,メルシュヴィレール,"katakana: French reading in France, German in Germany"
+kedange,ケダンジュ,"katakana: French reading in France, German in Germany"
+anzeling,アンゼリング,"katakana: French reading in France, German in Germany"
+hestroff,エストロフ,"katakana: French reading in France, German in Germany"
+chemery,シェムリ,"katakana: French reading in France, German in Germany"
+bouquenom,ブーケノム,"katakana: French reading in France, German in Germany"
+salival,サリヴァル,"katakana: French reading in France, German in Germany"
+voelklingen,フェルクリンゲン,"katakana: French reading in France, German in Germany"
+hoelling,ヘリング,"katakana: French reading in France, German in Germany"
+hombourg-haut-et-bas,オンブール＝バ,"katakana: French reading in France, German in Germany"
+goderscheuren,ゴドゥユール,"katakana: French reading in France, German in Germany"
+tunting,テュンタン,"katakana: French reading in France, German in Germany"
+tiitting,テュッタン,"katakana: French reading in France, German in Germany"
+biibingen,ビューディンゲン,"katakana: French reading in France, German in Germany"
+honzrath,ホンツラート,"katakana: French reading in France, German in Germany"
+haustadt,ハウスタット,"katakana: French reading in France, German in Germany"
+michelbach,ミヒェルバッハ,"katakana: French reading in France, German in Germany"
+remilly,レミイ,"katakana: French reading in France, German in Germany"
+deserted-village-roderbann,ローダーバン,"katakana: French reading in France, German in Germany"
+chemery-faulquemont,シェムリ,"katakana: French reading in France, German in Germany"
+aboncourt,アボンクール,"katakana: French reading in France, German in Germany"
+abreschviller,アブレシュヴィレール,"katakana: French reading in France, German in Germany"
+achain,アシャン,"katakana: French reading in France, German in Germany"
+achen,アシャン,"katakana: French reading in France, German in Germany"
+ackerbach,アッケルバック,"katakana: French reading in France, German in Germany"
+adamsviller,アダンスヴィレール,"katakana: French reading in France, German in Germany"
+adelange,アドランジュ,"katakana: French reading in France, German in Germany"
+aidling,エドラン,"katakana: French reading in France, German in Germany"
+alaincourt,アランクール,"katakana: French reading in France, German in Germany"
+alberting,アルベルタン,"katakana: French reading in France, German in Germany"
+albestroff,アルベストロフ,"katakana: French reading in France, German in Germany"
+alling,アラン,"katakana: French reading in France, German in Germany"
+alsting,アルスタン,"katakana: French reading in France, German in Germany"
+alsweiler,アルスヴァイラー,"katakana: French reading in France, German in Germany"
+alteville,アルトヴィル,"katakana: French reading in France, German in Germany"
+altheim,アルトハイム,"katakana: French reading in France, German in Germany"
+althorn,アルトホルン,"katakana: French reading in France, German in Germany"
+altrippe,アルトリップ,"katakana: French reading in France, German in Germany"
+altroff,アルトロフ,"katakana: French reading in France, German in Germany"
+altviller,アルトヴィレール,"katakana: French reading in France, German in Germany"
+altwiller,アルトヴィレール,"katakana: French reading in France, German in Germany"
+alzing,アルザン,"katakana: French reading in France, German in Germany"
+amelecourt,アメレクール,"katakana: French reading in France, German in Germany"
+angviller,アングヴィレール,"katakana: French reading in France, German in Germany"
+apach,アパック,"katakana: French reading in France, German in Germany"
+arlange,アルランジュ,"katakana: French reading in France, German in Germany"
+arraincourt,アランクール,"katakana: French reading in France, German in Germany"
+arriance,アリアンス,"katakana: French reading in France, German in Germany"
+arzviller,アルツヴィレール,"katakana: French reading in France, German in Germany"
+aschbach,アッシュバッハ,"katakana: French reading in France, German in Germany"
+assenoncourt,アスノンクール,"katakana: French reading in France, German in Germany"
+attiloncourt,アティロンクール,"katakana: French reading in France, German in Germany"
+aube,オーブ,"katakana: French reading in France, German in Germany"
+audviller,オードヴィレール,"katakana: French reading in France, German in Germany"
+auersmacher,アウアースマッハー,"katakana: French reading in France, German in Germany"
+aulnois,オルノワ,"katakana: French reading in France, German in Germany"
+aussen,アウセン,"katakana: French reading in France, German in Germany"
+ayol,アイオル,"katakana: French reading in France, German in Germany"
+azoudange,アズダンジュ,"katakana: French reading in France, German in Germany"
+bachem,バッヘム,"katakana: French reading in France, German in Germany"
+bacourt,バクール,"katakana: French reading in France, German in Germany"
+baerendorf,ベランドルフ,"katakana: French reading in France, German in Germany"
+baerenthal,ベランタル,"katakana: French reading in France, German in Germany"
+ballering,バルラン,"katakana: French reading in France, German in Germany"
+ballern,バレルン,"katakana: French reading in France, German in Germany"
+bambiderstroff,バンビデルストロフ,"katakana: French reading in France, German in Germany"
+bannay,バネ,"katakana: French reading in France, German in Germany"
+barchain,バルシャン,"katakana: French reading in France, German in Germany"
+baronville,バロンヴィル,"katakana: French reading in France, German in Germany"
+barst,バルスト,"katakana: French reading in France, German in Germany"
+basse-contz,バス＝コンツ,"katakana: French reading in France, German in Germany"
+basse-vigneulles,バス＝ヴィニュル,"katakana: French reading in France, German in Germany"
+basse-yutz,バス＝ユッツ,"katakana: French reading in France, German in Germany"
+bassing,バサン,"katakana: French reading in France, German in Germany"
+bathelemont,バトレモン,"katakana: French reading in France, German in Germany"
+baudrecourt,ボドルクール,"katakana: French reading in France, German in Germany"
+bechy,ベシー,"katakana: French reading in France, German in Germany"
+beckerholz,ベケルホルツ,"katakana: French reading in France, German in Germany"
+bedersdorf,ベーダースドルフ,"katakana: French reading in France, German in Germany"
+behren,ベラン,"katakana: French reading in France, German in Germany"
+bellange,ベランジュ,"katakana: French reading in France, German in Germany"
+belle-fontaine,ベルフォンテーヌ,"katakana: French reading in France, German in Germany"
+bellmacher,ベルマッハー,"katakana: French reading in France, German in Germany"
+benestroff,ベネストロフ,"katakana: French reading in France, German in Germany"
+bening-harprich,ベナン,"katakana: French reading in France, German in Germany"
+bening-saint-avold,ベナン,"katakana: French reading in France, German in Germany"
+benting,ベンタン,"katakana: French reading in France, German in Germany"
+berange,ベランジュ,"katakana: French reading in France, German in Germany"
+berfang,ベルファン,"katakana: French reading in France, German in Germany"
+berg-drulingen,ベルグ,"katakana: French reading in France, German in Germany"
+berg-nennig,ベルク,"katakana: French reading in France, German in Germany"
+berig,ベリグ,"katakana: French reading in France, German in Germany"
+berling,ベルラン,"katakana: French reading in France, German in Germany"
+bermering,ベルムラン,"katakana: French reading in France, German in Germany"
+berthelming,ベルテルマン,"katakana: French reading in France, German in Germany"
+bertrambois,ベルトランボワ,"katakana: French reading in France, German in Germany"
+bertring,ベルトラン,"katakana: French reading in France, German in Germany"
+berviller,ベルヴィレール,"katakana: French reading in France, German in Germany"
+besseringen,ベッセリンゲン,"katakana: French reading in France, German in Germany"
+bestroff,ベストロフ,"katakana: French reading in France, German in Germany"
+bethingen,ベーティンゲン,"katakana: French reading in France, German in Germany"
+bettange,ベタンジュ,"katakana: French reading in France, German in Germany"
+bettelainville,ベトランヴィル,"katakana: French reading in France, German in Germany"
+betthorn,ベットボルン,"katakana: French reading in France, German in Germany"
+betting-saint-avold,ベタン,"katakana: French reading in France, German in Germany"
+betting-waldwisse,ベタン,"katakana: French reading in France, German in Germany"
+betting-zimming,ベタン,"katakana: French reading in France, German in Germany"
+bettingen,ベッティンゲン,"katakana: French reading in France, German in Germany"
+bettling,ベトラン,"katakana: French reading in France, German in Germany"
+bettring,ベトラン,"katakana: French reading in France, German in Germany"
+bettstadt,ベットシュタット,"katakana: French reading in France, German in Germany"
+bettviller-drulingen,ベットヴィレール,"katakana: French reading in France, German in Germany"
+bettviller-rohrbach,ベットヴィレール,"katakana: French reading in France, German in Germany"
+beuren,ボイレン,"katakana: French reading in France, German in Germany"
+beyren,ベラン,"katakana: French reading in France, German in Germany"
+bezange-la-grande,ブザンジュ＝ラ＝グランド,"katakana: French reading in France, German in Germany"
+bezange-la-petite,ブザンジュ＝ラ＝プティット,"katakana: French reading in France, German in Germany"
+bibiche,ビビッシュ,"katakana: French reading in France, German in Germany"
+bibling,ビブラン,"katakana: French reading in France, German in Germany"
+bichelherg,ビシェルベルグ,"katakana: French reading in France, German in Germany"
+bickenholz,ビケンホルツ,"katakana: French reading in France, German in Germany"
+bidestroff,ビデストロフ,"katakana: French reading in France, German in Germany"
+biding,ビダン,"katakana: French reading in France, German in Germany"
+bierfeld,ビーアフェルト,"katakana: French reading in France, German in Germany"
+bietzen,ビーツェン,"katakana: French reading in France, German in Germany"
+biherkirch,ビベルキルシュ,"katakana: French reading in France, German in Germany"
+biischdorf,ビュッシュドルフ,"katakana: French reading in France, German in Germany"
+bilsdorf,ビルスドルフ,"katakana: French reading in France, German in Germany"
+bingen,バンジャン,"katakana: French reading in France, German in Germany"
+bining,ビナン,"katakana: French reading in France, German in Germany"
+bionville,ビオンヴィル,"katakana: French reading in France, German in Germany"
+biringen,ビリンゲン,"katakana: French reading in France, German in Germany"
+bisping,ビスパン,"katakana: French reading in France, German in Germany"
+bissert,ビセール,"katakana: French reading in France, German in Germany"
+bisten-en-lorraine,ビスタン＝アン＝ロレーヌ,"katakana: French reading in France, German in Germany"
+bisten-saar,ビステン,"katakana: French reading in France, German in Germany"
+bistroff-drulingen,ビストロフ,"katakana: French reading in France, German in Germany"
+bistroff-grotesquin,ビストロフ,"katakana: French reading in France, German in Germany"
+bizing,ビザン,"katakana: French reading in France, German in Germany"
+blanche-eglise,ブランシュ＝エグリーズ,"katakana: French reading in France, German in Germany"
+bleiderdingen,ブライダーディンゲン,"katakana: French reading in France, German in Germany"
+bletting,ブレタン,"katakana: French reading in France, German in Germany"
+bliesbruck,ブリースブリュック,"katakana: French reading in France, German in Germany"
+blieschweyen,ブリースシュヴァイエン,"katakana: French reading in France, German in Germany"
+bliesebersing,ブリースエベルサン,"katakana: French reading in France, German in Germany"
+bliesen,ブリーゼン,"katakana: French reading in France, German in Germany"
+bliesguersviller,ブリースゲルスヴィレール,"katakana: French reading in France, German in Germany"
+blieshach,ブリースバッハ,"katakana: French reading in France, German in Germany"
+bliesmengen,ブリースメンゲン,"katakana: French reading in France, German in Germany"
+bliesransbach,ブリースランスバッハ,"katakana: French reading in France, German in Germany"
+bockange,ボカンジュ,"katakana: French reading in France, German in Germany"
+boeckweiler,ベックヴァイラー,"katakana: French reading in France, German in Germany"
+boschviller,ボシュヴィレール,"katakana: French reading in France, German in Germany"
+boucheporn,ブシュポルン,"katakana: French reading in France, German in Germany"
+bourdonnay,ブルドネ,"katakana: French reading in France, German in Germany"
+bourgaltroff,ブルガルトロフ,"katakana: French reading in France, German in Germany"
+bourlioncourt,ブルリオンクール,"katakana: French reading in France, German in Germany"
+bourscheid,ブルシェイド,"katakana: French reading in France, German in Germany"
+bousbach,ブスバック,"katakana: French reading in France, German in Germany"
+bousse,ブッス,"katakana: French reading in France, German in Germany"
+bousseviller,ブスヴィレール,"katakana: French reading in France, German in Germany"
+boustroff,ブストロフ,"katakana: French reading in France, German in Germany"
+bouzonville,ブーゾンヴィル,"katakana: French reading in France, German in Germany"
+brecklange,ブレクランジュ,"katakana: French reading in France, German in Germany"
+brehain,ブレアン,"katakana: French reading in France, German in Germany"
+breidenbach,ブレダンバック,"katakana: French reading in France, German in Germany"
+breistroff-petite,ブレストロフ,"katakana: French reading in France, German in Germany"
+brettnach,ブレトナック,"katakana: French reading in France, German in Germany"
+brouck,ブルック,"katakana: French reading in France, German in Germany"
+brouderdorf,ブルデルドルフ,"katakana: French reading in France, German in Germany"
+brouviller,ブルヴィレール,"katakana: French reading in France, German in Germany"
+bru,ブリュ,"katakana: French reading in France, German in Germany"
+brulange,ブリュランジュ,"katakana: French reading in France, German in Germany"
+bubach-calmesweiler,ブーバッハ,"katakana: French reading in France, German in Germany"
+buchingen,ブッヒンゲン,"katakana: French reading in France, German in Germany"
+budange,ビュダンジュ,"katakana: French reading in France, German in Germany"
+buding,ビュダン,"katakana: French reading in France, German in Germany"
+budling,ビュドラン,"katakana: French reading in France, German in Germany"
+buhl-lorraine,ビュール,"katakana: French reading in France, German in Germany"
+buprich,ブープリヒ,"katakana: French reading in France, German in Germany"
+burbach,ビュルバック,"katakana: French reading in France, German in Germany"
+buren,ビューレン,"katakana: French reading in France, German in Germany"
+burgalben,ブルクアルベン,"katakana: French reading in France, German in Germany"
+burgesch,ビュルゲッシュ,"katakana: French reading in France, German in Germany"
+burtoncourt,ビュルトンクール,"katakana: French reading in France, German in Germany"
+busbach,ビュスバック,"katakana: French reading in France, German in Germany"
+buschdorf,ビュッシュドルフ,"katakana: French reading in France, German in Germany"
+busenacker,ビュズナケール,"katakana: French reading in France, German in Germany"
+bust,ビュスト,"katakana: French reading in France, German in Germany"
+butten,ビュテン,"katakana: French reading in France, German in Germany"
+buweiler,ブーヴァイラー,"katakana: French reading in France, German in Germany"
+cadenbronn,カダンブロン,"katakana: French reading in France, German in Germany"
+calembourg,カランブール,"katakana: French reading in France, German in Germany"
+calmesweiler,カルメスヴァイラー,"katakana: French reading in France, German in Germany"
+cappel,カペル,"katakana: French reading in France, German in Germany"
+castviller,カストヴィレール,"katakana: French reading in France, German in Germany"
+chambrey,シャンブレ,"katakana: French reading in France, German in Germany"
+charleville,シャルルヴィル,"katakana: French reading in France, German in Germany"
+chateau-brehain,シャトー＝ブレアン,"katakana: French reading in France, German in Germany"
+chateau-rouge,シャトー＝ルージュ,"katakana: French reading in France, German in Germany"
+chateau-voue,シャトーヴエ,"katakana: French reading in France, German in Germany"
+chatillon,シャティヨン,"katakana: French reading in France, German in Germany"
+chelaincourt,シュランクール,"katakana: French reading in France, German in Germany"
+chenois,シェノワ,"katakana: French reading in France, German in Germany"
+chevalin,シュヴァラン,"katakana: French reading in France, German in Germany"
+chicourt,シクール,"katakana: French reading in France, German in Germany"
+cirey,シレ,"katakana: French reading in France, German in Germany"
+cocheren,コシュラン,"katakana: French reading in France, German in Germany"
+colmen,コルマン,"katakana: French reading in France, German in Germany"
+conde-northen,コンデ,"katakana: French reading in France, German in Germany"
+conthil,コンティル,"katakana: French reading in France, German in Germany"
+coume,クーム,"katakana: French reading in France, German in Germany"
+courcelles,クルセル,"katakana: French reading in France, German in Germany"
+craincourt,クランクール,"katakana: French reading in France, German in Germany"
+crehange,クレアンジュ,"katakana: French reading in France, German in Germany"
+creutzwald,クロイツヴァルト,"katakana: French reading in France, German in Germany"
+cutting,キュタン,"katakana: French reading in France, German in Germany"
+dalem,ダレム,"katakana: French reading in France, German in Germany"
+dalhain,ダラン,"katakana: French reading in France, German in Germany"
+dalstein,ダルスタン,"katakana: French reading in France, German in Germany"
+dannelbourg,ダネルブール,"katakana: French reading in France, German in Germany"
+dedeling,デドラン,"katakana: French reading in France, German in Germany"
+delme,デルム,"katakana: French reading in France, German in Germany"
+denting,ダンタン,"katakana: French reading in France, German in Germany"
+desseling,デスラン,"katakana: French reading in France, German in Germany"
+destry,デストリ,"katakana: French reading in France, German in Germany"
+diane-cappel,ディアーヌ＝カペル,"katakana: French reading in France, German in Germany"
+diding,ディダン,"katakana: French reading in France, German in Germany"
+diebling,ディーブラン,"katakana: French reading in France, German in Germany"
+diederfing,ディーデルファン,"katakana: French reading in France, German in Germany"
+dieding,ディーダン,"katakana: French reading in France, German in Germany"
+dieffembach,ディーフェンバック,"katakana: French reading in France, German in Germany"
+dieffenbach,ディーフェンバック,"katakana: French reading in France, German in Germany"
+diefferten,ディーフェルテン,"katakana: French reading in France, German in Germany"
+diefflen,ディーフレン,"katakana: French reading in France, German in Germany"
+diemeringen,ディーメランジャン,"katakana: French reading in France, German in Germany"
+diersdorf,ディーアスドルフ,"katakana: French reading in France, German in Germany"
+diesen,ディーザン,"katakana: French reading in France, German in Germany"
+dietersbach,ディータースバッハ,"katakana: French reading in France, German in Germany"
+distroff,ディストロフ,"katakana: French reading in France, German in Germany"
+ditschviller,ディッチュヴィレール,"katakana: French reading in France, German in Germany"
+dittelingen,ディトラン,"katakana: French reading in France, German in Germany"
+doersdorf,デールスドルフ,"katakana: French reading in France, German in Germany"
+dolving,ドルヴァン,"katakana: French reading in France, German in Germany"
+domnon,ドンノン,"katakana: French reading in France, German in Germany"
+donnelay,ドヌレ,"katakana: French reading in France, German in Germany"
+donsitters,ドンジッタース,"katakana: French reading in France, German in Germany"
+dordhal,ドルダル,"katakana: French reading in France, German in Germany"
+dorst,ドルスト,"katakana: French reading in France, German in Germany"
+dorvillers,ドルスヴィレール,"katakana: French reading in France, German in Germany"
+dourd-hal,ドゥルダル,"katakana: French reading in France, German in Germany"
+dreisbach,ドライスバッハ,"katakana: French reading in France, German in Germany"
+drogny,ドロニー,"katakana: French reading in France, German in Germany"
+drulingen,ドリュランジャン,"katakana: French reading in France, German in Germany"
+duppenweiler,デュッペンヴァイラー,"katakana: French reading in France, German in Germany"
+duren,デューレン,"katakana: French reading in France, German in Germany"
+durstel,デュルステル,"katakana: French reading in France, German in Germany"
+ebersviller,エベルスヴィレール,"katakana: French reading in France, German in Germany"
+ebring,エブラン,"katakana: French reading in France, German in Germany"
+edersviller,エデルスヴィレール,"katakana: French reading in France, German in Germany"
+edling,エドラン,"katakana: French reading in France, German in Germany"
+eft,エフト,"katakana: French reading in France, German in Germany"
+eguelshardt,エゲルスアルト,"katakana: French reading in France, German in Germany"
+eich-pirmasens,アイヒ,"katakana: French reading in France, German in Germany"
+eich-reding,エック,"katakana: French reading in France, German in Germany"
+eich-sarralbe,エック,"katakana: French reading in France, German in Germany"
+eimersdorf,アイマースドルフ,"katakana: French reading in France, German in Germany"
+einartshausen,アイナルツハウゼン,"katakana: French reading in France, German in Germany"
+eisweiler,アイスヴァイラー,"katakana: French reading in France, German in Germany"
+eiweiler-nohfelden,アイヴァイラー,"katakana: French reading in France, German in Germany"
+eiweiler-wiesbach,アイヴァイラー,"katakana: French reading in France, German in Germany"
+ellmeren,エルメレン,"katakana: French reading in France, German in Germany"
+elvange,エルヴァンジュ,"katakana: French reading in France, German in Germany"
+elviller,エルヴィレール,"katakana: French reading in France, German in Germany"
+elzange,エルザンジュ,"katakana: French reading in France, German in Germany"
+elzing,エルザン,"katakana: French reading in France, German in Germany"
+emmersweiler,エマースヴァイラー,"katakana: French reading in France, German in Germany"
+enchenberg,アンシャンベール,"katakana: French reading in France, German in Germany"
+engenthal,アンジャンタル,"katakana: French reading in France, German in Germany"
+epange,エパンジュ,"katakana: French reading in France, German in Germany"
+epping,エパン,"katakana: French reading in France, German in Germany"
+erbringen,エルブリンゲン,"katakana: French reading in France, German in Germany"
+erching,エルシャン,"katakana: French reading in France, German in Germany"
+erlenbrunn,エルレンブルン,"katakana: French reading in France, German in Germany"
+ernestviller,エルネストヴィレール,"katakana: French reading in France, German in Germany"
+erstroff,エルストロフ,"katakana: French reading in France, German in Germany"
+eschbourg,エシュブール,"katakana: French reading in France, German in Germany"
+eschviller,エシュヴィレール,"katakana: French reading in France, German in Germany"
+eschwiller,エシュヴィレール,"katakana: French reading in France, German in Germany"
+etting,エタン,"katakana: French reading in France, German in Germany"
+etzling,エツラン,"katakana: French reading in France, German in Germany"
+evendorf,エヴァンドルフ,"katakana: French reading in France, German in Germany"
+eyviller,エイヴィレール,"katakana: French reading in France, German in Germany"
+falck,ファルク,"katakana: French reading in France, German in Germany"
+falkenstein-baerenthal,ファルケンシュタイン,"katakana: French reading in France, German in Germany"
+farebersviller,ファレベルスヴィレール,"katakana: French reading in France, German in Germany"
+farschviller,ファルシュヴィレール,"katakana: French reading in France, German in Germany"
+fechingen,フェヒンゲン,"katakana: French reading in France, German in Germany"
+felsberg,フェルスベルク,"katakana: French reading in France, German in Germany"
+ferange,フェランジュ,"katakana: French reading in France, German in Germany"
+fi-eisheim,フレスエム,"katakana: French reading in France, German in Germany"
+fickingen,ザールフェルス,"katakana: French reading in France, German in Germany"
+fiirst,フュルスト,"katakana: French reading in France, German in Germany"
+filstroff,フィルストロフ,"katakana: French reading in France, German in Germany"
+fischbach,フィッシュバッハ,"katakana: French reading in France, German in Germany"
+fitten,フィッテン,"katakana: French reading in France, German in Germany"
+flasgarten,フラスガルタン,"katakana: French reading in France, German in Germany"
+flastroff,フラストロフ,"katakana: French reading in France, German in Germany"
+flatten,フラタン,"katakana: French reading in France, German in Germany"
+fletrange,フレトランジュ,"katakana: French reading in France, German in Germany"
+fliessborn,フリースボルン,"katakana: French reading in France, German in Germany"
+folkling,フォルクラン,"katakana: French reading in France, German in Germany"
+folpersviller,フォルペルスヴィレール,"katakana: French reading in France, German in Germany"
+folschviller,フォルシュヴィレール,"katakana: French reading in France, German in Germany"
+forweiler,フォーアヴァイラー,"katakana: French reading in France, German in Germany"
+fossieux,フォシュー,"katakana: French reading in France, German in Germany"
+foulcrey,フルクレ,"katakana: French reading in France, German in Germany"
+fouligny,フリニー,"katakana: French reading in France, German in Germany"
+francaltroff,フランカルトロフ,"katakana: French reading in France, German in Germany"
+fraquelfing,フラケルファン,"katakana: French reading in France, German in Germany"
+frauenberg,フローアンベール,"katakana: French reading in France, German in Germany"
+fraulautern,フラウラウテルン,"katakana: French reading in France, German in Germany"
+freching,フレシャン,"katakana: French reading in France, German in Germany"
+frecourt,フレクール,"katakana: French reading in France, German in Germany"
+freisen,フライゼン,"katakana: French reading in France, German in Germany"
+freistroff,フレストロフ,"katakana: French reading in France, German in Germany"
+fremersdorf,フレマースドルフ,"katakana: French reading in France, German in Germany"
+fremestroff,フレメストロフ,"katakana: French reading in France, German in Germany"
+freybouse,フレイブス,"katakana: French reading in France, German in Germany"
+fribourg,フリブール,"katakana: French reading in France, German in Germany"
+frohmuhl,フロミュール,"katakana: French reading in France, German in Germany"
+furschweiler,フルシュヴァイラー,"katakana: French reading in France, German in Germany"
+furweiler,フューアヴァイラー,"katakana: French reading in France, German in Germany"
+gandren,ガンドラン,"katakana: French reading in France, German in Germany"
+garrebourg,ガルブール,"katakana: French reading in France, German in Germany"
+gauhiving,ゴビヴァン,"katakana: French reading in France, German in Germany"
+gaweistroff,ガヴェストロフ,"katakana: French reading in France, German in Germany"
+gelucourt,ジェリュクール,"katakana: French reading in France, German in Germany"
+gennweiler,ゲンヴァイラー,"katakana: French reading in France, German in Germany"
+gentersberg,ジャンテルスベール,"katakana: French reading in France, German in Germany"
+gering,ジェラン,"katakana: French reading in France, German in Germany"
+gerlfangen,ゲルルファンゲン,"katakana: French reading in France, German in Germany"
+gershach,ゲルスバッハ,"katakana: French reading in France, German in Germany"
+giidesweiler,ギューデスヴァイラー,"katakana: French reading in France, German in Germany"
+gisingen,ギージンゲン,"katakana: French reading in France, German in Germany"
+givricourt,ジヴリクール,"katakana: French reading in France, German in Germany"
+goerlingen-drulingen,ゲルランジャン,"katakana: French reading in France, German in Germany"
+goldhach,ゴルトバッハ,"katakana: French reading in France, German in Germany"
+gomelange,ゴムランジュ,"katakana: French reading in France, German in Germany"
+gondrexange,ゴンドレクサンジュ,"katakana: French reading in France, German in Germany"
+gongelfang,ゴンジェルファン,"katakana: French reading in France, German in Germany"
+gonnesweiler,ゴネスヴァイラー,"katakana: French reading in France, German in Germany"
+gosselming,ゴセルマン,"katakana: French reading in France, German in Germany"
+graefinthal,グレーフィンタール,"katakana: French reading in France, German in Germany"
+graufthal,グラウフタール,"katakana: French reading in France, German in Germany"
+grening,グレナン,"katakana: French reading in France, German in Germany"
+gresaubach,グレーザウバッハ,"katakana: French reading in France, German in Germany"
+grindorf,グランドルフ,"katakana: French reading in France, German in Germany"
+gronig,グローニヒ,"katakana: French reading in France, German in Germany"
+grosbliederstroff,グロブリデルストロフ,"katakana: French reading in France, German in Germany"
+grosrederching,グロレデルシャン,"katakana: French reading in France, German in Germany"
+grosshemmersdorf,グロースヘマースドルフ,"katakana: French reading in France, German in Germany"
+grostenquin,グロタンカン,"katakana: French reading in France, German in Germany"
+grundviller,グランヴィレール,"katakana: French reading in France, German in Germany"
+gudingen,ギューディンゲン,"katakana: French reading in France, German in Germany"
+guebenhouse,ゲベヌーズ,"katakana: French reading in France, German in Germany"
+guebestroff,ゲベストロフ,"katakana: French reading in France, German in Germany"
+gueblange-dieuze,ゲブランジュ,"katakana: French reading in France, German in Germany"
+guebling,ゲブラン,"katakana: French reading in France, German in Germany"
+guelange,ゲランジュ,"katakana: French reading in France, German in Germany"
+guenestroff,ゲネストロフ,"katakana: French reading in France, German in Germany"
+guenviller,ゲンヴィレール,"katakana: French reading in France, German in Germany"
+guerniange,ゲルマンジュ,"katakana: French reading in France, German in Germany"
+gueroldseck,ゲロルトゼック,"katakana: French reading in France, German in Germany"
+guerstling,ゲルストラン,"katakana: French reading in France, German in Germany"
+guerting,ゲルタン,"katakana: French reading in France, German in Germany"
+guessling,ゲスラン,"katakana: French reading in France, German in Germany"
+guiching,ギシャン,"katakana: French reading in France, German in Germany"
+guinglange,ガングランジュ,"katakana: French reading in France, German in Germany"
+guinkirchen,ガンキルシュ,"katakana: French reading in France, German in Germany"
+guinzeling,ガンズラン,"katakana: French reading in France, German in Germany"
+guirlange,ギルランジュ,"katakana: French reading in France, German in Germany"
+guising,ギザン,"katakana: French reading in France, German in Germany"
+gungviller,ガンクヴィレール,"katakana: French reading in France, German in Germany"
+guntzviller,ガンツヴィレール,"katakana: French reading in France, German in Germany"
+habkirchen,ハープキルヒェン,"katakana: French reading in France, German in Germany"
+haboudange,アブダンジュ,"katakana: French reading in France, German in Germany"
+hackenberg,アッケンベール,"katakana: French reading in France, German in Germany"
+hahn,ハーン,"katakana: French reading in France, German in Germany"
+halling,アラン,"katakana: French reading in France, German in Germany"
+halstroff,アルストロフ,"katakana: French reading in France, German in Germany"
+ham,アム,"katakana: French reading in France, German in Germany"
+hambach,アンバック,"katakana: French reading in France, German in Germany"
+hanfgarten,アンフガルタン,"katakana: French reading in France, German in Germany"
+hangviller,アングヴィレール,"katakana: French reading in France, German in Germany"
+hanviller,アンヴィレール,"katakana: French reading in France, German in Germany"
+hanweiler,ハンヴァイラー,"katakana: French reading in France, German in Germany"
+haraucourt-sur-seille,アロークール＝シュル＝セイユ,"katakana: French reading in France, German in Germany"
+hargarten-aux-mines,アルガルテン＝オ＝ミーヌ,"katakana: French reading in France, German in Germany"
+hargarten-beckingen,ハルガルテン,"katakana: French reading in France, German in Germany"
+hargarten-laumesfeld,アルガルタン,"katakana: French reading in France, German in Germany"
+harlingen,ハルリンゲン,"katakana: French reading in France, German in Germany"
+harprich,アルプリシュ,"katakana: French reading in France, German in Germany"
+harreberg,アルベール,"katakana: French reading in France, German in Germany"
+harskirchen,アルスキルシュ,"katakana: French reading in France, German in Germany"
+hasenholtz,アザンホルツ,"katakana: French reading in France, German in Germany"
+haspelschiedt,アスペルシード,"katakana: French reading in France, German in Germany"
+hastroff,アストロフ,"katakana: French reading in France, German in Germany"
+hattigny,アティニー,"katakana: French reading in France, German in Germany"
+haupersweiler,ハウパースヴァイラー,"katakana: French reading in France, German in Germany"
+haustatt,ハウスタット,"katakana: French reading in France, German in Germany"
+haut-clocher,オー＝クロシェ,"katakana: French reading in France, German in Germany"
+haute-contz,オート＝コンツ,"katakana: French reading in France, German in Germany"
+haute-seille,オート＝セイユ,"katakana: French reading in France, German in Germany"
+haute-sierck,オート＝シエルク,"katakana: French reading in France, German in Germany"
+haute-vigneulles,オート＝ヴィニュル,"katakana: French reading in France, German in Germany"
+haute-yutz,オート＝ユッツ,"katakana: French reading in France, German in Germany"
+hazelbourg,アゼルブール,"katakana: French reading in France, German in Germany"
+hazembourg,アザンブール,"katakana: French reading in France, German in Germany"
+heckenransbach,エケンランスバック,"katakana: French reading in France, German in Germany"
+heckling,エクラン,"katakana: French reading in France, German in Germany"
+heining,エナン,"katakana: French reading in France, German in Germany"
+helfedange,エルフダンジュ,"katakana: French reading in France, German in Germany"
+hellendorf,ヘレンドルフ,"katakana: French reading in France, German in Germany"
+hellering-fenetrange,エレラン,"katakana: French reading in France, German in Germany"
+hellering-hombourg-haut,エレラン,"katakana: French reading in France, German in Germany"
+hellimer,エリメール,"katakana: French reading in France, German in Germany"
+helling,エラン,"katakana: French reading in France, German in Germany"
+helstroff,エルストロフ,"katakana: French reading in France, German in Germany"
+hemering,エムラン,"katakana: French reading in France, German in Germany"
+hemilly,エミリー,"katakana: French reading in France, German in Germany"
+heming,エマン,"katakana: French reading in France, German in Germany"
+henridorf,アンリドルフ,"katakana: French reading in France, German in Germany"
+henriville,アンリヴィル,"katakana: French reading in France, German in Germany"
+henselhofen,ヘンゼルホーフェン,"katakana: French reading in France, German in Germany"
+herange,エランジュ,"katakana: French reading in France, German in Germany"
+herbitzheim,エルビッツェム,"katakana: French reading in France, German in Germany"
+hermelange,エルムランジュ,"katakana: French reading in France, German in Germany"
+herrenstein,エランスタン,"katakana: French reading in France, German in Germany"
+hertzing,エルツァン,"katakana: French reading in France, German in Germany"
+hesse,エッス,"katakana: French reading in France, German in Germany"
+hesser,エセール,"katakana: French reading in France, German in Germany"
+hessling,エスラン,"katakana: French reading in France, German in Germany"
+hiilzweiler,ヒュルツヴァイラー,"katakana: French reading in France, German in Germany"
+hilbesheim,イルベセム,"katakana: French reading in France, German in Germany"
+hilbringen,ヒルブリンゲン,"katakana: French reading in France, German in Germany"
+hilsprich,イルスプリシュ,"katakana: French reading in France, German in Germany"
+himmrod,イムロッド,"katakana: French reading in France, German in Germany"
+hinckange,アンカンジュ,"katakana: French reading in France, German in Germany"
+hinsbourg,アンスブール,"katakana: French reading in France, German in Germany"
+hinsing,アンサン,"katakana: French reading in France, German in Germany"
+hinsingen,アンザンジャン,"katakana: French reading in France, German in Germany"
+hirbach,イルバック,"katakana: French reading in France, German in Germany"
+hirschland,イルシュラン,"katakana: French reading in France, German in Germany"
+hobling,オブラン,"katakana: French reading in France, German in Germany"
+hochweyersberg,ホーホヴァイヤースベルク,"katakana: French reading in France, German in Germany"
+hoff,オフ,"katakana: French reading in France, German in Germany"
+holbach-lachambre,オルバック,"katakana: French reading in France, German in Germany"
+holbach-siersthal,オルバック,"katakana: French reading in France, German in Germany"
+holling,オラン,"katakana: French reading in France, German in Germany"
+holving,オルヴァン,"katakana: French reading in France, German in Germany"
+hombourg-sur-canner,オンブール＝シュル＝カネール,"katakana: French reading in France, German in Germany"
+hommarting,オマルタン,"katakana: French reading in France, German in Germany"
+hommert,オメール,"katakana: French reading in France, German in Germany"
+honnert,オネール,"katakana: French reading in France, German in Germany"
+honskirch,オンスキルシュ,"katakana: French reading in France, German in Germany"
+hoppstetten,ホップシュテッテン,"katakana: French reading in France, German in Germany"
+hoste,オスト,"katakana: French reading in France, German in Germany"
+hottviller,オットヴィレール,"katakana: French reading in France, German in Germany"
+hultehouse,ユルトゥーズ,"katakana: French reading in France, German in Germany"
+hundling,アンドラン,"katakana: French reading in France, German in Germany"
+hunting,アンタン,"katakana: French reading in France, German in Germany"
+hunweiler,フンヴァイラー,"katakana: French reading in France, German in Germany"
+huttersdorf,ヒュッタースドルフ,"katakana: French reading in France, German in Germany"
+hutting,ユタン,"katakana: French reading in France, German in Germany"
+ibigny,イビニー,"katakana: French reading in France, German in Germany"
+ibring,イブラン,"katakana: French reading in France, German in Germany"
+ihn,イーン,"katakana: French reading in France, German in Germany"
+illange,イランジュ,"katakana: French reading in France, German in Germany"
+imling,イムラン,"katakana: French reading in France, German in Germany"
+imsbach,イムスバッハ,"katakana: French reading in France, German in Germany"
+imshach,イムスバッハ,"katakana: French reading in France, German in Germany"
+imweiler,イムヴァイラー,"katakana: French reading in France, German in Germany"
+ingling,アングラン,"katakana: French reading in France, German in Germany"
+insviller,アンスヴィレール,"katakana: French reading in France, German in Germany"
+ippling,イプラン,"katakana: French reading in France, German in Germany"
+ischen,イシャン,"katakana: French reading in France, German in Germany"
+ising,イザン,"katakana: French reading in France, German in Germany"
+ittersdorf,イッタースドルフ,"katakana: French reading in France, German in Germany"
+itzbach,イッツバッハ,"katakana: French reading in France, German in Germany"
+jabach,ヤーバッハ,"katakana: French reading in France, German in Germany"
+johannesviller,ジョアネスヴィレール,"katakana: French reading in France, German in Germany"
+juvelize,ジュヴリーズ,"katakana: French reading in France, German in Germany"
+juville,ジュヴィル,"katakana: French reading in France, German in Germany"
+kaisen,カイゼン,"katakana: French reading in France, German in Germany"
+kalhouse,カルーズ,"katakana: French reading in France, German in Germany"
+kaltenhausen,カルテンハウゼン,"katakana: French reading in France, German in Germany"
+kaltweiler,カルトヴァイレール,"katakana: French reading in France, German in Germany"
+kappelkinger,カペルカンジェ,"katakana: French reading in France, German in Germany"
+kastel,カステル,"katakana: French reading in France, German in Germany"
+kemplich,ケンプリシュ,"katakana: French reading in France, German in Germany"
+kerbach,ケルバック,"katakana: French reading in France, German in Germany"
+kerling,ケルラン,"katakana: French reading in France, German in Germany"
+kerlingen,ケルリンゲン,"katakana: French reading in France, German in Germany"
+kerprich,ケルプリシュ,"katakana: French reading in France, German in Germany"
+kerprich-aux-bois,ケルプリシュ＝オ＝ボワ,"katakana: French reading in France, German in Germany"
+kerprich-hemmersdorf,ケルプリヒ＝ヘマースドルフ,"katakana: French reading in France, German in Germany"
+keskastel,ケスカステル,"katakana: French reading in France, German in Germany"
+ketternostern,ケッテルノステルン,"katakana: French reading in France, German in Germany"
+keuchingen,コイヒンゲン,"katakana: French reading in France, German in Germany"
+kirberg,キルベール,"katakana: French reading in France, German in Germany"
+kirsch-luttange,キルシュ,"katakana: French reading in France, German in Germany"
+kirsch-sierck,キルシュ＝レ＝シエルク,"katakana: French reading in France, German in Germany"
+kirschnaumen,キルシュノーマン,"katakana: French reading in France, German in Germany"
+kirviller,キルヴィレール,"katakana: French reading in France, German in Germany"
+kitzing,キツァン,"katakana: French reading in France, German in Germany"
+klang,クラン,"katakana: French reading in France, German in Germany"
+kleind-hal,クランダル,"katakana: French reading in France, German in Germany"
+knorscheid,クノルシャイト,"katakana: French reading in France, German in Germany"
+koenigsberg,ケーニヒスベール,"katakana: French reading in France, German in Germany"
+koenigsmacker,ケニグスマケール,"katakana: French reading in France, German in Germany"
+kollig,コリヒ,"katakana: French reading in France, German in Germany"
+korprich,コルプリヒ,"katakana: French reading in France, German in Germany"
+kostenbach,コステンバッハ,"katakana: French reading in France, German in Germany"
+kottendorf,コタンドルフ,"katakana: French reading in France, German in Germany"
+kraffthel,クラフテル,"katakana: French reading in France, German in Germany"
+kraftal,クラフタル,"katakana: French reading in France, German in Germany"
+kriigelborn,クリューゲルボルン,"katakana: French reading in France, German in Germany"
+kuntzig,クンツィグ,"katakana: French reading in France, German in Germany"
+kutzhof,クッツホーフ,"katakana: French reading in France, German in Germany"
+l-hopital,ロピタル,"katakana: French reading in France, German in Germany"
+l-renzen,ロランザン,"katakana: French reading in France, German in Germany"
+la-fresne,ラ・フレーヌ,"katakana: French reading in France, German in Germany"
+labach,ラーバッハ,"katakana: French reading in France, German in Germany"
+labruck,ラブリュック,"katakana: French reading in France, German in Germany"
+lachambre,ラシャンブル,"katakana: French reading in France, German in Germany"
+lacroix,ラクロワ,"katakana: French reading in France, German in Germany"
+lafrimbolle,ラフランボル,"katakana: French reading in France, German in Germany"
+lagarde,ラガルド,"katakana: French reading in France, German in Germany"
+lambach,ランバック,"katakana: French reading in France, German in Germany"
+landange,ランダンジュ,"katakana: French reading in France, German in Germany"
+landonvillers,ランドンヴィレール,"katakana: French reading in France, German in Germany"
+landroff,ランドロフ,"katakana: French reading in France, German in Germany"
+landsweiler,ランツヴァイラー,"katakana: French reading in France, German in Germany"
+laneuveville,ラヌーヴヴィル,"katakana: French reading in France, German in Germany"
+langatte,ランガット,"katakana: French reading in France, German in Germany"
+languimberg,ランガンベール,"katakana: French reading in France, German in Germany"
+laning,ラナン,"katakana: French reading in France, German in Germany"
+laudrefang,ロードルファン,"katakana: French reading in France, German in Germany"
+laumesfeld,ロームスフェルド,"katakana: French reading in France, German in Germany"
+launstroff,ローンストロフ,"katakana: French reading in France, German in Germany"
+leidingen,ライディンゲン,"katakana: French reading in France, German in Germany"
+lelling,レラン,"katakana: French reading in France, German in Germany"
+lemberg-bitche,ランベール,"katakana: French reading in France, German in Germany"
+lemestroff,レメストロフ,"katakana: French reading in France, German in Germany"
+lemoncourt,ルモンクール,"katakana: French reading in France, German in Germany"
+lengelsheim,ランジェルセム,"katakana: French reading in France, German in Germany"
+lening,レナン,"katakana: French reading in France, German in Germany"
+les-etangs,レゼタン,"katakana: French reading in France, German in Germany"
+ley,レ,"katakana: French reading in France, German in Germany"
+leyviller,レイヴィレール,"katakana: French reading in France, German in Germany"
+lezey,ルゼ,"katakana: French reading in France, German in Germany"
+lidrequin,リドルカン,"katakana: French reading in France, German in Germany"
+lidrezing,リドルザン,"katakana: French reading in France, German in Germany"
+liederschiedt,リーデルシード,"katakana: French reading in France, German in Germany"
+liesstertal,リースタータール,"katakana: French reading in France, German in Germany"
+limbach,リンバッハ,"katakana: French reading in France, German in Germany"
+linden,リンデン,"katakana: French reading in France, German in Germany"
+lindre-haute-et-basse,オート＝ランドル,"katakana: French reading in France, German in Germany"
+lindscheid,リントシャイト,"katakana: French reading in France, German in Germany"
+lisdorf,リスドルフ,"katakana: French reading in France, German in Germany"
+lixing-rouhling,リクサン,"katakana: French reading in France, German in Germany"
+lixing-saint-avold,リクサン＝レ＝サンタヴォル,"katakana: French reading in France, German in Germany"
+lohr-la-petite-pierre,ロール,"katakana: French reading in France, German in Germany"
+lohr-munster,ロール,"katakana: French reading in France, German in Germany"
+longeville,ロンジュヴィル,"katakana: French reading in France, German in Germany"
+lorquin,ロルカン,"katakana: French reading in France, German in Germany"
+lostroff,ロストロフ,"katakana: French reading in France, German in Germany"
+loudrefing,ルドルファン,"katakana: French reading in France, German in Germany"
+loupershouse,ルペルスーズ,"katakana: French reading in France, German in Germany"
+loutremange,ルトルマンジュ,"katakana: French reading in France, German in Germany"
+loutzviller,ルツヴィレール,"katakana: French reading in France, German in Germany"
+lutzelbourg,リュッツェルブール,"katakana: French reading in France, German in Germany"
+lutzelhardt,リュッツェルアルト,"katakana: French reading in France, German in Germany"
+macker,マケール,"katakana: French reading in France, German in Germany"
+mackviller,マクヴィレール,"katakana: French reading in France, German in Germany"
+mailing,マラン,"katakana: French reading in France, German in Germany"
+mainvillers,マンヴィレール,"katakana: French reading in France, German in Germany"
+maizieres,メジエール,"katakana: French reading in France, German in Germany"
+malaucourt,マロクール,"katakana: French reading in France, German in Germany"
+mancy,マンシー,"katakana: French reading in France, German in Germany"
+manderen,マンドラン,"katakana: French reading in France, German in Germany"
+manhoue,マヌエ,"katakana: French reading in France, German in Germany"
+many,マニー,"katakana: French reading in France, German in Germany"
+maquenom,マクノム,"katakana: French reading in France, German in Germany"
+marange,マランジュ,"katakana: French reading in France, German in Germany"
+marienfloss,マリエンフロス,"katakana: French reading in France, German in Germany"
+marienthal,マリエンタール,"katakana: French reading in France, German in Germany"
+marimont,マリモン,"katakana: French reading in France, German in Germany"
+marthille,マルティーユ,"katakana: French reading in France, German in Germany"
+maxstadt,マクスタット,"katakana: French reading in France, German in Germany"
+mechern,メッヒェルン,"katakana: French reading in France, German in Germany"
+megange,メガンジュ,"katakana: French reading in France, German in Germany"
+meilherg,メルベール,"katakana: French reading in France, German in Germany"
+meinsberg,マンスベール,"katakana: French reading in France, German in Germany"
+melkerhof,メルカーホーフ,"katakana: French reading in France, German in Germany"
+menningen,メニンゲン,"katakana: French reading in France, German in Germany"
+menskirch,メンスキルシュ,"katakana: French reading in France, German in Germany"
+merchingen,メルヒンゲン,"katakana: French reading in France, German in Germany"
+merlebach,メルルバック,"katakana: French reading in France, German in Germany"
+merten,メルタン,"katakana: French reading in France, German in Germany"
+metrich,メトリシュ,"katakana: French reading in France, German in Germany"
+metring,メトラン,"katakana: French reading in France, German in Germany"
+metting,メタン,"katakana: French reading in France, German in Germany"
+mettnich,メトニヒ,"katakana: French reading in France, German in Germany"
+metzeresche,メッツェレッシュ,"katakana: French reading in France, German in Germany"
+metzervisse,メッツェルヴィッス,"katakana: French reading in France, German in Germany"
+metzing-elvange,ミンツィンゲン,"katakana: French reading in France, German in Germany"
+metzing-forbach,メッツァン,"katakana: French reading in France, German in Germany"
+mittelbollenbach,ミッテルボレンバッハ,"katakana: French reading in France, German in Germany"
+mittelbronn,ミテルブロン,"katakana: French reading in France, German in Germany"
+mittersheim,ミテルセム,"katakana: French reading in France, German in Germany"
+momerstroff,モメルストロフ,"katakana: French reading in France, German in Germany"
+monclair,モンクレール,"katakana: French reading in France, German in Germany"
+moncourt,モンクール,"katakana: French reading in France, German in Germany"
+mondorf,モンドルフ,"katakana: French reading in France, German in Germany"
+monneren,モヌラン,"katakana: French reading in France, German in Germany"
+montbronn,モンブロン,"katakana: French reading in France, German in Germany"
+montdidier,モンディディエ,"katakana: French reading in France, German in Germany"
+montenach,モントナック,"katakana: French reading in France, German in Germany"
+montrequienne,モンルキエンヌ,"katakana: French reading in France, German in Germany"
+morlange,モルランジュ,"katakana: French reading in France, German in Germany"
+morsbach,モルスバック,"katakana: French reading in France, German in Germany"
+morsbronn,モルスブロン,"katakana: French reading in France, German in Germany"
+morville,モルヴィル,"katakana: French reading in France, German in Germany"
+moussey,ムセ,"katakana: French reading in France, German in Germany"
+mouterhouse,ムテルーズ,"katakana: French reading in France, German in Germany"
+moyenvic,モワイヤンヴィック,"katakana: French reading in France, German in Germany"
+mulcey,ミュルセ,"katakana: French reading in France, German in Germany"
+munchweiler,ミュンヒヴァイラー,"katakana: French reading in France, German in Germany"
+namborn,ナムボルン,"katakana: French reading in France, German in Germany"
+narbefontaine,ナルベフォンテーヌ,"katakana: French reading in France, German in Germany"
+nebing,ネバン,"katakana: French reading in France, German in Germany"
+neipel,ナイペル,"katakana: French reading in France, German in Germany"
+nelling,ネラン,"katakana: French reading in France, German in Germany"
+nennig,ネニヒ,"katakana: French reading in France, German in Germany"
+neudlange,ヌードランジュ,"katakana: French reading in France, German in Germany"
+neudorf,ヌードルフ,"katakana: French reading in France, German in Germany"
+neufgrange,ヌーフグランジュ,"katakana: French reading in France, German in Germany"
+neufmoulins,ヌフムーラン,"katakana: French reading in France, German in Germany"
+neufvillage,ヌフヴィラージュ,"katakana: French reading in France, German in Germany"
+neunhofen,ヌンオフェン,"katakana: French reading in France, German in Germany"
+neunkirch,ヌンキルシュ,"katakana: French reading in France, German in Germany"
+neunkirchen-bitche,ヌンキルシャン＝レ＝ビッチュ,"katakana: French reading in France, German in Germany"
+neunkirchen-bouzonville,ヌンキルシャン＝レ＝ブーゾンヴィル,"katakana: French reading in France, German in Germany"
+neunkirchen-turkismiihle,ノインキルヒェン,"katakana: French reading in France, German in Germany"
+neuviller,ヌヴィレール,"katakana: French reading in France, German in Germany"
+nidange,ニダンジュ,"katakana: French reading in France, German in Germany"
+nideck,ニデック,"katakana: French reading in France, German in Germany"
+niderhoff,ニデルオフ,"katakana: French reading in France, German in Germany"
+niedaltdorf,ニートアルトドルフ,"katakana: French reading in France, German in Germany"
+niedergailbach,ニーダーガイルバッハ,"katakana: French reading in France, German in Germany"
+niederhofen,ニーダーホーフェン,"katakana: French reading in France, German in Germany"
+niederlostern,ニーダーロステルン,"katakana: French reading in France, German in Germany"
+niedersaubach,ニーダーザウバッハ,"katakana: French reading in France, German in Germany"
+niedersteinhach,ニデルスタンバック,"katakana: French reading in France, German in Germany"
+niederstinzel,ニデルスタンゼル,"katakana: French reading in France, German in Germany"
+niedervisse,ニデルヴィッス,"katakana: French reading in France, German in Germany"
+niedwellingen,ニードヴェラン,"katakana: French reading in France, German in Germany"
+nitting,ニタン,"katakana: French reading in France, German in Germany"
+nohn,ノーン,"katakana: French reading in France, German in Germany"
+nousseviller-les-bitche,ヌスヴィレール＝レ＝ビッチュ,"katakana: French reading in France, German in Germany"
+nousseviller-saint-nabor,ヌスヴィレール,"katakana: French reading in France, German in Germany"
+oberdorf,オベルドルフ,"katakana: French reading in France, German in Germany"
+oberesch,オーバーエッシュ,"katakana: French reading in France, German in Germany"
+obergailbach,オベルガイルバック,"katakana: French reading in France, German in Germany"
+oberleuken,オーバーロイケン,"katakana: French reading in France, German in Germany"
+obernaumen,オベルノーマン,"katakana: French reading in France, German in Germany"
+obersheim,オベルセム,"katakana: French reading in France, German in Germany"
+oberstein,オーバーシュタイン,"katakana: French reading in France, German in Germany"
+oberstinzel,オベルスタンゼル,"katakana: French reading in France, German in Germany"
+obervisse,オベルヴィッス,"katakana: French reading in France, German in Germany"
+obreck,オブレック,"katakana: French reading in France, German in Germany"
+obrick,オブリック,"katakana: French reading in France, German in Germany"
+odenhofen,オダンオフェン,"katakana: French reading in France, German in Germany"
+oermingen,エルマンジャン,"katakana: French reading in France, German in Germany"
+offviller,オフヴィレール,"katakana: French reading in France, German in Germany"
+ohersteinbach,オベルスタンバック,"katakana: French reading in France, German in Germany"
+olferding,オルフェルダン,"katakana: French reading in France, German in Germany"
+ommeray,オムレ,"katakana: French reading in France, German in Germany"
+ormesviller,オルメスヴィレール,"katakana: French reading in France, German in Germany"
+orscholz,オルショルツ,"katakana: French reading in France, German in Germany"
+osenhach,オーゼンバッハ,"katakana: French reading in France, German in Germany"
+ottonville,オトンヴィル,"katakana: French reading in France, German in Germany"
+ottviller,オットヴィレール,"katakana: French reading in France, German in Germany"
+ottweiler-neumunster,ノイミュンスター,"katakana: French reading in France, German in Germany"
+oudrenne,ウドレンヌ,"katakana: French reading in France, German in Germany"
+pachten,パハテン,"katakana: French reading in France, German in Germany"
+penning,ペナン,"katakana: French reading in France, German in Germany"
+perl,ペルル,"katakana: French reading in France, German in Germany"
+petershach,ペテルスバック,"katakana: French reading in France, German in Germany"
+petit-arnsberg,プティ＝アルンスベール,"katakana: French reading in France, German in Germany"
+petit-breistroff,プティ＝ブレストロフ,"katakana: French reading in France, German in Germany"
+petit-ebersviller,プティ＝エベルスヴィレール,"katakana: French reading in France, German in Germany"
+petit-hettange,プティット＝エタンジュ,"katakana: French reading in France, German in Germany"
+petit-rederching,プティ＝レデルシャン,"katakana: French reading in France, German in Germany"
+petit-tenquin,プティ＝タンカン,"katakana: French reading in France, German in Germany"
+petite-rosselle,プティット＝ロセル,"katakana: French reading in France, German in Germany"
+petrange,ペトランジュ,"katakana: French reading in France, German in Germany"
+pettoncourt,ペトンクール,"katakana: French reading in France, German in Germany"
+pevange,ペヴァンジュ,"katakana: French reading in France, German in Germany"
+pfaffenhoffen,パファンオフェン,"katakana: French reading in France, German in Germany"
+pfalzweyer,ファルツヴェイエール,"katakana: French reading in France, German in Germany"
+philippsbourg,フィリップスブール,"katakana: French reading in France, German in Germany"
+piblange,ピブランジュ,"katakana: French reading in France, German in Germany"
+piesbach,ピースバッハ,"katakana: French reading in France, German in Germany"
+plappecourt,プラペクール,"katakana: French reading in France, German in Germany"
+pontigny,ポンティニー,"katakana: French reading in France, German in Germany"
+pontpierre,ポンピエール,"katakana: French reading in France, German in Germany"
+porcelette,ポルスレット,"katakana: French reading in France, German in Germany"
+postroff,ポストロフ,"katakana: French reading in France, German in Germany"
+primsweiler,プリムスヴァイラー,"katakana: French reading in France, German in Germany"
+puberg,ピュベール,"katakana: French reading in France, German in Germany"
+puttigny,ピュティニー,"katakana: French reading in France, German in Germany"
+puzieux,ピュジュー,"katakana: French reading in France, German in Germany"
+racrange,ラクランジュ,"katakana: French reading in France, German in Germany"
+rahling,ララン,"katakana: French reading in France, German in Germany"
+rammelfangen,ラメルファンゲン,"katakana: French reading in France, German in Germany"
+ranschborn,ランシュボルン,"katakana: French reading in France, German in Germany"
+rappweiler,ラップヴァイラー,"katakana: French reading in France, German in Germany"
+rathen,ラーテン,"katakana: French reading in France, German in Germany"
+ratzviller,ラツヴィレール,"katakana: French reading in France, German in Germany"
+raville,ラヴィル,"katakana: French reading in France, German in Germany"
+rech,レッヒ,"katakana: French reading in France, German in Germany"
+rech-ballem,レッヒ,"katakana: French reading in France, German in Germany"
+rech-sarralbe,レック,"katakana: French reading in France, German in Germany"
+rechicourt-la-petite,レシクール＝ラ＝プティット,"katakana: French reading in France, German in Germany"
+reding,レダン,"katakana: French reading in France, German in Germany"
+redlach,レドラック,"katakana: French reading in France, German in Germany"
+rehlingen-sur-moselle,レーリンゲン,"katakana: French reading in France, German in Germany"
+reimsbach,ライムスバッハ,"katakana: French reading in France, German in Germany"
+reinange,レナンジュ,"katakana: French reading in France, German in Germany"
+reinheim,ラインハイム,"katakana: French reading in France, German in Germany"
+reipertswiller,レペルツヴィレール,"katakana: French reading in France, German in Germany"
+reisweiler,ライスヴァイラー,"katakana: French reading in France, German in Germany"
+reitscheid,ライトシャイト,"katakana: French reading in France, German in Germany"
+reitweiler,ライトヴァイラー,"katakana: French reading in France, German in Germany"
+remeldorf,レメルドルフ,"katakana: French reading in France, German in Germany"
+remelfang,レメルファン,"katakana: French reading in France, German in Germany"
+remelfing-sarreguemines,レメルファン,"katakana: French reading in France, German in Germany"
+remelfing-sierck,レメラン,"katakana: French reading in France, German in Germany"
+remering-bouzonville,レメラン＝レ＝ブーゾンヴィル,"katakana: French reading in France, German in Germany"
+remering-puttelange,レメラン,"katakana: French reading in France, German in Germany"
+remsing,レムザン,"katakana: French reading in France, German in Germany"
+rening,レナン,"katakana: French reading in France, German in Germany"
+renting,ランタン,"katakana: French reading in France, German in Germany"
+rettel,レテル,"katakana: French reading in France, German in Germany"
+rexingen,レクサンジャン,"katakana: French reading in France, German in Germany"
+reyersviller,レイエルスヴィレール,"katakana: French reading in France, German in Germany"
+rhodes,ロード,"katakana: French reading in France, German in Germany"
+riche,リッシュ,"katakana: French reading in France, German in Germany"
+richeling,リシュラン,"katakana: French reading in France, German in Germany"
+richeval,リシュヴァル,"katakana: French reading in France, German in Germany"
+ricrange,リクランジュ,"katakana: French reading in France, German in Germany"
+riimmelbach,リュンメルバッハ,"katakana: French reading in France, German in Germany"
+rilchingen,リルヒンゲン,"katakana: French reading in France, German in Germany"
+rimling,リムラン,"katakana: French reading in France, German in Germany"
+rimstroff,リムストロフ,"katakana: French reading in France, German in Germany"
+ripplingen,リップリンゲン,"katakana: French reading in France, German in Germany"
+rissenthal,リッセンタール,"katakana: French reading in France, German in Germany"
+ritzing,リツァン,"katakana: French reading in France, German in Germany"
+rodalbe,ロダルブ,"katakana: French reading in France, German in Germany"
+rode-insviller,ロード,"katakana: French reading in France, German in Germany"
+rode-morhange,ロード,"katakana: French reading in France, German in Germany"
+roden,ローデン,"katakana: French reading in France, German in Germany"
+rodlach,ロドラック,"katakana: French reading in France, German in Germany"
+rohr,ロール,"katakana: French reading in France, German in Germany"
+rohrbach,ロールバック,"katakana: French reading in France, German in Germany"
+rohrbach-la-petite,ロールバック＝ラ＝プティット,"katakana: French reading in France, German in Germany"
+rohrhach,ロールバック＝レ＝ディウーズ,"katakana: French reading in France, German in Germany"
+rolbing,ロルバン,"katakana: French reading in France, German in Germany"
+romelfing,ロメルファン,"katakana: French reading in France, German in Germany"
+roppeviller,ロップヴィレール,"katakana: French reading in France, German in Germany"
+rosbruck,ロスブリュック,"katakana: French reading in France, German in Germany"
+rosteig,ロスタイグ,"katakana: French reading in France, German in Germany"
+roth,ロート,"katakana: French reading in France, German in Germany"
+rouhling,ルーラン,"katakana: French reading in France, German in Germany"
+roupeldange,ルペルダンジュ,"katakana: French reading in France, German in Germany"
+rouviller,ルヴィレール,"katakana: French reading in France, German in Germany"
+ruchling,リュシュラン,"katakana: French reading in France, German in Germany"
+rudling,リュドラン,"katakana: French reading in France, German in Germany"
+rurange-megange,リュランジュ,"katakana: French reading in France, German in Germany"
+rurange-metzervisse,リュランジュ,"katakana: French reading in France, German in Germany"
+rustroff,リュストロフ,"katakana: French reading in France, German in Germany"
+saarwellingen-14,ザールヴェリンゲン,"katakana: French reading in France, German in Germany"
+saint-arnual,ザンクト・アルヌアル,"katakana: French reading in France, German in Germany"
+saint-bernard,サン＝ベルナール,"katakana: French reading in France, German in Germany"
+saint-francois,サン＝フランソワ,"katakana: French reading in France, German in Germany"
+saint-gangolf,ザンクト・ガンゴルフ,"katakana: French reading in France, German in Germany"
+saint-hippolyte-haut-rhin,サン＝ティポリット,"katakana: French reading in France, German in Germany"
+saint-hubert,サン＝テュベール,"katakana: French reading in France, German in Germany"
+saint-jean-de-bassel,サン＝ジャン＝ド＝バセル,"katakana: French reading in France, German in Germany"
+saint-jean-rohrbach,サン＝ジャン＝ロールバック,"katakana: French reading in France, German in Germany"
+saint-louis,サン＝ルイ,"katakana: French reading in France, German in Germany"
+saint-medard,サン＝メダール,"katakana: French reading in France, German in Germany"
+saint-michel,サン＝ミシェル,"katakana: French reading in France, German in Germany"
+saint-sauveur,サン＝ソヴール,"katakana: French reading in France, German in Germany"
+sainte-marguerite,サント＝マルグリット,"katakana: French reading in France, German in Germany"
+sainte-marie,サント＝マリー,"katakana: French reading in France, German in Germany"
+salonnes,サロンヌ,"katakana: French reading in France, German in Germany"
+saltzbronn,サルツブロン,"katakana: French reading in France, German in Germany"
+sarraltroff,サラルトロフ,"katakana: French reading in France, German in Germany"
+sarreinsming,サランスマン,"katakana: French reading in France, German in Germany"
+schalbach,シャルバック,"katakana: French reading in France, German in Germany"
+schellenbach,シェレンバッハ,"katakana: French reading in France, German in Germany"
+scheuern-charleville,ショイエルン,"katakana: French reading in France, German in Germany"
+scheuern-hasborn,ショイエルン,"katakana: French reading in France, German in Germany"
+scheuerwald,ショイエルヴァルト,"katakana: French reading in France, German in Germany"
+schirmeter,シルメテール,"katakana: French reading in France, German in Germany"
+schmalenthal,シュマランタル,"katakana: French reading in France, German in Germany"
+schoenbourg,シェーンブール,"katakana: French reading in France, German in Germany"
+schopperten,ショペルタン,"katakana: French reading in France, German in Germany"
+schorbach,ショルバック,"katakana: French reading in France, German in Germany"
+schreckling,シュレクラン,"katakana: French reading in France, German in Germany"
+schwarzmerter,シュヴァルツメルテール,"katakana: French reading in France, German in Germany"
+schweix-gueblange-les-sarralbe,シュヴェクス,"katakana: French reading in France, German in Germany"
+schwemlingen,シュヴェムリンゲン,"katakana: French reading in France, German in Germany"
+schwerdorf,シュヴェルドルフ,"katakana: French reading in France, German in Germany"
+schweyen,シュヴェイアン,"katakana: French reading in France, German in Germany"
+sehndorf,ゼーンドルフ,"katakana: French reading in France, German in Germany"
+seigneurie-d-elvange,エルヴァンジュ領,"katakana: French reading in France, German in Germany"
+seingbouse,サンブス,"katakana: French reading in France, German in Germany"
+seitzweiler,ザイツヴァイラー,"katakana: French reading in France, German in Germany"
+selbach,ゼルバッハ,"katakana: French reading in France, German in Germany"
+setting,セタン,"katakana: French reading in France, German in Germany"
+siersdorf,ジールスドルフ,"katakana: French reading in France, German in Germany"
+siersthal,シエルスタル,"katakana: French reading in France, German in Germany"
+sieviller,シーヴィレール,"katakana: French reading in France, German in Germany"
+silwingen,ジルヴィンゲン,"katakana: French reading in France, German in Germany"
+silzheim,シルザム,"katakana: French reading in France, German in Germany"
+simten,ジムテン,"katakana: French reading in France, German in Germany"
+sotzeling,ソツラン,"katakana: French reading in France, German in Germany"
+sotzweiler,ゾッツヴァイラー,"katakana: French reading in France, German in Germany"
+stanwenstein,シュタウシュタイン,"katakana: French reading in France, German in Germany"
+stat,シュタット,"katakana: French reading in France, German in Germany"
+steinbach-audviller,スタンバック,"katakana: French reading in France, German in Germany"
+steinbach-eppelborn,シュタインバッハ,"katakana: French reading in France, German in Germany"
+steinbach-vergaville,スタンバック,"katakana: French reading in France, German in Germany"
+steinhausen,シュタインハウゼン,"katakana: French reading in France, German in Germany"
+stoncourt-les-villers,ストンクール,"katakana: French reading in France, German in Germany"
+struth,ストリュト,"katakana: French reading in France, German in Germany"
+stuckange,ステュカンジュ,"katakana: French reading in France, German in Germany"
+sturzelbronn,ストゥルツェルブロン,"katakana: French reading in France, German in Germany"
+suisse,スイス,"katakana: French reading in France, German in Germany"
+tarquimpol,タルカンポル,"katakana: French reading in France, German in Germany"
+tenteling,タントラン,"katakana: French reading in France, German in Germany"
+teterchen,テテルシェン,"katakana: French reading in France, German in Germany"
+teting,テタン,"katakana: French reading in France, German in Germany"
+thal,タル,"katakana: French reading in France, German in Germany"
+thalexweiler,タールエクスヴァイラー,"katakana: French reading in France, German in Germany"
+thalfroschen,タールフレッシェン,"katakana: French reading in France, German in Germany"
+theley,テーライ,"katakana: French reading in France, German in Germany"
+thicourt,ティクール,"katakana: French reading in France, German in Germany"
+tieffenbach,ティーファンバック,"katakana: French reading in France, German in Germany"
+torcheville,トルシュヴィル,"katakana: French reading in France, German in Germany"
+tripoli,トリポリ,"katakana: French reading in France, German in Germany"
+tritteling,トリトラン,"katakana: French reading in France, German in Germany"
+tromborn,トロンボルン,"katakana: French reading in France, German in Germany"
+tunsdorf,テュンスドルフ,"katakana: French reading in France, German in Germany"
+turquestein,テュルクスタン,"katakana: French reading in France, German in Germany"
+uberkinger,ユベルカンジェ,"katakana: French reading in France, German in Germany"
+uchtelfangen,ウフテルファンゲン,"katakana: French reading in France, German in Germany"
+uhrviller,ユルヴィレール,"katakana: French reading in France, German in Germany"
+urbach,ユルバック,"katakana: French reading in France, German in Germany"
+utweiler,ウトヴァイラー,"katakana: French reading in France, German in Germany"
+v-olksherg,ヴォルクスベール,"katakana: French reading in France, German in Germany"
+vahl-dieuze,ヴァル,"katakana: French reading in France, German in Germany"
+vahl-ebersing,ヴァル＝エベルサン,"katakana: French reading in France, German in Germany"
+vahl-faulquemont,ヴァル＝レ＝フォルクモン,"katakana: French reading in France, German in Germany"
+valette,ヴァレット,"katakana: French reading in France, German in Germany"
+vallerange,ヴァルランジュ,"katakana: French reading in France, German in Germany"
+valmont,ヴァルモン,"katakana: French reading in France, German in Germany"
+valmunster,ヴァルマンステール,"katakana: French reading in France, German in Germany"
+vanne-court,ヴァヌクール,"katakana: French reading in France, German in Germany"
+varize,ヴァリーズ,"katakana: French reading in France, German in Germany"
+varsberg,ヴァルスベール,"katakana: French reading in France, German in Germany"
+vatimont,ヴァティモン,"katakana: French reading in France, German in Germany"
+vaudoncourt,ヴォドンクール,"katakana: French reading in France, German in Germany"
+vaudreching,ヴォドルシャン,"katakana: French reading in France, German in Germany"
+veckersviller,ヴェケルスヴィレール,"katakana: French reading in France, German in Germany"
+veckring,ヴェクラン,"katakana: French reading in France, German in Germany"
+velling,ヴェラン,"katakana: French reading in France, German in Germany"
+velving,ヴェルヴァン,"katakana: French reading in France, German in Germany"
+vergaville,ヴェルガヴィル,"katakana: French reading in France, German in Germany"
+veschheim,ヴェシェム,"katakana: French reading in France, German in Germany"
+vibersviller,ヴィベルスヴィレール,"katakana: French reading in France, German in Germany"
+vieux-lixheim,ヴュー＝リクサイム,"katakana: French reading in France, German in Germany"
+viller,ヴィレール,"katakana: French reading in France, German in Germany"
+villers-bettnach,ヴィレール＝ベトナック,"katakana: French reading in France, German in Germany"
+villers-stoncourt,ヴィレール,"katakana: French reading in France, German in Germany"
+villing,ヴィラン,"katakana: French reading in France, German in Germany"
+vilsberg,ヴィルスベール,"katakana: French reading in France, German in Germany"
+virming,ヴィルマン,"katakana: French reading in France, German in Germany"
+vittersbourg,ヴィテルスブール,"katakana: French reading in France, German in Germany"
+vittoncourt,ヴィトンクール,"katakana: French reading in France, German in Germany"
+voellerdingen,フェレルダンジャン,"katakana: French reading in France, German in Germany"
+volkrange,ヴォルクランジュ,"katakana: French reading in France, German in Germany"
+volmunster,ヴォルマンステール,"katakana: French reading in France, German in Germany"
+volstroff,ヴォルストロフ,"katakana: French reading in France, German in Germany"
+voyer,ヴォワイエ,"katakana: French reading in France, German in Germany"
+w-oustviller,ウストヴィレール,"katakana: French reading in France, German in Germany"
+wadgassen,ヴァトガッセン,"katakana: French reading in France, German in Germany"
+wahl-en,ヴァーレン,"katakana: French reading in France, German in Germany"
+waldeck,ヴァルデック,"katakana: French reading in France, German in Germany"
+waldhambach,ヴァルダンバック,"katakana: French reading in France, German in Germany"
+waldhouse,ヴァルドゥーズ,"katakana: French reading in France, German in Germany"
+waldvisse,ヴァルドヴィッス,"katakana: French reading in France, German in Germany"
+waldweistroff,ヴァルドヴェストロフ,"katakana: French reading in France, German in Germany"
+walschbronn,ヴァルシュブロン,"katakana: French reading in France, German in Germany"
+walscheidt,ヴァルシェード,"katakana: French reading in France, German in Germany"
+walsheim,ヴァルスハイム,"katakana: French reading in France, German in Germany"
+wehingen,ヴェーインゲン,"katakana: French reading in France, German in Germany"
+weidesheim,ヴェデセム,"katakana: French reading in France, German in Germany"
+weiersbach-bleiderdingen,ヴァイヤースバッハ,"katakana: French reading in France, German in Germany"
+weiler,ヴァイラー,"katakana: French reading in France, German in Germany"
+weinbourg,ヴァンブール,"katakana: French reading in France, German in Germany"
+weiskirch,ヴェスキルシュ,"katakana: French reading in France, German in Germany"
+weisslingen,ヴェスラン,"katakana: French reading in France, German in Germany"
+welferding,ヴェルフェルダン,"katakana: French reading in France, German in Germany"
+wellingen-hilbringen,ヴェリンゲン,"katakana: French reading in France, German in Germany"
+wentzviller,ヴァンツヴィレール,"katakana: French reading in France, German in Germany"
+werdenstein,ヴェルデンシュタイン,"katakana: French reading in France, German in Germany"
+wetschhausen,ヴェッチュハウゼン,"katakana: French reading in France, German in Germany"
+weyer-drulingen,ヴェイエール,"katakana: French reading in France, German in Germany"
+wies,ヴィース,"katakana: French reading in France, German in Germany"
+wiesbach,ヴィースバッハ,"katakana: French reading in France, German in Germany"
+wiesing,ヴィザン,"katakana: French reading in France, German in Germany"
+wiesviller,ヴィースヴィレール,"katakana: French reading in France, German in Germany"
+willer,ヴィレール,"katakana: French reading in France, German in Germany"
+willerwald,ヴィレルヴァルト,"katakana: French reading in France, German in Germany"
+wimmenau,ヴィムノー,"katakana: French reading in France, German in Germany"
+wingen,ヴァンジャン,"katakana: French reading in France, German in Germany"
+winterbach,ヴィンターバッハ,"katakana: French reading in France, German in Germany"
+wintersbourg,ヴァンテルスブール,"katakana: French reading in France, German in Germany"
+wintrange,ヴァントランジュ,"katakana: French reading in France, German in Germany"
+wintringen,ヴィントリンゲン,"katakana: French reading in France, German in Germany"
+winzeln,ヴィンツェルン,"katakana: French reading in France, German in Germany"
+wittring,ヴィトラン,"katakana: French reading in France, German in Germany"
+wochern,ヴォッヘルン,"katakana: French reading in France, German in Germany"
+woelfling-bouzonville,ヴェルフラン＝レ＝ブーゾンヴィル,"katakana: French reading in France, German in Germany"
+woelfling-sarreguemines,ヴェルフラン,"katakana: French reading in France, German in Germany"
+wolfskirchen,ヴォルフスキルシュ,"katakana: French reading in France, German in Germany"
+wuisse,ヴイッス,"katakana: French reading in France, German in Germany"
+xanrey,クサンレ,"katakana: French reading in France, German in Germany"
+xocourt,クソクール,"katakana: French reading in France, German in Germany"
+xouaxange,クアクサンジュ,"katakana: French reading in France, German in Germany"
+xousse,クース,"katakana: French reading in France, German in Germany"
+zarbeling,ザルブラン,"katakana: French reading in France, German in Germany"
+zell,ゼル,"katakana: French reading in France, German in Germany"
+zeurange,ズランジュ,"katakana: French reading in France, German in Germany"
+zilling,ジラン,"katakana: French reading in France, German in Germany"
+zimming,ジマン,"katakana: French reading in France, German in Germany"
+zinzing,ザンザン,"katakana: French reading in France, German in Germany"
+zollingen,ゾランジャン,"katakana: French reading in France, German in Germany"
+zommange,ゾマンジュ,"katakana: French reading in France, German in Germany"
+zondrange,ゾンドランジュ,"katakana: French reading in France, German in Germany"
+abbey-andlau,アンドロー修道院,holder
+abbey-beaupre,ボープレ修道院,holder
+abbey-freistroff,フレストロフ修道院,holder
+abbey-graufthal,グラウフタール修道院,holder
+abbey-haute-seille,オート＝セイユ修道院,holder
+abbey-herbitzheim,エルビッツェム修道院,holder
+abbey-hornbach,ホルンバッハ修道院,holder
+abbey-marmoutier,マルムティエ修道院,holder
+abbey-saint-martin-metz,メスのサン＝マルタン修道院,holder
+abbey-saint-vincent-metz,メスのサン＝ヴァンサン修道院,holder
+abbey-salival,サリヴァル修道院,holder
+abbey-trier-unnamed,トリーアの修道院（名称不明）,holder
+abbey-vergaville,ヴェルガヴィル修道院,holder
+albert-de-bassy,アルベール・ド・バシー,holder
+alexandre-de-braubach,アレクサンダー・フォン・ブラウバッハ,holder
+andre-des-bordes,アンドレ・デ・ボルド,holder
+anne-de-pomeranie,アンナ・フォン・ポンメルン,holder
+anne-madelaine-de-savigny,アンヌ＝マドレーヌ・ド・サヴィニー,holder
+anne-sibille-de-nassau,ナッサウ伯爵夫人アンナ・ジビラ,holder
+antoinette-de-lenoncourt-blainville,アントワネット・ド・ルノンクール＝ブランヴィル,holder
+baron-serainchamp,スランシャン男爵,holder
+barony-fenetrange,フェネトランジュ男爵領,holder
+bernard-de-levenstein,ベルンハルト・フォン・レーヴェンシュタイン,holder
+bertrand-de-conde,ベルトラン・ド・コンデ,holder
+bertrand-de-marimont,ベルトラン・ド・マリモン,holder
+carelle-de-marimont,カレル・ド・マリモン卿,holder
+cathedral-chapter-metz,メス司教座聖堂参事会,holder
+chanoine-de-varsberg,ヴァルスベールの参事会員,holder
+chapter-cathedral-metz,メス司教座聖堂参事会（首席司祭）,holder
+chapter-fenetrange,フェネトランジュ参事会,holder
+chapter-saint-simeon-trier,トリーアのザンクト・ジメオン参事会,holder
+chapter-speyer,シュパイアー司教座聖堂参事会,holder
+chapter-worms,ヴォルムス司教座聖堂参事会,holder
+charles-alexandre-de-croy,シャルル＝アレクサンドル・ド・クロイ,holder
+charles-de-hohenzollern-sigmaringen,カール・フォン・ホーエンツォレルン＝ジグマリンゲン,holder
+charles-emerich,シャルル・エメリック,holder
+charles-ii-de-lorraine,メス司教ロレーヌ枢機卿シャルル2世,holder
+charles-philippe-de-croy,アヴレ侯シャルル＝フィリップ・ド・クロイ,holder
+charterhouse-rettel,レテル修道院（カルトジオ会）,holder
+charterhouse-saint-alban-trier,トリーアのザンクト・アルバン修道院（カルトジオ会）,holder
+chretien-de-savigny,ロンヌ領主クレティアン・ド・サヴィニー,holder
+claude-musiel,クロード・ミュジエル,holder
+commandery-gelucourt,ジェリュクールの騎士団管区長,holder
+commandery-saint-jean-de-bassel,サン＝ジャン＝ド＝バセル騎士団管区,holder
+commandery-saint-jean-gelucourt,ジェリュクールの聖ヨハネ騎士団管区,holder
+community-bettviller,ベットヴィレールの住民,holder
+community-dalem,ダレムの住民,holder
+community-hombourg-haut,オンブール＝オーの共同体と守護領法廷,holder
+community-merzig-saargau,メルツィヒ＝ザールガウ共同統治地の臣民,holder
+community-saint-avold,サンタヴォルの共同体（村長と参審人）,holder
+community-sarreguemines,サルグミーヌの共同体と管区,holder
+comte-de-cratz,クラッツ伯,holder
+comte-de-rechicourt-le-chateau,レシクール＝ル＝シャトー伯,holder
+comtesse-ostfriesland,東フリースラント伯爵夫人,holder
+convent-congregation-notre-dame-dieuze,ディウーズのノートルダム修道会修道院,holder
+convent-vernesviller,ヴェルヌスヴィレール修道院,holder
+county-anholt,アンホルト伯家,holder
+county-daun-oberstein-rechicourt,ダウン＝オーバーシュタイン＝レシクール伯家,holder
+county-hohenlohe-waldenburg,ホーエンローエ＝ヴァルデンブルク伯領,holder
+county-la-petite-pierre,ラ・プティット＝ピエール伯（フェルデンツ）,holder
+county-linange-westerburg,ライニンゲン＝ヴェスターブルク伯領,holder
+county-manderscheid,マンダーシャイト伯領,holder
+county-oberstein-westerburg,オーバーシュタイン＝ヴェスターブルク伯領,holder
+county-sulz,ズルツ伯領,holder
+county-westerburg-rechicourt,ヴェスターブルク＝レシクール伯家,holder
+court-21-echevins-sarrewerden,サールヴェルデン伯領の21人参審人法廷,holder
+court-farschviller,ファルシュヴィレールの法廷,holder
+cratz-de-scharfenstein,シャルフェンシュタイン伯クラッツ,holder
+cure-hestroff,エストロフの主任司祭,holder
+cure-laumesfeld,ロームスフェルドの主任司祭,holder
+dame-de-grumbach,グルムバッハ夫人,holder
+dame-de-lavaux,ラヴォー（ラリュエル）夫人,holder
+daniel-de-conde,ダニエル・ド・コンデ,holder
+diane-de-croy,ディアーヌ・ド・クロイ,holder
+diane-de-dommartin,ディアーヌ・ド・ドンマルタン,holder
+diocese-strasbourg,ストラスブール司教区,holder
+docteur-setterich,ゼッテリヒ博士,holder
+erica-de-merfeld,エリカ・フォン・メルフェルト,holder
+ernest-de-croy,エルネスト・ド・クロイ,holder
+ernest-de-kerpen,エルンスト・フォン・ケルペン,holder
+faust-de-stromberg,ファウスト・フォン・シュトロムベルク,holder
+frederic-steuber,フリードリヒ・シュトイバー・フォン・デュルクハイム,holder
+frederic-v-palatinate,プファルツ選帝侯フリードリヒ5世,holder
+gaillard-capitaine-albestroff,アルベストロフ隊長ガイヤール,holder
+georges-jean-veldenz,ゲオルク・ヨハン1世・フォン・フェルデンツ,holder
+georges-lellich,ゲオルク・レリヒ,holder
+georges-pfaltzel,ゲオルク・プファルツェル,holder
+gerard-rousselot,ジェラール・ルスロ,holder
+godron-duchat,メスの商人ゴドロン・デュシャ,holder
+gruyer-de-dieuze,ディウーズの森林官,holder
+hans-arnet,ザールブリュッケンのハンス・アルネト,holder
+hartmann-seltzer,ハルトマン・ゼルツァー,holder
+heirs-barthel,ディウーズの書記バルテルの財産相続人,holder
+heirs-bruttel,ディウーズの役人ブリュテル卿の相続人,holder
+heirs-houst,ブリュッセルの顧問官ウーストの相続人,holder
+heirs-jacques-villesuryon,ジャック・ド・ヴィルシュリヨンの相続人,holder
+henri-de-deux-ponts-bitche,ハインリヒ・フォン・ツヴァイブリュッケン＝ビッチュ,holder
+henri-de-guise,ギーズ公アンリ,holder
+henri-hessen-de-sponte,アンリ・エッサン・ド・スポント,holder
+henri-i-de-guise,アンリ1世・ド・ロレーヌ＝ギーズ,holder
+henri-schwebel,ツヴァイブリュッケン宰相ハインリヒ・シュヴェーベル,holder
+hospital-metz,メス施療院,holder
+house-bassy,バシー家,holder
+house-bayer-boppart,バイヤー・フォン・ボッパルト家,holder
+house-bellenhausen,ベレンハウゼン家,holder
+house-bertrand-marimont,マリモン領主ベルトラン家,holder
+house-bettendorf,ベッテンドルフ家,holder
+house-bitche,旧ビッシュ伯家,holder
+house-bolender,シエルクのボレンダー家,holder
+house-bracs,ブラック領主家,holder
+house-brandscheit,ブラントシャイト家,holder
+house-braun-schmittberg,ヨハン・ヴォルフ・フォン・シュミットブルク,holder
+house-braunsdorf,ブラウンスドルフ卿,holder
+house-braunshausen,ブラウンスハウゼン家,holder
+house-breder-hohenstein,ブレーダー・フォン・ホーエンシュタイン家,holder
+house-chateau-brehain,シャトー＝ブレアン家,holder
+house-cicignon,ジャン・シシニョンの相続人,holder
+house-coussy,メスのクシー家,holder
+house-crehange-bacourt,クレアンジュ＝バクール男爵家,holder
+house-cronenberg,クローネンベルク家,holder
+house-croy,クロイ家,holder
+house-croy-dommartin,クロイ＝ドンマルタン家,holder
+house-croy-fenetrange,フェネトランジュのクロイ家,holder
+house-custine,キュスティーヌ家,holder
+house-dagstuhl,ダークシュトゥール男爵家,holder
+house-daun,ダウン家,holder
+house-daun-falkenstein,ダウン＝ファルケンシュタイン家,holder
+house-daun-oberstein,ダウン＝オーバーシュタイン家,holder
+house-dern,デルン家,holder
+house-deux-ponts-bitche,ツヴァイブリュッケン＝ビッチュ家,holder
+house-dietz,ディーツ家,holder
+house-du-gaillard,デュ・ガイヤール家,holder
+house-durckheim,デュルクハイム家,holder
+house-eberstein-linange,エーバーシュタイン＝ライニンゲン家,holder
+house-eltz,エルツ家,holder
+house-enethan,エネタン男爵家,holder
+house-fath,ファート家,holder
+house-faust-dalem,ダレムのファウスト卿,holder
+house-felsberg,フェルスベルク家,holder
+house-flersheim,フレルスハイム家,holder
+house-frankenstein,フランケンシュタイン家,holder
+house-furbach,フルバッハ家,holder
+house-gantz,ガンツ家,holder
+house-gentersberg,ゲンタースベルク家,holder
+house-geroldseck,ゲロルトゼック家,holder
+house-guermange,ゲルマンジュ家,holder
+house-hagen,ハーゲン家,holder
+house-hausen,ハウゼン家,holder
+house-havre,アヴレ侯爵夫人,holder
+house-heinsberg-kirschbaum,キルシュバウムと呼ばれるハインスベルク家,holder
+house-hening,エナン家,holder
+house-hepgen,ヘプゲン家,holder
+house-herange,エランジュ家の相続人,holder
+house-honneck,ホネック卿,holder
+house-kallenbach,カレンバッハ家,holder
+house-kessel,ケッセル卿,holder
+house-kestenhausen,ケステンハウゼン家,holder
+house-kirschbaum,キルシュバウム家,holder
+house-klock-saint-wendel,ザンクト・ヴェンデルのクロック家,holder
+house-klopstein,マルサルのクロップシュタイン家,holder
+house-krantz,クランツ家,holder
+house-la-haye,ラ・エ家（ハーゲン、通称ラモット）,holder
+house-landsberg,ランツベルク家,holder
+house-leiningen-dabo,ライニンゲン＝ダークスブルクのライン伯家,holder
+house-leiningen-falkenburg,ライニンゲン＝ファルケンブルク家,holder
+house-leiningen-hartenburg,ライニンゲン＝ハルテンブルク家,holder
+house-linange,ライニンゲン家,holder
+house-linange-westerbourg,ライニンゲン＝ヴェスターブルク家,holder
+house-lutzelbourg,リュッツェルブール家,holder
+house-mansfeld,マンスフェルト家,holder
+house-marcossey,マルコセー家,holder
+house-moers,メールス家,holder
+house-moers-sarrewerden,メールス＝サールヴェルデン家,holder
+house-morbach,モルバッハ家,holder
+house-moulin,ムーラン領主家,holder
+house-musiel,ミュジエル家,holder
+house-ochsenstein,オクセンシュタイン家,holder
+house-raville,ラヴィル伯家,holder
+house-reipoltzkirchen,ライポルツキルヒェン家,holder
+house-rhingrafen,ヴィルト伯・ライン伯家,holder
+house-rhingraves,ライン伯家,holder
+house-rhingraves-grumbach,グルムバッハのライン伯家,holder
+house-rhingraves-wildgraves,ライン伯・ヴィルト伯家,holder
+house-saint-ingbert,ザンクト・イングベルト領主家,holder
+house-saubourel,ソブレル家,holder
+house-schellart,シェラルト家,holder
+house-schmittberg,ブラウン・フォン・シュミットブルク家,holder
+house-schoenberg,ディートリヒ・フォン・シェーンベルク,holder
+house-schonberg,シェーンベルク家,holder
+house-schwarzenburg,シュヴァルツェンブルク伯家,holder
+house-schwebel,シュヴェーベル家,holder
+house-siersberg-dillingen,ジールスベルク＝ディリンゲン家,holder
+house-soetern,ゼーテルン家,holder
+house-steinbach,シュタインバッハ卿,holder
+house-steinkallenfels,シュタインカレンフェルス家,holder
+house-vaudemont,ヴォーデモン家,holder
+house-weis,ヴァイス家,holder
+house-wiltz,ヴィルツ男爵家,holder
+house-zandt,トリーア大司教領の家宰ツァント,holder
+humbert-eberstein,エーバーシュタイン伯ハウプレヒト（フンベルト）,holder
+imperial-chamber-speyer,シュパイアー帝国最高法院,holder
+jacques-de-bade,バーデン辺境伯ヤーコプ,holder
+jacques-de-bassy,ジャック・ド・バシー,holder
+jacques-de-thietry,ラ・ロシエール領主ジャック・ド・ティエトリ,holder
+jean-beilstein,ヨハン・バイルシュタイン,holder
+jean-berg-kesten,トリーアのヨハン・ベルク（通称ケステン）,holder
+jean-de-bassy,ポンピエールのジャン・ド・バシー,holder
+jean-de-beauvau,パンジュ領主ジャン・ド・ボーヴォー,holder
+jean-de-cicignon,隊長ジャン・ド・シシニョン,holder
+jean-de-fenetrange,ジャン・ド・フェネトランジュ,holder
+jean-de-kerpen,イリンゲン領主ヨハン・フォン・ケルペン,holder
+jean-de-schnittel,ジャン・ド・シュニッテル,holder
+jean-de-weis,ジャン・ド・ヴァイス,holder
+jean-frederic-levenstein,ヨハン・フリードリヒ・フォン・レーヴェンシュタイン,holder
+jean-georges-comte-du-rhin,ライン伯ヨハン・ゲオルク,holder
+jean-georges-i-veldenz,ゲオルク・ヨハン1世・フォン・フェルデンツ＝リュッツェルシュタイン,holder
+jean-guillerme,シエルクの村長ジャン・ギユルメ,holder
+jean-henri-schwebel,ヨハン・ハインリヒ・シュヴェーベル,holder
+jean-hohenfels-reipoltskirchen,ヨハン・フォン・ホーエンフェルス＝ライポルツキルヒェン,holder
+jean-ier-de-moers-sarrewerden,ヨハン1世・フォン・メールス＝サールヴェルデン,holder
+jean-ix-morhange,モランジュ伯ヨハン9世,holder
+jean-jacques-ii-eberstein,エーバーシュタイン伯ヨハン・ヤーコプ2世,holder
+jean-nied,シエルクの市民ジャン・ニード,holder
+jean-paul-faust-stromberg,ヨハン・パウル・ファウスト・フォン・シュトロムベルク,holder
+jean-philippe-rhingrave,ライン伯ヨハン・フィリップ,holder
+jean-philippe-varsberg,マインツ参事会員ヨハン・フィリップ・フォン・ヴァルスベルク,holder
+jean-schmisser,ヨハン・シュミッサー,holder
+jean-steuffel,フォルクモンのジャン・シュトイフェル,holder
+jean-streiff-de-lauenstein,ヨハン・シュトライフ・フォン・ラウエンシュタイン,holder
+jean-stumpf,ジンメルンのヨハン・シュトゥンプフ,holder
+jean-wolf-eltz,ヨハン・ヴォルフ・フォン・エルツ,holder
+jean-wolf-metternich,ヨハン・ヴォルフ・フォン・メッテルニヒ,holder
+jost-bechel,ヨスト・ベッヒェル,holder
+jost-bechel-siersberg,ジールスベルクのヨスト・ベッヒェル,holder
+kingdom-france,フランス王国,holder
+landhofmeister-trier,トリーア大司教の宮内長官,holder
+landwein-bockenheimer,ラントヴァイン・フォン・ボッケンハイム,holder
+laurent-mery,ナンシーの商人ロラン・メリー,holder
+le-braconnier,メスのル・ブラコニエ,holder
+le-goullon,メスの商人ル・グロン,holder
+lespingal,メスの両替商レスパンガル卿,holder
+lords-berus,ベルス領主家,holder
+lords-chateau-rouge,シャトー＝ルージュ領主家,holder
+lords-dalem,ダレム領主家,holder
+lords-dillingen,ディリンゲン領主家,holder
+lords-fenetrange,フェネトランジュ領主家,holder
+lords-fontenoy,フォントノワ領主家,holder
+lords-gerbeville,ジェルブヴィル卿,holder
+lords-hilbringen,ヒルブリンゲン領主家,holder
+lords-monclair,モンクレール領主家,holder
+lords-puttelange,ピュトランジュ領主家,holder
+lords-rechicourt,レシクール卿,holder
+lords-wiry,ヴィリー卿,holder
+lordship-phalsbourg,ファルスブール領,holder
+lordship-raville,ラヴィル領,holder
+louis-de-bettainvillers,ルイ・ド・ベタンヴィレール,holder
+louis-de-carelle,ルイ・ド・カレル,holder
+louis-leiningen-westerburg,ルートヴィヒ・フォン・ライニンゲン＝ヴェスターブルク,holder
+marie-claire-de-croy,マリー＝クレール・ド・クロイ,holder
+marquisate-baden,バーデン辺境伯領,holder
+martzloff-de-braubach,マルツォルフ・フォン・ブラウバッハ,holder
+nicolas-collet,ニコラ・コレ,holder
+nicolas-de-pullenoy,ニコラ・ド・ピュルノワ,holder
+nicolas-de-vaudemont,ニコラ・ド・ヴォーデモン＝メルクール,holder
+nicolas-de-weis,ニコラ・ド・ヴァイス,holder
+nicolas-francois-lorraine,ニコラ＝フランソワ・ド・ロレーヌ,holder
+parlement-metz,メス高等法院,holder
+paul-de-salm,パウル・フォン・サルム,holder
+philippe-de-forbach,隊長フィリップ・ド・フォルバック,holder
+philippe-de-vigneulles,フィリップ・ド・ヴィニュル,holder
+philippe-ii-leiningen-rechicourt,フィリップ2世・フォン・ライニンゲン＝リクシンゲン,holder
+philippe-otto-salm,フィリップ・オットー・フォン・サルム,holder
+pierre-de-kallenbach,ペーター・フォン・カレンバッハ,holder
+pierre-ernest-de-crehange,ピエール＝エルネスト・ド・クレアンジュ,holder
+pierre-ernest-i-crehange-bacourt,ピエール＝エルネスト1世・ド・クレアンジュ＝バクール,holder
+pierre-joly,メス国王検事総長ピエール・ジョリ,holder
+primicier-metz,メス大聖堂首席司祭,holder
+priory-insming,アンスマン小修道院,holder
+priory-zell,ゼル小修道院,holder
+remacle-de-bockenheimer,ジールスベルク隊長レマクル・ド・ボッケンハイム,holder
+rene-de-hilbrange,ルネ・ド・ヒルブリンゲン,holder
+rhingrave-frederic,ダウンのライン伯フリードリヒ,holder
+rhingrave-otto,モランジュ領主ライン伯オットー,holder
+rhingraves-kyrbourg,キルブルクのライン伯家,holder
+samson-de-hausen,ザムゾン・フォン・ハウゼン,holder
+schweighard-hunolstein,シュヴァイクハルト・フォン・フノルシュタイン,holder
+sebastien-de-daun,オーバーシュタイン領主ゼバスティアン・フォン・ダウン,holder
+sieur-dahr,アール卿,holder
+sieur-de-cerisy,レムザン領主スリジー卿,holder
+sieur-de-la-haye,ラ・エ卿,holder
+sieur-de-mercy,メルシー卿,holder
+sigismond-wecker-linange-rechicourt,ジギスムント・ヴェッカー・フォン・ライニンゲン＝レシクール・ウント・ダークスブルク,holder
+theodore-bock,シエルクの代官テオドール・ボック,holder
+ulrich-huffnagel,ウルリヒ・フフナーゲル,holder
+university-heidelberg,ハイデルベルク大学,holder
+veuve-weis,ヴァイス未亡人,holder
+widow-jean-morbach,メンスキルシュ領主ジャン・モルバッハの未亡人,holder
+wirich-de-crehange,クレアンジュ男爵ヴィリッヒ,holder
+wolff-de-bettembourg,ルクセンブルクの代官ヴォルフ・ド・ベタンブール,holder
+advocacy-hombourg-saint-avold,オンブール＝サンタヴォル教会守護領,territory without a seat's Japanese name
+bailiwick-episcopal-de-vic,ヴィック司教バイイ管区,territory without a seat's Japanese name
+bailiwick-nancy,ナンシー・バイイ管区,territory without a seat's Japanese name
+ban-albeschau,アルベスショーのバン,territory without a seat's Japanese name
+ban-andernheim,アンデルネムのバン,territory without a seat's Japanese name
+ban-bois-du-warndt,ヴァルントの森のバン,territory without a seat's Japanese name
+ban-bride-les-wuisse,ブリドのバン,territory without a seat's Japanese name
+ban-chaussy,ショシーのバン,territory without a seat's Japanese name
+ban-foret-de-rexing,レクサンの森のバン,territory without a seat's Japanese name
+ban-franchise-de-k-nigsmacker,ケニグスマケールの自由区,territory without a seat's Japanese name
+ban-goerling,ゲルランのバン,territory without a seat's Japanese name
+ban-grossrosseln,グロースロッセルンのバン,territory without a seat's Japanese name
+ban-hersing,エルサンのバン,territory without a seat's Japanese name
+ban-himmelding,ヒンメルダンのバン,territory without a seat's Japanese name
+ban-himmeldingen,ヒンメルディンゲンのバン,territory without a seat's Japanese name
+ban-otzweiler,オッツヴァイラーのバン,territory without a seat's Japanese name
+ban-rotte,ロットのバン,territory without a seat's Japanese name
+ban-saint-pierre,サン＝ピエールのバン,territory without a seat's Japanese name
+ban-val-de-gueblange,ゲブランジュ谷のバン,territory without a seat's Japanese name
+ban-val-de-liepvre,リエーヴル谷のバン,territory without a seat's Japanese name
+ban-val-de-steinbach,シュタインバッハ谷のバン,territory without a seat's Japanese name
+ban-warndt,ヴァルントのバン,territory without a seat's Japanese name
+ban-westrich,ヴェストリヒのバン,territory without a seat's Japanese name
+ban-weyer-les-rahling,ヴェイエールのバン,territory without a seat's Japanese name
+ban-winterhauch,ヴィンターハウホのバン,territory without a seat's Japanese name
+barony-viviers,ヴィヴィエ男爵領,territory without a seat's Japanese name
+castellany-amance,アマンス城代管区,territory without a seat's Japanese name
+castellany-vic,ヴィック城代管区,territory without a seat's Japanese name
+county-blamont,ブラモン伯領,territory without a seat's Japanese name
+county-deux-ponts,ツヴァイブリュッケン公国,territory without a seat's Japanese name
+county-falkenstein,ファルケンシュタイン伯領,territory without a seat's Japanese name
+county-lichtenberg,リヒテンベルク伯領,territory without a seat's Japanese name
+county-nassau-sarrebruck,ナッサウ＝ザールブリュッケン伯領,territory without a seat's Japanese name
+county-petite-pierre,ラ・プティット＝ピエール伯領,territory without a seat's Japanese name
+county-rechicourt-le-chateau,レシクール＝ル＝シャトー伯領,territory without a seat's Japanese name
+court-perl,ペルル裁判区,territory without a seat's Japanese name
+fief-blettange-bousse,ブレタンジュ＝ブッス封土,territory without a seat's Japanese name
+fief-hingsange,アンサンジュ封土,territory without a seat's Japanese name
+lordship-asswiller,アスヴィレール領,territory without a seat's Japanese name
+lordship-bertrange,ベルトランジュ領,territory without a seat's Japanese name
+lordship-bracs,ブラック領,territory without a seat's Japanese name
+lordship-dagstuhl,ダークシュトゥール領,territory without a seat's Japanese name
+lordship-danne-et-quatre-vents,ダンヌ・エ・カトル＝ヴァン領,territory without a seat's Japanese name
+lordship-gueroldseck-les-niederstinzel,ゲロルトゼック＝レ＝ニデルスタンゼル領,territory without a seat's Japanese name
+lordship-hombourg-sur-canner,オンブール＝シュル＝カネール領,territory without a seat's Japanese name
+lordship-imperiale-de-crehange,クレアンジュ帝国領,territory without a seat's Japanese name
+lordship-inglange,アングランジュ領,territory without a seat's Japanese name
+lordship-kingertal,キンガータール領,territory without a seat's Japanese name
+lordship-lemberg-les-pirmasens,レンベルク＝レ＝ピルマゼンス領,territory without a seat's Japanese name
+lordship-lixing-rouhling,リクサン＝ルーラン領,territory without a seat's Japanese name
+lordship-meilberg,メルベール領,territory without a seat's Japanese name
+lordship-puttlingen-saar,ピュットリンゲン領,territory without a seat's Japanese name
+lordship-rechicourt,レシクール伯領,territory without a seat's Japanese name
+lordship-talange,タランジュ領,territory without a seat's Japanese name
+lordship-val-de-nalbach,ナルバッハ谷領,territory without a seat's Japanese name
+lordship-vry-devant-metz,ヴリー領,territory without a seat's Japanese name
+lordship-weinsberg,ヴァインスベルク領,territory without a seat's Japanese name
+marquisate-nomeny,ノメニー侯爵領,territory without a seat's Japanese name
+mayoralty-basse-ham,バス＝アム村長区,territory without a seat's Japanese name
+mayoralty-inferieure-du-saargau-a-schwemlingen,シュヴェムリンゲンのザールガウ下村長区,territory without a seat's Japanese name
+mayoralty-lindre,ランドル村長区,territory without a seat's Japanese name
+mayoralty-superieure-du-saargau-a-hilbringen,ヒルブリンゲンのザールガウ上村長区,territory without a seat's Japanese name
+provostship-amance,アマンス代官区,territory without a seat's Japanese name
+provostship-ketternostern,ケッテルノステルン代官区,territory without a seat's Japanese name
+provostship-remich,レミヒ代官区,territory without a seat's Japanese name
+luttange,リュタンジュ,Wikidata label corrected
+lemberg-pirmasens,レンベルク,Wikidata label corrected

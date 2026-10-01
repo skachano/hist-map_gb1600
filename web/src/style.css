@@ -180,7 +180,6 @@ ol.changes li li { margin-bottom: 6px; }
 #panel dt { font-weight: 600; margin-top: 8px; }
 #panel dd { margin: 2px 0 0; }
 #panel ul { margin: 2px 0; padding-left: 18px; }
-#panel blockquote { margin: 4px 0; color: var(--ink-2); font-style: italic; }
 #panel .close { position: absolute; top: 10px; right: 10px; border: none; font-size: 20px; line-height: 1; }
 .muted, .pages { color: var(--ink-2); }
 .warn { color: var(--critical); }

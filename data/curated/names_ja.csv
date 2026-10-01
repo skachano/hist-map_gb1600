@@ -1,275 +1,1222 @@
 id,name_ja,source
+abbey-andlau,アンドロー修道院,manual
+abbey-beaupre,ボープレ修道院,manual
 abbey-bouzonville,ブーゾンヴィル修道院,manual
 abbey-fraulautern,フラウラウテルン修道院,manual
+abbey-freistroff,フレストロフ修道院,manual
+abbey-graufthal,グラウフタール修道院,manual
+abbey-haute-seille,オート＝セイユ修道院,manual
+abbey-herbitzheim,エルビッツェム修道院,manual
+abbey-hornbach,ホルンバッハ修道院,manual
 abbey-longeville,ロンジュヴィル修道院,manual
+abbey-marmoutier,マルムティエ修道院,manual
 abbey-mettlach,メトラッハ修道院,manual
-abbey-saint-avold,サン＝タヴォル修道院,manual
+abbey-saint-avold,サンタヴォル修道院,manual
+abbey-saint-martin-metz,メスのサン＝マルタン修道院,manual
 abbey-saint-pierre-metz,メス・サン＝ピエール修道院,manual
+abbey-saint-vincent-metz,メスのサン＝ヴァンサン修道院,manual
+abbey-salival,サリヴァル修道院,manual
 abbey-tholey,トーライ修道院,manual
+abbey-trier-unnamed,トリーアの修道院（名称不明）,manual
+abbey-vergaville,ヴェルガヴィル修道院,manual
 abbey-villers-bettnach,ヴィレール＝ベトナッハ修道院,manual
 abbey-wadgassen,ヴァドガッセン修道院,manual
-advocacy-herbitzheim,Herbitzheim 教会守護領,french + type
-advocacy-hombourg-saint-avold,Hombourg-Saint-Avold 教会守護領,french + type
+aboncourt,アボンクール,manual
+abreschviller,アブレシュヴィレール,manual
+achain,アシャン,manual
+achen,アシャン,manual
+ackerbach,アッケルバック,manual
+adamsviller,アダンスヴィレール,manual
+adelange,アドランジュ,manual
+advocacy-herbitzheim,エルビッツェム教会守護領,seat + type
+advocacy-hombourg-saint-avold,オンブール＝サンタヴォル教会守護領,manual
 advocacy-saint-avold,サンタヴォル教会守護領,seat + type
 advocacy-saint-nabor,サン＝ナボール教会守護領,seat + type
+aidling,エドラン,manual
+alaincourt,アランクール,manual
+albert-de-bassy,アルベール・ド・バシー,manual
+alberting,アルベルタン,manual
+albestroff,アルベストロフ,manual
+alexandre-de-braubach,アレクサンダー・フォン・ブラウバッハ,manual
+alling,アラン,manual
+alsting,アルスタン,manual
+alsweiler,アルスヴァイラー,manual
+alteville,アルトヴィル,manual
+altheim,アルトハイム,manual
+althorn,アルトホルン,manual
+altrippe,アルトリップ,manual
+altroff,アルトロフ,manual
+altviller,アルトヴィレール,manual
+altwiller,アルトヴィレール,manual
+alzing,アルザン,manual
+amelecourt,アメレクール,manual
+andre-des-bordes,アンドレ・デ・ボルド,manual
+angviller,アングヴィレール,manual
+anne-de-pomeranie,アンナ・フォン・ポンメルン,manual
+anne-madelaine-de-savigny,アンヌ＝マドレーヌ・ド・サヴィニー,manual
+anne-sibille-de-nassau,ナッサウ伯爵夫人アンナ・ジビラ,manual
+antoinette-de-lenoncourt-blainville,アントワネット・ド・ルノンクール＝ブランヴィル,manual
+anzeling,アンゼリング,manual
+apach,アパック,manual
+arlange,アルランジュ,manual
+arraincourt,アランクール,manual
+arriance,アリアンス,manual
+arzviller,アルツヴィレール,manual
+aschbach,アッシュバッハ,manual
 aspach,アスパッハ,wikidata
+assenoncourt,アスノンクール,manual
 assviller,アススヴィラー,wikidata
+attiloncourt,アティロンクール,manual
+aube,オーブ,manual
+audviller,オードヴィレール,manual
+auersmacher,アウアースマッハー,manual
+aulnois,オルノワ,manual
+aussen,アウセン,manual
 avricourt,アヴリクール,wikidata
+ayol,アイオル,manual
+azoudange,アズダンジュ,manual
+bachem,バッヘム,manual
+bacourt,バクール,manual
 badonviller,バドンヴィレ,wikidata
+baerendorf,ベランドルフ,manual
+baerenthal,ベランタル,manual
 bailiwick-cercle-du-rhin-superieur,上ライン帝国クライス,manual
-bailiwick-episcopal-de-vic,Bailliage épiscopal de Vic バイイ管区,french + type
-bailiwick-nancy,Nancy バイイ管区,french + type
+bailiwick-episcopal-de-vic,ヴィック司教バイイ管区,manual
+bailiwick-nancy,ナンシー・バイイ管区,manual
 bailliage-allemagne,ドイツ・バイイ管区,manual
-ban-albeschau,Albeschau バン,french + type
-ban-andernheim,Andernheim バン,french + type
-ban-bois-du-warndt,Bois du Warndt バン,french + type
-ban-bride-les-wuisse,Bride-lès-Wuisse バン,french + type
-ban-chaussy,Chaussy バン,french + type
-ban-delme,Delme バン,french + type
-ban-foret-de-rexing,Forêt de Rexing バン,french + type
-ban-franchise-de-k-nigsmacker,Franchise de Kœnigsmacker バン,french + type
-ban-goerling,Goerling バン,french + type
-ban-grossrosseln,Grossrosseln バン,french + type
-ban-hersing,Hersing バン,french + type
-ban-himmelding,Himmelding バン,french + type
-ban-himmeldingen,Himmeldingen バン,french + type
-ban-otzweiler,Otzweiler バン,french + type
-ban-petite-rosselle,Petite-Rosselle バン,french + type
-ban-rotte,Rotte バン,french + type
-ban-saint-pierre,Saint-Pierre バン,french + type
-ban-val-de-gueblange,Val de Guéblange バン,french + type
-ban-val-de-liepvre,Val de Lièpvre バン,french + type
-ban-val-de-steinbach,Val de Steinbach バン,french + type
-ban-warndt,Warndt バン,french + type
-ban-weidesheim,Weidesheim バン,french + type
-ban-westrich,Westrich バン,french + type
-ban-weyer-les-rahling,Weyer-lès-Rahling バン,french + type
-ban-winterhauch,Winterhauch バン,french + type
-barony-raville,Raville 男爵領,french + type
+ballering,バルラン,manual
+ballern,バレルン,manual
+bambiderstroff,バンビデルストロフ,manual
+ban-albeschau,アルベスショーのバン,manual
+ban-andernheim,アンデルネムのバン,manual
+ban-bois-du-warndt,ヴァルントの森のバン,manual
+ban-bride-les-wuisse,ブリドのバン,manual
+ban-chaussy,ショシーのバン,manual
+ban-delme,デルムバン,seat + type
+ban-foret-de-rexing,レクサンの森のバン,manual
+ban-franchise-de-k-nigsmacker,ケニグスマケールの自由区,manual
+ban-goerling,ゲルランのバン,manual
+ban-grossrosseln,グロースロッセルンのバン,manual
+ban-hersing,エルサンのバン,manual
+ban-himmelding,ヒンメルダンのバン,manual
+ban-himmeldingen,ヒンメルディンゲンのバン,manual
+ban-otzweiler,オッツヴァイラーのバン,manual
+ban-petite-rosselle,プティット＝ロセルバン,seat + type
+ban-rotte,ロットのバン,manual
+ban-saint-pierre,サン＝ピエールのバン,manual
+ban-val-de-gueblange,ゲブランジュ谷のバン,manual
+ban-val-de-liepvre,リエーヴル谷のバン,manual
+ban-val-de-steinbach,シュタインバッハ谷のバン,manual
+ban-warndt,ヴァルントのバン,manual
+ban-weidesheim,ヴェデセムバン,seat + type
+ban-westrich,ヴェストリヒのバン,manual
+ban-weyer-les-rahling,ヴェイエールのバン,manual
+ban-winterhauch,ヴィンターハウホのバン,manual
+bannay,バネ,manual
+barchain,バルシャン,manual
+baron-serainchamp,スランシャン男爵,manual
+baronville,バロンヴィル,manual
+barony-fenetrange,フェネトランジュ男爵領,manual
+barony-raville,ラヴィル男爵領,seat + type
 barony-saint-georges,サン＝ジョルジュ男爵領,seat + type
-barony-viviers,Viviers 男爵領,french + type
+barony-viviers,ヴィヴィエ男爵領,manual
+barst,バルスト,manual
+basse-contz,バス＝コンツ,manual
+basse-vigneulles,バス＝ヴィニュル,manual
+basse-yutz,バス＝ユッツ,manual
+bassing,バサン,manual
+bathelemont,バトレモン,manual
+baudrecourt,ボドルクール,manual
+bechy,ベシー,manual
+beckerholz,ベケルホルツ,manual
 beckingen,ベッキンゲン,wikidata
+bedersdorf,ベーダースドルフ,manual
+behren,ベラン,manual
+bellange,ベランジュ,manual
+belle-fontaine,ベルフォンテーヌ,manual
+bellmacher,ベルマッハー,manual
+benestroff,ベネストロフ,manual
+bening-harprich,ベナン,manual
+bening-saint-avold,ベナン,manual
+benting,ベンタン,manual
+berange,ベランジュ,manual
+berfang,ベルファン,manual
+berg-drulingen,ベルグ,manual
+berg-nennig,ベルク,manual
+berig,ベリグ,manual
+berling,ベルラン,manual
+bermering,ベルムラン,manual
+bernard-de-levenstein,ベルンハルト・フォン・レーヴェンシュタイン,manual
+berthelming,ベルテルマン,manual
+bertrambois,ベルトランボワ,manual
+bertrand-de-conde,ベルトラン・ド・コンデ,manual
+bertrand-de-marimont,ベルトラン・ド・マリモン,manual
+bertring,ベルトラン,manual
 berus,ベールス,manual
+berviller,ベルヴィレール,manual
+besseringen,ベッセリンゲン,manual
+bestroff,ベストロフ,manual
+bethingen,ベーティンゲン,manual
+bettange,ベタンジュ,manual
+bettelainville,ベトランヴィル,manual
+betthorn,ベットボルン,manual
+betting-saint-avold,ベタン,manual
+betting-waldwisse,ベタン,manual
+betting-zimming,ベタン,manual
+bettingen,ベッティンゲン,manual
+bettling,ベトラン,manual
+bettring,ベトラン,manual
+bettstadt,ベットシュタット,manual
+bettviller-drulingen,ベットヴィレール,manual
+bettviller-rohrbach,ベットヴィレール,manual
+beuren,ボイレン,manual
+beyren,ベラン,manual
+bezange-la-grande,ブザンジュ＝ラ＝グランド,manual
+bezange-la-petite,ブザンジュ＝ラ＝プティット,manual
+bibiche,ビビッシュ,manual
+bibling,ビブラン,manual
+bichelherg,ビシェルベルグ,manual
+bickenholz,ビケンホルツ,manual
+bidestroff,ビデストロフ,manual
+biding,ビダン,manual
+bierfeld,ビーアフェルト,manual
+bietzen,ビーツェン,manual
+biherkirch,ビベルキルシュ,manual
+biibingen,ビューディンゲン,manual
+biischdorf,ビュッシュドルフ,manual
+bilsdorf,ビルスドルフ,manual
+bingen,バンジャン,manual
+bining,ビナン,manual
+bionville,ビオンヴィル,manual
+biringen,ビリンゲン,manual
 bishopric-metz,メス司教領,manual
+bisping,ビスパン,manual
+bissert,ビセール,manual
+bisten-en-lorraine,ビスタン＝アン＝ロレーヌ,manual
+bisten-saar,ビステン,manual
+bistroff-drulingen,ビストロフ,manual
+bistroff-grotesquin,ビストロフ,manual
 bitche,ビッシュ,wikidata
+bizing,ビザン,manual
+blanche-eglise,ブランシュ＝エグリーズ,manual
+bleiderdingen,ブライダーディンゲン,manual
+bletting,ブレタン,manual
+bliesbruck,ブリースブリュック,manual
+blieschweyen,ブリースシュヴァイエン,manual
+bliesebersing,ブリースエベルサン,manual
+bliesen,ブリーゼン,manual
+bliesguersviller,ブリースゲルスヴィレール,manual
+blieshach,ブリースバッハ,manual
+bliesmengen,ブリースメンゲン,manual
+bliesransbach,ブリースランスバッハ,manual
+bockange,ボカンジュ,manual
+boeckweiler,ベックヴァイラー,manual
+boschviller,ボシュヴィレール,manual
 bottenhach,ボッテンバッハ,wikidata
+boucheporn,ブシュポルン,manual
 boulay,ブレ,manual
+bouquenom,ブーケノム,manual
+bourdonnay,ブルドネ,manual
+bourgaltroff,ブルガルトロフ,manual
+bourlioncourt,ブルリオンクール,manual
+bourscheid,ブルシェイド,manual
+bousbach,ブスバック,manual
+bousse,ブッス,manual
+bousseviller,ブスヴィレール,manual
+boustroff,ブストロフ,manual
 bouxwiller,ブクスヴィレール,wikidata
-castellany-albestroff,Albestroff 城代管区,french + type
-castellany-amance,Amance 城代管区,french + type
+bouzonville,ブーゾンヴィル,manual
+brecklange,ブレクランジュ,manual
+brehain,ブレアン,manual
+breidenbach,ブレダンバック,manual
+breistroff-petite,ブレストロフ,manual
+brettnach,ブレトナック,manual
+brouck,ブルック,manual
+brouderdorf,ブルデルドルフ,manual
+brouviller,ブルヴィレール,manual
+bru,ブリュ,manual
+brulange,ブリュランジュ,manual
+bubach-calmesweiler,ブーバッハ,manual
+buchingen,ブッヒンゲン,manual
+budange,ビュダンジュ,manual
+buding,ビュダン,manual
+budling,ビュドラン,manual
+buhl-lorraine,ビュール,manual
+buprich,ブープリヒ,manual
+burbach,ビュルバック,manual
+buren,ビューレン,manual
+burgalben,ブルクアルベン,manual
+burgesch,ビュルゲッシュ,manual
+burtoncourt,ビュルトンクール,manual
+busbach,ビュスバック,manual
+buschdorf,ビュッシュドルフ,manual
+busenacker,ビュズナケール,manual
+bust,ビュスト,manual
+butten,ビュテン,manual
+buweiler,ブーヴァイラー,manual
+cadenbronn,カダンブロン,manual
+calembourg,カランブール,manual
+calmesweiler,カルメスヴァイラー,manual
+cappel,カペル,manual
+carelle-de-marimont,カレル・ド・マリモン卿,manual
+castellany-albestroff,アルベストロフ城代管区,seat + type
+castellany-amance,アマンス城代管区,manual
 castellany-dieuze,デューズ城代管区,manual
-castellany-fribourg,Fribourg 城代管区,french + type
-castellany-haboudange,Haboudange 城代管区,french + type
-castellany-lagarde,Lagarde 城代管区,french + type
+castellany-fribourg,フリブール城代管区,seat + type
+castellany-haboudange,アブダンジュ城代管区,seat + type
+castellany-lagarde,ラガルド城代管区,seat + type
 castellany-marsal,マルサル城代管区,seat + type
-castellany-remilly,Rémilly 城代管区,french + type
+castellany-remilly,レミイ城代管区,seat + type
 castellany-sarreguemines,サルグミーヌ城代管区,seat + type
-castellany-vic,Vic 城代管区,french + type
+castellany-vic,ヴィック城代管区,manual
+castviller,カストヴィレール,manual
+cathedral-chapter-metz,メス司教座聖堂参事会,manual
 cathedral-chapter-trier,トリーア大聖堂参事会,manual
+chambrey,シャンブレ,manual
+chanoine-de-varsberg,ヴァルスベールの参事会員,manual
+chapter-cathedral-metz,メス司教座聖堂参事会（首席司祭）,manual
+chapter-fenetrange,フェネトランジュ参事会,manual
 chapter-metz,メス大聖堂参事会,manual
+chapter-saint-simeon-trier,トリーアのザンクト・ジメオン参事会,manual
+chapter-speyer,シュパイアー司教座聖堂参事会,manual
+chapter-worms,ヴォルムス司教座聖堂参事会,manual
+charles-alexandre-de-croy,シャルル＝アレクサンドル・ド・クロイ,manual
+charles-de-hohenzollern-sigmaringen,カール・フォン・ホーエンツォレルン＝ジグマリンゲン,manual
+charles-emerich,シャルル・エメリック,manual
+charles-ii-de-lorraine,メス司教ロレーヌ枢機卿シャルル2世,manual
+charles-philippe-de-croy,アヴレ侯シャルル＝フィリップ・ド・クロイ,manual
+charleville,シャルルヴィル,manual
+charterhouse-rettel,レテル修道院（カルトジオ会）,manual
+charterhouse-saint-alban-trier,トリーアのザンクト・アルバン修道院（カルトジオ会）,manual
+chateau-brehain,シャトー＝ブレアン,manual
+chateau-rouge,シャトー＝ルージュ,manual
 chateau-salins,シャトー＝サラン,wikidata
+chateau-voue,シャトーヴエ,manual
+chatillon,シャティヨン,manual
+chelaincourt,シュランクール,manual
+chemery,シェムリ,manual
+chemery-faulquemont,シェムリ,manual
+chenois,シェノワ,manual
+chevalin,シュヴァラン,manual
+chicourt,シクール,manual
+chretien-de-savigny,ロンヌ領主クレティアン・ド・サヴィニー,manual
+cirey,シレ,manual
+claude-musiel,クロード・ミュジエル,manual
+cocheren,コシュラン,manual
+colmen,コルマン,manual
 commandery-beckingen,ベッキンゲン騎士団管区,manual
+commandery-gelucourt,ジェリュクールの騎士団管区長,manual
+commandery-saint-jean-de-bassel,サン＝ジャン＝ド＝バセル騎士団管区,manual
+commandery-saint-jean-gelucourt,ジェリュクールの聖ヨハネ騎士団管区,manual
+community-bettviller,ベットヴィレールの住民,manual
+community-dalem,ダレムの住民,manual
+community-hombourg-haut,オンブール＝オーの共同体と守護領法廷,manual
+community-merzig-saargau,メルツィヒ＝ザールガウ共同統治地の臣民,manual
+community-saint-avold,サンタヴォルの共同体（村長と参審人）,manual
+community-sarreguemines,サルグミーヌの共同体と管区,manual
+comte-de-cratz,クラッツ伯,manual
+comte-de-rechicourt-le-chateau,レシクール＝ル＝シャトー伯,manual
+comtesse-ostfriesland,東フリースラント伯爵夫人,manual
+conde-northen,コンデ,manual
 condominium-merzig-saargau,ザールガウ＝メルツィヒ共同統治地,manual
+conthil,コンティル,manual
+convent-congregation-notre-dame-dieuze,ディウーズのノートルダム修道会修道院,manual
+convent-vernesviller,ヴェルヌスヴィレール修道院,manual
+coume,クーム,manual
+county-anholt,アンホルト伯家,manual
 county-bitche,ビッシュ伯領,seat + type
-county-blamont,Blâmont 伯領,french + type
+county-blamont,ブラモン伯領,manual
 county-bliescastel,ブリースカステル伯領,manual
 county-boulay,ブレ伯領,seat + type
 county-crehange,クレアンジュ伯領,manual
 county-dabo,ダボ伯領,seat + type
 county-dalem,ダレム伯領,manual
-county-deux-ponts,Deux-Ponts 伯領,french + type
+county-daun-oberstein-rechicourt,ダウン＝オーバーシュタイン＝レシクール伯家,manual
+county-deux-ponts,ツヴァイブリュッケン公国,manual
 county-eberstein,エーバーシュタイン伯家,manual
-county-falkenstein,Falkenstein 伯領,french + type
+county-falkenstein,ファルケンシュタイン伯領,manual
 county-hanau-lichtenberg,ハーナウ＝リヒテンベルク伯領,manual
-county-lichtenberg,Lichtenberg 伯領,french + type
+county-hohenlohe-waldenburg,ホーエンローエ＝ヴァルデンブルク伯領,manual
+county-la-petite-pierre,ラ・プティット＝ピエール伯（フェルデンツ）,manual
+county-lichtenberg,リヒテンベルク伯領,manual
+county-linange-westerburg,ライニンゲン＝ヴェスターブルク伯領,manual
+county-manderscheid,マンダーシャイト伯領,manual
 county-nassau-saarbruecken,ナッサウ＝ザールブリュッケン伯領,manual
-county-nassau-sarrebruck,Nassau-Sarrebruck 伯領,french + type
+county-nassau-sarrebruck,ナッサウ＝ザールブリュッケン伯領,manual
 county-oberstein,オーバーシュタイン伯領,manual
-county-petite-pierre,La Petite-Pierre 伯領,french + type
-county-rechicourt-le-chateau,Réchicourt-le-Château 伯領,french + type
+county-oberstein-westerburg,オーバーシュタイン＝ヴェスターブルク伯領,manual
+county-petite-pierre,ラ・プティット＝ピエール伯領,manual
+county-rechicourt-le-chateau,レシクール＝ル＝シャトー伯領,manual
 county-salm,ザルム伯領,manual
 county-sarrebruck,ザールブリュッケン伯領,seat + type
 county-sarrewerden,サールヴェルデン伯領,seat + type
 county-sayn,ザイン伯領,manual
+county-sulz,ズルツ伯領,manual
+county-westerburg-rechicourt,ヴェスターブルク＝レシクール伯家,manual
+courcelles,クルセル,manual
+court-21-echevins-sarrewerden,サールヴェルデン伯領の21人参審人法廷,manual
 court-conde,コンデ代官区,manual
-court-perl,Perl 裁判区,french + type
-court-vibersviller,Vibersviller 裁判区,french + type
+court-farschviller,ファルシュヴィレールの法廷,manual
+court-perl,ペルル裁判区,manual
+court-vibersviller,ヴィベルスヴィレール裁判区,seat + type
+craincourt,クランクール,manual
+cratz-de-scharfenstein,シャルフェンシュタイン伯クラッツ,manual
+crehange,クレアンジュ,manual
+creutzwald,クロイツヴァルト,manual
+cure-hestroff,エストロフの主任司祭,manual
+cure-laumesfeld,ロームスフェルドの主任司祭,manual
+cutting,キュタン,manual
 dabo,ダボ,wikidata
+dalem,ダレム,manual
+dalhain,ダラン,manual
+dalstein,ダルスタン,manual
+dame-de-grumbach,グルムバッハ夫人,manual
+dame-de-lavaux,ラヴォー（ラリュエル）夫人,manual
+daniel-de-conde,ダニエル・ド・コンデ,manual
+dannelbourg,ダネルブール,manual
+dedeling,デドラン,manual
 dehlingen,ドゥランジャン,wikidata
+delme,デルム,manual
+denting,ダンタン,manual
+deserted-village-roderbann,ローダーバン,manual
+desseling,デスラン,manual
+destry,デストリ,manual
+diane-cappel,ディアーヌ＝カペル,manual
+diane-de-croy,ディアーヌ・ド・クロイ,manual
+diane-de-dommartin,ディアーヌ・ド・ドンマルタン,manual
+diding,ディダン,manual
+diebling,ディーブラン,manual
 diedendorf,ディーデンドルフ,wikidata
+diederfing,ディーデルファン,manual
+dieding,ディーダン,manual
+dieffembach,ディーフェンバック,manual
+dieffenbach,ディーフェンバック,manual
+diefferten,ディーフェルテン,manual
+diefflen,ディーフレン,manual
+diemeringen,ディーメランジャン,manual
+diersdorf,ディーアスドルフ,manual
+diesen,ディーザン,manual
+dietersbach,ディータースバッハ,manual
 dieuze,ディウーズ,wikidata
-dillingen,ディリンゲン/ザール,wikidata
+dillingen,ディリンゲン,wikidata
+diocese-strasbourg,ストラスブール司教区,manual
+distroff,ディストロフ,manual
+ditschviller,ディッチュヴィレール,manual
+dittelingen,ディトラン,manual
+docteur-setterich,ゼッテリヒ博士,manual
+doersdorf,デールスドルフ,manual
+dolving,ドルヴァン,manual
 domfessel,ドンフェセル,wikidata
+domnon,ドンノン,manual
+donnelay,ドヌレ,manual
+donsitters,ドンジッタース,manual
+dordhal,ドルダル,manual
+dorst,ドルスト,manual
+dorvillers,ドルスヴィレール,manual
+dourd-hal,ドゥルダル,manual
+dreisbach,ドライスバッハ,manual
+drogny,ドロニー,manual
+drulingen,ドリュランジャン,manual
 duchy-lorraine,ロレーヌ公国,manual
 duchy-luxembourg,ルクセンブルク公国,manual
 duchy-zweibruecken,ツヴァイブリュッケン公国,manual
+duppenweiler,デュッペンヴァイラー,manual
+duren,デューレン,manual
+durstel,デュルステル,manual
+ebersviller,エベルスヴィレール,manual
 eblange,エブリンゲン,wikidata
+ebring,エブラン,manual
+edersviller,エデルスヴィレール,manual
+edling,エドラン,manual
+eft,エフト,manual
+eguelshardt,エゲルスアルト,manual
+eich-pirmasens,アイヒ,manual
+eich-reding,エック,manual
+eich-sarralbe,エック,manual
+eimersdorf,アイマースドルフ,manual
+einartshausen,アイナルツハウゼン,manual
 eincheville,アインシュヴィル,wikidata
+eisweiler,アイスヴァイラー,manual
+eiweiler-nohfelden,アイヴァイラー,manual
+eiweiler-wiesbach,アイヴァイラー,manual
 electorate-palatinate,プファルツ選帝侯領,manual
 electorate-trier,トリーア選帝侯領,manual
 elisee-d-haraucourt,エリゼ・ダロクール,manual
-ensdorf,エンスドルフ (ザールラント),wikidata
+ellmeren,エルメレン,manual
+elvange,エルヴァンジュ,manual
+elviller,エルヴィレール,manual
+elzange,エルザンジュ,manual
+elzing,エルザン,manual
+emmersweiler,エマースヴァイラー,manual
+enchenberg,アンシャンベール,manual
+engenthal,アンジャンタル,manual
+ensdorf,エンスドルフ,wikidata
+epange,エパンジュ,manual
 eppelborn,エッペルボルン,wikidata
 eppenbrunn,エッペンブルン,wikidata
+epping,エパン,manual
+erbringen,エルブリンゲン,manual
+erching,エルシャン,manual
+erica-de-merfeld,エリカ・フォン・メルフェルト,manual
+erlenbrunn,エルレンブルン,manual
+ernest-de-croy,エルネスト・ド・クロイ,manual
+ernest-de-kerpen,エルンスト・フォン・ケルペン,manual
+ernestviller,エルネストヴィレール,manual
+erstroff,エルストロフ,manual
+eschbourg,エシュブール,manual
+eschviller,エシュヴィレール,manual
+eschwiller,エシュヴィレール,manual
+etting,エタン,manual
+etzling,エツラン,manual
+evendorf,エヴァンドルフ,manual
+eyviller,エイヴィレール,manual
+falck,ファルク,manual
+falkenstein-baerenthal,ファルケンシュタイン,manual
+farebersviller,ファレベルスヴィレール,manual
+farschviller,ファルシュヴィレール,manual
 faulquemont,フォルクモン,manual
+faust-de-stromberg,ファウスト・フォン・シュトロムベルク,manual
+fechingen,フェヒンゲン,manual
+felsberg,フェルスベルク,manual
 fenetrange,フェネトランジュ,wikidata
-fief-altviller,Altviller 封土,french + type
-fief-barst,Barst 封土,french + type
-fief-benestroff,Bénestroff 封土,french + type
-fief-betting,Betting 封土,french + type
-fief-blettange-bousse,Blettange-Bousse 封土,french + type
-fief-erstroff,Erstroff 封土,french + type
-fief-helfedange,Helfedange 封土,french + type
-fief-hellimer,Hellimer 封土,french + type
-fief-hingsange,Hingsange 封土,french + type
-fief-laning,Laning 封土,french + type
+ferange,フェランジュ,manual
+fi-eisheim,フレスエム,manual
+fickingen,ザールフェルス,manual
+fief-altviller,アルトヴィレール封土,seat + type
+fief-barst,バルスト封土,seat + type
+fief-benestroff,ベネストロフ封土,seat + type
+fief-betting,ベタン封土,seat + type
+fief-blettange-bousse,ブレタンジュ＝ブッス封土,manual
+fief-erstroff,エルストロフ封土,seat + type
+fief-helfedange,エルフダンジュ封土,seat + type
+fief-hellimer,エリメール封土,seat + type
+fief-hingsange,アンサンジュ封土,manual
+fief-laning,ラナン封土,seat + type
+fiirst,フュルスト,manual
+filstroff,フィルストロフ,manual
+fischbach,フィッシュバッハ,manual
+fitten,フィッテン,manual
+flasgarten,フラスガルタン,manual
+flastroff,フラストロフ,manual
+flatten,フラタン,manual
+fletrange,フレトランジュ,manual
+fliessborn,フリースボルン,manual
+folkling,フォルクラン,manual
+folpersviller,フォルペルスヴィレール,manual
+folschviller,フォルシュヴィレール,manual
 forbach,フォルバック,wikidata
 forstheim,フォルストハイム,wikidata
+forweiler,フォーアヴァイラー,manual
+fossieux,フォシュー,manual
+foulcrey,フルクレ,manual
+fouligny,フリニー,manual
+francaltroff,フランカルトロフ,manual
 francois-ii-vaudemont,フランソワ2世・ド・ヴォーデモン,manual
+fraquelfing,フラケルファン,manual
+frauenberg,フローアンベール,manual
+fraulautern,フラウラウテルン,manual
+freching,フレシャン,manual
+frecourt,フレクール,manual
+frederic-steuber,フリードリヒ・シュトイバー・フォン・デュルクハイム,manual
+frederic-v-palatinate,プファルツ選帝侯フリードリヒ5世,manual
+freisen,フライゼン,manual
+freistroff,フレストロフ,manual
+fremersdorf,フレマースドルフ,manual
+fremestroff,フレメストロフ,manual
+freybouse,フレイブス,manual
 freyming,フレマン＝メルルバック,wikidata
+fribourg,フリブール,manual
+frohmuhl,フロミュール,manual
+furschweiler,フルシュヴァイラー,manual
+furweiler,フューアヴァイラー,manual
+gaillard-capitaine-albestroff,アルベストロフ隊長ガイヤール,manual
+gandren,ガンドラン,manual
+garrebourg,ガルブール,manual
+gauhiving,ゴビヴァン,manual
+gaweistroff,ガヴェストロフ,manual
+gelucourt,ジェリュクール,manual
+gennweiler,ゲンヴァイラー,manual
+gentersberg,ジャンテルスベール,manual
+georges-jean-veldenz,ゲオルク・ヨハン1世・フォン・フェルデンツ,manual
+georges-lellich,ゲオルク・レリヒ,manual
+georges-pfaltzel,ゲオルク・プファルツェル,manual
+gerard-rousselot,ジェラール・ルスロ,manual
+gering,ジェラン,manual
+gerlfangen,ゲルルファンゲン,manual
+gershach,ゲルスバッハ,manual
 gersheim,ゲルスハイム,wikidata
+giidesweiler,ギューデスヴァイラー,manual
+gisingen,ギージンゲン,manual
+givricourt,ジヴリクール,manual
+goderscheuren,ゴドゥユール,manual
+godron-duchat,メスの商人ゴドロン・デュシャ,manual
+goerlingen-drulingen,ゲルランジャン,manual
+goldhach,ゴルトバッハ,manual
+gomelange,ゴムランジュ,manual
+gondrexange,ゴンドレクサンジュ,manual
+gongelfang,ゴンジェルファン,manual
+gonnesweiler,ゴネスヴァイラー,manual
+gosselming,ゴセルマン,manual
+graefinthal,グレーフィンタール,manual
+graufthal,グラウフタール,manual
 gremecey,グレメシー,wikidata
+grening,グレナン,manual
 greppen,クレッペン,wikidata
-griesborn,シュヴァルバッハ (ザール),wikidata
+gresaubach,グレーザウバッハ,manual
+griesborn,シュヴァルバッハ,wikidata
 griinstadt,グリューンシュタット,wikidata
+grindorf,グランドルフ,manual
+gronig,グローニヒ,manual
+grosbliederstroff,グロブリデルストロフ,manual
+grosrederching,グロレデルシャン,manual
+grosshemmersdorf,グロースヘマースドルフ,manual
+grostenquin,グロタンカン,manual
+grundviller,グランヴィレール,manual
+gruyer-de-dieuze,ディウーズの森林官,manual
+gudingen,ギューディンゲン,manual
+guebenhouse,ゲベヌーズ,manual
+guebestroff,ゲベストロフ,manual
+gueblange-dieuze,ゲブランジュ,manual
+guebling,ゲブラン,manual
+guelange,ゲランジュ,manual
 guenange,ゲナンジュ,wikidata
+guenestroff,ゲネストロフ,manual
+guenviller,ゲンヴィレール,manual
+guerniange,ゲルマンジュ,manual
+gueroldseck,ゲロルトゼック,manual
+guerstling,ゲルストラン,manual
+guerting,ゲルタン,manual
+guessling,ゲスラン,manual
+guiching,ギシャン,manual
+guinglange,ガングランジュ,manual
+guinkirchen,ガンキルシュ,manual
+guinzeling,ガンズラン,manual
+guirlange,ギルランジュ,manual
+guising,ギザン,manual
+gungviller,ガンクヴィレール,manual
+guntzviller,ガンツヴィレール,manual
 gutta-de-hattstein,グッタ・フォン・ハットシュタイン（寡婦）,manual
+habkirchen,ハープキルヒェン,manual
+haboudange,アブダンジュ,manual
+hackenberg,アッケンベール,manual
+hahn,ハーン,manual
 hahnweiler,ハーンヴァイラー,wikidata
+halling,アラン,manual
+halstroff,アルストロフ,manual
+ham,アム,manual
+hambach,アンバック,manual
 hampont,アムポン,wikidata
-heimbach-nahe,ハイムバッハ (ナーエ),wikidata
+hanfgarten,アンフガルタン,manual
+hangviller,アングヴィレール,manual
+hans-arnet,ザールブリュッケンのハンス・アルネト,manual
+hanviller,アンヴィレール,manual
+hanweiler,ハンヴァイラー,manual
+haraucourt-sur-seille,アロークール＝シュル＝セイユ,manual
+hargarten-aux-mines,アルガルテン＝オ＝ミーヌ,manual
+hargarten-beckingen,ハルガルテン,manual
+hargarten-laumesfeld,アルガルタン,manual
+harlingen,ハルリンゲン,manual
+harprich,アルプリシュ,manual
+harreberg,アルベール,manual
+harskirchen,アルスキルシュ,manual
+hartmann-seltzer,ハルトマン・ゼルツァー,manual
+hasenholtz,アザンホルツ,manual
+haspelschiedt,アスペルシード,manual
+hastroff,アストロフ,manual
+hattigny,アティニー,manual
+haupersweiler,ハウパースヴァイラー,manual
+haustadt,ハウスタット,manual
+haustatt,ハウスタット,manual
+haut-clocher,オー＝クロシェ,manual
+haute-contz,オート＝コンツ,manual
+haute-seille,オート＝セイユ,manual
+haute-sierck,オート＝シエルク,manual
+haute-vigneulles,オート＝ヴィニュル,manual
+haute-yutz,オート＝ユッツ,manual
+hazelbourg,アゼルブール,manual
+hazembourg,アザンブール,manual
+heckenransbach,エケンランスバック,manual
+heckling,エクラン,manual
+heimbach-nahe,ハイムバッハ,wikidata
+heining,エナン,manual
+heirs-barthel,ディウーズの書記バルテルの財産相続人,manual
+heirs-bruttel,ディウーズの役人ブリュテル卿の相続人,manual
+heirs-houst,ブリュッセルの顧問官ウーストの相続人,manual
+heirs-jacques-villesuryon,ジャック・ド・ヴィルシュリヨンの相続人,manual
+helfedange,エルフダンジュ,manual
+hellendorf,ヘレンドルフ,manual
+hellering-fenetrange,エレラン,manual
+hellering-hombourg-haut,エレラン,manual
+hellimer,エリメール,manual
+helling,エラン,manual
+helstroff,エルストロフ,manual
+hemering,エムラン,manual
+hemilly,エミリー,manual
+heming,エマン,manual
+henri-de-deux-ponts-bitche,ハインリヒ・フォン・ツヴァイブリュッケン＝ビッチュ,manual
+henri-de-guise,ギーズ公アンリ,manual
+henri-hessen-de-sponte,アンリ・エッサン・ド・スポント,manual
+henri-i-de-guise,アンリ1世・ド・ロレーヌ＝ギーズ,manual
+henri-schwebel,ツヴァイブリュッケン宰相ハインリヒ・シュヴェーベル,manual
+henridorf,アンリドルフ,manual
 henriette-vaudemont,アンリエット・ド・ヴォーデモン,manual
+henriville,アンリヴィル,manual
+henselhofen,ヘンゼルホーフェン,manual
+herange,エランジュ,manual
+herbitzheim,エルビッツェム,manual
 herichsweiler,ヘルヒヴァイラー,wikidata
+hermelange,エルムランジュ,manual
+herrenstein,エランスタン,manual
+hertzing,エルツァン,manual
+hesse,エッス,manual
+hesser,エセール,manual
+hessling,エスラン,manual
+hestroff,エストロフ,manual
+hiilzweiler,ヒュルツヴァイラー,manual
+hilbesheim,イルベセム,manual
+hilbringen,ヒルブリンゲン,manual
+hilsprich,イルスプリシュ,manual
 hilst,ヒルスト,wikidata
+himmrod,イムロッド,manual
+hinckange,アンカンジュ,manual
+hinsbourg,アンスブール,manual
+hinsing,アンサン,manual
+hinsingen,アンザンジャン,manual
+hirbach,イルバック,manual
+hirschland,イルシュラン,manual
+hobling,オブラン,manual
+hochweyersberg,ホーホヴァイヤースベルク,manual
+hoelling,ヘリング,manual
+hoff,オフ,manual
+holbach-lachambre,オルバック,manual
+holbach-siersthal,オルバック,manual
+holling,オラン,manual
+holving,オルヴァン,manual
 holy-roman-empire,神聖ローマ帝国,manual
+hombourg-haut-et-bas,オンブール＝バ,manual
+hombourg-sur-canner,オンブール＝シュル＝カネール,manual
+hommarting,オマルタン,manual
+hommert,オメール,manual
+honnert,オネール,manual
+honskirch,オンスキルシュ,manual
+honzrath,ホンツラート,manual
+hoppstetten,ホップシュテッテン,manual
 hornbach,ホルンバッハ,wikidata
+hospital-metz,メス施療院,manual
+hoste,オスト,manual
+hottviller,オットヴィレール,manual
+house-bassy,バシー家,manual
+house-bayer-boppart,バイヤー・フォン・ボッパルト家,manual
+house-bellenhausen,ベレンハウゼン家,manual
+house-bertrand-marimont,マリモン領主ベルトラン家,manual
+house-bettendorf,ベッテンドルフ家,manual
+house-bitche,旧ビッシュ伯家,manual
+house-bolender,シエルクのボレンダー家,manual
+house-bracs,ブラック領主家,manual
+house-brandscheit,ブラントシャイト家,manual
 house-braubach,ブラウバッハ家,manual
+house-braun-schmittberg,ヨハン・ヴォルフ・フォン・シュミットブルク,manual
+house-braunsdorf,ブラウンスドルフ卿,manual
+house-braunshausen,ブラウンスハウゼン家,manual
+house-breder-hohenstein,ブレーダー・フォン・ホーエンシュタイン家,manual
+house-chateau-brehain,シャトー＝ブレアン家,manual
+house-cicignon,ジャン・シシニョンの相続人,manual
+house-coussy,メスのクシー家,manual
+house-crehange-bacourt,クレアンジュ＝バクール男爵家,manual
+house-cronenberg,クローネンベルク家,manual
+house-croy,クロイ家,manual
+house-croy-dommartin,クロイ＝ドンマルタン家,manual
+house-croy-fenetrange,フェネトランジュのクロイ家,manual
+house-custine,キュスティーヌ家,manual
+house-dagstuhl,ダークシュトゥール男爵家,manual
+house-daun,ダウン家,manual
+house-daun-falkenstein,ダウン＝ファルケンシュタイン家,manual
+house-daun-oberstein,ダウン＝オーバーシュタイン家,manual
+house-dern,デルン家,manual
+house-deux-ponts-bitche,ツヴァイブリュッケン＝ビッチュ家,manual
+house-dietz,ディーツ家,manual
+house-du-gaillard,デュ・ガイヤール家,manual
+house-durckheim,デュルクハイム家,manual
+house-eberstein-linange,エーバーシュタイン＝ライニンゲン家,manual
+house-eltz,エルツ家,manual
+house-enethan,エネタン男爵家,manual
+house-fath,ファート家,manual
+house-faust-dalem,ダレムのファウスト卿,manual
 house-faust-stromberg,ファウスト・フォン・シュトロームベルク家,manual
+house-felsberg,フェルスベルク家,manual
+house-flersheim,フレルスハイム家,manual
+house-frankenstein,フランケンシュタイン家,manual
+house-furbach,フルバッハ家,manual
+house-gantz,ガンツ家,manual
+house-gentersberg,ゲンタースベルク家,manual
+house-geroldseck,ゲロルトゼック家,manual
+house-guermange,ゲルマンジュ家,manual
+house-hagen,ハーゲン家,manual
 house-haraucourt,アロクール家,manual
+house-hausen,ハウゼン家,manual
+house-havre,アヴレ侯爵夫人,manual
+house-heinsberg-kirschbaum,キルシュバウムと呼ばれるハインスベルク家,manual
 house-helmstatt,ヘルムシュタット家,manual
+house-hening,エナン家,manual
+house-hepgen,ヘプゲン家,manual
+house-herange,エランジュ家の相続人,manual
 house-hohensaxen,ホーエンザックス家,manual
+house-honneck,ホネック卿,manual
 house-hunolstein,フノルシュタイン家,manual
+house-kallenbach,カレンバッハ家,manual
 house-kerpen,ケルペン家,manual
+house-kessel,ケッセル卿,manual
+house-kestenhausen,ケステンハウゼン家,manual
+house-kirschbaum,キルシュバウム家,manual
+house-klock-saint-wendel,ザンクト・ヴェンデルのクロック家,manual
+house-klopstein,マルサルのクロップシュタイン家,manual
+house-krantz,クランツ家,manual
+house-la-haye,ラ・エ家（ハーゲン、通称ラモット）,manual
+house-landsberg,ランツベルク家,manual
+house-leiningen-dabo,ライニンゲン＝ダークスブルクのライン伯家,manual
+house-leiningen-falkenburg,ライニンゲン＝ファルケンブルク家,manual
+house-leiningen-hartenburg,ライニンゲン＝ハルテンブルク家,manual
 house-levenstein,レーヴェンシュタイン家,manual
+house-linange,ライニンゲン家,manual
+house-linange-westerbourg,ライニンゲン＝ヴェスターブルク家,manual
+house-lutzelbourg,リュッツェルブール家,manual
+house-mansfeld,マンスフェルト家,manual
+house-marcossey,マルコセー家,manual
 house-metternich,メッテルニヒ家,manual
+house-moers,メールス家,manual
+house-moers-sarrewerden,メールス＝サールヴェルデン家,manual
+house-morbach,モルバッハ家,manual
+house-moulin,ムーラン領主家,manual
+house-musiel,ミュジエル家,manual
+house-ochsenstein,オクセンシュタイン家,manual
 house-pallant,パラント家,manual
+house-raville,ラヴィル伯家,manual
+house-reipoltzkirchen,ライポルツキルヒェン家,manual
+house-rhingrafen,ヴィルト伯・ライン伯家,manual
+house-rhingraves,ライン伯家,manual
+house-rhingraves-grumbach,グルムバッハのライン伯家,manual
+house-rhingraves-wildgraves,ライン伯・ヴィルト伯家,manual
+house-saint-ingbert,ザンクト・イングベルト領主家,manual
+house-saubourel,ソブレル家,manual
+house-schellart,シェラルト家,manual
+house-schmittberg,ブラウン・フォン・シュミットブルク家,manual
+house-schoenberg,ディートリヒ・フォン・シェーンベルク,manual
+house-schonberg,シェーンベルク家,manual
 house-schwarzenberg,シュヴァルツェンベルク家,manual
+house-schwarzenburg,シュヴァルツェンブルク伯家,manual
+house-schwebel,シュヴェーベル家,manual
+house-siersberg-dillingen,ジールスベルク＝ディリンゲン家,manual
+house-soetern,ゼーテルン家,manual
+house-steinbach,シュタインバッハ卿,manual
+house-steinkallenfels,シュタインカレンフェルス家,manual
 house-varsberg,ヴァルスベルク家,manual
-illingen,イリンゲン (ザールラント),wikidata
+house-vaudemont,ヴォーデモン家,manual
+house-weis,ヴァイス家,manual
+house-wiltz,ヴィルツ男爵家,manual
+house-zandt,トリーア大司教領の家宰ツァント,manual
+hultehouse,ユルトゥーズ,manual
+humbert-eberstein,エーバーシュタイン伯ハウプレヒト（フンベルト）,manual
+hundling,アンドラン,manual
+hunting,アンタン,manual
+hunweiler,フンヴァイラー,manual
+huttersdorf,ヒュッタースドルフ,manual
+hutting,ユタン,manual
+ibigny,イビニー,manual
+ibring,イブラン,manual
+ihn,イーン,manual
+illange,イランジュ,manual
+illingen,イリンゲン,wikidata
+imling,イムラン,manual
+imperial-chamber-speyer,シュパイアー帝国最高法院,manual
+imsbach,イムスバッハ,manual
+imshach,イムスバッハ,manual
+imweiler,イムヴァイラー,manual
+ingling,アングラン,manual
 insming,アンスマン,manual
+insviller,アンスヴィレール,manual
+ippling,イプラン,manual
+ischen,イシャン,manual
+ising,イザン,manual
+ittersdorf,イッタースドルフ,manual
+itzbach,イッツバッハ,manual
+jabach,ヤーバッハ,manual
+jacques-de-bade,バーデン辺境伯ヤーコプ,manual
+jacques-de-bassy,ジャック・ド・バシー,manual
+jacques-de-thietry,ラ・ロシエール領主ジャック・ド・ティエトリ,manual
+jean-beilstein,ヨハン・バイルシュタイン,manual
+jean-berg-kesten,トリーアのヨハン・ベルク（通称ケステン）,manual
+jean-de-bassy,ポンピエールのジャン・ド・バシー,manual
+jean-de-beauvau,パンジュ領主ジャン・ド・ボーヴォー,manual
+jean-de-cicignon,隊長ジャン・ド・シシニョン,manual
+jean-de-fenetrange,ジャン・ド・フェネトランジュ,manual
+jean-de-kerpen,イリンゲン領主ヨハン・フォン・ケルペン,manual
+jean-de-schnittel,ジャン・ド・シュニッテル,manual
+jean-de-weis,ジャン・ド・ヴァイス,manual
 jean-de-zandt,ヨハン・ツァント・フォン・メルル,manual
+jean-frederic-levenstein,ヨハン・フリードリヒ・フォン・レーヴェンシュタイン,manual
+jean-georges-comte-du-rhin,ライン伯ヨハン・ゲオルク,manual
+jean-georges-i-veldenz,ゲオルク・ヨハン1世・フォン・フェルデンツ＝リュッツェルシュタイン,manual
+jean-guillerme,シエルクの村長ジャン・ギユルメ,manual
+jean-henri-schwebel,ヨハン・ハインリヒ・シュヴェーベル,manual
+jean-hohenfels-reipoltskirchen,ヨハン・フォン・ホーエンフェルス＝ライポルツキルヒェン,manual
+jean-ier-de-moers-sarrewerden,ヨハン1世・フォン・メールス＝サールヴェルデン,manual
+jean-ix-morhange,モランジュ伯ヨハン9世,manual
+jean-jacques-ii-eberstein,エーバーシュタイン伯ヨハン・ヤーコプ2世,manual
+jean-nied,シエルクの市民ジャン・ニード,manual
+jean-paul-faust-stromberg,ヨハン・パウル・ファウスト・フォン・シュトロムベルク,manual
+jean-philippe-rhingrave,ライン伯ヨハン・フィリップ,manual
+jean-philippe-varsberg,マインツ参事会員ヨハン・フィリップ・フォン・ヴァルスベルク,manual
+jean-schmisser,ヨハン・シュミッサー,manual
+jean-steuffel,フォルクモンのジャン・シュトイフェル,manual
+jean-streiff-de-lauenstein,ヨハン・シュトライフ・フォン・ラウエンシュタイン,manual
+jean-stumpf,ジンメルンのヨハン・シュトゥンプフ,manual
+jean-wolf-eltz,ヨハン・ヴォルフ・フォン・エルツ,manual
+jean-wolf-metternich,ヨハン・ヴォルフ・フォン・メッテルニヒ,manual
+johannesviller,ジョアネスヴィレール,manual
+jost-bechel,ヨスト・ベッヒェル,manual
+jost-bechel-siersberg,ジールスベルクのヨスト・ベッヒェル,manual
+juvelize,ジュヴリーズ,manual
+juville,ジュヴィル,manual
+kaisen,カイゼン,manual
+kalhouse,カルーズ,manual
+kaltenhausen,カルテンハウゼン,manual
+kaltweiler,カルトヴァイレール,manual
+kappelkinger,カペルカンジェ,manual
+kastel,カステル,manual
+kedange,ケダンジュ,manual
+kemplich,ケンプリシュ,manual
+kerbach,ケルバック,manual
+kerling,ケルラン,manual
+kerlingen,ケルリンゲン,manual
+kerprich,ケルプリシュ,manual
+kerprich-aux-bois,ケルプリシュ＝オ＝ボワ,manual
+kerprich-hemmersdorf,ケルプリヒ＝ヘマースドルフ,manual
+keskastel,ケスカステル,manual
+ketternostern,ケッテルノステルン,manual
+keuchingen,コイヒンゲン,manual
+kingdom-france,フランス王国,manual
+kirberg,キルベール,manual
 kirf,キルフ,wikidata
+kirsch-luttange,キルシュ,manual
+kirsch-sierck,キルシュ＝レ＝シエルク,manual
+kirschnaumen,キルシュノーマン,manual
+kirviller,キルヴィレール,manual
+kitzing,キツァン,manual
+klang,クラン,manual
 kleinblittersdorf,クラインブリッタースドルフ,wikidata
+kleind-hal,クランダル,manual
+knorscheid,クノルシャイト,manual
+koenigsberg,ケーニヒスベール,manual
+koenigsmacker,ケニグスマケール,manual
+kollig,コリヒ,manual
+korprich,コルプリヒ,manual
+kostenbach,コステンバッハ,manual
+kottendorf,コタンドルフ,manual
+kraffthel,クラフテル,manual
+kraftal,クラフタル,manual
+kriigelborn,クリューゲルボルン,manual
+kuntzig,クンツィグ,manual
+kutzhof,クッツホーフ,manual
+l-hopital,ロピタル,manual
+l-renzen,ロランザン,manual
+la-fresne,ラ・フレーヌ,manual
+labach,ラーバッハ,manual
+labruck,ラブリュック,manual
+lachambre,ラシャンブル,manual
+lacroix,ラクロワ,manual
+lafrimbolle,ラフランボル,manual
+lagarde,ラガルド,manual
+lambach,ランバック,manual
+landange,ランダンジュ,manual
+landhofmeister-trier,トリーア大司教の宮内長官,manual
+landonvillers,ランドンヴィレール,manual
+landroff,ランドロフ,manual
+landsweiler,ランツヴァイラー,manual
+landwein-bockenheimer,ラントヴァイン・フォン・ボッケンハイム,manual
+laneuveville,ラヌーヴヴィル,manual
+langatte,ランガット,manual
+languimberg,ランガンベール,manual
+laning,ラナン,manual
+laudrefang,ロードルファン,manual
+laumesfeld,ロームスフェルド,manual
+launstroff,ローンストロフ,manual
+laurent-mery,ナンシーの商人ロラン・メリー,manual
+le-braconnier,メスのル・ブラコニエ,manual
+le-goullon,メスの商人ル・グロン,manual
 lebach,レーバッハ,wikidata
+leidingen,ライディンゲン,manual
 leitzweiler,ライツヴァイラー,wikidata
-lemberg-pirmasens,レムベルク (ドイツ),wikidata
+lelling,レラン,manual
+lemberg-bitche,ランベール,manual
+lemberg-pirmasens,レンベルク,manual
+lemestroff,レメストロフ,manual
+lemoncourt,ルモンクール,manual
+lengelsheim,ランジェルセム,manual
+lening,レナン,manual
+les-etangs,レゼタン,manual
+lespingal,メスの両替商レスパンガル卿,manual
+ley,レ,manual
+leyviller,レイヴィレール,manual
+lezey,ルゼ,manual
+lidrequin,リドルカン,manual
+lidrezing,リドルザン,manual
+liederschiedt,リーデルシード,manual
+liesstertal,リースタータール,manual
+limbach,リンバッハ,manual
+linden,リンデン,manual
+lindre-haute-et-basse,オート＝ランドル,manual
+lindscheid,リントシャイト,manual
+lisdorf,リスドルフ,manual
 lixheim,リクサイム,wikidata
+lixing-rouhling,リクサン,manual
+lixing-saint-avold,リクサン＝レ＝サンタヴォル,manual
+lohr-la-petite-pierre,ロール,manual
+lohr-munster,ロール,manual
+longeville,ロンジュヴィル,manual
+lords-berus,ベルス領主家,manual
+lords-chateau-rouge,シャトー＝ルージュ領主家,manual
+lords-dalem,ダレム領主家,manual
+lords-dillingen,ディリンゲン領主家,manual
+lords-fenetrange,フェネトランジュ領主家,manual
+lords-fontenoy,フォントノワ領主家,manual
 lords-freistroff,フレストロフ領主家,manual
-lordship-asswiller,Asswiller 領,french + type
-lordship-berg,Berg 領,french + type
-lordship-bertrange,Bertrange 領,french + type
+lords-gerbeville,ジェルブヴィル卿,manual
+lords-hilbringen,ヒルブリンゲン領主家,manual
+lords-monclair,モンクレール領主家,manual
+lords-puttelange,ピュトランジュ領主家,manual
+lords-rechicourt,レシクール卿,manual
+lords-wiry,ヴィリー卿,manual
+lordship-asswiller,アスヴィレール領,manual
+lordship-berg,ベルク領,seat + type
+lordship-bertrange,ベルトランジュ領,manual
 lordship-berus,ベールス領,seat + type
-lordship-bionville,Bionville 領,french + type
-lordship-bracs,Bracs 領,french + type
-lordship-busbach,Busbach 領,french + type
-lordship-chatillon,Châtillon 領,french + type
-lordship-chevalin,Chevalin 領,french + type
+lordship-bionville,ビオンヴィル領,seat + type
+lordship-bracs,ブラック領,manual
+lordship-busbach,ビュスバック領,seat + type
+lordship-chatillon,シャティヨン領,seat + type
+lordship-chevalin,シュヴァラン領,seat + type
 lordship-col-de-cygne,コル・ド・シーニュ領（シュヴァーネンハルス）,manual
-lordship-dagstuhl,Dagstuhl 領,french + type
-lordship-danne-et-quatre-vents,Danne et Quatre-Vents 領,french + type
-lordship-diemeringen,ディーメリンゲン侯国,manual
-lordship-distroff,Distroff 領,french + type
+lordship-dagstuhl,ダークシュトゥール領,manual
+lordship-danne-et-quatre-vents,ダンヌ・エ・カトル＝ヴァン領,manual
+lordship-diemeringen,ディーメランジャン侯国,manual
+lordship-distroff,ディストロフ領,seat + type
 lordship-faulquemont,フォルクモン領,seat + type
 lordship-fenetrange,フェネトランジュ領,seat + type
 lordship-forbach,フォルバック領,seat + type
-lordship-frauenberg,Frauenberg 領,french + type
-lordship-fremersdorf,Fremersdorf 領,french + type
-lordship-gueroldseck,Guéroldseck 領,french + type
-lordship-gueroldseck-les-niederstinzel,Guéroldseck-lès-Niederstinzel 領,french + type
-lordship-hombourg-sur-canner,Hombourg 領,french + type
-lordship-imperiale-de-crehange,Seigneurie impériale de Créhange 領,french + type
-lordship-inglange,Inglange 領,french + type
-lordship-kingertal,Kingertal 領,french + type
+lordship-frauenberg,フローアンベール領,seat + type
+lordship-fremersdorf,フレマースドルフ領,seat + type
+lordship-gueroldseck,ゲロルトゼック領,seat + type
+lordship-gueroldseck-les-niederstinzel,ゲロルトゼック＝レ＝ニデルスタンゼル領,manual
+lordship-hombourg-sur-canner,オンブール＝シュル＝カネール領,manual
+lordship-imperiale-de-crehange,クレアンジュ帝国領,manual
+lordship-inglange,アングランジュ領,manual
+lordship-kingertal,キンガータール領,manual
 lordship-lebach,レーバッハ領,seat + type
-lordship-lemberg-les-pirmasens,Lemberg-lès-Pirmasens 領,french + type
-lordship-lixing,Lixing 領,french + type
-lordship-lixing-rouhling,Lixing-Rouhling 領,french + type
-lordship-luttange,ルターニュ領,seat + type
-lordship-lutzelbourg,Lutzelbourg 領,french + type
+lordship-lemberg-les-pirmasens,レンベルク＝レ＝ピルマゼンス領,manual
+lordship-lixing,リクサン領,seat + type
+lordship-lixing-rouhling,リクサン＝ルーラン領,manual
+lordship-luttange,リュタンジュ領,seat + type
+lordship-lutzelbourg,リュッツェルブール領,seat + type
 lordship-marimont,マリモン城代管区,manual
-lordship-meilberg,Meilberg 領,french + type
+lordship-meilberg,メルベール領,manual
 lordship-metz,メス領,seat + type
-lordship-monclair,Monclair 領,french + type
+lordship-monclair,モンクレール領,seat + type
 lordship-morhange,モランジュ領,seat + type
 lordship-nalbach,ナルバッハ領,seat + type
+lordship-phalsbourg,ファルスブール領,manual
 lordship-puttelange,ピュトランジュ領,seat + type
-lordship-puttlingen-saar,Püttlingen-Saar 領,french + type
-lordship-rechicourt,Réchicourt 領,french + type
+lordship-puttlingen-saar,ピュットリンゲン領,manual
+lordship-raville,ラヴィル領,manual
+lordship-rechicourt,レシクール伯領,manual
 lordship-saint-avold,サンタヴォル領,seat + type
 lordship-sarralbe,サラルブ領,seat + type
 lordship-sarreck,サレック領,seat + type
-lordship-talange,Talange 領,french + type
-lordship-thicourt,Thicourt 領,french + type
-lordship-turquestein,Turquestein 領,french + type
-lordship-val-de-nalbach,Val de Nalbach 領,french + type
-lordship-varize,Varize 領,french + type
-lordship-varsberg,Varsberg 領,french + type
+lordship-talange,タランジュ領,manual
+lordship-thicourt,ティクール領,seat + type
+lordship-turquestein,テュルクスタン領,seat + type
+lordship-val-de-nalbach,ナルバッハ谷領,manual
+lordship-varize,ヴァリーズ領,seat + type
+lordship-varsberg,ヴァルスベール領,seat + type
 lordship-volmerange,ヴォルムランジュ領,manual
-lordship-vry-devant-metz,Vry-devant-Metz 領,french + type
-lordship-weinsberg,Weinsberg 領,french + type
+lordship-vry-devant-metz,ヴリー領,manual
+lordship-weinsberg,ヴァインスベルク領,manual
+lorquin,ロルカン,manual
+lostroff,ロストロフ,manual
+loudrefing,ルドルファン,manual
+louis-de-bettainvillers,ルイ・ド・ベタンヴィレール,manual
+louis-de-carelle,ルイ・ド・カレル,manual
 louis-de-guise,ルイ・ド・ギーズ（ファルスブール公）,manual
-luttange,ルターニュ,wikidata
+louis-leiningen-westerburg,ルートヴィヒ・フォン・ライニンゲン＝ヴェスターブルク,manual
+loupershouse,ルペルスーズ,manual
+loutremange,ルトルマンジュ,manual
+loutzviller,ルツヴィレール,manual
+luttange,リュタンジュ,manual
+lutzelbourg,リュッツェルブール,manual
+lutzelhardt,リュッツェルアルト,manual
 macheren,マシュラン,wikidata
+macker,マケール,manual
+mackviller,マクヴィレール,manual
+mailing,マラン,manual
+mainvillers,マンヴィレール,manual
+maizieres,メジエール,manual
+malaucourt,マロクール,manual
+mancy,マンシー,manual
+manderen,マンドラン,manual
+manhoue,マヌエ,manual
+many,マニー,manual
+maquenom,マクノム,manual
+marange,マランジュ,manual
+marie-claire-de-croy,マリー＝クレール・ド・クロイ,manual
+marienfloss,マリエンフロス,manual
+marienthal,マリエンタール,manual
+marimont,マリモン,manual
 marmoutier,マルムーティエ,wikidata
 marpingen,マルピンゲン,wikidata
+marquisate-baden,バーデン辺境伯領,manual
 marquisate-faulquemont,フォルクモン侯爵領,manual
-marquisate-nomeny,Nomeny 侯爵領,french + type
+marquisate-nomeny,ノメニー侯爵領,manual
 marquisate-pont-a-mousson,ポンタ＝ムッソン侯爵領,seat + type
 marsal,マルサル,wikidata
-mayoralty-altheim,Altheim 村長区,french + type
-mayoralty-basse-ham,Basse-Ham 村長区,french + type
-mayoralty-boucheporn,Boucheporn 村長区,french + type
-mayoralty-boustroff,Boustroff 村長区,french + type
-mayoralty-cutting,Cutting 村長区,french + type
-mayoralty-farschviller,Farschviller 村長区,french + type
-mayoralty-hellimer,Hellimer 村長区,french + type
-mayoralty-hilsprich,Hilsprich 村長区,french + type
-mayoralty-holving,Holving 村長区,french + type
-mayoralty-inferieure-du-saargau-a-schwemlingen,Mairie inférieure du Saargau à Schwemlingen 村長区,french + type
+marthille,マルティーユ,manual
+martzloff-de-braubach,マルツォルフ・フォン・ブラウバッハ,manual
+maxstadt,マクスタット,manual
+mayoralty-altheim,アルトハイム村長区,seat + type
+mayoralty-basse-ham,バス＝アム村長区,manual
+mayoralty-boucheporn,ブシュポルン村長区,seat + type
+mayoralty-boustroff,ブストロフ村長区,seat + type
+mayoralty-cutting,キュタン村長区,seat + type
+mayoralty-farschviller,ファルシュヴィレール村長区,seat + type
+mayoralty-hellimer,エリメール村長区,seat + type
+mayoralty-hilsprich,イルスプリシュ村長区,seat + type
+mayoralty-holving,オルヴァン村長区,seat + type
+mayoralty-inferieure-du-saargau-a-schwemlingen,シュヴェムリンゲンのザールガウ下村長区,manual
 mayoralty-insming,アンスマン村長区,seat + type
-mayoralty-lindre,Lindre 村長区,french + type
-mayoralty-metzing,Metzing 村長区,french + type
-mayoralty-montenach,Montenach 村長区,french + type
+mayoralty-lindre,ランドル村長区,manual
+mayoralty-metzing,メッツァン村長区,seat + type
+mayoralty-montenach,モントナック村長区,seat + type
 mayoralty-puttelange,ピュトランジュ村長区,seat + type
-mayoralty-rahling,Rahling 村長区,french + type
-mayoralty-remering,Rémering 村長区,french + type
-mayoralty-riche,Riche 村長区,french + type
-mayoralty-rurange,Rurange 村長区,french + type
-mayoralty-schorbach,Schorbach 村長区,french + type
+mayoralty-rahling,ララン村長区,seat + type
+mayoralty-remering,レメラン村長区,seat + type
+mayoralty-riche,リッシュ村長区,seat + type
+mayoralty-rurange,リュランジュ村長区,seat + type
+mayoralty-schorbach,ショルバック村長区,seat + type
 mayoralty-siersberg,ジールスベルク村長区,seat + type
-mayoralty-superieure-du-saargau-a-hilbringen,Mairie supérieure du Saargau à Hilbringen 村長区,french + type
-mayoralty-teting,Téting 村長区,french + type
-mayoralty-walschbronn,Walschbronn 村長区,french + type
+mayoralty-superieure-du-saargau-a-hilbringen,ヒルブリンゲンのザールガウ上村長区,manual
+mayoralty-teting,テタン村長区,seat + type
+mayoralty-walschbronn,ヴァルシュブロン村長区,seat + type
+mechern,メッヒェルン,manual
+megange,メガンジュ,manual
+meilherg,メルベール,manual
+meinsberg,マンスベール,manual
 meisenthal,マイゼンタール,wikidata
+melkerhof,メルカーホーフ,manual
+menningen,メニンゲン,manual
+menskirch,メンスキルシュ,manual
+merchingen,メルヒンゲン,manual
+merlebach,メルルバック,manual
+merschweiller,メルシュヴィレール,manual
+merten,メルタン,manual
 merzig,メルツィヒ,wikidata
+metrich,メトリシュ,manual
+metring,メトラン,manual
+metting,メタン,manual
 mettlach,メトラッハ,wikidata
+mettnich,メトニヒ,manual
 metz,メス,wikidata
-momberg,シュタインベルク (ヴァーダーン),wikidata
+metzeresche,メッツェレッシュ,manual
+metzervisse,メッツェルヴィッス,manual
+metzing-elvange,ミンツィンゲン,manual
+metzing-forbach,メッツァン,manual
+michelbach,ミヒェルバッハ,manual
+mittelbollenbach,ミッテルボレンバッハ,manual
+mittelbronn,ミテルブロン,manual
+mittersheim,ミテルセム,manual
+momberg,シュタインベルク,wikidata
+momerstroff,モメルストロフ,manual
+monclair,モンクレール,manual
+moncourt,モンクール,manual
+mondorf,モンドルフ,manual
+monneren,モヌラン,manual
+montbronn,モンブロン,manual
+montdidier,モンディディエ,manual
+montenach,モントナック,manual
+montrequienne,モンルキエンヌ,manual
 morhange,モランジュ,manual
+morlange,モルランジュ,manual
+morsbach,モルスバック,manual
+morsbronn,モルスブロン,manual
+morville,モルヴィル,manual
+moussey,ムセ,manual
+mouterhouse,ムテルーズ,manual
+moyenvic,モワイヤンヴィック,manual
+mulcey,ミュルセ,manual
+munchweiler,ミュンヒヴァイラー,manual
 munster,ミュンスター,wikidata
 nalbach,ナルバッハ,wikidata
+namborn,ナムボルン,manual
+narbefontaine,ナルベフォンテーヌ,manual
+nebing,ネバン,manual
+neipel,ナイペル,manual
+nelling,ネラン,manual
+nennig,ネニヒ,manual
+neudlange,ヌードランジュ,manual
+neudorf,ヌードルフ,manual
+neufgrange,ヌーフグランジュ,manual
+neufmoulins,ヌフムーラン,manual
+neufvillage,ヌフヴィラージュ,manual
+neunhofen,ヌンオフェン,manual
+neunkirch,ヌンキルシュ,manual
+neunkirchen-bitche,ヌンキルシャン＝レ＝ビッチュ,manual
+neunkirchen-bouzonville,ヌンキルシャン＝レ＝ブーゾンヴィル,manual
+neunkirchen-turkismiihle,ノインキルヒェン,manual
+neuviller,ヌヴィレール,manual
+nicolas-collet,ニコラ・コレ,manual
+nicolas-de-pullenoy,ニコラ・ド・ピュルノワ,manual
+nicolas-de-vaudemont,ニコラ・ド・ヴォーデモン＝メルクール,manual
+nicolas-de-weis,ニコラ・ド・ヴァイス,manual
+nicolas-francois-lorraine,ニコラ＝フランソワ・ド・ロレーヌ,manual
+nidange,ニダンジュ,manual
+nideck,ニデック,manual
+niderhoff,ニデルオフ,manual
 niderviller,ニーデルヴィレー,wikidata
+niedaltdorf,ニートアルトドルフ,manual
 niederbronn,ニーデルブロン＝レ＝バン,wikidata
+niedergailbach,ニーダーガイルバッハ,manual
+niederhofen,ニーダーホーフェン,manual
+niederlostern,ニーダーロステルン,manual
+niedersaubach,ニーダーザウバッハ,manual
+niedersteinhach,ニデルスタンバック,manual
+niederstinzel,ニデルスタンゼル,manual
+niedervisse,ニデルヴィッス,manual
+niedwellingen,ニードヴェラン,manual
 nittel-sur-moselle,ニッテル,wikidata
+nitting,ニタン,manual
 nohfelden,ノーフェルデン,wikidata
+nohn,ノーン,manual
 nonnweiler,ノンヴァイラー,wikidata
+nousseviller-les-bitche,ヌスヴィレール＝レ＝ビッチュ,manual
+nousseviller-saint-nabor,ヌスヴィレール,manual
 nunkirchen,ヌンキルヒェン,wikidata
+oberdorf,オベルドルフ,manual
+oberesch,オーバーエッシュ,manual
+obergailbach,オベルガイルバック,manual
+oberleuken,オーバーロイケン,manual
+obernaumen,オベルノーマン,manual
+obersheim,オベルセム,manual
+oberstein,オーバーシュタイン,manual
+oberstinzel,オベルスタンゼル,manual
+obervisse,オベルヴィッス,manual
+obreck,オブレック,manual
+obrick,オブリック,manual
+odenhofen,オダンオフェン,manual
+oermingen,エルマンジャン,manual
 oeting,オエティン,wikidata
 office-berus,ベールス管区,seat + type
 office-boulay,ブレ管区,seat + type
 office-dieuze,ディウーズ管区,seat + type
 office-faulquemont,フォルクモン管区,seat + type
 office-forbach,フォルバック管区,seat + type
-office-herange,Hérange 管区,french + type
+office-herange,エランジュ管区,seat + type
 office-hombourg-haut,オンブール＝オー管区,manual
 office-merzig,メルツィヒ共同統治地,seat + type
 office-morhange,モランジュ管区,seat + type
@@ -277,65 +1224,384 @@ office-phalsbourg,ファルスブール管区,seat + type
 office-puttelange,ピュトランジュ管区,seat + type
 office-sarralbe,サラルブ管区,seat + type
 office-sarreguemines,サルグミーヌ管区,seat + type
-office-sarrewerden-et-herbitzheim,サールヴェルデン・ヘルビッツハイム管区,manual
+office-sarrewerden-et-herbitzheim,サールヴェルデン・エルビッツェム管区,manual
 office-schaumberg,シャウムベルク管区,seat + type
-office-sergenterie-de-bining,Bining 廷吏区,french + type
-office-sergenterie-ou-buttelei-de-rimling,Rimling 廷吏区,french + type
+office-sergenterie-de-bining,ビナン廷吏区,seat + type
+office-sergenterie-ou-buttelei-de-rimling,リムラン廷吏区,seat + type
 office-sierck,シエルク管区,seat + type
 office-siersberg,ジールスベルク管区,seat + type
 office-vaudrevange,ヴァラーファンゲン管区,seat + type
+offviller,オフヴィレール,manual
+ohersteinbach,オベルスタンバック,manual
+olferding,オルフェルダン,manual
+ommeray,オムレ,manual
 oppen,オッペン,wikidata
+ormesviller,オルメスヴィレール,manual
+orscholz,オルショルツ,manual
+osenhach,オーゼンバッハ,manual
+ottonville,オトンヴィル,manual
+ottviller,オットヴィレール,manual
+ottweiler-neumunster,ノイミュンスター,manual
+oudrenne,ウドレンヌ,manual
+pachten,パハテン,manual
+parlement-metz,メス高等法院,manual
+paul-de-salm,パウル・フォン・サルム,manual
 pays-messin,メス都市領（ペイ・メッサン）,manual
+penning,ペナン,manual
+perl,ペルル,manual
+petershach,ペテルスバック,manual
+petit-arnsberg,プティ＝アルンスベール,manual
+petit-breistroff,プティ＝ブレストロフ,manual
+petit-ebersviller,プティ＝エベルスヴィレール,manual
+petit-hettange,プティット＝エタンジュ,manual
+petit-rederching,プティ＝レデルシャン,manual
+petit-tenquin,プティ＝タンカン,manual
+petite-rosselle,プティット＝ロセル,manual
+petrange,ペトランジュ,manual
+pettoncourt,ペトンクール,manual
+pevange,ペヴァンジュ,manual
+pfaffenhoffen,パファンオフェン,manual
+pfalzweyer,ファルツヴェイエール,manual
 phalsbourg,ファルスブール,wikidata
+philippe-de-forbach,隊長フィリップ・ド・フォルバック,manual
+philippe-de-vigneulles,フィリップ・ド・ヴィニュル,manual
+philippe-ii-leiningen-rechicourt,フィリップ2世・フォン・ライニンゲン＝リクシンゲン,manual
+philippe-otto-salm,フィリップ・オットー・フォン・サルム,manual
+philippsbourg,フィリップスブール,manual
+piblange,ピブランジュ,manual
+pierre-de-kallenbach,ペーター・フォン・カレンバッハ,manual
+pierre-ernest-de-crehange,ピエール＝エルネスト・ド・クレアンジュ,manual
+pierre-ernest-i-crehange-bacourt,ピエール＝エルネスト1世・ド・クレアンジュ＝バクール,manual
+pierre-joly,メス国王検事総長ピエール・ジョリ,manual
+piesbach,ピースバッハ,manual
 pirmasens,ピルマゼンス,wikidata
-pommern,ポンメルン (モーゼル),wikidata
+plappecourt,プラペクール,manual
+pommern,ポンメルン,wikidata
 pont-a-mousson,ポンタ＝ムッソン,wikidata
+pontigny,ポンティニー,manual
+pontpierre,ポンピエール,manual
+porcelette,ポルスレット,manual
+postroff,ポストロフ,manual
+primicier-metz,メス大聖堂首席司祭,manual
+primsweiler,プリムスヴァイラー,manual
 principality-lixheim,リクサイム侯国,seat + type
 principality-phalsbourg,ファルスブール侯国,manual
-provostship-amance,Amance 代官区,french + type
+priory-insming,アンスマン小修道院,manual
+priory-zell,ゼル小修道院,manual
+provostship-amance,アマンス代官区,manual
 provostship-eblange,エブリンゲン代官区,seat + type
 provostship-insming,アンスマン代官区,seat + type
-provostship-ketternostern,Ketternostern 代官区,french + type
+provostship-ketternostern,ケッテルノステルン代官区,manual
 provostship-marche-de-chateau-salins,シャトー＝サラン帝国辺境区,manual
-provostship-remich,Remich 代官区,french + type
+provostship-remich,レミヒ代官区,manual
 provostship-rurale-de-sierck,シエルク農村代官区,seat + type
 provostship-sarrebourg,サールブール代官区,seat + type
 provostship-sierck,シエルク代官区,manual
 provostship-sous-sierck,シエルク副代官区,manual
 provostship-thionville,ティオンヴィル代官区,seat + type
-provostship-winterbach,Winterbach 代官区,french + type
+provostship-winterbach,ヴィンターバッハ代官区,seat + type
+puberg,ピュベール,manual
 puttelange,ピュトランジュ,manual
+puttigny,ピュティニー,manual
+puzieux,ピュジュー,manual
 quierschied,クヴィーアシート,wikidata
+racrange,ラクランジュ,manual
+rahling,ララン,manual
+rammelfangen,ラメルファンゲン,manual
+ranschborn,ランシュボルン,manual
+rappweiler,ラップヴァイラー,manual
+rathen,ラーテン,manual
+ratzviller,ラツヴィレール,manual
+raville,ラヴィル,manual
+rech,レッヒ,manual
+rech-ballem,レッヒ,manual
+rech-sarralbe,レック,manual
+rechicourt-la-petite,レシクール＝ラ＝プティット,manual
+reding,レダン,manual
+redlach,レドラック,manual
+rehlingen-sur-moselle,レーリンゲン,manual
 rehlingen-sur-sarre,レーリンゲン＝ジールスブルク,wikidata
+reimsbach,ライムスバッハ,manual
+reinange,レナンジュ,manual
+reinheim,ラインハイム,manual
+reipertswiller,レペルツヴィレール,manual
+reisweiler,ライスヴァイラー,manual
+reitscheid,ライトシャイト,manual
+reitweiler,ライトヴァイラー,manual
+remacle-de-bockenheimer,ジールスベルク隊長レマクル・ド・ボッケンハイム,manual
+remeldorf,レメルドルフ,manual
+remelfang,レメルファン,manual
+remelfing-sarreguemines,レメルファン,manual
+remelfing-sierck,レメラン,manual
+remering-bouzonville,レメラン＝レ＝ブーゾンヴィル,manual
+remering-puttelange,レメラン,manual
+remilly,レミイ,manual
+remsing,レムザン,manual
+rene-de-hilbrange,ルネ・ド・ヒルブリンゲン,manual
+rening,レナン,manual
+renting,ランタン,manual
+rettel,レテル,manual
+rexingen,レクサンジャン,manual
+reyersviller,レイエルスヴィレール,manual
+rhingrave-frederic,ダウンのライン伯フリードリヒ,manual
+rhingrave-otto,モランジュ領主ライン伯オットー,manual
 rhingraves-daun,ダウン系ライン伯家,manual
+rhingraves-kyrbourg,キルブルクのライン伯家,manual
+rhodes,ロード,manual
+riche,リッシュ,manual
+richeling,リシュラン,manual
+richeval,リシュヴァル,manual
+ricrange,リクランジュ,manual
 riedelberg,リーデルベルク,wikidata
+riimmelbach,リュンメルバッハ,manual
+rilchingen,リルヒンゲン,manual
+rimling,リムラン,manual
+rimstroff,リムストロフ,manual
+ripplingen,リップリンゲン,manual
+rissenthal,リッセンタール,manual
+ritzing,リツァン,manual
+rodalbe,ロダルブ,manual
+rode-insviller,ロード,manual
+rode-morhange,ロード,manual
+roden,ローデン,manual
+rodlach,ロドラック,manual
+rohr,ロール,manual
+rohrbach,ロールバック,manual
+rohrbach-la-petite,ロールバック＝ラ＝プティット,manual
+rohrhach,ロールバック＝レ＝ディウーズ,manual
+rolbing,ロルバン,manual
+romelfing,ロメルファン,manual
+roppeviller,ロップヴィレール,manual
+rosbruck,ロスブリュック,manual
+rosteig,ロスタイグ,manual
+roth,ロート,manual
+rouhling,ルーラン,manual
+roupeldange,ルペルダンジュ,manual
+rouviller,ルヴィレール,manual
+ruchling,リュシュラン,manual
+rudling,リュドラン,manual
+rurange-megange,リュランジュ,manual
+rurange-metzervisse,リュランジュ,manual
+rustroff,リュストロフ,manual
 saargau,ザールガウ共同統治地,manual
+saarwellingen-14,ザールヴェリンゲン,manual
+saint-arnual,ザンクト・アルヌアル,manual
 saint-avold,サンタヴォル,wikidata
+saint-bernard,サン＝ベルナール,manual
+saint-francois,サン＝フランソワ,manual
+saint-gangolf,ザンクト・ガンゴルフ,manual
 saint-georges,サン＝ジョルジュ,wikidata
+saint-hippolyte-haut-rhin,サン＝ティポリット,manual
+saint-hubert,サン＝テュベール,manual
+saint-jean-de-bassel,サン＝ジャン＝ド＝バセル,manual
+saint-jean-rohrbach,サン＝ジャン＝ロールバック,manual
+saint-louis,サン＝ルイ,manual
+saint-medard,サン＝メダール,manual
+saint-michel,サン＝ミシェル,manual
 saint-nabor,サン＝ナボール,wikidata
 saint-quirin,サン＝キラン,wikidata
+saint-sauveur,サン＝ソヴール,manual
+sainte-marguerite,サント＝マルグリット,manual
+sainte-marie,サント＝マリー,manual
+salival,サリヴァル,manual
+salonnes,サロンヌ,manual
+saltzbronn,サルツブロン,manual
+samson-de-hausen,ザムゾン・フォン・ハウゼン,manual
 sarralbe,サラルブ,manual
+sarraltroff,サラルトロフ,manual
 sarrebourg,サールブール,wikidata
 sarreck,サレック,manual
 sarreguemines-m,サルグミーヌ,wikidata
 sarrehruck,ザールブリュッケン,wikidata
+sarreinsming,サランスマン,manual
 sarrewerden,サールヴェルデン,manual
+schalbach,シャルバック,manual
 schaumberg,シャウムベルク,manual
+schellenbach,シェレンバッハ,manual
+scheuern-charleville,ショイエルン,manual
+scheuern-hasborn,ショイエルン,manual
+scheuerwald,ショイエルヴァルト,manual
+schirmeter,シルメテール,manual
+schmalenthal,シュマランタル,manual
+schoenbourg,シェーンブール,manual
+schopperten,ショペルタン,manual
+schorbach,ショルバック,manual
+schreckling,シュレクラン,manual
+schwarzmerter,シュヴァルツメルテール,manual
+schweighard-hunolstein,シュヴァイクハルト・フォン・フノルシュタイン,manual
+schweix-gueblange-les-sarralbe,シュヴェクス,manual
 schweix-pirmasens,シュヴァイクス,wikidata
+schwemlingen,シュヴェムリンゲン,manual
+schwerdorf,シュヴェルドルフ,manual
+schweyen,シュヴェイアン,manual
+sebastien-de-daun,オーバーシュタイン領主ゼバスティアン・フォン・ダウン,manual
+sehndorf,ゼーンドルフ,manual
+seigneurie-d-elvange,エルヴァンジュ領,manual
+seingbouse,サンブス,manual
+seitzweiler,ザイツヴァイラー,manual
+selbach,ゼルバッハ,manual
+setting,セタン,manual
 sierck,シエルク,manual
 siersberg,ジールスベルク,manual
+siersdorf,ジールスドルフ,manual
+siersthal,シエルスタル,manual
+sieur-dahr,アール卿,manual
+sieur-de-cerisy,レムザン領主スリジー卿,manual
+sieur-de-la-haye,ラ・エ卿,manual
+sieur-de-mercy,メルシー卿,manual
+sieviller,シーヴィレール,manual
+sigismond-wecker-linange-rechicourt,ジギスムント・ヴェッカー・フォン・ライニンゲン＝レシクール・ウント・ダークスブルク,manual
+silwingen,ジルヴィンゲン,manual
+silzheim,シルザム,manual
+simten,ジムテン,manual
+sotzeling,ソツラン,manual
+sotzweiler,ゾッツヴァイラー,manual
 spicheren,スピシャラン,wikidata
+stanwenstein,シュタウシュタイン,manual
+stat,シュタット,manual
+steinbach-audviller,スタンバック,manual
+steinbach-eppelborn,シュタインバッハ,manual
+steinbach-vergaville,スタンバック,manual
+steinhausen,シュタインハウゼン,manual
+stoncourt-les-villers,ストンクール,manual
+struth,ストリュト,manual
+stuckange,ステュカンジュ,manual
+sturzelbronn,ストゥルツェルブロン,manual
+suisse,スイス,manual
+tarquimpol,タルカンポル,manual
+tenteling,タントラン,manual
+teterchen,テテルシェン,manual
+teting,テタン,manual
 teutonic-order,ドイツ騎士団,manual
+thal,タル,manual
+thalexweiler,タールエクスヴァイラー,manual
+thalfroschen,タールフレッシェン,manual
 theding,テダン,wikidata
+theley,テーライ,manual
+theodore-bock,シエルクの代官テオドール・ボック,manual
+thicourt,ティクール,manual
 thionville,ティオンヴィル,wikidata
 tholey,トーライ,wikidata
 thonville,トンヴィル,wikidata
+tieffenbach,ティーファンバック,manual
+tiitting,テュッタン,manual
+torcheville,トルシュヴィル,manual
+tripoli,トリポリ,manual
+tritteling,トリトラン,manual
+tromborn,トロンボルン,manual
 trulben,トルルベン,wikidata
+tunsdorf,テュンスドルフ,manual
+tunting,テュンタン,manual
+turquestein,テュルクスタン,manual
+uberkinger,ユベルカンジェ,manual
+uchtelfangen,ウフテルファンゲン,manual
+uhrviller,ユルヴィレール,manual
+ulrich-huffnagel,ウルリヒ・フフナーゲル,manual
+university-heidelberg,ハイデルベルク大学,manual
+urbach,ユルバック,manual
+utweiler,ウトヴァイラー,manual
+v-olksherg,ヴォルクスベール,manual
+vahl-dieuze,ヴァル,manual
+vahl-ebersing,ヴァル＝エベルサン,manual
+vahl-faulquemont,ヴァル＝レ＝フォルクモン,manual
+valette,ヴァレット,manual
+vallerange,ヴァルランジュ,manual
+valmont,ヴァルモン,manual
+valmunster,ヴァルマンステール,manual
+vanne-court,ヴァヌクール,manual
+varize,ヴァリーズ,manual
+varsberg,ヴァルスベール,manual
+vatimont,ヴァティモン,manual
+vaudoncourt,ヴォドンクール,manual
+vaudreching,ヴォドルシャン,manual
 vaudrevange,ヴァラーファンゲン,wikidata
+veckersviller,ヴェケルスヴィレール,manual
+veckring,ヴェクラン,manual
+velling,ヴェラン,manual
+velving,ヴェルヴァン,manual
+vergaville,ヴェルガヴィル,manual
+veschheim,ヴェシェム,manual
+veuve-weis,ヴァイス未亡人,manual
+vibersviller,ヴィベルスヴィレール,manual
 vic-sur-seille,ヴィック＝シュル＝セーユ,wikidata
+vieux-lixheim,ヴュー＝リクサイム,manual
+viller,ヴィレール,manual
+villers-bettnach,ヴィレール＝ベトナック,manual
+villers-stoncourt,ヴィレール,manual
+villing,ヴィラン,manual
+vilsberg,ヴィルスベール,manual
 vinningen,ヴィニンゲン,wikidata
+virming,ヴィルマン,manual
+vittersbourg,ヴィテルスブール,manual
+vittoncourt,ヴィトンクール,manual
+voelklingen,フェルクリンゲン,manual
+voellerdingen,フェレルダンジャン,manual
+volkrange,ヴォルクランジュ,manual
 volmerange,ヴォルムランジュ,manual
+volmunster,ヴォルマンステール,manual
+volstroff,ヴォルストロフ,manual
+voyer,ヴォワイエ,manual
+w-oustviller,ウストヴィレール,manual
 w-rth,ヴルト,wikidata
 wadern,ヴァーダーン,wikidata
-wadrill,ヴァドリル (ヴァーダーン),wikidata
-weiler-im-loch,ベルクヴァイラー (ベルンカステル＝ヴィットリヒ),wikidata
+wadgassen,ヴァトガッセン,manual
+wadrill,ヴァドリル,wikidata
+wahl-en,ヴァーレン,manual
+waldeck,ヴァルデック,manual
+waldhambach,ヴァルダンバック,manual
+waldhouse,ヴァルドゥーズ,manual
+waldvisse,ヴァルドヴィッス,manual
+waldweistroff,ヴァルドヴェストロフ,manual
+walschbronn,ヴァルシュブロン,manual
+walscheidt,ヴァルシェード,manual
+walsheim,ヴァルスハイム,manual
+wehingen,ヴェーインゲン,manual
+weidesheim,ヴェデセム,manual
+weiersbach-bleiderdingen,ヴァイヤースバッハ,manual
+weiler,ヴァイラー,manual
+weiler-im-loch,ベルクヴァイラー,wikidata
+weinbourg,ヴァンブール,manual
+weiskirch,ヴェスキルシュ,manual
+weisslingen,ヴェスラン,manual
+weiten,ヴァイテン,manual
+welferding,ヴェルフェルダン,manual
+wellingen-hilbringen,ヴェリンゲン,manual
+wentzviller,ヴァンツヴィレール,manual
+werdenstein,ヴェルデンシュタイン,manual
+wetschhausen,ヴェッチュハウゼン,manual
+weyer-drulingen,ヴェイエール,manual
+widow-jean-morbach,メンスキルシュ領主ジャン・モルバッハの未亡人,manual
+wies,ヴィース,manual
+wiesbach,ヴィースバッハ,manual
+wiesing,ヴィザン,manual
+wiesviller,ヴィースヴィレール,manual
+willer,ヴィレール,manual
+willerwald,ヴィレルヴァルト,manual
+wimmenau,ヴィムノー,manual
+wingen,ヴァンジャン,manual
+winterbach,ヴィンターバッハ,manual
+wintersbourg,ヴァンテルスブール,manual
+wintrange,ヴァントランジュ,manual
+wintringen,ヴィントリンゲン,manual
+winzeln,ヴィンツェルン,manual
+wirich-de-crehange,クレアンジュ男爵ヴィリッヒ,manual
+wittring,ヴィトラン,manual
+wochern,ヴォッヘルン,manual
+woelfling-bouzonville,ヴェルフラン＝レ＝ブーゾンヴィル,manual
+woelfling-sarreguemines,ヴェルフラン,manual
+wolff-de-bettembourg,ルクセンブルクの代官ヴォルフ・ド・ベタンブール,manual
+wolfskirchen,ヴォルフスキルシュ,manual
+wuisse,ヴイッス,manual
+xanrey,クサンレ,manual
+xocourt,クソクール,manual
+xouaxange,クアクサンジュ,manual
+xousse,クース,manual
+zarbeling,ザルブラン,manual
+zell,ゼル,manual
+zeurange,ズランジュ,manual
+zilling,ジラン,manual
+zimming,ジマン,manual
+zinzing,ザンザン,manual
+zollingen,ゾランジャン,manual
+zommange,ゾマンジュ,manual
+zondrange,ゾンドランジュ,manual

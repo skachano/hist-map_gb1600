@@ -26,7 +26,6 @@ from bailliage.data import store, validate
 from bailliage.data.models import YEAR_MAX, YEAR_MIN
 
 OUT_DIR = config.WEB_DATA_DIR
-SNIPPET_MAX = 200  # short quotes only (the book is a licensed copy)
 SIZE_BUDGET = 2_000_000
 
 
@@ -63,6 +62,38 @@ def ruler_dates(notes: str | None) -> dict | None:
         book = None if {lo, hi or lo} == {"…"} else lo if not hi or lo == hi else f"{lo}–{hi}"
     return _compact({"reign": f"{a}–{b}", "book": book, "contradicts": verb == "gives" or None,
                      "why": why or None})
+
+
+def _event_key(e) -> tuple:
+    def text(v) -> str:
+        return "" if v is None else str(v)
+    return (text(e.year), text(e.place_id), text(e.right_type), text(e.from_holder), text(e.to_holder),
+            text(e.event_type))
+
+
+def event_texts() -> dict[tuple, dict[str, str]]:
+    """What the site says about each change, in four languages. The extracted descriptions follow
+    the book's wording closely, so they are not published: data/curated/event_summaries.csv gives
+    every change a short text in our own words (en, fr, de, ja). For hand-entered events the
+    English is their own description (manual/events.csv). Keyed by (year, place, right, from, to,
+    event type)."""
+    manual: dict[tuple, str] = {}
+    path = config.CURATED_DIR / "manual" / "events.csv"
+    if path.exists():
+        with path.open(newline="") as f:
+            for r in csv.DictReader(f):
+                manual[tuple(r[k] for k in _EVENT_KEY)] = r["description"]
+    out: dict[tuple, dict[str, str]] = {}
+    path = config.CURATED_DIR / "event_summaries.csv"
+    if path.exists():
+        with path.open(newline="") as f:
+            for r in csv.DictReader(f):
+                key = tuple(r[k] for k in _EVENT_KEY)
+                out[key] = _compact({"en": manual.get(key) or r["en"], "fr": r["fr"], "de": r["de"], "ja": r["ja"]})
+    return out
+
+
+_EVENT_KEY = ("year", "place_id", "right_type", "from_holder", "to_holder", "event_type")
 
 
 def _pages(ref: str | None) -> str | None:
@@ -134,14 +165,14 @@ def build() -> dict[str, int]:
         "disputed": r.is_disputed, "against": sorted(r.disputed_with),
         "from": r.from_year, "to": r.to_year, "fp": r.from_precision, "tp": r.to_precision,
         "conf": None if r.confidence == "high" else r.confidence,
-        "pages": _pages(r.source_page),
-        "quote": (r.snippet or "")[:SNIPPET_MAX], "note": r.notes,
+        "pages": _pages(r.source_page),  # no quotations or notes: the site cites pages, not the book's text
     }) for _, r in sorted(ds.rights, key=lambda lr: (lr[1].place_id, lr[1].right_type, lr[1].from_year or 0,
                                                      lr[1].holder_id))]
 
+    texts = event_texts()
     events = [_compact({
         "year": e.year, "place": e.place_id, "right": e.right_type, "from": e.from_holder, "to": e.to_holder,
-        "type": e.event_type, "text": e.description, "conf": None if e.confidence == "high" else e.confidence,
+        "type": e.event_type, "text": texts.get(_event_key(e)), "conf": None if e.confidence == "high" else e.confidence,
         "pages": _pages(e.source_page),
     }) for _, e in sorted(ds.events, key=lambda le: (le[1].year, le[1].place_id, le[1].event_type))]
 

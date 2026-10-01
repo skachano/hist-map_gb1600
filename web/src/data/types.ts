@@ -89,8 +89,6 @@ export interface Right {
   /** absent = high */
   conf?: "medium" | "low";
   pages?: string;
-  quote?: string;
-  note?: string;
 }
 
 export interface HistEvent {
@@ -100,7 +98,7 @@ export interface HistEvent {
   from?: string;
   to?: string;
   type: string;
-  text: string;
+  text?: Names; // our own summary, in each language
   conf?: "medium" | "low";
   pages?: string;
 }

@@ -94,3 +94,28 @@ def test_rulers_show_where_their_dates_come_from(built):
     assert rulers["Rodolphe II"]["dates"] == {"reign": "1576–1612", "book": "1609"}
     assert rulers["Frédéric, rhingrave de Daun"]["dates"]["book"] == "1547–1610"
     assert "dates" not in rulers["Henri II"]  # exact dates from the book itself
+
+
+def test_no_quotations_on_the_public_site(built):
+    """The site cites pages only: the book's text (a licensed copy) is not published."""
+    assert not any({"quote", "snippet", "note"} & set(r) for r in built["load"]("rights.json"))
+
+
+def test_hand_written_descriptions_have_current_translations():
+    """event_summaries.csv repeats each hand-entered event's English description next to its
+    translations: a description edited since must have its translations redone."""
+    import csv
+    from bailliage import config
+    summaries = {tuple(r[k] for k in web_data._EVENT_KEY): r["en"]
+                 for r in csv.DictReader((config.CURATED_DIR / "event_summaries.csv").open(newline=""))}
+    for r in csv.DictReader((config.CURATED_DIR / "manual" / "events.csv").open(newline="")):
+        assert summaries.get(tuple(r[k] for k in web_data._EVENT_KEY)) == r["description"], r["description"][:60]
+
+
+def test_every_change_has_a_text_of_our_own(built):
+    """Each change shows a summary in our own words (event_summaries.csv) or a hand-written description
+    (manual/events.csv), never the extracted text: a newly extracted event needs a summary."""
+    texts = web_data.event_texts()
+    for e in built["load"]("events.json"):
+        key = tuple("" if e.get(k) is None else str(e[k]) for k in ("year", "place", "right", "from", "to", "type"))
+        assert e.get("text") == texts[key] and set(e["text"]) == {"en", "fr", "de", "ja"}, key

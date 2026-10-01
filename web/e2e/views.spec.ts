@@ -118,7 +118,7 @@ test("ⓘ explains the selected right and links to About & sources", async ({ pa
   await expect(page.locator(".rights-explained dt")).toHaveCount(12);
 });
 
-test("Japanese: interface, right names and realm names; untranslated places keep their French name", async ({ page }) => {
+test("Japanese: interface, right names, realm and place names", async ({ page }) => {
   await open(page, "#/map?year=1620&right=high_justice&lang=en&place=office-sierck");
   await page.getByRole("button", { name: "日本語" }).click();
   await expect(page).toHaveURL(/lang=ja/);
@@ -128,7 +128,7 @@ test("Japanese: interface, right names and realm names; untranslated places keep
   const panel = page.locator("#panel");
   await expect(panel.locator("h2")).toHaveText("シエルク管区");
   await expect(panel).toContainText("JA シエルク管区");
-  await expect(panel.getByRole("button", { name: "Kédange" })).toBeVisible(); // no Japanese label: French
+  await expect(panel.getByRole("button", { name: "ケダンジュ" })).toBeVisible(); // Kédange
 });
 
 test("territories: one kind of realm at every level", async ({ page }) => {

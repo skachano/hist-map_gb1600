@@ -139,6 +139,6 @@ export function renderChanges(root: HTMLElement, data: Dataset, state: State, st
         e.right ? ` · ${label(vocab.right_types[e.right], lang, e.right)}` : "",
         e.from || e.to ? ` · ${e.from ? entityName(e.from) : "?"} → ${e.to ? entityName(e.to) : "?"}` : "",
         e.pages ? h("span", { class: "pages" }, ` ${t("pages", lang)} ${e.pages}`) : "",
-        h("div", { class: "muted" }, e.text))))))),
+        h("div", { class: "muted" }, name(e.text, lang)))))))),
   );
 }

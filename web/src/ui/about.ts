@@ -13,7 +13,7 @@ const TEXT: Record<Lang, Section[]> = {
   en: [
     { title: "Source", paragraphs: [
       "Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632. L'administration, la justice, les finances et l'organisation militaire. Sarreguemines: Éditions Marcel Pierron, 1961. Read in the licensed digital reissue by FeniXX of the copy held by the Bibliothèque nationale de France.",
-      "Every right, change and membership carries the printed page numbers of the book it comes from (\"p. 51\"). Quotations are kept short (at most 200 characters) and only identify the passage; they do not replace the book.",
+      "Every right, change and membership carries the printed page numbers of the book it comes from (\"p. 51\"). The site does not reproduce the book's text: the page numbers lead to the passage.",
     ] },
     { title: "What the map shows", paragraphs: [
       "For each year from 1600 to 1632 and each kind of right, who held it over each settlement: suzerainty (dominium directum), high justice, middle and low justice, manorial lordship, advocacy, diocesan authority, tithes and other jurisdictions.",
@@ -36,7 +36,7 @@ const TEXT: Record<Lang, Section[]> = {
   fr: [
     { title: "Source", paragraphs: [
       "Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632. L'administration, la justice, les finances et l'organisation militaire. Sarreguemines : Éditions Marcel Pierron, 1961. Lu dans la réédition numérique sous licence de FeniXX, d'après l'exemplaire de la Bibliothèque nationale de France.",
-      "Chaque droit, changement et appartenance renvoie aux pages imprimées du livre (« p. 51 »). Les citations sont courtes (200 caractères au plus) et servent seulement à repérer le passage ; elles ne remplacent pas le livre.",
+      "Chaque droit, changement et appartenance renvoie aux pages imprimées du livre (« p. 51 »). Le site ne reproduit pas le texte du livre : les numéros de page renvoient au passage.",
     ] },
     { title: "Ce que montre la carte", paragraphs: [
       "Pour chaque année de 1600 à 1632 et chaque type de droit, qui le détenait sur chaque localité : souveraineté (domaine direct), haute justice, moyenne et basse justice, seigneurie foncière, avouerie, autorité diocésaine, dîmes et autres juridictions.",
@@ -59,7 +59,7 @@ const TEXT: Record<Lang, Section[]> = {
   de: [
     { title: "Quelle", paragraphs: [
       "Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632. L'administration, la justice, les finances et l'organisation militaire. Sarreguemines: Éditions Marcel Pierron, 1961. Gelesen in der lizenzierten digitalen Neuausgabe von FeniXX nach dem Exemplar der Bibliothèque nationale de France.",
-      "Jedes Recht, jede Veränderung und jede Zugehörigkeit nennt die gedruckten Seiten des Buches („S. 51“). Zitate sind kurz (höchstens 200 Zeichen) und dienen nur dem Auffinden der Stelle; sie ersetzen das Buch nicht.",
+      "Jedes Recht, jede Veränderung und jede Zugehörigkeit nennt die gedruckten Seiten des Buches („S. 51“). Die Seite gibt den Text des Buches nicht wieder: Die Seitenangaben führen zur Stelle.",
     ] },
     { title: "Was die Karte zeigt", paragraphs: [
       "Für jedes Jahr von 1600 bis 1632 und jede Art von Recht, wer es über jeden Ort innehatte: Oberherrschaft (dominium directum), Hochgerichtsbarkeit, Nieder- und Mittelgerichtsbarkeit, Grundherrschaft, Vogtei, Diözesangewalt, Zehnt und weitere Rechte.",
@@ -82,7 +82,7 @@ const TEXT: Record<Lang, Section[]> = {
   ja: [
     { title: "出典", paragraphs: [
       "Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632. L'administration, la justice, les finances et l'organisation militaire. Sarreguemines: Éditions Marcel Pierron, 1961.（アンリ・イジェル『ドイツ・バイイ管区 1600–1632年 ― 行政・司法・財政・軍事組織』）フランス国立図書館所蔵本を FeniXX が許諾のもとで電子復刻した版に拠る。",
-      "すべての権利・変更・所属には、典拠となる本書の印刷ページ（「p. 51」）を付した。引用は短く（200字以内）、該当箇所を示すためだけのもので、本書に代わるものではない。",
+      "すべての権利・変更・所属には、典拠となる本書の印刷ページ（「p. 51」）を付した。本サイトは本書の本文を転載せず、ページ番号で該当箇所を示す。",
     ] },
     { title: "地図が示すもの", paragraphs: [
       "1600年から1632年までの各年と各種の権利について、各集落でその権利を誰が保有していたかを示す：宗主権（上級所有権）、上級裁判権、中級・下級裁判権、土地領主権、教会守護権、司教区の管轄、十分の一税、その他の権限。",

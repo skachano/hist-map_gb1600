@@ -1,5 +1,5 @@
 // Place panel: names and type in three languages, parent territories, the rights held
-// there in the selected year (with pages and quotes), a 1600-1632 timeline per right,
+// there in the selected year (with their pages), a 1600-1632 timeline per right,
 // and the recorded changes of holder. Holder names open the holder view.
 import type { Dataset, Right } from "../data/types";
 import { label, LANGS, name, t } from "../i18n";
@@ -34,8 +34,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     r.status ? ` · ${label(vocab.statuses[r.status], lang, r.status)}` : "",
     r.disputed ? h("span", { class: "warn" }, ` · ⚠ ${t("against", lang)} ${(r.against ?? []).map(entityName).join(", ")}`) : "",
     years(r) ? ` · ${years(r)}` : "",
-    r.pages ? h("span", { class: "pages" }, ` ${t("pages", lang)} ${r.pages}`) : "",
-    r.quote ? h("blockquote", { lang: "fr" }, `« ${r.quote} »`) : null);
+    r.pages ? h("span", { class: "pages" }, ` ${t("pages", lang)} ${r.pages}`) : "");
 
   // Timelines: every right type with rows here, plus the main rights inherited from territories.
   const ownTypes = new Set(index.get(place.id)?.keys() ?? []);
@@ -116,7 +115,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
         e.right ? ` · ${label(vocab.right_types[e.right], lang, e.right)}` : "",
         e.from || e.to ? ` · ${e.from ? entityName(e.from) : "?"} → ${e.to ? entityName(e.to) : "?"}` : "",
         e.pages ? h("span", { class: "pages" }, ` ${t("pages", lang)} ${e.pages}`) : "",
-        h("div", { class: "muted" }, e.text))))
+        h("div", { class: "muted" }, name(e.text, lang)))))
       : h("p", { class: "muted" }, t("noEvents", lang)),
     place.pages ? h("p", { class: "muted" }, `${t("source", lang)}: Hiegel 1961, ${t("pages", lang)} ${place.pages}`) : null,
   );

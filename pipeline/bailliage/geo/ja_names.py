@@ -39,6 +39,12 @@ def wikidata_labels(qids: set[str]) -> dict[str, str]:
     return out
 
 
+def plain_label(label: str) -> str:
+    """Wikidata's Japanese labels carry disambiguators: 'イリンゲン (ザールラント)' -> 'イリンゲン',
+    'ディリンゲン/ザール' -> 'ディリンゲン'."""
+    return re.split(r"\s*[（(/]", label)[0].strip()
+
+
 def type_suffix(labels: dict) -> str:
     """'管区（アムト）' -> '管区': the short form to put after a name."""
     return re.split(r"[（(]", labels.get("ja", ""))[0].strip()
@@ -75,7 +81,7 @@ def run() -> None:
     names: dict[str, tuple[str, str]] = {}
     for pid, p in places.items():
         if p["kind"] == "settlement" and labels.get(p["wikidata_id"]):
-            names[pid] = (labels[p["wikidata_id"]], "wikidata")
+            names[pid] = (plain_label(labels[p["wikidata_id"]]), "wikidata")
     # Hand-written settlement names first: territories take their seat's name.
     names |= {pid: (n, "manual") for pid, n in manual.items() if places.get(pid, {}).get("kind") == "settlement"}
     by_name = {fold(places[pid]["name_fr"]): n for pid, (n, _) in names.items() if pid in places}
