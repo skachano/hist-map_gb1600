@@ -6,8 +6,7 @@ kedange,office-sierck,,,,,13;50,,
 anzeling,office-sierck,,,,,13;50,,
 hestroff,office-sierck,,,,,13;50,,
 chemery,office-sierck,,,,,13;50,,
-saargau,bailliage-allemagne,,,,,13-14,,
-office-merzig,bailliage-allemagne,,,,,14,,
+saargau,condominium-merzig-saargau,,,,,13-14;55,,"the Saargau and Merzig, the two halves of the condominium (pp. 13-14, 55)"
 county-sarrewerden,bailliage-allemagne,1629,,exact,,9;12,,'devenu lorrain seulement en 1629' (p. 9); added to the bailiwick in 1629 (p. 12).
 sarrewerden,county-sarrewerden,,,,,19,,
 bouquenom,county-sarrewerden,,,,,19,,
@@ -82,3 +81,12 @@ moncourt,office-dieuze,1600,1620,attested,attested,74,high,"added to the office 
 munster,office-dieuze,1600,1620,attested,attested,74,high,"added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)"
 obreck,office-dieuze,1600,1620,attested,attested,74,high,"added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)"
 ommeray,office-dieuze,1600,1620,attested,attested,74,high,"added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)"
+mayoralty-lindre,castellany-dieuze,,,,,20;74-75,high,"its villages are all in the castellany of Dieuze (p. 20)"
+mayoralty-cutting,lordship-marimont,,,,,20;74,high,"Domnon and Guinzeling are only in the castellany of Marimont (p. 20)"
+provostship-insming,lordship-marimont,,,,,20;74,high,"its villages are in the castellany of Marimont (p. 20)"
+mayoralty-insming,lordship-marimont,,,,,20;75,high,"its villages are in the castellany of Marimont (p. 20)"
+mayoralty-hellimer,lordship-marimont,,,,,20;75,high,"its villages are in the castellany of Marimont (p. 20)"
+mayoralty-inferieure-du-saargau-a-schwemlingen,saargau,,,,,55,high,
+mayoralty-superieure-du-saargau-a-hilbringen,saargau,,,,,55,high,
+lordship-lemberg-les-pirmasens,county-bitche,,1607,,exact,18;106,high,"Lorraine's half, until the evacuation of April 1607 (pp. 18, 106)"
+lemberg-pirmasens,lordship-lemberg-les-pirmasens,,,,,103;105;148,high,"the castle of Lemberg, seat of the lordship"

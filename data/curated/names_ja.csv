@@ -82,7 +82,6 @@ county-deux-ponts,Deux-Ponts 伯領,french + type
 county-eberstein,エーバーシュタイン伯家,manual
 county-falkenstein,Falkenstein 伯領,french + type
 county-hanau-lichtenberg,ハーナウ＝リヒテンベルク伯領,manual
-county-la-petite-pierre,County-la-petite-pierre 伯領,french + type
 county-lichtenberg,Lichtenberg 伯領,french + type
 county-nassau-saarbruecken,ナッサウ＝ザールブリュッケン伯領,manual
 county-nassau-sarrebruck,Nassau-Sarrebruck 伯領,french + type
@@ -173,7 +172,6 @@ lordship-berus,ベールス領,seat + type
 lordship-bionville,Bionville 領,french + type
 lordship-bracs,Bracs 領,french + type
 lordship-busbach,Busbach 領,french + type
-lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,Château et seigneurie de Lemberg-lès-Pirmasens 領,french + type
 lordship-chatillon,Châtillon 領,french + type
 lordship-chevalin,Chevalin 領,french + type
 lordship-col-de-cygne,コル・ド・シーニュ領（シュヴァーネンハルス）,manual
@@ -193,7 +191,6 @@ lordship-imperiale-de-crehange,Seigneurie impériale de Créhange 領,french + t
 lordship-inglange,Inglange 領,french + type
 lordship-kingertal,Kingertal 領,french + type
 lordship-lebach,レーバッハ領,seat + type
-lordship-lemberg,レムベルク (ドイツ)領,french + type
 lordship-lemberg-les-pirmasens,Lemberg-lès-Pirmasens 領,french + type
 lordship-lixing,Lixing 領,french + type
 lordship-lixing-rouhling,Lixing-Rouhling 領,french + type

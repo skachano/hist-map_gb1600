@@ -184,7 +184,7 @@ class PlaceResolver:
             self.places[p.id] = p
             for n in [m["name_fr"], m.get("name_de"), m.get("name_en"), *(m.get("variants") or "").split("|")]:
                 if n:
-                    self._manual_full[(m["kind"], fold(n))] = m["id"]
+                    self._manual_full.setdefault((m["kind"], fold(n)), m["id"])  # a shared name: the first row's
                     claims[(m["kind"], base_name(n))].add(m["id"])
         self._manual_names = {key: next(iter(ids)) for key, ids in claims.items() if len(ids) == 1}
     def _gazetteer_id(self, row: dict) -> str:

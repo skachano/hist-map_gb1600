@@ -320,7 +320,7 @@ class Builder:
             ms = list(self.memberships.values())
             # the fief lies in its office: cite the pages that give the fief's lands
             fief_pages = set().union(*(m["pages"] for m in ms if fief in (m["child_id"], m["parent_id"])))
-            in_other_fief = {m["child_id"] for m in ms if m["parent_id"] != fief
+            in_other_fief = {m["child_id"] for m in [*ms, *self.manual["memberships"]] if m["parent_id"] != fief
                              and self._type_of(m["parent_id"]) in FEUDAL_TYPES}
             for m in ms:
                 if m["parent_id"] == fief and is_settlement(m["child_id"]):

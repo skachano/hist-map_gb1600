@@ -118,7 +118,6 @@ office-dieuze,bailliage-allemagne,,,,,10-11;22;83,high,
 office-faulquemont,bailliage-allemagne,,,,,9;11;22;63,high,the office of Faulquemont (p. 63) among the units of the bailiwick
 office-forbach,bailliage-allemagne,,,,,9;11;22,high,shared lands of an office and its fief (rules.yaml split_realms)
 office-hombourg-haut,bailliage-allemagne,1600,,,,9;11;22,high,
-office-merzig,bailliage-allemagne,,,,,14,,
 office-morhange,bailliage-allemagne,,,,,10,high,
 office-phalsbourg,bailliage-allemagne,,,,,9;11;22,high,
 office-puttelange,bailliage-allemagne,,,,,9,high,
@@ -133,7 +132,6 @@ principality-lixheim,bailliage-allemagne,1623,,exact,,12;21,high,'Le bailliage s
 provostship-sarrebourg,bailliage-allemagne,,,,,9;22,high,
 rathen,bailliage-allemagne,,,,,10,high,
 reinange,bailliage-allemagne,,,,,10,high,
-saargau,bailliage-allemagne,,,,,13-14,,
 sarrebourg,bailliage-allemagne,,,,,11,high,
 wiesbach,bailliage-allemagne,,,,,10,high,
 bisping,ban-albeschau,,,,,151,high,
@@ -195,6 +193,7 @@ insming,castellany-dieuze,,,,,20,high,
 kerprich,castellany-dieuze,,,,,20;73-74,high,
 lindre-haute-et-basse,castellany-dieuze,,,,,20,high,
 loudrefing,castellany-dieuze,,,,,20,high,
+mayoralty-lindre,castellany-dieuze,,,,,20;74-75,high,its villages are all in the castellany of Dieuze (p. 20)
 mulcey,castellany-dieuze,,,,,20;73-74,high,
 rening,castellany-dieuze,,,,,20,high,
 saint-jean-rohrbach,castellany-dieuze,,,,,20,high,
@@ -280,9 +279,8 @@ salival,castellany-vic,,,,,78,high,
 salonnes,castellany-vic,,,,,78,high,
 vic-sur-seille,castellany-vic,,,,,78,high,
 xanrey,castellany-vic,,,,,78,high,
-mayoralty-inferieure-du-saargau-a-schwemlingen,condominium-merzig-saargau,,,,,55,high,
-mayoralty-superieure-du-saargau-a-hilbringen,condominium-merzig-saargau,,,,,55,high,
 office-merzig,condominium-merzig-saargau,,,,,55,high,
+saargau,condominium-merzig-saargau,,,,,13-14;55,,"the Saargau and Merzig, the two halves of the condominium (pp. 13-14, 55)"
 achen,county-bitche,,,,,18;70,high,
 alberting,county-bitche,,,,,18,high,
 altheim,county-bitche,,,,,18;70,high,
@@ -315,7 +313,7 @@ lambach,county-bitche,,,,,18;70,high,
 lemberg-bitche,county-bitche,,,,,18,high,
 lengelsheim,county-bitche,,,,,17;70,high,
 liederschiedt,county-bitche,,,,,18,high,
-lordship-lemberg-les-pirmasens,county-bitche,,,,,18,high,
+lordship-lemberg-les-pirmasens,county-bitche,,1607,,exact,18;106,high,"Lorraine's half, until the evacuation of April 1607 (pp. 18, 106)"
 loutzviller,county-bitche,,,,,18;70;83,high,
 mayoralty-altheim,county-bitche,,,,,69,high,
 mayoralty-hilsprich,county-bitche,,,,,18;69,high,
@@ -368,9 +366,7 @@ berange,county-boulay,,,,,59,high,shared lands of an office and its fief (rules.
 betting-zimming,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 bletting,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 boulay,county-boulay,,,,,16;59,high,shared lands of an office and its fief (rules.yaml split_realms)
-brecklange,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
 buchingen,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
-dalem,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
 diefferten,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 duren,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 eblange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
@@ -386,7 +382,6 @@ guinkirchen,county-boulay,,,,,16;61,high,shared lands of an office and its fief 
 guirlange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 halling,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
 ham,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
-hargarten-aux-mines,county-boulay,,,,,16;60;146,high,shared lands of an office and its fief (rules.yaml split_realms)
 helstroff,county-boulay,,,,,16;61,high,shared lands of an office and its fief (rules.yaml split_realms)
 ising,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
 kleind-hal,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
@@ -394,7 +389,6 @@ laudrefang,county-boulay,,,,,16,high,shared lands of an office and its fief (rul
 les-etangs,county-boulay,,,,,16;82;119,high,shared lands of an office and its fief (rules.yaml split_realms)
 longeville,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 loutremange,county-boulay,,,,,16;63,high,shared lands of an office and its fief (rules.yaml split_realms)
-macker,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 mainvillers,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 many,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 marange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
@@ -414,7 +408,6 @@ varize,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.y
 varsberg,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 velling,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 velving,county-boulay,,,,,16;82,high,shared lands of an office and its fief (rules.yaml split_realms)
-volmerange,county-boulay,,,,,16;146,high,shared lands of an office and its fief (rules.yaml split_realms)
 zimming,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 zondrange,county-boulay,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 abreschviller,county-dabo,,,,,116,high,
@@ -444,9 +437,6 @@ philippsbourg,county-hanau-lichtenberg,,,,,149,high,
 reipertswiller,county-hanau-lichtenberg,,,,,149,high,
 w-rth,county-hanau-lichtenberg,,,,,106,high,
 wimmenau,county-hanau-lichtenberg,,,,,149,high,
-office-phalsbourg,county-la-petite-pierre,,1583,,,113,high,
-rosteig,county-la-petite-pierre,,,,,149,high,
-wingen,county-la-petite-pierre,,,,,149,high,
 forstheim,county-lichtenberg,,,,,105,high,
 offviller,county-lichtenberg,,,,,105,high,
 uhrviller,county-lichtenberg,,,,,105,high,
@@ -462,10 +452,11 @@ gungviller,county-petite-pierre,,,,,106,high,
 hangviller,county-petite-pierre,,,,,106,high,
 hinsbourg,county-petite-pierre,,,,,106,high,
 lohr-la-petite-pierre,county-petite-pierre,,,,,106,high,
+office-phalsbourg,county-petite-pierre,,1583,,,113,high,
 petershach,county-petite-pierre,,,,,106,high,
 pfalzweyer,county-petite-pierre,,,,,106,high,
 puberg,county-petite-pierre,,,,,106,high,
-rosteig,county-petite-pierre,,,,,106,high,
+rosteig,county-petite-pierre,,,,,106;149,high,
 schoenbourg,county-petite-pierre,,,,,106,high,
 struth,county-petite-pierre,,,,,106,high,
 tieffenbach,county-petite-pierre,,,,,106,high,
@@ -474,7 +465,7 @@ veschheim,county-petite-pierre,,,,,106,high,
 waldhambach,county-petite-pierre,,,,,106,high,
 weinbourg,county-petite-pierre,,,,,106,high,
 weisslingen,county-petite-pierre,,,,,106,high,
-wingen,county-petite-pierre,,,,,106,high,
+wingen,county-petite-pierre,,,,,106;149,high,
 wintersbourg,county-petite-pierre,,,,,106,high,
 zilling,county-petite-pierre,,,,,106,high,
 aspach,county-rechicourt-le-chateau,,,,,117,high,
@@ -644,7 +635,7 @@ mancy,lordship-distroff,,,,,98,high,
 stuckange,lordship-distroff,,,,,98,high,
 volstroff,lordship-distroff,,,,,98,high,
 adelange,lordship-faulquemont,,,,,16,high,
-chemery,lordship-faulquemont,,,,,16,high,
+chemery-faulquemont,lordship-faulquemont,,,,,16,high,
 eincheville,lordship-faulquemont,,,,,16,high,
 faulquemont,lordship-faulquemont,,,,,16,high,
 guenviller,lordship-faulquemont,,,,,16,high,
@@ -704,7 +695,6 @@ ban-chaussy,lordship-hombourg-sur-canner,,,,,82,high,
 courcelles,lordship-hombourg-sur-canner,,,,,82,high,
 frecourt,lordship-hombourg-sur-canner,,,,,82,high,
 plappecourt,lordship-hombourg-sur-canner,,,,,82,high,
-remelfing-sierck,lordship-hombourg-sur-canner,,,,,81,high,
 biding,lordship-imperiale-de-crehange,,,,,100,high,
 coume,lordship-imperiale-de-crehange,,,,,100,high,
 crehange,lordship-imperiale-de-crehange,,,,,100,high,
@@ -730,34 +720,28 @@ jabach,lordship-lebach,,,,,58,high,
 landsweiler,lordship-lebach,,,,,58,high,
 niedersaubach,lordship-lebach,,,,,58,high,
 riimmelbach,lordship-lebach,,,,,58,high,
-erlenbrunn,lordship-lemberg,,,,,104,high,
-imsbach,lordship-lemberg,,,,,104,high,
-ranschborn,lordship-lemberg,,,,,104,high,
-riedelberg,lordship-lemberg,,,,,104,high,
-simten,lordship-lemberg,,,,,104,high,
-stanwenstein,lordship-lemberg,,,,,104,high,
-vinningen,lordship-lemberg,,,,,104,high,
 burgalben,lordship-lemberg-les-pirmasens,,,,,18,high,
 dietersbach,lordship-lemberg-les-pirmasens,,,,,18,high,
 donsitters,lordship-lemberg-les-pirmasens,,,,,18,high,
 eich-pirmasens,lordship-lemberg-les-pirmasens,,,,,18,high,
 eppenbrunn,lordship-lemberg-les-pirmasens,,,,,18,high,
-erlenbrunn,lordship-lemberg-les-pirmasens,,,,,18,high,
+erlenbrunn,lordship-lemberg-les-pirmasens,,,,,18;104,high,
 gershach,lordship-lemberg-les-pirmasens,,,,,18,high,
 greppen,lordship-lemberg-les-pirmasens,,,,,18,high,
 hilst,lordship-lemberg-les-pirmasens,,,,,18,high,
-imsbach,lordship-lemberg-les-pirmasens,,,,,18,high,
+imsbach,lordship-lemberg-les-pirmasens,,,,,18;104,high,
+lemberg-pirmasens,lordship-lemberg-les-pirmasens,,,,,103;105;148,high,"the castle of Lemberg, seat of the lordship"
 munchweiler,lordship-lemberg-les-pirmasens,,,,,18,high,
 ohersteinbach,lordship-lemberg-les-pirmasens,,,,,18,high,
 pirmasens,lordship-lemberg-les-pirmasens,,,,,18,high,
-ranschborn,lordship-lemberg-les-pirmasens,,,,,18,high,
-riedelberg,lordship-lemberg-les-pirmasens,,,,,18,high,
+ranschborn,lordship-lemberg-les-pirmasens,,,,,18;104,high,
+riedelberg,lordship-lemberg-les-pirmasens,,,,,18;104,high,
 schweix-pirmasens,lordship-lemberg-les-pirmasens,,,,,18,high,
-simten,lordship-lemberg-les-pirmasens,,,,,18,high,
-stanwenstein,lordship-lemberg-les-pirmasens,,,,,18,high,
+simten,lordship-lemberg-les-pirmasens,,,,,18;104,high,
+stanwenstein,lordship-lemberg-les-pirmasens,,,,,18;104,high,
 thalfroschen,lordship-lemberg-les-pirmasens,,,,,18,high,
 trulben,lordship-lemberg-les-pirmasens,,,,,18,high,
-vinningen,lordship-lemberg-les-pirmasens,,,,,18,high,
+vinningen,lordship-lemberg-les-pirmasens,,,,,18;104,high,
 winzeln,lordship-lemberg-les-pirmasens,,,,,18,high,
 ban-hersing,lordship-lixing,,,,,102,high,
 ebring,lordship-lixing,,,,,102,high,
@@ -786,10 +770,14 @@ lening,lordship-marimont,,,,,20,high,
 lostroff,lordship-marimont,,,,,20,high,
 loudrefing,lordship-marimont,,,,,20,high,
 marimont,lordship-marimont,,,,,20,high,
+mayoralty-cutting,lordship-marimont,,,,,20;74,high,Domnon and Guinzeling are only in the castellany of Marimont (p. 20)
+mayoralty-hellimer,lordship-marimont,,,,,20;75,high,its villages are in the castellany of Marimont (p. 20)
+mayoralty-insming,lordship-marimont,,,,,20;75,high,its villages are in the castellany of Marimont (p. 20)
 montdidier,lordship-marimont,,,,,20,high,
 nebing,lordship-marimont,,,,,20,high,
 nelling,lordship-marimont,,,,,20,high,
 petit-tenquin,lordship-marimont,,,,,20,high,
+provostship-insming,lordship-marimont,,,,,20;74,high,its villages are in the castellany of Marimont (p. 20)
 racrange,lordship-marimont,,,,,20,high,
 rode-morhange,lordship-marimont,,,,,20,high,
 rohrbach-la-petite,lordship-marimont,,,,,20,high,
@@ -1179,23 +1167,18 @@ lordship-morhange,office-dieuze,1629,,exact,,83,high,counted among the fiefs of 
 lostroff,office-dieuze,,,,,83,high,
 loudrefing,office-dieuze,,,,,75;83,high,
 marimont,office-dieuze,,,,,83,high,
-mayoralty-cutting,office-dieuze,,,,,74,high,
-mayoralty-hellimer,office-dieuze,,,,,75,high,
-mayoralty-insming,office-dieuze,,,,,75,high,
-mayoralty-lindre,office-dieuze,,,,,74-75,high,
 mayoralty-riche,office-dieuze,,,,,74,high,
 moncourt,office-dieuze,1600,1620,attested,attested,74,high,added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)
 mulcey,office-dieuze,,,,,75,high,
 munster,office-dieuze,1600,1620,attested,attested,74,high,added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)
 obreck,office-dieuze,1600,1620,attested,attested,74,high,added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)
 ommeray,office-dieuze,1600,1620,attested,attested,74,high,added to the office by the accountants of Dieuze from 1600 to 1620 (p. 74)
-provostship-insming,office-dieuze,,,,,74,high,
 tarquimpol,office-dieuze,,,,,83,high,
 torcheville,office-dieuze,,,,,83,high,
 vahl-dieuze,office-dieuze,,,,,83,high,
 virming,office-dieuze,,,,,75,high,
 adelange,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
-chemery,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
+chemery-faulquemont,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 eincheville,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 faulquemont,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
 guenviller,office-faulquemont,,,,,16,high,shared lands of an office and its fief (rules.yaml split_realms)
@@ -1238,7 +1221,6 @@ boucheporn,office-hombourg-haut,,,,,17,high,
 boustroff,office-hombourg-haut,,,,,17,high,
 cocheren,office-hombourg-haut,,,,,16,high,
 dourd-hal,office-hombourg-haut,,,,,16-17,high,
-ebersviller,office-hombourg-haut,,,,,16,high,
 emmersweiler,office-hombourg-haut,,,,,16;65,high,
 farebersviller,office-hombourg-haut,,,,,16;64-65,high,
 folkling,office-hombourg-haut,,,,,16,high,
@@ -1249,7 +1231,7 @@ guenviller,office-hombourg-haut,,,,,16,high,
 guessling,office-hombourg-haut,,,,,17,high,
 guinglange,office-hombourg-haut,,,,,17,high,
 haute-vigneulles,office-hombourg-haut,,,,,16,high,
-hellering-fenetrange,office-hombourg-haut,,,,,17,high,
+hellering-hombourg-haut,office-hombourg-haut,,,,,17,high,
 hemering,office-hombourg-haut,,,,,17,high,
 henriville,office-hombourg-haut,,,,,17;101,high,
 hinckange,office-hombourg-haut,,,,,17,high,
@@ -1268,6 +1250,7 @@ metring,office-hombourg-haut,,,,,16,high,
 morsbach,office-hombourg-haut,,,,,16,high,
 niedervisse,office-hombourg-haut,,,,,17,high,
 obervisse,office-hombourg-haut,,,,,17,high,
+petit-ebersviller,office-hombourg-haut,,,,,16,high,
 pontpierre,office-hombourg-haut,,,,,16,high,
 porcelette,office-hombourg-haut,,,,,17,high,
 saint-avold,office-hombourg-haut,,,,,16;64;84;101,high,
@@ -1405,7 +1388,6 @@ gresaubach,office-schaumberg,,,,,14,high,
 gronig,office-schaumberg,,,,,14,high,
 hahn,office-schaumberg,,,,,15,high,
 hahnweiler,office-schaumberg,,,,,15,high,
-harlingen,office-schaumberg,,,,,14,high,
 haupersweiler,office-schaumberg,,,,,15,high,
 haustatt,office-schaumberg,,,,,15,high,
 heimbach-nahe,office-schaumberg,,,,,15,high,
@@ -1437,7 +1419,6 @@ mettnich,office-schaumberg,,,,,58,high,
 michelbach,office-schaumberg,,,,,15;84,high,
 mittelbollenbach,office-schaumberg,,,,,15,high,
 momberg,office-schaumberg,,,,,80;134,high,
-mondorf,office-schaumberg,,,,,14,high,
 namborn,office-schaumberg,,,,,15;134,high,
 neipel,office-schaumberg,,,,,14,high,
 neunkirchen-turkismiihle,office-schaumberg,,,,,15,high,
@@ -1465,7 +1446,6 @@ tholey,office-schaumberg,,,,,14,high,
 uchtelfangen,office-schaumberg,,,,,15,high,
 wadrill,office-schaumberg,,,,,15,high,
 wahl-en,office-schaumberg,,,,,15,high,
-wehingen,office-schaumberg,,,,,14,high,
 weiersbach-bleiderdingen,office-schaumberg,,,,,15,high,
 werdenstein,office-schaumberg,,,,,15;79-80,high,
 wetschhausen,office-schaumberg,,,,,14,high,
@@ -1842,6 +1822,8 @@ biischdorf,saargau,,,,,14,high,
 buschdorf,saargau,,,,,53,high,
 fitten,saargau,,,,,14;53,high,
 hilbringen,saargau,,,,,14;53;131,high,
+mayoralty-inferieure-du-saargau-a-schwemlingen,saargau,,,,,55,high,
+mayoralty-superieure-du-saargau-a-hilbringen,saargau,,,,,55,high,
 merzig,saargau,,,,,130-131,high,
 mondorf,saargau,,,,,14;53;132,high,
 rech-ballem,saargau,,,,,14;53,high,

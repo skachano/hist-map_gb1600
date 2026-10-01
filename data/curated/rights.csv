@@ -469,11 +469,11 @@ county-falkenstein,manorial_lord,duchy-lorraine,,held,,,1458,1580,exact,exact,,1
 county-falkenstein,manorial_lord,house-daun-falkenstein,,held,,,1580,1628,exact,exact,,106,high,
 county-falkenstein,manorial_lord,house-daun-oberstein,,held,,,1628,,exact,,,106,high,
 county-falkenstein,suzerain,holy-roman-empire,,held,,,1458,1609,exact,exact,,106,high,
-county-la-petite-pierre,manorial_lord,house-rhingraves-wildgraves,,held,,,,,,,,124,high,
-county-la-petite-pierre,suzerain,holy-roman-empire,,held,,,,,,,,124,high,
-county-la-petite-pierre,suzerain,bishopric-metz,,held,,,1460,1460,attested,exact,,120,high,
 county-nassau-sarrebruck,appeal_jurisdiction,holy-roman-empire,,held,,,,,,,,123,high,
 county-nassau-sarrebruck,suzerain,bishopric-metz,,held,,,,,,,,123,high,
+county-petite-pierre,manorial_lord,county-la-petite-pierre,,held,,,,,,,,106;113,high,"the counts palatine of Veldenz-La Petite-Pierre (Georges-Jean I, then Jean-Auguste and Georges-Jean II, p. 106); p. 124 names the rhingraves by an oversight"
+county-petite-pierre,suzerain,holy-roman-empire,,held,,,,,,,,124,high,
+county-petite-pierre,suzerain,bishopric-metz,,held,,,1460,1460,attested,exact,,120,high,
 county-rechicourt-le-chateau,appeal_jurisdiction,bishopric-metz,,contested,true,holy-roman-empire|imperial-chamber-speyer,,,,,,117,high,
 county-rechicourt-le-chateau,appeal_jurisdiction,holy-roman-empire,,held,,,1582,,exact,,,123,high,
 county-rechicourt-le-chateau,appeal_jurisdiction,imperial-chamber-speyer,,claimed,true,bishopric-metz,1582,,exact,,,117,high,
@@ -1280,9 +1280,10 @@ leidingen,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,5
 leidingen,manorial_lord,house-varsberg,,held,,,1614,1614,attested,attested,,102,high,
 leidingen,suzerain,county-nassau-saarbruecken,,held,,,1614,1614,attested,attested,,102,high,
 leitzweiler,manorial_lord,county-oberstein-westerburg,,held,,,1585,,attested,,,57-58,high,
-lemberg-pirmasens,manorial_lord,duchy-lorraine,,held,,,1572,,exact,,,103,medium,
-lemberg-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1605,,circa,,,148,high,
-lemberg-pirmasens,suzerain,duchy-lorraine,,renounced,,,1605,,circa,,,148,high,
+lemberg-pirmasens,manorial_lord,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1607,exact,exact,,103;106,high,occupied by Lorraine's troops in July 1572; evacuated in April 1607 (p. 106)
+lemberg-pirmasens,manorial_lord,county-hanau-lichtenberg,,held,,,1607,,exact,,,106;148,high,
+lemberg-pirmasens,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,103;105,high,
+lemberg-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,105;148,high,"Lorraine's renunciation of the 1606 treaty (p. 105), confirmed in the charter quoted on p. 148"
 lemestroff,manorial_lord,duchy-lorraine,joint,held,,,,,,,,49,high,
 lening,high_justice,duchy-lorraine,1/2,held,,,,,,,,76,high,
 lening,high_justice,house-helmstatt,1/2,held,,,,,,,,76,high,
@@ -1337,8 +1338,6 @@ lordship-bracs,manorial_lord,rhingrave-frederic,joint,held,,,1610,,exact,,,111,h
 lordship-bracs,manorial_lord,diane-de-croy,joint,held,,,1617,,exact,,,111,high,
 lordship-bracs,suzerain,duchy-lorraine,,renounced,,,,1619,,exact,,111,high,
 lordship-bracs,suzerain,charles-alexandre-de-croy,,held,,,1619,,exact,,,111,medium,
-lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,1586,1601,attested,attested,,69,high,
-lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,manorial_lord,duchy-lorraine,1/2,held,,,1586,1601,attested,attested,,69,medium,
 lordship-chatillon,manorial_lord,francois-ii-vaudemont,,held,,,1599,1608,exact,exact,,116,high,
 lordship-chatillon,suzerain,bishopric-metz,,held,,,,,,,,116,medium,
 lordship-chevalin,manorial_lord,abbey-longeville,,held,true,bishopric-metz|duchy-lorraine,1606,1606,attested,attested,,146,high,
@@ -1406,14 +1405,14 @@ lordship-lebach,manorial_lord,abbey-fraulautern,1/7,held,,,,,,,,58,high,
 lordship-lebach,manorial_lord,electorate-trier,2/7,held,,,,,,,,58,high,
 lordship-lebach,manorial_lord,house-la-haye,,held,,,,,,,,58,medium,
 lordship-lebach,manorial_lord,duchy-lorraine,2/7,held,,,1613,,exact,,,58,high,
-lordship-lemberg,manorial_lord,jacques-de-bade,1/2,pledged,,,1589,1590,exact,exact,,105,high,
-lordship-lemberg,manorial_lord,charles-de-hohenzollern-sigmaringen,1/2,pledged,,,1594,1598,exact,exact,,105,high,
-lordship-lemberg,manorial_lord,county-hanau-lichtenberg,1/2,held,,,1598,,exact,,,105,high,
-lordship-lemberg,manorial_lord,county-hanau-lichtenberg,,held,,,1598,1632,exact,,,105-106,high,
-lordship-lemberg,suzerain,duchy-lorraine,,renounced,,,1606,1632,exact,,,105,high,
-lordship-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,,,,,,18,high,
-lordship-lemberg-les-pirmasens,manorial_lord,duchy-lorraine,1/2,held,,,,1607,,exact,,18,high,
-lordship-lemberg-les-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,21,medium,
+lordship-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,,,,,,18;69;105,high,the Hanau half throughout
+lordship-lemberg-les-pirmasens,manorial_lord,jacques-de-bade,1/2,pledged,,,1589,1590,exact,exact,,105,high,Lorraine's half
+lordship-lemberg-les-pirmasens,manorial_lord,charles-de-hohenzollern-sigmaringen,1/2,pledged,,,1594,1604,exact,exact,,105-106,high,Lorraine's half; the redemption begun in 1604 was completed after the count's death in April 1606 (p. 106)
+lordship-lemberg-les-pirmasens,manorial_lord,duchy-lorraine,1/2,held,,,1604,1607,exact,exact,,18;106,high,"Lorraine's half, part of the county of Bitche; handed back provisionally to Hanau on 21 November 1598 except seven villages (pp. 104-105), given up by the 1606 treaty and evacuated in April 1607 (p. 106)"
+lordship-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,1607,,exact,,,106,high,Lorraine's former half
+lordship-lemberg-les-pirmasens,suzerain,county-hanau-lichtenberg,,contested,true,duchy-lorraine,,1606,,exact,,104-105,medium,
+lordship-lemberg-les-pirmasens,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,21;104-105,high,claimed with the county of Bitche from 1572; the case before the Imperial Chamber ended with the 1606 treaty
+lordship-lemberg-les-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,105,high,the count pays the imperial contribution for Lemberg (p. 105)
 lordship-lixing,manorial_lord,house-kerpen,,held,,,,,,,,102,high,
 lordship-lixing,suzerain,county-nassau-saarbruecken,,renounced,true,holy-roman-empire|house-kerpen,,1591,,exact,,102,high,
 lordship-lixing,suzerain,duchy-lorraine,,renounced,true,holy-roman-empire|house-kerpen,,1591,,exact,,102,high,

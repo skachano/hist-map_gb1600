@@ -243,7 +243,8 @@ chateau-salins,48.82167,6.50833,Q22745,,Château-Salins,Château-Salins,Château
 chateau-voue,48.85083,6.62361,Q22388,,Châteauvoué,Château-Voué,Château-Voué,wikidata,high,
 chatillon,48.55861,6.96611,Q633203,,Châtillon,Val-et-Châtillon,Val-et-Châtillon,override,high,"Val-et-Châtillon, seat of the lordship with Cirey, Foulcrey, Hattigny and Ibigny (pp. 78, 116); was matched to Châtillon in Belgium"
 chelaincourt,49.23722,6.245,Q21992,,Chelaincourt,Flévy,Flévy,wikidata,high,
-chemery,48.9997,6.58276,Q16304992,,Chémery,Chémery,Chémery,wikidata,high,
+chemery,49.29944,6.44389,Q21609,,Chémery,,,override,high,"Chémery-les-Deux (Chémery-la-Vieille and -la-Neuve), office of Sierck (pp. 13, 50-51); was matched to the Chémery of Faulquemont"
+chemery-faulquemont,48.9997,6.58276,,,Chémery,,,override,high,"Chémery, part of Faulquemont today, lordship of Faulquemont (p. 16)"
 chenois,48.95949,6.4973,,3025506,Chénois,,,geonames,high,geonames exact
 chevalin,49.09333,6.50472,,,Chevalin,,,approximate,low,not in Wikidata/GeoNames; placed at Fouligny (index location)
 chicourt,48.91722,6.50472,Q22109,,Chicourt,Chicourt,Chicourt,wikidata,high,
@@ -264,10 +265,9 @@ county-dalem,49.24056,6.61056,,,Comté de Dalem,Grafschaft Dalem,County of Dalem
 county-deux-ponts,49.18806,7.36917,,,Duché de Deux-Ponts,Duché de Deux-Ponts,Duché de Deux-Ponts,territory,medium,centre of 1 member settlement(s)
 county-falkenstein,,,,,Comté de Falkenstein,Grafschaft Falkenstein,County of Falkenstein,territory,medium,no seat or located members
 county-hanau-lichtenberg,48.90957,7.54011,,,Comté de Hanau-Lichtenberg,Grafschaft Hanau-Lichtenberg,County of Hanau-Lichtenberg,territory,medium,centre of 9 member settlement(s)
-county-la-petite-pierre,48.92603,7.35991,,,Comté de County-la-petite-pierre,Grafschaft County-la-petite-pierre,County of County-la-petite-pierre,territory,medium,centre of 2 member settlement(s)
 county-lichtenberg,48.93241,7.66732,,,Comté de Lichtenberg,Grafschaft Lichtenberg,County of Lichtenberg,territory,medium,centre of 3 member settlement(s)
 county-nassau-sarrebruck,,,,,Comté de Nassau-Sarrebruck,Grafschaft Nassau-Sarrebruck,County of Nassau-Sarrebruck,territory,medium,no seat or located members
-county-petite-pierre,48.86938,7.2572,,,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,Seigneurie de La Petite-Pierre,territory,medium,centre of 27 member settlement(s)
+county-petite-pierre,48.86938,7.2572,,,Comté de La Petite-Pierre,Grafschaft Petite-Pierre,County of Petite-Pierre,territory,medium,centre of 27 member settlement(s)
 county-rechicourt-le-chateau,48.70189,6.86679,,,Comté de Réchicourt-le-Château,Grafschaft Réchicourt-le-Château,County of Réchicourt-le-Château,territory,medium,centre of 11 member settlement(s)
 county-salm,,,,,Comté de Salm,Grafschaft Salm,County of Salm,territory,medium,no seat or located members
 county-sarrebruck,49.23333,7.0,,,Comté de Sarrebruck,Grafschaft Saarbrücken,County of Saarbrücken,territory,medium,seat: sarrehruck
@@ -526,7 +526,7 @@ heining,49.30917,6.58889,Q21641,,Heining,Heining-lès-Bouzonville,Heining-lès-B
 helfedange,49.07333,6.52611,,,Helfedange,,,approximate,low,not in Wikidata/GeoNames; placed at Guinglange (index location)
 hellendorf,49.4824,6.45756,,2906855,Hellendorf,,,geonames,high,geonames exact
 hellering-fenetrange,48.81014,7.06318,,3013560,Hellering,,,geonames,high,geonames exact
-hellering-hombourg-haut,49.12215,6.78031,Q3129860,,Hellering,Hellering,Hellering,wikidata,high,
+hellering-hombourg-haut,49.12215,6.78031,Q3129860,,Hellering,Hellering,Hellering,wikidata,high,no canton anchor
 hellimer,48.9975,6.83,Q22456,,Hellimer,Hellimer,Hellimer,wikidata,high,
 helling,49.33472,6.35142,Q15073118,,Helling,Hellingen,Helling,wikidata,high,
 helstroff,49.15278,6.47472,Q21636,,Helstroff,Helstroff,Helstroff,wikidata,high,
@@ -700,7 +700,6 @@ lordship-berus,49.2639,6.69417,,,Seigneurie de Berus,Herrschaft Berus,Lordship o
 lordship-bionville,49.10501,6.47932,,,Seigneurie de Bionville,Herrschaft Bionville,Lordship of Bionville,territory,medium,seat: bionville
 lordship-bracs,48.78656,7.02811,,,Seigneurie des Bracs,Herrschaft Bracs,Lordship of Bracs,territory,medium,centre of 5 member settlement(s)
 lordship-busbach,49.33993,6.3664,,,Seigneurie de Busbach,Herrschaft Busbach,Lordship of Busbach,territory,medium,centre of 4 member settlement(s)
-lordship-chateau-et-seigneurie-de-lemberg-les-pirmasens,,,,,Seigneurie de Château et seigneurie de Lemberg-lès-Pirmasens,Herrschaft Château et seigneurie de Lemberg-lès-Pirmasens,Lordship of Château et seigneurie de Lemberg-lès-Pirmasens,territory,medium,no seat or located members
 lordship-chatillon,48.55861,6.96611,,,Seigneurie de Châtillon,Herrschaft Val-et-Châtillon,Lordship of Val-et-Châtillon,territory,medium,seat: chatillon
 lordship-chevalin,49.09333,6.50472,,,Seigneurie de Chevalin,Herrschaft Chevalin,Lordship of Chevalin,territory,medium,seat: chevalin
 lordship-col-de-cygne,48.84004,6.97829,,,Seigneurie du Col de Cygne,Herrschaft Col de Cygne,Lordship of Col de Cygne,territory,medium,centre of 7 member settlement(s)
@@ -715,13 +714,12 @@ lordship-frauenberg,49.13667,7.12722,,,Seigneurie de Frauenberg,Herrschaft Fraue
 lordship-fremersdorf,49.4058,6.64778,,,Seigneurie de Fremersdorf,Herrschaft Fremersdorf,Lordship of Fremersdorf,territory,medium,seat: fremersdorf
 lordship-gueroldseck,48.8625,7.03139,,,Seigneurie de Guéroldseck,Herrschaft Guéroldseck,Lordship of Guéroldseck,territory,medium,seat: gueroldseck
 lordship-gueroldseck-les-niederstinzel,48.84213,7.10759,,,Seigneurie de Guéroldseck-lès-Niederstinzel,Herrschaft Guéroldseck-lès-Niederstinzel,Lordship of Guéroldseck-lès-Niederstinzel,territory,medium,centre of 3 member settlement(s)
-lordship-hombourg-sur-canner,49.17403,6.43821,,,Terre de Hombourg,Terre de Hombourg,Terre de Hombourg,territory,medium,centre of 4 member settlement(s)
+lordship-hombourg-sur-canner,49.0963,6.42178,,,Terre de Hombourg,Terre de Hombourg,Terre de Hombourg,territory,medium,centre of 3 member settlement(s)
 lordship-imperiale-de-crehange,49.08266,6.668,,,Seigneurie impériale de Créhange,Seigneurie impériale de Créhange,Seigneurie impériale de Créhange,territory,medium,centre of 14 member settlement(s)
 lordship-inglange,49.4106,6.30486,,,Seigneurie d'Inglange,Herrschaft Inglange,Lordship of Inglange,territory,medium,centre of 1 member settlement(s)
 lordship-kingertal,48.97714,6.93645,,,Seigneurie de Kingertal,Herrschaft Kingertal,Lordship of Kingertal,territory,medium,centre of 6 member settlement(s)
 lordship-lebach,49.41,6.91,,,Seigneurie de Lebach,Herrschaft Lebach,Lordship of Lebach,territory,medium,seat: lebach
-lordship-lemberg,49.17028,7.65083,,,Seigneurie de Lemberg,Herrschaft Lemberg (Pfalz),Lordship of Lemberg,territory,medium,seat: lemberg-pirmasens
-lordship-lemberg-les-pirmasens,49.16829,7.57352,,,Seigneurie de Lemberg-lès-Pirmasens,Herrschaft Lemberg-lès-Pirmasens,Lordship of Lemberg-lès-Pirmasens,territory,medium,centre of 22 member settlement(s)
+lordship-lemberg-les-pirmasens,49.16838,7.57688,,,Seigneurie de Lemberg-lès-Pirmasens,Herrschaft Lemberg-lès-Pirmasens,Lordship of Lemberg-lès-Pirmasens,territory,medium,centre of 23 member settlement(s)
 lordship-lixing,49.15361,6.99444,,,Seigneurie de Lixing,Herrschaft Lixing-lès-Rouhling,Lordship of Lixing-lès-Rouhling,territory,medium,seat: lixing-rouhling
 lordship-lixing-rouhling,,,,,Seigneurie de Lixing-Rouhling,Herrschaft Lixing-Rouhling,Lordship of Lixing-Rouhling,territory,medium,no seat or located members
 lordship-luttange,49.27,6.31111,,,Seigneurie de Luttange,Herrschaft Luttange,Lordship of Luttange,territory,medium,seat: luttange
@@ -912,7 +910,7 @@ office-dieuze,48.81222,6.71972,,,Office de Dieuze,Amt Dieuze,Office of Dieuze,te
 office-faulquemont,49.04111,6.59917,,,Office de Faulquemont,Amt Faulquemont,Office of Faulquemont,territory,medium,seat: faulquemont
 office-forbach,49.18806,6.9,,,Office de Forbach,Amt Forbach,Office of Forbach,territory,medium,seat: forbach
 office-herange,48.775,7.16972,,,Office de Hérange,Amt Hérange,Office of Hérange,territory,medium,seat: herange
-office-hombourg-haut,49.09076,6.73052,,,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,territory,medium,centre of 47 member settlement(s)
+office-hombourg-haut,49.09368,6.73177,,,Office de Hombourg-Haut,Amt Hombourg-Haut,Office of Hombourg-Haut,territory,medium,centre of 47 member settlement(s)
 office-merzig,49.44222,6.6375,,,Office de Merzig,Office de Merzig,Office de Merzig,territory,medium,seat: merzig
 office-morhange,48.92361,6.63583,,,Office de Morhange,Amt Mörchingen,Office of Morhange,territory,medium,seat: morhange
 office-phalsbourg,48.76778,7.25833,,,Office de Phalsbourg,Amt Phalsbourg,Office of Phalsbourg,territory,medium,seat: phalsbourg
@@ -975,7 +973,7 @@ provostship-insming,48.95611,6.87417,,,Prévôté d'Insming,Schultheißerei Insm
 provostship-ketternostern,49.55516,7.24661,,,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,territory,medium,centre of 12 member settlement(s)
 provostship-marche-de-chateau-salins,,,,,Marche d'Empire de Marche d'Empire de Château-Salins,Reichsmark Marche d'Empire de Château-Salins,Imperial march of Marche d'Empire de Château-Salins,territory,medium,no seat or located members
 provostship-remich,49.45611,6.42736,,,Prévôté de Remich,Schultheißerei Remich,Provostship of Remich,territory,medium,centre of 2 member settlement(s)
-provostship-rurale-de-sierck,49.30939,6.42952,,,Prévôté rurale de Sierck,Landschultheißerei Sierck,Rural provostship of Sierck,territory,medium,centre of 22 member settlement(s)
+provostship-rurale-de-sierck,49.32302,6.42321,,,Prévôté rurale de Sierck,Landschultheißerei Sierck,Rural provostship of Sierck,territory,medium,centre of 22 member settlement(s)
 provostship-sarrebourg,48.73472,7.05389,,,Prévôté de Sarrebourg,Schultheißerei Sarrebourg,Provostship of Sarrebourg,territory,medium,seat: sarrebourg
 provostship-sierck,49.4425,6.36028,,,Prévôté de Sierck,Schultheißerei Sierck-les-Bains,Provostship of Sierck-les-Bains,territory,medium,seat: sierck
 provostship-sous-sierck,49.4425,6.36028,,,Sous-prévôté de Sierck,Sous-prévôté de Sierck,Sous-prévôté de Sierck,territory,medium,seat: sierck

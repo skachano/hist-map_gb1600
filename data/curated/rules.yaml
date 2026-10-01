@@ -160,6 +160,21 @@ place_aliases:
   "L1-C06-S06: Schweix": schweix-pirmasens        # Schweix of the mairie of Walschbronn (p. 69), near Pirmasens
   "L1-C08-S07: Schweix": schweix-gueblange-les-sarralbe   # Kingertal's Schweix (p. 116) is the val de Guéblange's (p. 78)
   Hombourg-village: hombourg-haut-et-bas          # the village of Hombourg (p. 16) is Hombourg-Bas (p. 64)
+  "L1-C01-S07: Chémery": chemery-faulquemont     # the Chémery of Faulquemont's list (p. 16), not Sierck's Chémery-les-Deux
+  "L1-C01-S07: Ebersviller": petit-ebersviller    # Hombourg's Ebersviller (p. 16) is Petit-Ebersviller, not the one near Bouzonville
+  "L1-C01-S07: Hellering": hellering-hombourg-haut   # Hombourg's Hellering (p. 16), not Hellering near Fénétrange
+  "L1-C06-S05: Hellering": hellering-hombourg-haut   # a fief of the office of Hombourg (p. 64)
+  # One realm recorded twice: the lordship of Lemberg (county of Bitche, pp. 18, 104-106) and the county of
+  # La Petite-Pierre (Lützelstein, pp. 104-106, 113-114).
+  seigneurie de Lemberg: lordship-lemberg-les-pirmasens
+  terre de Lemberg: lordship-lemberg-les-pirmasens
+  "territory: Lemberg": lordship-lemberg-les-pirmasens
+  château et seigneurie de Lemberg-lès-Pirmasens: lordship-lemberg-les-pirmasens   # p. 69
+  county-la-petite-pierre: county-petite-pierre
+  comté de la Petite-Pierre (Veldenz): county-petite-pierre
+  comté impérial de la Petite-Pierre: county-petite-pierre
+  "territory: La Petite-Pierre": county-petite-pierre
+  "territory: Petite-Pierre": county-petite-pierre
 
 # Name/type corrections for generated entities: id: {name_en: ..., name_fr: ..., name_de: ..., entity_type: ...}
 entities:
@@ -171,6 +186,8 @@ entities:
 drop_rights:
   - {place: arriance, right_type: manorial_lord, holder: house-varsberg,
      reason: "the Varsberg half was pledged to Godron Duchat (p. 147); the pledge row holds it"}
+  - {place: county-petite-pierre, right_type: manorial_lord, holder: house-rhingraves-wildgraves,
+     reason: "p. 124 lists La Petite-Pierre among the rhingraves' lands by an oversight: the county was the counts palatine of Veldenz' (pp. 104-106, 113)"}
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
@@ -197,6 +214,20 @@ drop_memberships:
      reason: "the Westrich of Münster's 1552 Cosmographia (p. 10) is a loose region, not a realm"}
   - {child: dordhal, parent: lordship-bourgaltroff,
      reason: "only formerly part of Bourgaltroff; a fief contested between Lorraine and the bishopric from 1577 (p. 146)"}
+  - {child: remelfing-sierck, parent: lordship-hombourg-sur-canner,
+     reason: "the lords of Hombourg-sur-Canner hold only a twelfth of Rémeling (p. 81); the village is ducal, office of Sierck"}
+  - {child: harlingen, parent: office-schaumberg, reason: "a village of Merzig and the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
+  - {child: mondorf, parent: office-schaumberg, reason: "a village of the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
+  - {child: wehingen, parent: office-schaumberg, reason: "a village of the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
+  # The mairies of the office of Dieuze sit in its two castellanies (pp. 20, 73-75).
+  - {child: mayoralty-lindre, parent: office-dieuze, reason: "in the castellany of Dieuze (p. 20)"}
+  - {child: mayoralty-cutting, parent: office-dieuze, reason: "in the old castellany of Marimont (p. 20)"}
+  - {child: mayoralty-hellimer, parent: office-dieuze, reason: "in the old castellany of Marimont (p. 20)"}
+  - {child: mayoralty-insming, parent: office-dieuze, reason: "in the old castellany of Marimont (p. 20)"}
+  - {child: provostship-insming, parent: office-dieuze, reason: "in the old castellany of Marimont (p. 20)"}
+  # The two mairies of the Saargau (p. 55) belong to that half of the condominium, not to Merzig.
+  - {child: mayoralty-inferieure-du-saargau-a-schwemlingen, parent: condominium-merzig-saargau, reason: "a mairie of the Saargau (p. 55)"}
+  - {child: mayoralty-superieure-du-saargau-a-hilbringen, parent: condominium-merzig-saargau, reason: "a mairie of the Saargau (p. 55)"}
 
 # Corrections to extracted rights: rows matching every `match` field get the `set` fields.
 right_overrides:
@@ -220,6 +251,9 @@ right_overrides:
 #   place-id: {wikidata: Q…}                 use this Wikidata item
 #   place-id: {lat: …, lon: …, note: "…"}    fixed point (e.g. a lost village located from a map)
 geocode:
+  chemery: {wikidata: Q21609, lat: 49.29944, lon: 6.44389,
+            note: "Chémery-les-Deux (Chémery-la-Vieille and -la-Neuve), office of Sierck (pp. 13, 50-51); was matched to the Chémery of Faulquemont"}
+  chemery-faulquemont: {lat: 48.9997, lon: 6.58276, note: "Chémery, part of Faulquemont today, lordship of Faulquemont (p. 16)"}
   # Lost villages ("village disparu") the databases matched to other, existing places.
   ruchling: {approximate: spicheren, note: "Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling"}
   nideck: {approximate: sarralbe, note: "Nideck (Neudeck), lost village of the office of Sarralbe (p. 18); was matched to Burg Nideck in Alsace"}

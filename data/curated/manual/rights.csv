@@ -80,3 +80,16 @@ lordship-morhange,manorial_lord,duchy-lorraine,,held,true,rhingraves-kyrbourg,16
 lordship-morhange,manorial_lord,rhingraves-kyrbourg,,claimed,true,duchy-lorraine,1628,,exact,,,83;99,high,still listed as the holders in the 1630 table of fiefs (p. 83) and in 1632 (p. 99)
 lordship-morhange,manorial_lord,rhingrave-otto,,contested,true,duchy-lorraine,1561,1561,attested,attested,,98,high,
 office-morhange,tabellionage,rhingraves-kyrbourg,,held,,,,,,,,73;93,high,the rhingrave Otto of Morhange created a tabellionage in May 1598 (p. 93)
+county-petite-pierre,manorial_lord,county-la-petite-pierre,,held,,,,,,,,106;113,high,"the counts palatine of Veldenz-La Petite-Pierre (Georges-Jean I, then Jean-Auguste and Georges-Jean II, p. 106); p. 124 names the rhingraves by an oversight"
+lordship-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,,,,,,18;69;105,high,the Hanau half throughout
+lordship-lemberg-les-pirmasens,manorial_lord,jacques-de-bade,1/2,pledged,,,1589,1590,exact,exact,,105,high,Lorraine's half
+lordship-lemberg-les-pirmasens,manorial_lord,charles-de-hohenzollern-sigmaringen,1/2,pledged,,,1594,1604,exact,exact,,105-106,high,Lorraine's half; the redemption begun in 1604 was completed after the count's death in April 1606 (p. 106)
+lordship-lemberg-les-pirmasens,manorial_lord,duchy-lorraine,1/2,held,,,1604,1607,exact,exact,,18;106,high,"Lorraine's half, part of the county of Bitche; handed back provisionally to Hanau on 21 November 1598 except seven villages (pp. 104-105), given up by the 1606 treaty and evacuated in April 1607 (p. 106)"
+lordship-lemberg-les-pirmasens,manorial_lord,county-hanau-lichtenberg,1/2,held,,,1607,,exact,,,106,high,Lorraine's former half
+lordship-lemberg-les-pirmasens,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,21;104-105,high,claimed with the county of Bitche from 1572; the case before the Imperial Chamber ended with the 1606 treaty
+lordship-lemberg-les-pirmasens,suzerain,county-hanau-lichtenberg,,contested,true,duchy-lorraine,,1606,,exact,,104-105,medium,
+lordship-lemberg-les-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,105,high,the count pays the imperial contribution for Lemberg (p. 105)
+lemberg-pirmasens,manorial_lord,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1607,exact,exact,,103;106,high,occupied by Lorraine's troops in July 1572; evacuated in April 1607 (p. 106)
+lemberg-pirmasens,manorial_lord,county-hanau-lichtenberg,,held,,,1607,,exact,,,106;148,high,
+lemberg-pirmasens,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,103;105,high,
+lemberg-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,105;148,high,"Lorraine's renunciation of the 1606 treaty (p. 105), confirmed in the charter quoted on p. 148"
