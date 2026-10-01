@@ -27,3 +27,6 @@ web/shots/
 
 # Playwright output
 web/test-results/
+
+# Text taken from the book (licensed copy), kept for local review only
+data/local/

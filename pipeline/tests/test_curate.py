@@ -116,3 +116,17 @@ def test_kind_scoped_alias_leaves_the_village_alone():
     as_village = {**as_territory, "kind": "settlement", "place_type": "village"}
     assert r.resolve(as_territory) == "lordship-marimont"
     assert r.resolve(as_village) == "marimont-les-albestroff"
+
+
+def test_tracked_curated_files_hold_no_book_text():
+    """Quotations from the book stay in data/local/ (git-ignored); the committed curated tables
+    carry none, and extracted changes are described in our own words (event_summaries.csv)."""
+    import csv
+    from bailliage import config
+    for name in ("rights.csv", "manual/rights.csv"):
+        with (config.CURATED_DIR / name).open(newline="") as f:
+            assert not any(r["snippet"] for r in csv.DictReader(f)), name
+    with (config.CURATED_DIR / "event_summaries.csv").open(newline="") as f:
+        ours = {r["en"] for r in csv.DictReader(f)}
+    with (config.CURATED_DIR / "events.csv").open(newline="") as f:
+        assert all(r["description"] in ours for r in csv.DictReader(f))

@@ -29,6 +29,13 @@ from bailliage.data.models import Entity, Event, Membership, Place, Right, Ruler
 MANUAL_DIR = config.CURATED_DIR / "manual"
 RULES_FILE = config.CURATED_DIR / "rules.yaml"
 GEOCODING_FILE = config.CURATED_DIR / "geocoding.csv"  # written by `make geocode` (Stage 5)
+# The book is a licensed copy: text taken from it (quotations, extracted notes and descriptions) is
+# kept here, out of git, for review; the tracked curated files hold structured data and our own words.
+LOCAL_DIR = config.DATA_DIR / "local"
+BOOK_TEXT_FILE = LOCAL_DIR / "book_text.csv"
+MANUAL_SNIPPETS_FILE = LOCAL_DIR / "manual_snippets.csv"  # quotations for manual/rights.csv rows
+RIGHT_KEY = ("place_id", "right_type", "holder_id", "from_year", "to_year", "status")
+EVENT_KEY = ("year", "place_id", "right_type", "from_holder", "to_holder", "event_type")
 REPORT_FILE = config.DATA_DIR / "review" / "report.md"
 CONFIDENCE_RANK = {"low": 0, "medium": 1, "high": 2}
 SNIPPET_MAX = 200  # quotations from the book stay short (it is a licensed copy)
@@ -125,6 +132,9 @@ class Builder:
         self.rules = {k: v or {} for k, v in (self.rules or {}).items()}
         self.manual = {m.table: _read_csv(MANUAL_DIR / f"{m.table}.csv")
                        for m in (Place, Entity, Ruler, Membership, Right, Event)}
+        snippets = {tuple(r[k] for k in RIGHT_KEY): r["snippet"] for r in _read_csv(MANUAL_SNIPPETS_FILE)}
+        for r in self.manual["rights"]:
+            r["snippet"] = r.get("snippet") or snippets.get(tuple(r.get(k, "") for k in RIGHT_KEY))
         vocab = store.load_vocab(config.CURATED_DIR / "vocab.yaml")
         territory_types = {k for k, v in vocab["place_types"].items() if v.get("applies_to") == "territory"}
         self.chunks = [json.loads(Path(p).read_text())
@@ -478,8 +488,8 @@ class Builder:
         manual_members = {(m["child_id"], m["parent_id"]) for m in self.manual["memberships"]}
         memberships = [m for m in self.memberships.values() if (m["child_id"], m["parent_id"]) not in manual_members]
 
-        rights = self.manual["rights"] + self._finish(rights)
-        events = self.manual["events"] + self._finish(events)
+        rights = self.manual["rights"] + [dict(r, _extracted=True) for r in self._finish(rights)]
+        events = self.manual["events"] + [dict(e, _extracted=True) for e in self._finish(events)]
         memberships = self.manual["memberships"] + self._finish(memberships)
         rulers = self.manual["rulers"] + self._finish(rulers)
 
@@ -565,6 +575,7 @@ class Builder:
 def run() -> int:
     b = Builder()
     tables = b.build()
+    keep_book_text_local(tables)
     for model in (Place, Entity, Ruler, Membership, Right, Event):
         _write_csv(model, tables[model.table])
     ds = store.load()
@@ -580,6 +591,38 @@ def run() -> int:
           f"report: {REPORT_FILE.relative_to(config.ROOT)}")
     errors = counts["error"]
     return 1 if errors else 0
+
+
+def keep_book_text_local(tables: dict[str, list[dict]]) -> None:
+    """Move the text taken from the book out of the tracked tables into data/local/book_text.csv:
+    every quotation, and the notes and descriptions of extracted rows (they follow the book's
+    wording). Extracted changes are described by their summary in our own words
+    (event_summaries.csv); hand-entered rows keep their own notes and descriptions."""
+    summaries = {tuple(r[k] for k in EVENT_KEY): r["en"]
+                 for r in _read_csv(config.CURATED_DIR / "event_summaries.csv")}
+    out = []
+
+    def key(row, fields):
+        return [_cell(row.get(k)) for k in fields]
+
+    for r in tables["rights"]:
+        texts = {"snippet": r.get("snippet"), "notes": r.get("notes") if r.get("_extracted") else None}
+        out += [["rights", *key(r, RIGHT_KEY), field, text] for field, text in texts.items() if text]
+        r["snippet"] = None
+        if r.get("_extracted"):
+            r["notes"] = None
+    for e in tables["events"]:
+        if not e.get("_extracted"):
+            continue
+        k = key(e, EVENT_KEY)
+        out += [["events", *k, field, e.get(field)] for field in ("description", "notes") if e.get(field)]
+        e["description"] = summaries.get(tuple(k)) or "(summary missing: see event_summaries.csv)"
+        e["notes"] = None
+    LOCAL_DIR.mkdir(parents=True, exist_ok=True)
+    with BOOK_TEXT_FILE.open("w", newline="") as f:
+        w = csv.writer(f, lineterminator="\n")
+        w.writerow(["table", "key1", "key2", "key3", "key4", "key5", "key6", "field", "text"])
+        w.writerows(out)
 
 
 def write_report(b: Builder, ds: store.Dataset, issues: list) -> None:
@@ -631,6 +674,6 @@ def write_report(b: Builder, ds: store.Dataset, issues: list) -> None:
     lines += ["", f"## Low-confidence rights ({len(low)})", "", "| line | place | right | holder | pages | note |",
               "|---|---|---|---|---|---|"]
     lines += [f"| {line} | {r.place_id} | {r.right_type} | {r.holder_id} | {r.source_page} | "
-              f"{(r.notes or r.snippet or '')[:80]} |" for line, r in low[:150]]
+              f"{(r.notes or '')[:80]} |" for line, r in low[:150]]
     REPORT_FILE.parent.mkdir(parents=True, exist_ok=True)
     REPORT_FILE.write_text("\n".join(lines) + "\n")
