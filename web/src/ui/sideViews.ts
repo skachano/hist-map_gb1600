@@ -55,9 +55,9 @@ export function renderEntityView(root: HTMLElement, data: Dataset, state: State,
       : null,
     rulers.length ? h("h3", {}, t("rulers", lang)) : null,
     rulers.length ? ganttChart(rulers.map((r) => ({
-      label: r.title ? `${r.name}, ${r.title}` : r.name,
+      label: r.title ? `${name(r.name, lang)}${lang === "ja" ? "、" : ", "}${name(r.title, lang)}` : name(r.name, lang),
       bars: [{ from: Math.max(r.from ?? span[0], span[0]), to: Math.min(r.to ?? span[1], span[1]), fill: "#52514e",
-        title: `${r.name} · ${r.from ?? "…"}–${r.to ?? "…"}${r.pages ? ` · ${t("pages", lang)} ${r.pages}` : ""}` }],
+        title: `${name(r.name, lang)} · ${r.from ?? "…"}–${r.to ?? "…"}${r.pages ? ` · ${t("pages", lang)} ${r.pages}` : ""}` }],
     })), span, year, t("rulers", lang)) : null,
     h("h3", {}, t("gainedLost", lang)),
     events.length

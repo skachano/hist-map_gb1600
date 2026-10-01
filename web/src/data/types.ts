@@ -49,8 +49,8 @@ export interface Place {
 }
 
 export interface Ruler {
-  name: string;
-  title?: string;
+  name: Names; // name and title in French as in the book, with translations
+  title?: Names;
   from?: number;
   to?: number;
   fp?: string;

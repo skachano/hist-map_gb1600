@@ -34,6 +34,16 @@ def _compact(d: dict) -> dict:
     return {k: v for k, v in d.items() if v not in (None, "", [], False)}
 
 
+def ruler_translations(kind: str) -> dict[str, dict[str, str]]:
+    """Rulers' names and titles are recorded in French, as in the book; data/curated/ruler_{kind}.csv
+    (kind: names or titles) gives their translations: French -> {lang: translation}."""
+    path = config.CURATED_DIR / f"ruler_{kind}.csv"
+    if not path.exists():
+        return {}
+    with path.open(newline="") as f:
+        return {r["fr"]: {lang: v for lang, v in r.items() if lang != "fr" and v} for r in csv.DictReader(f)}
+
+
 def _pages(ref: str | None) -> str | None:
     return ref or None
 
@@ -58,6 +68,7 @@ def build() -> dict[str, int]:
     if ja_file.exists():
         with ja_file.open(newline="") as f:
             ja = {r["id"]: r["name_ja"] for r in csv.DictReader(f)}
+    titles, ruler_names = ruler_translations("titles"), ruler_translations("names")
 
     rights_by_holder = Counter(r.holder_id for _, r in ds.rights)
     parents = defaultdict(list)
@@ -83,7 +94,8 @@ def build() -> dict[str, int]:
     rulers = defaultdict(list)
     for _, r in sorted(ds.rulers, key=lambda lr: (lr[1].entity_id, lr[1].from_year or 0, lr[1].person_name)):
         rulers[r.entity_id].append(_compact({
-            "name": r.person_name, "title": r.title, "from": r.from_year, "to": r.to_year,
+            "name": {"fr": r.person_name, **ruler_names.get(r.person_name, {})}, "title": _compact({"fr": r.title, **titles.get(r.title or "", {})}) or None,
+            "from": r.from_year, "to": r.to_year,
             "fp": r.from_precision, "tp": r.to_precision, "pages": _pages(r.source_page),
         }))
     ranked = sorted((e for _, e in ds.entities), key=lambda e: (-rights_by_holder[e.id], e.id))

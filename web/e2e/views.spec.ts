@@ -8,7 +8,7 @@ test("holders view: pick an entity, see holdings, rulers and changes", async ({ 
   await expect(side.locator("h2")).toHaveText("Duchy of Lorraine");
   await expect(side).toContainText("Held directly in 1624");
   await expect(side.locator("svg.gantt")).toBeVisible(); // rulers
-  await expect(side).toContainText("Henri II");
+  await expect(side).toContainText("Henry II, Duke"); // ruler names and titles are translated
   await expect(page).toHaveURL(/entity=duchy-lorraine/);
 });
 

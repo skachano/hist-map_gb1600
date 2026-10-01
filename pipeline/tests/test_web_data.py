@@ -63,4 +63,17 @@ def test_known_facts_survive(built):
     assert set(desc) == {"en", "fr", "de", "ja"} and "gallows" in desc["en"]
     assert all(set(v.get("desc", {})) == {"en", "fr", "de", "ja"} for v in meta["vocab"]["right_types"].values())
     lorraine = next(e for e in built["load"]("entities.json") if e["id"] == "duchy-lorraine")
-    assert lorraine["rank"] == 1 and any(r["name"] == "Henri II" for r in lorraine["rulers"])
+    assert lorraine["rank"] == 1 and any(r["name"]["fr"] == "Henri II" for r in lorraine["rulers"])
+
+
+def test_rulers_translated(built):
+    """Every ruler's name and title has German, English and Japanese translations
+    (data/curated/ruler_names.csv, ruler_titles.csv)."""
+    rulers = [r for e in built["load"]("entities.json") for r in e.get("rulers", [])]
+    for field in ("name", "title"):
+        values = [r[field] for r in rulers if r.get(field)]
+        missing = [v["fr"] for v in values if not all(v.get(lang) for lang in ("de", "en", "ja"))]
+        assert values and not missing, (field, missing)
+    duke = next(r for e in built["load"]("entities.json") if e["id"] == "duchy-lorraine"
+                for r in e["rulers"] if r["name"]["fr"] == "Henri II")
+    assert duke["name"]["de"] == "Heinrich II." and duke["title"] == {"fr": "duc", "de": "Herzog", "en": "Duke", "ja": "公"}
