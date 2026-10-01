@@ -1,21 +1,21 @@
 entity_id,person_name,title,from_year,to_year,from_precision,to_precision,source_page,confidence,notes
 abbey-longeville,Claude Eliphy,abbé de Longeville,1604,1607,attested,attested,138,high,
 barony-fenetrange,le duc de Croy,seigneur de Fénétrange,,,,,150,medium,
-bishopric-metz,Conrad de Scharfeneck,évêque de Metz,1211,1211,attested,attested,120,high,
-bishopric-metz,Jean d'Apremont,évêque de Metz,1234,1238,attested,attested,120,high,
-bishopric-metz,Adémar de Monteil,évêque de Metz,1360,1360,attested,attested,120,high,
-bishopric-metz,Thierry de Boppard,évêque de Metz,1373,1373,attested,attested,120,high,
-bishopric-metz,Raoul de Coucy,évêque de Metz,1390,1408,attested,attested,120-121,high,
-bishopric-metz,Conrad Bayer de Boppart,évêque de Metz,1418,1418,attested,attested,121,high,
-bishopric-metz,Georges de Bade,évêque de Metz,1460,1481,attested,attested,120-121,high,
-bishopric-metz,Henri II de Lorraine-Vaudémont,évêque de Metz,1487,1490,attested,attested,121,high,
-bishopric-metz,Jean de Lorraine,"cardinal, évêque de Metz",1527,1527,attested,attested,121,high,
-bishopric-metz,François Beaucaire,évêque de Metz,1562,1562,attested,attested,21,high,
+bishopric-metz,Conrad de Scharfeneck,évêque de Metz,1211,1224,attested,exact,120,high,reign 1212–1224 from standard references; the book attests 1211–1211
+bishopric-metz,Jean d'Apremont,évêque de Metz,1224,1238,exact,exact,120,high,reign 1224–1238 from standard references; the book attests 1234–1238
+bishopric-metz,Adémar de Monteil,évêque de Metz,1327,1361,exact,exact,120,high,reign 1327–1361 from standard references; the book attests 1360–1360
+bishopric-metz,Thierry de Boppard,évêque de Metz,1365,1384,exact,exact,120,high,reign 1365–1384 from standard references; the book attests 1373–1373
+bishopric-metz,Raoul de Coucy,évêque de Metz,1387,1415,exact,exact,120-121,high,reign 1387–1415 from standard references; the book attests 1390–1408
+bishopric-metz,Conrad Bayer de Boppart,évêque de Metz,1415,1459,exact,exact,121,high,reign 1415–1459 from standard references; the book attests 1418–1418
+bishopric-metz,Georges de Bade,évêque de Metz,1459,1484,exact,exact,120-121,high,reign 1459–1484 from standard references; the book attests 1460–1481
+bishopric-metz,Henri II de Lorraine-Vaudémont,évêque de Metz,1484,1505,exact,exact,121,high,reign 1484–1505 from standard references; the book attests 1487–1490
+bishopric-metz,Jean de Lorraine,"cardinal, évêque de Metz",1505,1550,exact,exact,121,high,reign 1505–1550 from standard references; the book attests 1527–1527
+bishopric-metz,François Beaucaire,évêque de Metz,1555,1568,exact,exact,21,high,reign 1555–1568 from standard references; the book attests 1562–1562
 bishopric-metz,Charles Ier de Lorraine,"cardinal, administrateur du temporel de Metz",1562,1562,attested,attested,21,high,
-bishopric-metz,"Louis de Lorraine, cardinal de Guise",évêque de Metz,1571,1571,attested,attested,140,high,
-bishopric-metz,Charles II de Lorraine,"cardinal, évêque de Metz",1593,1608,attested,,76;101;147,high,
-bishopric-metz,Cardinal de Givry,évêque de Metz,1607,,attested,,78;101,high,
-bishopric-metz,Henri de Verneuil,évêque de Metz,1629,1629,attested,attested,115-116,high,
+bishopric-metz,"Louis de Lorraine, cardinal de Guise",évêque de Metz,1571,1578,attested,exact,140,high,reign 1574–1578 from standard references; the book attests 1571–1571
+bishopric-metz,Charles II de Lorraine,"cardinal, évêque de Metz",1578,1608,exact,,76;101;147,high,reign 1578–1607 from standard references; the book attests 1593–1608
+bishopric-metz,Cardinal de Givry,évêque de Metz,1607,1612,attested,exact,78;101,high,reign 1608–1612 from standard references; the book attests 1607–…
+bishopric-metz,Henri de Verneuil,évêque de Metz,1612,1652,exact,exact,115-116,high,reign 1612–1652 from standard references; the book attests 1629–1629
 charles-alexandre-de-croy,Charles-Alexandre de Croy,"sire de Fénétrange, prince du Saint Empire",,1624,,exact,112,high,
 charles-philippe-de-croy,Charles-Philippe de Croy,"baron libre de Fénétrange et de Thicourt, prince de l'Empire",,1613,,exact,112,high,
 comte-de-rechicourt-le-chateau,Louis de Linange-Westerburg,comte de Réchicourt,1577,1622,exact,exact,117,high,
@@ -23,38 +23,38 @@ comte-de-rechicourt-le-chateau,Philippe II de Linange-Réchicourt,comte de Réch
 county-crehange,François-Ernest de Créhange,baron puis comte de Créhange,1617,,exact,,100,high,
 county-crehange,Pierre-Ernest Ier de Créhange,comte de Créhange,1622,1622,attested,attested,140,high,
 county-dabo,Jean-Louis de Linange-Falkenburg-Heidesheim,comte de Linange-Falkenburg-Heidesheim et de Dabo,,1625,,exact,116,high,
-county-hanau-lichtenberg,Philippe V de Hanau-Lichtenberg,comte,1570,,attested,,103,high,
-county-hanau-lichtenberg,Jean-René Ier de Hanau,comte de Hanau-Lichtenberg,1598,1606,attested,attested,105;148,high,"Johann Reinhard I; the book also writes Jean-René and Jean-Reinhard (pp. 105, 148)"
+county-hanau-lichtenberg,Philippe V de Hanau-Lichtenberg,comte,1570,1599,exact,exact,103,high,reign 1570–1599 from standard references; the book attests 1570–…
+county-hanau-lichtenberg,Jean-René Ier de Hanau,comte de Hanau-Lichtenberg,1598,1625,attested,exact,105;148,high,"Johann Reinhard I; the book also writes Jean-René and Jean-Reinhard (pp. 105, 148); reign 1599–1625 from standard references; the book attests 1598–1606"
 county-la-petite-pierre,Georges-Jean Ier de Veldenz,"comte palatin de Veldenz, comte de La Petite-Pierre",1556,1592,exact,exact,21;106;113;114,high,count of La Petite-Pierre from 1566 (p. 113); died 1592 (p. 114); also written Jean-Georges Ier (p. 21)
-county-la-petite-pierre,Jean-Auguste,comte palatin,1591,1611,circa,exact,106,medium,
+county-la-petite-pierre,Jean-Auguste,comte palatin,1591,1611,circa,exact,106,medium,reign 1592–1611 from standard references; the book attests 1591–1611
 county-la-petite-pierre,Georges-Jean II,"comte palatin du Rhin, comte de Veldenz et de Sponheim",1591,1661,circa,exact,106,medium,
 county-linange-westerburg,Philippe Ier de Linange-Westerburg,comte,1570,,attested,,103,high,
-county-nassau-saarbruecken,Louis,comte,1623,1623,attested,attested,21,,
-county-nassau-saarbruecken,Guillaume-Louis,comte,1629,,attested,,108,,
-diocese-strasbourg,Jean de Manderscheidt,évêque de Strasbourg,,,,,113,high,
-diocese-strasbourg,Charles II de Lorraine,évêque de Strasbourg,1601,1601,attested,attested,147,high,
-duchy-lorraine,Charles III,duc,,1608,,exact,24,,died 14 May 1608
+county-nassau-saarbruecken,Louis,comte,1602,1627,exact,exact,21,,reign 1602–1627 from standard references; the book attests 1623–1623
+county-nassau-saarbruecken,Guillaume-Louis,comte,1627,1640,exact,exact,108,,reign 1627–1640 from standard references; the book attests 1629–…
+diocese-strasbourg,Jean de Manderscheidt,évêque de Strasbourg,1569,1592,exact,exact,113,high,reign 1569–1592 from standard references; the book attests …–…
+diocese-strasbourg,Charles II de Lorraine,évêque de Strasbourg,1592,1607,exact,exact,147,high,reign 1592–1607 from standard references; the book attests 1601–1601
+duchy-lorraine,Charles III,duc,1545,1608,exact,exact,24,,died 14 May 1608; reign 1545–1608 from standard references; the book attests …–1608
 duchy-lorraine,Henri II,duc,1608,1624,exact,exact,24;109,,died July 1624
 duchy-lorraine,Nicole,duchesse,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
 duchy-lorraine,Charles IV,duc,1624,,exact,,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated"
 duchy-lorraine,François II,duc,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
-duchy-zweibruecken,Jacques de Deux-Ponts,comte de Deux-Ponts,1563,1563,attested,attested,143,medium,
-duchy-zweibruecken,Jean Ier,comte palatin du Rhin et duc de Deux-Ponts,1575,1575,attested,attested,143;144,high,
+duchy-zweibruecken,Jacques de Deux-Ponts,comte de Deux-Ponts,1540,1570,exact,exact,143,medium,reign 1540–1570 from standard references; the book attests 1563–1563
+duchy-zweibruecken,Jean Ier,comte palatin du Rhin et duc de Deux-Ponts,1569,1604,exact,exact,143;144,high,reign 1569–1604 from standard references; the book attests 1575–1575
 electorate-palatinate,Frédéric IV,électeur palatin,1583,1610,exact,exact,115;147;150,high,
 electorate-palatinate,Frédéric V,"électeur palatin, roi de Bohême",1610,1623,exact,attested,21;115,high,succeeded Frederick IV in 1610 (p. 115); king of Bohemia 1619-1620 (p. 115)
-electorate-trier,Lothaire de Metternich,archevêque-électeur,1607,1623,attested,attested,21;130-131,,
-electorate-trier,Philippe-Christophe de Soetern,archevêque-électeur,1629,,attested,,109,,
+electorate-trier,Lothaire de Metternich,archevêque-électeur,1599,1623,exact,exact,21;130-131,,reign 1599–1623 from standard references; the book attests 1607–1623
+electorate-trier,Philippe-Christophe de Soetern,archevêque-électeur,1623,1652,exact,exact,109,,reign 1623–1652 from standard references; the book attests 1629–…
 ernest-de-croy,Ernest de Croy,"baron de Fénétrange, duc d'Arschot",1613,1620,circa,exact,112,medium,
-holy-roman-empire,Maximilien II,empereur,1567,1574,attested,attested,103;119,high,
-holy-roman-empire,Rodolphe II,empereur,1609,1609,attested,attested,21;97;106;117;119,high,
-holy-roman-empire,Mathias,empereur,1613,1614,attested,attested,106;116;118-119,high,
-holy-roman-empire,Ferdinand II,empereur,1623,1632,attested,attested,78;106;109;110;116;117;118;131,high,
-kingdom-france,Louis XIII,roi de France,1634,1634,attested,attested,78,high,
+holy-roman-empire,Maximilien II,empereur,1564,1576,exact,exact,103;119,high,reign 1564–1576 from standard references; the book attests 1567–1574
+holy-roman-empire,Rodolphe II,empereur,1576,1612,exact,exact,21;97;106;117;119,high,reign 1576–1612 from standard references; the book attests 1609–1609
+holy-roman-empire,Mathias,empereur,1612,1619,exact,exact,106;116;118-119,high,reign 1612–1619 from standard references; the book attests 1613–1614
+holy-roman-empire,Ferdinand II,empereur,1619,1637,exact,exact,78;106;109;110;116;117;118;131,high,reign 1619–1637 from standard references; the book attests 1623–1632
+kingdom-france,Louis XIII,roi de France,1610,1643,exact,exact,78,high,reign 1610–1643 from standard references; the book attests 1634–1634
 rhingraves-daun,Philippe-Otto,rhingrave,,1634,,exact,111,medium,
 rhingraves-daun,Jean-Georges,rhingrave,,1633,,exact,111,medium,
 rhingraves-daun,"Frédéric, rhingrave de Daun",rhingrave,1547,1610,exact,exact,111,high,
 rhingraves-kyrbourg,Otto l'ancien,rhingrave de Kyrbourg,,1607,,exact,106;111,high,"rhingrave of Kyrburg, died 1607 (pp. 106, 111)"
 rhingraves-kyrbourg,Jean IX de Morhange,rhingrave,1578,1623,exact,exact,106;111,high,"rhingrave of Kyrburg after Otto, from 1607 (p. 106)"
 rhingraves-kyrbourg,Otto-Louis,rhingrave,1623,,exact,,106,high,
-teutonic-order,"Maximilien, archiduc d'Autriche",grand-maître de l'ordre teutonique,1618,1618,attested,attested,133,high,
-teutonic-order,archiduc Charles,grand-maître de l'ordre teutonique,1622,1622,attested,attested,140,high,
+teutonic-order,"Maximilien, archiduc d'Autriche",grand-maître de l'ordre teutonique,1590,1618,exact,exact,133,high,reign 1590–1618 from standard references; the book attests 1618–1618
+teutonic-order,archiduc Charles,grand-maître de l'ordre teutonique,1619,1624,exact,exact,140,high,reign 1619–1624 from standard references; the book attests 1622–1622
