@@ -1,9 +1,4 @@
 entity_id,person_name,title,from_year,to_year,from_precision,to_precision,source_page,confidence,notes
-electorate-palatinate,Frédéric IV,électeur palatin,1583,1610,exact,exact,115;147;150,high,
-electorate-palatinate,Frédéric V,"électeur palatin, roi de Bohême",1610,1623,exact,attested,21;115,high,succeeded Frederick IV in 1610 (p. 115); king of Bohemia 1619-1620 (p. 115)
-rhingraves-kyrbourg,Otto l'ancien,rhingrave de Kyrbourg,,1607,,exact,106;111,high,"rhingrave of Kyrburg, died 1607 (pp. 106, 111)"
-rhingraves-kyrbourg,Jean IX de Morhange,rhingrave,1578,1623,exact,exact,106;111,high,"rhingrave of Kyrburg after Otto, from 1607 (p. 106)"
-rhingraves-kyrbourg,Otto-Louis,rhingrave,1623,,exact,,106,high,
 bishopric-metz,Conrad de Scharfeneck,évêque de Metz,1211,1224,attested,exact,120,high,reign 1212–1224 from standard references; the book attests 1211–1211
 bishopric-metz,Jean d'Apremont,évêque de Metz,1224,1238,exact,exact,120,high,reign 1224–1238 from standard references; the book attests 1234–1238
 bishopric-metz,Adémar de Monteil,évêque de Metz,1327,1361,exact,exact,120,high,reign 1327–1361 from standard references; the book attests 1360–1360
@@ -21,18 +16,10 @@ bishopric-metz,Cardinal de Givry,évêque de Metz,1607,1612,attested,exact,78;10
 bishopric-metz,Henri de Verneuil,évêque de Metz,1612,1652,exact,exact,115-116,high,reign 1612–1652 from standard references; the book attests 1629–1629
 county-hanau-lichtenberg,Philippe V de Hanau-Lichtenberg,comte,1570,1599,exact,exact,103,high,reign 1570–1599 from standard references; the book attests 1570–…
 county-hanau-lichtenberg,Jean-René Ier de Hanau,comte de Hanau-Lichtenberg,1598,1625,attested,exact,105;148,high,"Johann Reinhard I; the book also writes Jean-René and Jean-Reinhard (pp. 105, 148); reign 1599–1625 from standard references; the book attests 1598–1606"
-county-la-petite-pierre,Georges-Jean Ier de Veldenz,"comte palatin de Veldenz, comte de La Petite-Pierre",1556,1592,exact,exact,21;106;113;114,high,count of La Petite-Pierre from 1566 (p. 113); died 1592 (p. 114); also written Jean-Georges Ier (p. 21)
-county-la-petite-pierre,Jean-Auguste,comte palatin,1591,1611,circa,exact,106,medium,reign 1592–1611 from standard references; the book attests 1591–1611
-county-la-petite-pierre,Georges-Jean II,"comte palatin du Rhin, comte de Veldenz et de Sponheim",1591,1661,circa,exact,106,medium,
 county-nassau-saarbruecken,Louis,comte,1602,1627,exact,exact,21,,reign 1602–1627 from standard references; the book attests 1623–1623
 county-nassau-saarbruecken,Guillaume-Louis,comte,1627,1640,exact,exact,108,,reign 1627–1640 from standard references; the book attests 1629–…
 diocese-strasbourg,Jean de Manderscheidt,évêque de Strasbourg,1569,1592,exact,exact,113,high,reign 1569–1592 from standard references; the book attests …–…
 diocese-strasbourg,Charles II de Lorraine,évêque de Strasbourg,1592,1607,exact,exact,147,high,reign 1592–1607 from standard references; the book attests 1601–1601
-duchy-lorraine,Charles III,duc,1545,1608,exact,exact,24,,died 14 May 1608; reign 1545–1608 from standard references; the book attests …–1608
-duchy-lorraine,Henri II,duc,1608,1624,exact,exact,24;109,,died July 1624
-duchy-lorraine,Nicole,duchesse,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
-duchy-lorraine,Charles IV,duc,1624,,exact,,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated"
-duchy-lorraine,François II,duc,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
 duchy-zweibruecken,Jacques de Deux-Ponts,comte de Deux-Ponts,1540,1570,exact,exact,143,medium,reign 1540–1570 from standard references; the book attests 1563–1563
 duchy-zweibruecken,Jean Ier,comte palatin du Rhin et duc de Deux-Ponts,1569,1604,exact,exact,143;144,high,reign 1569–1604 from standard references; the book attests 1575–1575
 electorate-trier,Lothaire de Metternich,archevêque-électeur,1599,1623,exact,exact,21;130-131,,reign 1599–1623 from standard references; the book attests 1607–1623
@@ -44,3 +31,25 @@ holy-roman-empire,Ferdinand II,empereur,1619,1637,exact,exact,78;106;109;110;116
 kingdom-france,Louis XIII,roi de France,1610,1643,exact,exact,78,high,reign 1610–1643 from standard references; the book attests 1634–1634
 teutonic-order,"Maximilien, archiduc d'Autriche",grand-maître de l'ordre teutonique,1590,1618,exact,exact,133,high,reign 1590–1618 from standard references; the book attests 1618–1618
 teutonic-order,archiduc Charles,grand-maître de l'ordre teutonique,1619,1624,exact,exact,140,high,reign 1619–1624 from standard references; the book attests 1622–1622
+abbey-longeville,Claude Eliphy,abbé de Longeville,1582,1607,exact,attested,138,high,"reign 1582–1606 from reference works: abbot from 1582, successor François Thierry in 1606 (list of abbots); the book attests 1604–1607"
+charles-alexandre-de-croy,Charles-Alexandre de Croy,"sire de Fénétrange, prince du Saint Empire",1613,1624,exact,exact,112,high,reign 1613–1624 from reference works: succeeded his father in 1613; assassinated in Brussels in November 1624; the book attests …–1624
+charles-philippe-de-croy,Charles-Philippe de Croy,"baron libre de Fénétrange et de Thicourt, prince de l'Empire",1570,1613,exact,exact,112,high,reign 1570–1613 from reference works: lord of Fénétrange by his marriage to its heiress Diane de Dommartin in 1570; died 1613; the book attests …–1613
+county-dabo,Jean-Louis de Linange-Falkenburg-Heidesheim,comte de Linange-Falkenburg-Heidesheim et de Dabo,1593,1625,exact,exact,116,high,reign 1593–1625 from reference works: succeeded his father Emich XI in 1593; died June 1625; the book attests …–1625
+county-la-petite-pierre,Georges-Jean Ier de Veldenz,"comte palatin de Veldenz, comte de La Petite-Pierre",1556,1592,exact,exact,21;106;113;114,high,count of La Petite-Pierre from 1566 (p. 113); died 1592 (p. 114); also written Jean-Georges Ier (p. 21)
+county-la-petite-pierre,Jean-Auguste,comte palatin,1591,1611,circa,exact,106,medium,reign 1592–1611 from standard references; the book attests 1591–1611
+county-la-petite-pierre,Georges-Jean II,"comte palatin du Rhin, comte de Veldenz et de Sponheim",1611,1654,exact,exact,106,medium,"reign 1611–1654 from reference works: count palatine of Guttenberg from 1592, of Lützelstein (La Petite-Pierre) after his brother Johann August died in 1611; died 1654; the book gives 1591-1661"
+county-linange-westerburg,Philippe Ier de Linange-Westerburg,comte,1547,1597,exact,exact,103,high,reign 1547–1597 from reference works: count from his father's death in 1547 (sole ruler from 1553); died 1597; the book attests 1570–…
+duchy-lorraine,Charles III,duc,1545,1608,exact,exact,24,,died 14 May 1608; reign 1545–1608 from standard references; the book attests …–1608
+duchy-lorraine,Henri II,duc,1608,1624,exact,exact,24;109,,died July 1624
+duchy-lorraine,Nicole,duchesse,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
+duchy-lorraine,Charles IV,duc,1624,1634,exact,exact,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated; reign 1624–1634 from reference works: duke from 1624; abdicated in 1634 for his brother Nicholas Francis (restored 1661-1675); the book attests 1624–…"
+duchy-lorraine,François II,duc,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
+electorate-palatinate,Frédéric IV,électeur palatin,1583,1610,exact,exact,115;147;150,high,
+electorate-palatinate,Frédéric V,"électeur palatin, roi de Bohême",1610,1623,exact,exact,21;115,high,succeeded Frederick IV in 1610 (p. 115); king of Bohemia 1619-1620 (p. 115); reign 1610–1623 from reference works: elector from 1610; deprived of the electorate in 1623; the book attests 1610–1623
+ernest-de-croy,Ernest de Croy,"baron de Fénétrange, duc d'Arschot",1613,1620,exact,exact,112,medium,reign 1613–1620 from reference works: co-lord of Fénétrange from his father's death in 1613; died October 1620; the book attests 1613–1620
+rhingraves-daun,Philippe-Otto,rhingrave,1608,1634,exact,exact,111,medium,reign 1608–1634 from reference works: succeeded his father Friedrich in 1608; Prince of Salm from 1623; died November 1634; the book attests …–1634
+rhingraves-daun,Jean-Georges,rhingrave,,1633,,exact,111,medium,
+rhingraves-daun,"Frédéric, rhingrave de Daun",rhingrave,1547,1610,exact,exact,111,high,
+rhingraves-kyrbourg,Otto l'ancien,rhingrave de Kyrbourg,1548,1607,exact,exact,106;111,high,"reign 1548–1607 from reference works: Otto I, rhinegrave of Kyrburg from his father's death in 1548; died June 1607; the book attests …–1607"
+rhingraves-kyrbourg,Jean IX de Morhange,rhingrave,1607,1623,exact,exact,106;111,high,"rhingrave of Kyrburg after Otto, from 1607 (p. 106); reign 1607–1623 from reference works: John IX (born 1575) succeeded his father Otto I in 1607; died 1623; the book gives 1578-1623"
+rhingraves-kyrbourg,Otto-Louis,rhingrave,1623,1634,exact,exact,106,high,reign 1623–1634 from reference works: Otto Louis succeeded his father John IX in 1623; died of plague at Speyer in October 1634; the book attests 1623–…
