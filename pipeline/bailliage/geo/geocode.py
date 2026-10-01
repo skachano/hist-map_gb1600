@@ -277,7 +277,9 @@ def refine_with_territories(results: dict, info: dict, memberships: list[dict], 
 
 def run() -> None:
     vocab = load_vocab(config.CURATED_DIR / "vocab.yaml")
-    rules = (yaml.safe_load((config.CURATED_DIR / "rules.yaml").read_text()) or {}).get("geocode") or {}
+    all_rules = yaml.safe_load((config.CURATED_DIR / "rules.yaml").read_text()) or {}
+    rules = all_rules.get("geocode") or {}
+    place_names = all_rules.get("place_names") or {}
     b = Builder()
     tables = b.build()
     places = tables["places"]
@@ -383,6 +385,10 @@ def run() -> None:
 
     refine_with_territories(results, info, tables["memberships"], items, geonames)
     apply_placement_rules(results, deferred)
+    for pid, names in place_names.items():  # curated names (rules.yaml place_names): a seat's feed its realms' titles
+        if pid in results:
+            results[pid].name_de = names.get("de") or results[pid].name_de
+            results[pid].name_en = names.get("en") or results[pid].name_en
 
     # Territories: names from type + seat; a point at the seat settlement, else at the centre of
     # the located settlements the memberships put inside it (only used to place labels).

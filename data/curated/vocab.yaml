@@ -26,7 +26,7 @@ place_types:
   court:         {en: court district, fr: cour, de: Hof (Hofgericht), ja: 裁判区, applies_to: territory}
   lordship:      {en: lordship, fr: seigneurie, de: Herrschaft, ja: 領, applies_to: any}
   county:        {en: county, fr: comté, de: Grafschaft, ja: 伯領, applies_to: territory}
-  marquisate:    {en: marquisate, fr: marquisat, de: Marquisat, ja: 侯爵領, applies_to: territory}
+  marquisate:    {en: marquisate, fr: marquisat, de: Markgrafschaft, ja: 侯爵領, applies_to: territory}
   march:         {en: imperial march, fr: marche d'Empire, de: Reichsmark, ja: 帝国辺境区, applies_to: territory}
   principality:  {en: principality, fr: principauté, de: Fürstentum, ja: 侯国, applies_to: territory}
   barony:        {en: barony, fr: baronnie, de: Freiherrschaft, ja: 男爵領, applies_to: territory}

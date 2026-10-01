@@ -503,6 +503,10 @@ class Builder:
                                  ("name_en", g["name_en"])):
                 if value and not row.get(field):
                     row[field] = value
+        # rules.yaml place_names: curated names (historical German names, titles) win over everything
+        for row in rows:
+            for lang, name in (self.rules.get("place_names") or {}).get(row["id"], {}).items():
+                row[f"name_{lang}"] = name
         return rows
 
     def _place_rows_without_geo(self, used: set[str]) -> list[dict]:

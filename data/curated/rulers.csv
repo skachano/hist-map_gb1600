@@ -37,15 +37,15 @@ county-la-petite-pierre,Jean-Georges Ier de Veldenz-La-Petite-Pierre,comte,1583,
 county-la-petite-pierre,Jean-Auguste,comte palatin,1591,1611,circa,exact,106,medium,
 county-la-petite-pierre,Georges-Jean II,"comte palatin du Rhin, comte de Veldenz et de Sponheim",1591,1661,circa,exact,106,medium,
 county-linange-westerburg,Philippe Ier de Linange-Westerburg,comte,1570,,attested,,103,high,
-county-nassau-saarbruecken,Louis,count,1623,1623,attested,attested,21,,
-county-nassau-saarbruecken,Guillaume-Louis,count,1629,,attested,,108,,
+county-nassau-saarbruecken,Louis,comte,1623,1623,attested,attested,21,,
+county-nassau-saarbruecken,Guillaume-Louis,comte,1629,,attested,,108,,
 diocese-strasbourg,Jean de Manderscheidt,évêque de Strasbourg,,,,,113,high,
 diocese-strasbourg,Charles II de Lorraine,évêque de Strasbourg,1601,1601,attested,attested,147,high,
-duchy-lorraine,Charles III,duke,,1608,,exact,24,,died 14 May 1608
-duchy-lorraine,Henri II,duke,1608,1624,exact,exact,24;109,,died July 1624
-duchy-lorraine,Nicole,duchess,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
-duchy-lorraine,Charles IV,duke,1624,,exact,,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated"
-duchy-lorraine,François II,duke,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
+duchy-lorraine,Charles III,duc,,1608,,exact,24,,died 14 May 1608
+duchy-lorraine,Henri II,duc,1608,1624,exact,exact,24;109,,died July 1624
+duchy-lorraine,Nicole,duchesse,1624,1625,exact,exact,109,,reigned jointly with Charles IV; set aside in November 1625
+duchy-lorraine,Charles IV,duc,1624,,exact,,109-110,,"co-ruler with Nicole 1624-1625, then sole duke after François II abdicated"
+duchy-lorraine,François II,duc,1625,1625,exact,exact,109-110,,"reigned a few days in November 1625, then abdicated for his son"
 duchy-zweibruecken,Jean Ier,comte palatin du Rhin et duc de Deux-Ponts,,,,,144,high,
 duchy-zweibruecken,Jacques de Deux-Ponts,comte de Deux-Ponts,1563,1563,attested,attested,143,medium,
 duchy-zweibruecken,Jean Ier,duc de Deux-Ponts,1575,1575,attested,attested,143,high,
@@ -54,8 +54,8 @@ electorate-palatinate,Frédéric IV,prince palatin,1602,1604,attested,attested,1
 electorate-palatinate,Frédéric IV,prince palatin,1604,1604,attested,attested,147,high,
 electorate-palatinate,Frédéric V,"électeur palatin, roi de Bohême",1619,1620,exact,exact,115,high,
 electorate-palatinate,Frédéric V,électeur palatin,1623,1623,attested,attested,21,high,
-electorate-trier,Lothaire de Metternich,archbishop-elector,1607,1623,attested,attested,21;130-131,,
-electorate-trier,Philippe-Christophe de Soetern,archbishop-elector,1629,,attested,,109,,
+electorate-trier,Lothaire de Metternich,archevêque-électeur,1607,1623,attested,attested,21;130-131,,
+electorate-trier,Philippe-Christophe de Soetern,archevêque-électeur,1629,,attested,,109,,
 ernest-de-croy,Ernest de Croy,"baron de Fénétrange, duc d'Arschot",1613,1620,circa,exact,112,medium,
 holy-roman-empire,Maximilien II,empereur,1567,1567,attested,attested,119,high,
 holy-roman-empire,Maximilien II,empereur,1574,1574,attested,attested,103,high,
