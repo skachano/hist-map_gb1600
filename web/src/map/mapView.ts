@@ -14,6 +14,9 @@ import { CONTESTED, MARQUISATE, PRINCIPALITY, REALM_OTHER, SERIES } from "../mod
 import { typesIn } from "../model/territories";
 import { ICON_PIXEL_RATIO, iconName, SHAPES, shapeImage } from "./icons";
 
+const BASEMAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
+const BASEMAP_DROP = /^(building|aeroway|airport|road_area_pier|road_pier|highway_path|highway_minor|highway-name|highway-shield|road_shield|railway|tunnel|label_village|label_other)/;
+
 setWorkerUrl(workerUrl);
 
 /** How one place is drawn in the current view. */
@@ -79,22 +82,15 @@ export class MapView {
       minZoom: 6,
       maxZoom: 13,
       attributionControl: { compact: true },
-      style: {
-        version: 8,
-        sources: {
-          osm: {
-            type: "raster",
-            tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
-            tileSize: 256,
-            attribution: "© OpenStreetMap contributors",
-          },
-        },
-        // A faded, grey base map: the historical layers carry the colour.
-        layers: [{ id: "osm", type: "raster", source: "osm",
-          paint: { "raster-saturation": -1, "raster-opacity": 0.45, "raster-contrast": -0.2 } }],
-      },
+      // OpenFreeMap's grey "positron" vector style (no key; OpenStreetMap data). The historical
+      // layers carry the colour; the base map only gives water, relief, towns and main roads.
+      style: BASEMAP_STYLE,
     });
-    this.ready = new Promise((resolve) => this.map.on("load", () => { this.addLayers(); resolve(); }));
+    this.ready = new Promise((resolve) => this.map.on("load", () => {
+      this.trimBasemap();
+      this.addLayers();
+      resolve();
+    }));
     // The container changes size when the phone layout opens the panel below the map.
     new ResizeObserver(() => this.map.resize()).observe(container);
 
@@ -120,6 +116,14 @@ export class MapView {
       const hit = this.map.queryRenderedFeatures(e.point, { layers: ["places-circle", "cells-fill"] })[0];
       callbacks.onSelect(hit?.properties?.id as string | undefined);
     });
+  }
+
+  /** Drop the base map's detail that would crowd a 17th-century map: buildings, airports, minor
+   *  roads and paths, road names and shields, villages' modern names (the atlas draws its own). */
+  private trimBasemap(): void {
+    for (const layer of this.map.getStyle().layers ?? []) {
+      if (BASEMAP_DROP.test(layer.id)) this.map.removeLayer(layer.id);
+    }
   }
 
   private addLayers(): void {

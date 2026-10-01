@@ -1,0 +1,73 @@
+# Stage 11: build the atlas from the committed curated data and publish it on GitHub Pages.
+# Runs on every push to main (and by hand). The book, its text and the extraction caches are
+# not in the repository: the site is compiled from data/curated/ and data/geometry/ only.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pipeline/requirements.txt
+      - name: Install the pipeline
+        run: pip install -r pipeline/requirements.txt
+      - name: Test the pipeline and data
+        working-directory: pipeline
+        env:
+          PYTHONPATH: ${{ github.workspace }}/pipeline
+        run: python -m pytest -q
+      - name: Compile the web data
+        working-directory: pipeline
+        env:
+          PYTHONPATH: ${{ github.workspace }}/pipeline
+        run: python -m bailliage build-data
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install the app
+        working-directory: web
+        run: npm ci
+      - name: Test the app
+        working-directory: web
+        run: npm test
+      - name: Build the app
+        working-directory: web
+        # Pages serves the site under /<repository name>/
+        run: npm run build -- --base="/${{ github.event.repository.name }}/"
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -31,7 +31,16 @@ RULES_FILE = config.CURATED_DIR / "rules.yaml"
 GEOCODING_FILE = config.CURATED_DIR / "geocoding.csv"  # written by `make geocode` (Stage 5)
 REPORT_FILE = config.DATA_DIR / "review" / "report.md"
 CONFIDENCE_RANK = {"low": 0, "medium": 1, "high": 2}
-SNIPPET_MAX = 300
+SNIPPET_MAX = 200  # quotations from the book stay short (it is a licensed copy)
+NOTES_MAX = 300  # notes are our own words, not quotations
+
+
+def clip(text: str, limit: int = SNIPPET_MAX) -> str:
+    """Shorten to `limit` characters at a word boundary, marking the cut with an ellipsis."""
+    if len(text) <= limit:
+        return text
+    cut = text[:limit - 1].rsplit(" ", 1)[0].rstrip(" ,;:")
+    return cut + "…"
 STATE_TYPES = {"empire", "kingdom", "duchy", "electorate", "temporal_bishopric"}
 TRANSFER_EVENTS = {"purchase", "pledge", "redemption", "inheritance", "enfeoffment", "exchange", "cession",
                    "occupation"}
@@ -440,9 +449,11 @@ class Builder:
             if "pages" in r:
                 r["source_page"] = page_ref(r.pop("pages")) or None
             if r.get("snippet"):
-                r["snippet"] = r["snippet"][:SNIPPET_MAX]
+                r["snippet"] = clip(r["snippet"])
+            if r.get("description"):  # extracted descriptions paraphrase the book closely
+                r["description"] = clip(r["description"])
             if r.get("notes"):
-                r["notes"] = r["notes"][:SNIPPET_MAX]
+                r["notes"] = r["notes"][:NOTES_MAX]
             if "disputed_with" in r:
                 r["is_disputed"] = bool(r["is_disputed"] or r["disputed_with"])
         return rows

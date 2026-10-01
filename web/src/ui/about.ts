@@ -30,7 +30,7 @@ const TEXT: Record<Lang, Section[]> = {
       "Conceived, curated and reviewed by Siargey Kachanovich. The atlas's data and texts are released under the Creative Commons Attribution 4.0 licence (CC BY 4.0): you may reuse and adapt them, with credit. Its code is under the MIT License. This does not cover the book itself or the short quotations from it, which remain under the publisher's rights.",
     ] },
     { title: "Attributions", paragraphs: [
-      "Base map © OpenStreetMap contributors (ODbL). Place data from Wikidata (CC0) and GeoNames (CC BY 4.0).",
+      "Base map: OpenFreeMap, © OpenMapTiles, data © OpenStreetMap contributors (ODbL). Place data from Wikidata (CC0) and GeoNames (CC BY 4.0).",
     ] },
   ],
   fr: [
@@ -53,7 +53,7 @@ const TEXT: Record<Lang, Section[]> = {
       "Conçu, établi et vérifié par Siargey Kachanovich. Les données et les textes de l'atlas sont publiés sous la licence Creative Commons Attribution 4.0 (CC BY 4.0) : vous pouvez les réutiliser et les adapter en citant la source. Son code est sous licence MIT. Cela ne s'applique ni au livre lui-même ni aux courtes citations qui en sont tirées, qui restent soumis aux droits de l'éditeur.",
     ] },
     { title: "Crédits", paragraphs: [
-      "Fond de carte © contributeurs d'OpenStreetMap (ODbL). Données de lieux : Wikidata (CC0) et GeoNames (CC BY 4.0).",
+      "Fond de carte : OpenFreeMap, © OpenMapTiles, données © contributeurs d'OpenStreetMap (ODbL). Données de lieux : Wikidata (CC0) et GeoNames (CC BY 4.0).",
     ] },
   ],
   de: [
@@ -76,7 +76,7 @@ const TEXT: Record<Lang, Section[]> = {
       "Konzipiert, erarbeitet und geprüft von Siargey Kachanovich. Daten und Texte des Atlas stehen unter der Lizenz Creative Commons Namensnennung 4.0 (CC BY 4.0): Sie dürfen sie mit Quellenangabe weiterverwenden und bearbeiten. Der Code steht unter der MIT-Lizenz. Dies gilt nicht für das Buch selbst und die kurzen Zitate daraus, die den Rechten des Verlags unterliegen.",
     ] },
     { title: "Nachweise", paragraphs: [
-      "Grundkarte © OpenStreetMap-Mitwirkende (ODbL). Ortsdaten aus Wikidata (CC0) und GeoNames (CC BY 4.0).",
+      "Grundkarte: OpenFreeMap, © OpenMapTiles, Daten © OpenStreetMap-Mitwirkende (ODbL). Ortsdaten aus Wikidata (CC0) und GeoNames (CC BY 4.0).",
     ] },
   ],
   ja: [
@@ -100,7 +100,7 @@ const TEXT: Record<Lang, Section[]> = {
       "企画・データ作成・確認：Siargey Kachanovich。本アトラスのデータと文章はクリエイティブ・コモンズ 表示 4.0 ライセンス（CC BY 4.0）で公開する。出典を明記すれば再利用・改変できる。コードは MIT ライセンスで公開する。ただし本書そのものと本書からの短い引用は対象外であり、出版社の権利に服する。",
     ] },
     { title: "クレジット", paragraphs: [
-      "背景地図 © OpenStreetMap contributors (ODbL)。地点データ：Wikidata (CC0)、GeoNames (CC BY 4.0)。",
+      "背景地図：OpenFreeMap、© OpenMapTiles、データ © OpenStreetMap contributors (ODbL)。地点データ：Wikidata (CC0)、GeoNames (CC BY 4.0)。",
     ] },
   ],
 };

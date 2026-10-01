@@ -67,7 +67,7 @@ test("about page cites the book and the data sources in every language", async (
   await expect(about).toContainText("GeoNames (CC BY 4.0)");
   await expect(about).toContainText("Siargey Kachanovich");
   await page.getByRole("button", { name: "Deutsch" }).click();
-  await expect(about).toContainText("Grundkarte © OpenStreetMap-Mitwirkende");
+  await expect(about).toContainText("Daten © OpenStreetMap-Mitwirkende (ODbL)");
 });
 
 test("territories: realms of a year, walk down and up the hierarchy, levels and neighbours", async ({ page }) => {

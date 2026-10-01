@@ -31,6 +31,14 @@ Screenshots of the running app (headless Chromium in Docker, dev server must be 
 docker compose run --rm e2e node scripts/screenshot.mjs "#/map?year=1624&right=high_justice&lang=fr" shots/a.png
 ```
 
+## Deployment
+
+`.github/workflows/pages.yml` publishes the atlas on GitHub Pages on every push to `main`: it runs
+the tests, compiles `web/public/data/` from the committed `data/curated/` and `data/geometry/`
+(`build-data`; the book and the extraction caches are not needed), builds the app with Vite under
+`/<repository name>/` and deploys `web/dist/`. One-time setup: Settings → Pages → Source:
+"GitHub Actions". The base map is OpenFreeMap's "positron" style (no API key).
+
 ## Licence
 
 © 2026 Siargey Kachanovich. The code is under the [MIT License](LICENSE); the data

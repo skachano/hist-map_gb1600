@@ -1,6 +1,8 @@
 """Offline tests for Stage 3 (no API calls)."""
 import json
 
+import pytest
+
 from bailliage import config
 from bailliage.data.store import load_vocab
 from bailliage.extract import prompt, run
@@ -44,6 +46,8 @@ def test_system_prompt_lists_vocab_and_known_entities():
     assert "duchy-lorraine" in system and "diocese-metz" in system
 
 
+@pytest.mark.skipif(not (config.RAW_DIR / "gazetteer_seed.csv").exists(),
+                    reason="needs data/raw/ (derived from the book's text, kept out of git)")
 def test_request_hash_is_stable_and_sensitive(tmp_path, monkeypatch):
     section = {"id": "L9-C01-S01", "file": "x.txt", "title": "T", "chapter_title": "C",
                "first_page": 12, "last_page": 13}

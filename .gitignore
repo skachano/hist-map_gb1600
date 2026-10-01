@@ -24,3 +24,6 @@ web/public/data/
 
 # screenshots from web/scripts/screenshot.mjs
 web/shots/
+
+# Playwright output
+web/test-results/
