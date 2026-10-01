@@ -66,7 +66,7 @@ const STRINGS = {
   groupLordship: { en: "Lordships and fiefs", fr: "Seigneuries et fiefs", de: "Herrschaften und Lehen", ja: "領と封土" },
   groupCounty: { en: "Counties", fr: "Comtés", de: "Grafschaften", ja: "伯領" },
   groupPrincipality: { en: "Principalities", fr: "Principautés", de: "Fürstentümer", ja: "侯国" },
-  groupMarquisate: { en: "Marquisates", fr: "Marquisats", de: "Marquisate", ja: "侯爵領" },
+  groupMarquisate: { en: "Marquisates", fr: "Marquisats", de: "Markgrafschaften", ja: "侯爵領" },
   groupOther: { en: "Other (condominiums, bans, courts…)", fr: "Autres (condominiums, bans, cours…)",
     de: "Andere (Kondominien, Banne, Höfe…)", ja: "その他（共同統治地・バン・裁判区など）" },
   kindOfRealm: { en: "Kind of realm", fr: "Type de territoire", de: "Art des Territoriums", ja: "領域の種別" },
