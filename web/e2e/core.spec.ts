@@ -85,3 +85,32 @@ test("keyboard: panel takes focus, Escape closes it and returns focus; skip link
   await page.keyboard.press("Enter");
   await expect(page).toHaveURL(/#\/matrix/);
 });
+
+test("the hover tooltip stays inside the map near the edges (no scrollbar)", async ({ page }, info) => {
+  test.skip(info.project.name !== "desktop", "hover needs a mouse");
+  await open(page, "#/map?year=1624&right=high_justice&lang=en");
+  const box = (await page.locator("#map").boundingBox())!;
+  // drag the bailiwick into the bottom-right corner, so villages sit at the map's edges
+  await page.mouse.move(box.x + box.width * 0.55, box.y + box.height * 0.5);
+  await page.mouse.down();
+  await page.mouse.move(box.x + box.width * 0.97, box.y + box.height * 0.93, { steps: 10 });
+  await page.mouse.up();
+  await page.waitForTimeout(500);
+  const tooltip = page.locator("#tooltip");
+  let found = false;
+  for (let y = box.y + box.height - 8; y > box.y + box.height - 160 && !found; y -= 6) {
+    for (let x = box.x + box.width - 8; x > box.x + box.width - 200 && !found; x -= 6) {
+      await page.mouse.move(x, y);
+      found = await tooltip.isVisible();
+    }
+  }
+  expect(found).toBe(true);
+  const tip = (await tooltip.boundingBox())!;
+  expect(tip.x + tip.width).toBeLessThanOrEqual(box.x + box.width);
+  expect(tip.y + tip.height).toBeLessThanOrEqual(box.y + box.height);
+  const scroll = await page.evaluate(() => ({
+    x: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+    y: document.documentElement.scrollHeight - document.documentElement.clientHeight,
+  }));
+  expect(scroll).toEqual({ x: 0, y: 0 });
+});

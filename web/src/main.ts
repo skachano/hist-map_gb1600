@@ -13,6 +13,7 @@ import { renderAbout } from "./ui/about";
 import { renderChanges, renderMatrix } from "./ui/pages";
 import { renderPanel } from "./ui/panel";
 import { renderDisputesView, renderEntityView, renderTerritoriesView } from "./ui/sideViews";
+import { tooltipPosition } from "./ui/tooltip";
 import { BAILIWICK, childrenIn, hierarchyOf, territoryLevels } from "./model/territories";
 
 const $ = (id: string) => document.getElementById(id)!;
@@ -139,7 +140,10 @@ async function start(): Promise<void> {
         if (pr?.contested) lines.push(h("div", { class: "warn" }, `⚠ ${t("contested", lang)}`));
       }
       fill(tooltip, h("strong", {}, name(data.places.get(placeId)?.name, lang, placeId)), ...lines);
-      tooltip.style.transform = `translate(${point.x + 14}px, ${point.y + 14}px)`;
+      const area = tooltip.offsetParent as HTMLElement | null; // the map's stage
+      const pos = tooltipPosition(point, { width: tooltip.offsetWidth, height: tooltip.offsetHeight },
+        { width: area?.clientWidth ?? window.innerWidth, height: area?.clientHeight ?? window.innerHeight });
+      tooltip.style.transform = `translate(${pos.x}px, ${pos.y}px)`;
     },
     onSelect(placeId) {
       store.set({ place: placeId });
