@@ -30,3 +30,11 @@ Screenshots of the running app (headless Chromium in Docker, dev server must be 
 ```sh
 docker compose run --rm e2e node scripts/screenshot.mjs "#/map?year=1624&right=high_justice&lang=fr" shots/a.png
 ```
+
+## Licence
+
+© 2026 Siargey Kachanovich. The code is under the [MIT License](LICENSE); the data
+(`data/curated/`, `data/geometry/`, `web/public/data/`) and the text are under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) (see [LICENSE-DATA](LICENSE-DATA)). This
+does not cover Hiegel's book or the short quotations from it, the OpenStreetMap base map (ODbL),
+or the Wikidata (CC0) and GeoNames (CC BY 4.0) data, which keep their own terms.

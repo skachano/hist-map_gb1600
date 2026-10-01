@@ -26,6 +26,9 @@ const TEXT: Record<Lang, Section[]> = {
       "Places were located with Wikidata and GeoNames. German names are the places' historical German names, entered by hand where Wikidata gives only the French one (Bolchen for Boulay, Kriechingen for Créhange); French-speaking villages keep their French name. English names come from Wikidata.",
       "Rulers are shown for the years the book attests them, widened to their known reign dates where reference works give them with certainty (Wikipedia, the Deutsche Biographie, genealogies); the data notes which dates come from outside the book. Rulers' names and titles are translated.",
     ] },
+    { title: "Author", paragraphs: [
+      "Conceived, curated and reviewed by Siargey Kachanovich. The atlas's data and texts are released under the Creative Commons Attribution 4.0 licence (CC BY 4.0): you may reuse and adapt them, with credit. Its code is under the MIT License. This does not cover the book itself or the short quotations from it, which remain under the publisher's rights.",
+    ] },
     { title: "Attributions", paragraphs: [
       "Base map © OpenStreetMap contributors (ODbL). Place data from Wikidata (CC0) and GeoNames (CC BY 4.0).",
     ] },
@@ -45,6 +48,9 @@ const TEXT: Record<Lang, Section[]> = {
       "Le livre numérisé a été lu grâce à sa couche de texte OCR (Tesseract pour les pages qui n'en avaient pas). Chaque section du livre I, chapitres I, VI, VIII et IX, a ensuite été lue par Claude (Anthropic) en faits structurés avec renvois aux pages, fusionnés, contrôlés par des règles et en partie revus à la main. Certains faits restent donc des résultats d'extraction : les degrés de confiance et la liste de révision l'indiquent. Beaucoup de faits ont ensuite été corrigés ou ajoutés à la main, tirés aussi du livre I, chapitre II (les ducs, Louis de Guise et Henriette de Vaudémont : le marquisat de Faulquemont, les comtés de Dalem et de Boulay, les règnes des ducs) et de passages isolés du livre I, chapitre VII, du livre II, chapitre IV et du livre III, chapitres II à IV ; quand le livre se contredit ou contredit d'autres sources, la note de l'enregistrement le signale.",
       "Les lieux ont été localisés avec Wikidata et GeoNames. Les noms allemands sont les noms allemands historiques des lieux, saisis à la main quand Wikidata ne donne que le nom français (Bolchen pour Boulay, Kriechingen pour Créhange) ; les villages francophones gardent leur nom français. Les noms anglais proviennent de Wikidata.",
       "Les souverains et seigneurs sont montrés pour les années où le livre les atteste, élargies à leurs dates de règne connues quand les ouvrages de référence les donnent avec certitude (Wikipédia, la Deutsche Biographie, des généalogies) ; les données indiquent quelles dates viennent d'ailleurs que du livre. Leurs noms et titres sont traduits.",
+    ] },
+    { title: "Auteur", paragraphs: [
+      "Conçu, établi et vérifié par Siargey Kachanovich. Les données et les textes de l'atlas sont publiés sous la licence Creative Commons Attribution 4.0 (CC BY 4.0) : vous pouvez les réutiliser et les adapter en citant la source. Son code est sous licence MIT. Cela ne s'applique ni au livre lui-même ni aux courtes citations qui en sont tirées, qui restent soumis aux droits de l'éditeur.",
     ] },
     { title: "Crédits", paragraphs: [
       "Fond de carte © contributeurs d'OpenStreetMap (ODbL). Données de lieux : Wikidata (CC0) et GeoNames (CC BY 4.0).",
@@ -66,6 +72,9 @@ const TEXT: Record<Lang, Section[]> = {
       "Die Orte wurden mit Wikidata und GeoNames verortet. Die deutschen Namen sind die historischen deutschen Ortsnamen, von Hand eingetragen, wo Wikidata nur den französischen nennt (Bolchen für Boulay, Kriechingen für Créhange); französischsprachige Dörfer behalten ihren französischen Namen. Die englischen Namen stammen aus Wikidata.",
       "Herrscher werden für die Jahre gezeigt, in denen das Buch sie belegt, erweitert auf ihre bekannten Regierungszeiten, wo Nachschlagewerke sie sicher angeben (Wikipedia, die Deutsche Biographie, Genealogien); die Daten vermerken, welche Jahre nicht aus dem Buch stammen. Ihre Namen und Titel sind übersetzt.",
     ] },
+    { title: "Autor", paragraphs: [
+      "Konzipiert, erarbeitet und geprüft von Siargey Kachanovich. Daten und Texte des Atlas stehen unter der Lizenz Creative Commons Namensnennung 4.0 (CC BY 4.0): Sie dürfen sie mit Quellenangabe weiterverwenden und bearbeiten. Der Code steht unter der MIT-Lizenz. Dies gilt nicht für das Buch selbst und die kurzen Zitate daraus, die den Rechten des Verlags unterliegen.",
+    ] },
     { title: "Nachweise", paragraphs: [
       "Grundkarte © OpenStreetMap-Mitwirkende (ODbL). Ortsdaten aus Wikidata (CC0) und GeoNames (CC BY 4.0).",
     ] },
@@ -86,6 +95,9 @@ const TEXT: Record<Lang, Section[]> = {
       "スキャンされた本書は OCR テキスト層（テキスト層のないページは Tesseract）で読み取った。第1部の第1・6・8・9章の各節を Claude（Anthropic）でページ付きの構造化された事実に変換し、統合したうえで規則による検査と一部の手作業による確認を行った。したがって一部の事実は抽出結果のままであり、信頼度の表示と確認リストがそれを示している。その後、多くの事実を手作業で修正・追加した。第1部第2章（ロレーヌ公、ギーズ公ルイとアンリエット・ド・ヴォーデモン：フォルクモン侯爵領、ダレム伯領とブーレー伯領、歴代公の在位）のほか、第1部第7章、第2部第4章、第3部第2〜4章の個別の箇所からも補った。本書が自らや他の資料と矛盾する場合は、その記録の注記に記した。",
       "地点の位置は Wikidata と GeoNames で特定した。ドイツ語名は各地の歴史的なドイツ語地名で、Wikidata にフランス語名しかない場合は手作業で入力した（ブーレー＝ボルヒェン、クレアンジュ＝クリーヒンゲン）。フランス語圏の村はフランス語名のままとした。英語名は Wikidata による。",
       "君主・領主は本書が記録する年について示し、参考文献（Wikipedia、ドイツ人名事典、系譜資料）で確実にわかる場合はその在位期間まで広げた。本書以外に由来する年はデータに注記している。君主・領主の名前と称号は翻訳した。",
+    ] },
+    { title: "作成者", paragraphs: [
+      "企画・データ作成・確認：Siargey Kachanovich。本アトラスのデータと文章はクリエイティブ・コモンズ 表示 4.0 ライセンス（CC BY 4.0）で公開する。出典を明記すれば再利用・改変できる。コードは MIT ライセンスで公開する。ただし本書そのものと本書からの短い引用は対象外であり、出版社の権利に服する。",
     ] },
     { title: "クレジット", paragraphs: [
       "背景地図 © OpenStreetMap contributors (ODbL)。地点データ：Wikidata (CC0)、GeoNames (CC BY 4.0)。",

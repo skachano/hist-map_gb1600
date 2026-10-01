@@ -65,6 +65,7 @@ test("about page cites the book and the data sources in every language", async (
   const about = page.locator("article.about");
   await expect(about).toContainText("Henri Hiegel, Le bailliage d'Allemagne de 1600 à 1632");
   await expect(about).toContainText("GeoNames (CC BY 4.0)");
+  await expect(about).toContainText("Siargey Kachanovich");
   await page.getByRole("button", { name: "Deutsch" }).click();
   await expect(about).toContainText("Grundkarte © OpenStreetMap-Mitwirkende");
 });
