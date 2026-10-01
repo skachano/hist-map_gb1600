@@ -17,6 +17,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import re
 import shutil
 from collections import Counter, defaultdict
 
@@ -42,6 +43,26 @@ def ruler_translations(kind: str) -> dict[str, dict[str, str]]:
         return {}
     with path.open(newline="") as f:
         return {r["fr"]: {lang: v for lang, v in r.items() if lang != "fr" and v} for r in csv.DictReader(f)}
+
+
+_REIGN = re.compile(r"reign (\d{4})–(\d{4}) from (?:standard references|reference works)(?:: (.*?))?"
+                    r"(?:; the book (attests|gives) ([\d…]+(?:[–-][\d…]+)?)|$)")
+
+
+def ruler_dates(notes: str | None) -> dict | None:
+    """Where a ruler's dates come from, read from the note rules write for reign dates taken from
+    reference works ("reign 1576–1612 from standard references; the book attests 1609–1609"):
+    {"reign": "1576–1612", "book": "1609", "contradicts": true if the book's years are wrong,
+    "why": the reference's details, in English}. None for dates from the book alone."""
+    m = _REIGN.search(notes or "")
+    if not m:
+        return None
+    a, b, why, verb, book = m.groups()
+    if book:
+        lo, _, hi = book.replace("-", "–").partition("–")
+        book = None if {lo, hi or lo} == {"…"} else lo if not hi or lo == hi else f"{lo}–{hi}"
+    return _compact({"reign": f"{a}–{b}", "book": book, "contradicts": verb == "gives" or None,
+                     "why": why or None})
 
 
 def _pages(ref: str | None) -> str | None:
@@ -97,6 +118,7 @@ def build() -> dict[str, int]:
             "name": {"fr": r.person_name, **ruler_names.get(r.person_name, {})}, "title": _compact({"fr": r.title, **titles.get(r.title or "", {})}) or None,
             "from": r.from_year, "to": r.to_year,
             "fp": r.from_precision, "tp": r.to_precision, "pages": _pages(r.source_page),
+            "dates": ruler_dates(r.notes),
         }))
     ranked = sorted((e for _, e in ds.entities), key=lambda e: (-rights_by_holder[e.id], e.id))
     entities = [_compact({

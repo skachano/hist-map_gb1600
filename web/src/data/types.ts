@@ -51,6 +51,8 @@ export interface Place {
 export interface Ruler {
   name: Names; // name and title in French as in the book, with translations
   title?: Names;
+  /** reign dates taken from reference works rather than the book */
+  dates?: { reign: string; book?: string; contradicts?: boolean; why?: string };
   from?: number;
   to?: number;
   fp?: string;

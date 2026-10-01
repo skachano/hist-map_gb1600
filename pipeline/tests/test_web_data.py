@@ -77,3 +77,20 @@ def test_rulers_translated(built):
     duke = next(r for e in built["load"]("entities.json") if e["id"] == "duchy-lorraine"
                 for r in e["rulers"] if r["name"]["fr"] == "Henri II")
     assert duke["name"]["de"] == "Heinrich II." and duke["title"] == {"fr": "duc", "de": "Herzog", "en": "Duke", "ja": "公"}
+
+
+def test_ruler_dates_from_notes():
+    """The source of a ruler's dates is read from the note written with reference-work reign dates."""
+    assert web_data.ruler_dates("reign 1576–1612 from standard references; the book attests 1609–1609") == \
+        {"reign": "1576–1612", "book": "1609"}
+    assert web_data.ruler_dates("x; reign 1607–1623 from reference works: born 1575; died 1623; the book gives 1578-1623") == \
+        {"reign": "1607–1623", "book": "1578–1623", "contradicts": True, "why": "born 1575; died 1623"}
+    assert web_data.ruler_dates("reign 1569–1592 from standard references; the book attests …–…") == {"reign": "1569–1592"}
+    assert web_data.ruler_dates("died 14 May 1608") is None and web_data.ruler_dates(None) is None
+
+
+def test_rulers_show_where_their_dates_come_from(built):
+    rulers = {r["name"]["fr"]: r for e in built["load"]("entities.json") for r in e.get("rulers", [])}
+    assert rulers["Rodolphe II"]["dates"] == {"reign": "1576–1612", "book": "1609"}
+    assert rulers["Frédéric, rhingrave de Daun"]["dates"]["book"] == "1547–1610"
+    assert "dates" not in rulers["Henri II"]  # exact dates from the book itself

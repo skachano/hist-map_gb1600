@@ -1,5 +1,5 @@
 // Side panels shown next to the map: the holder (entity) view and the disputes view.
-import type { Dataset, Right } from "../data/types";
+import type { Dataset, Lang, Right, Ruler } from "../data/types";
 import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
 import { MARQUISATE, PRINCIPALITY, REALM_OTHER } from "../model/colors";
@@ -57,8 +57,14 @@ export function renderEntityView(root: HTMLElement, data: Dataset, state: State,
     rulers.length ? ganttChart(rulers.map((r) => ({
       label: r.title ? `${name(r.name, lang)}${lang === "ja" ? "、" : ", "}${name(r.title, lang)}` : name(r.name, lang),
       bars: [{ from: Math.max(r.from ?? span[0], span[0]), to: Math.min(r.to ?? span[1], span[1]), fill: "#52514e",
-        title: `${name(r.name, lang)} · ${r.from ?? "…"}–${r.to ?? "…"}${r.pages ? ` · ${t("pages", lang)} ${r.pages}` : ""}` }],
+        title: `${name(r.name, lang)} · ${r.from ?? "…"}–${r.to ?? "…"}${r.pages ? ` · ${t("pages", lang)} ${r.pages}` : ""}`
+          + (r.dates ? ` · ${rulerDates(r.dates, lang)}` : "") }],
     })), span, year, t("rulers", lang)) : null,
+    rulers.some((r) => r.dates) ? h("details", { class: "ruler-dates" },
+      h("summary", {}, t("rulerDates", lang)),
+      h("ul", {}, ...rulers.filter((r) => r.dates).map((r) => h("li", {},
+        h("strong", {}, name(r.name, lang)), `: ${rulerDates(r.dates!, lang)}`))),
+      rulers.every((r) => r.dates) ? null : h("p", { class: "muted" }, t("rulerDatesBook", lang))) : null,
     h("h3", {}, t("gainedLost", lang)),
     events.length
       ? h("ul", { class: "events" }, ...events.map((e) => h("li", {},
@@ -174,4 +180,15 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
         h("span", { class: "muted" }, settlementsIn.get(id)
           ? ` · ${settlementsIn.get(id)} ${t("places", lang)}` : ` · ${t("noArea", lang)}`)))),
   );
+}
+
+/** Where a ruler's dates come from, in `lang`: the reference works' reign and the book's own years
+ *  (the reference's details are recorded in English, so only the English view shows them). */
+function rulerDates(d: NonNullable<Ruler["dates"]>, lang: Lang): string {
+  const fill = (key: StringKey, vars: Record<string, string>) =>
+    t(key, lang).replace(/\{(\w+)\}/g, (_, k: string) => vars[k] ?? "");
+  const parts = [fill("reignFromRefs", { reign: d.reign })];
+  if (d.book) parts.push(fill(d.contradicts ? "bookGives" : "bookAttests", { book: d.book }));
+  const text = parts.join(lang === "ja" ? "、" : "; ");
+  return lang === "en" && d.why ? `${text} (${d.why})` : text;
 }
