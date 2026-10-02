@@ -68,8 +68,8 @@ test("a disputed place: listed in the disputes view, flagged in its panel", asyn
 });
 
 test("keyboard: panel takes focus, Escape closes it and returns focus; skip link", async ({ page }) => {
-  await open(page, "#/matrix?year=1629&right=suzerain&lang=en");
-  const link = page.getByRole("button", { name: "Anzeling" });
+  await open(page, "#/disputes?year=1616&right=suzerain&lang=en");
+  const link = page.locator("#side").getByRole("button", { name: "Bambiderstroff" });
   await link.focus();
   await page.keyboard.press("Enter");
   await expect(page.locator("#panel h2")).toBeFocused();

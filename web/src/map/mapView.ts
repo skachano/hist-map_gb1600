@@ -8,7 +8,7 @@ import "maplibre-gl/dist/maplibre-gl.css";
 // MapLibre looks for its worker next to its own module, which bundling moves; hand it
 // Vite's bundled copy instead (same in dev and in the production build).
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-import { MAP_CENTER, MAP_ZOOM } from "../config";
+import { MAP_CENTER, MAP_ZOOM, PLACE_ZOOM, TERRITORY_ZOOM } from "../config";
 import type { Dataset } from "../data/types";
 import { CONTESTED, MARQUISATE, PRINCIPALITY, REALM_OTHER, SERIES } from "../model/colors";
 import { typesIn } from "../model/territories";
@@ -34,6 +34,16 @@ export interface PlaceStyle {
 export interface MapCallbacks {
   onHover(placeId: string | undefined, point: { x: number; y: number }): void;
   onSelect(placeId: string | undefined): void;
+  /** how far the side list (left) and the place panel (right) cover the map, in pixels */
+  covered(): { left: number; right: number };
+}
+
+/** Bounds of a geometry's coordinates: [west, south, east, north]. */
+function extend(box: [number, number, number, number], coords: unknown): void {
+  if (typeof (coords as number[])[0] === "number") {
+    const [x, y] = coords as number[];
+    box[0] = Math.min(box[0], x); box[1] = Math.min(box[1], y); box[2] = Math.max(box[2], x); box[3] = Math.max(box[3], y);
+  } else for (const c of coords as unknown[]) extend(box, c);
 }
 
 const BAILIWICK = "bailliage-allemagne";
@@ -69,11 +79,15 @@ export class MapView {
   private ready: Promise<void>;
   private styled = new Set<string>();
   private lastSelected?: string;
+  /** a place to zoom in on when it is next selected (zoomTo), instead of only panning to it */
+  private zoomNext?: string;
+  /** a territory to fit the map to when it is next selected (fitTerritory) */
+  private fitNext?: string;
   private cellsById = new Map<string, GeoJSON.Feature>();
   private labels: Marker[] = [];
   private territoriesShown = false;
 
-  constructor(container: HTMLElement, private data: Dataset, callbacks: MapCallbacks) {
+  constructor(container: HTMLElement, private data: Dataset, private callbacks: MapCallbacks) {
     for (const f of data.cells.features) this.cellsById.set(String(f.properties?.id), f);
     this.map = new MapLibre({
       container,
@@ -224,13 +238,56 @@ export class MapView {
     }
   }
 
-  /** Pan to a newly selected place when it is outside the view. */
-  private reveal(placeId: string): void {
-    const p = this.data.places.get(placeId);
-    if (p?.lat === undefined || p.lon === undefined) return;
-    if (this.map.getBounds().contains([p.lon, p.lat])) return;
+  /** Zoom in on a place when it is next selected: a place picked from a list (the table) rather than
+   *  on the map, where the reader has not found it yet. */
+  zoomTo(placeId: string): void {
+    this.zoomNext = placeId;
+  }
+
+  /** Fit the map to a territory when it is next selected: a realm picked from a list or a panel. */
+  fitTerritory(placeId: string): void {
+    this.fitNext = placeId;
+  }
+
+  /** The territory's area in `year` between the side list and the panel; a realm without an area
+   *  (none of its places located) is centred on its own point. */
+  private fit(placeId: string, year: number): void {
     const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    this.map.easeTo({ center: [p.lon, p.lat], duration: still ? 0 : 600 });
+    const box: [number, number, number, number] = [Infinity, Infinity, -Infinity, -Infinity];
+    for (const f of this.data.territories.features) {
+      const pr = f.properties ?? {};
+      if (pr.id === placeId && pr.from_year <= year && year <= pr.to_year && "coordinates" in f.geometry) {
+        extend(box, f.geometry.coordinates);
+      }
+    }
+    if (box[0] === Infinity) {
+      const p = this.data.places.get(placeId);
+      if (p?.lat !== undefined && p.lon !== undefined) {
+        this.map.easeTo({ center: [p.lon, p.lat], zoom: TERRITORY_ZOOM, duration: still ? 0 : 600 });
+      }
+      return;
+    }
+    let { left, right } = this.callbacks.covered();
+    if (this.map.getContainer().clientWidth - left - right < 240) left = right = 0; // a phone: the boxes cover the map
+    this.map.fitBounds(box, { padding: { top: 40, bottom: 40, left: left + 40, right: right + 40 },
+      maxZoom: PLACE_ZOOM, duration: still ? 0 : 600 });
+  }
+
+  /** Pan to a newly selected place when it is outside the view, zoom in on it (zoomTo) or fit the
+   *  map to it (fitTerritory). */
+  private reveal(placeId: string, year: number): void {
+    if (this.fitNext === placeId) {
+      this.fitNext = undefined;
+      return this.fit(placeId, year);
+    }
+    const p = this.data.places.get(placeId);
+    const zoom = this.zoomNext === placeId;
+    this.zoomNext = undefined;
+    if (p?.lat === undefined || p.lon === undefined) return;
+    if (!zoom && this.map.getBounds().contains([p.lon, p.lat])) return;
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.map.easeTo({ center: [p.lon, p.lat], duration: still ? 0 : 600,
+      ...(zoom ? { zoom: Math.max(this.map.getZoom(), PLACE_ZOOM) } : {}) });
   }
 
   async render(year: number, styles: Map<string, PlaceStyle>, selected?: string): Promise<void> {
@@ -239,7 +296,9 @@ export class MapView {
     m.setFilter("bailiwick", ["all", ["==", ["get", "id"], BAILIWICK],
       ["<=", ["get", "from_year"], year], [">=", ["get", "to_year"], year]]);
     m.setFilter("selected", ["==", ["get", "id"], selected ?? ""]);
-    if (selected && selected !== this.lastSelected) this.reveal(selected);
+    if (selected && (selected !== this.lastSelected || selected === this.zoomNext || selected === this.fitNext)) {
+      this.reveal(selected, year);
+    }
     this.lastSelected = selected;
 
     const blank = { fill: null, inherited: false, contested: false };

@@ -7,6 +7,7 @@ import { directHoldings, type Dispute } from "../model/snapshot";
 import { KINDS, type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
+import { openPlace } from "./navigate";
 import { ganttChart } from "./timeline";
 
 export function renderEntityView(root: HTMLElement, data: Dataset, state: State, store: Store): void {
@@ -28,7 +29,7 @@ export function renderEntityView(root: HTMLElement, data: Dataset, state: State,
   const selected = held.get(state.right) ?? [];
   const rulers = (entity.rulers ?? []).filter((r) => (r.to ?? span[1]) >= span[0] && (r.from ?? span[0]) <= span[1]);
   const events = data.events.filter((e) => e.from === entity.id || e.to === entity.id).sort((a, b) => a.year - b.year);
-  const placeLink = (id: string) => h("button", { class: "link", "data-place": id, onclick: () => store.set({ place: id }) },
+  const placeLink = (id: string) => h("button", { class: "link", "data-place": id, onclick: () => openPlace(store, data, id) },
     placeName(id));
 
   fill(root,
@@ -68,7 +69,7 @@ export function renderEntityView(root: HTMLElement, data: Dataset, state: State,
     h("h3", {}, t("gainedLost", lang)),
     events.length
       ? h("ul", { class: "events" }, ...events.map((e) => h("li", {},
-        h("button", { class: "link year", onclick: () => store.set({ year: clamp(e.year, span), place: e.place }) },
+        h("button", { class: "link year", onclick: () => openPlace(store, data, e.place, { year: clamp(e.year, span) }) },
           String(e.year)),
         ` ${e.to === entity.id ? `+ ${t("gained", lang)}` : `− ${t("lost", lang)}`} · `, placeLink(e.place),
         e.right ? ` · ${label(vocab.right_types[e.right], lang, e.right)}` : "",
@@ -91,7 +92,7 @@ export function renderDisputesView(root: HTMLElement, data: Dataset, state: Stat
     h("p", { class: "key" }, h("span", { class: "swatch ring", style: `--c:${CONTESTED}` }), ` ⚠ ${t("contested", lang)}`),
     sorted.length
       ? h("ul", { class: "disputes" }, ...sorted.map((d) => h("li", {},
-        h("button", { class: "link strong", "data-place": d.place, onclick: () => store.set({ place: d.place }) },
+        h("button", { class: "link strong", "data-place": d.place, onclick: () => openPlace(store, data, d.place) },
           placeName(d.place)),
         ` · ${label(vocab.right_types[d.right], lang, d.right)}`,
         h("ul", {}, ...d.parties.map((p) => h("li", {},
@@ -176,7 +177,7 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
     h("ul", { class: "realms" }, ...[...shown].sort((a, b) => placeName(a).localeCompare(placeName(b), lang)).map((id) =>
       h("li", {},
         h("button", { class: "link", "data-place": id, "aria-pressed": String(id === state.place),
-          onclick: () => store.set({ place: id }) }, placeName(id)),
+          onclick: () => openPlace(store, data, id) }, placeName(id)),
         h("span", { class: "muted" }, settlementsIn.get(id)
           ? ` · ${settlementsIn.get(id)} ${t("places", lang)}` : ` · ${t("noArea", lang)}`)))),
   );

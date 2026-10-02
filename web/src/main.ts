@@ -11,6 +11,7 @@ import { fill, h } from "./ui/dom";
 import { renderLegend } from "./ui/legend";
 import { renderAbout } from "./ui/about";
 import { renderChanges, renderMatrix } from "./ui/pages";
+import { setMapFocus } from "./ui/navigate";
 import { renderPanel } from "./ui/panel";
 import { renderDisputesView, renderEntityView, renderTerritoriesView } from "./ui/sideViews";
 import { tooltipPosition } from "./ui/tooltip";
@@ -148,7 +149,18 @@ async function start(): Promise<void> {
     onSelect(placeId) {
       store.set({ place: placeId });
     },
+    covered() {
+      const stage = $("map").getBoundingClientRect();
+      const box = (id: string) => { // a floating box, if it is shown
+        const r = $(id).getBoundingClientRect();
+        return r.width > 0 && r.height > 0 ? r : undefined;
+      };
+      const side = box("side");
+      const panel = box("panel");
+      return { left: side ? Math.max(0, side.right - stage.left) : 0, right: panel ? Math.max(0, stage.right - panel.left) : 0 };
+    },
   });
+  setMapFocus(map);
   const yearBar = new YearBar($("yearbar"), data, store);
   // Development only: lets end-to-end tests point at a place on the map.
   if (import.meta.env.DEV) (window as unknown as { __map: unknown }).__map = map.map;

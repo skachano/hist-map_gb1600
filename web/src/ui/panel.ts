@@ -8,6 +8,7 @@ import { ancestors, type RightIndex, rightsAtPlace, timeline } from "../model/sn
 import { membersOf } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
+import { openPlace } from "./navigate";
 import { type Bar, ganttChart } from "./timeline";
 
 function years(r: { from?: number; to?: number }): string {
@@ -67,7 +68,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
     const { territories, settlements } = membersOf(id, year, data.places);
     if (!territories.length && !settlements.length) return [];
     const link = (m: string) => h("li", {}, h("button", { class: "link", "data-place": m,
-      onclick: () => store.set({ place: m }) }, placeName(m)));
+      onclick: () => openPlace(store, data, m) }, placeName(m)));
     const byName = (a: string, b: string) => placeName(a).localeCompare(placeName(b), lang);
     return [
       h("h3", {}, `${t("membersIn", lang)} ${year}`),
@@ -93,7 +94,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
       h("dd", {}, LANGS.filter((l) => vocab.place_types[place.type]?.[l]).map((l) => label(vocab.place_types[place.type], l, place.type)).join(" · ")),
       parents.length ? h("dt", {}, t("belongsTo", lang)) : null,
       parents.length ? h("dd", { class: "crumbs" }, ...parents.map((id) => h("button", { class: "link", "data-place": id,
-        onclick: () => store.set({ place: id }) }, placeName(id)))) : null,
+        onclick: () => openPlace(store, data, id) }, placeName(id)))) : null,
     ),
     place.approx ? h("p", { class: "muted" }, t("approximate", lang)) : null,
     ...(place.kind === "territory" ? members(place.id) : []),

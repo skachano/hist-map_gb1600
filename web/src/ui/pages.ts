@@ -5,6 +5,7 @@ import { holderColour, OTHER } from "../model/colors";
 import { ancestors, placeRight, type PlaceRight, type RightIndex } from "../model/snapshot";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
+import { openPlace, showOnMap } from "./navigate";
 
 /** Table filters live here, not in the URL: they are working aids, not views worth linking. */
 const matrixFilters = { territory: "", holder: "", allRights: false };
@@ -76,8 +77,8 @@ export function renderMatrix(root: HTMLElement, data: Dataset, index: RightIndex
       h("thead", {}, h("tr", {}, h("th", { scope: "col" }, t("place", lang)),
         ...types.map((k) => h("th", { scope: "col" }, label(vocab.right_types[k], lang, k))))),
       h("tbody", {}, ...rows.map((p) => h("tr", {},
-        h("th", { scope: "row" }, h("button", { class: "link", "data-place": p.id, onclick: () => store.set({ place: p.id }) },
-          placeName(p.id))),
+        h("th", { scope: "row" }, h("button", { class: "link", "data-place": p.id, title: t("showOnMap", lang),
+          onclick: () => showOnMap(store, p.id) }, placeName(p.id))),
         ...types.map((k) => {
           const pr = cells.get(p.id)!.get(k)!;
           if (!pr.holdings.length) return h("td", { class: "empty" }, "—");
@@ -103,8 +104,11 @@ export function renderChanges(root: HTMLElement, data: Dataset, state: State, st
   const byYear = new Map<number, typeof events>();
   for (const e of events) byYear.set(e.year, [...(byYear.get(e.year) ?? []), e]);
   const rerender = () => renderChanges(root, data, state, store);
-  const go = (year: number, place: string, right?: string) =>
-    store.set({ view: "map", year: Math.min(Math.max(year, yearMin), yearMax), place, ...(right ? { right } : {}) });
+  const go = (year: number, place: string, right?: string) => {
+    const at = { year: Math.min(Math.max(year, yearMin), yearMax), ...(right ? { right } : {}) };
+    if (data.places.get(place)?.kind === "territory") openPlace(store, data, place, at); // the realm, fitted
+    else store.set({ view: "map", place, ...at });
+  };
 
   const bars = [];
   for (let y = yearMin; y <= yearMax; y++) {

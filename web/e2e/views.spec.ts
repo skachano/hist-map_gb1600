@@ -45,8 +45,79 @@ test("table: filter by territory and holder, export CSV", async ({ page }) => {
   });
   expect(text.split("\n")[0]).toContain('"Place","id","Suzerainty (dominium directum)"');
   expect(text).toContain('"anzeling"');
-  await page.getByRole("button", { name: "Anzeling" }).click();
+  await page.getByRole("button", { name: "Anzeling" }).click(); // a place opens on the rights map
+  await expect(page).toHaveURL(/#\/map\?year=1629&right=suzerain.*place=anzeling/);
   await expect(page.locator("#panel h2")).toHaveText("Anzeling");
+  // …zoomed in on it (Anzeling: 49.2628 N, 6.4661 E)
+  type M = { getZoom(): number; getCenter(): { lng: number; lat: number } };
+  await expect.poll(() => page.evaluate(() => (window as unknown as { __map: M }).__map.getZoom())).toBeGreaterThanOrEqual(12);
+  const c = await page.evaluate(() => (window as unknown as { __map: M }).__map.getCenter());
+  expect(Math.abs(c.lng - 6.4661)).toBeLessThan(0.02);
+  expect(Math.abs(c.lat - 49.2628)).toBeLessThan(0.02);
+});
+
+test("a territory link opens the Territories view, fitted to the realm", async ({ page }) => {
+  await open(page, "#/map?year=1624&right=high_justice&lang=en&place=anzeling");
+  const panel = page.locator("#panel");
+  await panel.locator(".crumbs").getByRole("button", { name: "Office of Sierck" }).click();
+  await expect(page).toHaveURL(/#\/territories\?year=1624.*place=office-sierck/);
+  await expect(panel.locator("h2")).toHaveText("Office of Sierck");
+  // the office spans 6.21-6.69 E, 49.06-49.60 N: fitted, the map zooms in and centres on it
+  type M = { getZoom(): number; getCenter(): { lng: number; lat: number }; isMoving(): boolean };
+  const map = () => page.evaluate(() => {
+    const m = (window as unknown as { __map: M }).__map;
+    return { zoom: m.getZoom(), moving: m.isMoving(), ...m.getCenter() };
+  });
+  await expect.poll(async () => { const m = await map(); return !m.moving && m.zoom > 8.5; }).toBe(true);
+  const c = await map();
+  expect(c.lng).toBeGreaterThan(6.21); expect(c.lng).toBeLessThan(6.69);
+  expect(c.lat).toBeGreaterThan(49.06); expect(c.lat).toBeLessThan(49.6);
+  // …in the gap between the realm list (left) and the panel (right)
+  const edges = await page.evaluate(() => {
+    const m = (window as unknown as { __map: { project(p: [number, number]): { x: number } } }).__map;
+    return { west: m.project([6.21, 49.33]).x, east: m.project([6.69, 49.33]).x };
+  });
+  const side = (await page.locator("#side").boundingBox())!;
+  const box = (await panel.boundingBox())!;
+  const stage = (await page.locator("#map").boundingBox())!;
+  expect(stage.x + edges.west).toBeGreaterThanOrEqual(side.x + side.width);
+  expect(stage.x + edges.east).toBeLessThanOrEqual(box.x);
+});
+
+test("a territory link shows its hierarchy: administrative divisions or feudal realms", async ({ page }) => {
+  const side = page.locator("#side");
+  const crumbs = page.locator("#panel .crumbs");
+  await open(page, "#/map?year=1624&right=suzerain&lang=en&place=forbach");
+  await crumbs.getByRole("button", { name: "Lordship of Forbach" }).click();
+  await expect(page).toHaveURL(/#\/territories\?.*place=lordship-forbach/);
+  expect(page.url()).toContain("h=feudal");
+  await expect(side.getByRole("button", { name: "Feudal realms" })).toHaveAttribute("aria-pressed", "true");
+  await expect(side.getByRole("button", { name: "Lordship of Forbach" })).toBeVisible();
+  await open(page, "#/map?year=1624&right=suzerain&lang=en&h=feudal&place=forbach");
+  await crumbs.getByRole("button", { name: "Office of Forbach" }).click();
+  await expect(page).toHaveURL(/#\/territories\?.*place=office-forbach/);
+  expect(page.url()).not.toContain("h=feudal");
+  await expect(side.getByRole("button", { name: "Administrative divisions" })).toHaveAttribute("aria-pressed", "true");
+  await expect(side.getByRole("button", { name: "Office of Forbach" })).toBeVisible();
+});
+
+test("a territory link shows its level: offices, their subdivisions or all levels", async ({ page }) => {
+  const side = page.locator("#side");
+  const panel = page.locator("#panel");
+  const pressed = (name: string) => expect(side.getByRole("button", { name, exact: true })).toHaveAttribute("aria-pressed", "true");
+  await open(page, "#/map?year=1624&right=suzerain&lang=en&place=office-sierck");
+  await panel.locator(".members").getByRole("button", { name: "Provostship of Sierck", exact: true }).click();
+  await expect(page).toHaveURL(/#\/territories\?.*lvl=2/);
+  await pressed("Their subdivisions");
+  await expect(side.getByRole("button", { name: "Provostship of Sierck", exact: true })).toBeVisible();
+  await panel.locator(".members").getByRole("button", { name: "Mayoralty of Montenach" }).click(); // one level deeper
+  await expect(page).toHaveURL(/lvl=0/);
+  await pressed("All levels");
+  await expect(side.getByRole("button", { name: "Mayoralty of Montenach" })).toBeVisible();
+  await panel.locator(".crumbs").getByRole("button", { name: "Office of Sierck" }).click();
+  await expect(page).toHaveURL(/lvl=1/);
+  await pressed("Offices");
+  await expect(side.getByRole("button", { name: "Office of Sierck" })).toBeVisible();
 });
 
 test("changes: a change jumps to its year and place on the map", async ({ page }) => {
