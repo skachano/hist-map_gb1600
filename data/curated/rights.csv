@@ -20,6 +20,8 @@ advocacy-saint-nabor,middle_low_justice,duchy-lorraine,,held,,,,,,,,66,medium,
 advocacy-saint-nabor,tax_aide,duchy-lorraine,,held,,,1595,1595,attested,attested,,66,medium,
 aidling,manorial_lord,charterhouse-rettel,,held,,,1585,1585,attested,attested,,59,high,
 alling,manorial_lord,bishopric-metz,,held,,,,,,,,64,high,
+alsweiler,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+alsweiler,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 alsweiler,manorial_lord,abbey-tholey,joint,held,,,1585,,attested,,,57,high,
 alsweiler,manorial_lord,house-breder-hohenstein,joint,held,,,1585,,attested,,,57,high,
 alsweiler,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
@@ -34,6 +36,7 @@ altrippe,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
 altroff,manorial_lord,abbey-villers-bettnach,,held,,,,,,,,50,high,
 altviller,suzerain,bishopric-metz,,held,,,,,,,,64,high,
 alzing,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+alzing,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 angviller,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
 anzeling,advocate,faust-de-stromberg,,held,,,,,,,,52,high,
 anzeling,high_justice,duchy-lorraine,,,,,,1615,,exact,,50-51,,
@@ -142,6 +145,7 @@ beckingen,manorial_lord,teutonic-order,joint,held,,,1586,1586,attested,attested,
 beckingen,manorial_lord,teutonic-order,,held,,,1613,1613,attested,attested,,79,high,
 bedersdorf,manorial_lord,community-dalem,joint,held,,,1585,1585,attested,attested,,59,high,
 bedersdorf,manorial_lord,jost-bechel,joint,held,,,1585,1585,attested,attested,,59,high,
+bedersdorf,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 bellmacher,manorial_lord,county-sayn,,held,,,,,,,,50,high,
 bellmacher,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 benestroff,manorial_lord,county-crehange,,held,,,,,,,,78,high,
@@ -158,7 +162,9 @@ berg-nennig,manorial_lord,jean-berg-kesten,joint,held,,,,,,,,81,high,
 berg-nennig,manorial_lord,claude-musiel,,held,,,1613,1613,attested,attested,,80,high,
 berg-nennig,suzerain,duchy-lorraine,joint,held,,,,,,,,84,high,
 berg-nennig,suzerain,duchy-luxembourg,joint,held,,,,,,,,84,high,
-bergweiler,high_justice,duchy-lorraine,,held,,,1609,,attested,,,58;231,high,"under Lorraine's high justice, like the rest of the lordship of Tholey (pp. 58, 231)"
+bergweiler,high_justice,duchy-lorraine,,held,,,1609,1619,attested,circa,,58;231,high,"under Lorraine's high justice, like the rest of the lordship of Tholey (pp. 58, 231); pledged in 1618-19 (p. 232)"
+bergweiler,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+bergweiler,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 bergweiler,manorial_lord,abbey-tholey,,held,,,1609,,attested,,,58;231,high,"one of the abbot of Tholey's villages, the lordship of Tholey (pp. 58, 231)"
 bergweiler,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
 berig,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
@@ -170,7 +176,10 @@ berus,manorial_lord,county-anholt,1/4,held,,,1630,1630,attested,attested,,80,hig
 berus,manorial_lord,county-sulz,1/4,held,,,1630,1630,attested,attested,,80,high,
 berus,manorial_lord,house-metternich,1/2,held,,,1630,1630,attested,attested,,80,high,
 berus,suzerain,duchy-lorraine,,held,,,1613,1613,attested,attested,,79,medium,
+berviller,high_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 berviller,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+berviller,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
+berviller,middle_low_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 besseringen,manorial_lord,house-metternich,,held,,,,,,,,81,medium,
 besseringen,manorial_lord,teutonic-order,joint,held,,,1586,1586,attested,attested,,52,low,
 besseringen,manorial_lord,duchy-lorraine,joint,held,,,1600,1600,attested,attested,,83,medium,
@@ -180,6 +189,7 @@ bethingen,middle_low_justice,county-sayn,joint,held,,,,,,,,55,medium,
 bethingen,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,55,medium,
 bettange,manorial_lord,jean-nied,,held,,,,,,,,81,medium,
 bettange,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+bettange,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 bettelainville,manorial_lord,abbey-saint-vincent-metz,joint,held,,,,,,,,50,high,
 bettelainville,manorial_lord,abbey-villers-bettnach,joint,held,,,,,,,,50,high,
 bettelainville,manorial_lord,county-crehange,joint,held,,,,,,,,50,high,
@@ -208,7 +218,10 @@ beyren,manorial_lord,duchy-lorraine,joint,held,,,,,,,,49,high,
 bezange-la-petite,appeal_jurisdiction,bishopric-metz,,held,,,,,,,,76-77,medium,
 bibiche,manorial_lord,abbey-villers-bettnach,joint,held,,,,,,,,51,low,
 bibiche,manorial_lord,duchy-lorraine,joint,held,,,,,,,,51,low,
+bibling,high_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 bibling,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+bibling,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
+bibling,middle_low_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 bidestroff,manorial_lord,dame-de-lavaux,,held,,,,,,,,83,high,
 bidestroff,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
 bierfeld,suzerain,duchy-lorraine,,contested,true,electorate-trier,1595,1595,exact,exact,,132,low,
@@ -216,24 +229,29 @@ bietzen,high_justice,electorate-trier,,contested,true,duchy-lorraine,1535,1535,a
 bietzen,manorial_lord,house-braunsdorf,joint,held,,,,,,,,82,medium,
 bietzen,manorial_lord,abbey-mettlach,joint,held,,,1586,1586,attested,attested,,54,high,
 bietzen,manorial_lord,house-felsberg,joint,held,,,1586,1586,attested,attested,,54,high,
-biibingen,middle_low_justice,county-sayn,joint,held,,,,,,,,55,medium,
-biibingen,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,55,medium,
 biibingen,suzerain,duchy-luxembourg,,held,,,,,,,,84,high,
 biischdorf,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 bilsdorf,manorial_lord,chapter-saint-simeon-trier,joint,held,,,1585,,attested,,,56,medium,
 bilsdorf,manorial_lord,duchy-lorraine,joint,held,,,1585,,attested,,,56,medium,
 bining,suzerain,duchy-lorraine,,held,,,,,,,,18,medium,
 bionville,manorial_lord,county-crehange,,held,,,,,,,,82,high,
+biringen,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 biringen,manorial_lord,abbey-mettlach,joint,held,,,,,,,,50,high,
 biringen,manorial_lord,cathedral-chapter-trier,joint,held,,,,,,,,50,high,
 biringen,manorial_lord,nicolas-de-weis,,held,,,1632,1632,attested,attested,,80,medium,
+biringen,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 bisping,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
 bisten-en-lorraine,manorial_lord,bishopric-metz,,held,,,,,,,,64,high,
-bisten-saar,high_justice,duchy-lorraine,,held,,,1581,,attested,,,58,medium,
+bisten-saar,high_justice,duchy-lorraine,,held,,,1581,1611,attested,exact,,58,medium,
+bisten-saar,high_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 bisten-saar,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,medium,
+bisten-saar,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+bisten-saar,middle_low_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 bistroff-grotesquin,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
 bitche,suzerain,holy-roman-empire,,claimed,true,duchy-lorraine,1600,1624,exact,exact,,107,low,
 bitche,tabellionage,duchy-lorraine,,held,,,1609,,exact,,,85,high,
+bizing,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
+bizing,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 blanche-eglise,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
 bleiderdingen,manorial_lord,county-oberstein-westerburg,,held,,,1585,,attested,,,57-58,high,
 bleiderdingen,suzerain,duchy-lorraine,,held,,,1625,1625,attested,attested,,135,high,
@@ -300,6 +318,7 @@ bouzonville,manorial_lord,house-faust-stromberg,3/4,held,,,,,,,,81,medium,
 bouzonville,manorial_lord,house-levenstein,1/4,held,,,,,,,,81,medium,
 bouzonville,manorial_lord,abbey-bouzonville,joint,held,,,1585,1585,attested,attested,,59,high,
 bouzonville,manorial_lord,duchy-lorraine,joint,held,,,1585,1585,attested,attested,,59,medium,
+bouzonville,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 brecklange,appeal_jurisdiction,duchy-lorraine,,held,,,,,,,,61,high,
 brecklange,high_justice,duchy-lorraine,,held,,,,,,,,61,high,
 brecklange,manorial_lord,commandery-beckingen,joint,held,,,,,,,,61,high,
@@ -310,6 +329,7 @@ brecklange,tithe,abbey-longeville,joint,held,,,,,,,,61,high,
 brecklange,tithe,duchy-lorraine,joint,held,,,,,,,,61,high,
 breidenbach,manorial_lord,duchy-lorraine,,held,,,1606,,exact,,,105,medium,
 brettnach,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+brettnach,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 brouck,manorial_lord,county-crehange,,held,,,,,,,,63,medium,
 brouck,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
 bubach-calmesweiler,tax_aide,duchy-lorraine,,claimed,true,bernard-de-levenstein,1610,1610,attested,attested,,136,medium,
@@ -318,6 +338,8 @@ buchingen,manorial_lord,house-varsberg,3/4,held,,,,,,,,81,high,
 buchingen,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
 budange,manorial_lord,county-crehange,,held,,,,,,,,50,medium,
 buding,safeguard,duchy-lorraine,,held,,,,,,,,51,high,
+budingen,middle_low_justice,county-sayn,joint,held,,,,,,,,55,medium,
+budingen,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,55,medium,
 buprich,manorial_lord,duchy-lorraine,,contested,true,county-nassau-saarbruecken,1613,1632,exact,,,137,high,
 buren,high_justice,duchy-lorraine,,held,,,1606,1606,attested,attested,,52,medium,
 buren,manorial_lord,duchy-lorraine,joint,held,,,1586,1586,attested,attested,,52,high,
@@ -376,6 +398,7 @@ castellany-sarreguemines,manorial_lord,duchy-lorraine,,pledged,,,1604,1606,exact
 castellany-sarreguemines,manorial_lord,cratz-de-scharfenstein,,pledged,,,1628,1630,exact,exact,,69,high,
 chateau-rouge,manorial_lord,house-eltz,joint,held,,,1585,1585,attested,attested,,59,high,
 chateau-rouge,manorial_lord,house-metternich,joint,held,,,1585,1585,attested,attested,,59,high,
+chateau-rouge,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 chateau-rouge,manorial_lord,house-metternich,joint,held,,,1613,1613,attested,attested,,80,high,
 chateau-rouge,manorial_lord,jean-wolf-eltz,joint,held,,,1613,1613,attested,attested,,80,high,
 chateau-rouge,manorial_lord,jean-wolf-eltz,joint,held,,,1630,1630,attested,attested,,80,high,
@@ -394,9 +417,11 @@ chemery,middle_low_justice,duchy-lorraine,,claimed,true,abbey-freistroff,1616,16
 chevalin,manorial_lord,county-crehange,,held,,,1609,,attested,,,140,medium,
 chevalin,safeguard,kingdom-france,,held,,,1611,,exact,,,140,high,
 chevalin,suzerain,duchy-lorraine,,claimed,true,duchy-luxembourg,1611,,exact,,,140,high,
+colmen,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 colmen,manorial_lord,county-crehange,joint,held,,,,,,,,50,high,
 colmen,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,medium,
 colmen,manorial_lord,house-morbach,,held,,,,,,,,81,high,
+colmen,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 colmen,suzerain,electorate-trier,joint,held,,,,,,,,50,medium,
 condominium-merzig-saargau,high_justice,duchy-lorraine,,held,,,1620,,exact,,,85,high,
 condominium-merzig-saargau,suzerain,duchy-lorraine,1/2,held,,,,,,,,9,high,
@@ -523,6 +548,7 @@ court-perl,suzerain,duchy-lorraine,,contested,true,electorate-trier,1600,1628,at
 court-perl,suzerain,electorate-trier,,claimed,true,duchy-lorraine,1600,1628,attested,attested,,128,high,
 court-perl,tax_aide,duchy-lorraine,,contested,true,cathedral-chapter-trier,1563,1592,attested,attested,,128,high,
 court-vibersviller,manorial_lord,francois-ii-vaudemont,,held,,,1629,,exact,,,108,medium,
+coutures,high_justice,duchy-lorraine,,held,,,1587,1631,exact,exact,,239,high,"acquired from the abbey of Longeville in 1587, pledged by Charles IV in 1631 (p. 239)"
 creutzwald,manorial_lord,abbey-bouzonville,,claimed,true,duchy-lorraine,1621,1621,attested,attested,,141,medium,
 creutzwald,manorial_lord,duchy-lorraine,,contested,true,abbey-bouzonville,1621,1621,attested,attested,,141,medium,
 creutzwald,middle_low_justice,bertrand-de-conde,joint,held,,,1630,1630,attested,attested,,80,high,
@@ -545,9 +571,11 @@ denting,manorial_lord,house-dagstuhl,,held,,,,,,,,78,high,
 deserted-village-roderbann,manorial_lord,barony-fenetrange,joint,held,,,1605,1605,attested,attested,,151,medium,
 deserted-village-roderbann,manorial_lord,county-sarrewerden,joint,held,,,1605,1605,attested,attested,,151,medium,
 desseling,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
+diding,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 diding,manorial_lord,abbey-bouzonville,joint,held,,,,,,,,50,high,
 diding,manorial_lord,abbey-freistroff,joint,held,,,,,,,,50,high,
 diding,manorial_lord,charterhouse-rettel,joint,held,,,,,,,,50,high,
+diding,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 diebling,manorial_lord,commandery-beckingen,joint,held,,,1585,1585,attested,attested,,68,high,
 diebling,manorial_lord,county-nassau-saarbruecken,joint,held,,,1585,1585,attested,attested,,68,medium,
 diebling,manorial_lord,court-farschviller,joint,held,,,1585,1585,attested,attested,,68,medium,
@@ -566,6 +594,7 @@ diefferten,high_justice,lords-freistroff,joint,held,,,,,,,,63,high,
 diefferten,manorial_lord,abbey-wadgassen,joint,held,,,,,,,,63,high,
 diefferten,manorial_lord,duchy-lorraine,joint,held,,,,,,,,63,high,
 diefferten,manorial_lord,lords-freistroff,joint,held,,,,,,,,63,high,
+diefferten,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 diefferten,middle_low_justice,abbey-wadgassen,joint,held,,,,,,,,63,high,
 diefferten,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,63,high,
 diefferten,middle_low_justice,lords-freistroff,joint,held,,,,,,,,63,high,
@@ -618,12 +647,14 @@ duren,manorial_lord,abbey-longeville,joint,held,,,1585,,attested,,,56,high,
 duren,manorial_lord,abbey-longeville,,held,,,1585,1585,attested,attested,,59,high,
 duren,manorial_lord,duchy-lorraine,joint,held,,,1585,,attested,,,56,high,
 duren,manorial_lord,charles-emerich,,held,,,1613,1613,attested,attested,,80,high,
+ebersviller,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 ebersviller,manorial_lord,abbey-saint-pierre-metz,,held,,,,1561,,exact,,147,medium,
 ebersviller,manorial_lord,georges-lellich,joint,held,,,,,,,,81,high,
 ebersviller,manorial_lord,house-braun-schmittberg,joint,held,,,,,,,,81,high,
 ebersviller,manorial_lord,lords-chateau-rouge,joint,held,,,,,,,,81,high,
 ebersviller,manorial_lord,house-faust-stromberg,,held,,,1561,,exact,,,147,medium,
 ebersviller,manorial_lord,house-braun-schmittberg,,held,,,1613,1613,attested,attested,,80,high,
+ebersviller,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 eblange,manorial_lord,house-faust-stromberg,1/4,held,,,,,,,,81,high,
 eblange,manorial_lord,house-varsberg,3/4,held,,,,,,,,81,high,
 eblange,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
@@ -635,6 +666,7 @@ ebring,suzerain,county-nassau-saarbruecken,,claimed,true,house-kerpen,1614,1622,
 edling,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,low,
 edling,manorial_lord,house-varsberg,joint,held,,,,,,,,50,low,
 edling,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+edling,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 eft,high_justice,duchy-lorraine,,held,,,,,,,,49,medium,
 eimersdorf,manorial_lord,house-felsberg,,held,,,,,,,,50,high,
 eisweiler,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,medium,
@@ -755,11 +787,13 @@ fiirst,suzerain,county-crehange,joint,held,,,,,,,,64,high,
 fiirst,suzerain,duchy-lorraine,joint,held,,,,,,,,64,high,
 filstroff,advocate,duchy-lorraine,,held,,,,,,,,60,medium,
 filstroff,appeal_jurisdiction,duchy-lorraine,,held,,,,,,,,60;84,high,
-filstroff,high_justice,duchy-lorraine,,held,,,,,,,,50;60,high,
+filstroff,high_justice,duchy-lorraine,,held,,,,1632,,exact,,50;60,high,
+filstroff,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 filstroff,manorial_lord,abbey-bouzonville,,held,,,,,,,,50,high,
 filstroff,manorial_lord,abbey-bouzonville,2/3,held,,,,,,,,60,high,
 filstroff,manorial_lord,duchy-lorraine,1/3,held,,,,,,,,60,high,
-filstroff,middle_low_justice,duchy-lorraine,,held,,,,,,,,60,high,
+filstroff,middle_low_justice,duchy-lorraine,,held,,,,1632,,exact,,60,high,
+filstroff,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 filstroff,suzerain,duchy-lorraine,,held,,,,,,,,60,high,
 fischbach,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
 fischbach,suzerain,county-hanau-lichtenberg,,held,,,1605,,circa,,,148,high,
@@ -772,12 +806,14 @@ flasgarten,manorial_lord,house-haraucourt,joint,held,,,,,,,,61,low,
 flasgarten,manorial_lord,house-moulin,joint,held,,,,,,,,61,low,
 flasgarten,manorial_lord,lords-freistroff,joint,held,,,,,,,,61,low,
 flasgarten,middle_low_justice,abbey-saint-avold,,held,,,,,,,,61,medium,
+flastroff,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 flastroff,manorial_lord,county-crehange,joint,held,,,,,,,,50,high,
 flastroff,manorial_lord,docteur-setterich,joint,held,,,,,,,,81,high,
 flastroff,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,medium,
 flastroff,manorial_lord,frederic-steuber,joint,held,,,,,,,,81,high,
 flastroff,manorial_lord,house-bolender,joint,held,,,,,,,,81,high,
 flastroff,manorial_lord,house-hepgen,joint,held,,,,,,,,81,high,
+flastroff,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 flatten,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 flatten,manorial_lord,jean-de-weis,,held,,,1632,1632,attested,attested,,80,medium,
 fletrange,manorial_lord,county-crehange,,claimed,true,duchy-lorraine,1626,1626,attested,attested,,146,high,
@@ -792,8 +828,11 @@ forbach,manorial_lord,house-eberstein-linange,joint,held,,,1632,1632,attested,at
 forbach,manorial_lord,marquisate-baden,joint,held,,,1632,1632,attested,attested,,99,high,
 forbach,suzerain,duchy-lorraine,,held,,,1613,1613,attested,attested,,79,medium,
 forstheim,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
-forweiler,high_justice,duchy-lorraine,,held,,,1581,,attested,,,58,medium,
+forweiler,high_justice,duchy-lorraine,,held,,,1581,1611,attested,exact,,58,medium,
+forweiler,high_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 forweiler,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,medium,
+forweiler,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
+forweiler,middle_low_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 fouligny,manorial_lord,abbey-longeville,,held,,,,,,,,16,high,
 fouligny,manorial_lord,county-crehange,,held,,,,,,,,82,high,
 fouligny,suzerain,chapter-metz,,held,,,,,,,,82,medium,
@@ -852,6 +891,7 @@ gandren,manorial_lord,duchy-lorraine,joint,held,,,,,,,,49,high,
 gandren,manorial_lord,duchy-lorraine,,held,true,duchy-luxembourg,1609,1624,exact,exact,,129,low,
 garrebourg,manorial_lord,duchy-lorraine,,held,,,,,,,,78,high,
 gaweistroff,manorial_lord,house-kerpen,,held,,,1585,1585,attested,attested,,59,high,
+gaweistroff,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 gelucourt,manorial_lord,house-helmstatt,,held,,,,,,,,83,medium,
 gelucourt,manorial_lord,commandery-gelucourt,joint,held,,,1585,1585,attested,attested,,74,medium,
 gelucourt,manorial_lord,lords-rechicourt,joint,held,,,1585,1585,attested,attested,,74,high,
@@ -873,10 +913,12 @@ giidesweiler,manorial_lord,abbey-tholey,joint,held,,,1585,,attested,,,57,high,
 gisingen,high_justice,duchy-lorraine,,held,,,1606,1606,attested,attested,,52,medium,
 gisingen,manorial_lord,duchy-lorraine,,held,,,1586,1586,attested,attested,,52,medium,
 givricourt,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
-gomelange,high_justice,duchy-lorraine,,held,,,1610,1610,attested,attested,,119,medium,
+gomelange,high_justice,duchy-lorraine,,held,,,1610,1632,attested,exact,,119,medium,
+gomelange,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 gomelange,manorial_lord,abbey-freistroff,joint,held,,,,,,,,50,low,
 gomelange,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,low,
 gomelange,manorial_lord,jean-nied,,held,,,,,,,,81,medium,
+gomelange,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 gongelfang,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 gosselming,manorial_lord,commandery-saint-jean-de-bassel,,held,,,,,,,,19,high,
 gosselming,manorial_lord,house-bracs,,held,,,1607,1607,attested,attested,,73,high,
@@ -895,22 +937,25 @@ griesborn,manorial_lord,abbey-fraulautern,joint,held,,,1585,,attested,,,56,high,
 griesborn,manorial_lord,abbey-wadgassen,joint,held,,,1585,,attested,,,56,high,
 griesborn,manorial_lord,duchy-lorraine,joint,held,,,1585,,attested,,,56,high,
 griinstadt,tithe,duchy-zweibruecken,,contested,true,duchy-lorraine,1610,1610,attested,attested,,145,medium,
-grindorf,high_justice,duchy-lorraine,,held,,,,,,,,50,high,
+grindorf,high_justice,duchy-lorraine,,held,,,,1632,,exact,,50,high,
+grindorf,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 grindorf,manorial_lord,house-cronenberg,,held,,,,,,,,50,high,
+grindorf,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 gronig,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,medium,
 gronig,manorial_lord,electorate-trier,,held,,,1585,,attested,,,57,medium,
 gronig,suzerain,duchy-lorraine,,contested,true,electorate-trier,1585,1609,attested,attested,,132,medium,
 grosbliederstroff,suzerain,duchy-lorraine,,held,,,1585,1585,attested,attested,,68,high,
 grosshemmersdorf,appeal_jurisdiction,duchy-lorraine,,held,,,,,,,,60,high,
-grosshemmersdorf,high_justice,duchy-lorraine,,held,,,,,,,,60,high,
+grosshemmersdorf,high_justice,duchy-lorraine,,held,,,,1632,,exact,,60,high,
+grosshemmersdorf,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 grosshemmersdorf,manorial_lord,abbey-fraulautern,joint,held,,,,,,,,60,high,
 grosshemmersdorf,manorial_lord,abbey-mettlach,joint,held,,,,,,,,60,high,
 grosshemmersdorf,manorial_lord,commandery-beckingen,joint,held,,,,,,,,60,high,
 grosshemmersdorf,manorial_lord,duchy-lorraine,joint,held,,,,,,,,60,high,
-grosshemmersdorf,manorial_lord,house-felsberg,,held,,,,,,,,50,high,
 grosshemmersdorf,manorial_lord,house-hausen,joint,held,,,,,,,,60,high,
 grosshemmersdorf,manorial_lord,jost-bechel-siersberg,joint,held,,,,,,,,60,high,
-grosshemmersdorf,middle_low_justice,duchy-lorraine,,held,,,,,,,,60,high,
+grosshemmersdorf,middle_low_justice,duchy-lorraine,,held,,,,1632,,exact,,60,high,
+grosshemmersdorf,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 grosshemmersdorf,suzerain,duchy-lorraine,,held,,,,,,,,60,high,
 grostenquin,high_justice,house-braubach,,held,,,1618,,exact,,,75,medium,
 grostenquin,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
@@ -936,6 +981,7 @@ guerniange,manorial_lord,house-custine,,held,,,1613,1613,attested,attested,,79;8
 gueroldseck,manorial_lord,house-geroldseck,,held,true,bishopric-metz,1360,1390,exact,exact,,120,medium,
 guerstling,manorial_lord,house-zandt,,held,,,,,,,,82,medium,
 guerstling,manorial_lord,jost-bechel,,held,,,1585,1585,attested,attested,,59,high,
+guerstling,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 guerting,high_justice,house-schwarzenberg,,held,,,,,,,,62,high,
 guerting,suzerain,duchy-lorraine,,held,,,,,,,,16;62,high,
 guessling,advocate,house-varsberg,,held,,,,,,,,64,high,
@@ -1004,15 +1050,19 @@ haute-contz,manorial_lord,duchy-lorraine,,held,true,duchy-luxembourg,1609,1624,e
 haute-contz,manorial_lord,widow-jean-morbach,,held,,,1613,1613,attested,attested,,80,high,
 haute-contz,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,49,high,
 haute-seille,safeguard,lordship-phalsbourg,,held,,,,,,,,19,medium,
+haute-sierck,manorial_lord,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in 1632
 haute-sierck,manorial_lord,theodore-bock,,held,,,1632,1632,attested,attested,,80,medium,
 hazelbourg,manorial_lord,chretien-de-savigny,joint,pledged,,,1582,1583,exact,exact,,114,high,
 hazelbourg,manorial_lord,jean-de-beauvau,joint,pledged,,,1582,1583,exact,exact,,114,high,
 hazelbourg,suzerain,abbey-andlau,,held,,,,,,,,114,medium,
 heckenransbach,suzerain,county-bliescastel,,held,,,,,,,,102,high,
 heckling,manorial_lord,house-felsberg,,held,,,,,,,,50,high,
+heckling,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 heimbach-nahe,manorial_lord,county-oberstein-westerburg,,held,,,1585,,attested,,,57-58,high,
 heimbach-nahe,suzerain,duchy-lorraine,,held,,,1625,1625,attested,attested,,135,high,
 heining,manorial_lord,house-kerpen,,held,,,1585,1585,attested,attested,,59,high,
+heining,manorial_lord,house-hohensaxen,,held,,,1611,1625,exact,exact,,243-244,high,Hohensaxen's lot in the 1611 division of Berus; pledged in 1625
+heining,manorial_lord,jean-saint-aubin,,pledged,,,1625,,exact,,,244,high,"pledged by Jean-Louis de Hohensaxen in March 1625 for a loan of 14,463 francs"
 helfedange,manorial_lord,county-crehange,,held,,,,,,,,78,high,
 helfedange,suzerain,pays-messin,,held,,,,,,,,140,medium,
 hellendorf,high_justice,duchy-lorraine,,held,,,,,,,,49,medium,
@@ -1095,6 +1145,7 @@ holling,high_justice,lords-freistroff,joint,held,,,,,,,,60,high,
 holling,manorial_lord,house-faust-stromberg,1/4,held,,,,,,,,81,high,
 holling,manorial_lord,house-varsberg,3/4,held,,,,,,,,81,high,
 holling,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+holling,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 holling,middle_low_justice,county-nassau-saarbruecken,joint,held,,,,,,,,60,high,
 holling,middle_low_justice,duchy-lorraine,joint,held,,,,,,,,60,high,
 holling,middle_low_justice,lords-berus,joint,held,,,,,,,,60,high,
@@ -1149,7 +1200,10 @@ hutting,manorial_lord,house-gantz,,held,,,1572,,after,,,83,high,
 hutting,middle_low_justice,duchy-lorraine,,held,,,1621,,exact,,,143,high,
 hutting,suzerain,duchy-lorraine,,held,,,1621,,exact,,,143,high,
 ibring,manorial_lord,county-crehange,,held,,,,,,,,78,high,
+ihn,high_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+ihn,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 ihn,manorial_lord,house-varsberg,,held,,,1614,1614,attested,attested,,102,high,
+ihn,middle_low_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 ihn,suzerain,county-nassau-saarbruecken,,held,,,1614,1614,attested,attested,,102,high,
 illingen,tithe,ernest-de-kerpen,,held,,,1626,1632,exact,,,101-102,high,
 imsbach,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,104,high,
@@ -1187,9 +1241,9 @@ ising,manorial_lord,lords-dillingen,joint,held,,,,,,,,63,high,
 ising,middle_low_justice,duchy-lorraine,,held,,,,,,,,63,high,
 ising,suzerain,duchy-lorraine,,held,,,,,,,,63,high,
 ittersdorf,manorial_lord,abbey-fraulautern,,held,,,1585,1585,attested,attested,,59,medium,
+ittersdorf,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 itzbach,high_justice,duchy-lorraine,,held,,,1606,1606,attested,attested,,52,medium,
 itzbach,manorial_lord,house-dietz,joint,held,,,,,,,,82,high,
-itzbach,manorial_lord,house-felsberg,,held,,,,,,,,50,high,
 itzbach,manorial_lord,house-hausen,joint,held,,,,,,,,82,high,
 itzbach,manorial_lord,abbey-bouzonville,joint,held,,,1586,1586,attested,attested,,52,high,
 itzbach,manorial_lord,county-sayn,joint,held,,,1586,1586,attested,attested,,52,high,
@@ -1197,6 +1251,9 @@ itzbach,manorial_lord,duchy-lorraine,joint,held,,,1586,1586,attested,attested,,5
 itzbach,manorial_lord,house-kerpen,joint,held,,,1586,1586,attested,attested,,52,high,
 jabach,manorial_lord,duchy-lorraine,,held,,,1613,1632,exact,,,137,high,
 juvelize,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
+kaltweiler,manorial_lord,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in 1632
+kastel,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+kastel,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 kastel,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,high,
 kedange,high_justice,duchy-lorraine,,,,,,,,,,50,,
 kedange,manorial_lord,charterhouse-rettel,,,,,,,,,,50,,
@@ -1205,12 +1262,9 @@ kemplich,manorial_lord,jean-schmisser,,held,,,1632,1632,attested,attested,,80,me
 kemplich,tithe,abbey-beaupre,joint,held,,,,,,,,50,high,
 kerling,manorial_lord,duchy-lorraine,joint,held,,,,,,,,49,high,
 kerlingen,manorial_lord,abbey-fraulautern,,held,,,1585,1585,attested,attested,,59,high,
+kerlingen,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 kerprich,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
 kerprich-hemmersdorf,high_justice,duchy-lorraine,,held,,,1606,1606,attested,attested,,52,medium,
-kerprich-hemmersdorf,manorial_lord,erica-de-merfeld,joint,held,,,,,,,,82,high,
-kerprich-hemmersdorf,manorial_lord,house-braunsdorf,joint,held,,,,,,,,82,high,
-kerprich-hemmersdorf,manorial_lord,house-zandt,,held,,,,,,,,82,high,
-kerprich-hemmersdorf,manorial_lord,remacle-de-bockenheimer,,held,,,,,,,,82,high,
 kerprich-hemmersdorf,manorial_lord,county-sayn,joint,held,,,1586,1586,attested,attested,,52,high,
 kerprich-hemmersdorf,manorial_lord,duchy-lorraine,joint,held,,,1586,1586,attested,attested,,52,medium,
 keskastel,high_justice,county-nassau-saarbruecken,,held,,,1581,,exact,,,142,medium,
@@ -1278,8 +1332,11 @@ lebach,manorial_lord,house-hagen,joint,held,,,,,,,,137,high,
 lebach,manorial_lord,duchy-lorraine,joint,contested,true,county-nassau-saarbruecken,1613,1632,exact,,,137,high,
 lebach,suzerain,county-nassau-saarbruecken,,claimed,true,duchy-lorraine,1609,1632,exact,,,137;141,high,
 lebach,suzerain,duchy-lorraine,,contested,true,county-nassau-saarbruecken,1609,1632,exact,,,137;141,high,
+leidingen,high_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 leidingen,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+leidingen,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 leidingen,manorial_lord,house-varsberg,,held,,,1614,1614,attested,attested,,102,high,
+leidingen,middle_low_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 leidingen,suzerain,county-nassau-saarbruecken,,held,,,1614,1614,attested,attested,,102,high,
 leitzweiler,manorial_lord,county-oberstein-westerburg,,held,,,1585,,attested,,,57-58,high,
 lemberg-pirmasens,manorial_lord,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1607,exact,exact,,103;106,high,occupied by Lorraine's troops in July 1572; evacuated in April 1607 (p. 106)
@@ -1308,7 +1365,9 @@ lidrezing,manorial_lord,electorate-palatinate,,held,,,1585,1585,attested,atteste
 lidrezing,manorial_lord,carelle-de-marimont,,held,,,1630,1632,exact,,,116,medium,
 lidrezing,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
 lidrezing,suzerain,duchy-lorraine,,held,,,,,,,,74,high,
-limbach,high_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
+limbach,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57,high,
+limbach,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+limbach,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 limbach,manorial_lord,house-la-haye,joint,held,,,1585,,attested,,,57,high,
 limbach,manorial_lord,house-schmittberg,joint,held,,,1585,,attested,,,57,medium,
 limbach,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
@@ -1521,7 +1580,9 @@ marimont,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,hi
 marimont,manorial_lord,duchy-lorraine,,held,,,1606,,exact,,,105,medium,
 marimont,manorial_lord,bertrand-de-marimont,,held,,,1613,1613,attested,attested,,80,high,
 marmoutier,suzerain,bishopric-metz,,held,,,1360,,attested,,,120,high,
-marpingen,high_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
+marpingen,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57,high,
+marpingen,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+marpingen,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 marpingen,manorial_lord,house-hunolstein,,held,,,1568,1569,exact,exact,,132,high,
 marpingen,manorial_lord,abbey-tholey,joint,held,,,1585,,attested,,,57,high,
 marpingen,manorial_lord,house-hunolstein,joint,held,,,1585,,attested,,,57,high,
@@ -1585,7 +1646,10 @@ merschweiller,high_justice,duchy-lorraine,,,,,,,,,,49,,
 merschweiller,manorial_lord,cathedral-chapter-trier,,,,,,,,,,49,,
 merschweiller,suzerain,duchy-lorraine,joint,held,,,,,,,,98,high,
 merschweiller,suzerain,duchy-luxembourg,joint,held,,,,,,,,98,high,
+merten,high_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 merten,manorial_lord,abbey-herbitzheim,,held,,,1585,1585,attested,attested,,59,high,
+merten,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+merten,middle_low_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 merzig,appeal_jurisdiction,electorate-trier,,held,,,,,,,,55,high,
 merzig,appeal_jurisdiction,holy-roman-empire,,held,,,,,,,,55,high,
 merzig,appeal_jurisdiction,duchy-lorraine,joint,held,,,1620,,exact,,,131,high,
@@ -1598,7 +1662,9 @@ merzig,suzerain,electorate-trier,joint,held,,,,,,,,130,high,
 metrich,manorial_lord,duchy-lorraine,joint,held,,,,,,,,49,high,
 metting,manorial_lord,rhingraves-daun,joint,held,,,1610,1610,attested,attested,,111,high,
 mettlach,middle_low_justice,abbey-mettlach,,held,,,1620,,exact,,,55,high,
-mettnich,high_justice,duchy-lorraine,,held,,,,,,,,58,high,
+mettnich,high_justice,duchy-lorraine,,held,,,,1619,,circa,,58,high,
+mettnich,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+mettnich,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 mettnich,manorial_lord,electorate-trier,,held,,,1606,1606,attested,attested,,58,high,
 mettnich,middle_low_justice,duchy-lorraine,,held,true,electorate-trier,1612,1612,attested,attested,,133,high,
 mettnich,suzerain,duchy-lorraine,,held,,,,,,,,58,high,
@@ -1654,6 +1720,7 @@ montbronn,middle_low_justice,house-schoenberg,,contested,true,county-bitche|duch
 montbronn,suzerain,electorate-palatinate,,held,,,1586,1601,attested,attested,,18;69,high,
 montbronn,suzerain,duchy-lorraine,,held,,,1623,1632,exact,,,115,high,
 montdidier,manorial_lord,henriette-vaudemont,,held,,,1629,1632,exact,,,115,high,
+montenach,manorial_lord,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in 1632
 morhange,appeal_jurisdiction,duchy-lorraine,,held,,,1632,1632,attested,attested,,99,high,
 morhange,manorial_lord,jean-ix-morhange,,held,,,1613,1613,attested,attested,,79,high,
 morhange,manorial_lord,jean-philippe-rhingrave,,held,,,1632,1632,attested,attested,,99,high,
@@ -1666,8 +1733,10 @@ mulcey,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high
 munster,manorial_lord,rhingraves-daun,joint,held,,,1610,1610,attested,attested,,111,high,
 munster,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
 nalbach,manorial_lord,duchy-lorraine,joint,held,,,1585,,attested,,,56,medium,
-namborn,high_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
+namborn,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57,high,
 namborn,high_justice,duchy-lorraine,,contested,true,duchy-zweibruecken,1592,1592,exact,exact,,134,low,
+namborn,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+namborn,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 namborn,manorial_lord,county-eberstein,1/4,contested,true,house-daun-falkenstein,1543,1605,attested,attested,,134,high,
 namborn,manorial_lord,county-oberstein,joint,held,,,1585,,attested,,,57,high,
 namborn,manorial_lord,electorate-trier,joint,held,,,1585,,attested,,,57,high,
@@ -1704,8 +1773,10 @@ neunkirchen-turkismiihle,manorial_lord,county-oberstein,joint,held,,,,,,,,15,hig
 neuviller,manorial_lord,county-hanau-lichtenberg,,pledged,,,1307,,exact,,,97,high,
 neuviller,suzerain,bishopric-metz,,held,,,1307,,exact,,,97,high,
 nideck,manorial_lord,duchy-lorraine,,held,,,1581,,exact,,,141,high,
+niedaltdorf,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 niedaltdorf,manorial_lord,abbey-bouzonville,joint,held,,,,,,,,50,high,
 niedaltdorf,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,high,
+niedaltdorf,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 niederhofen,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,high,
 niederhofen,manorial_lord,philippe-georges-braun-schmittberg,,held,,,1585,,attested,,,57,medium,
 niedersaubach,manorial_lord,duchy-lorraine,,held,,,1613,1632,exact,,,137,high,
@@ -1716,6 +1787,7 @@ niederstinzel,manorial_lord,rhingraves-daun,joint,held,,,1610,1610,attested,atte
 niedervisse,manorial_lord,bishopric-metz,,held,,,,,,,,64,high,
 niedervisse,manorial_lord,house-dagstuhl,,held,,,,,,,,78,high,
 niedwellingen,manorial_lord,lords-freistroff,,held,,,1585,1585,attested,attested,,59,high,
+niedwellingen,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 nittel-sur-moselle,high_justice,duchy-lorraine,,held,,,,,,,,52,high,
 nittel-sur-moselle,high_justice,county-crehange,joint,contested,true,duchy-lorraine,1576,1576,exact,exact,,129,medium,
 nittel-sur-moselle,high_justice,duchy-lorraine,,claimed,true,county-crehange,1576,1576,exact,exact,,129,high,
@@ -1730,8 +1802,11 @@ nohfelden,suzerain,electorate-trier,,held,,,1602,1608,attested,attested,,132-133
 nohn,high_justice,duchy-lorraine,,held,,,,,,,,52,high,
 nousseviller-les-bitche,suzerain,duchy-lorraine,,held,,,,,,,,18,medium,
 nunkirchen,tax_aide,electorate-trier,,contested,true,duchy-lorraine,1580,1581,exact,exact,,132,high,
+oberdorf,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
+oberesch,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 oberesch,manorial_lord,cathedral-chapter-trier,,held,,,,,,,,50,high,
 oberesch,manorial_lord,veuve-weis,,held,,,,,,,,81,high,
+oberesch,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 oberesch,suzerain,duchy-lorraine,,contested,true,electorate-trier,1629,1629,attested,attested,,132,medium,
 oberleuken,manorial_lord,abbey-villers-bettnach,,held,,,,,,,,49,high,
 oberleuken,manorial_lord,electorate-trier,joint,held,,,,,,,,49,high,
@@ -1742,6 +1817,8 @@ oberstein,suzerain,holy-roman-empire,,held,,,1600,1600,exact,exact,,134,high,
 obervisse,manorial_lord,bishopric-metz,,held,,,,,,,,64,high,
 obrick,safeguard,duchy-lorraine,,held,,,,,,,,76,high,
 odenhofen,manorial_lord,charterhouse-rettel,,held,,,1585,1585,attested,attested,,59,high,
+odenhofen,manorial_lord,house-hohensaxen,joint,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+odenhofen,manorial_lord,house-metternich,joint,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 oermingen,high_justice,county-nassau-saarbruecken,,contested,true,duchy-lorraine,1600,1620,exact,exact,,142,medium,
 oermingen,high_justice,duchy-lorraine,,claimed,true,county-nassau-saarbruecken,1600,1620,exact,exact,,142,high,
 oermingen,manorial_lord,duchy-lorraine,,held,,,,1621,,exact,,107,medium,
@@ -1964,6 +2041,8 @@ reitscheid,manorial_lord,county-oberstein,joint,held,,,,,,,,15,high,
 reitscheid,manorial_lord,county-eberstein,1/4,contested,true,house-daun-falkenstein,1543,1605,attested,attested,,134,high,
 reitweiler,manorial_lord,sieur-de-mercy,,held,,,1630,1632,exact,,,116,high,
 reitweiler,suzerain,louis-de-guise,,held,,,1630,1632,exact,,,116,medium,
+remeldorf,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
+remeldorf,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 remelfang,manorial_lord,house-faust-stromberg,1/4,held,,,,,,,,81,high,
 remelfang,manorial_lord,house-varsberg,3/4,held,,,,,,,,81,high,
 remelfang,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
@@ -1974,7 +2053,10 @@ remelfing-sierck,high_justice,duchy-lorraine,,held,,,,,,,,50,high,
 remelfing-sierck,manorial_lord,albert-de-bassy,,held,,,,,,,,50,high,
 remelfing-sierck,manorial_lord,county-crehange,1/12,held,,,,,,,,81,high,
 remelfing-sierck,manorial_lord,nicolas-de-weis,,held,,,1632,1632,attested,attested,,80,medium,
+remering-bouzonville,high_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 remering-bouzonville,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+remering-bouzonville,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+remering-bouzonville,middle_low_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 remering-puttelange,high_justice,county-nassau-saarbruecken,,held,,,1581,,exact,,,142,medium,
 remering-puttelange,high_justice,duchy-lorraine,,held,,,1621,,exact,,,143,high,
 remering-puttelange,manorial_lord,duchy-lorraine,,held,,,1581,1632,exact,,,101;107,high,
@@ -2129,11 +2211,14 @@ sarrewerden,suzerain,bishopric-metz,,,,,,,,,,108,,
 schalbach,manorial_lord,rhingraves-daun,joint,held,,,1610,1610,attested,attested,,111,high,
 schaumberg,manorial_lord,county-eberstein,joint,held,,,,,,,,15,high,
 schaumberg,manorial_lord,county-oberstein,joint,held,,,,,,,,15,high,
+schellenbach,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+schellenbach,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 schellenbach,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
 scheuern-charleville,manorial_lord,duchy-lorraine,,held,,,,,,,,49,high,
 scheuern-hasborn,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,high,
 schorbach,middle_low_justice,duchy-lorraine,,held,,,,,,,,70,medium,
 schreckling,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+schreckling,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 schweix-pirmasens,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
 schweix-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1605,,circa,,,148,high,
 schweix-pirmasens,suzerain,duchy-lorraine,,renounced,,,1605,,circa,,,148,high,
@@ -2181,7 +2266,9 @@ silzheim,manorial_lord,county-nassau-saarbruecken,,held,,,1621,,exact,,,107,medi
 silzheim,safeguard,county-nassau-saarbruecken,,held,,,1621,,exact,,,143,high,
 simten,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
 simten,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,104,high,
-sotzweiler,high_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
+sotzweiler,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57,high,
+sotzweiler,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+sotzweiler,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 sotzweiler,manorial_lord,county-eberstein,1/4,contested,true,house-daun-falkenstein,1543,1605,attested,attested,,134,high,
 sotzweiler,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,high,
 sotzweiler,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
@@ -2198,19 +2285,24 @@ tenteling,manorial_lord,commandery-beckingen,joint,held,,,1585,1585,attested,att
 tenteling,manorial_lord,county-eberstein,joint,held,,,1585,1585,attested,attested,,68,medium,
 tenteling,manorial_lord,house-reipoltzkirchen,joint,held,,,1585,1585,attested,attested,,68,medium,
 tenteling,suzerain,holy-roman-empire,,held,,,1585,1585,attested,attested,,68,medium,
+teterchen,high_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 teterchen,manorial_lord,county-nassau-saarbruecken,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,duchy-lorraine,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,house-faust-stromberg,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,house-schwarzenberg,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,house-varsberg,joint,held,,,1585,1585,attested,attested,,59,,
 teterchen,manorial_lord,jacques-de-bassy,joint,held,,,1585,1585,attested,attested,,59,,
+teterchen,manorial_lord,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 teterchen,manorial_lord,house-haraucourt,,held,,,1613,1613,attested,attested,,79,,
 teterchen,manorial_lord,louis-de-guise,,pledged,,,1625,,circa,,,29,medium,"the duke's part, for a loan of 100,000 francs; dated by the surrounding text (1625)"
+teterchen,middle_low_justice,house-metternich,,held,,,1611,,exact,,,244,high,Metternich's lot in the 1611 division of Berus
 teterchen,suzerain,duchy-lorraine,,held,,,1613,1613,attested,attested,,79,medium,
 teting,advocate,county-crehange,,held,,,,,,,,64,high,
 teting,manorial_lord,abbey-saint-avold,,held,,,,,,,,10,high,
 teting,manorial_lord,bishopric-metz,,held,,,,,,,,64,high,
-thalexweiler,high_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
+thalexweiler,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57,high,
+thalexweiler,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+thalexweiler,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 thalexweiler,manorial_lord,abbey-tholey,joint,held,,,1585,,attested,,,57,high,
 thalexweiler,manorial_lord,house-braubach,joint,held,,,1585,,attested,,,57,high,
 thalexweiler,tax_aide,duchy-lorraine,,held,,,1609,1609,exact,exact,,58,high,
@@ -2235,7 +2327,9 @@ theley,suzerain,electorate-trier,joint,held,,,1585,,exact,,,57,high,
 theley,suzerain,county-oberstein,1/2,held,,,1613,1613,attested,attested,,79,high,
 thicourt,manorial_lord,charles-philippe-de-croy,,held,,,,1613,,exact,,112,high,
 thicourt,manorial_lord,house-havre,,claimed,true,duchy-lorraine,1626,1626,attested,attested,,146,high,
-tholey,high_justice,duchy-lorraine,,held,,,1615,1615,attested,attested,,57-58,high,
+tholey,high_justice,duchy-lorraine,,held,,,1585,1619,attested,circa,,57-58,high,
+tholey,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+tholey,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 tholey,manorial_lord,abbey-tholey,,held,,,1585,,attested,,,57,high,
 tholey,middle_low_justice,duchy-lorraine,,held,,,1585,,attested,,,57,high,
 tholey,suzerain,duchy-lorraine,,contested,true,abbey-tholey,1568,1569,exact,exact,,132,high,
@@ -2247,16 +2341,23 @@ torcheville,manorial_lord,county-crehange,,held,,,1585,1585,attested,attested,,7
 torcheville,manorial_lord,pierre-ernest-i-crehange-bacourt,,held,,,1613,1613,attested,attested,,79;83,high,
 torcheville,suzerain,duchy-lorraine,,held,,,1613,1613,attested,attested,,79,medium,
 tritteling,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
+tromborn,high_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 tromborn,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+tromborn,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
+tromborn,middle_low_justice,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 trulben,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
 trulben,suzerain,county-hanau-lichtenberg,,held,,,1605,,circa,,,148,high,
 trulben,suzerain,duchy-lorraine,,renounced,,,1605,,circa,,,148,high,
 tunsdorf,manorial_lord,house-faust-stromberg,,held,,,,,,,,50,high,
 tunsdorf,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 tunsdorf,manorial_lord,nicolas-de-weis,,held,,,1632,1632,attested,attested,,80,medium,
+tunting,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 tunting,manorial_lord,county-crehange,joint,held,,,,,,,,50,high,
 tunting,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,medium,
+tunting,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 turquestein,suzerain,bishopric-metz,,held,,,1211,,attested,,,120,high,
+uchtelfangen,high_justice,jean-frederic-freistroff,,pledged,,,1619,1621,circa,exact,,232,high,"pledged with other villages of Schaumberg for 18,120 francs in 1618-19"
+uchtelfangen,high_justice,jean-rene-de-soetern,,pledged,,,1621,,exact,,,232,high,"Freistroff's pledge, passed on in March 1621"
 uchtelfangen,manorial_lord,house-hagen,joint,held,,,,,,,,137,high,
 uchtelfangen,manorial_lord,house-levenstein,joint,held,,,,,,,,137,high,
 uchtelfangen,manorial_lord,house-kallenbach,,claimed,true,duchy-lorraine,1626,1626,attested,attested,,146,high,
@@ -2281,6 +2382,7 @@ valmont,manorial_lord,louis-de-guise,,held,,,1614,,exact,,,64,medium,
 valmunster,high_justice,remacle-de-bockenheimer,,held,,,,,,,,82,high,
 valmunster,manorial_lord,house-faust-stromberg,1/4,held,,,,,,,,81,high,
 valmunster,manorial_lord,house-varsberg,3/4,held,,,,,,,,81,high,
+valmunster,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 valmunster,manorial_lord,landwein-bockenheimer,,held,,,1613,1613,attested,attested,,80,high,
 valmunster,suzerain,duchy-lorraine,,held,,,,,,,,16,high,
 varize,manorial_lord,lordship-raville,,held,,,1609,,exact,,,140,high,
@@ -2309,6 +2411,7 @@ vaudoncourt,manorial_lord,county-crehange,joint,held,,,,,,,,62,high,
 vaudoncourt,manorial_lord,house-pallant,joint,held,,,,,,,,62,high,
 vaudoncourt,suzerain,duchy-lorraine,,contested,true,duchy-luxembourg,1609,1625,attested,attested,,138,medium,
 vaudreching,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,59,high,
+vaudreching,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 vaudreching,safeguard,duchy-lorraine,,held,,,1594,1594,attested,attested,,119,medium,
 vaudrevange,appeal_jurisdiction,duchy-lorraine,,held,,,,,,,,85,high,
 vaudrevange,manorial_lord,duchy-lorraine,,held,,,1585,,attested,,,56,high,
@@ -2336,6 +2439,7 @@ viller,manorial_lord,county-crehange,,held,,,1585,1585,attested,attested,,74,hig
 villers-bettnach,spiritual_lord,duchy-lorraine,joint,held,,,,,,,,86,medium,
 villers-bettnach,spiritual_lord,nicolas-francois-lorraine,joint,held,,,,,,,,86,medium,
 villing,manorial_lord,jost-bechel,,held,,,1585,1585,attested,attested,,59,high,
+villing,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 vinningen,manorial_lord,county-hanau-lichtenberg,,held,,,1606,1632,exact,,,105,high,
 vinningen,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,104,high,
 virming,manorial_lord,duchy-lorraine,,held,,,1585,1585,attested,attested,,74,high,
@@ -2362,8 +2466,10 @@ wahl-en,tax_aide,electorate-trier,,contested,true,duchy-lorraine,1580,1581,exact
 waldvisse,manorial_lord,county-sayn,,held,,,,,,,,50,high,
 waldvisse,manorial_lord,house-metternich,,held,,,,,,,,81,high,
 waldvisse,manorial_lord,jean-de-weis,,held,,,1632,1632,attested,attested,,80,medium,
+waldweistroff,high_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 waldweistroff,manorial_lord,county-crehange,joint,held,,,,,,,,50,high,
 waldweistroff,manorial_lord,duchy-lorraine,joint,held,,,,,,,,50,medium,
+waldweistroff,middle_low_justice,guillaume-de-braubach,,held,,,1632,,exact,,,230,high,bought from the duke in February and June 1632
 walschbronn,appeal_jurisdiction,duchy-lorraine,,held,,,,,,,,70,high,
 walschbronn,manorial_lord,duchy-lorraine,,held,,,1606,,exact,,,105,medium,
 walschbronn,suzerain,duchy-lorraine,,contested,true,duchy-zweibruecken,1577,1585,exact,exact,,143-144,medium,
@@ -2437,6 +2543,7 @@ wittring,manorial_lord,county-eberstein,,held,,,1585,1585,attested,attested,,68,
 wochern,suzerain,duchy-lorraine,joint,held,,,,,,,,84,high,
 wochern,suzerain,duchy-luxembourg,joint,held,,,,,,,,84,high,
 woelfling-bouzonville,manorial_lord,abbey-bouzonville,,held,,,1585,1585,attested,attested,,59,high,
+woelfling-bouzonville,manorial_lord,house-hohensaxen,,held,,,1611,,exact,,,243-244,high,Hohensaxen's lot in the 1611 division of Berus
 woelfling-sarreguemines,high_justice,duchy-lorraine,,held,,,1586,1601,attested,attested,,69,high,
 woelfling-sarreguemines,high_justice,county-nassau-saarbruecken,,contested,true,duchy-lorraine,1600,1620,exact,exact,,142,medium,
 woelfling-sarreguemines,high_justice,duchy-lorraine,,claimed,true,county-nassau-saarbruecken,1600,1620,exact,exact,,142,high,

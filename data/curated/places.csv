@@ -23,7 +23,7 @@ hombourg-haut-et-bas,settlement,Hombourg-Bas,Niederhomburg,Hombourg-Bas,Hombourg
 goderscheuren,settlement,Godehure,Goderscheuren,Godehure,Goderscheuren,farmstead,49.23375,6.36139,,,FR,13,high,"office of Sierck (p. 13; index: Villers-Bettnach), today the farm of Godehure"
 tunting,settlement,Tunting,Tünting,Tunting,Tenting|Tintingen|Tünting,village,49.4525,6.45022,Q55600078,,FR,12;50;252,high,"office of Sierck (p. 12); Tenting of the former commune of Tenting-Mensberg, today part of Manderen-Ritzing (the index has S. for Saarland)"
 tiitting,settlement,Tütting,Tüttingen,Tütting,Tiitting|Titing|Titting|Tüttingen,village,49.26167,6.49667,,,FR,81;230;266,high,"near Holling (index: Tütting, Tinting, Titting, Holling), held with Penning, Éblange and Holling by the Varsberg and Faust (p. 81); not Tünting near Manderen"
-biibingen,settlement,Büdingen,Büdingen,Büdingen,Biibingen|Biidingen|Budingen,village,49.45,6.55,Q16534724,,DE,14;53;55;84,high,"Büdingen near Merzig, lower mairie of the Saargau (p. 55); the OCR reads Biidingen"
+budingen,settlement,Büdingen,Büdingen,Büdingen,Biidingen|Budingen,village,49.45,6.55,Q16534724,,DE,14;53;55,high,"Büdingen near Merzig, lower mairie of the Saargau (p. 55); the OCR reads Biidingen"
 honzrath,settlement,Honzrath,Honzrath,Honzrath,Hontzgerode,free_village,49.4272,6.7306,Q1627335,,DE,10;133;137;146;195-197;220,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Haustadt and Michelbach (p. 10)"
 haustadt,settlement,Haustadt,Haustadt,Haustadt,,free_village,49.4133,6.7242,Q1591317,,DE,10;133;195-197,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Michelbach (p. 10)"
 michelbach,settlement,Michelbach,Michelbach,Michelbach,,free_village,49.467,6.833,Q6836676,,DE,10;15;84;137,high,"one of the three free villages (villages libres) enclaved in the bailiwick, with Honzrath and Haustadt (p. 10)"
@@ -195,6 +195,7 @@ biding,settlement,Biding,Biedingen,Biding,Buding,village,49.05889,6.78667,Q21700
 bierfeld,settlement,Bierfeld,Bierfeld,Bierfeld,Beurenfeld,village,49.6095,6.9504,Q857824,,DE,132,high,
 bietzen,settlement,Bietzen,Bietzen,,Butzen,village,49.41433,6.65622,Q55091490,,DE,54;82;129,high,
 biherkirch,settlement,Biberkirch,Biberkirch,Biberkirch,Biherkirch,village,48.6667,7.11667,Q16304320,,FR,,high,
+biibingen,settlement,Bübingen,Bübingen,Bübingen,Biibingen|Bubingen,castle,49.54102,6.37924,Q56957054,,DE,84,high,
 biischdorf,settlement,Büschdorf,Büschdorf,Büschdorf,Biischdorf|Bisserstroff,village,49.4719,6.47417,Q1021751,,,81,medium,
 bilsdorf,settlement,Bilsdorf,Bilsdorf,Bilsdorf,,village,49.3839,6.82194,Q863327,,DE,56,high,
 bingen,settlement,Bingen,,,Bingen près de Volmerange,village,49.16833,6.44778,,,FR,,high,
@@ -281,7 +282,7 @@ chambrey,settlement,Chambrey,Chambrey,Chambrey,,village,48.78694,6.45944,Q21714,
 charleville,settlement,Charleville-sous-Bois,Charleville-sous-Bois,Charleville-sous-Bois,Charleville,village,49.18944,6.41194,Q21785,,FR,,high,
 chateau-brehain,settlement,Château-Bréhain,Château-Bréhain,Château-Bréhain,,village,48.90389,6.52556,Q21628,,FR,,high,
 chateau-rouge,settlement,Château-Rouge,Rodendorf,Château-Rouge,Rodendorf|Rudendorf,village,49.28,6.59694,Q21828,,FR,59;80,high,
-chateau-salins,settlement,Château-Salins,Salzburgen,Château-Salins,Chastelsalin,small_town,48.82167,6.50833,Q22745,,FR,125,high,
+chateau-salins,settlement,Château-Salins,Salzburgen,Château-Salins,Chastelsalin,small_town,48.82167,6.50833,Q123186767,,FR,125,high,
 chateau-voue,settlement,Château-Voué,Dürkastel,Château-Voué,Châteauvoué|Durcastel,village,48.85083,6.62361,Q22388,,FR,74;79;83,high,
 chatillon,settlement,Châtillon,Châtillon,Châtillon,,village,48.55861,6.96611,Q633203,,FR,78,high,
 chelaincourt,settlement,Chelaincourt,Chelaincourt,Chelaincourt,,farmstead,49.23722,6.245,Q21992,,FR,128,high,
@@ -312,6 +313,7 @@ county-sarrebruck,territory,Comté de Sarrebruck,Grafschaft Saarbrücken,County 
 courcelles,settlement,Courcelles,Kurzel,Courcelles,,village,49.10917,6.405,Q21703,,,82,medium,
 court-perl,territory,Cour de Perl,Hof Perl,Court district of Perl,Niederperl|Oberperl|Perl,court,49.4771,6.39167,,,,50;128,medium,
 court-vibersviller,territory,Cour de Vibersviller,Hof Wiebersweiler,Court district of Vibersviller,cour de Vibersviller,court,48.91444,6.94444,,,,108,medium,
+coutures,settlement,Coutures,Coutures,Coutures,Coutures-lès-Château-Salins,village,48.821,6.48479,Q3001607,,FR,,high,
 craincourt,settlement,Craincourt,Craincourt,Craincourt,,village,48.87667,6.32167,Q21758,,FR,,high,
 crehange,settlement,Créhange,Kriechingen,Créhange,,village,49.06306,6.58194,Q22380,,FR,,high,
 creutzwald,settlement,Creutzwald,Kreuzwald,Creutzwald,Creutzwcdd,village,49.2,6.68333,Q34797557,,FR,80;141,high,
@@ -490,7 +492,7 @@ grindorf,settlement,Grindorff,Grindorf,Grindorff,Grindorf|Grondorf,village,49.37
 gronig,settlement,Gronig,Gronig,Gronig,,village,49.5167,7.08333,Q1431114,,DE,57;132,high,
 grosbliederstroff,settlement,Grosbliederstroff,Großblittersdorf,Grosbliederstroff,,village,49.15639,7.02778,Q22395,,FR,68,high,
 grosrederching,settlement,Grosréderching,Großrederchingen,,Riderching|Ruderching,village,49.06835,7.21914,,3014527,FR,,high,
-grosshemmersdorf,settlement,Hemmersdorf,Hemmersdorf,Hemmersdorf,Grosshemmersdorf|Hymestroff,village,49.355,6.605,Q1604852,,DE,50;60,high,
+grosshemmersdorf,settlement,Grosshemmersdorf,Großhemmersdorf,Großhemmersdorf,Hemmersdorf|Hymestroff,village,49.36104,6.61303,Q1604852,,DE,60,high,
 grostenquin,settlement,Grostenquin,Grostenquin,Grostenquin,,village,48.98,6.73889,Q22032,,FR,74-75,high,
 grundviller,settlement,Grundviller,Grundweiler,Grundviller,Grentviller,village,49.04389,6.97083,Q22061,,FR,21;107;142-143,high,
 gudingen,settlement,Güdingen,Güdingen,Güdingen,Giidingen,village,49.2004,7.02812,Q1560040,,DE,102,high,
@@ -593,7 +595,7 @@ hobling,settlement,Hobling,Hobling,Hobling,,village,49.29164,6.43552,Q15073192,,
 hochweyersberg,settlement,Hochweyersberg-lès-Baerenthal,,,Hochweyersberg,hamlet,48.975,7.5175,,,FR,,high,
 hoff,settlement,Hoff,Hoff,Hoff,Hove,village,48.7462,7.05443,Q3139053,,FR,21;79,high,
 holbach-lachambre,settlement,Holbach,Holbach,Holbach,,village,49.07283,6.75503,Q55597231,,FR,64,high,
-holbach-siersthal,settlement,Holbach,,Holbach,,village,49.0578,7.3439,Q115869856,,FR,,high,
+holbach-siersthal,settlement,Holbach,,Holbach,,village,49.0578,7.3439,Q3139259,,FR,,high,
 holling,settlement,Holling,Hollingen,Holling,,village,49.26167,6.49667,Q22349,,FR,16;59-60;81,high,
 holving,settlement,Holving,Holvingen,Holving,Holbringen,village,49.01083,6.965,Q22999,,FR,,high,
 hombourg-sur-canner,settlement,Hombourg-sur-Canner,Homburg,,Hombourg auf der Kandel|seigneurie de Hombourg,village,49.297,6.34268,,3013197,FR,79,high,
@@ -627,7 +629,7 @@ ippling,settlement,Ippling,Iplingen,Ippling,,village,49.10611,7.00444,Q22262,,FR
 ischen,settlement,Ischen-lès-Hirschland,,,Ischen,hamlet,48.83694,7.11194,,,FR,,high,
 ising,settlement,Ising,Ising,Ising,Ingsingen,village,49.27667,6.40278,Q21776,,FR,63,high,
 ittersdorf,settlement,Ittersdorf,Ittersdorf,Ittersdorf,Widerstorff|auf dem Gau,village,49.2967,6.65639,Q1675327,,DE,59,high,
-itzbach,settlement,Itzbach,,,,village,49.35412,6.67156,,2895571,DE,50;52;82,high,
+itzbach,settlement,Itzbach,,,,village,49.35412,6.67156,,2895571,DE,52;82,high,
 jabach,settlement,Jabach,Jabach,,,village,49.4055,6.89593,Q136190672,,DE,137,high,
 johannesviller,settlement,Johannesviller,Johannesweiler,,,new_village,49.08111,6.91361,,,FR,,high,
 juvelize,settlement,Juvelize,Geistkirchen,Juvelize,Geistkirchen,village,48.76333,6.64917,Q21734,,FR,76,high,
@@ -644,7 +646,7 @@ kerling,settlement,Kerling-lès-Sierck,Kerling-lès-Sierck,Kerling-lès-Sierck,K
 kerlingen,settlement,Kerlingen,Kerlingen,Kerlingen,Kerlingen-lès-Vaudrevange,village,49.3172,6.65083,Q1739267,,DE,59,high,
 kerprich,settlement,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,Kerprich|Kirberg,village,48.82417,6.69833,Q28040537,,FR,74,high,
 kerprich-aux-bois,settlement,Kerprich-aux-Bois,Kerprich-aux-Bois,Kerprich-aux-Bois,Kiperg,village,48.73889,6.96028,Q21668,,FR,,high,
-kerprich-hemmersdorf,settlement,Kerprich-Hemmersdorf,Kerprich-Hemmersdorf,Kerprich-Hemmersdorf,Hemmersdorf|Hemmersdorf-sur-Nied|Kirburg-Himerstorff,village,49.355,6.605,Q1604852,,DE,52;82,high,
+kerprich-hemmersdorf,settlement,Kerprich-Hemmersdorf,Kerprichhemmersdorf,Kerprichhemmersdorf,Hemmersdorf|Hemmersdorf-sur-Nied|Kirburg-Himerstorff,village,49.35349,6.62768,Q1604852,,DE,52,high,
 keskastel,settlement,Keskastel,Keskastel,Keskastel,Castel,village,48.97139,7.04389,Q21285,,FR,72;142-143,high,
 ketternostern,settlement,Oberkirchen,Oberkirchen,Oberkirchen,Catherinenostern|Ketternostern|Oberkirch,village,49.5253,7.26222,Q1437410,,DE,15;79-80;134-135,high,
 keuchingen,settlement,Keuchingen,Keuchingen,Keuchingen,Kuchingen,village,49.4974,6.5823,Q16648275,,DE,,high,
@@ -980,7 +982,7 @@ porcelette,settlement,Porcelette,Porcelette,Porcelette,,new_village,49.15639,6.6
 postroff,settlement,Postroff,Postdorf,Postroff,,village,48.85111,7.07944,Q22306,,FR,111,high,
 primsweiler,settlement,Primsweiler,,,,village,49.41013,6.85553,,2852035,DE,,high,
 principality-lixheim,territory,Principauté de Lixheim,Fürstentum Lixheim,Principality of Lixheim,principauté de Lixheim,principality,48.77528,7.14194,,,,21-22;72-73;86;98;115-116;124,medium,
-provostship-amance,territory,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,,provostship,48.87017,6.52389,,,,,medium,
+provostship-amance,territory,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,,provostship,48.86402,6.519,,,,,medium,
 provostship-eblange,territory,Prévôté d'Éblange,Schultheißerei Eblingen,Provostship of Éblange,Éblange,provostship,49.22333,6.48194,,,,63,medium,
 provostship-insming,territory,Prévôté d'Insming,Schultheißerei Insmingen,Provostship of Insming,Amange|prévôté d'Insming,provostship,48.95611,6.87417,,,,,medium,
 provostship-ketternostern,territory,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,Oberkirch|Oberkirchen|prévôté d'Oberkirchen,provostship,49.55516,7.24661,,,,57,medium,

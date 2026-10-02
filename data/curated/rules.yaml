@@ -219,6 +219,18 @@ drop_rights:
      reason: "the 1630 list gives Jean-Wolf de Schmittberg houses, farms and lands at Berus, not the lordship (p. 80)"}
   - {place: volkrange, right_type: manorial_lord, holder: house-braun-schmittberg,
      reason: "the 1613 list gives Jean-Wolf de Schmittberg a house at Volkrange, not the village (p. 80)"}
+  - {place: grosshemmersdorf, right_type: manorial_lord, holder: house-felsberg,
+     reason: "p. 50 gives Heckling to the house of Felsberg; Hemmersdorf and Itzbach end the list of the count of Sayn's men"}
+  - {place: itzbach, right_type: manorial_lord, holder: house-felsberg,
+     reason: "p. 50 gives Heckling to the house of Felsberg; Hemmersdorf and Itzbach end the list of the count of Sayn's men"}
+  - {place: kerprich-hemmersdorf, right_type: manorial_lord, holder: house-zandt,
+     reason: "the fief is a house at Hemmersdorf-sur-Nied, not the village (p. 82)"}
+  - {place: kerprich-hemmersdorf, right_type: manorial_lord, holder: house-braunsdorf,
+     reason: "the fief is a farm (cense) at Hemmersdorf, not the village (p. 82)"}
+  - {place: kerprich-hemmersdorf, right_type: manorial_lord, holder: erica-de-merfeld,
+     reason: "the fief is a farm (cense) at Hemmersdorf, not the village (p. 82)"}
+  - {place: kerprich-hemmersdorf, right_type: manorial_lord, holder: remacle-de-bockenheimer,
+     reason: "the fief is rents at Hemmersdorf bought from the count of Sayn, not the village (p. 82)"}
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
@@ -286,6 +298,51 @@ right_overrides:
   - match: {place: niederhofen, right_type: manorial_lord, holder: house-schmittberg}
     set: {holder_id: philippe-georges-braun-schmittberg}
     reason: "Lindscheidt and Niederhofen to Philippe-Georges Braun de Schmittberg (1585, p. 57)"
+  - match: {place: limbach, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: marpingen, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: mettnich, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: namborn, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: sotzweiler, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: thalexweiler, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "pledged to Jean-Frédéric Freistroff in 1618-19 (p. 232)"
+  - match: {place: filstroff, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "sold to Guillaume de Braubach in 1632 (p. 230)"
+  - match: {place: filstroff, right_type: middle_low_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "sold to Guillaume de Braubach in 1632 (p. 230)"
+  - match: {place: grindorf, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "sold to Guillaume de Braubach in 1632 (p. 230)"
+  - match: {place: grosshemmersdorf, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "sold to Guillaume de Braubach in 1632 (p. 230)"
+  - match: {place: grosshemmersdorf, right_type: middle_low_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "sold to Guillaume de Braubach in 1632 (p. 230)"
+  - match: {place: bisten-saar, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1611, to_precision: exact}
+    reason: "high justice to the lords of Berus in the 1611 division (pp. 243-244)"
+  - match: {place: forweiler, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1611, to_precision: exact}
+    reason: "high justice to the lords of Berus in the 1611 division (pp. 243-244)"
+  - match: {place: tholey, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1619, to_precision: circa}
+    reason: "attested in 1615; pledged to Jean-Frédéric Freistroff in 1618-19 (pp. 57-58, 232)"
+  - match: {place: gomelange, right_type: high_justice, holder: duchy-lorraine, status: held}
+    set: {to_year: 1632, to_precision: exact}
+    reason: "attested in 1610; sold to Guillaume de Braubach in 1632 (pp. 119, 230)"
 
 # Geocoding decisions (Stage 5), applied by `make geocode`:
 #   place-id: {wikidata: Q…}                 use this Wikidata item
@@ -294,6 +351,13 @@ geocode:
   chemery: {wikidata: Q21609, lat: 49.29944, lon: 6.44389,
             note: "Chémery-les-Deux (Chémery-la-Vieille and -la-Neuve), office of Sierck (pp. 13, 50-51); was matched to the Chémery of Faulquemont"}
   chemery-faulquemont: {lat: 48.9997, lon: 6.58276, note: "Chémery, part of Faulquemont today, lordship of Faulquemont (p. 16)"}
+  # Hemmersdorf is two villages merged in 1937: Großhemmersdorf, left of the Nied (office of Boulay,
+  # sub-provostship of Sierck), and Kerprichhemmersdorf, right of it (office of Siersberg); points
+  # are the centres of their old areas in OpenStreetMap
+  grosshemmersdorf: {wikidata: Q1604852, lat: 49.36104, lon: 6.61303, name_de: Großhemmersdorf, name_en: Großhemmersdorf,
+                     note: "Grosshemmersdorf (Hymestroff), left of the Nied, offices of Sierck and Boulay (pp. 12, 16, 60); part of Hemmersdorf since 1937"}
+  kerprich-hemmersdorf: {wikidata: Q1604852, lat: 49.35349, lon: 6.62768, name_de: Kerprichhemmersdorf, name_en: Kerprichhemmersdorf,
+                         note: "Kerprich-Hemmersdorf (Kirburg-Himerstorff), right of the Nied, office of Siersberg (pp. 13, 52); part of Hemmersdorf since 1937"}
   momberg: {lat: 49.50765, lon: 7.05486, name_de: Steinberg, name_en: Steinberg,
             note: "castle of Momberg or Steinberg between Gronig and Theley, office of Schaumberg (p. 80); placed midway between them; was matched to Steinberg in Wadern"}
   # Lost villages ("village disparu") the databases matched to other, existing places.
@@ -830,7 +894,7 @@ place_names:
   pirmasens: {fr: Pirmasens}
   silwingen: {fr: Silwingen}
   forweiler: {fr: Altforweiler}
-  grosshemmersdorf: {fr: Hemmersdorf}
+  grosshemmersdorf: {fr: Grosshemmersdorf, de: Großhemmersdorf, en: Großhemmersdorf, variants: [Hemmersdorf]}
   petit-ebersviller: {fr: Petit-Ébersviller, de: Petit-Ébersviller, en: Petit-Ébersviller}
   eich-pirmasens: {fr: Eich, de: Eich, en: Eich}
   griesborn: {fr: Griesborn, de: Griesborn, en: Griesborn}
@@ -842,7 +906,7 @@ place_names:
   rilchingen: {fr: Rilchingen, de: Rilchingen, en: Rilchingen}
   rehlingen-sur-moselle: {fr: Rehlingen, de: Rehlingen, en: Rehlingen}
   rehlingen-sur-sarre: {fr: Rehlingen, de: Rehlingen, en: Rehlingen}
-  kerprich-hemmersdorf: {fr: Kerprich-Hemmersdorf, de: Kerprich-Hemmersdorf, en: Kerprich-Hemmersdorf}
+  kerprich-hemmersdorf: {fr: Kerprich-Hemmersdorf, de: Kerprichhemmersdorf, en: Kerprichhemmersdorf}
   chatillon: {de: Châtillon, en: Châtillon}
   saint-francois: {de: Saint-François, en: Saint-François}
   haute-seille: {en: Haute-Seille}
@@ -858,7 +922,9 @@ place_names:
   bergweiler: {fr: Bergweiler}  # the book: "Weiler im Loch ou Bergweiler"
   marienfloss: {fr: Marienfloss}  # the book: "Bruch alias Marienfloss"
   ban-rotte: {en: Ban of the Rotte}
+  coutures: {fr: Coutures}
   # OCR slips: 'ü' read as 'ii'
+  biibingen: {fr: Bübingen, de: Bübingen, en: Bübingen}
   bettling: {fr: Bettling-lès-Bühl}
   biischdorf: {fr: Büschdorf}
   buren: {fr: Büren, de: Büren, en: Büren}

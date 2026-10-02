@@ -94,6 +94,7 @@ lemberg-pirmasens,manorial_lord,county-hanau-lichtenberg,,held,,,1607,,exact,,,1
 lemberg-pirmasens,suzerain,duchy-lorraine,,contested,true,county-hanau-lichtenberg,1572,1606,exact,exact,,103;105,high,
 lemberg-pirmasens,suzerain,county-hanau-lichtenberg,,held,,,1606,,exact,,,105;148,high,"Lorraine's renunciation of the 1606 treaty (p. 105), confirmed in the charter quoted on p. 148"
 bergweiler,manorial_lord,abbey-tholey,,held,,,1609,,attested,,,58;231,high,"one of the abbot of Tholey's villages, the lordship of Tholey (pp. 58, 231)"
-bergweiler,high_justice,duchy-lorraine,,held,,,1609,,attested,,,58;231,high,"under Lorraine's high justice, like the rest of the lordship of Tholey (pp. 58, 231)"
+bergweiler,high_justice,duchy-lorraine,,held,,,1609,1619,attested,circa,,58;231,high,"under Lorraine's high justice, like the rest of the lordship of Tholey (pp. 58, 231); pledged in 1618-19 (p. 232)"
 momberg,manorial_lord,christophe-braun-schmittberg,1/2,held,,,1630,1630,attested,attested,,80,high,"half of the castle, in the 1630 list of the bailiwick's fiefs"
 momberg,suzerain,duchy-lorraine,,held,,,1630,1630,attested,attested,,80,high,"a fief of the office of Schaumberg in the 1630 list of fiefs"
+coutures,high_justice,duchy-lorraine,,held,,,1587,1631,exact,exact,,239,high,"acquired from the abbey of Longeville in 1587, pledged by Charles IV in 1631 (p. 239)"

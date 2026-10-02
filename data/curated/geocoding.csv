@@ -149,7 +149,7 @@ biding,49.05889,6.78667,Q21700,,Biding,Biedingen,Biding,wikidata,high,
 bierfeld,49.6095,6.9504,Q857824,,Beurenfeld ou Bierfeld,Bierfeld,Bierfeld,wikidata,high,
 bietzen,49.41433,6.65622,Q55091490,,Bietzen,Bietzen,,wikidata,high,
 biherkirch,48.6667,7.11667,Q16304320,,Biberkirch,Biberkirch,Biberkirch,wikidata,high,no canton anchor
-biibingen,49.45,6.55,Q16534724,,Büdingen,Büdingen,Büdingen,wikidata,high,
+biibingen,49.54102,6.37924,Q56957054,,Bubingen,Bübingen,Bübingen,wikidata,high,
 biischdorf,49.4719,6.47417,Q1021751,,Biischdorf,Büschdorf,Büschdorf,wikidata,high,
 bilsdorf,49.3839,6.82194,Q863327,,Bilsdorf,Bilsdorf,Bilsdorf,wikidata,high,
 bingen,49.16833,6.44778,,,Bingen,,,approximate,low,not in Wikidata/GeoNames; placed at Volmerange (index location)
@@ -206,6 +206,7 @@ bubach-calmesweiler,49.41,6.94222,Q93361258,,Bubach,Bubach,Bubach,wikidata,high,
 buchingen,49.22333,6.48194,,,Buchingen,Buchingen,Buchingen,approximate,low,"Buchingen-lès-Éblange, office of Boulay (pp. 16, 63; index: Éblange); was matched to Bockange"
 budange,49.2961,6.3456,Q22152,,Budange,Budingen,Budange,override,high,"Budange, office of Sierck (p. 13; index: Hombourg-sur-Canner), today part of Hombourg-Budange; was matched to Buding"
 buding,49.33333,6.32111,Q21750,,Buding,Büdingen,Buding,wikidata,high,
+budingen,49.45,6.55,Q16534724,,Büdingen,Büdingen,Büdingen,wikidata,high,
 budling,49.34667,6.35583,Q21738,,Budling,Bidlingen,Budling,wikidata,high,
 buhl-lorraine,48.72444,7.08444,Q21679,,Buhl,Bühl,Buhl-Lorraine,wikidata,high,
 buprich,49.42479,6.84529,,2896905,Buprich,,,geonames,high,geonames exact
@@ -239,7 +240,7 @@ chambrey,48.78694,6.45944,Q21714,,Chambrey,Chambrey,Chambrey,wikidata,high,
 charleville,49.18944,6.41194,Q21785,,Charleville,Charleville-sous-Bois,Charleville-sous-Bois,wikidata,high,
 chateau-brehain,48.90389,6.52556,Q21628,,Château-Bréhain,Château-Bréhain,Château-Bréhain,wikidata,high,
 chateau-rouge,49.28,6.59694,Q21828,,Château-Rouge,Rodendorf,Château-Rouge,wikidata,high,
-chateau-salins,48.82167,6.50833,Q22745,,Château-Salins,Salzburgen,Château-Salins,wikidata,high,no canton anchor
+chateau-salins,48.82167,6.50833,Q123186767,,Château-Salins,Salzburgen,Château-Salins,wikidata,high,no canton anchor
 chateau-voue,48.85083,6.62361,Q22388,,Châteauvoué,Dürkastel,Château-Voué,wikidata,high,
 chatillon,48.55861,6.96611,Q633203,,Châtillon,Châtillon,Châtillon,override,high,"Val-et-Châtillon, seat of the lordship with Cirey, Foulcrey, Hattigny and Ibigny (pp. 78, 116); was matched to Châtillon in Belgium"
 chelaincourt,49.23722,6.245,Q21992,,Chelaincourt,Chelaincourt,Chelaincourt,wikidata,high,
@@ -276,6 +277,7 @@ courcelles,49.10917,6.405,Q21703,,Courcelles,Kurzel,Courcelles,override,high,"Co
 court-conde,49.22097,6.43445,,,Prévôté de Condé,Schultheißerei Condé,Provostship of Condé,territory,medium,centre of 7 member settlement(s)
 court-perl,49.4771,6.39167,,,Cour de Perl,Hof Perl,Court district of Perl,territory,medium,centre of 2 member settlement(s)
 court-vibersviller,48.91444,6.94444,,,Cour de Vibersviller,Hof Wiebersweiler,Court district of Vibersviller,territory,medium,seat: vibersviller
+coutures,48.821,6.48479,Q3001607,,Coutures-lès-Château-Salins,Coutures,Coutures,wikidata,high,
 craincourt,48.87667,6.32167,Q21758,,Craincourt,Craincourt,Craincourt,wikidata,high,
 crehange,49.06306,6.58194,Q22380,,Créhange,Kriechingen,Créhange,wikidata,high,
 creutzwald,49.2,6.68333,Q34797557,,Creutzwald,Kreuzwald,Creutzwald,wikidata,high,
@@ -457,7 +459,7 @@ grindorf,49.3775,6.50806,Q22009,,Grindorf,Grindorf,Grindorff,wikidata,high,
 gronig,49.5167,7.08333,Q1431114,,Gronig,Gronig,Gronig,wikidata,high,
 grosbliederstroff,49.15639,7.02778,Q22395,,Grosbliederstroff,Großblittersdorf,Grosbliederstroff,wikidata,high,
 grosrederching,49.06835,7.21914,,3014527,Grosréderching,Großrederchingen,,geonames,medium,geonames spelling match Gros-Réderching (1.00)
-grosshemmersdorf,49.355,6.605,Q1604852,,Grosshemmersdorf,Hemmersdorf,Hemmersdorf,wikidata,high,
+grosshemmersdorf,49.36104,6.61303,Q1604852,,Grosshemmersdorf,Großhemmersdorf,Großhemmersdorf,override,high,"Grosshemmersdorf (Hymestroff), left of the Nied, offices of Sierck and Boulay (pp. 12, 16, 60); part of Hemmersdorf since 1937"
 grostenquin,48.98,6.73889,Q22032,,Grostenquin,Grostenquin,Grostenquin,wikidata,low,26 km from the index's canton
 grundviller,49.04389,6.97083,Q22061,,Grundviller,Grundweiler,Grundviller,wikidata,high,
 gudingen,49.2004,7.02812,Q1560040,,Giidingen,Güdingen,Güdingen,wikidata,high,
@@ -563,7 +565,7 @@ hochweyersberg,48.975,7.5175,,,Hochweyersberg-lès-Baerenthal,,,approximate,low,
 hoelling,49.0734,7.2972,Q3139045,,Hœlling,Hölling,Hoelling,wikidata,high,no canton anchor
 hoff,48.7462,7.05443,Q3139053,,Hoff (Hove),Hoff,Hoff,wikidata,high,
 holbach-lachambre,49.07283,6.75503,Q55597231,,Holbach,Holbach,Holbach,wikidata,high,
-holbach-siersthal,49.0578,7.3439,Q115869856,,Holbach,,Holbach,wikidata,high,
+holbach-siersthal,49.0578,7.3439,Q3139259,,Holbach,,Holbach,wikidata,high,
 holling,49.26167,6.49667,Q22349,,Holling,Hollingen,Holling,wikidata,high,
 holving,49.01083,6.965,Q22999,,Holving,Holvingen,Holving,wikidata,high,
 hombourg-haut-et-bas,49.12931,6.78814,Q21634406,,Hombourg-Bas,Niederhomburg,Hombourg-Bas,override,high,"Hombourg-Bas, the lower village of Hombourg-Haut (index: Hombourg-Haut et -Bas)"
@@ -617,7 +619,7 @@ kerling,49.39806,6.34972,Q21766,,Kerling-lès-Sierck,Kerling-lès-Sierck,Kerling
 kerlingen,49.3172,6.65083,Q1739267,,Kerlingen,Kerlingen,Kerlingen,wikidata,high,
 kerprich,48.82417,6.69833,Q28040537,,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,Kerprich-lès-Dieuze,wikidata,high,
 kerprich-aux-bois,48.73889,6.96028,Q21668,,Kerprich-aux-Bois,Kerprich-aux-Bois,Kerprich-aux-Bois,wikidata,high,
-kerprich-hemmersdorf,49.355,6.605,Q1604852,,Kerprich-Hemmersdorf,Kerprich-Hemmersdorf,Kerprich-Hemmersdorf,wikidata,high,no canton anchor
+kerprich-hemmersdorf,49.35349,6.62768,Q1604852,,Kerprich-Hemmersdorf,Kerprichhemmersdorf,Kerprichhemmersdorf,override,high,"Kerprich-Hemmersdorf (Kirburg-Himerstorff), right of the Nied, office of Siersberg (pp. 13, 52); part of Hemmersdorf since 1937"
 keskastel,48.97139,7.04389,Q21285,,Keskastel,Keskastel,Keskastel,wikidata,high,
 ketternostern,49.5253,7.26222,Q1437410,,Oberkirchen,Oberkirchen,Oberkirchen,wikidata,high,
 keuchingen,49.4974,6.5823,Q16648275,,Keuchingen,Keuchingen,Keuchingen,wikidata,medium,
@@ -967,7 +969,7 @@ postroff,48.85111,7.07944,Q22306,,Postroff,Postdorf,Postroff,wikidata,high,
 primsweiler,49.41013,6.85553,,2852035,Primsweiler,,,geonames,high,geonames exact
 principality-lixheim,48.77528,7.14194,,,Principauté de Lixheim,Fürstentum Lixheim,Principality of Lixheim,territory,medium,seat: lixheim
 principality-phalsbourg,48.76778,7.25833,,,Principauté de Phalsbourg,Fürstentum Pfalzburg,Principality of Phalsbourg,territory,medium,seat: phalsbourg
-provostship-amance,48.87017,6.52389,,,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,territory,medium,centre of 7 member settlement(s)
+provostship-amance,48.86402,6.519,,,Prévôté d'Amance,Schultheißerei Amance,Provostship of Amance,territory,medium,centre of 8 member settlement(s)
 provostship-eblange,49.22333,6.48194,,,Prévôté d'Éblange,Schultheißerei Eblingen,Provostship of Éblange,territory,medium,seat: eblange
 provostship-insming,48.95611,6.87417,,,Prévôté d'Insming,Schultheißerei Insmingen,Provostship of Insming,territory,medium,seat: insming
 provostship-ketternostern,49.55516,7.24661,,,Prévôté de Ketternostern,Schultheißerei Ketternostern,Provostship of Ketternostern,territory,medium,centre of 12 member settlement(s)

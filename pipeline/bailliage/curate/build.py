@@ -146,8 +146,11 @@ class Builder:
         self.rules = {k: v or {} for k, v in (self.rules or {}).items()}
         self.manual = {m.table: _read_csv(MANUAL_DIR / f"{m.table}.csv")
                        for m in (Place, Entity, Ruler, Membership, Right, Event)}
+        # Hand-entered rights that add to the extracted ones for the same place and right instead of
+        # replacing them ('the 1611 division of Berus' next to the 1585 lords)
+        self.added_rights = _read_csv(MANUAL_DIR / "rights_added.csv")
         snippets = {tuple(r[k] for k in RIGHT_KEY): r["snippet"] for r in _read_csv(MANUAL_SNIPPETS_FILE)}
-        for r in self.manual["rights"]:
+        for r in [*self.manual["rights"], *self.added_rights]:
             r["snippet"] = r.get("snippet") or snippets.get(tuple(r.get(k, "") for k in RIGHT_KEY))
         vocab = store.load_vocab(config.CURATED_DIR / "vocab.yaml")
         territory_types = {k for k, v in vocab["place_types"].items() if v.get("applies_to") == "territory"}
@@ -503,7 +506,7 @@ class Builder:
         manual_members = {(m["child_id"], m["parent_id"]) for m in self.manual["memberships"]}
         memberships = [m for m in self.memberships.values() if (m["child_id"], m["parent_id"]) not in manual_members]
 
-        rights = self.manual["rights"] + [dict(r, _extracted=True) for r in self._finish(rights)]
+        rights = self.manual["rights"] + self.added_rights + [dict(r, _extracted=True) for r in self._finish(rights)]
         events = self.manual["events"] + [dict(e, _extracted=True) for e in self._finish(events)]
         memberships = self.manual["memberships"] + self._finish(memberships)
         rulers = self.manual["rulers"] + self._finish(rulers)
