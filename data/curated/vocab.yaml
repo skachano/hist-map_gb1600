@@ -193,6 +193,7 @@ event_types:
   purchase:     {en: purchase, fr: achat, de: Kauf, ja: 購入}
   pledge:       {en: pledge (engagement), fr: engagement, de: Verpfändung, ja: 担保設定（アンガージュマン）}
   redemption:   {en: redemption, fr: rachat, de: Pfandeinlösung, ja: 担保の請け戻し}
+  lease:        {en: lease (amodiation), fr: amodiation, de: Verpachtung, ja: 賃貸（アモディアシオン）}
   inheritance:  {en: inheritance, fr: héritage, de: Erbfall, ja: 相続}
   enfeoffment:  {en: enfeoffment, fr: inféodation, de: Belehnung, ja: 授封}
   elevation:    {en: raised to a higher title, fr: érection, de: Standeserhöhung, ja: 昇格}

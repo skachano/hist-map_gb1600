@@ -275,7 +275,10 @@ class Builder:
         for rule in self.rules.get("right_overrides", []) or []:
             if all(str(row.get({"place": "place_id", "holder": "holder_id"}.get(k, k))) == str(v)
                    for k, v in rule["match"].items()):
-                row.update(rule["set"])
+                changes = dict(rule["set"])
+                if "source_page" in changes:  # a wrong citation: '75' for p. 76
+                    row["pages"] = pages_of(str(changes.pop("source_page")))
+                row.update(changes)
                 if rule.get("reason"):
                     row["notes"] = rule["reason"]
                 self.stats["rights changed by right_overrides"] += 1

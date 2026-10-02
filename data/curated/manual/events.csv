@@ -87,3 +87,7 @@ year,place_id,right_type,from_holder,to_holder,event_type,description,source_pag
 1621,office-schaumberg,,jean-frederic-freistroff,jean-rene-de-soetern,cession,"The whole office of Schaumberg, except the lordship of Lebach and the general aids, pledged to Jean-Frédéric Freistroff for 44,684 francs, passes in March 1621 to Jean-René de Soetern, captain of Schaumberg.",232,high,
 1631,biibingen,high_justice,,,pledge,"The high justice of the lordship of Bübingen, Wies and Weiler-zum-Creutz, in the court of Remich, is in pledge for 1,320 florins.",242,high,
 1631,wies,high_justice,,,pledge,"The high justice of the lordship of Bübingen, Wies and Weiler-zum-Creutz, in the court of Remich, is in pledge for 1,320 florins.",242,high,
+1612,vaudrevange,,duchy-lorraine,landwein-bockenheimer,purchase,"The duke's three mills at Vaudrevange are sold to Landwein de Bockenheimer, Jean Huart and Hartard Florange.",252,high,
+1612,vaudrevange,,duchy-lorraine,jean-huart,purchase,"The duke's three mills at Vaudrevange are sold to Landwein de Bockenheimer, Jean Huart and Hartard Florange.",252,high,
+1612,vaudrevange,,duchy-lorraine,hartard-florange,purchase,"The duke's three mills at Vaudrevange are sold to Landwein de Bockenheimer, Jean Huart and Hartard Florange.",252,high,
+1618,lordship-morhange,manorial_lord,jean-ix-morhange,jean-de-ramberviller,lease,"Count Jean IX of Morhange leases his lands to Jean de Ramberviller, governor of the bishop's castellany of Haboudange, for 17,891 francs.",248,high,

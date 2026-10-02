@@ -231,6 +231,10 @@ drop_rights:
      reason: "the fief is a farm (cense) at Hemmersdorf, not the village (p. 82)"}
   - {place: kerprich-hemmersdorf, right_type: manorial_lord, holder: remacle-de-bockenheimer,
      reason: "the fief is rents at Hemmersdorf bought from the count of Sayn, not the village (p. 82)"}
+  - {place: office-hombourg-haut, right_type: suzerain, holder: louis-de-guise,
+     reason: "Louis de Guise held Hombourg as Lorraine's vassal from 1621 (homage to Charles IV, pp. 28-29); p. 65 is his appointment of a governor"}
+  - {place: office-hombourg-haut, right_type: suzerain, holder: henriette-vaudemont,
+     reason: "Henriette held Hombourg as Lorraine's vassal; p. 66 is her order to its bailli in 1632"}
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
@@ -343,6 +347,15 @@ right_overrides:
   - match: {place: gomelange, right_type: high_justice, holder: duchy-lorraine, status: held}
     set: {to_year: 1632, to_precision: exact}
     reason: "attested in 1610; sold to Guillaume de Braubach in 1632 (pp. 119, 230)"
+  - match: {place: insming, right_type: high_justice, holder: house-herange}
+    set: {source_page: "76"}
+    reason: "Hérange's rights at Insming, sold by Helmstatt in October 1594 (p. 76)"
+  - match: {place: insming, right_type: high_justice, holder: house-braubach}
+    set: {source_page: "76"}
+    reason: "bought in 1594 from Helmstatt, sold to Charles III in 1598 (p. 76)"
+  - match: {place: insming, right_type: high_justice, holder: duchy-lorraine, share: joint}
+    set: {source_page: "76"}
+    reason: "Charles III bought the Hérange share of the high justice in 1598 (p. 76)"
 
 # Geocoding decisions (Stage 5), applied by `make geocode`:
 #   place-id: {wikidata: Q…}                 use this Wikidata item
