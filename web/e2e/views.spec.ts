@@ -37,6 +37,9 @@ test("table: filter by territory and holder, export CSV", async ({ page }) => {
   await page.getByRole("combobox", { name: "Territory" }).selectOption("office-sierck");
   await expect.poll(() => rows.count()).toBeLessThan(all);
   await expect(page.locator("table.matrix")).toContainText("Anzeling");
+  // each row shows the kind of place, as on the map
+  const anzeling = page.locator("table.matrix tbody tr").filter({ has: page.getByRole("button", { name: "Anzeling" }) });
+  await expect(anzeling.getByRole("img", { name: "village" })).toBeVisible();
   // scrolling the table keeps the toolbar and the column headers in view
   const toolbar = page.locator("#page .toolbar");
   const header = page.locator("table.matrix thead th").first();

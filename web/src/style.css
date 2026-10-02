@@ -149,6 +149,8 @@ table.matrix { border-collapse: collapse; width: 100%; font-size: 13px; }
 .matrix td.inherited { color: var(--ink-2); font-style: italic; }
 .matrix td.empty { color: var(--muted); }
 .matrix .swatch { display: inline-block; width: 10px; height: 10px; vertical-align: -1px; }
+.matrix th .shape { width: 16px; height: 16px; vertical-align: -3px; margin-right: 4px; }
+.matrix tbody th { white-space: nowrap; } /* the icon and the place name on one line */
 .histogram { margin: 0 0 12px; padding: 10px 12px; background: var(--surface); border: 1px solid var(--hairline);
   border-radius: var(--radius); }
 .histogram figcaption { font-size: 13px; font-weight: 600; margin-bottom: 6px; }

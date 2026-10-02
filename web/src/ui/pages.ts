@@ -1,6 +1,7 @@
 // Full-page views over the map: the rights table and the changes timeline.
 import type { Dataset } from "../data/types";
 import { label, name, t } from "../i18n";
+import { shapeSvg } from "../map/icons";
 import { holderColour, OTHER } from "../model/colors";
 import { ancestors, placeRight, type PlaceRight, type RightIndex } from "../model/snapshot";
 import type { State, Store } from "../state/store";
@@ -41,6 +42,18 @@ export function renderMatrix(root: HTMLElement, data: Dataset, index: RightIndex
     && (!matrixFilters.holder || [...cells.get(p.id)!.values()].some((pr) => pr.holdings.some((x) => x.holder === matrixFilters.holder))))
     .sort((a, b) => placeName(a.id).localeCompare(placeName(b.id), lang));
 
+  // The kind of place, drawn as on the map and in its legend; named for screen readers and on hover.
+  const kindIcon = (type: string) => {
+    const svg = shapeSvg(type);
+    const kind = label(vocab.place_types[type], lang, type);
+    svg.removeAttribute("aria-hidden");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", kind);
+    const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
+    title.textContent = kind;
+    svg.prepend(title);
+    return svg;
+  };
   const cellText = (pr: PlaceRight) => pr.holdings.map((x) => entityName(x.holder)
     + (x.share ? ` (${x.share === "joint" ? "∥" : x.share})` : "") + (x.status !== "held" ? ` [${x.status}]` : "")).join(" / ");
   const rerender = () => renderMatrix(root, data, index, state, store, coloured);
@@ -77,8 +90,8 @@ export function renderMatrix(root: HTMLElement, data: Dataset, index: RightIndex
       h("thead", {}, h("tr", {}, h("th", { scope: "col" }, t("place", lang)),
         ...types.map((k) => h("th", { scope: "col" }, label(vocab.right_types[k], lang, k))))),
       h("tbody", {}, ...rows.map((p) => h("tr", {},
-        h("th", { scope: "row" }, h("button", { class: "link", "data-place": p.id, title: t("showOnMap", lang),
-          onclick: () => showOnMap(store, p.id) }, placeName(p.id))),
+        h("th", { scope: "row" }, kindIcon(p.type), h("button", { class: "link", "data-place": p.id,
+          title: t("showOnMap", lang), onclick: () => showOnMap(store, p.id) }, placeName(p.id))),
         ...types.map((k) => {
           const pr = cells.get(p.id)!.get(k)!;
           if (!pr.holdings.length) return h("td", { class: "empty" }, "—");
