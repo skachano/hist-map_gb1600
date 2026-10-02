@@ -132,6 +132,13 @@ place_aliases:
   office de Hombourg-Haut: office-hombourg-haut
   office de Hombourg et Saint-Avold: office-hombourg-haut
   office de Hombourg-Saint-Avold: office-hombourg-haut
+  # The vouerie of Saint-Nabor (Saint-Avold's old name) is one district: the lands of the abbey of
+  # Saint-Avold, with the Nassau as advocates since 1302 and Lorraine as lord from 1581; also called the
+  # grande cour or mère-cour of Hombourg and Saint-Avold, and the seigneurie of Saint-Avold (pp. 64, 66,
+  # 78, 84, 86, 100-102)
+  vouerie de Saint-Nabor: advocacy-saint-avold
+  vouerie de Hombourg-Saint-Avold: advocacy-saint-avold
+  "territory: Saint-Avold": advocacy-saint-avold
   la châtellenie de Hombourg-Haut: office-hombourg-haut
   châtellenie épiscopale de Hombourg-Haut: office-hombourg-haut
   seigneurie de Hombourg: office-hombourg-haut
@@ -235,6 +242,10 @@ drop_rights:
      reason: "Louis de Guise held Hombourg as Lorraine's vassal from 1621 (homage to Charles IV, pp. 28-29); p. 65 is his appointment of a governor"}
   - {place: office-hombourg-haut, right_type: suzerain, holder: henriette-vaudemont,
      reason: "Henriette held Hombourg as Lorraine's vassal; p. 66 is her order to its bailli in 1632"}
+  - {place: advocacy-saint-avold, right_type: advocate, holder: duchy-lorraine, share: 2/3,
+     reason: "p. 66 splits the acorn dues of the vouerie (two thirds to the receipt of Hombourg, a third to Nassau as advocate); Lorraine was not advocate"}
+  - {place: advocacy-saint-avold, right_type: advocate, holder: county-nassau-saarbruecken, share: 1/3,
+     reason: "a third of the acorn dues (p. 66); Nassau's advocacy itself runs from 1302 (pp. 64, 102)"}
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
@@ -250,11 +261,11 @@ drop_memberships:
      reason: "a provostship of the office of Schaumberg (p. 57); p. 10 only names it among places"}
   - {child: lordship-marimont, parent: bailliage-allemagne,
      reason: "l'ancienne châtellenie de Marimont, rattachée à celle de Dieuze (p. 74)"}
-  - {child: gauhiving, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67); a Landmairie of Forbach in 1623"}
-  - {child: ditschviller, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
-  - {child: emmersweiler, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 and c.1429 (p. 67)"}
-  - {child: guerting, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
-  - {child: remsing, parent: advocacy-saint-nabor, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: gauhiving, parent: advocacy-saint-avold, reason: "in the vouerie only in 1365 and c.1429 (p. 67); a Landmairie of Forbach in 1623"}
+  - {child: ditschviller, parent: advocacy-saint-avold, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: emmersweiler, parent: advocacy-saint-avold, reason: "in the vouerie only in 1365 and c.1429 (p. 67)"}
+  - {child: guerting, parent: advocacy-saint-avold, reason: "in the vouerie only in 1365 (p. 67)"}
+  - {child: remsing, parent: advocacy-saint-avold, reason: "in the vouerie only in 1365 (p. 67)"}
   - {child: sarreinsming, parent: lordship-forbach,
      reason: "only its castle is a rear-fief held of Forbach (p. 82); the village is a fief of the Sarreguemines castellany (p. 17)"}
   - {parent: ban-westrich,
@@ -971,8 +982,8 @@ place_names:
   lordship-lixing-rouhling: {de: Herrschaft Lixingen-Rohlingen}
   office-hombourg-haut: {de: Amt Oberhomburg}
   office-sarrewerden-et-herbitzheim: {de: Amt Saarwerden und Herbitzheim, en: Office of Sarrewerden and Herbitzheim}
-  advocacy-hombourg-saint-avold: {de: Vogtei Homburg-Sankt Avold}
-  advocacy-saint-nabor: {de: Vogtei Sankt Nabor}
+  advocacy-saint-avold: {variants: [Vouerie de Saint-Nabor, Vouerie de Hombourg-Saint-Avold, Seigneurie de Saint-Avold,
+                                   grande cour de Saint-Avold, mère-cour de Hombourg et de Saint-Avold]}
   mayoralty-siersberg: {de: Hochgericht Siersburg, en: High mayoralty of Siersburg}
   mayoralty-remering: {en: Mayoralty of Rémering}
   mayoralty-inferieure-du-saargau-a-schwemlingen: {de: Untere Meierei des Saargaus zu Schwemlingen,

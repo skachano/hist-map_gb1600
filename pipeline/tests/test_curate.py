@@ -44,6 +44,14 @@ def test_index_equivalents():
     g.index_equivalents()
     assert g.match("Weiler im Loch") is g.rows[0]
     assert g.match("Teting") is g.rows[2]  # its own entry, not Hesser's
+    g.references = [{"name": "Saint-Nabor", "see": "Bergweiler"}]  # a cross-reference without pages
+    g.index_equivalents()
+    assert g.match("Saint-Nabor") is g.rows[0]
+    # 'Wittrange' is as close to the cross-reference 'Vittrange' as to 'Wintrange', its entry: one entry
+    g = gazetteer(("Wintrange", "Bérig"))
+    g.references = [{"name": "Vittrange", "see": "Wintrange"}]
+    g.index_equivalents()
+    assert g.match("Wittrange") is g.rows[0]
 
 
 def test_place_resolution():

@@ -7,9 +7,7 @@ ackerbach,48.9975,6.83,,,Ackerbach,,,approximate,low,not in Wikidata/GeoNames; p
 adamsviller,48.90472,7.20391,,3038668,Adamsviller,Adamsweiler,,geonames,high,geonames exact
 adelange,49.00528,6.61194,Q21644,,Adelange,Edelingen,Adelange,wikidata,high,
 advocacy-herbitzheim,49.01472,7.08417,,,Vouerie de Herbitzheim,Vogtei Herbitzheim,Advocacy of Herbitzheim,territory,medium,seat: herbitzheim
-advocacy-hombourg-saint-avold,,,,,Vouerie de Hombourg-Saint-Avold,Vogtei Hombourg-Saint-Avold,Advocacy of Hombourg-Saint-Avold,territory,medium,no seat or located members
 advocacy-saint-avold,49.10417,6.70806,,,Vouerie de Saint-Avold,Vogtei Sankt Avold,Advocacy of Saint-Avold,territory,medium,seat: saint-avold
-advocacy-saint-nabor,48.44528,7.42361,,,Vouerie de Saint-Nabor,Vogtei Sankt Nabor,Advocacy of Saint-Nabor,territory,medium,seat: saint-nabor
 aidling,49.30075,6.5583,Q2827829,,Aidling,Eidlingen,Aidling,wikidata,high,
 alaincourt,48.89833,6.34139,Q21643,,Alaincourt,Alaincourt,Alaincourt-la-Côte,wikidata,high,
 alberting,49.01361,7.33861,,,Alberting-lès-Enchenberg,,,approximate,low,not in Wikidata/GeoNames; placed at Enchenberg (index location)
@@ -735,7 +733,6 @@ lordship-nalbach,49.3833,6.78333,,,Seigneurie de Nalbach,Herrschaft Nalbach,Lord
 lordship-puttelange,49.0525,6.93083,,,Seigneurie de Puttelange,Herrschaft Püttlingen,Lordship of Puttelange,territory,medium,seat: puttelange
 lordship-puttlingen-saar,,,,,Seigneurie de Püttlingen-Saar,Herrschaft Püttlingen-Saar,Lordship of Püttlingen-Saar,territory,medium,no seat or located members
 lordship-rechicourt,,,,,Comté de Réchicourt,Comté de Réchicourt,Comté de Réchicourt,territory,medium,no seat or located members
-lordship-saint-avold,49.10417,6.70806,,,Seigneurie de Saint-Avold,Herrschaft Sankt Avold,Lordship of Saint-Avold,territory,medium,seat: saint-avold
 lordship-sarralbe,48.99611,7.02778,,,Seigneurie de Sarralbe,Herrschaft Saaralben,Lordship of Sarralbe,territory,medium,seat: sarralbe
 lordship-sarreck,48.79417,7.03417,,,Seigneurie de Sarreck,Herrschaft Sarreck,Lordship of Sarreck,territory,medium,seat: sarreck
 lordship-talange,49.25538,6.23594,,,Seigneurie de Talange,Herrschaft Talange,Lordship of Talange,territory,medium,centre of 1 member settlement(s)
@@ -1073,11 +1070,9 @@ saint-jean-rohrbach,49.025,6.88278,Q22410,,Saint-Jean-Rohrbach,Johannsrohrbach,S
 saint-louis,48.71611,7.18806,Q21943,,Saint-Louis,Saint-Louis,Saint-Louis,wikidata,high,
 saint-medard,48.81111,6.63472,Q21731,,Saint-Médard,Sankt Medard,Saint-Médard,wikidata,high,
 saint-michel,49.01955,7.07669,,12305990,Saint-Michel,,,geonames,high,geonames exact
-saint-nabor,48.44528,7.42361,Q21389,,Saint-Nabor,Sankt Nabor,Saint-Nabor,wikidata,high,no canton anchor
 saint-quirin,48.61028,7.06472,Q21977,,Saint-Quirin,Saint-Quirin,Saint-Quirin,wikidata,high,
 saint-sauveur,48.53389,6.97361,Q227488,,Saint-Sauveur,Saint-Sauveur,Saint-Sauveur,wikidata,high,
 sainte-marguerite,49.36004,6.40078,Q22079415,,Sainte-Marguerite,,Sainte-Marguerite,wikidata,high,
-sainte-marie,49.19262,6.0015,,2980439,Sainte-Marie,,,geonames,medium,geonames exact
 salival,48.77722,6.56222,,,Salival,,,approximate,low,"abbey of Salival in the castellany of Vic (p. 78), now part of Moyenvic; the index's Morville was matched to a namesake"
 salonnes,48.79111,6.49611,Q21994,,Salonnes,Salonnes,Salonnes,wikidata,high,
 saltzbronn,49.00136,7.04146,,11897453,Saltzbronn,Salzbronn,,geonames,high,geonames exact

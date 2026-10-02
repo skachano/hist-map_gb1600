@@ -93,15 +93,18 @@ def base_name(name: str) -> str:
 @dataclass
 class Gazetteer:
     rows: list[dict]
+    references: list[dict] = field(default_factory=list)
     by_label: dict[str, dict] = field(default_factory=dict)
     by_name: dict[str, list[dict]] = field(default_factory=lambda: defaultdict(list))
 
     @classmethod
     def load(cls) -> "Gazetteer":
         with (config.RAW_DIR / "gazetteer_seed.csv").open(newline="") as f:
-            raw_rows = [r for r in csv.DictReader(f) if not r["see"] or r["pages"]]
+            every = list(csv.DictReader(f))
+        raw_rows = [r for r in every if not r["see"] or r["pages"]]
         rows: list[dict] = []
         g = cls(rows)
+        g.references = [r for r in every if r["see"] and not r["pages"]]  # 'Saint-Nabor = Saint-Avold'
         for r in raw_rows:
             # The index repeats some entries with an OCR slip in the canton ("Enchenberg"/"Enchenherg").
             twin = next((x for x in rows if fold(x["name"]) == fold(r["name"]) and x["dept_code"] == r["dept_code"]
@@ -117,12 +120,17 @@ class Gazetteer:
         return g
 
     def index_equivalents(self) -> None:
-        """'Bergweiler = Weiler im Loch': the other name finds the entry too, unless it is another
-        entry's own name ('Hesser = Teting')."""
+        """'Bergweiler = Weiler im Loch': the other name finds the entry too, and a cross-reference
+        without pages ('Saint-Nabor = Saint-Avold') leads to its entry; unless the name is another
+        entry's own ('Hesser = Teting')."""
         for r in self.rows:
             for n in re.split(r", | et ", r["see"] if r["pages"] else ""):
                 if n[:1].isupper() and fold(n) not in self.by_name:
                     self.by_name[fold(n)].append(r)
+        for ref in self.references:
+            target = self.by_name.get(fold(ref["see"]), [])
+            if len(target) == 1 and fold(ref["name"]) not in self.by_name:
+                self.by_name[fold(ref["name"])].append(target[0])
 
     def is_shared_name(self, name: str) -> bool:
         return len(self.by_name.get(fold(name), [])) > 1
@@ -135,8 +143,9 @@ class Gazetteer:
         if hits:
             return None  # ambiguous: several index entries share this name
         close = difflib.get_close_matches(fold(name), list(self.by_name), n=2, cutoff=0.88)
-        if len(close) == 1 and len(self.by_name[close[0]]) == 1:
-            return self.by_name[close[0]][0]
+        entries = {id(e): e for c in close for e in self.by_name[c]}  # two spellings of one entry are one
+        if len(entries) == 1:                                        # ('Wittrange': Vittrange = Wintrange)
+            return next(iter(entries.values()))
         return None
 
 
