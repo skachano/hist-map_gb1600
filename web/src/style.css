@@ -135,6 +135,14 @@ label.kind select { min-width: 0; flex: 1; border: 1px solid var(--border); bord
 .toolbar h2 { font-size: 17px; margin: 0; }
 .toolbar select { max-width: 260px; }
 .table-wrap { overflow: auto; border: 1px solid var(--hairline); border-radius: var(--radius); background: var(--surface); }
+/* Table view: the toolbar stays on top and the table scrolls below it, so its column headers stick too. */
+body[data-view="matrix"] #page { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 12px; }
+body[data-view="matrix"] #page .toolbar { flex: none; }
+body[data-view="matrix"] #page .table-wrap { flex: 1; min-height: 0; }
+/* Changes view: the same, with the histogram and the list scrolling below the toolbar. */
+body[data-view="changes"] #page { display: flex; flex-direction: column; overflow: hidden; padding-bottom: 0; }
+body[data-view="changes"] #page .toolbar { flex: none; }
+body[data-view="changes"] #page .scroll { flex: 1; min-height: 0; overflow: auto; padding-bottom: 24px; }
 table.matrix { border-collapse: collapse; width: 100%; font-size: 13px; }
 .matrix th, .matrix td { padding: 4px 8px; border-bottom: 1px solid var(--hairline); text-align: left; vertical-align: top; }
 .matrix thead th { position: sticky; top: 0; background: var(--surface); z-index: 1; }

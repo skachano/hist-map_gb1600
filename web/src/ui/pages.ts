@@ -129,6 +129,7 @@ export function renderChanges(root: HTMLElement, data: Dataset, state: State, st
         onchange: (e: Event) => { changesFilters.earlier = (e.target as HTMLInputElement).checked; rerender(); } }),
         ` ${t("before1600", lang)}`),
       h("span", { class: "muted" }, String(events.length))),
+    h("div", { class: "scroll" }, // scrolls below the toolbar, which stays in view
     h("figure", { class: "histogram" },
       h("figcaption", {}, t("changesPerYear", lang)),
       h("div", { class: "bars" }, ...bars),
@@ -143,6 +144,6 @@ export function renderChanges(root: HTMLElement, data: Dataset, state: State, st
         e.right ? ` · ${label(vocab.right_types[e.right], lang, e.right)}` : "",
         e.from || e.to ? ` · ${e.from ? entityName(e.from) : "?"} → ${e.to ? entityName(e.to) : "?"}` : "",
         e.pages ? h("span", { class: "pages" }, ` ${t("pages", lang)} ${e.pages}`) : "",
-        h("div", { class: "muted" }, name(e.text, lang)))))))),
+        h("div", { class: "muted" }, name(e.text, lang))))))))),
   );
 }

@@ -37,6 +37,17 @@ test("table: filter by territory and holder, export CSV", async ({ page }) => {
   await page.getByRole("combobox", { name: "Territory" }).selectOption("office-sierck");
   await expect.poll(() => rows.count()).toBeLessThan(all);
   await expect(page.locator("table.matrix")).toContainText("Anzeling");
+  // scrolling the table keeps the toolbar and the column headers in view
+  const toolbar = page.locator("#page .toolbar");
+  const header = page.locator("table.matrix thead th").first();
+  const before = (await toolbar.boundingBox())!;
+  await page.locator(".table-wrap").evaluate((el) => { el.scrollTop = 2000; });
+  await page.getByRole("combobox", { name: "Territory" }).selectOption("");
+  await page.locator(".table-wrap").evaluate((el) => { el.scrollTop = 4000; });
+  expect((await toolbar.boundingBox())!.y).toBe(before.y);
+  const wrap = (await page.locator(".table-wrap").boundingBox())!;
+  expect(Math.abs((await header.boundingBox())!.y - wrap.y)).toBeLessThan(3);
+  await page.getByRole("combobox", { name: "Territory" }).selectOption("office-sierck");
   const download = page.waitForEvent("download");
   await page.getByRole("button", { name: "Export CSV" }).click();
   const csv = await (await download).createReadStream();
@@ -123,6 +134,17 @@ test("a territory link shows its level: offices, their subdivisions or all level
 test("changes: a change jumps to its year and place on the map", async ({ page }) => {
   await open(page, "#/changes?year=1600&right=suzerain&lang=en");
   await expect(page.locator(".histogram .bar")).toHaveCount(33);
+  // a year's bar scrolls the list to that year below the toolbar, which stays in view
+  const toolbar = page.locator("#page .toolbar");
+  const before = (await toolbar.boundingBox())!;
+  await page.getByRole("button", { name: /^1625: / }).click();
+  const heading = page.locator("#year-1625");
+  await expect.poll(async () => {
+    const h = (await heading.boundingBox())!;
+    const t = (await toolbar.boundingBox())!;
+    return h.y >= t.y + t.height && h.y < t.y + t.height + 60;
+  }).toBe(true);
+  expect((await toolbar.boundingBox())!.y).toBe(before.y);
   await page.getByRole("combobox", { name: "Right" }).selectOption("high_justice");
   const item = page.locator("ol.changes li li").filter({ hasText: "Anzeling" }).first();
   await item.getByRole("button", { name: "Anzeling" }).click();
