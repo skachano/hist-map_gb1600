@@ -143,6 +143,7 @@ berange,ベランジュ,manual
 berfang,ベルファン,manual
 berg-drulingen,ベルグ,manual
 berg-nennig,ベルク,manual
+bergweiler,ベルクヴァイラー,manual
 berig,ベリグ,manual
 berling,ベルラン,manual
 bermering,ベルムラン,manual
@@ -196,7 +197,7 @@ bisten-en-lorraine,ビスタン＝アン＝ロレーヌ,manual
 bisten-saar,ビステン,manual
 bistroff-drulingen,ビストロフ,manual
 bistroff-grotesquin,ビストロフ,manual
-bitche,ビッシュ,wikidata
+bitche,ビチェー,manual
 bizing,ビザン,manual
 blanche-eglise,ブランシュ＝エグリーズ,manual
 bleiderdingen,ブライダーディンゲン,manual
@@ -300,6 +301,7 @@ chenois,シェノワ,manual
 chevalin,シュヴァラン,manual
 chicourt,シクール,manual
 chretien-de-savigny,ロンヌ領主クレティアン・ド・サヴィニー,manual
+christophe-braun-schmittberg,クリストフ・ブラウン・フォン・シュミットブルク,manual
 cirey,シレ,manual
 claude-musiel,クロード・ミュジエル,manual
 cocheren,コシュラン,manual
@@ -324,7 +326,7 @@ convent-congregation-notre-dame-dieuze,ディウーズのノートルダム修�
 convent-vernesviller,ヴェルヌスヴィレール修道院,manual
 coume,クーム,manual
 county-anholt,アンホルト伯家,manual
-county-bitche,ビッシュ伯領,seat + type
+county-bitche,ビチェー伯領,seat + type
 county-blamont,ブラモン伯領,manual
 county-bliescastel,ブリースカステル伯領,manual
 county-boulay,ブレ伯領,seat + type
@@ -524,11 +526,12 @@ freistroff,フレストロフ,manual
 fremersdorf,フレマースドルフ,manual
 fremestroff,フレメストロフ,manual
 freybouse,フレイブス,manual
-freyming,フレマン＝メルルバック,wikidata
+freyming,フレマン,manual
 fribourg,フリブール,manual
 frohmuhl,フロミュール,manual
 furschweiler,フルシュヴァイラー,manual
 furweiler,フューアヴァイラー,manual
+g-braun-schmittberg,G・ブラウン・フォン・シュミットブルク,manual
 gaillard-capitaine-albestroff,アルベストロフ隊長ガイヤール,manual
 gandren,ガンドラン,manual
 garrebourg,ガルブール,manual
@@ -563,7 +566,7 @@ gremecey,グレメシー,wikidata
 grening,グレナン,manual
 greppen,クレッペン,wikidata
 gresaubach,グレーザウバッハ,manual
-griesborn,シュヴァルバッハ,wikidata
+griesborn,グリースボルン,manual
 griinstadt,グリューンシュタット,wikidata
 grindorf,グランドルフ,manual
 gronig,グローニヒ,manual
@@ -710,7 +713,7 @@ house-bayer-boppart,バイヤー・フォン・ボッパルト家,manual
 house-bellenhausen,ベレンハウゼン家,manual
 house-bertrand-marimont,マリモン領主ベルトラン家,manual
 house-bettendorf,ベッテンドルフ家,manual
-house-bitche,旧ビッシュ伯家,manual
+house-bitche,旧ビチェー伯家,manual
 house-bolender,シエルクのボレンダー家,manual
 house-bracs,ブラック領主家,manual
 house-brandscheit,ブラントシャイト家,manual
@@ -1131,7 +1134,7 @@ michelbach,ミヒェルバッハ,manual
 mittelbollenbach,ミッテルボレンバッハ,manual
 mittelbronn,ミテルブロン,manual
 mittersheim,ミテルセム,manual
-momberg,シュタインベルク,wikidata
+momberg,シュタインベルク,manual
 momerstroff,モメルストロフ,manual
 monclair,モンクレール,manual
 moncourt,モンクール,manual
@@ -1265,6 +1268,7 @@ pfalzweyer,ファルツヴェイエール,manual
 phalsbourg,ファルスブール,wikidata
 philippe-de-forbach,隊長フィリップ・ド・フォルバック,manual
 philippe-de-vigneulles,フィリップ・ド・ヴィニュル,manual
+philippe-georges-braun-schmittberg,フィリップ・ゲオルク・ブラウン・フォン・シュミットブルク,manual
 philippe-ii-leiningen-rechicourt,フィリップ2世・フォン・ライニンゲン＝リクシンゲン,manual
 philippe-otto-salm,フィリップ・オットー・フォン・サルム,manual
 philippsbourg,フィリップスブール,manual
@@ -1320,7 +1324,7 @@ rechicourt-la-petite,レシクール＝ラ＝プティット,manual
 reding,レダン,manual
 redlach,レドラック,manual
 rehlingen-sur-moselle,レーリンゲン,manual
-rehlingen-sur-sarre,レーリンゲン＝ジールスブルク,wikidata
+rehlingen-sur-sarre,レーリンゲン,manual
 reimsbach,ライムスバッハ,manual
 reinange,レナンジュ,manual
 reinheim,ラインハイム,manual
@@ -1559,7 +1563,6 @@ wehingen,ヴェーインゲン,manual
 weidesheim,ヴェデセム,manual
 weiersbach-bleiderdingen,ヴァイヤースバッハ,manual
 weiler,ヴァイラー,manual
-weiler-im-loch,ベルクヴァイラー,wikidata
 weinbourg,ヴァンブール,manual
 weiskirch,ヴェスキルシュ,manual
 weisslingen,ヴェスラン,manual

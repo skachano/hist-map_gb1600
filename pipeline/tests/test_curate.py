@@ -11,6 +11,14 @@ def test_page_refs_round_trip():
     assert build.pages_of("49-1200") == {49}  # absurd ranges keep only the start
 
 
+def test_split_names():
+    assert build.split_names("Momberg ou Steinberg") == ["Momberg", "Steinberg"]
+    assert build.split_names("Calembourg alias Neulaumesfeld ou Borg") == ["Calembourg", "Neulaumesfeld", "Borg"]
+    assert build.split_names("Hoff (Hove)") == ["Hoff", "Hove"]
+    assert build.split_names("Schaumberg (le château)") == ["Schaumberg"]
+    assert build.split_names("Rohrbach-lès-Bitche") == ["Rohrbach-lès-Bitche"]
+
+
 def test_base_name_strips_articles_and_type_words():
     assert base_name("L'office de Siersberg") == "siersberg"
     assert base_name("la seigneurie de Forbach") == "forbach"
@@ -28,6 +36,14 @@ def gazetteer(*rows):
         g.by_label[f"{name} (M., {canton})"] = raw
         g.by_name[fold(name)].append(raw)
     return g
+
+
+def test_index_equivalents():
+    g = gazetteer(("Bergweiler", "Tholey"), ("Hesser", "Faulquemont"), ("Teting", "Faulquemont"))
+    g.rows[0]["see"], g.rows[1]["see"] = "Weiler im Loch", "Teting"
+    g.index_equivalents()
+    assert g.match("Weiler im Loch") is g.rows[0]
+    assert g.match("Teting") is g.rows[2]  # its own entry, not Hesser's
 
 
 def test_place_resolution():

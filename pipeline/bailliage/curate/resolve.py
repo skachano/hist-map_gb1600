@@ -113,7 +113,16 @@ class Gazetteer:
             for n in [r["name"], *filter(None, r["variants"].split("|"))]:
                 if twin not in g.by_name[fold(n)]:
                     g.by_name[fold(n)].append(twin)
+        g.index_equivalents()
         return g
+
+    def index_equivalents(self) -> None:
+        """'Bergweiler = Weiler im Loch': the other name finds the entry too, unless it is another
+        entry's own name ('Hesser = Teting')."""
+        for r in self.rows:
+            for n in re.split(r", | et ", r["see"] if r["pages"] else ""):
+                if n[:1].isupper() and fold(n) not in self.by_name:
+                    self.by_name[fold(n)].append(r)
 
     def is_shared_name(self, name: str) -> bool:
         return len(self.by_name.get(fold(name), [])) > 1

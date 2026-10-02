@@ -142,6 +142,8 @@ year,place_id,right_type,from_holder,to_holder,event_type,description,source_pag
 1594,county-bitche,manorial_lord,jacques-de-bade,charles-de-hohenzollern-sigmaringen,inheritance,"The pledged lands pass to Count Charles of Hohenzollern-Sigmaringen, who married the margrave's widow.",105,high,
 1594,insming,high_justice,house-helmstatt,house-braubach,purchase,John George of Helmstatt sells his inherited rights in Insming to the Braubach.,75,high,
 1595,advocacy-saint-nabor,tax_aide,,duchy-lorraine,judgment,Charles III exempts the 24 aldermen of the advocacy of Saint-Nabor from the general aids.,66,high,
+1596,buren,advocate,house-braubach,house-schmittberg,purchase,"The Braubachs sell Jean de Schmittberg the ruined castle house of Siersberg, their rights at Büren and Rehlingen and the advocacy of Büren for 1,500 francs.",245,high,
+1596,buren,advocate,house-schmittberg,house-braubach,redemption,The Braubachs buy back what they had sold to Jean de Schmittberg within six months.,245,high,
 1597,ebring,manorial_lord,chapter-speyer,chapter-worms,confiscation,The Worms chapter seizes Ebring for an unauthorised sale.,102,high,
 1597,ippling,manorial_lord,chapter-speyer,chapter-worms,confiscation,The Worms chapter seizes Ippling and Ebring; the case is still open in 1722.,102,high,
 1597,saarwellingen-14,tax_aide,duchy-lorraine,,judgment,Saarwellingen obtains exemption from half the general aids of 1588–1594.,138,high,

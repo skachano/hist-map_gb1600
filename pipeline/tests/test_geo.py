@@ -62,6 +62,15 @@ def test_territory_names_from_type_and_seat():
     bare = {"place_type": "castellany", "name_fr": "Remilly"}
     assert geocode.territory_names(bare, vocab, remilly)[0] == "Châtellenie de Rémilly"
     assert geocode.territory_names(other, vocab, None) == ("Prévôté rurale de Sierck",) * 3
+    # a seat in France keeps the title's name in English, not today's commune name; one abroad
+    # takes its English name
+    boulay = geocode.Result("boulay", name_fr="Boulay", name_de="Bolchen", name_en="Boulay-Moselle")
+    assert geocode.territory_names({"place_type": "office", "name_fr": "Boulay"}, vocab, boulay) == \
+        ("Office de Boulay", "Amt Bolchen", "Office of Boulay")
+    sarrebruck = geocode.Result("sarrebruck", name_fr="Sarrebruck", name_de="Saarbrücken", name_en="Saarbrücken")
+    assert geocode.territory_names({"place_type": "office", "name_fr": "Sarrebruck"}, vocab, sarrebruck, True)[2] \
+        == "Office of Saarbrücken"
+
 
 
 def fake_geonames(*entries):

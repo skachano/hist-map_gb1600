@@ -152,13 +152,15 @@ def best_candidate(names: set[str], items: dict, country: str | None, place_type
     return top[2], confidence, "" if anchor else "no canton anchor"
 
 
-def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, str]:
+def territory_names(place, vocab: dict, seat: Result | None, seat_abroad: bool = False) -> tuple[str, str, str]:
     """Names in French, German and English. A name without a type word ('Forbach') gets the
     type in every language: ('Seigneurie de Forbach', 'Herrschaft Forbach', 'Lordship of
     Forbach'), using the seat's German and English names when it is located. A name that
     starts with its own type word ('Prévôté d'Amance', 'Prévôté rurale de Sierck') keeps its
     French and is translated the same way. Any other name that already says what it is is
-    kept as it is in every language: translating only its type word gives nonsense."""
+    kept as it is in every language: translating only its type word gives nonsense.
+    A seat in France keeps the title's own name in English ('Office of Boulay', not today's
+    commune 'Boulay-Moselle'); one abroad takes its English name ('County of Saarbrücken')."""
     fr = place["name_fr"]
     labels = vocab["place_types"].get(place["place_type"], {})
     if not labels:
@@ -175,10 +177,10 @@ def territory_names(place, vocab: dict, seat: Result | None) -> tuple[str, str, 
             de_type, en_type = "Land" + de_type.lower(), "rural " + en_type
         rest = typed.group(2)
     seat_de = (seat.name_de if seat else None) or rest
-    seat_en = (seat.name_en if seat else None) or rest
     if seat and seat.name_fr and rest.isascii() and not seat.name_fr.isascii() and fold(seat.name_fr) == fold(rest):
         # the seat's spelling, with its accents ('Remilly' in the book, the village 'Rémilly')
         fr, rest = fr[:len(fr) - len(rest)] + seat.name_fr, seat.name_fr
+    seat_en = (seat.name_en if seat and seat_abroad else None) or rest
     if has_type:
         return fr, f"{de_type} {seat_de}", f"{en_type.capitalize()} of {seat_en}"
     fr_type = labels["fr"][:1].upper() + labels["fr"][1:]
@@ -261,6 +263,10 @@ def refine_with_territories(results: dict, info: dict, memberships: list[dict], 
             res.method, res.confidence, res.note = "wikidata", "medium", "chosen near its territory's other members"
             changed += 1
             continue
+        if it and km(context, (it["lat"], it["lon"])) <= CONTEXT_KM and res.note.startswith("ambiguous"):
+            # the territory settles which namesake it is, and it is the one already chosen
+            res.confidence, res.note = "medium", "chosen near its territory's other members"
+            continue
         e, conf, note = geonames.match(d["names"], country, context)
         if e and (far or res.lat is None):
             res.lat, res.lon, res.geonames_id, res.wikidata_id = round(e["lat"], 5), round(e["lon"], 5), e["geonameid"], None
@@ -329,7 +335,7 @@ def run() -> None:
         p, row = d["place"], d["row"]
         if p["kind"] != "settlement":
             continue
-        res = Result(pid, name_fr=p["name_fr"])
+        res = Result(pid, name_fr=b.book_names.get(pid, p["name_fr"]))
         override = rules.get(pid)
         if override and ("approximate" in override or override.get("unlocated")):
             deferred[pid] = override  # needs the other places' results first
@@ -404,7 +410,9 @@ def run() -> None:
         # Name from the book, as resolved in Stage 4: the curated row may already carry the
         # names of an earlier geocoding run ('Seigneurie de Forbach'), which must not feed back.
         rp = resolved.get(pid)
-        fr, de, en = territory_names({**p, "name_fr": rp.name_fr if rp and not rp.manual else p["name_fr"]}, vocab, seat)
+        abroad = bool(seat) and info[seat.place_id]["place"].get("modern_country") in ("DE", "LU")
+        fr, de, en = territory_names({**p, "name_fr": rp.name_fr if rp and not rp.manual else p["name_fr"]}, vocab,
+                                     seat, abroad)
         res = Result(pid, name_fr=fr, name_de=de, name_en=en, method="territory", confidence="medium")
         if seat:
             res.lat, res.lon, res.note = seat.lat, seat.lon, f"seat: {seat.place_id}"

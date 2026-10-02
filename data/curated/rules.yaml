@@ -215,6 +215,10 @@ drop_rights:
      reason: "the Varsberg half was pledged to Godron Duchat (p. 147); the pledge row holds it"}
   - {place: county-petite-pierre, right_type: manorial_lord, holder: house-rhingraves-wildgraves,
      reason: "p. 124 lists La Petite-Pierre among the rhingraves' lands by an oversight: the county was the counts palatine of Veldenz' (pp. 104-106, 113)"}
+  - {place: berus, right_type: manorial_lord, holder: house-braun-schmittberg,
+     reason: "the 1630 list gives Jean-Wolf de Schmittberg houses, farms and lands at Berus, not the lordship (p. 80)"}
+  - {place: volkrange, right_type: manorial_lord, holder: house-braun-schmittberg,
+     reason: "the 1613 list gives Jean-Wolf de Schmittberg a house at Volkrange, not the village (p. 80)"}
 
 # Extracted memberships to discard; every given field must match (child, parent)
 drop_memberships:
@@ -273,6 +277,15 @@ right_overrides:
   - match: {place: creutzwald, right_type: middle_low_justice}
     set: {share: joint}
     reason: "the book gives 1/3, 1/3 and 1/2 (p. 80); shares kept as joint"
+  - match: {place: theley, right_type: manorial_lord, holder: house-braun-schmittberg}
+    set: {holder_id: g-braun-schmittberg, from_year: 1630, to_year: 1630, from_precision: attested, to_precision: attested}
+    reason: "the half of Theley in the 1630 list of fiefs is G. Braun de Schmittberg's, of Güdesweiler, not Jean-Wolf's (p. 80)"
+  - match: {place: lindscheid, right_type: manorial_lord, holder: house-schmittberg}
+    set: {holder_id: philippe-georges-braun-schmittberg}
+    reason: "Lindscheidt and Niederhofen to Philippe-Georges Braun de Schmittberg (1585, p. 57)"
+  - match: {place: niederhofen, right_type: manorial_lord, holder: house-schmittberg}
+    set: {holder_id: philippe-georges-braun-schmittberg}
+    reason: "Lindscheidt and Niederhofen to Philippe-Georges Braun de Schmittberg (1585, p. 57)"
 
 # Geocoding decisions (Stage 5), applied by `make geocode`:
 #   place-id: {wikidata: Q…}                 use this Wikidata item
@@ -281,6 +294,8 @@ geocode:
   chemery: {wikidata: Q21609, lat: 49.29944, lon: 6.44389,
             note: "Chémery-les-Deux (Chémery-la-Vieille and -la-Neuve), office of Sierck (pp. 13, 50-51); was matched to the Chémery of Faulquemont"}
   chemery-faulquemont: {lat: 48.9997, lon: 6.58276, note: "Chémery, part of Faulquemont today, lordship of Faulquemont (p. 16)"}
+  momberg: {lat: 49.50765, lon: 7.05486, name_de: Steinberg, name_en: Steinberg,
+            note: "castle of Momberg or Steinberg between Gronig and Theley, office of Schaumberg (p. 80); placed midway between them; was matched to Steinberg in Wadern"}
   # Lost villages ("village disparu") the databases matched to other, existing places.
   ruchling: {approximate: spicheren, note: "Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling"}
   nideck: {approximate: sarralbe, note: "Nideck (Neudeck), lost village of the office of Sarralbe (p. 18); was matched to Burg Nideck in Alsace"}
@@ -392,13 +407,14 @@ geocode:
   deserted-village-roderbann: {approximate: saint-louis, name_de: Roderbann, name_en: Roderbann,
                                note: "the lost village of the Roderbann, where Saint-Louis was founded in 1628-29 (p. 115)"}
 
-# Curated names that win over the databases' labels: id: {fr: …, de: …, en: …} (any subset).
+# Curated names that win over the databases' labels: id: {fr: …, de: …, en: …} (any subset), and
+# `variants: [...]`, more names to find a place by.
 # German: the historical German names of the Lorraine places (Wikidata labels them in French); a
 # seat's name also gives its realms' German titles ('Amt Bolchen'). Titles the type word cannot
 # build ('Reichsherrschaft Kriechingen') are given whole.
 place_names:
   # towns and seats
-  boulay: {de: Bolchen}
+  boulay: {fr: Boulay-Moselle, de: Bolchen}
   bouzonville: {de: Busendorf}
   faulquemont: {de: Falkenberg}
   fenetrange: {de: Finstingen}
@@ -410,9 +426,9 @@ place_names:
   phalsbourg: {de: Pfalzburg}
   sarrebourg: {de: Saarburg}
   sarralbe: {de: Saaralben}
-  puttelange: {de: Püttlingen}
+  puttelange: {fr: Puttelange-aux-Lacs, de: Püttlingen}
   saint-avold: {de: Sankt Avold}
-  sierck: {de: Sierck}
+  sierck: {fr: Sierck-les-Bains, de: Sierck}
   thionville: {de: Diedenhofen}
   albestroff: {de: Albesdorf}
   insming: {de: Insmingen}
@@ -420,15 +436,15 @@ place_names:
   dabo: {de: Dagsburg}
   herange: {de: Heringen}
   holving: {de: Holvingen}
-  teting: {de: Tetingen}
-  rurange-metzervisse: {de: Rüringen}
+  teting: {fr: Teting-sur-Nied, de: Tetingen}
+  rurange-metzervisse: {fr: Rurange-lès-Thionville, de: Rüringen}
   luttange: {de: Lüttingen}
   distroff: {de: Diesdorf}
-  volmerange: {de: Wolmeringen}
+  volmerange: {fr: Volmerange-lès-Boulay, de: Wolmeringen}
   remilly: {de: Remelach}
   eblange: {de: Eblingen}
   raville: {de: Rollingen}
-  varize: {de: Waibelskirchen}
+  varize: {fr: Varize, de: Waibelskirchen, en: Varize}
   varsberg: {de: Warsberg}
   farschviller: {de: Farschweiler}
   boucheporn: {de: Buschborn}
@@ -446,25 +462,25 @@ place_names:
   delme: {de: Delm}
   thicourt: {de: Diedersdorf}
   vibersviller: {de: Wiebersweiler}
-  altwiller: {de: Altweiler}
+  altwiller: {fr: Altwiller, de: Altweiler}
   betting-waldwisse: {de: Bettingen}
-  marimont: {de: Mörsberg}
-  lixing-rouhling: {de: Lixingen}
+  marimont: {fr: Marimont-lès-Bénestroff, de: Mörsberg}
+  lixing-rouhling: {fr: Lixing-lès-Rouhling, de: Lixingen}
   petite-rosselle: {de: Kleinrosseln}
-  remering-puttelange: {de: Remeringen}
+  remering-puttelange: {fr: Rémering-lès-Puttelange, de: Remeringen}
   bouquenom: {de: Bockenheim}
   marmoutier: {de: Maursmünster}
   bouxwiller: {de: Buchsweiler}
   pfaffenhoffen: {de: Pfaffenhofen}
   w-rth: {de: Wörth}
-  niederbronn: {de: Niederbronn}
+  niederbronn: {fr: Niederbronn-les-Bains, de: Niederbronn}
   saint-hippolyte-haut-rhin: {de: Sankt Pilt}
   saint-nabor: {de: Sankt Nabor}
   saltzbronn: {de: Salzbronn}
-  graufthal: {de: Krauftal}
-  villers-bettnach: {de: Weiler-Bettnach}
-  meinsberg: {de: Burg Meinsberg}
-  turquestein: {de: Türkstein}
+  graufthal: {fr: Graufthal, de: Krauftal, en: Graufthal}
+  villers-bettnach: {de: Weiler-Bettnach, en: Villers-Bettnach}
+  meinsberg: {de: Burg Meinsberg, en: Meinsberg}
+  turquestein: {de: Türkstein, en: Turquestein}
   gueroldseck: {de: Geroldseck}
   hoelling: {de: Hölling}
   hombourg-haut-et-bas: {de: Niederhomburg}
@@ -474,96 +490,96 @@ place_names:
   abreschviller: {de: Alberschweiler}
   adelange: {de: Edelingen}
   aidling: {de: Eidlingen}
-  alaincourt: {de: Alaincourt}
+  alaincourt: {fr: Alaincourt-la-Côte, de: Alaincourt}
   alzing: {de: Alzingen}
   arriance: {de: Argenchen}
   arzviller: {de: Arzweiler}
-  assviller: {de: Aßweiler}
+  assviller: {fr: Asswiller, de: Aßweiler}
   baerendorf: {de: Bärendorf}
   baerenthal: {de: Bärenthal}
   bambiderstroff: {de: Baumbiedersdorf}
-  barchain: {de: Barchingen}
-  basse-yutz: {de: Niederjeutz}
+  barchain: {fr: Barchain, de: Barchingen}
+  basse-yutz: {fr: Basse-Yutz, de: Niederjeutz, en: Basse-Yutz}
   bassing: {de: Bessingen}
-  bening-saint-avold: {de: Beningen}
+  bening-saint-avold: {fr: Béning-lès-Saint-Avold, de: Beningen}
   bermering: {de: Bermeringen}
   berthelming: {de: Berthelmingen}
-  berviller: {de: Berweiler}
+  berviller: {fr: Berviller-en-Moselle, de: Berweiler}
   bettange: {de: Bettingen}
   bettelainville: {de: Bettsdorf}
-  betting-saint-avold: {de: Bettingen}
-  bettviller-drulingen: {de: Bettweiler}
+  betting-saint-avold: {fr: Betting, de: Bettingen}
+  bettviller-drulingen: {fr: Bettwiller, de: Bettweiler}
   bettviller-rohrbach: {de: Bettweiler}
-  bickenholz: {de: Bickenholz}
+  bickenholz: {fr: Bickenholtz, de: Bickenholz}
   bidestroff: {de: Biedesdorf}
   biding: {de: Biedingen}
   bining: {de: Biningen}
-  bistroff-drulingen: {de: Bischtroff}
-  bliesbruck: {de: Bliesbrücken}
+  bistroff-drulingen: {fr: Bischtroff-sur-Sarre, de: Bischtroff}
+  bliesbruck: {fr: Bliesbruck, de: Bliesbrücken}
   bockange: {de: Buchingen}
   bourgaltroff: {de: Burgaltdorf}
   bousse: {de: Buß}
   bousseviller: {de: Bußweiler}
-  breistroff-petite: {de: Breisdorf}
+  breistroff-petite: {fr: Breistroff-la-Petite, de: Breisdorf, en: Breistroff-la-Petite}
   brouck: {de: Brücken}
   brulange: {de: Brülingen}
-  budange: {de: Budingen}
-  buhl-lorraine: {de: Bühl}
+  budange: {fr: Budange, de: Budingen, en: Budange}
+  buhl-lorraine: {fr: Buhl-Lorraine, de: Bühl}
   bust: {de: Büst}
   butten: {de: Bütten}
   cadenbronn: {de: Kadenbronn}
   chateau-rouge: {de: Rodendorf}
-  chateau-voue: {de: Dürkastel}
-  chelaincourt: {de: Chelaincourt}
+  chateau-voue: {fr: Château-Voué, de: Dürkastel}
+  chelaincourt: {fr: Chelaincourt, de: Chelaincourt, en: Chelaincourt}
   cocheren: {de: Kochern}
-  conde-northen: {de: Conchen}
+  conde-northen: {fr: Condé, de: Conchen, en: Condé}
   coume: {de: Kuhmen}
-  courcelles: {de: Kurzel}
+  courcelles: {fr: Courcelles, de: Kurzel, en: Courcelles}
   dannelbourg: {de: Dannelburg}
   desseling: {de: Disselingen}
   destry: {de: Destrich}
   diebling: {de: Dieblingen}
   dolving: {de: Dolvingen}
-  domnon: {de: Dommenheim}
+  domnon: {fr: Domnom-lès-Dieuze, de: Dommenheim}
   durstel: {de: Dürstel}
   edling: {de: Edlingen}
-  eguelshardt: {de: Egelshardt}
+  eguelshardt: {fr: Éguelshardt, de: Egelshardt}
   eincheville: {de: Enchenweiler}
   elvange: {de: Elwingen}
   elzange: {de: Elsingen}
   epping: {de: Eppingen}
   ernestviller: {de: Ernstweiler}
   eschbourg: {de: Eschburg}
-  eschwiller: {de: Eschweiler}
+  eschwiller: {fr: Eschwiller, de: Eschweiler}
   etting: {de: Ettingen}
   farebersviller: {de: Pfarrebersweiler}
   filstroff: {de: Filsdorf}
   flastroff: {de: Flasdorf}
   folkling: {de: Folklingen}
   fouligny: {de: Füllingen}
-  francaltroff: {de: Freialtdorf}
+  francaltroff: {fr: Francaltroff, de: Freialtdorf}
   fraquelfing: {de: Frackelfingen}
   freistroff: {de: Freisdorf}
   fremestroff: {de: Fremersdorf}
-  freyming: {de: Freimengen}
+  freyming: {fr: Freyming, de: Freimengen, en: Freyming}
   frohmuhl: {de: Frohmühl}
   garrebourg: {de: Garburg}
   gelucourt: {de: Gisselfingen}
-  goerlingen-drulingen: {de: Görlingen}
+  goerlingen-drulingen: {fr: Gœrlingen, de: Görlingen}
   gomelange: {de: Gelmingen}
   gondrexange: {de: Gunderchingen}
   gosselming: {de: Gosselmingen}
   grening: {de: Greningen}
-  grindorf: {de: Grindorf}
+  grindorf: {fr: Grindorff, de: Grindorf, en: Grindorff}
   grundviller: {de: Grundweiler}
-  guebenhouse: {de: Gebenhausen}
+  guebenhouse: {fr: Guebenhouse, de: Gebenhausen}
   guebestroff: {de: Gebesdorf}
   gueblange-dieuze: {de: Güblingen}
   guebling: {de: Geblingen}
   guenviller: {de: Genweiler}
   guerstling: {de: Gerstlingen}
   guerting: {de: Gertingen}
-  guessling: {de: Gesslingen}
+  guessling: {fr: Guessling, de: Gesslingen, en: Guessling}
   guinglange: {de: Genglingen}
   guinkirchen: {de: Gehnkirchen}
   guinzeling: {de: Geinslingen}
@@ -573,15 +589,15 @@ place_names:
   guntzviller: {de: Gunzweiler}
   hampont: {de: Hudingen}
   hangviller: {de: Hangweiler}
-  hanviller: {de: Hanweiler}
-  hargarten-aux-mines: {de: Hargarten}
+  hanviller: {fr: Hanviller, de: Hanweiler}
+  hargarten-aux-mines: {fr: Hargarten-aux-Mines, de: Hargarten}
   haspelschiedt: {de: Haspelscheid}
   haut-clocher: {de: Zittersdorf}
   haute-vigneulles: {de: Oberfillen}
-  heining: {de: Heiningen}
+  heining: {fr: Heining-lès-Bouzonville, de: Heiningen}
   helstroff: {de: Helsdorf}
   hermelange: {de: Hermelingen}
-  hertzing: {de: Herzingen}
+  hertzing: {fr: Hertzing, de: Herzingen}
   hinsbourg: {de: Hinsburg}
   holling: {de: Hollingen}
   hommarting: {de: Hommartingen}
@@ -594,7 +610,7 @@ place_names:
   imling: {de: Imlingen}
   insviller: {de: Insweiler}
   ippling: {de: Iplingen}
-  ising: {de: Ising}
+  ising: {fr: Ising, de: Ising, en: Ising}
   juvelize: {de: Geistkirchen}
   koenigsmacker: {de: Königsmachern}
   lachambre: {de: Kammern}
@@ -608,14 +624,14 @@ place_names:
   les-etangs: {de: Tennschen}
   lidrezing: {de: Liedersingen}
   liederschiedt: {de: Liederscheid}
-  lindre-haute-et-basse: {de: Oberlinder}
-  lohr-munster: {de: Lohr}
+  lindre-haute-et-basse: {fr: Lindre-Haute, de: Oberlinder}
+  lohr-munster: {fr: Lhor, de: Lohr}
   lorquin: {de: Lörchingen}
   loudrefing: {de: Lauterfingen}
   loupershouse: {de: Lupershausen}
   loutzviller: {de: Lutzweiler}
   macheren: {de: Machern}
-  marange: {de: Möhringen}
+  marange: {fr: Marange, de: Möhringen, en: Marange}
   megange: {de: Mehingen}
   metzeresche: {de: Metzeresch}
   metzervisse: {de: Metzerwiese}
@@ -627,10 +643,10 @@ place_names:
   neufgrange: {de: Neuscheuern}
   neunkirchen-bouzonville: {de: Neunkirchen}
   niedervisse: {de: Niederwiese}
-  nousseviller-saint-nabor: {de: Nußweiler}
+  nousseviller-saint-nabor: {fr: Nousseviller-Saint-Nabor, de: Nußweiler}
   nousseviller-les-bitche: {de: Nußweiler}
   obervisse: {de: Oberwiese}
-  oeting: {de: Ötingen}
+  oeting: {fr: Œting, de: Ötingen}
   ottonville: {de: Ottendorf}
   oudrenne: {de: Udern}
   petit-hettange: {de: Kleinhettingen}
@@ -644,45 +660,45 @@ place_names:
   postroff: {de: Postdorf}
   puttigny: {de: Püttingen}
   racrange: {de: Rakringen}
-  ratzviller: {de: Ratzweiler}
+  ratzviller: {fr: Ratzwiller, de: Ratzweiler}
   reding: {de: Riedingen}
   reipertswiller: {de: Reipertsweiler}
-  reitweiler: {de: Reitweiler}
+  reitweiler: {fr: Reitwiller, de: Reitweiler}
   remelfang: {de: Remelfangen}
   remelfing-sarreguemines: {de: Remelfingen}
   remelfing-sierck: {de: Rumelingen}
-  remering-bouzonville: {de: Reimeringen}
+  remering-bouzonville: {fr: Rémering, de: Reimeringen}
   reyersviller: {de: Reyersweiler}
   richeling: {de: Richelingen}
   ricrange: {de: Rikringen}
   rodlach: {de: Rodlach}
-  rohrbach: {de: Rohrbach}
+  rohrbach: {fr: Rohrbach-lès-Bitche, de: Rohrbach}
   rolbing: {de: Rolbingen}
   romelfing: {de: Rommelfingen}
   roppeviller: {de: Roppweiler}
   rosbruck: {de: Roßbrücken}
   rouhling: {de: Ruhlingen}
-  rouviller: {de: Rauweiler}
+  rouviller: {fr: Rauwiller, de: Rauweiler}
   rustroff: {de: Rüsdorf}
   saint-jean-rohrbach: {de: Johannsrohrbach}
   saint-medard: {de: Sankt Medard}
   sarraltroff: {de: Saaraltdorf}
   sarreinsming: {de: Saareinsmingen}
   seingbouse: {de: Sengbusch}
-  setting: {de: Settingen}
+  setting: {fr: Zetting, de: Settingen}
   spicheren: {de: Spichern}
   stuckange: {de: Stückingen}
   sturzelbronn: {de: Stürzelbronn}
   tenteling: {de: Tentelingen}
   theding: {de: Thedingen}
   torcheville: {de: Dorsweiler}
-  tritteling: {de: Trittelingen}
-  vahl-dieuze: {de: Vahl}
+  tritteling: {fr: Tritteling, de: Trittelingen, en: Tritteling}
+  vahl-dieuze: {fr: Vahl-lès-Bénestroff, de: Vahl}
   vallerange: {de: Walleringen}
   valmunster: {de: Valmünster}
   vaudreching: {de: Walrichen}
   veckersviller: {de: Weckersweiler}
-  veckring: {de: Weckringen}
+  veckring: {fr: Veckring, de: Weckringen}
   velving: {de: Welwingen}
   vergaville: {de: Widersdorf}
   vieux-lixheim: {de: Altlixheim}
@@ -690,7 +706,7 @@ place_names:
   vilsberg: {de: Wilsberg}
   virming: {de: Wirmingen}
   vittersbourg: {de: Wittersburg}
-  voellerdingen: {de: Völlerdingen}
+  voellerdingen: {fr: Vœllerdingen, de: Völlerdingen}
   volmunster: {de: Wolmünster}
   volstroff: {de: Wolsdorf}
   w-oustviller: {de: Wustweiler}
@@ -699,8 +715,8 @@ place_names:
   weinbourg: {de: Weinburg}
   weiskirch: {de: Weißkirchen}
   wiesviller: {de: Wiesweiler}
-  woelfling-bouzonville: {de: Wölfling}
-  woelfling-sarreguemines: {de: Wölfling}
+  woelfling-bouzonville: {fr: Vœlfling-lès-Bouzonville, de: Wölfling}
+  woelfling-sarreguemines: {fr: Wœlfling-lès-Sarreguemines, de: Wölfling}
   xouaxange: {de: Schweixingen}
   zilling: {de: Zillingen}
   zimming: {de: Zimmingen}
@@ -732,7 +748,7 @@ place_names:
   mackviller: {de: Mackweiler}
   neudlange: {de: Nodlingen}
   neunkirchen-bitche: {de: Neunkirchen}
-  neuviller: {de: Neuweiler}
+  neuviller: {fr: Neuwiller-lès-Saverne, de: Neuweiler, en: Neuwiller-lès-Saverne}
   nideck: {de: Neudeck}
   niedwellingen: {de: Niedwellingen}
   offviller: {de: Offweiler}
@@ -740,7 +756,7 @@ place_names:
   ottviller: {de: Ottweiler}
   penning: {de: Pfenningen}
   petit-arnsberg: {de: Kleinarnsberg}
-  rohrbach-la-petite: {de: Heltrohrbach}
+  rohrbach-la-petite: {fr: Rohrbach-la-Petite, de: Heltrohrbach}
   rudling: {de: Rüdlingen}
   schoenbourg: {de: Schönburg}
   sieviller: {de: Sieweiler}
@@ -748,17 +764,117 @@ place_names:
   velling: {de: Wellingen}
   waldvisse: {de: Waldwiese}
   zondrange: {de: Zonderingen}
+  # today's official names; one name in every language for a village Wikidata matched to
+  # the commune it is part of today, or for a castle it names as the building
+  charleville: {fr: Charleville-sous-Bois}
+  laneuveville: {fr: Laneuveville-lès-Lorquin}
+  maizieres: {fr: Maizières-lès-Vic}
+  malaucourt: {fr: Malaucourt-sur-Seille}
+  villers-stoncourt: {fr: Villers-Stoncourt}
+  cirey: {fr: Cirey-sur-Vezouze}
+  morville: {fr: Morville-lès-Vic}
+  reinange: {fr: Reinange}
+  diane-cappel: {fr: Diane-Capelle}
+  ebring: {fr: Ebering}
+  evendorf: {fr: Evendorff}
+  gandren: {fr: Gaudren}
+  gremecey: {fr: Grémecey}
+  kirberg: {fr: Kirrberg}
+  kleind-hal: {fr: Kleindal}
+  l-renzen: {fr: Lorentzen}
+  mailing: {fr: Malling}
+  maquenom: {fr: Macquenom}
+  neufmoulins: {fr: Neufmoulins}
+  niderhoff: {fr: Niderhoff}
+  oberdorf: {fr: Oberdorff}
+  rimstroff: {fr: Rimsdorf}
+  silzheim: {fr: Siltzheim}
+  veschheim: {fr: Vescheim}
+  willer: {fr: Wiler}
+  elviller: {fr: Ellviller}
+  marienthal: {fr: Mariendhal}
+  valette: {fr: Vallette}
+  lohr-la-petite-pierre: {fr: Lohr}
+  betting-zimming: {fr: Betting}
+  benting: {fr: Benting}
+  obrick: {fr: Obrick}
+  rode-insviller: {fr: Rode}
+  rode-morhange: {fr: Rode}
+  calembourg: {fr: Kalembourg}
+  diesen: {fr: Diesen}
+  metzing-elvange: {fr: Metzing}
+  hoff: {fr: Hoff}
+  plappecourt: {fr: Plappecourt}
+  zell: {fr: Zellen}
+  voelklingen: {fr: Völklingen}
+  bierfeld: {fr: Bierfeld}
+  bisten-saar: {fr: Bisten}
+  buschdorf: {fr: Büschdorf}
+  diefferten: {fr: Differten}
+  diefflen: {fr: Diefflen}
+  duppenweiler: {fr: Düppenweiler}
+  duren: {fr: Düren}
+  furschweiler: {fr: Furschweiler}
+  gersheim: {fr: Gersheim}
+  giidesweiler: {fr: Güdesweiler}
+  greppen: {fr: Kröppen}
+  griinstadt: {fr: Grünstadt}
+  gudingen: {fr: Güdingen}
+  herichsweiler: {fr: Herchweiler}
+  hiilzweiler: {fr: Hülzweiler}
+  huttersdorf: {fr: Hüttersdorf}
+  kastel: {fr: Kastel}
+  kutzhof: {fr: Kutzhof}
+  leidingen: {fr: Leidingen}
+  lindscheid: {fr: Lindscheid}
+  pirmasens: {fr: Pirmasens}
+  silwingen: {fr: Silwingen}
+  forweiler: {fr: Altforweiler}
+  grosshemmersdorf: {fr: Hemmersdorf}
+  petit-ebersviller: {fr: Petit-Ébersviller, de: Petit-Ébersviller, en: Petit-Ébersviller}
+  eich-pirmasens: {fr: Eich, de: Eich, en: Eich}
+  griesborn: {fr: Griesborn, de: Griesborn, en: Griesborn}
+  mettnich: {fr: Mettnich, de: Mettnich, en: Mettnich}
+  reisweiler: {fr: Reisweiler, de: Reisweiler, en: Reisweiler}
+  simten: {fr: Simten, de: Simten, en: Simten}
+  wetschhausen: {fr: Wetschhausen, de: Wetschhausen, en: Wetschhausen}
+  bubach-calmesweiler: {fr: Bubach, de: Bubach, en: Bubach}
+  rilchingen: {fr: Rilchingen, de: Rilchingen, en: Rilchingen}
+  rehlingen-sur-moselle: {fr: Rehlingen, de: Rehlingen, en: Rehlingen}
+  rehlingen-sur-sarre: {fr: Rehlingen, de: Rehlingen, en: Rehlingen}
+  kerprich-hemmersdorf: {fr: Kerprich-Hemmersdorf, de: Kerprich-Hemmersdorf, en: Kerprich-Hemmersdorf}
+  chatillon: {de: Châtillon, en: Châtillon}
+  saint-francois: {de: Saint-François, en: Saint-François}
+  haute-seille: {en: Haute-Seille}
+  hesse: {en: Hesse}
+  gentersberg: {en: Gentersberg}
+  lutzelhardt: {en: Lutzelhardt}
+  berg-nennig: {de: Berg, en: Berg}
+  herrenstein: {de: Herrenstein, en: Herrenstein}
+  wadgassen: {de: Wadgassen, en: Wadgassen}
+  falkenstein-baerenthal: {fr: Falkenstein, de: Falkenstein, en: Falkenstein}
+  monclair: {fr: Montclair, de: Montclair, en: Montclair}
+  momberg: {fr: Steinberg, variants: [Momberg-lès-Gronig, Momberg bei Gronig, Steinberg-lès-Gronig]}  # Steinberg castle; Momberg is the hill it stands on
+  bergweiler: {fr: Bergweiler}  # the book: "Weiler im Loch ou Bergweiler"
+  marienfloss: {fr: Marienfloss}  # the book: "Bruch alias Marienfloss"
+  ban-rotte: {en: Ban of the Rotte}
+  # OCR slips: 'ü' read as 'ii'
+  bettling: {fr: Bettling-lès-Bühl}
+  biischdorf: {fr: Büschdorf}
+  buren: {fr: Büren, de: Büren, en: Büren}
+  fiirst: {fr: Fürst}
+  munchweiler: {fr: Münchweiler, de: Münchweiler, en: Münchweiler}
   # realms whose German title the type word cannot build
   bailliage-allemagne: {de: Deutsches Bellistum}
-  bailiwick-episcopal-de-vic: {de: Bischöfliches Bellistum Wich}
+  bailiwick-episcopal-de-vic: {de: Bischöfliches Bellistum Wich, en: Episcopal bailiwick of Vic}
   castellany-vic: {de: Kellerei Wich}
   marquisate-faulquemont: {de: Markgrafschaft Falkenberg}
   lordship-volmerange: {de: Herrschaft Wolmeringen}
   provostship-marche-de-chateau-salins: {de: Reichsmark Salzburgen}
   county-deux-ponts: {de: Herzogtum Zweibrücken, en: Duchy of Zweibrücken}
   county-blamont: {de: Grafschaft Blankenberg}
-  county-bliescastel: {de: Grafschaft Blieskastel}
-  county-nassau-sarrebruck: {de: Grafschaft Nassau-Saarbrücken}
+  county-bliescastel: {de: Grafschaft Blieskastel, en: County of Blieskastel}
+  county-nassau-sarrebruck: {de: Grafschaft Nassau-Saarbrücken, en: County of Nassau-Saarbrücken}
   county-rechicourt-le-chateau: {de: Grafschaft Rixingen}
   lordship-rechicourt: {de: Grafschaft Rixingen, en: County of Réchicourt}
   lordship-hombourg-sur-canner: {de: Herrschaft Homburg (an der Kanner), en: Lordship of Hombourg-sur-Canner}
@@ -770,25 +886,26 @@ place_names:
   lordship-turquestein: {de: Herrschaft Türkstein}
   lordship-lemberg-les-pirmasens: {de: Herrschaft Lemberg (bei Pirmasens)}
   lordship-gueroldseck-les-niederstinzel: {de: Herrschaft Geroldseck bei Niederstinzel}
-  lordship-danne-et-quatre-vents: {de: Herrschaft Dann und Vierwinden}
-  lordship-val-de-nalbach: {de: Herrschaft Nalbacher Tal}
+  lordship-danne-et-quatre-vents: {de: Herrschaft Dann und Vierwinden, en: Lordship of Danne and Quatre-Vents}
+  lordship-val-de-nalbach: {de: Herrschaft Nalbacher Tal, en: Lordship of the Nalbach valley}
   lordship-puttlingen-saar: {de: Herrschaft Püttlingen (Saar)}
   lordship-lixing-rouhling: {de: Herrschaft Lixingen-Rohlingen}
   office-hombourg-haut: {de: Amt Oberhomburg}
-  office-sarrewerden-et-herbitzheim: {de: Amt Saarwerden und Herbitzheim}
+  office-sarrewerden-et-herbitzheim: {de: Amt Saarwerden und Herbitzheim, en: Office of Sarrewerden and Herbitzheim}
   advocacy-hombourg-saint-avold: {de: Vogtei Homburg-Sankt Avold}
   advocacy-saint-nabor: {de: Vogtei Sankt Nabor}
-  mayoralty-siersberg: {de: Hochgericht Siersburg}
+  mayoralty-siersberg: {de: Hochgericht Siersburg, en: High mayoralty of Siersburg}
+  mayoralty-remering: {en: Mayoralty of Rémering}
   mayoralty-inferieure-du-saargau-a-schwemlingen: {de: Untere Meierei des Saargaus zu Schwemlingen,
                                                    en: Lower mayoralty of the Saargau at Schwemlingen}
   mayoralty-superieure-du-saargau-a-hilbringen: {de: Obere Meierei des Saargaus zu Hilbringen,
                                                  en: Upper mayoralty of the Saargau at Hilbringen}
-  ban-bois-du-warndt: {de: Bann Warndtwald}
-  ban-foret-de-rexing: {de: Bann Rexinger Wald}
-  ban-franchise-de-k-nigsmacker: {de: Freiheit Königsmachern}
-  ban-val-de-gueblange: {de: Bann Geblinger Tal}
-  ban-val-de-liepvre: {de: Bann Lebertal}
-  ban-val-de-steinbach: {de: Bann Steinbachtal}
+  ban-bois-du-warndt: {de: Bann Warndtwald, en: Ban of the Warndt forest}
+  ban-foret-de-rexing: {de: Bann Rexinger Wald, en: Ban of the Rexing forest}
+  ban-franchise-de-k-nigsmacker: {fr: Franchise de Kœnigsmacker, de: Freiheit Königsmachern, en: Franchise of Kœnigsmacker}
+  ban-val-de-gueblange: {de: Bann Geblinger Tal, en: Ban of the Guéblange valley}
+  ban-val-de-liepvre: {de: Bann Lebertal, en: Ban of the Lièpvre valley}
+  ban-val-de-steinbach: {de: Bann Steinbachtal, en: Ban of the Steinbach valley}
   ban-petite-rosselle: {de: Bann Kleinrosseln}
   ban-delme: {de: Bann Delm}
   ban-weyer-les-rahling: {de: Bann Weyer bei Rahlingen}

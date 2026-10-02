@@ -58,6 +58,20 @@ FIEF_RIGHTS = {"manorial_lord", "high_justice", "middle_low_justice", "advocate"
 OFFICE_RIGHTS = {"tax_aide", "military", "appeal_jurisdiction", "tabellionage"}
 _ID_LIKE = re.compile(r"^(?:county|lordship|duchy|office|barony|principality|castellany|bailiwick|provostship|"
                       r"marquisate|advocacy|condominium|ban|fief|receivership|mayoralty|court)-[a-z0-9-]+$", re.I)
+_ALTERNATIVES = re.compile(r" (?:ou|alias) ")  # 'Momberg ou Steinberg': French 'or', not part of a name
+_ASIDE = re.compile(r"^(.+?) \((.+)\)$")  # 'Hoff (Hove)'; a lowercase aside is a description: 'Schaumberg (le château)'
+
+
+def split_names(name: str) -> list[str]:
+    """The names a settlement's 'X ou Y', 'X alias Y' or 'X (Y)' gives, the first one first."""
+    names = []
+    for part in _ALTERNATIVES.split(name):
+        aside = _ASIDE.match(part)
+        if not aside:
+            names.append(part)
+        else:
+            names += [aside.group(1)] + ([aside.group(2)] if aside.group(2)[:1].isupper() else [])
+    return names
 
 
 def _read_csv(path: Path) -> list[dict]:
@@ -151,6 +165,7 @@ class Builder:
         self.place_pages: dict[str, set[int]] = defaultdict(set)
         self.dropped = Counter()
         self.stats = Counter()
+        self.book_names: dict[str, str] = {}  # place id -> the book's French name a curated name replaced
 
     # --- merging extracted chunks ----------------------------------------------
     def add_chunk(self, record: dict) -> None:
@@ -525,9 +540,31 @@ class Builder:
                 if value and not row.get(field):
                     row[field] = value
         # rules.yaml place_names: curated names (historical German names, titles) win over everything
+        # A curated French name (today's official 'Rohrbach-lès-Bitche' for the book's 'Rohrbach')
+        # keeps the book's spelling as a variant, and geocoding still matches seats by it.
         for row in rows:
             for lang, name in (self.rules.get("place_names") or {}).get(row["id"], {}).items():
+                if lang == "variants":  # more names to find it by: 'Momberg-lès-Gronig'
+                    variants = row.get("variants") or []
+                    variants = variants if isinstance(variants, list) else variants.split("|")
+                    row["variants"] = sorted({*variants, *name})
+                    continue
+                if lang == "fr" and row.get("name_fr") and row["name_fr"] != name:
+                    self.book_names[row["id"]] = row["name_fr"]
+                    variants = row.get("variants") or []
+                    variants = variants if isinstance(variants, list) else variants.split("|")
+                    row["variants"] = sorted({*variants, row["name_fr"]} - {name})
                 row[f"name_{lang}"] = name
+        for row in rows:  # 'Luegen ou Diesen' is two names, not one
+            if row["kind"] != "settlement":
+                continue  # a title's 'ou' joins type words: 'sergenterie ou Büttelei de Rimling'
+            variants = row.get("variants") or []
+            variants = variants if isinstance(variants, list) else variants.split("|")
+            first, *others = split_names(row["name_fr"])
+            row["name_fr"] = first
+            names = {n for v in variants if v for n in split_names(v)
+                     if n.count("(") == n.count(")")}  # not a cut-off one: 'Saint-Hippolyte (Haut-Rhin'
+            row["variants"] = sorted({*others, *names} - {first})
         return rows
 
     def _place_rows_without_geo(self, used: set[str]) -> list[dict]:

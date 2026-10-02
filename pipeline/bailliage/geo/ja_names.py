@@ -84,7 +84,10 @@ def run() -> None:
             names[pid] = (plain_label(labels[p["wikidata_id"]]), "wikidata")
     # Hand-written settlement names first: territories take their seat's name.
     names |= {pid: (n, "manual") for pid, n in manual.items() if places.get(pid, {}).get("kind") == "settlement"}
-    by_name = {fold(places[pid]["name_fr"]): n for pid, (n, _) in names.items() if pid in places}
+    # by French name, else by a variant (the book's spelling where today's official name replaced it)
+    by_name = {fold(v): n for pid, (n, _) in names.items() if pid in places
+               for v in filter(None, places[pid]["variants"].split("|"))}
+    by_name |= {fold(places[pid]["name_fr"]): n for pid, (n, _) in names.items() if pid in places}
     for pid, p in places.items():
         if p["kind"] != "territory":
             continue
