@@ -73,8 +73,12 @@ def test_contested_memberships_reach_the_site(built):
     contested = {pid for pid, p in places.items()
                  if any(x["id"] == "bailliage-allemagne" and x.get("contested") for x in p.get("parents", []))}
     assert contested == {"office-hombourg-haut", "county-bitche", "office-sarralbe", "lordship-sarreck",
-                         "provostship-sarrebourg", "office-phalsbourg", "castellany-marsal"}
+                         "provostship-sarrebourg", "office-phalsbourg", "castellany-marsal", "office-sarreguemines"}
     assert not any(x.get("contested") for x in places["office-sierck"].get("parents", []))
+    # Sarreguemines only while its subjects disputed the bailiwick's jurisdiction (p. 12)
+    sarreguemines = [x for x in places["office-sarreguemines"]["parents"] if x["id"] == "bailliage-allemagne"]
+    assert [(x.get("from"), x.get("to"), x.get("contested", False)) for x in sarreguemines] == [
+        (None, 1608, False), (1609, 1621, True), (1622, None, False)]
 
 
 def test_rulers_translated(built):

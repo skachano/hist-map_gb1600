@@ -119,7 +119,9 @@ office-morhange,bailliage-allemagne,,,,,,10,high,
 office-phalsbourg,bailliage-allemagne,true,,,,,9;11;21-22,high,"contested: bought in 1583 (p. 21), not subject to the 1585 aid (p. 11); Alix (1594) files it among lands 'qui ne sont pas de bailliages' (1870 ed., pp. 34, 113); its subjects claimed not to belong; in 1631 wrongly taken for a privileged exclave (p. 11)"
 office-puttelange,bailliage-allemagne,,,,,,9,high,
 office-sarralbe,bailliage-allemagne,true,,,,,9;11;21-22,high,"contested: bought from the bishop of Metz in 1562 (p. 21); Alix (1594) files it among lands 'qui ne sont pas de bailliages' (1870 ed., pp. 34, 109); its subjects claimed not to belong to the bailiwick (p. 11)"
-office-sarreguemines,bailliage-allemagne,,,,,,9;11;22,high,
+office-sarreguemines,bailliage-allemagne,,,1608,,attested,9;11;22,high,
+office-sarreguemines,bailliage-allemagne,true,1609,1621,attested,attested,9;11-12;22,high,"contested 1609-1621: its subjects said they were exempt from the bailiwick's jurisdiction; the bailli argued against it (1614, 1621), but in 1616 Henri II confirmed the office's own jurisdiction, appeals going to the captain and the Council of State (p. 12)"
+office-sarreguemines,bailliage-allemagne,,1622,,attested,,9;11;22,high,
 office-sarrewerden-et-herbitzheim,bailliage-allemagne,,,,,,22,high,
 office-schaumberg,bailliage-allemagne,,,,,,9;11;22,high,
 office-sierck,bailliage-allemagne,,,,,,11-12,,
