@@ -110,6 +110,11 @@
       "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
       "title": "Parent Id",
       "type": "string"
+    },
+    "is_disputed": {
+      "default": false,
+      "title": "Is Disputed",
+      "type": "boolean"
     }
   },
   "required": [

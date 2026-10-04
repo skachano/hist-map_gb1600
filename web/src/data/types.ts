@@ -28,6 +28,8 @@ export interface Parent {
   id: string;
   from?: number;
   to?: number;
+  /** the membership itself was contested */
+  contested?: boolean;
 }
 
 export interface Place {

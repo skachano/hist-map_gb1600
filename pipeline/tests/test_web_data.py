@@ -66,6 +66,17 @@ def test_known_facts_survive(built):
     assert lorraine["rank"] == 1 and any(r["name"]["fr"] == "Henri II" for r in lorraine["rulers"])
 
 
+def test_contested_memberships_reach_the_site(built):
+    """Realms whose membership of the bailiwick was contested (manual/memberships.csv, is_disputed)
+    carry the flag on that parent only."""
+    places = {p["id"]: p for p in built["load"]("places.json")}
+    contested = {pid for pid, p in places.items()
+                 if any(x["id"] == "bailliage-allemagne" and x.get("contested") for x in p.get("parents", []))}
+    assert contested == {"office-hombourg-haut", "county-bitche", "office-sarralbe", "lordship-sarreck",
+                         "provostship-sarrebourg", "office-phalsbourg", "castellany-marsal"}
+    assert not any(x.get("contested") for x in places["office-sierck"].get("parents", []))
+
+
 def test_rulers_translated(built):
     """Every ruler's name and title has German, English and Japanese translations
     (data/curated/ruler_names.csv, ruler_titles.csv)."""

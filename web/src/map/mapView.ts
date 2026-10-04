@@ -183,6 +183,9 @@ export class MapView {
       } });
     m.addLayer({ id: "terr-line", type: "line", source: "territories", filter: hidden,
       paint: { "line-color": "#fcfcfb", "line-width": 2 } });
+    // A realm whose membership of the bailiwick was contested: a red border inside the white one.
+    m.addLayer({ id: "terr-contested", type: "line", source: "territories", filter: hidden,
+      paint: { "line-color": CONTESTED, "line-width": 2, "line-offset": 1.5 } });
     m.addLayer({ id: "terr-selected", type: "line", source: "territories", filter: hidden,
       paint: { "line-color": "#0b0b0b", "line-width": 3 } });
     m.addLayer({ id: "bailiwick", type: "line", source: "territories",
@@ -215,8 +218,10 @@ export class MapView {
       ?.properties?.id as string | undefined;
   }
 
-  /** Show the given realms for `year` (null hides the territories layers), labelled on the map. */
-  async showTerritories(year: number, ids: string[] | null, names: Map<string, string>, selected?: string): Promise<void> {
+  /** Show the given realms for `year` (null hides the territories layers), labelled on the map; the
+   *  `contested` ones (membership of the bailiwick contested) get a red border. */
+  async showTerritories(year: number, ids: string[] | null, names: Map<string, string>, selected?: string,
+    contested: string[] = []): Promise<void> {
     await this.ready;
     const m = this.map;
     this.territoriesShown = ids !== null;
@@ -225,6 +230,7 @@ export class MapView {
       ? ["all", inYear, ["in", ["get", "id"], ["literal", ids]]] : ["==", ["get", "id"], ""];
     m.setFilter("terr-fill", shown);
     m.setFilter("terr-line", shown);
+    m.setFilter("terr-contested", ids ? ["all", inYear, ["in", ["get", "id"], ["literal", contested]]] : ["==", ["get", "id"], ""]);
     m.setFilter("terr-selected", ["all", inYear, ["==", ["get", "id"], ids && selected ? selected : ""]]);
     for (const label of this.labels) label.remove();
     this.labels = [];

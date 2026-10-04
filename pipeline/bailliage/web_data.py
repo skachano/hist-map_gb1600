@@ -125,7 +125,8 @@ def build() -> dict[str, int]:
     rights_by_holder = Counter(r.holder_id for _, r in ds.rights)
     parents = defaultdict(list)
     for _, m in sorted(ds.memberships, key=lambda lm: (lm[1].child_id, lm[1].parent_id, lm[1].from_year or 0)):
-        parents[m.child_id].append(_compact({"id": m.parent_id, "from": m.from_year, "to": m.to_year}))
+        parents[m.child_id].append(_compact({"id": m.parent_id, "from": m.from_year, "to": m.to_year,
+                                                   "contested": m.is_disputed}))
 
     places = []
     for _, p in sorted(ds.places, key=lambda lp: lp[1].id):

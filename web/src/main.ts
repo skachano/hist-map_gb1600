@@ -15,7 +15,7 @@ import { setMapFocus } from "./ui/navigate";
 import { renderPanel } from "./ui/panel";
 import { renderDisputesView, renderEntityView, renderTerritoriesView } from "./ui/sideViews";
 import { tooltipPosition } from "./ui/tooltip";
-import { BAILIWICK, childrenIn, hierarchyOf, territoryLevels } from "./model/territories";
+import { BAILIWICK, childrenIn, contestedMembership, hierarchyOf, territoryLevels } from "./model/territories";
 
 const $ = (id: string) => document.getElementById(id)!;
 
@@ -123,6 +123,7 @@ async function start(): Promise<void> {
         const parents = (p?.parents ?? []).filter((x) => (x.from ?? 0) <= store.state.year
           && store.state.year <= (x.to ?? 9999)).map((x) => name(data.places.get(x.id)?.name, lang, x.id));
         if (parents.length) lines.push(h("div", { class: "muted" }, `${t("belongsTo", lang)} ${parents.join(", ")}`));
+        if (contestedMembership(p, store.state.year)) lines.push(h("div", { class: "warn" }, `⚠ ${t("contestedMembership", lang)}`));
       } else if (store.state.view === "disputes") {
         for (const d of current.disputes.filter((x) => x.place === placeId)) {
           lines.push(h("div", { class: "warn" }, `⚠ ${label(data.meta.vocab.right_types[d.right], lang, d.right)}: `
@@ -223,7 +224,8 @@ async function start(): Promise<void> {
     if (page.hidden) {
       void map.render(state.year, current.styles, state.place);
       const names = new Map((realmData?.shown ?? []).map((id) => [id, name(data.places.get(id)?.name, state.lang, id)]));
-      void map.showTerritories(state.year, realmData ? realmData.shown : null, names, state.place);
+      const contested = (realmData?.shown ?? []).filter((id) => contestedMembership(data.places.get(id), state.year));
+      void map.showTerritories(state.year, realmData ? realmData.shown : null, names, state.place, contested);
     }
     history.replaceState(null, "", toHash(state)); // replace: playing through years must not flood history
     performance.measure(`render:${state.view}`, { start: started }); // read by e2e/perf.spec.ts

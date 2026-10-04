@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Place } from "../data/types";
-import { hierarchyOf, membersOf, realmGroup, territoryLevels } from "./territories";
+import { contestedMembership, hierarchyOf, membersOf, realmGroup, territoryLevels } from "./territories";
 
 const place = (id: string, kind: Place["kind"], type: string, parents: Place["parents"] = []): [string, Place] =>
   [id, { id, kind, type, name: { fr: id }, parents }];
@@ -15,6 +15,17 @@ const places = new Map<string, Place>([
 ]);
 
 describe("territory hierarchy", () => {
+  it("flags a contested membership of the bailiwick, in the years it applies", () => {
+    const hombourg: Place = { id: "office-hombourg-haut", kind: "territory", type: "office", name: { fr: "Hombourg" },
+      parents: [{ id: "bailliage-allemagne", from: 1581, contested: true }] };
+    expect(contestedMembership(hombourg, 1600)).toBe(true);
+    expect(contestedMembership(hombourg, 1580)).toBe(false);
+    expect(contestedMembership(places.get("office-sierck"), 1600)).toBe(false);
+    // a contested membership of another realm is not the bailiwick's
+    const fief: Place = { ...hombourg, parents: [{ id: "office-sierck", contested: true }] };
+    expect(contestedMembership(fief, 1600)).toBe(false);
+  });
+
   it("assigns levels below the bailiwick, following membership years", () => {
     expect(Object.fromEntries(territoryLevels(1620, places))).toEqual({ "office-sierck": 1, prevote: 2 });
     expect(territoryLevels(1629, places).get("county-sarrewerden")).toBe(1);

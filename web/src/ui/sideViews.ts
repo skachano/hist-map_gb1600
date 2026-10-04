@@ -4,7 +4,7 @@ import { label, name, type StringKey, t } from "../i18n";
 import { CONTESTED, SERIES } from "../model/colors";
 import { MARQUISATE, PRINCIPALITY, REALM_OTHER } from "../model/colors";
 import { directHoldings, type Dispute } from "../model/snapshot";
-import { KINDS, type RealmGroup, realmGroup } from "../model/territories";
+import { contestedMembership, KINDS, type RealmGroup, realmGroup } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace } from "./navigate";
@@ -160,6 +160,8 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
         ...present.map((type) => h("option", { value: type, selected: type === state.kind },
           `${kindLabel(type)} (${count(type)})`))) : null;
     }));
+  const contested = (id: string) => contestedMembership(data.places.get(id), year);
+  const anyContested = shown.some(contested);
   fill(root,
     h("h2", {}, `${t("realmsIn", lang)} ${year} (${shown.length})`),
     h("div", { class: "levels hierarchy", role: "group", "aria-label": t("hierarchy", lang) },
@@ -174,10 +176,13 @@ export function renderTerritoriesView(root: HTMLElement, data: Dataset, state: S
     h("ul", { class: "groups" }, ...GROUP_ORDER.map((g) => h("li", {},
       h("span", { class: "swatch", style: `--c:${GROUP_COLOUR[g]}` }), ` ${t(GROUP_LABEL[g], lang)}`,
       h("span", { class: "count" }, ` ${groups.get(g) ?? 0}`)))),
+    anyContested ? h("p", { class: "key" }, h("span", { class: "swatch ring", style: `--c:${CONTESTED}` }),
+      ` ⚠ ${t("contestedMembership", lang)}`) : null,
     h("ul", { class: "realms" }, ...[...shown].sort((a, b) => placeName(a).localeCompare(placeName(b), lang)).map((id) =>
       h("li", {},
         h("button", { class: "link", "data-place": id, "aria-pressed": String(id === state.place),
           onclick: () => openPlace(store, data, id) }, placeName(id)),
+        contested(id) ? h("span", { class: "warn", title: t("contestedMembership", lang) }, " ⚠") : null,
         h("span", { class: "muted" }, settlementsIn.get(id)
           ? ` · ${settlementsIn.get(id)} ${t("places", lang)}` : ` · ${t("noArea", lang)}`)))),
   );

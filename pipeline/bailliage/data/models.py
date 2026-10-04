@@ -165,6 +165,8 @@ class Membership(Period):
 
     child_id: Slug
     parent_id: Slug
+    # the membership itself was contested: the place's subjects or a neighbour denied it
+    is_disputed: bool = False
 
 
 class Right(Period):

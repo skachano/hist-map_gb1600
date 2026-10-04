@@ -61,6 +61,8 @@ const STRINGS = {
   level0: { en: "All levels", fr: "Tous les niveaux", de: "Alle Ebenen", ja: "すべての階層" },
   neighbours: { en: "Also realms outside the bailiwick", fr: "Aussi les territoires hors du bailliage",
     de: "Auch Territorien außerhalb des Bellistums", ja: "バイイ管区外の領域も表示" },
+  contestedMembership: { en: "Membership of the bailiwick contested", fr: "Appartenance au bailliage contestée",
+    de: "Zugehörigkeit zum Bellistum umstritten", ja: "バイイ管区への所属に異議あり" },
   groupOffice: { en: "Offices, castellanies, provostships", fr: "Offices, châtellenies, prévôtés",
     de: "Ämter, Kellereien, Schultheißereien", ja: "管区・城代管区・代官区" },
   groupLordship: { en: "Lordships and fiefs", fr: "Seigneuries et fiefs", de: "Herrschaften und Lehen", ja: "領と封土" },

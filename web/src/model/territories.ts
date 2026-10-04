@@ -32,6 +32,12 @@ export function typesIn(group: Exclude<RealmGroup, "other">): string[] {
   return Object.keys(GROUPS).filter((t) => GROUPS[t] === group);
 }
 
+/** Whether the place's membership of the bailiwick in `year` was contested (its subjects or a
+ *  neighbour denied that it belonged). */
+export function contestedMembership(place: Place | undefined, year: number): boolean {
+  return (place?.parents ?? []).some((p) => p.id === BAILIWICK && !!p.contested && isActive(p, year));
+}
+
 /** parent id -> ids of the places that belonged to it in `year` */
 export function childrenIn(year: number, places: Map<string, Place>): Map<string, string[]> {
   const out = new Map<string, string[]>();

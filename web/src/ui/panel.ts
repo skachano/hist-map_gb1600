@@ -5,7 +5,7 @@ import type { Dataset, Right } from "../data/types";
 import { label, LANGS, name, t } from "../i18n";
 import { holderColour } from "../model/colors";
 import { ancestors, type RightIndex, rightsAtPlace, timeline } from "../model/snapshot";
-import { membersOf } from "../model/territories";
+import { contestedMembership, membersOf } from "../model/territories";
 import type { State, Store } from "../state/store";
 import { fill, h } from "./dom";
 import { openPlace } from "./navigate";
@@ -95,6 +95,7 @@ export function renderPanel(root: HTMLElement, data: Dataset, index: RightIndex,
       parents.length ? h("dt", {}, t("belongsTo", lang)) : null,
       parents.length ? h("dd", { class: "crumbs" }, ...parents.map((id) => h("button", { class: "link", "data-place": id,
         onclick: () => openPlace(store, data, id) }, placeName(id)))) : null,
+      contestedMembership(place, year) ? h("dd", { class: "warn" }, `⚠ ${t("contestedMembership", lang)}`) : null,
     ),
     place.approx ? h("p", { class: "muted" }, t("approximate", lang)) : null,
     ...(place.kind === "territory" ? members(place.id) : []),
