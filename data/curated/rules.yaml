@@ -274,9 +274,12 @@ drop_memberships:
      reason: "only formerly part of Bourgaltroff; a fief contested between Lorraine and the bishopric from 1577 (p. 146)"}
   - {child: remelfing-sierck, parent: lordship-hombourg-sur-canner,
      reason: "the lords of Hombourg-sur-Canner hold only a twelfth of Rémeling (p. 81); the village is ducal, office of Sierck"}
-  - {child: harlingen, parent: office-schaumberg, reason: "a village of Merzig and the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
-  - {child: mondorf, parent: office-schaumberg, reason: "a village of the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
-  - {child: wehingen, parent: office-schaumberg, reason: "a village of the Saargau (pp. 14, 53); p. 14 lists it before Schaumberg's"}
+  - {child: harlingen, parent: office-schaumberg,
+     reason: "one of Schaumberg's church lands (p. 14), not a village of the castellany: it lay in the advocacy of Merzig (pp. 14, 53-54)"}
+  - {child: mondorf, parent: office-schaumberg,
+     reason: "one of Schaumberg's church lands (p. 14), not a village of the castellany: it lay in the Saargau, partly in the office of Siersberg (pp. 14, 53)"}
+  - {child: wehingen, parent: office-schaumberg,
+     reason: "one of Schaumberg's fiefs (p. 14), not a village of the castellany: it lay in the Saargau (pp. 14, 53)"}
   # The mairies of the office of Dieuze sit in its two castellanies (pp. 20, 73-75).
   - {child: mayoralty-lindre, parent: office-dieuze, reason: "in the castellany of Dieuze (p. 20)"}
   - {child: mayoralty-cutting, parent: office-dieuze, reason: "in the old castellany of Marimont (p. 20)"}
