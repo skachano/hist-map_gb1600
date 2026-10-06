@@ -1497,7 +1497,7 @@ calembourg,office-sierck,,,,,,50,high,
 charleville,office-sierck,,,,,,13,high,
 chemery,office-sierck,,,,,,13;50,,
 court-conde,office-sierck,,,,,,13;49;51,high,
-court-perl,office-sierck,,,,,,13;49;129,high,
+court-perl,office-sierck,true,,,,,13;49;128-129;132,high,"contested: Trier's witnesses held the court (Oberperl, Niederperl, Sehndorf) to be of the elector's sovereignty, Lorraine having only safeguard; Lorraine's held it an enclave owing salt, corvées and wine to Sierck (1600, p. 128); disputed over the aids from 1563 and the gallows in 1592-93 (p. 128), listed among the disputes of 1620-26 (p. 132), and its 33 households again at Merzig in 1628 (p. 129)"
 dalstein,office-sierck,,,,,,51,high,
 diding,office-sierck,,,,,,13,high,
 ebersviller,office-sierck,,,,,,13,high,

@@ -79,6 +79,8 @@ def test_contested_memberships_reach_the_site(built):
     sarreguemines = [x for x in places["office-sarreguemines"]["parents"] if x["id"] == "bailliage-allemagne"]
     assert [(x.get("from"), x.get("to"), x.get("contested", False)) for x in sarreguemines] == [
         (None, 1608, False), (1609, 1621, True), (1622, None, False)]
+    # the court of Perl's dependence on Sierck, disputed with Trier (pp. 128-129)
+    assert [x.get("contested", False) for x in places["court-perl"]["parents"] if x["id"] == "office-sierck"] == [True]
 
 
 def test_rulers_translated(built):

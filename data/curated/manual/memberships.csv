@@ -46,6 +46,7 @@ volmerange,lordship-volmerange,,,,,,27;62,high,
 castellany-sarreguemines,office-sarreguemines,,,,,,17;68,high,the castellany is the ducal core of the office of Sarreguemines
 provostship-sierck,office-sierck,,,,,,12;49,high,
 provostship-sous-sierck,office-sierck,,,,,,12;49,high,
+court-perl,office-sierck,true,,,,,13;49;128-129;132,high,"contested: Trier's witnesses held the court (Oberperl, Niederperl, Sehndorf) to be of the elector's sovereignty, Lorraine having only safeguard; Lorraine's held it an enclave owing salt, corvées and wine to Sierck (1600, p. 128); disputed over the aids from 1563 and the gallows in 1592-93 (p. 128), listed among the disputes of 1620-26 (p. 132), and its 33 households again at Merzig in 1628 (p. 129)"
 mayoralty-montenach,provostship-sierck,,,,,,12;49,high,Montenach is one of the villages of the provostship (p. 12)
 mayoralty-puttelange,lordship-puttelange,,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
 mayoralty-holving,lordship-puttelange,,,,,,68,high,one of the mairies of the lordship of Puttelange (p. 68)
