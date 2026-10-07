@@ -71,12 +71,12 @@ test("table: filter by territory and holder, export CSV", async ({ page }) => {
 });
 
 test("a territory link opens the Territories view, fitted to the realm", async ({ page }) => {
-  await open(page, "#/map?year=1624&right=high_justice&lang=en&place=anzeling");
+  await open(page, "#/map?year=1624&right=high_justice&lang=en&place=velving");
   const panel = page.locator("#panel");
-  await panel.locator(".crumbs").getByRole("button", { name: "Office of Sierck" }).click();
-  await expect(page).toHaveURL(/#\/territories\?year=1624.*place=office-sierck/);
-  await expect(panel.locator("h2")).toHaveText("Office of Sierck");
-  // the office spans 6.21-6.69 E, 49.06-49.60 N: fitted, the map zooms in and centres on it
+  await panel.locator(".crumbs").getByRole("button", { name: "Office of Boulay" }).click();
+  await expect(page).toHaveURL(/#\/territories\?year=1624.*place=office-boulay/);
+  await expect(panel.locator("h2")).toHaveText("Office of Boulay");
+  // the office spans 6.30-6.97 E, 48.98-49.38 N: fitted, the map zooms in and centres on it
   type M = { getZoom(): number; getCenter(): { lng: number; lat: number }; isMoving(): boolean };
   const map = () => page.evaluate(() => {
     const m = (window as unknown as { __map: M }).__map;
@@ -84,12 +84,12 @@ test("a territory link opens the Territories view, fitted to the realm", async (
   });
   await expect.poll(async () => { const m = await map(); return !m.moving && m.zoom > 8.5; }).toBe(true);
   const c = await map();
-  expect(c.lng).toBeGreaterThan(6.21); expect(c.lng).toBeLessThan(6.69);
-  expect(c.lat).toBeGreaterThan(49.06); expect(c.lat).toBeLessThan(49.6);
+  expect(c.lng).toBeGreaterThan(6.3); expect(c.lng).toBeLessThan(6.97);
+  expect(c.lat).toBeGreaterThan(48.98); expect(c.lat).toBeLessThan(49.38);
   // …in the gap between the realm list (left) and the panel (right)
   const edges = await page.evaluate(() => {
     const m = (window as unknown as { __map: { project(p: [number, number]): { x: number } } }).__map;
-    return { west: m.project([6.21, 49.33]).x, east: m.project([6.69, 49.33]).x };
+    return { west: m.project([6.3, 49.18]).x, east: m.project([6.97, 49.18]).x };
   });
   const side = (await page.locator("#side").boundingBox())!;
   const box = (await panel.boundingBox())!;
@@ -164,6 +164,19 @@ test("about page cites the book and the data sources in every language", async (
   await expect(about).toContainText("Siargey Kachanovich");
   await page.getByRole("button", { name: "Deutsch" }).click();
   await expect(about).toContainText("Daten © OpenStreetMap-Mitwirkende (ODbL)");
+});
+
+test("about page: Hiegel and Alix compared, its places on the map, the other atlas linked", async ({ page }) => {
+  await open(page, "#/about?year=1600&right=suzerain&lang=en");
+  const about = page.locator("article.about");
+  await expect(about.locator("h3#hiegel-alix")).toHaveText("Hiegel and Alix compared");
+  await expect(about.getByRole("link", { name: "Duchy of Lorraine atlas" }).first())
+    .toHaveAttribute("href", "https://skachano.github.io/hist-map_dl1594");
+  const units = about.locator("table.matrix").first();
+  await expect(units.locator("tbody tr").first()).toHaveText(/Office of Sierck\s*Provostship of Sierck/);
+  await about.locator("table.matrix").nth(2).getByRole("button", { name: "Mettlach" }).click(); // a village opens on the map
+  await expect(page).toHaveURL(/#\/map\?.*place=mettlach/);
+  await expect(page.locator("#panel h2")).toHaveText("Mettlach");
 });
 
 test("territories: realms of a year, walk down and up the hierarchy, levels and neighbours", async ({ page }) => {
