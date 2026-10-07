@@ -92,7 +92,7 @@ basse-contz,49.4425,6.36028,,,Basse-Contz,Niederkontz,,approximate,low,not in Wi
 basse-vigneulles,49.08863,6.54474,Q28040560,,Basse-Vigneulles,Basse-Vigneulles,Basse-Vigneulles,wikidata,high,
 basse-yutz,49.35889,6.18861,Q21983,,Basse-Yutz,Niederjeutz,Basse-Yutz,wikidata,high,
 bassing,48.86889,6.80167,Q21630,,Bassing,Bessingen,Bassing,wikidata,high,
-bathelemont,48.69166,6.52558,Q109571733,,Bathelémont,,Bathelémont,wikidata,high,
+bathelemont,48.81111,6.63472,,,Bathelémont,,Bathelémont,approximate,low,"Bathelémont-lès-Saint-Médard (Battendorf), castellany of Dieuze (index: Saint-Médard; p. 20); not Bathelémont-lès-Bauzemont near Arracourt (pp. 173, 217)"
 baudrecourt,48.96333,6.45167,Q21624,,Baudrecourt,Baudrecourt,Baudrecourt,wikidata,high,
 bechy,48.98639,6.38028,Q21684,,Béchy,Béchy,Béchy,wikidata,high,
 beckerholz,49.3181,6.50731,Q16507047,,Beckerholz,Beckerholz,Beckerholz,wikidata,high,
@@ -1061,7 +1061,7 @@ saint-arnual,49.2169,7.01694,Q2222151,,Saint-Arnual,Sankt Arnual,Sankt Arnual,wi
 saint-avold,49.10417,6.70806,Q22485,,Saint-Avold,Sankt Avold,Saint-Avold,wikidata,medium,chosen near its territory's other members
 saint-bernard,49.2486,6.38275,Q17347207,,Saint-Bernard,Saint-Bernard,Saint-Bernard,wikidata,high,
 saint-francois,49.35306,6.46111,Q22355,,Saint-François,Saint-François,Saint-François,wikidata,high,
-saint-gangolf,49.24097,6.77884,Q17353575,,Sankt Gangolf,St. Gangolf,St. Gangolf,wikidata,low,29 km from the index's canton
+saint-gangolf,49.4733,6.60861,,,Sankt Gangolf,St. Gangolf,St. Gangolf,approximate,low,"Sankt Gangolf near Besseringen, office of Siersberg (index: Besseringen; pp. 13, 52, 83); was matched to a St. Gangolf 30 km away"
 saint-georges,48.65778,6.92889,Q22329,,Saint-Georges,Saint-Georges,Saint-Georges,wikidata,low,117 km from the index's canton
 saint-hippolyte-haut-rhin,48.23194,7.37167,Q126283,,Saint-Hippolyte,Sankt Pilt,Saint-Hippolyte,wikidata,high,no canton anchor
 saint-hubert,49.22389,6.33306,Q22930,,Saint-Hubert,Saint-Hubert,Saint-Hubert,wikidata,high,
@@ -1206,7 +1206,7 @@ wahl-en,49.4872,6.7775,Q1491241,,Wahlen,Wahlen,Wahlen,wikidata,high,
 waldeck,49.0166,7.5292,Q3565301,,Waldeck,,,wikidata,high,
 waldhambach,48.92694,7.21694,Q21802,,Waldhambach,Waldhambach,Waldhambach,wikidata,high,
 waldhouse,49.14417,7.46667,Q22058,,Waldhouse,Waldhausen,Waldhouse,wikidata,high,
-waldvisse,49.4425,6.36028,,,Waldvisse,Waldwiese,,approximate,low,not in Wikidata/GeoNames; placed at Sierck (index location)
+waldvisse,49.41361,6.52972,Q22157,,Waldvisse,Waldwies,Waldwisse,override,high,"Waldvisse (index: canton of Sierck), the commune of Waldwisse; was placed at Sierck"
 waldweistroff,49.35917,6.49583,Q22217,,Waldweistroff,Waldweisdorf,Waldweistroff,wikidata,high,
 walschbronn,49.14861,7.48111,Q22198,,Walschbronn,Walschbronn,Walschbronn,wikidata,high,
 walscheidt,48.65308,7.14998,,2967490,Walscheidt,,,geonames,medium,geonames spelling match Walscheid (0.95)

@@ -495,6 +495,12 @@ geocode:
             note: "manual row (French name with its accent), so no index canton"}
   volmerange: {wikidata: Q22359, lat: 49.16833, lon: 6.44778, name_de: Volmerange-lès-Boulay, name_en: Volmerange-lès-Boulay,
                note: "manual row (the OCR split the name), so no index canton"}
+  waldvisse: {wikidata: Q22157, lat: 49.41361, lon: 6.52972, name_de: Waldwies, name_en: Waldwisse,
+              note: "Waldvisse (index: canton of Sierck), the commune of Waldwisse; was placed at Sierck"}
+  saint-gangolf: {approximate: besseringen, name_de: St. Gangolf, name_en: St. Gangolf,
+                  note: "Sankt Gangolf near Besseringen, office of Siersberg (index: Besseringen; pp. 13, 52, 83); was matched to a St. Gangolf 30 km away"}
+  bathelemont: {approximate: saint-medard, name_en: Bathelémont,
+                note: "Bathelémont-lès-Saint-Médard (Battendorf), castellany of Dieuze (index: Saint-Médard; p. 20); not Bathelémont-lès-Bauzemont near Arracourt (pp. 173, 217)"}
   deserted-village-roderbann: {approximate: saint-louis, name_de: Roderbann, name_en: Roderbann,
                                note: "the lost village of the Roderbann, where Saint-Louis was founded in 1628-29 (p. 115)"}
 
@@ -853,7 +859,7 @@ place_names:
   sieviller: {de: Sieweiler}
   uhrviller: {de: Uhrweiler}
   velling: {de: Wellingen}
-  waldvisse: {de: Waldwiese}
+  waldvisse: {de: Waldwies}
   zondrange: {de: Zonderingen}
   # today's official names; one name in every language for a village Wikidata matched to
   # the commune it is part of today, or for a castle it names as the building

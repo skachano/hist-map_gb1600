@@ -663,6 +663,7 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | alteville | approximate | low | 48.78472, 6.75833 |  | not in Wikidata/GeoNames; placed at Tarquimpol (index location) |
 | ayol | approximate | low | 50.14694, 7.16667 |  | not in Wikidata/GeoNames; placed at Kochem (index location) |
 | basse-contz | approximate | low | 49.4425, 6.36028 |  | not in Wikidata/GeoNames; placed at Sierck (index location) |
+| bathelemont | approximate | low | 48.81111, 6.63472 |  | Bathelémont-lès-Saint-Médard (Battendorf), castellany of Dieuze (index: Saint-Médard; p. 20); not Bathelémont-lès-Bauzemont near Arracourt (pp. 173, 217) |
 | belle-fontaine | approximate | low | 49.20389, 6.2975 |  | not in Wikidata/GeoNames; placed at Vigy (index location) |
 | bellmacher | approximate | low | 49.45889, 6.37472 |  | not in Wikidata/GeoNames; placed at Apach (index location) |
 | bening-harprich | approximate | low | 48.96167, 6.65556 |  | Béning near Harprich (p. 145; index: Harprich); was matched to Béning-lès-Saint-Avold |
@@ -751,6 +752,7 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | rohr | approximate | low | 49.05167, 7.42528 |  | Rohr alias Roseau with the Faubourg of Bitche (p. 17); was matched to Rohr in Bas-Rhin |
 | rohrbach-la-petite | approximate | low | 48.96472, 6.86694 |  | Helt-Rohrbach = Rohrbach-la-Petite (index), now part of Nelling, lordship of Marimont (p. 20); was matched to Rohrbach-lès-Bitche |
 | ruchling | approximate | low | 49.19167, 6.96833 |  | Ruchling-lès-Spicheren, lost village near Spicheren (p. 17); was matched to Rouhling |
+| saint-gangolf | approximate | low | 49.4733, 6.60861 |  | Sankt Gangolf near Besseringen, office of Siersberg (index: Besseringen; pp. 13, 52, 83); was matched to a St. Gangolf 30 km away |
 | salival | approximate | low | 48.77722, 6.56222 |  | abbey of Salival in the castellany of Vic (p. 78), now part of Moyenvic; the index's Morville was matched to a namesake |
 | sarreck | approximate | low | 48.79417, 7.03417 |  | not in Wikidata/GeoNames; placed at Oberstinzel (index location) |
 | schaumberg | approximate | low | 49.4833, 7.03333 |  | not in Wikidata/GeoNames; placed at Tholey (index location) |
@@ -764,7 +766,6 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | tripoli | approximate | low | 48.78472, 6.75833 |  | not in Wikidata/GeoNames; placed at Tarquimpol (index location) |
 | uhrviller | approximate | low | 48.95, 7.64389 |  | not in Wikidata/GeoNames; placed at Niederbronn (index location) |
 | velling | approximate | low | 49.19417, 6.53417 |  | not in Wikidata/GeoNames; placed at Denting (index location) |
-| waldvisse | approximate | low | 49.4425, 6.36028 |  | not in Wikidata/GeoNames; placed at Sierck (index location) |
 | werdenstein | approximate | low | 49.61667, 7.2 |  | the castle of Werdenstein with Hoppstetten, office of Schaumberg (p. 79) |
 | zell | approximate | low | 48.98861, 6.86139 |  | Zell, now Zellen, part of Petit-Tenquin (index), mairie of Hilsprich (pp. 18, 69); was matched to a Zell in Alsace |
 | zondrange | approximate | low | 49.11167, 6.5375 |  | Zondrange, office of Boulay (p. 16), today part of Marange-Zondrange; no point of its own |
@@ -787,7 +788,6 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | moussey | wikidata | low | 48.67361, 6.7825 | Q21938 | 108 km from the index's canton |
 | niedergailbach | wikidata | low | 49.1339, 7.20722 | Q873717 | 68 km from the index's canton |
 | richeval | wikidata | low | 48.63583, 6.91083 | Q22288 | 117 km from the index's canton |
-| saint-gangolf | wikidata | low | 49.24097, 6.77884 | Q17353575 | 29 km from the index's canton |
 | saint-georges | wikidata | low | 48.65778, 6.92889 | Q22329 | 117 km from the index's canton |
 | wehingen | wikidata | low | 49.462, 6.50777 | Q187455 | 54 km from the index's canton |
 | xousse | wikidata | low | 48.65694, 6.70972 | Q1098639 | 49 km from its territory's other members |
