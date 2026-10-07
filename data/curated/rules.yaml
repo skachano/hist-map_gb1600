@@ -501,6 +501,8 @@ geocode:
                   note: "Sankt Gangolf near Besseringen, office of Siersberg (index: Besseringen; pp. 13, 52, 83); was matched to a St. Gangolf 30 km away"}
   bathelemont: {approximate: saint-medard, name_en: Bathelémont,
                 note: "Bathelémont-lès-Saint-Médard (Battendorf), castellany of Dieuze (index: Saint-Médard; p. 20); not Bathelémont-lès-Bauzemont near Arracourt (pp. 173, 217)"}
+  pommern: {wikidata: Q665867, lat: 50.17111, lon: 7.27389, name_de: Pommern, name_en: Pommern,
+            note: "Pommern on the Moselle (index: Kochem), a Lorraine fief of the Sayn in the office of Sierck (p. 50); far from the office's other members"}
   gongelfang: {approximate: waldvisse,
                note: "Gongelfang-lès-Waldvisse (p. 172), a hamlet of Waldwisse (index: canton of Sierck); was placed at Sierck"}
   deserted-village-roderbann: {approximate: saint-louis, name_de: Roderbann, name_en: Roderbann,
