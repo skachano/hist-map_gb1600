@@ -206,7 +206,7 @@ async function start(): Promise<void> {
       realmData.kinds);
     if (state.view === "matrix") renderMatrix(page, data, index, state, store, coloured);
     if (state.view === "changes") renderChanges(page, data, state, store);
-    if (state.view === "about") renderAbout(page, data, state.lang);
+    if (state.view === "about") renderAbout(page, data, state.lang, store);
     renderPanel($("panel"), data, index, state, store, coloured);
     // Keyboard and screen-reader users land in the panel when it opens and return when it closes.
     if (previous && state.place !== previous.place) {

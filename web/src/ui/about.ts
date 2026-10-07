@@ -1,7 +1,9 @@
-// "About & sources": the book, the conventions behind the map, how the data was made,
-// attributions and the copyright note, in four languages.
+// "About & sources": the book, the conventions behind the map, how the data was made, Hiegel and
+// Alix compared, attributions and the copyright note, in four languages.
 import type { Dataset, Lang } from "../data/types";
 import { label, LANGS, t } from "../i18n";
+import type { Store } from "../state/store";
+import { compareSection } from "./compare";
 import { fill, h } from "./dom";
 
 interface Section {
@@ -105,13 +107,18 @@ const TEXT: Record<Lang, Section[]> = {
   ],
 };
 
-export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang): void {
+export function renderAbout(root: HTMLElement, data: Dataset, lang: Lang, store: Store): void {
   const c = data.meta.counts;
   const rights = data.meta.vocab.right_types;
+  const section = (s: Section) => [h("h3", {}, s.title), ...s.paragraphs.map((p) => h("p", {}, p))];
+  // Hiegel and Alix compared comes after how the data was made, before the author and the attributions.
+  const sections = TEXT[lang];
   fill(root,
     h("article", { class: "about" },
       h("h2", {}, t("view_about", lang)),
-      ...TEXT[lang].flatMap((s) => [h("h3", {}, s.title), ...s.paragraphs.map((p) => h("p", {}, p))]),
+      ...sections.slice(0, 3).flatMap(section),
+      ...compareSection(data, lang, store),
+      ...sections.slice(3).flatMap(section),
       h("h3", { id: "rights-explained" }, t("rightsExplained", lang)),
       h("dl", { class: "rights-explained" }, ...Object.keys(rights).flatMap((k) => [
         h("dt", { id: `right-${k}` }, label(rights[k], lang, k),
