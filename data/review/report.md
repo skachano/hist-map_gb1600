@@ -701,7 +701,7 @@ Fix with the `geocode` section of `data/curated/rules.yaml` (place-id: {wikidata
 | gaweistroff | approximate | low | 49.28111, 6.63083 |  | not in Wikidata/GeoNames; placed at Villing (index location) |
 | gering | approximate | low | 48.79194, 7.00278 |  | not in Wikidata/GeoNames; placed at Gosselming (index location) |
 | goderscheuren | approximate | low | 49.23375, 6.36139 |  | Goderscheuren, today the farm of Godehure, office of Sierck (p. 13; index: Villers-Bettnach); no point of its own |
-| gongelfang | approximate | low | 49.4425, 6.36028 |  | not in Wikidata/GeoNames; placed at Sierck (index location) |
+| gongelfang | approximate | low | 49.41361, 6.52972 |  | Gongelfang-lès-Waldvisse (p. 172), a hamlet of Waldwisse (index: canton of Sierck); was placed at Sierck |
 | gueroldseck | approximate | low | 48.8625, 7.03139 |  | not in Wikidata/GeoNames; placed at Niederstinzel (index location) |
 | guiching | approximate | low | 49.29188, 6.53386 |  | not in Wikidata/GeoNames; placed at Bouzonville (index location) |
 | hackenberg | approximate | low | 49.33917, 6.37917 |  | not in Wikidata/GeoNames; placed at Veckring (index location) |
